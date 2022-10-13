@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-with open("candidates/Application from Phyllis Agu for Licensed Vocational Nurse.html") as fp:
+with open("candidates/") as fp:
     soup = BeautifulSoup(fp, 'html.parser')
 
 name = ""

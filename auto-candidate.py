@@ -67,8 +67,6 @@ def getLVNnumber():
         file2.close()
         print("Downloaded LVN HTML for: " + "TODO")
 
-# TODO make this work too, havent looked into it
-
 
 def upload_basic(creds, name, parents, path):
     """Insert new file.
