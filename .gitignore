@@ -1,3 +1,8 @@
 credentials.json
 credentials2.json
 candidates/*
+
+./credentials.json
+./credentials2.json
+/credentials.json
+/credentials2.json
