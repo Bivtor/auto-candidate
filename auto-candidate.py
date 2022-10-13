@@ -7,8 +7,6 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-
-from venv import create
 import requests
 
 from google.auth.transport.requests import Request
@@ -535,7 +533,7 @@ def main():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+                'credentials2.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.json', 'w') as token:
@@ -549,16 +547,18 @@ def main():
     ########################################################
     # Driver code, uploads pdf and documents of every folder associated inside candidates
     ########################################################
-    for folder in os.listdir(directory):
+    for folder in sorted(os.listdir(directory)):
+        if (folder == '.DS_Store'):
+            continue
         items = os.listdir(os.path.join(directory, folder))
         pdf = None
         page_html = None
-        if (items[0].find('pdf') > 0):
-            pdf = items[0]
-            page_html = items[1]
-        else:
+        if (items[0].find('html') > 0):
             pdf = items[1]
             page_html = items[0]
+        else:
+            pdf = items[0]
+            page_html = items[1]
         pdf = os.path.join(os.path.join(directory, folder), pdf)
         page_html = os.path.join(os.path.join(directory, folder), page_html)
 
@@ -589,9 +589,9 @@ def create_LVN(creds, path) -> list:
 
     # assign parent for LVN folder
     # GABE
-    # parents = ['18iotkvD56CLbdrVKJGPewjC1MIeu__hk']
+    parents = ['18iotkvD56CLbdrVKJGPewjC1MIeu__hk']
     # KK10
-    parents = ['1ufXmmOK1w_YRUzqzmiZPPXOWQDoemNX2']
+    # parents = ['1ufXmmOK1w_YRUzqzmiZPPXOWQDoemNX2']
 
     # add id of new parent so that we are inside the proper file
     newParent = create_folder(creds, title, parents)
@@ -602,14 +602,14 @@ def create_LVN(creds, path) -> list:
 
     # SPREADSHEET ID
     # GABE
-    # SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
+    SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
     # KK10
-    SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
+    # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
     # SHEET ID for LVN
     # GABE
-    # SHEET_ID = 1087287054
+    SHEET_ID = 1087287054
     # KK10
-    SHEET_ID = 0
+    # SHEET_ID = 0
 
     # TODO add LVN number from website
     # update info for sheets insertion
@@ -641,9 +641,9 @@ def create_Therapist(creds, path):
 
     # assign parent for Therapist folder
     # GABE
-    # parents = ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2']
+    parents = ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2']
     # KK10
-    parents = ['1jtuVaA62GOLnQLXBarid4AtvbKRmhGij']
+    # parents = ['1jtuVaA62GOLnQLXBarid4AtvbKRmhGij']
 
     # add id of new parent so that we are inside the proper file
     newParent = create_folder(creds, title, parents)
@@ -654,14 +654,14 @@ def create_Therapist(creds, path):
 
     # SPREADSHEET ID
     # GABE
-    # SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
+    SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
     # KK10
-    SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
+    # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
     # SHEET ID for Therapist
     # GABE
-    # SHEET_ID = 444685763
+    SHEET_ID = 444685763
     # KK10
-    SHEET_ID = 1406139361
+    # SHEET_ID = 1406139361
 
     # TODO add LVN number from website
     # update info for sheets insertion
@@ -696,7 +696,18 @@ def getLVNInfo(path) -> list:
     email = ""
     date = ""
 
-    scr = soup.find(class_="side_content ats_content").p.string
+    scr = soup.find(class_="side_content ats_content").find(
+        'p', class_="location")
+
+    # fixing no locaiton exception
+    if scr == None:
+        scr = soup.find('a', class_='manage_job_link').stripped_strings
+        for s in scr:
+            scr = s
+        scr = scr[scr.find(" - ")+3:]
+    else:
+        scr = scr.string
+
     scr = str(scr)
     scr = scr[:scr.find(',')]
     scr = '(' + scr + ')'
@@ -731,7 +742,7 @@ def getLVNInfo(path) -> list:
         date2 += findMonth("Mar")
     elif date.find("Apr") > 0:
         date2 += "4/"
-        date2 += findMonth("Jun")
+        date2 += findMonth("Apr")
     elif date.find("May") > 0:
         date2 += "5/"
         date2 += findMonth("May")
@@ -766,7 +777,7 @@ def getLVNInfo(path) -> list:
     # inputEmail = "Email: " + info[2] + "\n"
     # inputDate = "Date Applied: " + info[3] + "\n"
     # inputLocation = "Location: " + info[4] + "\n"
-    return [name, phone, email, date, location, nameonly]
+    return [name, phone, email, date, location, nameonly.strip()]
 
 
 def getTherapistInfo(path) -> list:
@@ -790,7 +801,19 @@ def getTherapistInfo(path) -> list:
     email = ""
     date = ""
 
-    scr = soup.find(class_="side_content ats_content").p.string
+    scr = soup.find(class_="side_content ats_content").find(
+        'p', class_="location")
+
+    # fixing no locaiton exception
+    if scr == None:
+        scr = soup.find('a', class_='manage_job_link').stripped_strings
+        for s in scr:
+            scr = s
+        scr = scr[scr.find(" - ")+3:]
+    else:
+        scr = scr.string
+
+    # if (scr.string == None): scr = soup.find
     scr = str(scr)
     scr = scr[:scr.find(',')]
     scr = '(' + scr + ')'
@@ -825,7 +848,7 @@ def getTherapistInfo(path) -> list:
         date2 += findMonth("Mar")
     elif date.find("Apr") > 0:
         date2 += "4/"
-        date2 += findMonth("Jun")
+        date2 += findMonth("Apr")
     elif date.find("May") > 0:
         date2 += "5/"
         date2 += findMonth("May")
@@ -860,7 +883,7 @@ def getTherapistInfo(path) -> list:
     # inputEmail = "Email: " + info[2] + "\n"
     # inputDate = "Date Applied: " + info[3] + "\n"
     # inputLocation = "Location: " + info[4] + "\n"
-    return [name, phone, email, date, location, nameonly]
+    return [name, phone, email, date, location, nameonly.strip()]
 
 
 if __name__ == '__main__':
