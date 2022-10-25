@@ -1,0 +1,1 @@
+!function(o,n){var r="Copied to your clipboard!";n(function(){new o('[data-type="copy_url_link"]').on("success",function(){zr.alertBubble?zr.alertBubble(r):alert(r)})})}(window.Clipboard,window.jQuery);

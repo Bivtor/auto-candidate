@@ -1,0 +1,1 @@
+!function(c){"use strict";c(function(){c(".candidate_search_tip_icon").on("click",function(){c("#candidate_search_tips_modal").modal("show")})})}(window.jQuery);

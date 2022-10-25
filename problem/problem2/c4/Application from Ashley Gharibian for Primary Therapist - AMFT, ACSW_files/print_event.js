@@ -1,0 +1,1 @@
+!function(n){"use strict";function i(){n.log_event("print_page")}window.matchMedia?window.matchMedia("print").addListener(function(n){n.matches||i()}):window.onafterprint=i}(window.jQuery);

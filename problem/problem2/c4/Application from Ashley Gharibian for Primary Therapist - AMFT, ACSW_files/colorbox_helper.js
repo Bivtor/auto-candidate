@@ -1,0 +1,1 @@
+!function(c){"use strict";c(document).ready(function(){c.colorbox.settings.transition="none";var o=c(document),n=c("body");o.on("cbox_open",function(){n.addClass("cbox_open")}),o.on("cbox_closed",function(){n.removeClass("cbox_open")})})}(window.jQuery);
