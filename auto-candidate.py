@@ -2,14 +2,15 @@ from __future__ import print_function
 from genericpath import isfile
 from difflib import SequenceMatcher
 from twilio.rest import Client
-
+from dotenv import load_dotenv
+from bs4 import BeautifulSoup
+from pathlib import Path
 
 import os
 import os.path
 import unicodedata
 import urllib.parse
 import urllib.request
-from pathlib import Path
 
 import requests
 
@@ -20,10 +21,10 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
-from bs4 import BeautifulSoup
 
 import google.auth
 
+load_dotenv()
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive',
@@ -117,6 +118,7 @@ def update_spreadsheet(creds, info, parents, SPREADSHEET_ID, SHEET_ID, folder_li
         #         lambda x: x == " ", name_in_re2g.lower(), reverse_name_format.lower())
         #     licensenum = licensetype + " " + licenselist2[0][0]
         #     licenseexp = licenselist2[0][3]
+
         data2 = {
             'requests': [
                 {
@@ -548,8 +550,8 @@ def main():
     # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
     # SHEET_ID = 1406139361
 
-    # add_candidates(creds)
-    sendTwilioTexts(["none"])
+    add_candidates(creds)
+    # sendTwilioTexts(creds, SPREADSHEET_ID, "Therapists", SHEET_ID)
 
 
 def add_candidates(creds):
@@ -1011,26 +1013,104 @@ def find_duplicates(creds, spreadsheet_id, sheet_name):
     print("got all names")
 
 
-def sendTwilioTexts(recipients: list):
+def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
+    try:
+        service = build('sheets', 'v4', credentials=creds)
 
-    # Find your Account SID and Auth Token in Account Info
-    # and set the environment variables. See http://twil.io/secure
-    # account_sid = os.environ['TWILIO_ACCOUNT_SID'] = 'AC048716f861cdd98a43064204c5f187dd'
-    # account 2 ACc8b3d5c1ccfbb089d0ae3217e587706e
-    account_sid = os.environ['TWILIO_ACCOUNT_SID'] = 'ACc8b3d5c1ccfbb089d0ae3217e587706e'
-    # account 2
-    # auth_token = os.environ['TWILIO_AUTH_TOKEN'] = '13a935c90f2c3f23d39410ebb655e9d4'
-    auth_token = os.environ['TWILIO_AUTH_TOKEN'] = '39bac63e8bf19b8171bf12bd1eb769cb'
-    client = Client(account_sid, auth_token)
+        # Find your Account SID and Auth Token and Message
+        account_sid = os.environ['TWILIO_ACCOUNT_SID']
+        auth_token = os.environ['TWILIO_AUTH_TOKEN']
+        service_id = os.environ['TWILIO_SERVICE_ID']
+        client = Client(account_sid, auth_token)
+        calendar_link = 'calendly.com/gabe_berko/phone-interview'
 
-    message = client.messages.create(
-        body='Hi there',
-        from_='+18658004409',
-        to='+18057227847'
-    )
+        # Call the Sheets API
 
-# +19132610598 parker
-    print(message.sid)
+        for i in range(202, 992):
+            r = sheet_name + "!A{}:J{}".format(i, i)
+            result = service.spreadsheets().values().get(
+                spreadsheetId=spreadsheet_id, range=r).execute()
+
+            try:
+                values = result.get('values', [])[0]
+            except IndexError as err:
+                print("No more candidates: ({})".format(err))
+                break
+
+            # Send message or not
+            if len(values) < 10:  # if there is no Contacted category inputted
+                contacted = "N"
+            else:
+                contacted = values[9]
+            name = values[0]
+            number = values[3]
+
+            # Text them if they have 'N' marked in the '#/#' form of column I
+
+            # TODO Make sure errors are caught from wrong phone number
+
+            if len(contacted) == 0 or contacted[0].lower() == 'n':
+                print("Texting : {}".format(name))
+
+                ###########################    ########################### ###########################
+                # Actual Do Texting portion of code
+                body = ""
+                if sheet_name == "Therapists":
+                    body = "{},\nMy name is Gabe and I'm with SBT. We received your resume via Zip Recruiter for the in-person therapist role.\nI'd love to talk at your earliest convenience! We can schedule a brief 15 min call here: {}".format(
+                        name, calendar_link)
+                elif sheet_name == "Nurses":
+                    body = "{},\nMy name is Gabe and I'm with SBT. We received your resume via Zip Recruiter for the in-person LVN role.\nI'd love to talk at your earliest convenience! We can schedule a brief 15 min call here: {}".format(
+                        name, calendar_link)
+                elif sheet_name == "RADT":
+                    body = "{},\nMy name is Gabe and I'm with SBT. We received your resume via Zip Recruiter for the in-person tech role.\nI'd love to talk at your earliest convenience! We can schedule a brief 15 min call here: {}".format(
+                        name, calendar_link)
+                else:
+                    body = "{},\nMy name is Gabe and I'm with SBT. We received your resume via Zip Recruiter.\nI'd love to talk at your earliest convenience! We can schedule a brief 15 min call here: {}".format(
+                        name, calendar_link)
+                try:
+                    message = client.messages.create(
+                        messaging_service_sid=service_id,
+                        body=body,
+                        to=number,
+                    )
+
+                    print("Sent message to {} with message SID: {}".format(
+                        name, message.sid))
+                    contacted = 'Y'
+                except:
+                    print("Message was not sent to: {} - {}".format(
+                        name, number))
+                    contacted = 'N'  # Contacted stays N
+
+                ###########################    ########################### ###########################
+
+                # Update spreadsheet to reflect text has been sent 'Y/#'
+                data = {
+                    'requests': [
+                        {
+                            "updateCells":
+                            {
+                                "rows": [
+                                    {
+                                        "values": [
+                                            {"userEnteredValue": {
+                                                "stringValue": contacted}}
+                                        ]}],
+                                "fields": 'userEnteredValue',
+                                "start": {
+                                    "sheetId": sheet_id,
+                                    "rowIndex": i-1,
+                                    "columnIndex": 9
+                                }
+                            }
+                        }
+                    ]
+                }
+                request = service.spreadsheets().batchUpdate(
+                    spreadsheetId=spreadsheet_id,  body=data)
+                response = request.execute()
+    except HttpError as err:
+        print(err)
 
 
 if __name__ == '__main__':
