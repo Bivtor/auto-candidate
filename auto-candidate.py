@@ -516,44 +516,6 @@ def create_folder(creds, name: str, parents):
     return [file.get('id'), file.get('webViewLink')]
 
 
-def main():
-    """Shows basic usage of the Drive v3 API.
-    Prints the names and ids of the first 10 files the user has access to.
-    """
-    creds = None
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-    # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials2.json', SCOPES)
-            creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
-        with open('token.json', 'w') as token:
-            token.write(creds.to_json())
-
-    ##################################################################
-    ##################################################################
-    ##################s################################################
-    # GABE
-    # parents = ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2']
-    SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-    SHEET_ID = 444685763
-    # KK10
-    # parents = ['1jtuVaA62GOLnQLXBarid4AtvbKRmhGij']
-    # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
-    # SHEET_ID = 1406139361
-
-    add_candidates(creds)
-    # sendTwilioTexts(creds, SPREADSHEET_ID, "Therapists", SHEET_ID)
-
-
 def add_candidates(creds):
 
     ##################################################################
@@ -584,8 +546,8 @@ def add_candidates(creds):
 
         # therapists or LVN
 
-        path = create_Therapist(creds, page_html)
-        # path = create_LVN(creds, page_html)
+        # path = create_Therapist(creds, page_html)
+        path = create_LVN(creds, page_html)
         if pdf:
             # print("would upload")
             upload_basic(creds, path[0], path[1], pdf)
@@ -611,7 +573,8 @@ def create_LVN(creds, path) -> list:
     # GABE
     parents = ['18iotkvD56CLbdrVKJGPewjC1MIeu__hk']
     SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-    SHEET_ID = 1087287054
+    SHEET_ID = 1087287054  # NURSES
+    # SHEET_ID = 1274126071  # CASE MANAGER
 
     # KK10
     # parents = ['1ufXmmOK1w_YRUzqzmiZPPXOWQDoemNX2']
@@ -879,6 +842,32 @@ def getLicenseInfo(name, depth) -> list:
             'credentials': "include",
     }
 
+    # fetch to CADC / RADT PAGE
+    """
+    fetch("https://ccapp.certemy.com/api/organization/public_registry/865beee9-c683-411c-a87e-cdf3d3fcd18e?&search=toby%20oskam&filters={%22last_name%22:[],%22certificationIds%22:[],%22organizationId%22:null}&page=1&page_size=20&order_id=last_name&order_type=asc", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "max-age=0",
+    "content-type": "application/json",
+    "if-modified-since": "Thu, 03 Nov 2022 22:19:20 GMT",
+    "sec-ch-ua": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://ccapp.certemy.com/public-registry/865beee9-c683-411c-a87e-cdf3d3fcd18e",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
+    
+    """
+
     r = requests.post(url, data=body, headers=headers)
     soup = BeautifulSoup(r.text, "html.parser")
 
@@ -1013,6 +1002,52 @@ def find_duplicates(creds, spreadsheet_id, sheet_name):
     print("got all names")
 
 
+class SesMailSender:
+    """Encapsulates functions to send emails with Amazon SES."""
+
+    def __init__(self, ses_client):
+        """
+        :param ses_client: A Boto3 Amazon SES client.
+        """
+        self.ses_client = ses_client
+
+    def send_email(self, source, destination, subject, text, html, reply_tos=None):
+        """
+        Sends an email.
+
+        Note: If your account is in the Amazon SES  sandbox, the source and
+        destination email accounts must both be verified.
+
+        :param source: The source email account.
+        :param destination: The destination email account.
+        :param subject: The subject of the email.
+        :param text: The plain text version of the body of the email.
+        :param html: The HTML version of the body of the email.
+        :param reply_tos: Email accounts that will receive a reply if the recipient
+                          replies to the message.
+        :return: The ID of the message, assigned by Amazon SES.
+        """
+        send_args = {
+            'Source': source,
+            'Destination': destination.to_service_format(),
+            'Message': {
+                'Subject': {'Data': subject},
+                'Body': {'Text': {'Data': text}, 'Html': {'Data': html}}}}
+        if reply_tos is not None:
+            send_args['ReplyToAddresses'] = reply_tos
+        try:
+            response = self.ses_client.send_email(**send_args)
+            message_id = response['MessageId']
+            logger.info(
+                "Sent mail %s from %s to %s.", message_id, source, destination.tos)
+        except ClientError:
+            logger.exception(
+                "Couldn't send mail from %s to %s.", source, destination.tos)
+            raise
+        else:
+            return message_id
+
+
 def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
     try:
         service = build('sheets', 'v4', credentials=creds)
@@ -1026,7 +1061,7 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
 
         # Call the Sheets API
 
-        for i in range(202, 992):
+        for i in range(266, 992):
             r = sheet_name + "!A{}:J{}".format(i, i)
             result = service.spreadsheets().values().get(
                 spreadsheetId=spreadsheet_id, range=r).execute()
@@ -1045,7 +1080,7 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
             name = values[0]
             number = values[3]
 
-            # Text them if they have 'N' marked in the '#/#' form of column I
+            # Text them if they have 'N' marked in the column J
 
             # TODO Make sure errors are caught from wrong phone number
 
@@ -1056,16 +1091,16 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                 # Actual Do Texting portion of code
                 body = ""
                 if sheet_name == "Therapists":
-                    body = "{},\nMy name is Gabe and I'm with SBT. We received your resume via Zip Recruiter for the in-person therapist role.\nI'd love to talk at your earliest convenience! We can schedule a brief 15 min call here: {}".format(
+                    body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Therapist role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
                         name, calendar_link)
                 elif sheet_name == "Nurses":
-                    body = "{},\nMy name is Gabe and I'm with SBT. We received your resume via Zip Recruiter for the in-person LVN role.\nI'd love to talk at your earliest convenience! We can schedule a brief 15 min call here: {}".format(
+                    body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Nursing role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
                         name, calendar_link)
                 elif sheet_name == "RADT":
-                    body = "{},\nMy name is Gabe and I'm with SBT. We received your resume via Zip Recruiter for the in-person tech role.\nI'd love to talk at your earliest convenience! We can schedule a brief 15 min call here: {}".format(
+                    body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Tech role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
                         name, calendar_link)
                 else:
-                    body = "{},\nMy name is Gabe and I'm with SBT. We received your resume via Zip Recruiter.\nI'd love to talk at your earliest convenience! We can schedule a brief 15 min call here: {}".format(
+                    body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
                         name, calendar_link)
                 try:
                     message = client.messages.create(
@@ -1077,10 +1112,12 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                     print("Sent message to {} with message SID: {}".format(
                         name, message.sid))
                     contacted = 'Y'
+                    textemail = 'T/'
                 except:
                     print("Message was not sent to: {} - {}".format(
                         name, number))
                     contacted = 'N'  # Contacted stays N
+                    textemail = 'N/'
 
                 ###########################    ########################### ###########################
 
@@ -1094,13 +1131,16 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                                     {
                                         "values": [
                                             {"userEnteredValue": {
-                                                "stringValue": contacted}}
+                                                "stringValue": textemail}},
+                                            {"userEnteredValue": {
+                                                "stringValue": contacted}},
+
                                         ]}],
                                 "fields": 'userEnteredValue',
                                 "start": {
                                     "sheetId": sheet_id,
                                     "rowIndex": i-1,
-                                    "columnIndex": 9
+                                    "columnIndex": 8
                                 }
                             }
                         }
@@ -1111,6 +1151,44 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                 response = request.execute()
     except HttpError as err:
         print(err)
+
+
+def main():
+    """Shows basic usage of the Drive v3 API.
+    Prints the names and ids of the first 10 files the user has access to.
+    """
+    creds = None
+    # The file token.json stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    if os.path.exists('token.json'):
+        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'credentials2.json', SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open('token.json', 'w') as token:
+            token.write(creds.to_json())
+
+    ##################################################################
+    ##################################################################
+    ##################s################################################
+    # GABE
+    # parents = ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2']
+    SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
+    SHEET_ID = 444685763
+    # KK10
+    # parents = ['1jtuVaA62GOLnQLXBarid4AtvbKRmhGij']
+    # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
+    # SHEET_ID = 1406139361
+
+    # add_candidates(creds)
+    sendTwilioTexts(creds, SPREADSHEET_ID, "Therapists", SHEET_ID)
 
 
 if __name__ == '__main__':
