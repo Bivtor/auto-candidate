@@ -1,4 +1,5 @@
 from __future__ import print_function
+import google.auth
 from genericpath import isfile
 from difflib import SequenceMatcher
 from twilio.rest import Client
@@ -6,6 +7,7 @@ from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 from pathlib import Path
 
+import time
 import os
 import os.path
 import unicodedata
@@ -21,8 +23,13 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
+# Amazon SES Send Email info
+import logging
+import boto3
+from botocore.exceptions import ClientError, WaiterError
 
-import google.auth
+logger = logging.getLogger(__name__)
+
 
 load_dotenv()
 
@@ -865,7 +872,7 @@ def getLicenseInfo(name, depth) -> list:
   "mode": "cors",
   "credentials": "omit"
 });
-    
+
     """
 
     r = requests.post(url, data=body, headers=headers)
@@ -1001,6 +1008,34 @@ def find_duplicates(creds, spreadsheet_id, sheet_name):
         print(err)
     print("got all names")
 
+# snippet-start:[python.example_code.ses.SesDestination]
+
+
+class SesDestination:
+    """Contains data about an email destination."""
+
+    def __init__(self, tos, ccs=None, bccs=None):
+        """
+        :param tos: The list of recipients on the 'To:' line.
+        :param ccs: The list of recipients on the 'CC:' line.
+        :param bccs: The list of recipients on the 'BCC:' line.
+        """
+        self.tos = tos
+        self.ccs = ccs
+        self.bccs = bccs
+
+    def to_service_format(self):
+        """
+        :return: The destination data in the format expected by Amazon SES.
+        """
+        svc_format = {'ToAddresses': self.tos}
+        if self.ccs is not None:
+            svc_format['CcAddresses'] = self.ccs
+        if self.bccs is not None:
+            svc_format['BccAddresses'] = self.bccs
+        return svc_format
+# snippet-end:[python.example_code.ses.SesDestination]
+
 
 class SesMailSender:
     """Encapsulates functions to send emails with Amazon SES."""
@@ -1056,23 +1091,25 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
         account_sid = os.environ['TWILIO_ACCOUNT_SID']
         auth_token = os.environ['TWILIO_AUTH_TOKEN']
         service_id = os.environ['TWILIO_SERVICE_ID']
+        aws_user = os.getenv('aws_access_key_id')
+        aws_pass = os.environ.get('aws_secret_access_key')
+
         client = Client(account_sid, auth_token)
-        calendar_link = 'calendly.com/gabe_berko/phone-interview'
+        calendar_link = 'calendly.com/gabe_berko'
 
-        # Call the Sheets API
-
-        for i in range(266, 992):
+        # Get the Sheets Info on whether or not to Text/Email
+        for i in range(2, 992):
+            time.sleep(1)
             r = sheet_name + "!A{}:J{}".format(i, i)
             result = service.spreadsheets().values().get(
                 spreadsheetId=spreadsheet_id, range=r).execute()
-
             try:
                 values = result.get('values', [])[0]
             except IndexError as err:
                 print("No more candidates: ({})".format(err))
                 break
 
-            # Send message or not
+            # Choose whether or not to Send Text/Message
             if len(values) < 10:  # if there is no Contacted category inputted
                 contacted = "N"
             else:
@@ -1080,15 +1117,10 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
             name = values[0]
             number = values[3]
 
-            # Text them if they have 'N' marked in the column J
-
             # TODO Make sure errors are caught from wrong phone number
 
+            # Send Text if 'N' marked in the column J
             if len(contacted) == 0 or contacted[0].lower() == 'n':
-                print("Texting : {}".format(name))
-
-                ###########################    ########################### ###########################
-                # Actual Do Texting portion of code
                 body = ""
                 if sheet_name == "Therapists":
                     body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Therapist role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
@@ -1108,7 +1140,6 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                         body=body,
                         to=number,
                     )
-
                     print("Sent message to {} with message SID: {}".format(
                         name, message.sid))
                     contacted = 'Y'
@@ -1116,6 +1147,7 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                 except:
                     print("Message was not sent to: {} - {}".format(
                         name, number))
+                    print("This text did not send at row i=", i)
                     contacted = 'N'  # Contacted stays N
                     textemail = 'N/'
 
@@ -1177,18 +1209,20 @@ def main():
 
     ##################################################################
     ##################################################################
-    ##################s################################################
+    ################## s################################################
     # GABE
     # parents = ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2']
     SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-    SHEET_ID = 444685763
+    # SHEET_ID = 444685763 #Therapists
+    SHEET_ID = 1087287054  # Nurses
     # KK10
     # parents = ['1jtuVaA62GOLnQLXBarid4AtvbKRmhGij']
     # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
     # SHEET_ID = 1406139361
 
     # add_candidates(creds)
-    sendTwilioTexts(creds, SPREADSHEET_ID, "Therapists", SHEET_ID)
+    # sendTwilioTexts(creds, SPREADSHEET_ID, "Nurses", SHEET_ID)
+    print("ran main")
 
 
 if __name__ == '__main__':
