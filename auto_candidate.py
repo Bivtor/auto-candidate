@@ -1,18 +1,11 @@
-from __future__ import print_function
-import google.auth
-from genericpath import isfile
-from difflib import SequenceMatcher
+# import google.auth
 from twilio.rest import Client
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
-from pathlib import Path
 
 import time
 import os
 import os.path
-import unicodedata
-import urllib.parse
-import urllib.request
 
 import requests
 
@@ -25,21 +18,41 @@ from googleapiclient.http import MediaFileUpload
 
 # Amazon SES Send Email info
 import logging
-import boto3
+# import boto3
 from botocore.exceptions import ClientError, WaiterError
 
 logger = logging.getLogger(__name__)
-
-
 load_dotenv()
+
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive',
           'https://www.googleapis.com/auth/documents',
           'https://www.googleapis.com/auth/spreadsheets']
 
+"""
+Creates Credentials to be used globally
+"""
+creds = None
+# The file token.json stores the user's access and refresh tokens, and is
+# created automatically when the authorization flow completes for the first
+# time.
+if os.path.exists('token.json'):
+    creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+# If there are no (valid) credentials available, let the user log in.
+if not creds or not creds.valid:
+    if creds and creds.expired and creds.refresh_token:
+        creds.refresh(Request())
+    else:
+        flow = InstalledAppFlow.from_client_secrets_file(
+            'credentials2.json', SCOPES)
+        creds = flow.run_local_server(port=0)
+    # Save the credentials for the next run
+    with open('token.json', 'w') as token:
+        token.write(creds.to_json())
 
-def upload_basic(creds, name, parents, path):
+
+def upload_basic(title, parents, path):
     """Insert new file.
     Returns : Id's of the file uploaded
 
@@ -51,11 +64,8 @@ def upload_basic(creds, name, parents, path):
     try:
         # create drive api client
         service = build('drive', 'v3', credentials=creds)
-
-        file_metadata = {'name': name,
-                         'parents': parents}
-        media = MediaFileUpload(path,
-                                mimetype='application/pdf')
+        file_metadata = {'name': title, 'parents': parents}
+        media = MediaFileUpload(path, mimetype='application/pdf')
 
         # pylint: disable=maybe-no-member
         file = service.files().create(body=file_metadata, media_body=media,
@@ -70,7 +80,7 @@ def upload_basic(creds, name, parents, path):
     return file.get('id')
 
 
-def update_spreadsheet(creds, info, parents, SPREADSHEET_ID, SHEET_ID, folder_link, licensetype):
+def update_spreadsheet(info, SPREADSHEET_ID, SHEET_ID, folder_link):
     try:
         service = build('sheets', 'v4', credentials=creds)
 
@@ -90,7 +100,8 @@ def update_spreadsheet(creds, info, parents, SPREADSHEET_ID, SHEET_ID, folder_li
                             "values": [
                                 {"userEnteredValue": {
                                     "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(folder_link, info[0])}},
-                                {"userEnteredValue": {"stringValue": info[1]}},
+                                {"userEnteredValue": {
+                                    "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(info[7], info[1])}},
                                 {"userEnteredValue": {"stringValue": info[2]}},
                                 {"userEnteredValue": {"stringValue": info[3]}},
                                 {"userEnteredValue": {"stringValue": info[4]}},
@@ -167,7 +178,7 @@ def update_spreadsheet(creds, info, parents, SPREADSHEET_ID, SHEET_ID, folder_li
         print(err)
 
 
-def create_file_LVN(creds, info: list, parents, name):
+def create_file_LVN(info: list, parents, name):
     # create file
     try:
         # create drive api client
@@ -183,11 +194,11 @@ def create_file_LVN(creds, info: list, parents, name):
         print(F'Document was created with ID: "{file.get("id")}".')
 
         ###########################################
-        inputName = "Name: " + info[5] + "\n"
-        inputPhone = "Phone: " + info[1] + "\n"
-        inputEmail = "Email: " + info[2] + "\n"
-        inputDate = "Date Applied: " + info[3] + "\n"
-        inputLocation = "Location: " + info[4] + "\n"
+        inputName = "Name: " + info.name + "\n"
+        inputPhone = "Phone: " + info.phone + "\n"
+        inputEmail = "Email: " + info.email + "\n"
+        inputDate = "Date Applied: " + info.date + "\n"
+        inputLocation = "Location: " + info.location + "\n"
         restOfQuestions = ("Willingness to commute to?:\n",
                            "Yrs Exp w / Treatment?:\n",
                            "\t- If so, where?:\n",
@@ -326,7 +337,6 @@ def create_file_LVN(creds, info: list, parents, name):
         except HttpError as error:
             print(F'An error occurred: {error}')
             file = None
-
         # pylint: disable=maybe-no-member
 
     except HttpError as error:
@@ -334,7 +344,7 @@ def create_file_LVN(creds, info: list, parents, name):
         file = None
 
 
-def create_file_Therapist(creds, info: list, parents, name):
+def create_file_Therapist(data, parents, title):
     # create file
     try:
         # create drive api client
@@ -342,7 +352,7 @@ def create_file_Therapist(creds, info: list, parents, name):
 
         file_metadata = {
             'mimeType': 'application/vnd.google-apps.document',
-            'name': name,
+            'name': title,
             'parents': parents
         }
         file = service.files().create(body=file_metadata, fields='id',
@@ -350,11 +360,11 @@ def create_file_Therapist(creds, info: list, parents, name):
         print(F'Document was created with ID: "{file.get("id")}".')
 
         ###########################################
-        inputName = "Name: " + info[5] + "\n"
-        inputPhone = "Phone: " + info[1] + "\n"
-        inputEmail = "Email: " + info[2] + "\n"
-        inputDate = "Date Applied: " + info[3] + "\n"
-        inputLocation = "Location: " + info[4] + "\n"
+        inputName = "Name: " + data.name + "\n"
+        inputPhone = "Phone: " + data.phone + "\n"
+        inputEmail = "Email: " + data.email + "\n"
+        inputDate = "Date Applied: " + data.date + "\n"
+        inputLocation = "Location: " + data.location + "\n"
         restOfQuestions = ("Willingness to commute to?:\n",
                            "Yrs Exp w / Treatment?:\n",
                            "\t- If so, where?:\n",
@@ -497,7 +507,7 @@ def create_file_Therapist(creds, info: list, parents, name):
         file = None
 
 
-def create_folder(creds, name: str, parents):
+def create_folder(name: str, parents):
     """ Create a folder and prints the folder ID
     Returns : Folder Id, Folder Share Link
     """
@@ -523,44 +533,7 @@ def create_folder(creds, name: str, parents):
     return [file.get('id'), file.get('webViewLink')]
 
 
-def add_candidates(creds):
-
-    ##################################################################
-    # assign directory
-    directory = '/Users/victorrinaldi/Desktop/auto_candidate/candidates'
-    # iterate over files in that directory
-
-    ########################################################
-    # Driver code, uploads pdf and documents of every folder associated inside candidates
-    ########################################################
-
-    for folder in sorted(os.listdir(directory)):
-        if (folder == '.DS_Store'):
-            continue
-        items = sorted(os.listdir(os.path.join(directory, folder)))
-        if len(items) == 0:
-            continue
-        pdf = None
-
-        page_html = os.path.join(os.path.join(directory, folder), items[0])
-
-        if len(items) == 3:  # no resume
-            pdf = os.path.join(os.path.join(directory, folder), items[2])
-        else:
-            pdf = None
-
-        print(folder)
-
-        # therapists or LVN
-
-        # path = create_Therapist(creds, page_html)
-        path = create_LVN(creds, page_html)
-        if pdf:
-            # print("would upload")
-            upload_basic(creds, path[0], path[1], pdf)
-
-
-def create_LVN(creds, path) -> list:
+def create_LVN(path) -> list:
     """
     Creates a new LVN candidate inside the LVN Folder and a new LVN document
     """
@@ -612,23 +585,13 @@ def create_LVN(creds, path) -> list:
     return [title, folder_id]
 
 
-def create_Therapist(creds, path):
+def create_Therapist(data):
     """
     Creates a new Therapist candidate inside the Therapist Folder and a new Therapist document
     """
 
-    # get info from html
-    info = getTherapistInfo(path)
-    title = info[0]
-    phone = info[1]
-    email = info[2]
-    date = info[3]
-    location = info[4]
-    name = info[5]
-
-    # return [name, phone, email, date, location, nameonly]
-
-    # assign parent for Therapist folder
+    title = "{} Therapist ({})".format(data.name, data.location)
+    data.date = cleanupdate(data.date)
 
     # GABE
     parents = ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2']
@@ -641,26 +604,35 @@ def create_Therapist(creds, path):
     # SHEET_ID = 1406139361
 
     # add id of new parent so that we are inside the proper file
-    print("Creating", info[5], "Folder")
-    newParent = create_folder(creds, title, parents)
+    print("Creating {}'s Folder".format(data.name))
+    newParent = create_folder(title, parents)
     folder_id = [newParent[0]]
     folder_link = newParent[1]
-    # crate Questions Document
-    create_file_Therapist(creds, info, folder_id, title)
+    # Create Questions Document
+    create_file_Therapist(data, folder_id, title)
 
     # Get License number of first (depth) entries:
-    licenselist = getLicenseInfo(name, 5)
+    licenselist = getLicenseInfo(data.name, 5)
     # make sure license list is at least 5 long
+
     for i in range(5 - len(licenselist)):
         licenselist.append("")
+
     # update info for sheets insertion
-    info2 = [name, "Zip Recruiter", location, phone, email, date, licenselist]
+    # TODO change Zip Recruiter to include ZR Link
+    info2 = [data.name, "Zip Recruiter", data.location,
+             data.phone, data.email, data.date, licenselist, data.ziprecruiter]
 
     folder_link = newParent[1]
     # call update spreadsheet function
-    update_spreadsheet(creds, info2, parents,
-                       SPREADSHEET_ID, SHEET_ID, folder_link, "Therapist")
+    update_spreadsheet(info2, SPREADSHEET_ID, SHEET_ID, folder_link)
 
+    if (data.hasResume):
+        # Get Path of newest file in Download
+        path = "/Users/victorrinaldi/Downloads/" + \
+            os.popen("ls -t /Users/victorrinaldi/Downloads/ | head -n1").read()
+        path = path.strip()
+        upload_basic(title, folder_id, path)
     return [title, folder_id]
 
 
@@ -921,68 +893,6 @@ def getLicenseInfo(name, depth) -> list:
     return licenseinfolist
 
 
-def getTherapistInfo(path) -> list:
-    """
-    Find Name and Location from HTML (Therapist Specific)
-    """
-    with open(path) as fp:
-        soup = BeautifulSoup(fp, 'html.parser')
-
-    name = ""
-    location = ""
-
-    # find name
-    name = soup.find('h4', class_='name').string.strip()
-    name += " Therapist "
-
-    scr = ""
-    phone = ""
-    email = ""
-    date = ""
-
-    scr = soup.find(class_="side_content ats_content").find(
-        'p', class_="location")
-
-    # fixing no location exception
-    if scr == None:
-        scr = soup.find('a', class_='manage_job_link').stripped_strings
-        for s in scr:
-            scr = s
-        scr = scr[scr.find(" - ")+3:]
-    else:
-        scr = scr.string
-
-    # if (scr.string == None): scr = soup.find
-    scr = str(scr)
-    scr = scr[:scr.find(',')]
-    scr = '(' + scr + ')'
-    name += scr
-    name = name.strip()
-    location = scr[1:len(scr)-1].strip()
-
-    ###############
-    for text in soup.find_all(class_="textPhone"):
-        phone = text
-    phone = phone.string
-
-    for mail in soup.find_all(class_="textEmail"):
-        email = mail
-    email = mail.string
-
-    date = soup.find(class_="text applied_date").span.string
-    date = cleanupdate(date)
-
-    # update name to remove LVN (Location)
-    nameonly = name[:name.find("Therapist")]
-
-    # inputName = "Name: " + info[0] + "\n"
-    # inputPhone = "Phone: " + info[1] + "\n"
-    # inputEmail = "Email: " + info[2] + "\n"
-    # inputDate = "Date Applied: " + info[3] + "\n"
-    # inputLocation = "Location: " + info[4] + "\n"
-    return [name, phone, email, date, location, nameonly.strip()]
-
-
 def find_duplicates(creds, spreadsheet_id, sheet_name):
     try:
         service = build('sheets', 'v4', credentials=creds)
@@ -1186,26 +1096,6 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
 
 
 def main():
-    """Shows basic usage of the Drive v3 API.
-    Prints the names and ids of the first 10 files the user has access to.
-    """
-    creds = None
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-    # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials2.json', SCOPES)
-            creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
-        with open('token.json', 'w') as token:
-            token.write(creds.to_json())
 
     ##################################################################
     ##################################################################
