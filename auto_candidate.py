@@ -1,7 +1,7 @@
-# import google.auth
 from twilio.rest import Client
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
+import glob
 
 import time
 import os
@@ -585,7 +585,7 @@ def create_LVN(path) -> list:
     return [title, folder_id]
 
 
-def create_Therapist(data):
+def create_candidate(data, category):
     """
     Creates a new Therapist candidate inside the Therapist Folder and a new Therapist document
     """
@@ -594,14 +594,33 @@ def create_Therapist(data):
     data.date = cleanupdate(data.date)
 
     # GABE
-    parents = ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2']
     SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-    SHEET_ID = 444685763
 
-    # KK10
-    # parents = ['1jtuVaA62GOLnQLXBarid4AtvbKRmhGij']
-    # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
-    # SHEET_ID = 1406139361
+    parent_id_dict = dict()
+    parent_id_dict['Therapist'] = '15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'
+    parent_id_dict['CADC'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ' #misc
+    parent_id_dict['EA'] = '1Z3X8qLjHZGaqZ18w-863EsEM4VIPHtGj'
+    parent_id_dict['Event Planner'] = '1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'
+    parent_id_dict['Nurse'] = '18iotkvD56CLbdrVKJGPewjC1MIeu__hk'
+    parent_id_dict['RADT'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'#misc
+    parent_id_dict['Recruiter'] = '1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'
+    parent_id_dict['VOB/MRA'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ' #misc
+    parent_id_dict['Pre-Screening'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ' #misc
+
+    sheet_id_dict = dict()
+    sheet_id_dict['Therapist'] = 444685763
+    sheet_id_dict['CADC'] = 1975651049
+    sheet_id_dict['EA'] = 1274126071
+    sheet_id_dict['Event Planner'] = 1055725025
+    sheet_id_dict['Nurse'] = 1087287054
+    sheet_id_dict['RADT'] = 1394494018
+    sheet_id_dict['Recruiter'] = 310054064
+    sheet_id_dict['VOB/MRA'] = 1214396382
+    sheet_id_dict['Pre-screening'] = 0
+    
+    SHEET_ID = sheet_id_dict.get(category, '0') #pre-screening default
+    parents = [parent_id_dict.get(category, '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ')] #misc default
+    print("Parents are: {} for role: {}".format(parents, category))
 
     # add id of new parent so that we are inside the proper file
     print("Creating {}'s Folder".format(data.name))
@@ -628,10 +647,8 @@ def create_Therapist(data):
     update_spreadsheet(info2, SPREADSHEET_ID, SHEET_ID, folder_link)
 
     if (data.hasResume):
-        # Get Path of newest file in Download
-        path = "/Users/victorrinaldi/Downloads/" + \
-            os.popen("ls -t /Users/victorrinaldi/Downloads/ | head -n1").read()
-        path = path.strip()
+        list_of_files = glob.glob("N:\Downloads2\*") # * means all if need specific format then *.csv
+        path = max(list_of_files, key=os.path.getctime)
         upload_basic(title, folder_id, path)
     return [title, folder_id]
 
@@ -1110,9 +1127,29 @@ def main():
     # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
     # SHEET_ID = 1406139361
 
-    # add_candidates(creds)
+    
     # sendTwilioTexts(creds, SPREADSHEET_ID, "Nurses", SHEET_ID)
-    print("ran main")
+    
+    """
+    Creates Credentials to be used globally
+    """
+    # creds = None
+    # # The file token.json stores the user's access and refresh tokens, and is
+    # # created automatically when the authorization flow completes for the first
+    # # time.
+    # if os.path.exists('token.json'):
+    #     creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    # # If there are no (valid) credentials available, let the user log in.
+    # if not creds or not creds.valid:
+    #     if creds and creds.expired and creds.refresh_token:
+    #         creds.refresh(Request())
+    #     else:
+    #         flow = InstalledAppFlow.from_client_secrets_file(
+    #             'credentials2.json', SCOPES)
+    #         creds = flow.run_local_server(port=0)
+    #     # Save the credentials for the next run
+    #     with open('token.json', 'w') as token:
+    #         token.write(creds.to_json())
 
 
 if __name__ == '__main__':
