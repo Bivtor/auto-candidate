@@ -1,7 +1,6 @@
 from twilio.rest import Client
 from dotenv import load_dotenv
-from bs4 import BeautifulSoup
-import glob
+
 
 import time
 import os
@@ -50,6 +49,31 @@ if not creds or not creds.valid:
     # Save the credentials for the next run
     with open('token.json', 'w') as token:
         token.write(creds.to_json())
+
+# Gabe Sheet ID
+SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
+
+parent_id_dict = dict()
+parent_id_dict['Therapist'] = '15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'
+parent_id_dict['CADC'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # misc
+parent_id_dict['EA'] = '1Z3X8qLjHZGaqZ18w-863EsEM4VIPHtGj'
+parent_id_dict['Event Planner'] = '1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'
+parent_id_dict['Nurse'] = '18iotkvD56CLbdrVKJGPewjC1MIeu__hk'
+parent_id_dict['RADT'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # misc
+parent_id_dict['Recruiter'] = '1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'
+parent_id_dict['VOB/MRA'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # misc
+parent_id_dict['Pre-Screening'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # misc
+
+sheet_id_dict = dict()
+sheet_id_dict['Therapist'] = 444685763
+sheet_id_dict['CADC'] = 1975651049
+sheet_id_dict['EA'] = 1274126071
+sheet_id_dict['Event Planner'] = 1055725025
+sheet_id_dict['Nurse'] = 1087287054
+sheet_id_dict['RADT'] = 1394494018
+sheet_id_dict['Recruiter'] = 310054064
+sheet_id_dict['VOB/MRA'] = 1214396382
+sheet_id_dict['Pre-screening'] = 0
 
 
 def upload_basic(title, parents, path):
@@ -178,7 +202,7 @@ def update_spreadsheet(info, SPREADSHEET_ID, SHEET_ID, folder_link):
         print(err)
 
 
-def create_file_LVN(info: list, parents, name):
+def create_file_general(data, parents, title):
     # create file
     try:
         # create drive api client
@@ -186,7 +210,7 @@ def create_file_LVN(info: list, parents, name):
 
         file_metadata = {
             'mimeType': 'application/vnd.google-apps.document',
-            'name': name,
+            'name': title,
             'parents': parents
         }
         file = service.files().create(body=file_metadata, fields='id',
@@ -194,11 +218,11 @@ def create_file_LVN(info: list, parents, name):
         print(F'Document was created with ID: "{file.get("id")}".')
 
         ###########################################
-        inputName = "Name: " + info.name + "\n"
-        inputPhone = "Phone: " + info.phone + "\n"
-        inputEmail = "Email: " + info.email + "\n"
-        inputDate = "Date Applied: " + info.date + "\n"
-        inputLocation = "Location: " + info.location + "\n"
+        inputName = "Name: " + data.name + "\n"
+        inputPhone = "Phone: " + data.phone + "\n"
+        inputEmail = "Email: " + data.email + "\n"
+        inputDate = "Date Applied: " + data.date + "\n"
+        inputLocation = "Location: " + data.location + "\n"
         restOfQuestions = ("Willingness to commute to?:\n",
                            "Yrs Exp w / Treatment?:\n",
                            "\t- If so, where?:\n",
@@ -233,7 +257,7 @@ def create_file_LVN(info: list, parents, name):
                         'location': {
                             'index': 1
                         },
-                        'text': "LVN INTERVIEW QUESTIONS\n"
+                        'text': "INTERVIEW QUESTIONS\n"
                     }
                 },
                 {
@@ -533,93 +557,20 @@ def create_folder(name: str, parents):
     return [file.get('id'), file.get('webViewLink')]
 
 
-def create_LVN(path) -> list:
-    """
-    Creates a new LVN candidate inside the LVN Folder and a new LVN document
-    """
-
-    # get info from html
-    info = getLVNInfo(path)
-    title = info[0]
-    phone = info[1]
-    email = info[2]
-    date = info[3]
-    location = info[4]
-    name = info[5]
-
-    # return [name, phone, email, date, location, nameonly]
-
-    # assign parent for LVN folder
-    # GABE
-    parents = ['18iotkvD56CLbdrVKJGPewjC1MIeu__hk']
-    SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-    SHEET_ID = 1087287054  # NURSES
-    # SHEET_ID = 1274126071  # CASE MANAGER
-
-    # KK10
-    # parents = ['1ufXmmOK1w_YRUzqzmiZPPXOWQDoemNX2']
-    # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
-    # SHEET_ID = 0
-
-    # add id of new parent so that we are inside the proper file
-    newParent = create_folder(creds, title, parents)
-    folder_id = [newParent[0]]
-    folder_link = newParent[1]
-    # crate Questions Document
-    create_file_LVN(creds, info, folder_id, title)
-
-   # Get License number of first (depth) entries:
-    licenselist = getLicenseInfo(name, 5)
-    # make sure license list is at least 5 long
-    for i in range(5 - len(licenselist)):
-        licenselist.append("")
-
-    # update info for sheets insertion
-    info2 = [name, "Zip Recruiter", location, phone, email, date, licenselist]
-
-    folder_link = newParent[1]
-    # call update spreadsheet function
-    update_spreadsheet(creds, info2, parents,
-                       SPREADSHEET_ID, SHEET_ID, folder_link, "LVN")
-
-    return [title, folder_id]
-
-
 def create_candidate(data, category):
     """
-    Creates a new Therapist candidate inside the Therapist Folder and a new Therapist document
+    Creates a new candidate inside xyz Folder and a new Therapist document
     """
 
     title = "{} Therapist ({})".format(data.name, data.location)
     data.date = cleanupdate(data.date)
 
-    # GABE
-    SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-
-    parent_id_dict = dict()
-    parent_id_dict['Therapist'] = '15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'
-    parent_id_dict['CADC'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ' #misc
-    parent_id_dict['EA'] = '1Z3X8qLjHZGaqZ18w-863EsEM4VIPHtGj'
-    parent_id_dict['Event Planner'] = '1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'
-    parent_id_dict['Nurse'] = '18iotkvD56CLbdrVKJGPewjC1MIeu__hk'
-    parent_id_dict['RADT'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'#misc
-    parent_id_dict['Recruiter'] = '1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'
-    parent_id_dict['VOB/MRA'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ' #misc
-    parent_id_dict['Pre-Screening'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ' #misc
-
-    sheet_id_dict = dict()
-    sheet_id_dict['Therapist'] = 444685763
-    sheet_id_dict['CADC'] = 1975651049
-    sheet_id_dict['EA'] = 1274126071
-    sheet_id_dict['Event Planner'] = 1055725025
-    sheet_id_dict['Nurse'] = 1087287054
-    sheet_id_dict['RADT'] = 1394494018
-    sheet_id_dict['Recruiter'] = 310054064
-    sheet_id_dict['VOB/MRA'] = 1214396382
-    sheet_id_dict['Pre-screening'] = 0
-    
-    SHEET_ID = sheet_id_dict.get(category, '0') #pre-screening default
-    parents = [parent_id_dict.get(category, '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ')] #misc default
+    global sheet_id_dict
+    global parent_id_dict
+    global SPREADSHEET_ID
+    SHEET_ID = sheet_id_dict.get(category, '0')  # pre-screening default
+    parents = [parent_id_dict.get(
+        category, '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ')]  # misc default
     print("Parents are: {} for role: {}".format(parents, category))
 
     # add id of new parent so that we are inside the proper file
@@ -628,7 +579,10 @@ def create_candidate(data, category):
     folder_id = [newParent[0]]
     folder_link = newParent[1]
     # Create Questions Document
-    create_file_Therapist(data, folder_id, title)
+    if category == 'Therapist':
+        create_file_Therapist(data, folder_id, title)
+    else:
+        create_file_general(data, folder_id, title)
 
     # Get License number of first (depth) entries:
     licenselist = getLicenseInfo(data.name, 5)
@@ -638,7 +592,6 @@ def create_candidate(data, category):
         licenselist.append("")
 
     # update info for sheets insertion
-    # TODO change Zip Recruiter to include ZR Link
     info2 = [data.name, "Zip Recruiter", data.location,
              data.phone, data.email, data.date, licenselist, data.ziprecruiter]
 
@@ -647,72 +600,11 @@ def create_candidate(data, category):
     update_spreadsheet(info2, SPREADSHEET_ID, SHEET_ID, folder_link)
 
     if (data.hasResume):
-        list_of_files = glob.glob("N:\Downloads2\*") # * means all if need specific format then *.csv
+        # * means all if need specific format then *.csv
+        list_of_files = glob.glob("N:\Downloads2\*")
         path = max(list_of_files, key=os.path.getctime)
         upload_basic(title, folder_id, path)
     return [title, folder_id]
-
-
-def getLVNInfo(path) -> list:
-    """
-    Find Name and Location from HTML (LVN Specific)
-    """
-    with open(path) as fp:
-        soup = BeautifulSoup(fp, 'html.parser')
-
-    name = ""
-    location = ""
-
-    # find name
-    name = soup.find('h4', class_='name').string.strip()
-    name += " LVN "
-
-    scr = ""
-    phone = ""
-    email = ""
-    date = ""
-
-    scr = soup.find(class_="side_content ats_content").find(
-        'p', class_="location")
-
-    # fixing no location exception
-    if scr == None:
-        scr = soup.find('a', class_='manage_job_link').stripped_strings
-        for s in scr:
-            scr = s
-        scr = scr[scr.find(" - ")+3:]
-    else:
-        scr = scr.string
-
-    scr = str(scr)
-    scr = scr[:scr.find(',')]
-    scr = '(' + scr + ')'
-    name += scr
-    name = name.strip()
-    location = scr[1:len(scr)-1].strip()
-
-    ###############
-    for text in soup.find_all(class_="textPhone"):
-        phone = text
-    phone = phone.string
-
-    for mail in soup.find_all(class_="textEmail"):
-        email = mail
-    email = mail.string
-
-    date = soup.find(class_="text applied_date").span.string
-
-    date = cleanupdate(date)
-
-    # update name to remove LVN (Location)
-    nameonly = name[:name.find("LVN")]
-
-    # inputName = "Name: " + info[0] + "\n"
-    # inputPhone = "Phone: " + info[1] + "\n"
-    # inputEmail = "Email: " + info[2] + "\n"
-    # inputDate = "Date Applied: " + info[3] + "\n"
-    # inputLocation = "Location: " + info[4] + "\n"
-    return [name, phone, email, date, location, nameonly.strip()]
 
 
 def cleanupdate_license(date):
@@ -1010,14 +902,17 @@ class SesMailSender:
             return message_id
 
 
-def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
+def sendTwilioTexts(sheet_name, start, end):
     try:
+        global sheet_id_dict
+        sheet_id = sheet_id_dict.get(sheet_name, "")
         service = build('sheets', 'v4', credentials=creds)
 
         # Find your Account SID and Auth Token and Message
         account_sid = os.environ['TWILIO_ACCOUNT_SID']
         auth_token = os.environ['TWILIO_AUTH_TOKEN']
         service_id = os.environ['TWILIO_SERVICE_ID']
+        # Find AWS info for sending emails
         aws_user = os.getenv('aws_access_key_id')
         aws_pass = os.environ.get('aws_secret_access_key')
 
@@ -1025,11 +920,11 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
         calendar_link = 'calendly.com/gabe_berko'
 
         # Get the Sheets Info on whether or not to Text/Email
-        for i in range(2, 992):
+        for i in range(start, end):
             time.sleep(1)
-            r = sheet_name + "!A{}:J{}".format(i, i)
+            r = sheet_name + "!A{}:I{}".format(i, i)
             result = service.spreadsheets().values().get(
-                spreadsheetId=spreadsheet_id, range=r).execute()
+                spreadsheetId=SPREADSHEET_ID, range=r).execute()
             try:
                 values = result.get('values', [])[0]
             except IndexError as err:
@@ -1037,22 +932,20 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                 break
 
             # Choose whether or not to Send Text/Message
-            if len(values) < 10:  # if there is no Contacted category inputted
-                contacted = "N"
+            if len(values) < 9:  # if there is no Contacted category inputted
+                textemail = ""
             else:
-                contacted = values[9]
+                textemail = values[8]
             name = values[0]
             number = values[3]
 
-            # TODO Make sure errors are caught from wrong phone number
-
-            # Send Text if 'N' marked in the column J
-            if len(contacted) == 0 or contacted[0].lower() == 'n':
+            # Send Text if Nothing is marked in Columnn I --> Then mark Column I as 'T/'
+            if len(textemail) == 0:
                 body = ""
-                if sheet_name == "Therapists":
+                if sheet_name == "Therapist":
                     body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Therapist role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
                         name, calendar_link)
-                elif sheet_name == "Nurses":
+                elif sheet_name == "Nurse":
                     body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Nursing role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
                         name, calendar_link)
                 elif sheet_name == "RADT":
@@ -1069,14 +962,12 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                     )
                     print("Sent message to {} with message SID: {}".format(
                         name, message.sid))
-                    contacted = 'Y'
                     textemail = 'T/'
                 except:
                     print("Message was not sent to: {} - {}".format(
                         name, number))
                     print("This text did not send at row i=", i)
-                    contacted = 'N'  # Contacted stays N
-                    textemail = 'N/'
+                    textemail = 'T/'
 
                 ###########################    ########################### ###########################
 
@@ -1091,9 +982,6 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                                         "values": [
                                             {"userEnteredValue": {
                                                 "stringValue": textemail}},
-                                            {"userEnteredValue": {
-                                                "stringValue": contacted}},
-
                                         ]}],
                                 "fields": 'userEnteredValue',
                                 "start": {
@@ -1106,7 +994,7 @@ def sendTwilioTexts(creds, spreadsheet_id, sheet_name, sheet_id):
                     ]
                 }
                 request = service.spreadsheets().batchUpdate(
-                    spreadsheetId=spreadsheet_id,  body=data)
+                    spreadsheetId=SPREADSHEET_ID,  body=data)
                 response = request.execute()
     except HttpError as err:
         print(err)
@@ -1127,9 +1015,8 @@ def main():
     # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
     # SHEET_ID = 1406139361
 
-    
     # sendTwilioTexts(creds, SPREADSHEET_ID, "Nurses", SHEET_ID)
-    
+
     """
     Creates Credentials to be used globally
     """

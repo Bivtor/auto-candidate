@@ -19,28 +19,46 @@ class Data(BaseModel):
     date: str
     ziprecruiter: str
 
-class inputs(BaseModel):
+
+class openLink(BaseModel):
     link: str
     category: str
 
+
+class textData(BaseModel):
+    category_texts: str
+    start: str
+    end: str
+
+
 @app.post('/openstring')
-def openstring(data: inputs):
-    global category 
+def openstring(data: openLink):
+    global category
     category = data.category
     print(data.link)
     print(category)
 
-    cmd = 'start chrome {}'.format(data.link[1:len(data.link)-2])
-    if os.system(cmd) != 0: #TODO This is broken I think, pretty sure returning false doesn't really do anything
+    cmd = 'start chrome {}'.format(
+        data.link[1:len(data.link)-2])  # OPEN chrome
+
+    # TODO This is broken I think, pretty sure returning false doesn't really do anything
+    if os.system(cmd) != 0:
         return False
-    
+
 
 @app.post('/runfunction')
 def createUsers(data: Data):
     global category
     create_candidate(data, category)
     print(data.name)
-    return {"success"}
+    return {"Success"}
+
+
+@app.post('/sendtexts')
+def sendtexts(data: textData):
+    sendTwilioTexts(textData.category_texts, textData.start, textData.end)
+
+    return {"Success"}
 
 
 # flask run --host=0.0.0.0 to show to public

@@ -2,3 +2,4 @@ candidates/
 *.json
 *.env
 *.txt
+tst.py
