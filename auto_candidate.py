@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 import time
 import os
 import os.path
+import glob
+from bs4 import BeautifulSoup
 
 import requests
 
@@ -263,7 +265,7 @@ def create_file_general(data, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': 25,
+                            'index': 21,
                         },
                         'text': inputName,
                     }
@@ -271,7 +273,7 @@ def create_file_general(data, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': len(inputName)+25,
+                            'index': len(inputName)+21,
                         },
                         'text': inputPhone
                     }
@@ -279,7 +281,7 @@ def create_file_general(data, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': len(inputPhone) + len(inputName)+25,
+                            'index': len(inputPhone) + len(inputName)+21,
                         },
                         'text': inputEmail
                     }
@@ -287,7 +289,7 @@ def create_file_general(data, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': len(inputPhone) + len(inputName)+25 + len(inputEmail)
+                            'index': len(inputPhone) + len(inputName)+21 + len(inputEmail)
                         },
                         'text': inputDate
                     }
@@ -295,7 +297,7 @@ def create_file_general(data, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': len(inputPhone) + len(inputName)+25 + len(inputEmail) + len(inputDate)
+                            'index': len(inputPhone) + len(inputName)+21 + len(inputEmail) + len(inputDate)
                         },
                         'text': inputLocation
                     }
@@ -303,7 +305,7 @@ def create_file_general(data, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': len(inputPhone) + len(inputName)+25 + len(inputEmail) + len(inputDate) + len(inputLocation)
+                            'index': len(inputPhone) + len(inputName)+21 + len(inputEmail) + len(inputDate) + len(inputLocation)
                         },
                         'text': bigString
                     }
@@ -312,7 +314,7 @@ def create_file_general(data, parents, title):
                     'updateTextStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  25
+                            'endIndex':  21
                         },
                         'textStyle': {
                             'bold': True,
@@ -337,7 +339,7 @@ def create_file_general(data, parents, title):
                     'updateParagraphStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  len(inputPhone) + len(inputName)+25 + len(inputEmail) + len(inputDate) + len(inputLocation) + len(bigString)
+                            'endIndex':  len(inputPhone) + len(inputName)+21 + len(inputEmail) + len(inputDate) + len(inputLocation) + len(bigString)
                         },
                         'paragraphStyle': {
                             'spaceAbove': {
@@ -474,7 +476,7 @@ def create_file_Therapist(data, parents, title):
                     'updateTextStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  25
+                            'endIndex':  21
                         },
                         'textStyle': {
                             'bold': True,
@@ -499,7 +501,7 @@ def create_file_Therapist(data, parents, title):
                     'updateParagraphStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  len(inputPhone) + len(inputName)+25 + len(inputEmail) + len(inputDate) + len(inputLocation) + len(bigString)
+                            'endIndex':  len(inputPhone) + len(inputName)+21 + len(inputEmail) + len(inputDate) + len(inputLocation) + len(bigString)
                         },
                         'paragraphStyle': {
                             'spaceAbove': {

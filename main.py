@@ -27,8 +27,8 @@ class openLink(BaseModel):
 
 class textData(BaseModel):
     category_texts: str
-    start: str
-    end: str
+    start: int
+    end: int
 
 
 @app.post('/openstring')
@@ -39,9 +39,9 @@ def openstring(data: openLink):
     print(category)
 
     cmd = 'start chrome {}'.format(
-        data.link[1:len(data.link)-2])  # OPEN chrome
+        data.link[1:len(data.link)-1])  # OPEN chrome
 
-    # TODO This is broken I think, pretty sure returning false doesn't really do anything
+    #TODO This is broken I think, pretty sure returning false doesn't really do anything
     if os.system(cmd) != 0:
         return False
 
@@ -56,7 +56,7 @@ def createUsers(data: Data):
 
 @app.post('/sendtexts')
 def sendtexts(data: textData):
-    sendTwilioTexts(textData.category_texts, textData.start, textData.end)
+    sendTwilioTexts(data.category_texts, data.start, data.end)
 
     return {"Success"}
 
