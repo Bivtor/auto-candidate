@@ -3,7 +3,7 @@ event = "https://www.ziprecruiter.com/candidates?q=&label_name=&interest=&show_h
 reg = 'https://www.ziprecruiter.com/candidates?quiz_id=8eadf980'
 user = 'https://www.ziprecruiter.com/contact/response/8eadf980/4b09b0b6?q=&label_name=&interest=&show_hidden=0&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=8eadf980&page=1&rows=50&total=26&search_id=1fb2299a-ee65-4db2-becb-d0a17bf921f5&pos=1#tabOriginalResume'
 text = '<dsdsdssds>     add   https://www.ziprecruiter.com/candidates?quiz_id=8eadf980    Therapist '
-text = '<dadsadsas>     text   Therapist 2    400'
+# text = '<dadsadsas>     text   Therapist 2    400'
 # text = '   <dadsadsas>  text  Therapist  '
 # text = event['text']
 # @app.event("app_mention")
@@ -15,6 +15,7 @@ def event_test(event, say):
     if len(inputlist) < 0:
         return
     method = inputlist[0]
+    print(inputlist)
     match method:
         case 'add':
             link = inputlist[1]
