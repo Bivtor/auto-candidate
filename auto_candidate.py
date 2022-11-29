@@ -564,7 +564,7 @@ def create_candidate(data, category):
     Creates a new candidate inside xyz Folder and a new Therapist document
     """
 
-    title = "{} Therapist ({})".format(data.name, data.location)
+    title = "{} {} ({})".format(data.name, category, data.location)
     data.date = cleanupdate(data.date)
 
     global sheet_id_dict
@@ -943,19 +943,8 @@ def sendTwilioTexts(sheet_name, start, end):
 
             # Send Text if Nothing is marked in Columnn I --> Then mark Column I as 'T/'
             if len(textemail) == 0:
-                body = ""
-                if sheet_name == "Therapist":
-                    body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Therapist role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
-                        name, calendar_link)
-                elif sheet_name == "Nurse":
-                    body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Nursing role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
-                        name, calendar_link)
-                elif sheet_name == "RADT":
-                    body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the Tech role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
-                        name, calendar_link)
-                else:
-                    body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
-                        name, calendar_link)
+                body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the {} role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
+                    name, sheet_name, calendar_link)
                 try:
                     message = client.messages.create(
                         messaging_service_sid=service_id,

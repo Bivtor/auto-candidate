@@ -8,6 +8,9 @@ text = '<dsdsdssds>     add   https://www.ziprecruiter.com/candidates?quiz_id=8e
 # text = event['text']
 # @app.event("app_mention")
 
+# TODO Known bugs: incorrect title
+# TODO double check text contents, I think it uses the input from the text category
+
 
 def event_test(event, say):
     text = event

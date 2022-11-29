@@ -32,9 +32,10 @@ def event_test(event, say):
                 start = inputlist[2]
             if len(inputlist) > 3:
                 end = inputlist[3]
-            print(requests.post(url='http://127.0.0.1:8000/sendtexts', headers={
-                  'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category_texts': category, 'start': start, 'end': end}))
-            say("Sending Texts to Candidates in the {} Category".format(category))
+            requests.post(url='http://127.0.0.1:8000/sendtexts', headers={
+                'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category_texts': category, 'start': start, 'end': end})
+            say("Sending Texts to Candidates in the {} Category from rows {} to {}".format(
+                category, start, end))
 
 
 # Start your app
