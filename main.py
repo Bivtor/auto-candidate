@@ -41,7 +41,7 @@ def openstring(data: openLink):
     cmd = 'start chrome {}'.format(
         data.link[1:len(data.link)-1])  # OPEN chrome
 
-    #TODO This is broken I think, pretty sure returning false doesn't really do anything
+    # TODO This is broken I think, pretty sure returning false doesn't really do anything
     if os.system(cmd) != 0:
         return False
 
@@ -57,8 +57,15 @@ def createUsers(data: Data):
 @app.post('/sendtexts')
 def sendtexts(data: textData):
     sendTwilioTexts(data.category_texts, data.start, data.end)
-
     return {"Success"}
+
+
+@app.post('/validatecategory')
+def validCategory(category: str):
+    if checkSheetNameValidity(category):
+        pass  # TODO return 200
+    else:
+        pass  # TODO return 500 or BAD
 
 
 # flask run --host=0.0.0.0 to show to public

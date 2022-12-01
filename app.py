@@ -20,6 +20,10 @@ def event_test(event, say):
         case 'add':
             link = inputlist[1]
             category = inputlist[2]
+            # Validate Section
+            # TODO validate_response = requests.post(url='http://127.0.0.1:8000/validatecategory', headers={'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category': category})
+            # TODO if (validate_response.get('response') == 500): say("Validated {} sheet category".format(category))
+
             print(requests.post(url='http://127.0.0.1:8000/openstring', headers={
                   'accept': 'application/json', 'Content-Type': 'application/json'}, json={'link': link, 'category': category}))
             say("Inputting Candidates in the {} Category".format(category))
@@ -32,6 +36,11 @@ def event_test(event, say):
                 start = inputlist[2]
             if len(inputlist) > 3:
                 end = inputlist[3]
+
+            # Validate Section
+            # TODO validate_response = requests.post(url='http://127.0.0.1:8000/validatecategory', headers={'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category': category})
+            # TODO if (validate_response.get('response') == 500): say("Validated {} sheet category".format(category))
+
             requests.post(url='http://127.0.0.1:8000/sendtexts', headers={
                 'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category_texts': category, 'start': start, 'end': end})
             say("Sending Texts to Candidates in the {} Category from rows {} to {}".format(
