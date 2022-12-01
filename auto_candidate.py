@@ -991,43 +991,25 @@ def sendTwilioTexts(sheet_name, start, end):
         print(err)
 
 
+def checkSheetNameValidity(sheetname: str) -> bool:
+    try:
+        service = build('sheets', 'v4', credentials=creds)
+        request = service.spreadsheets().get(
+            spreadsheetId=SPREADSHEET_ID, includeGridData=False)
+        response = request.execute()
+        sheetTitlesList = list()
+        for sheet in response.get('sheets'):
+            sheetTitlesList.append(sheet.get('properties').get('title'))
+
+        return sheetname in sheetTitlesList
+    except HttpError as err:
+        print(err)
+
+
 def main():
-
-    ##################################################################
-    ##################################################################
-    ################## s################################################
-    # GABE
-    # parents = ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2']
-    SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-    # SHEET_ID = 444685763 #Therapists
-    SHEET_ID = 1087287054  # Nurses
-    # KK10
-    # parents = ['1jtuVaA62GOLnQLXBarid4AtvbKRmhGij']
-    # SPREADSHEET_ID = '1PPTbe9q0g9xjSwm2Jox2FTsJKQN6Q3WfcYPAHx5DXhA'
-    # SHEET_ID = 1406139361
-
-    # sendTwilioTexts(creds, SPREADSHEET_ID, "Nurses", SHEET_ID)
-
-    """
-    Creates Credentials to be used globally
-    """
-    # creds = None
-    # # The file token.json stores the user's access and refresh tokens, and is
-    # # created automatically when the authorization flow completes for the first
-    # # time.
-    # if os.path.exists('token.json'):
-    #     creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-    # # If there are no (valid) credentials available, let the user log in.
-    # if not creds or not creds.valid:
-    #     if creds and creds.expired and creds.refresh_token:
-    #         creds.refresh(Request())
-    #     else:
-    #         flow = InstalledAppFlow.from_client_secrets_file(
-    #             'credentials2.json', SCOPES)
-    #         creds = flow.run_local_server(port=0)
-    #     # Save the credentials for the next run
-    #     with open('token.json', 'w') as token:
-    #         token.write(creds.to_json())
+    # testing getting sheets names
+    print(checkSheetNameValidity("Therapist"))
+    pass
 
 
 if __name__ == '__main__':
