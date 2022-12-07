@@ -570,7 +570,7 @@ def create_candidate(data, category):
     global sheet_id_dict
     global parent_id_dict
     global SPREADSHEET_ID
-    SHEET_ID = sheet_id_dict.get(category, '0')  # pre-screening default
+    SHEET_ID = sheet_id_dict.get(category, "0")  # pre-screening default
     parents = [parent_id_dict.get(
         category, '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ')]  # misc default
     print("Parents are: {} for role: {}".format(parents, category))
@@ -907,7 +907,7 @@ class SesMailSender:
 def sendTwilioTexts(sheet_name, start, end):
     try:
         global sheet_id_dict
-        sheet_id = sheet_id_dict.get(sheet_name, "")
+        SHEET_ID = sheet_id_dict.get(sheet_name, "0")
         service = build('sheets', 'v4', credentials=creds)
 
         # Find your Account SID and Auth Token and Message
@@ -976,7 +976,7 @@ def sendTwilioTexts(sheet_name, start, end):
                                         ]}],
                                 "fields": 'userEnteredValue',
                                 "start": {
-                                    "sheetId": sheet_id,
+                                    "sheetId": SHEET_ID,
                                     "rowIndex": i-1,
                                     "columnIndex": 8
                                 }
@@ -991,24 +991,33 @@ def sendTwilioTexts(sheet_name, start, end):
         print(err)
 
 
-def checkSheetNameValidity(sheetname: str) -> bool:
+def checkSheetNameValidity(sheetname: str) -> dict:
     try:
         service = build('sheets', 'v4', credentials=creds)
         request = service.spreadsheets().get(
             spreadsheetId=SPREADSHEET_ID, includeGridData=False)
         response = request.execute()
-        sheetTitlesList = list()
+        sheetTitlesList = set()
         for sheet in response.get('sheets'):
-            sheetTitlesList.append(sheet.get('properties').get('title'))
+            # print(sheet.get('properties').get('title'))
+            sheetTitlesList.add(sheet.get('properties').get('title'))
 
-        return sheetname in sheetTitlesList
+        v = sheetname in sheetTitlesList
+        if v: #If valid, alter global state for sheet id for this operation
+            global sheet_id_dict
+            sheet_id = sheet_id_dict.get(sheetname, "0")
+            pass
+        return {"isValid" : v , "sheet" :sheetname}
     except HttpError as err:
         print(err)
 
 
 def main():
     # testing getting sheets names
-    print(checkSheetNameValidity("Therapist"))
+    # print(sheet_id)
+    # print(checkSheetNameValidity("CADc")['isValid'])
+    # print(sheet_id)
+
     pass
 
 
