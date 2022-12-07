@@ -992,22 +992,44 @@ def sendTwilioTexts(sheet_name, start, end):
 
 
 def checkSheetNameValidity(sheetname: str) -> dict:
+    """
+        Check if there is a sheet name equal to the input  -> set isSheet to T/F
+        Check if there is a drive folder equal to the input name -> set isFolder to T/F
+        return the appropriate ID's for folderID and sheetID
+    """
+    values = {"isSheet": False, "isFolder": False,
+              "sheetId": "", "folderId": ""}
     try:
+        # Get Sheet & Sheet ID
         service = build('sheets', 'v4', credentials=creds)
         request = service.spreadsheets().get(
             spreadsheetId=SPREADSHEET_ID, includeGridData=False)
         response = request.execute()
-        sheetTitlesList = set()
+        sheetDict = dict()
         for sheet in response.get('sheets'):
-            # print(sheet.get('properties').get('title'))
-            sheetTitlesList.add(sheet.get('properties').get('title'))
+            s = sheet.get('properties')
+            # print(sheet)
+            sheetDict[s.get('title')] = s.get('sheetId')
+        if sheetname in sheetDict:  # if the Sheet is valid, update list
+            values['isSheet'] = True
+            values['sheetId'] = sheetDict.get(sheetname, None)
 
-        v = sheetname in sheetTitlesList
-        if v: #If valid, alter global state for sheet id for this operation
-            global sheet_id_dict
-            sheet_id = sheet_id_dict.get(sheetname, "0")
-            pass
-        return {"isValid" : v , "sheet" :sheetname}
+        # Get Folder and Folder name
+        service = build('drive', 'v3', credentials=creds)
+
+        response = service.files().list(
+            q="name='{}' and mimeType='application/vnd.google-apps.folder'".format(
+                sheetname),
+            spaces='drive'
+        ).execute()
+        folderList = dict()
+        for folder in response.get('files'):
+            folderList[folder.get('name')] = folder.get('id')
+
+        values['isFolder'] = sheetname in folderList
+        values['folderId'] = folderList[sheetname]
+
+        return values
     except HttpError as err:
         print(err)
 
@@ -1015,7 +1037,7 @@ def checkSheetNameValidity(sheetname: str) -> dict:
 def main():
     # testing getting sheets names
     # print(sheet_id)
-    # print(checkSheetNameValidity("CADc")['isValid'])
+    print(checkSheetNameValidity("Case Manager"))
     # print(sheet_id)
 
     pass
