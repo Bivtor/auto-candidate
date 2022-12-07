@@ -62,11 +62,11 @@ class validData(BaseModel):
     isValid: bool
     sheet_id: str
 
+
 @app.post('/validatecategory', response_model=validData)
 def validCategory(category: str):
     valid = checkSheetNameValidity(category)
-    return 
-
+    return
 
 
 # flask run --host=0.0.0.0 to show to public
