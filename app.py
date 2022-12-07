@@ -4,10 +4,10 @@ from dotenv import load_dotenv
 import requests
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
+
 load_dotenv()
 # Initializes your app with your bot token and socket mode handler
 app = App(token=os.environ.get("SLACK_BOT_TOKEN"))
-
 
 @app.event("app_mention")
 def event_test(event, say):
@@ -19,27 +19,25 @@ def event_test(event, say):
     match method:
         case 'add':
             link = inputlist[1]
-            category = inputlist[2]
-            # Validate Section
-            # TODO validate_response = requests.post(url='http://127.0.0.1:8000/validatecategory', headers={'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category': category})
-            # TODO if (validate_response.get('response') == 500): say("Validated {} sheet category".format(category))
+            category = " ".join(inputlist[2:])
+            print(category)
 
+            #Add cateory validation here
             print(requests.post(url='http://127.0.0.1:8000/openstring', headers={
                   'accept': 'application/json', 'Content-Type': 'application/json'}, json={'link': link, 'category': category}))
             say("Inputting Candidates in the {} Category".format(category))
+
         case 'text':
-            category = inputlist[1]
+            category = " ".join(inputlist[1:])
             start = 2
             end = 998
-            # if includes
-            if len(inputlist) > 2:
-                start = inputlist[2]
-            if len(inputlist) > 3:
-                end = inputlist[3]
+            
+            # # if includes
+            # if len(inputlist) > 2:
+            #     start = inputlist[2]
+            # if len(inputlist) > 3:
+            #     end = inputlist[3]
 
-            # Validate Section
-            # TODO validate_response = requests.post(url='http://127.0.0.1:8000/validatecategory', headers={'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category': category})
-            # TODO if (validate_response.get('response') == 500): say("Validated {} sheet category".format(category))
 
             requests.post(url='http://127.0.0.1:8000/sendtexts', headers={
                 'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category_texts': category, 'start': start, 'end': end})

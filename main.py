@@ -1,6 +1,5 @@
 from auto_candidate import *
 
-from typing import Union
 from pydantic import BaseModel
 import os
 from fastapi import FastAPI
@@ -41,7 +40,6 @@ def openstring(data: openLink):
     cmd = 'start chrome {}'.format(
         data.link[1:len(data.link)-1])  # OPEN chrome
 
-    # TODO This is broken I think, pretty sure returning false doesn't really do anything
     if os.system(cmd) != 0:
         return False
 
@@ -60,12 +58,15 @@ def sendtexts(data: textData):
     return {"Success"}
 
 
-@app.post('/validatecategory')
+class validData(BaseModel):
+    isValid: bool
+    sheet_id: str
+
+@app.post('/validatecategory', response_model=validData)
 def validCategory(category: str):
-    if checkSheetNameValidity(category):
-        pass  # TODO return 200
-    else:
-        pass  # TODO return 500 or BAD
+    valid = checkSheetNameValidity(category)
+    return 
+
 
 
 # flask run --host=0.0.0.0 to show to public
