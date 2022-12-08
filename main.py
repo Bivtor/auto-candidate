@@ -6,6 +6,9 @@ from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
 category = 'Pre-screening'
+sheetId = '0'  # Pre-screening
+folderId = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # Misc
+
 app = FastAPI()
 
 
@@ -58,15 +61,6 @@ def sendtexts(data: textData):
     return {"Success"}
 
 
-class validData(BaseModel):
-    isValid: bool
-    sheet_id: str
-
-
 @app.post('/validatecategory', response_model=validData)
-def validCategory(category: str):
-    valid = checkSheetNameValidity(category)
-    return
-
-
-# flask run --host=0.0.0.0 to show to public
+def validCategory(data: validData):
+    return checkSheetNameValidity(sheetname)
