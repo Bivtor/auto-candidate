@@ -539,52 +539,62 @@ def create_folder(name: str, parents):
     return [file.get('id'), file.get('webViewLink')]
 
 
-def create_candidate(data, category):
+class candidateData(BaseModel):
+    hasResume: bool
+    location: str
+    name: str
+    phone: str
+    email: str
+    date: str
+    ziprecruiter: str
+
+
+def create_candidate(candidateData: candidateData, data):
     """
     Creates a new candidate inside xyz Folder and a new Therapist document
     """
-    f = open('settings.json')
-    data = json.load(f)
 
-    title = "{} {} ({})".format(data.name, category, data.location)
-    data.date = cleanupdate(data.date)
-
+    # Set Proper Variables
+    category = data['category']
+    title = "{} {} ({})".format(candidateData.name,
+                                category, candidateData.location)
+    candidateData.date = cleanupdate(candidateData.date)
     SHEET_ID = data['sheetId']
     parents = [data['folderId']]  # misc default
     print("Parents are: {} for role: {}".format(parents, category))
 
-    # add id of new parent so that we are inside the proper file
-    print("Creating {}'s Folder".format(data.name))
+    # Add id of new parent so that we are inside the proper file
+    print("Creating {}'s Folder".format(candidateData.name))
     newParent = create_folder(title, parents)
     folder_id = [newParent[0]]
     folder_link = newParent[1]
+
     # Create Questions Document
     if category == 'Therapist':
-        create_file_Therapist(data, folder_id, title)
+        create_file_Therapist(candidateData, folder_id, title)
     else:
-        create_file_general(data, folder_id, title)
+        create_file_general(candidateData, folder_id, title)
 
     # Get License number of first (depth) entries:
-    licenselist = getLicenseInfo(data.name, 5)
+    licenselist = getLicenseInfo(candidateData.name, 5)
     # make sure license list is at least 5 long
 
     for i in range(5 - len(licenselist)):
         licenselist.append("")
 
     # update info for sheets insertion
-    info2 = [data.name, "Zip Recruiter", data.location,
-             data.phone, data.email, data.date, licenselist, data.ziprecruiter]
+    info2 = [candidateData.name, "Zip Recruiter", candidateData.location,
+             candidateData.phone, candidateData.email, candidateData.date, licenselist, candidateData.ziprecruiter]
 
     folder_link = newParent[1]
     # call update spreadsheet function
     update_spreadsheet(info2, SPREADSHEET_ID, SHEET_ID, folder_link)
 
-    if (data.hasResume):
+    if (candidateData.hasResume):
         # * means all if need specific format then *.csv
         list_of_files = glob.glob("N:\Downloads2\*")
         path = max(list_of_files, key=os.path.getctime)
         upload_basic(title, folder_id, path)
-    f.close()
     return [title, folder_id]
 
 

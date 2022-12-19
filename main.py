@@ -9,16 +9,6 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-class Data(BaseModel):
-    hasResume: bool
-    location: str
-    name: str
-    phone: str
-    email: str
-    date: str
-    ziprecruiter: str
-
-
 class openLink(BaseModel):
     link: str
 
@@ -37,10 +27,12 @@ def openstring(data: openLink):
 
 
 @app.post('/runfunction')
-def createUsers(data: Data):
-    global category
-    create_candidate(data, category)
-    print(data.name)
+def createUsers(candidateData: candidateData):
+    f = open('settings.json')
+    data = json.load(f)
+    create_candidate(candidateData, data)
+    f.close()
+    print(candidateData.name)
     return {"Success"}
 
 
