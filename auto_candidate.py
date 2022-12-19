@@ -898,23 +898,23 @@ def sendmailtexts(data: dict):
     max_length_row = max({data['nameCol'], data['phoneCol'], data['emailCol'],
                          data['contactedCol'], data['timesContactedCol'], data['spokenToCol']})+1
 
-    calendar_link = "https://calendly.com/cara-berkovich/30min"
-
-    body = "Hello {}!\n\nMy name is Cara and I'm with SBT. We received your resume via Zip Recruiter for the {} position and we'd love to schedule a phone interview ASAP!\n\nCan we do that here?\n\nhttps://calendly.com/cara-berkovich/30min\n\nYou can always call/text me directly with any questions!\n\n(646) 221-3640\nCara@solutionbasedtherapeutics.com"
-    body2 = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the {} role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349"
     try:
-        category = data['category']
         sheetId = data['sheetId']
         service = build('sheets', 'v4', credentials=creds)
+
         # TODO Create email identitity here
 
         for row in range(2, 1000):
             try:
-                time.sleep(1.3)
+                calendar_link = "https://calendly.com/cara-berkovich/30min"  # Set Calendar Link
+                body = "Hello {}!\n\nMy name is Cara and I'm with SBT. We received your resume via Zip Recruiter for the {} position and we'd love to schedule a phone interview ASAP!\n\nCan we do that here?\n\nhttps://calendly.com/cara-berkovich/30min\n\nYou can always call/text me directly with any questions!\n\n(646) 221-3640\nCara@solutionbasedtherapeutics.com"
+                body2 = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the {} role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349\nGabe@solutionbasedtherapeutics.com"
+                time.sleep(1)
                 RANGE = "{}!{}:{}".format(
                     data['category'], row, row)
                 result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
                                                              range=RANGE).execute()
+                time.sleep(1)
                 forumlaresult = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
                                                                     range=RANGE, valueRenderOption='FORMULA').execute()
                 valtoformula = dict()
@@ -948,16 +948,13 @@ def sendmailtexts(data: dict):
                 if shouldSendMessage(data, values):  # If we decide to send a message
                     values[data['spokenToCol']] = 'N'
                     values[data['contactedCol']] = 'T/'
-                    print(values[data['timesContactedCol']])
                     if values[data['timesContactedCol']] == '':
 
                         values[data['timesContactedCol']] = '1'
                     else:
-                        print("incremenet times contacted")
                         values[data['timesContactedCol']] = str(
                             int(values[data['timesContactedCol']])+1)
 
-                    print("Sending a text to {} at {}".format(name, number))
                     # Format body before sending final text
                     body = body.format(name, data['category'], calendar_link)
 
@@ -972,7 +969,6 @@ def sendmailtexts(data: dict):
 
                     # TODO record that email has been sent / status of return
 
-                    # Update spreadsheet to reflect text has been sent 'Y/#'
                     # Build values
                     updatevalues = []
                     for j in values:
@@ -982,7 +978,6 @@ def sendmailtexts(data: dict):
                             updatevalues.append(
                                 {"userEnteredValue": {"stringValue": j}})
 
-                    print(updatevalues)
                     updatedata = {
                         'requests': [
                             {
@@ -1025,8 +1020,8 @@ def sendTwilioText(name: str, number: str, body: str, ):
             body=body,
             to=number,
         )
-        print("Sent message to {} with message SID: {}".format(
-            name, message.sid))
+        print("Sent message to {} with number: {}".format(
+            name, number))
         return message
     except:
         print("Could not send message to: {} @ {} (Their carrier most likely marked the message as spam)".format(
