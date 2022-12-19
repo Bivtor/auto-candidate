@@ -910,7 +910,7 @@ def sendmailtexts(data: dict):
 
         for row in range(2, 1000):
             try:
-                time.sleep(1)
+                time.sleep(1.3)
                 RANGE = "{}!{}:{}".format(
                     data['category'], row, row)
                 result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
