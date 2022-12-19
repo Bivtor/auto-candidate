@@ -2,10 +2,10 @@ from twilio.rest import Client
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
-
 import time
 import os
 import os.path
+import json
 import glob
 from bs4 import BeautifulSoup
 
@@ -20,8 +20,9 @@ from googleapiclient.http import MediaFileUpload
 
 # Amazon SES Send Email info
 import logging
+
 # import boto3
-from botocore.exceptions import ClientError, WaiterError
+from botocore.exceptions import ClientError
 
 logger = logging.getLogger(__name__)
 load_dotenv()
@@ -55,28 +56,6 @@ if not creds or not creds.valid:
 
 # Gabe Sheet ID
 SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-
-parent_id_dict = dict()
-parent_id_dict['Therapist'] = '15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'
-parent_id_dict['CADC'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # misc
-parent_id_dict['EA'] = '1Z3X8qLjHZGaqZ18w-863EsEM4VIPHtGj'
-parent_id_dict['Event Planner'] = '1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'
-parent_id_dict['Nurse'] = '18iotkvD56CLbdrVKJGPewjC1MIeu__hk'
-parent_id_dict['RADT'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # misc
-parent_id_dict['Recruiter'] = '1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'
-parent_id_dict['VOB/MRA'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # misc
-parent_id_dict['Pre-Screening'] = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # misc
-
-sheet_id_dict = dict()
-sheet_id_dict['Therapist'] = 444685763
-sheet_id_dict['CADC'] = 1975651049
-sheet_id_dict['EA'] = 1274126071
-sheet_id_dict['Event Planner'] = 1055725025
-sheet_id_dict['Nurse'] = 1087287054
-sheet_id_dict['RADT'] = 1394494018
-sheet_id_dict['Recruiter'] = 310054064
-sheet_id_dict['VOB/MRA'] = 1214396382
-sheet_id_dict['Pre-screening'] = 0
 
 
 def upload_basic(title, parents, path):
@@ -564,16 +543,14 @@ def create_candidate(data, category):
     """
     Creates a new candidate inside xyz Folder and a new Therapist document
     """
+    f = open('settings.json')
+    data = json.load(f)
 
     title = "{} {} ({})".format(data.name, category, data.location)
     data.date = cleanupdate(data.date)
 
-    global sheet_id_dict
-    global parent_id_dict
-    global SPREADSHEET_ID
-    SHEET_ID = sheet_id_dict.get(category, "0")  # pre-screening default
-    parents = [parent_id_dict.get(
-        category, '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ')]  # misc default
+    SHEET_ID = data['sheetId']
+    parents = [data['folderId']]  # misc default
     print("Parents are: {} for role: {}".format(parents, category))
 
     # add id of new parent so that we are inside the proper file
@@ -607,6 +584,7 @@ def create_candidate(data, category):
         list_of_files = glob.glob("N:\Downloads2\*")
         path = max(list_of_files, key=os.path.getctime)
         upload_basic(title, folder_id, path)
+    f.close()
     return [title, folder_id]
 
 
@@ -905,91 +883,152 @@ class SesMailSender:
             return message_id
 
 
-def sendTwilioTexts(sheet_name, start, end):
+def sendmailtexts(data: dict):
+    # Find max length of the row insertion we will need
+    max_length_row = max({data['nameCol'], data['phoneCol'], data['emailCol'],
+                         data['contactedCol'], data['timesContactedCol'], data['spokenToCol']})+1
+
+    calendar_link = "https://calendly.com/cara-berkovich/30min"
+
+    body = "Hello {}!\n\nMy name is Cara and I'm with SBT. We received your resume via Zip Recruiter for the {} position and we'd love to schedule a phone interview ASAP!\n\nCan we do that here?\n\nhttps://calendly.com/cara-berkovich/30min\n\nYou can always call/text me directly with any questions!\n\n(646) 221-3640\nCara@solutionbasedtherapeutics.com"
+    body2 = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the {} role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349"
     try:
-        global sheet_id_dict
-        SHEET_ID = sheet_id_dict.get(sheet_name, "0")
+        category = data['category']
+        sheetId = data['sheetId']
         service = build('sheets', 'v4', credentials=creds)
+        # TODO Create email identitity here
 
-        # Find your Account SID and Auth Token and Message
-        account_sid = os.environ['TWILIO_ACCOUNT_SID']
-        auth_token = os.environ['TWILIO_AUTH_TOKEN']
-        service_id = os.environ['TWILIO_SERVICE_ID']
-        # Find AWS info for sending emails
-        aws_user = os.getenv('aws_access_key_id')
-        aws_pass = os.environ.get('aws_secret_access_key')
-
-        client = Client(account_sid, auth_token)
-        calendar_link = 'calendly.com/gabe_berko'
-
-        # Get the Sheets Info on whether or not to Text/Email
-        for i in range(start, end):
-            time.sleep(1)
-            r = sheet_name + "!A{}:I{}".format(i, i)
-            result = service.spreadsheets().values().get(
-                spreadsheetId=SPREADSHEET_ID, range=r).execute()
+        for row in range(2, 1000):
             try:
+                time.sleep(1)
+                RANGE = "{}!{}:{}".format(
+                    data['category'], row, row)
+                result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
+                                                             range=RANGE).execute()
+                forumlaresult = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
+                                                                    range=RANGE, valueRenderOption='FORMULA').execute()
+                valtoformula = dict()
                 values = result.get('values', [])[0]
-            except IndexError as err:
-                print("No more candidates: ({})".format(err))
-                break
+                formulavalues = forumlaresult['values'][0]
 
-            # Choose whether or not to Send Text/Message
-            if len(values) < 9:  # if there is no Contacted category inputted
-                textemail = ""
-            else:
-                textemail = values[8]
-            name = values[0]
-            number = values[3]
+                # Make sure not to break the hyper links
+                for j in range(len(formulavalues)):
+                    if "=HYPERLINK" in str(formulavalues[j]):
+                        valtoformula[values[j]] = {"userEnteredValue": {
+                            "formulaValue": formulavalues[j]}}
 
-            # Send Text if Nothing is marked in Columnn I --> Then mark Column I as 'T/'
-            if len(textemail) == 0:
-                body = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the {} role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349".format(
-                    name, sheet_name, calendar_link)
-                try:
-                    message = client.messages.create(
-                        messaging_service_sid=service_id,
-                        body=body,
-                        to=number,
-                    )
-                    print("Sent message to {} with message SID: {}".format(
-                        name, message.sid))
-                    textemail = 'T/'
-                except:
-                    print("Message was not sent to: {} - {}".format(
-                        name, number))
-                    print("This text did not send at row i=", i)
-                    textemail = 'T/'
+                # If the length of the row is not as long as the furthest away category, extend it
+                if len(values) < max_length_row:
+                    for k in range(len(values), len(values) + max_length_row - len(values)):
+                        values.append('')
 
-                ###########################    ########################### ###########################
+                # Now we are able to access the proper items in rows before we batch update, because we know they all exist
+                name = values[data['nameCol']]
+                number = values[data['phoneCol']]
+                email = values[data['emailCol']]
 
-                # Update spreadsheet to reflect text has been sent 'Y/#'
-                data = {
-                    'requests': [
-                        {
-                            "updateCells":
+                # Decide whether or not to send a text/email ###IMPORTANT
+                def shouldSendMessage(data: dict, values: dict) -> bool:
+                    if (values[data['spokenToCol']] == 'N' or values[data['spokenToCol']] == ''):
+                        return True
+                    else:
+                        return False
+
+                # Send message logic
+                if shouldSendMessage(data, values):  # If we decide to send a message
+                    values[data['spokenToCol']] = 'N'
+                    values[data['contactedCol']] = 'T/'
+                    print(values[data['timesContactedCol']])
+                    if values[data['timesContactedCol']] == '':
+
+                        values[data['timesContactedCol']] = '1'
+                    else:
+                        print("incremenet times contacted")
+                        values[data['timesContactedCol']] = str(
+                            int(values[data['timesContactedCol']])+1)
+
+                    print("Sending a text to {} at {}".format(name, number))
+                    # Format body before sending final text
+                    body = body.format(name, data['category'], calendar_link)
+
+                    # Send a text to the name / phone given
+                    message_response = sendTwilioText(name, number, body)
+
+                    # Update record that text has been sent / status of return
+                    write_json(
+                        {"name": name, "job": data['category'], "number": number, "message_response_sid": message_response.sid, "message_response_err": message_response.error_code})
+
+                    # TODO # Send an email to the name / email given
+
+                    # TODO record that email has been sent / status of return
+
+                    # Update spreadsheet to reflect text has been sent 'Y/#'
+                    # Build values
+                    updatevalues = []
+                    for j in values:
+                        if j in valtoformula:
+                            updatevalues.append(valtoformula[j])
+                        else:
+                            updatevalues.append(
+                                {"userEnteredValue": {"stringValue": j}})
+
+                    print(updatevalues)
+                    updatedata = {
+                        'requests': [
                             {
-                                "rows": [
-                                    {
-                                        "values": [
-                                            {"userEnteredValue": {
-                                                "stringValue": textemail}},
-                                        ]}],
-                                "fields": 'userEnteredValue',
-                                "start": {
-                                    "sheetId": SHEET_ID,
-                                    "rowIndex": i-1,
-                                    "columnIndex": 8
+                                "updateCells":
+                                {
+                                    "rows": [
+                                        {
+                                            "values": updatevalues}],
+                                    "fields": 'userEnteredValue',
+                                    "start": {
+                                        "sheetId": sheetId,
+                                        "rowIndex": row-1,
+                                        "columnIndex": 0
+                                    }
                                 }
                             }
-                        }
-                    ]
-                }
-                request = service.spreadsheets().batchUpdate(
-                    spreadsheetId=SPREADSHEET_ID,  body=data)
-                response = request.execute()
+                        ]
+                    }
+                    request = service.spreadsheets().batchUpdate(
+                        spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
+
+            except IndexError as err:
+                print("Finished Texting and Emailing Candidaes")
+                break
+
     except HttpError as err:
         print(err)
+
+
+def sendTwilioText(name: str, number: str, body: str, ):
+    # Find your Account SID and Auth Token and Message
+    account_sid = os.environ['TWILIO_ACCOUNT_SID']
+    auth_token = os.environ['TWILIO_AUTH_TOKEN']
+    service_id = os.environ['TWILIO_SERVICE_ID']
+
+    client = Client(account_sid, auth_token)
+    try:
+        message = client.messages.create(
+            messaging_service_sid=service_id,
+            body=body,
+            to=number,
+        )
+        print("Sent message to {} with message SID: {}".format(
+            name, message.sid))
+        return message
+    except:
+        print("Could not send message to: {} @ {} (Their carrier most likely marked the message as spam)".format(
+            name, number))
+        return message
+
+
+def sendAWSEmail():
+    # Find AWS info for sending emails
+    aws_user = os.getenv('aws_access_key_id')
+    aws_pass = os.environ.get('aws_secret_access_key')
+    pass
 
 
 class validData(BaseModel):
@@ -999,7 +1038,23 @@ class validData(BaseModel):
     folderId: str
 
 
-def checkSheetNameValidity(sheetname: str) -> dict:
+class params(BaseModel):
+    sheetId: str
+    folderId: str
+    category: str
+    nameCol: str | None = None
+    phoneCol: str | None = None
+    emailCol: str | None = None
+    contactedCol: str | None = None
+    timesContactedCol: str | None = None
+    spokenToCol: str | None = None
+    sourceCol: str | None = None
+    locationCol: str | None = None
+    dateAppliedCol: str | None = None
+    err: str | None = None
+
+
+def checkSheetNameValidity(category: str) -> dict:
     """
         Check if there is a sheet name equal to the input  -> set isSheet to T/F
         Check if there is a drive folder equal to the input name -> set isFolder to T/F
@@ -1018,24 +1073,25 @@ def checkSheetNameValidity(sheetname: str) -> dict:
             s = sheet.get('properties')
             # print(sheet)
             sheetDict[s.get('title')] = s.get('sheetId')
-        if sheetname in sheetDict:  # if the Sheet is valid, update list
+        if category in sheetDict:  # if the Sheet is valid, update list
             values.isSheet = True
-            values.sheetId = sheetDict.get(sheetname, "")
+            values.sheetId = sheetDict.get(category, "")
 
         # Get Folder and Folder name
         service = build('drive', 'v3', credentials=creds)
 
         response = service.files().list(
             q="name='{}' and mimeType='application/vnd.google-apps.folder'".format(
-                sheetname),
+                category),
             spaces='drive'
         ).execute()
+
         folderList = dict()
         for folder in response.get('files'):
             folderList[folder.get('name')] = folder.get('id')
-        if sheetname in folderList:
+        if category in folderList:
             values.isFolder = True
-            values.folderId = folderList.get(sheetname, "")
+            values.folderId = folderList.get(category, "")
 
         return values
     except HttpError as err:
@@ -1043,8 +1099,51 @@ def checkSheetNameValidity(sheetname: str) -> dict:
         return values
 
 
+def setColumnVariables(inputdata: params):
+    try:
+        # Build Service
+        service = build('sheets', 'v4', credentials=creds)
+
+        result = service.spreadsheets().values().get(
+            spreadsheetId=SPREADSHEET_ID, range="{}!1:1".format(inputdata.category)).execute()
+
+        # Store results of sheet line 1
+        vals = dict()
+        for i, col in enumerate(result['values'][0]):
+            vals[col] = i
+
+        # Set the location of relevant columns for this sheet
+        inputdata.nameCol = vals['Name']
+        inputdata.emailCol = vals['Email']
+        inputdata.phoneCol = vals['Phone']
+        inputdata.contactedCol = vals['Contacted']
+        inputdata.timesContactedCol = vals['Times Contacted']
+        inputdata.spokenToCol = vals['Spoken To']
+
+        # Return Dictionary
+        return inputdata
+    except (HttpError, KeyError) as err:
+        if (type(err) == KeyError):
+            inputdata.err = "Error: the category you are trying to send a text in must include a: {} Column to interact with the program".format(
+                err)
+            return inputdata
+
+# function to add to JSON
+
+
+def write_json(new_data, filename='records.json'):
+    with open(filename, 'r+') as file:
+        # First we load existing data into a dict.
+        file_data = json.load(file)
+        # Join new_data with file_data
+        file_data["records"].append(new_data)
+        # Sets file's current position at offset.
+        file.seek(0)
+        # convert back to json.
+        json.dump(file_data, file, indent=4)
+
+
 def main():
-    print(checkSheetNameValidity("Therapist"))
     pass
 
 

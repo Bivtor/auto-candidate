@@ -2,12 +2,9 @@ from auto_candidate import *
 
 from pydantic import BaseModel
 import os
+import json
 from fastapi import FastAPI
-from fastapi.responses import ORJSONResponse
 
-category = 'Pre-screening'
-sheetId = '0'  # Pre-screening
-folderId = '1YFkV8Tfm9WwR5Xb_aWaKHjP2k3weghEJ'  # Misc
 
 app = FastAPI()
 
@@ -24,22 +21,14 @@ class Data(BaseModel):
 
 class openLink(BaseModel):
     link: str
-    category: str
 
 
 class textData(BaseModel):
     category_texts: str
-    start: int
-    end: int
 
 
 @app.post('/openstring')
 def openstring(data: openLink):
-    global category
-    category = data.category
-    print(data.link)
-    print(category)
-
     cmd = 'start chrome {}'.format(
         data.link[1:len(data.link)-1])  # OPEN chrome
 
@@ -56,11 +45,26 @@ def createUsers(data: Data):
 
 
 @app.post('/sendtexts')
-def sendtexts(data: textData):
-    sendTwilioTexts(data.category_texts, data.start, data.end)
+def sendtexts():
+    f = open('settings.json')
+    data = json.load(f)
+    sendmailtexts(data)
+    f.close()
     return {"Success"}
 
 
+@app.post('/setparams')
+def setParams(data: params):
+    data = setColumnVariables(data)
+    with open("settings.json", "w") as outfile:
+        outfile.write(data.json())
+    return data
+
+
+class validate(BaseModel):
+    sheetname: str
+
+
 @app.post('/validatecategory', response_model=validData)
-def validCategory(data: validData):
-    return checkSheetNameValidity(sheetname)
+def validCategory(data: validate):
+    return checkSheetNameValidity(data.sheetname)

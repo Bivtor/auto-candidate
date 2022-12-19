@@ -38,4 +38,4 @@ def event_test(event, say):
             print(end)
 
 
-event_test(text, "")
+# event_test(text, "")
