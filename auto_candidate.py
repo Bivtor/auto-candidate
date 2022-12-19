@@ -1,5 +1,6 @@
 from twilio.rest import Client
 from dotenv import load_dotenv
+from pydantic import BaseModel
 
 
 import time
@@ -991,14 +992,21 @@ def sendTwilioTexts(sheet_name, start, end):
         print(err)
 
 
+class validData(BaseModel):
+    isSheet: bool
+    isFolder: bool
+    sheetId: str
+    folderId: str
+
+
 def checkSheetNameValidity(sheetname: str) -> dict:
     """
         Check if there is a sheet name equal to the input  -> set isSheet to T/F
         Check if there is a drive folder equal to the input name -> set isFolder to T/F
         return the appropriate ID's for folderID and sheetID
     """
-    values = {"isSheet": False, "isFolder": False,
-              "sheetId": "", "folderId": ""}
+    values = validData(isSheet=False, isFolder=False,
+                       sheetId="", folderId="")
     try:
         # Get Sheet & Sheet ID
         service = build('sheets', 'v4', credentials=creds)
@@ -1011,8 +1019,8 @@ def checkSheetNameValidity(sheetname: str) -> dict:
             # print(sheet)
             sheetDict[s.get('title')] = s.get('sheetId')
         if sheetname in sheetDict:  # if the Sheet is valid, update list
-            values['isSheet'] = True
-            values['sheetId'] = sheetDict.get(sheetname, None)
+            values.isSheet = True
+            values.sheetId = sheetDict.get(sheetname, "")
 
         # Get Folder and Folder name
         service = build('drive', 'v3', credentials=creds)
@@ -1025,21 +1033,18 @@ def checkSheetNameValidity(sheetname: str) -> dict:
         folderList = dict()
         for folder in response.get('files'):
             folderList[folder.get('name')] = folder.get('id')
-
-        values['isFolder'] = sheetname in folderList
-        values['folderId'] = folderList[sheetname]
+        if sheetname in folderList:
+            values.isFolder = True
+            values.folderId = folderList.get(sheetname, "")
 
         return values
     except HttpError as err:
         print(err)
+        return values
 
 
 def main():
-    # testing getting sheets names
-    # print(sheet_id)
-    print(checkSheetNameValidity("Case Manager"))
-    # print(sheet_id)
-
+    print(checkSheetNameValidity("Therapist"))
     pass
 
 

@@ -9,6 +9,7 @@ load_dotenv()
 # Initializes your app with your bot token and socket mode handler
 app = App(token=os.environ.get("SLACK_BOT_TOKEN"))
 
+
 @app.event("app_mention")
 def event_test(event, say):
     text = event['text']
@@ -20,29 +21,29 @@ def event_test(event, say):
         case 'add':
             link = inputlist[1]
             category = " ".join(inputlist[2:])
-            print(category)
+            # TODO Validate Category
+            resp = requests.post(url='http://127.0.0.1:8000/validatecategory', headers={
+                                 'accept': 'application/json', 'Content-Type': 'application/json'}, json={'sheetname': category})
 
-            #Add cateory validation here
+            print(resp)
+            return
+
+            # Add cateory validation here
             print(requests.post(url='http://127.0.0.1:8000/openstring', headers={
                   'accept': 'application/json', 'Content-Type': 'application/json'}, json={'link': link, 'category': category}))
             say("Inputting Candidates in the {} Category".format(category))
 
         case 'text':
             category = " ".join(inputlist[1:])
+            # TODO Validate Category
+
             start = 2
             end = 998
-            
-            # # if includes
-            # if len(inputlist) > 2:
-            #     start = inputlist[2]
-            # if len(inputlist) > 3:
-            #     end = inputlist[3]
-
 
             requests.post(url='http://127.0.0.1:8000/sendtexts', headers={
                 'accept': 'application/json', 'Content-Type': 'application/json'}, json={'category_texts': category, 'start': start, 'end': end})
-            say("Sending Texts to Candidates in the {} Category from rows {} to {}".format(
-                category, start, end))
+            say("Sending Texts to Candidates in the {} Category".format(
+                category))
 
 
 # Start your app
