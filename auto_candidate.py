@@ -893,7 +893,7 @@ class SesMailSender:
             return message_id
 
 
-def sendmailtexts(data: dict):
+def sendmailtexts(data: Data):
     # Find max length of the row insertion we will need
     max_length_row = max({data['nameCol'], data['phoneCol'], data['emailCol'],
                          data['contactedCol'], data['timesContactedCol'], data['spokenToCol']})+1
