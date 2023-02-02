@@ -58,6 +58,33 @@ if not creds or not creds.valid:
 SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
 
 
+class Data(BaseModel):
+    password: str
+    action: str
+    category: str
+    link: str = ""
+    start: int = 2
+    end: int = 1000
+    message: str = ""
+    messageType: str = ""
+
+    # Sheet position info
+    isSheet: bool = False
+    isFolder: bool = False
+    sheetId: str | None = None
+    folderId: str | None = None
+    nameCol: str | None = None
+    phoneCol: str | None = None
+    emailCol: str | None = None
+    contactedCol: str | None = None
+    timesContactedCol: str | None = None
+    spokenToCol: str | None = None
+    sourceCol: str | None = None
+    locationCol: str | None = None
+    dateAppliedCol: str | None = None
+    err: str | None = None
+
+
 def upload_basic(title, parents, path):
     """Insert new file.
     Returns : Id's of the file uploaded
@@ -895,88 +922,67 @@ class SesMailSender:
 
 def sendmailtexts(data: Data):
     # Find max length of the row insertion we will need
-    max_length_row = max({data['nameCol'], data['phoneCol'], data['emailCol'],
-                         data['contactedCol'], data['timesContactedCol'], data['spokenToCol']})+1
+    max_length_row = max({data.nameCol, data.phoneCol, data.emailCol,
+                         data.contactedCol, data.timesContactedCol, data.spokenToCol})+1
 
     try:
-        sheetId = data['sheetId']
+        sheetId = data.sheetId
         service = build('sheets', 'v4', credentials=creds)
 
         # TODO Create email identitity here
 
-        for row in range(2, 1000):
+        for row in range(data.start, data.end):
             try:
-                calendar_link = "https://calendly.com/cara-berkovich/30min"  # Set Calendar Link
-                body = "Hello {}!\n\nMy name is Cara and I'm with SBT. We received your resume via Zip Recruiter for the {} position and we'd love to schedule a phone interview ASAP!\n\nCan we do that here?\n\nhttps://calendly.com/cara-berkovich/30min\n\nYou can always call/text me directly with any questions!\n\n(646) 221-3640\nCara@solutionbasedtherapeutics.com"
-                body2 = "Hello {}!\n\nThis is Gabe from SBT. We received your resume via Zip Recruiter for the {} role!\n\nI'd love to schedule a phone interview with you here: {}\n\nIf you have any questions, you can call/text my personal cell at (310) 920-9349\nGabe@solutionbasedtherapeutics.com"
                 time.sleep(1)
+                body = data.message
+                # This specifies the Sheet name and which row we re currently working on
                 RANGE = "{}!{}:{}".format(
-                    data['category'], row, row)
+                    data.category, row, row)
+                # This uses the range information to get the data from the row of the spreadsheet
                 result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
                                                              range=RANGE).execute()
-                time.sleep(1)
-                forumlaresult = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
-                                                                    range=RANGE, valueRenderOption='FORMULA').execute()
-                valtoformula = dict()
+                # Assign data to variable 'Values'
                 values = result.get('values', [])[0]
-                formulavalues = forumlaresult['values'][0]
 
-                # Make sure not to break the hyper links
-                for j in range(len(formulavalues)):
-                    if "=HYPERLINK" in str(formulavalues[j]):
-                        valtoformula[values[j]] = {"userEnteredValue": {
-                            "formulaValue": formulavalues[j]}}
-
-                # If the length of the row is not as long as the furthest away category, extend it
+                # If the length of the row is not as long as the furthest away category that we need to be inputting into, extend it
                 if len(values) < max_length_row:
                     for k in range(len(values), len(values) + max_length_row - len(values)):
                         values.append('')
 
                 # Now we are able to access the proper items in rows before we batch update, because we know they all exist
-                name = values[data['nameCol']]
-                number = values[data['phoneCol']]
-                email = values[data['emailCol']]
+                name = values[data.nameCol]
+                number = values[data.phoneCol]
+                email = values[data.emailCol]
+
+                # Use the name column to update the body of the text
+                data.message = data.message.replace("[candidate_name]", name)
 
                 # Decide whether or not to send a text/email ###IMPORTANT
-                def shouldSendMessage(data: dict, values: dict) -> bool:
-                    if (values[data['spokenToCol']] == 'N' or values[data['spokenToCol']] == ''):
+                def shouldSendMessage(data: Data, values: dict) -> bool:
+                    if (values[data.spokenToCol] == 'N' or values[data.spokenToCol] == ''):
                         return True
                     else:
                         return False
 
                 # Send message logic
                 if shouldSendMessage(data, values):  # If we decide to send a message
-                    values[data['spokenToCol']] = 'N'
-                    values[data['contactedCol']] = 'T/'
-                    if values[data['timesContactedCol']] == '':
+                    values[data.spokenToCol] = 'N'
+                    values[data.contactedCol] = 'T/'
+                    if values[data.timesContactedCol] == '':
 
-                        values[data['timesContactedCol']] = '1'
+                        values[data.timesContactedCol] = '1'
                     else:
-                        values[data['timesContactedCol']] = str(
-                            int(values[data['timesContactedCol']])+1)
-
-                    # Format body before sending final text
-                    body = body.format(name, data['category'], calendar_link)
+                        values[data.timesContactedCol] = str(
+                            int(values[data.timesContactedCol])+1)
 
                     # Send a text to the name / phone given
                     message_response = sendTwilioText(name, number, body)
 
                     # Update record that text has been sent / status of return
                     write_json(
-                        {"name": name, "job": data['category'], "number": number, "message_response_sid": message_response.sid, "message_response_err": message_response.error_code})
-
+                        {"name": name, "job": data.category, "number": number, "message_response_sid": message_response.sid, "message_response_err": message_response.error_code})
                     # TODO # Send an email to the name / email given
-
                     # TODO record that email has been sent / status of return
-
-                    # Build values
-                    updatevalues = []
-                    for j in values:
-                        if j in valtoformula:
-                            updatevalues.append(valtoformula[j])
-                        else:
-                            updatevalues.append(
-                                {"userEnteredValue": {"stringValue": j}})
 
                     updatedata = {
                         'requests': [
@@ -985,15 +991,41 @@ def sendmailtexts(data: Data):
                                 {
                                     "rows": [
                                         {
-                                            "values": updatevalues}],
+                                            "values": [
+                                                {
+                                                    "userEnteredValue": {"stringValue": values[data.contactedCol]}
+                                                }
+                                            ]
+                                        }
+                                    ],
                                     "fields": 'userEnteredValue',
                                     "start": {
                                         "sheetId": sheetId,
                                         "rowIndex": row-1,
-                                        "columnIndex": 0
+                                        "columnIndex": data.contactedCol
                                     }
                                 }
-                            }
+                            },
+                            {
+                                "updateCells":
+                                {
+                                    "rows": [
+                                        {
+                                            "values": [
+                                                {
+                                                    "userEnteredValue": {"stringValue": values[data.timesContactedCol]}
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "fields": 'userEnteredValue',
+                                    "start": {
+                                        "sheetId": sheetId,
+                                        "rowIndex": row-1,
+                                        "columnIndex": data.timesContactedCol
+                                    }
+                                }
+                            },
                         ]
                     }
                     request = service.spreadsheets().batchUpdate(
