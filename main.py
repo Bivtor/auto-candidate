@@ -26,19 +26,14 @@ app.add_middleware(
 )
 
 
-class openLink(BaseModel):
-    link: str
-
-
 class textData(BaseModel):
     category_texts: str
 
 
-@app.post('/openstring')
-def openstring(data: openLink):
+def openstring(data: Data):
+    print("Opening Link: {}".format(data.link))
     cmd = 'start chrome {}'.format(
         data.link[1:len(data.link)-1])  # OPEN chrome
-
     if os.system(cmd) != 0:
         return False
 
@@ -76,9 +71,9 @@ def test(data: Data):
     if data.action == "Text":
         sendmailtexts(data)
     if data.action == "Add":
-        pass
+        openstring(data)
 
-    return "Successs"
+    return "Success"
 
 @app.post('/sendtexts')
 def sendtexts():

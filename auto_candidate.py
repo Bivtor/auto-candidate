@@ -594,7 +594,7 @@ class candidateData(BaseModel):
 
 def create_candidate(candidateData: candidateData, data):
     """
-    Creates a new candidate inside xyz Folder and a new Therapist document
+    Creates a new candidate inside xyz Folder and a new Questions document
     """
 
     # Set Proper Variables
@@ -940,6 +940,7 @@ def sendmailtexts(data: Data):
     # Find max length of the row insertion we will need
     max_length_row = max({data.nameCol, data.phoneCol, data.emailCol,
                          data.contactedCol, data.timesContactedCol, data.spokenToCol})+1
+
     try:
         sheetId = data.sheetId
         service = build('sheets', 'v4', credentials=creds)
@@ -948,22 +949,13 @@ def sendmailtexts(data: Data):
 
         for row in range(data.start, data.end):
             try:
+                time.sleep(1)
+                body = data.message
                 RANGE = "{}!{}:{}".format(
                     data.category, row, row)
                 result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
                                                              range=RANGE).execute()
-                time.sleep(1)
-                forumlaresult = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
-                                                                    range=RANGE, valueRenderOption='FORMULA').execute()
-                valtoformula = dict()
                 values = result.get('values', [])[0]
-                formulavalues = forumlaresult['values'][0]
-
-                # Make sure not to break the hyper links
-                for j in range(len(formulavalues)):
-                    if "=HYPERLINK" in str(formulavalues[j]):
-                        valtoformula[values[j]] = {"userEnteredValue": {
-                            "formulaValue": formulavalues[j]}}
 
                 # If the length of the row is not as long as the furthest away category, extend it
                 if len(values) < max_length_row:
@@ -976,14 +968,14 @@ def sendmailtexts(data: Data):
                 email = values[data.emailCol]
 
                 # Decide whether or not to send a text/email ###IMPORTANT
-                def shouldSendMessage(data: dict, values: dict) -> bool:
+                def shouldSendMessage(data: Data, values: dict) -> bool:
                     if (values[data.spokenToCol] == 'N' or values[data.spokenToCol] == ''):
                         return True
                     else:
                         return False
 
                 # Send message logic
-                if shouldSendMessage(data, values) and len(number) > 0:  # If we decide to send a message
+                if shouldSendMessage(data, values):  # If we decide to send a message
                     values[data.spokenToCol] = 'N'
                     values[data.contactedCol] = 'T/'
                     if values[data.timesContactedCol] == '':
@@ -994,7 +986,7 @@ def sendmailtexts(data: Data):
                             int(values[data.timesContactedCol])+1)
 
                     # Format body before sending final text
-                    body = data.message.format(name, data.category, data.calendy)
+                    body = body.format(name, data.category, data.calendy)
 
                     # Send a text to the name / phone given
                     message_response = sendTwilioText(name, number, body)
@@ -1002,19 +994,8 @@ def sendmailtexts(data: Data):
                     # Update record that text has been sent / status of return
                     write_json(
                         {"name": name, "job": data.category, "number": number, "message_response_sid": message_response.sid, "message_response_err": message_response.error_code})
-
                     # TODO # Send an email to the name / email given
-
                     # TODO record that email has been sent / status of return
-
-                    # Build values
-                    updatevalues = []
-                    for j in values:
-                        if j in valtoformula:
-                            updatevalues.append(valtoformula[j])
-                        else:
-                            updatevalues.append(
-                                {"userEnteredValue": {"stringValue": j}})
 
                     updatedata = {
                         'requests': [
@@ -1023,15 +1004,41 @@ def sendmailtexts(data: Data):
                                 {
                                     "rows": [
                                         {
-                                            "values": updatevalues}],
+                                            "values": [
+                                                {
+                                                    "userEnteredValue": {"stringValue": values[data.contactedCol]}
+                                                }
+                                            ]
+                                        }
+                                    ],
                                     "fields": 'userEnteredValue',
                                     "start": {
                                         "sheetId": sheetId,
                                         "rowIndex": row-1,
-                                        "columnIndex": 0
+                                        "columnIndex": data.contactedCol
                                     }
                                 }
-                            }
+                            },
+                            {
+                                "updateCells":
+                                {
+                                    "rows": [
+                                        {
+                                            "values": [
+                                                {
+                                                    "userEnteredValue": {"stringValue": values[data.timesContactedCol]}
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "fields": 'userEnteredValue',
+                                    "start": {
+                                        "sheetId": sheetId,
+                                        "rowIndex": row-1,
+                                        "columnIndex": data.timesContactedCol
+                                    }
+                                }
+                            },
                         ]
                     }
                     request = service.spreadsheets().batchUpdate(
