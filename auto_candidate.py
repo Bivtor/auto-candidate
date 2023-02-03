@@ -57,22 +57,6 @@ if not creds or not creds.valid:
 # Gabe Sheet ID
 SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
 
-class validData(BaseModel):
-    isSheet: bool
-    isFolder: bool
-    sheetId: str
-    folderId: str
-    category: str
-    nameCol: str | None = None
-    phoneCol: str | None = None
-    emailCol: str | None = None
-    contactedCol: str | None = None
-    timesContactedCol: str | None = None
-    spokenToCol: str | None = None
-    sourceCol: str | None = None
-    locationCol: str | None = None
-    dateAppliedCol: str | None = None
-    err: str | None = None
 
 class Data(BaseModel):
     password: str
@@ -83,7 +67,6 @@ class Data(BaseModel):
     end: int = 1000
     message: str = ""
     messageType: str = ""
-    calendy: str = ""
 
     # Sheet position info
     isSheet: bool = False
@@ -100,6 +83,7 @@ class Data(BaseModel):
     locationCol: str | None = None
     dateAppliedCol: str | None = None
     err: str | None = None
+
 
 def upload_basic(title, parents, path):
     """Insert new file.
@@ -951,13 +935,16 @@ def sendmailtexts(data: Data):
             try:
                 time.sleep(1)
                 body = data.message
+                # This specifies the Sheet name and which row we re currently working on
                 RANGE = "{}!{}:{}".format(
                     data.category, row, row)
+                # This uses the range information to get the data from the row of the spreadsheet
                 result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
                                                              range=RANGE).execute()
+                # Assign data to variable 'Values'
                 values = result.get('values', [])[0]
 
-                # If the length of the row is not as long as the furthest away category, extend it
+                # If the length of the row is not as long as the furthest away category that we need to be inputting into, extend it
                 if len(values) < max_length_row:
                     for k in range(len(values), len(values) + max_length_row - len(values)):
                         values.append('')
@@ -966,6 +953,9 @@ def sendmailtexts(data: Data):
                 name = values[data.nameCol]
                 number = values[data.phoneCol]
                 email = values[data.emailCol]
+
+                # Use the name column to update the body of the text
+                data.message = data.message.replace("[candidate_name]", name)
 
                 # Decide whether or not to send a text/email ###IMPORTANT
                 def shouldSendMessage(data: Data, values: dict) -> bool:
@@ -984,9 +974,6 @@ def sendmailtexts(data: Data):
                     else:
                         values[data.timesContactedCol] = str(
                             int(values[data.timesContactedCol])+1)
-
-                    # Format body before sending final text
-                    body = body.format(name, data.category, data.calendy)
 
                     # Send a text to the name / phone given
                     message_response = sendTwilioText(name, number, body)
