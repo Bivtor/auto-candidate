@@ -63,9 +63,10 @@ def test(data: Data):
     
     # Set Variables
     setColumnVariables(data)
+    # Write data to a file for use if adding candidates
     with open("settings.json", "w") as outfile:
         outfile.write(data.json())
-    print("success")
+    print("Successfully Set Column Variables")
 
     ################## Passed Pre-Checks ##################
     if data.action == "Text":
