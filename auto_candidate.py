@@ -930,7 +930,7 @@ def sendmailtexts(data: Data):
         for row in range(data.start, data.end):
             try:
 
-                time.sleep(1.3) #Wait a little to not use too many requests.
+                time.sleep(2) #Wait a little to not use too many requests.
 
                 # This specifies the Sheet name and which row we re currently working on
                 RANGE = "{}!{}:{}".format(
@@ -1031,7 +1031,7 @@ def sendmailtexts(data: Data):
                     # Send update
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
-                else: print("Chose not to text {}".format(data.name))
+                else: print("Chose not to text {}".format(values[data.nameCol]))
             except IndexError as err:
                 print("Finished Texting and Emailing Candidaes")
                 break
