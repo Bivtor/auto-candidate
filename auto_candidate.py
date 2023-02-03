@@ -578,7 +578,7 @@ class candidateData(BaseModel):
 
 def create_candidate(candidateData: candidateData, data):
     """
-    Creates a new candidate inside xyz Folder and a new Therapist document
+    Creates a new candidate inside xyz Folder and a new Questions document
     """
 
     # Set Proper Variables
@@ -1068,37 +1068,14 @@ def sendAWSEmail():
     pass
 
 
-class validData(BaseModel):
-    isSheet: bool
-    isFolder: bool
-    sheetId: str
-    folderId: str
 
-
-class params(BaseModel):
-    sheetId: str
-    folderId: str
-    category: str
-    nameCol: str | None = None
-    phoneCol: str | None = None
-    emailCol: str | None = None
-    contactedCol: str | None = None
-    timesContactedCol: str | None = None
-    spokenToCol: str | None = None
-    sourceCol: str | None = None
-    locationCol: str | None = None
-    dateAppliedCol: str | None = None
-    err: str | None = None
-
-
-def checkSheetNameValidity(category: str) -> dict:
+def checkSheetNameValidity(category: str, values: Data):
     """
         Check if there is a sheet name equal to the input  -> set isSheet to T/F
         Check if there is a drive folder equal to the input name -> set isFolder to T/F
-        return the appropriate ID's for folderID and sheetID
+        update the appropriate ID's for folderID and sheetID
     """
-    values = validData(isSheet=False, isFolder=False,
-                       sheetId="", folderId="")
+
     try:
         # Get Sheet & Sheet ID
         service = build('sheets', 'v4', credentials=creds)
@@ -1136,7 +1113,7 @@ def checkSheetNameValidity(category: str) -> dict:
         return values
 
 
-def setColumnVariables(inputdata: params):
+def setColumnVariables(inputdata: Data):
     try:
         # Build Service
         service = build('sheets', 'v4', credentials=creds)
