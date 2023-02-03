@@ -907,7 +907,7 @@ class SesMailSender:
             'Destination': destination.to_service_format(),
             'Message': {
                 'Subject': {'Data': subject},
-                'Body': {'Text': {'Data': text}, 'Html': {'Data': html}}}}
+                'Body': {'Text': {'Data': text}}}}
         if reply_tos is not None:
             send_args['ReplyToAddresses'] = reply_tos
         try:
@@ -926,15 +926,16 @@ class SesMailSender:
 def sendmailtexts(data: Data):
     try:
         service = build('sheets', 'v4', credentials=creds)
-
-        # TODO Create email identitity here
-
+        print("Attempting to send texts/emails...")
         for row in range(data.start, data.end):
             try:
-                time.sleep(1.3)
+
+                time.sleep(1.3) #Wait a little to not use too many requests.
+
                 # This specifies the Sheet name and which row we re currently working on
                 RANGE = "{}!{}:{}".format(
                     data.category, row, row)
+                
                 # This uses the range information to get the data from the row of the spreadsheet
                 result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
                                                              range=RANGE).execute()
@@ -965,8 +966,8 @@ def sendmailtexts(data: Data):
                     else:
                         return False
 
-                # Send message logic
-                if shouldSendMessage(data, values):  # If we decide to send a message
+                # If we decide to send a message
+                if shouldSendMessage(data, values):  
                     values[data.spokenToCol] = 'N'
                     values[data.contactedCol] = 'T/'
                     if values[data.timesContactedCol] == '':
@@ -980,7 +981,7 @@ def sendmailtexts(data: Data):
                     sendTwilioText(name=name, number=number,
                                    body=data.message, category=data.category)
                     # Send an email to the given info
-                    sendAWSEmail(name=name, email=email, body=data.message)
+                    sendAWSEmail(name=name, email=email, body=data.message, category=data.category)
 
                     # Format for updating the cells for times contacted in Google Sheets
                     updatedata = {
@@ -1030,6 +1031,7 @@ def sendmailtexts(data: Data):
                     # Send update
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
+                else: print("Chose not to text {}".format(data.name))
             except IndexError as err:
                 print("Finished Texting and Emailing Candidaes")
                 break
@@ -1052,7 +1054,7 @@ def sendTwilioText(name: str, number: str, body: str, category: str):
         )
         # Update record that text has been sent / status of return
         write_json({"name": name, "job": category, "number": number,
-                   "message": message})
+                   "date": str(message.date_sent)})
         print("Sent message to {} with number: {}".format(name, number))
         return True
     except:
@@ -1066,7 +1068,7 @@ def sendTwilioText(name: str, number: str, body: str, category: str):
 def sendAWSEmail(name: str, email: str, body: str, category: str):
 
     # Create boto3 Client
-    client = boto3.client('ses', region_name="us-west-2", aws_access_key_id=os.getenv(
+    client = boto3.client('ses', region_name="us-west-1", aws_access_key_id=os.getenv(
         'aws_access_key_id'), aws_secret_access_key=os.environ.get('aws_secret_access_key'))
 
     # Create mailsender from boto3 client
@@ -1076,11 +1078,16 @@ def sendAWSEmail(name: str, email: str, body: str, category: str):
     destination = SesDestination(tos=[email])
 
     # Send mail and log response
-    response = mailsender.send_email(
-        destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="info@solutionbasedtherapeutics.com	", html="")
-    write_json({"name": name, "job": category,
-               "email": email, "response_code": response})
-    print("Successfully sent email with response: {}".format(response))
+    try: 
+        response = mailsender.send_email(
+            destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="gabe@solutionbasedtherapeutics.com", html="")
+        write_json({"name": name, "job": category,
+                    "email": email, "response_code": response})
+        print("Successfully sent email to: {}".format(name))
+    except ClientError as err:
+        write_json({"name": name, "job": category,
+            "email": email, "response_code": str(err.response)})
+
 
 
 def checkSheetNameValidity(category: str, values: Data):
@@ -1156,9 +1163,7 @@ def setColumnVariables(inputdata: Data):
                 err)
             return inputdata
 
-# function to add to JSON
-
-
+# add to JSON
 def write_json(new_data, filename='records.json'):
     with open(filename, 'r+') as file:
         # First we load existing data into a dict.
