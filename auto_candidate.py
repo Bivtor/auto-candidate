@@ -19,10 +19,13 @@ from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
 # Amazon SES Send Email info
+import boto3
 import logging
 
 # import boto3
 from botocore.exceptions import ClientError
+from botocore.config import Config
+
 
 logger = logging.getLogger(__name__)
 load_dotenv()
@@ -921,20 +924,14 @@ class SesMailSender:
 
 
 def sendmailtexts(data: Data):
-    # Find max length of the row insertion we will need
-    max_length_row = max({data.nameCol, data.phoneCol, data.emailCol,
-                         data.contactedCol, data.timesContactedCol, data.spokenToCol})+1
-
     try:
-        sheetId = data.sheetId
         service = build('sheets', 'v4', credentials=creds)
 
         # TODO Create email identitity here
 
         for row in range(data.start, data.end):
             try:
-                time.sleep(1)
-                body = data.message
+                time.sleep(1.3)
                 # This specifies the Sheet name and which row we re currently working on
                 RANGE = "{}!{}:{}".format(
                     data.category, row, row)
@@ -943,6 +940,10 @@ def sendmailtexts(data: Data):
                                                              range=RANGE).execute()
                 # Assign data to variable 'Values'
                 values = result.get('values', [])[0]
+
+                # Find max length of the row insertion we will need
+                max_length_row = max({data.nameCol, data.phoneCol, data.emailCol,
+                                     data.contactedCol, data.timesContactedCol, data.spokenToCol})+1
 
                 # If the length of the row is not as long as the furthest away category that we need to be inputting into, extend it
                 if len(values) < max_length_row:
@@ -957,7 +958,7 @@ def sendmailtexts(data: Data):
                 # Use the name column to update the body of the text
                 data.message = data.message.replace("[candidate_name]", name)
 
-                # Decide whether or not to send a text/email ###IMPORTANT
+                # Decide whether or not to send a text/email Function
                 def shouldSendMessage(data: Data, values: dict) -> bool:
                     if (values[data.spokenToCol] == 'N' or values[data.spokenToCol] == ''):
                         return True
@@ -976,14 +977,12 @@ def sendmailtexts(data: Data):
                             int(values[data.timesContactedCol])+1)
 
                     # Send a text to the name / phone given
-                    message_response = sendTwilioText(name, number, body)
+                    sendTwilioText(name=name, number=number,
+                                   body=data.message, category=data.category)
+                    # Send an email to the given info
+                    sendAWSEmail(name=name, email=email, body=data.message)
 
-                    # Update record that text has been sent / status of return
-                    write_json(
-                        {"name": name, "job": data.category, "number": number, "message_response_sid": message_response.sid, "message_response_err": message_response.error_code})
-                    # TODO # Send an email to the name / email given
-                    # TODO record that email has been sent / status of return
-
+                    # Format for updating the cells for times contacted in Google Sheets
                     updatedata = {
                         'requests': [
                             {
@@ -1000,7 +999,7 @@ def sendmailtexts(data: Data):
                                     ],
                                     "fields": 'userEnteredValue',
                                     "start": {
-                                        "sheetId": sheetId,
+                                        "sheetId": data.sheetId,
                                         "rowIndex": row-1,
                                         "columnIndex": data.contactedCol
                                     }
@@ -1020,7 +1019,7 @@ def sendmailtexts(data: Data):
                                     ],
                                     "fields": 'userEnteredValue',
                                     "start": {
-                                        "sheetId": sheetId,
+                                        "sheetId": data.sheetId,
                                         "rowIndex": row-1,
                                         "columnIndex": data.timesContactedCol
                                     }
@@ -1028,18 +1027,17 @@ def sendmailtexts(data: Data):
                             },
                         ]
                     }
+                    # Send update
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
-
             except IndexError as err:
                 print("Finished Texting and Emailing Candidaes")
                 break
-
     except HttpError as err:
         print(err)
 
 
-def sendTwilioText(name: str, number: str, body: str, ):
+def sendTwilioText(name: str, number: str, body: str, category: str):
     # Find your Account SID and Auth Token and Message
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     auth_token = os.environ['TWILIO_AUTH_TOKEN']
@@ -1052,21 +1050,37 @@ def sendTwilioText(name: str, number: str, body: str, ):
             body=body,
             to=number,
         )
-        print("Sent message to {} with number: {}".format(
-            name, number))
-        return message
+        # Update record that text has been sent / status of return
+        write_json({"name": name, "job": category, "number": number,
+                   "message": message})
+        print("Sent message to {} with number: {}".format(name, number))
+        return True
     except:
+        write_json({"name": name, "job": category,
+                   "number": number, "message": "FAILED"})
         print("Could not send message to: {} @ {} (Their carrier most likely marked the message as spam)".format(
             name, number))
-        return message
+        return False
 
 
-def sendAWSEmail():
-    # Find AWS info for sending emails
-    aws_user = os.getenv('aws_access_key_id')
-    aws_pass = os.environ.get('aws_secret_access_key')
-    pass
+def sendAWSEmail(name: str, email: str, body: str, category: str):
 
+    # Create boto3 Client
+    client = boto3.client('ses', region_name="us-west-2", aws_access_key_id=os.getenv(
+        'aws_access_key_id'), aws_secret_access_key=os.environ.get('aws_secret_access_key'))
+
+    # Create mailsender from boto3 client
+    mailsender = SesMailSender(ses_client=client)
+
+    # Create destination type
+    destination = SesDestination(tos=[email])
+
+    # Send mail and log response
+    response = mailsender.send_email(
+        destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="info@solutionbasedtherapeutics.com	", html="")
+    write_json({"name": name, "job": category,
+               "email": email, "response_code": response})
+    print("Successfully sent email with response: {}".format(response))
 
 
 def checkSheetNameValidity(category: str, values: Data):
