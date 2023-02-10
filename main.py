@@ -47,10 +47,44 @@ def createUsers(candidateData: candidateData):
     print(candidateData.name)
     return {"Success"}
 
+class ResponseModel(BaseModel):
+    response: str
+
+
+@app.post('/test', response_model=ResponseModel)
+def test():
+    # Check if operation is currently in progress
+    f = open('isWorking.json')
+    json_check=json.load(f)
+
+    #If there is a current process, return checkModel with its"not_working_response"
+    if json_check['isWorking']: return  ResponseModel(response="Operation Ongoing")
+
+    #Set that there is now an operation ongoing since we passed the check
+    json_check['isWorking'] = True
+    with open("isWorking.json", "w") as outfile:
+        outfile.write(json_check.json())
+    print("Successfully Set Column Variables")
+    f.close()
+
+    ##########################DO WORK##############################
+    time.sleep(4)
+
+    #Stop Working
+    with open("isWorking.json", "w") as outfile:
+        outfile.write(json_check.json())
+    # f = open('isWorking.json')
+    # json_check = json.load(f)
+    # json_check['isWorking'] = False
+    # f.close()
+    
+
+    return ResponseModel(response="Finished Operation")
+
 
 
 @app.post('/submitdata')
-def test(data: Data):
+def submitdata(data: Data):
 
     #Check Password
     # if sha256(data.password) != sha256(os.environ['DEFAULT_PASSWORD']): return "Incorrect Password"
