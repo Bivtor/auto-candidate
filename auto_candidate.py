@@ -1,6 +1,7 @@
 from twilio.rest import Client
 from dotenv import load_dotenv
 from pydantic import BaseModel
+from datetime import date
 
 import time
 import os
@@ -925,13 +926,19 @@ class SesMailSender:
 
 def sendmailtexts(data: Data):
     try:
+        # Create boto3 Client
+        client = boto3.client('ses', region_name="us-west-1", aws_access_key_id=os.getenv(
+        'aws_access_key_id'), aws_secret_access_key=os.environ.get('aws_secret_access_key'))
+        
+        # Create mailsender from boto3 client
+        mailsender = SesMailSender(ses_client=client)
+
+        # Create AWS Service
         service = build('sheets', 'v4', credentials=creds)
         print("Attempting to send texts/emails...")
         for row in range(data.start, data.end):
+            time.sleep(5) #Wait a little to not use too many requests.
             try:
-
-                time.sleep(2) #Wait a little to not use too many requests.
-
                 # This specifies the Sheet name and which row we re currently working on
                 RANGE = "{}!{}:{}".format(
                     data.category, row, row)
@@ -955,9 +962,7 @@ def sendmailtexts(data: Data):
                 name = values[data.nameCol]
                 number = values[data.phoneCol]
                 email = values[data.emailCol]
-
-                # Use the name column to update the body of the text
-                data.message = data.message.replace("[candidate_name]", name)
+                body = data.message.replace("[candidate_name]", name) # This was broken before
 
                 # Decide whether or not to send a text/email Function
                 def shouldSendMessage(data: Data, values: dict) -> bool:
@@ -977,11 +982,14 @@ def sendmailtexts(data: Data):
                         values[data.timesContactedCol] = str(
                             int(values[data.timesContactedCol])+1)
 
+                    #TODO FIX THIS PART
                     # Send a text to the name / phone given
-                    sendTwilioText(name=name, number=number,
-                                   body=data.message, category=data.category)
+                    sendTwilioText(name=name, number=number,body=body, category=data.category)
+                    # print("Sent message to {} with number: {}".format(name, number))
+
                     # Send an email to the given info
-                    sendAWSEmail(name=name, email=email, body=data.message, category=data.category)
+                    sendAWSEmail(name=name, email=email, body=body, category=data.category, mailsender=mailsender)
+                    # print("Sent EMAIL to {} with number: {}".format(name, email))
 
                     # Format for updating the cells for times contacted in Google Sheets
                     updatedata = {
@@ -1029,8 +1037,7 @@ def sendmailtexts(data: Data):
                         ]
                     }
                     # Send update
-                    request = service.spreadsheets().batchUpdate(
-                        spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
+                    request = service.spreadsheets().batchUpdate(spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
                 else: print("Chose not to text {}".format(values[data.nameCol]))
             except IndexError as err:
                 print("Finished Texting and Emailing Candidaes")
@@ -1039,7 +1046,7 @@ def sendmailtexts(data: Data):
         print(err)
 
 
-def sendTwilioText(name: str, number: str, body: str, category: str):
+def sendTwilioText(name: str, number: str, body: str):
     # Find your Account SID and Auth Token and Message
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     auth_token = os.environ['TWILIO_AUTH_TOKEN']
@@ -1053,26 +1060,19 @@ def sendTwilioText(name: str, number: str, body: str, category: str):
             to=number,
         )
         # Update record that text has been sent / status of return
-        write_json({"name": name, "job": category, "number": number,
-                   "date": str(message.date_sent)})
+        write_json({"name": name, "body": message.body, "number": number,
+                   "date": str(date.today()), "messageID": message.sid, "failed": False})
         print("Sent message to {} with number: {}".format(name, number))
         return True
     except:
-        write_json({"name": name, "job": category,
-                   "number": number, "message": "FAILED"})
-        print("Could not send message to: {} @ {} (Their carrier most likely marked the message as spam)".format(
+        write_json({"name": name, "body": body,
+                   "number": number, "messageID" : "null", "failed": True})
+        print("Could not send message to: {} @ {}".format(
             name, number))
         return False
 
 
-def sendAWSEmail(name: str, email: str, body: str, category: str):
-
-    # Create boto3 Client
-    client = boto3.client('ses', region_name="us-west-1", aws_access_key_id=os.getenv(
-        'aws_access_key_id'), aws_secret_access_key=os.environ.get('aws_secret_access_key'))
-
-    # Create mailsender from boto3 client
-    mailsender = SesMailSender(ses_client=client)
+def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
 
     # Create destination type
     destination = SesDestination(tos=[email])
