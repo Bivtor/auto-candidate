@@ -261,7 +261,7 @@ def create_file_general(data, parents, title):
             bigString += items
         ###########################################
 
-        # update said file with the items scraped from ziprecruiter
+        # update said file with the items scraped from source
         try:
             service2 = build('docs', 'v1', credentials=creds)
             DOCUMENT_ID = file.get('id')
@@ -423,7 +423,7 @@ def create_file_Therapist(data, parents, title):
             bigString += items
         ###########################################
 
-        # update said file with the items scraped from ziprecruiter
+        # update said file with the items scraped from source
         try:
             service2 = build('docs', 'v1', credentials=creds)
             DOCUMENT_ID = file.get('id')
@@ -573,13 +573,14 @@ def create_folder(name: str, parents):
 
 
 class candidateData(BaseModel):
-    hasResume: bool
+    hasResume: bool | None
     location: str
     name: str
     phone: str
     email: str
     date: str
-    ziprecruiter: str
+    pagelink: str
+    source: str
 
 
 def create_candidate(candidateData: candidateData, data):
@@ -591,7 +592,10 @@ def create_candidate(candidateData: candidateData, data):
     category = data['category']
     title = "{} {} ({})".format(candidateData.name,
                                 category, candidateData.location)
-    candidateData.date = cleanupdate(candidateData.date)
+    
+    # Clean up Date 
+    candidateData.date = cleanupdate(candidateData.date, candidateData.source)
+    
     SHEET_ID = data['sheetId']
     parents = [data['folderId']]  # misc default
     print("Parents are: {} for role: {}".format(parents, category))
@@ -610,14 +614,14 @@ def create_candidate(candidateData: candidateData, data):
 
     # Get License number of first (depth) entries:
     licenselist = getLicenseInfo(candidateData.name, 5)
-    # make sure license list is at least 5 long
 
+    # make sure license list is at least 5 long
     for i in range(5 - len(licenselist)):
         licenselist.append("")
 
     # update info for sheets insertion
-    info2 = [candidateData.name, "Zip Recruiter", candidateData.location,
-             candidateData.phone, candidateData.email, candidateData.date, licenselist, candidateData.ziprecruiter]
+    info2 = [candidateData.name, candidateData.source, candidateData.location,
+             candidateData.phone, candidateData.email, candidateData.date, licenselist, candidateData.pagelink]
 
     folder_link = newParent[1]
     # call update spreadsheet function
@@ -678,7 +682,7 @@ def cleanupdate_license(date):
     return date
 
 
-def cleanupdate(date):
+def cleanupdate(date, source):
 
     date2 = ""
 
@@ -889,7 +893,7 @@ class SesMailSender:
         """
         self.ses_client = ses_client
 
-    def send_email(self, source, destination, subject, text, html, reply_tos=None):
+    def send_email(self, source, destination, subject, text, html, name, category, email, reply_tos=None):
         """
         Sends an email.
 
@@ -918,10 +922,15 @@ class SesMailSender:
             message_id = response['MessageId']
             logger.info(
                 "Sent mail %s from %s to %s.", message_id, source, destination.tos)
-        except ClientError:
-            logger.exception(
-                "Couldn't send mail from %s to %s.", source, destination.tos)
-            raise
+
+            write_json({"name": name, "job": category,
+                "email": email, "response_code": response, 'body': text})
+
+            print("Successfully sent email to: {} -> ".format(name, email))
+        except ClientError as err:
+            print("Invalid email destination for: {} -> {}".format(name, destination.tos))
+            write_json({"name": name, "job": category,
+                "email": email, "response_code": str(err.response)})
         else:
             return message_id
 
@@ -938,8 +947,8 @@ def sendmailtexts(data: Data):
         # Create AWS Service
         service = build('sheets', 'v4', credentials=creds)
         print("Attempting to send texts/emails...")
-        for row in range(data.start, data.end):
-            time.sleep(5)  # Wait a little to not use too many requests.
+        for row in range(data.start, data.end+1):
+            time.sleep(3)  # Wait a little to not use too many requests.
             try:
                 # This specifies the Sheet name and which row we re currently working on
                 RANGE = "{}!{}:{}".format(
@@ -988,7 +997,7 @@ def sendmailtexts(data: Data):
                     # TODO FIX THIS PART
                     # Send a text to the name / phone given
                     sendTwilioText(name=name, number=number,
-                                   body=body, category=data.category)
+                                   body=body)
                     # print("Sent message to {} with number: {}".format(name, number))
 
                     # Send an email to the given info
@@ -1045,7 +1054,7 @@ def sendmailtexts(data: Data):
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
                 else:
-                    print("Chose not to text {}".format(values[data.nameCol]))
+                    print("\nChose not to message {}".format(values[data.nameCol]))
             except IndexError as err:
                 print("Finished Texting and Emailing Candidaes")
                 break
@@ -1069,31 +1078,26 @@ def sendTwilioText(name: str, number: str, body: str):
         # Update record that text has been sent / status of return
         write_json({"name": name, "body": message.body, "number": number,
                    "date": str(date.today()), "messageID": message.sid, "failed": False})
-        print("Sent message to {} with number: {}".format(name, number))
+        print("\nSent message to {} with number: {}".format(name, number))
         return True
     except:
         write_json({"name": name, "body": body,
                    "number": number, "messageID": "null", "failed": True})
-        print("Could not send message to: {} @ {}".format(
+        print("\nCould not send message to: {} -> {}".format(
             name, number))
         return False
 
 
 def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
-
     # Create destination type
     destination = SesDestination(tos=[email])
 
     # Send mail and log response
-    try:
-        response = mailsender.send_email(
-            destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="gabe@solutionbasedtherapeutics.com", html="")
-        write_json({"name": name, "job": category,
-                    "email": email, "response_code": response})
-        print("Successfully sent email to: {}".format(name))
-    except ClientError as err:
-        write_json({"name": name, "job": category,
-                    "email": email, "response_code": str(err.response)})
+    mailsender.send_email(
+            destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="gabe@solutionbasedtherapeutics.com", html="",name=name,category=category,email=email)
+
+
+
 
 
 def checkSheetNameValidity(category: str, values: Data):
