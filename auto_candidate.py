@@ -857,7 +857,6 @@ def find_duplicates(creds, spreadsheet_id, sheet_name):
 
 # snippet-start:[python.example_code.ses.SesDestination]
 
-
 class SesDestination:
     """Contains data about an email destination."""
 
@@ -1095,8 +1094,6 @@ def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
     # Send mail and log response
     mailsender.send_email(
             destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="gabe@solutionbasedtherapeutics.com", html="",name=name,category=category,email=email)
-
-
 
 
 
