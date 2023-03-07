@@ -1,5 +1,5 @@
-candidates/
 *.json
 *.env
 *.txt
 tst.py
+__pycache__/*
