@@ -3,7 +3,7 @@
 from twilio.rest import Client
 from dotenv import load_dotenv
 from pydantic import BaseModel
-from datetime import date
+from datetime import date, datetime
 
 import time
 import os
@@ -592,10 +592,10 @@ def create_candidate(candidateData: candidateData, data):
     category = data['category']
     title = "{} {} ({})".format(candidateData.name,
                                 category, candidateData.location)
-    
-    # Clean up Date 
+
+    # Clean up Date
     candidateData.date = cleanupdate(candidateData.date, candidateData.source)
-    
+
     SHEET_ID = data['sheetId']
     parents = [data['folderId']]  # misc default
     print("Parents are: {} for role: {}".format(parents, category))
@@ -682,51 +682,56 @@ def cleanupdate_license(date):
     return date
 
 
-def cleanupdate(date, source):
+def cleanupdate(date: str, source: str):
+    # If the source is ZipRecruiter
+    if source == "ZipRecruiter":
+        date2: str = ""
 
-    date2 = ""
+        def findMonth(month: str):
+            return date[date.find(month)+4:date.find(",")] + "/" + date[date.find("202")+2:date.find("202")+4]
+        if date.find("Jan") > 0:
+            date2 += "1/"
+            date2 += findMonth("Jan")
+        elif date.find("Feb") > 0:
+            date2 += "2/"
+            date2 += findMonth("Feb")
+        elif date.find("Mar") > 0:
+            date2 += "3/"
+            date2 += findMonth("Mar")
+        elif date.find("Apr") > 0:
+            date2 += "4/"
+            date2 += findMonth("Apr")
+        elif date.find("May") > 0:
+            date2 += "5/"
+            date2 += findMonth("May")
+        elif date.find("Jun") > 0:
+            date2 += "6/"
+            date2 += findMonth("Jun")
+        elif date.find("Jul") > 0:
+            date2 += "7/"
+            date2 += findMonth("Jul")
+        elif date.find("Aug") > 0:
+            date2 += "8/"
+            date2 += findMonth("Aug")
+        elif date.find("Sep") > 0:
+            date2 += "9/"
+            date2 += findMonth("Sep")
+        elif date.find("Oct") > 0:
+            date2 += "10/"
+            date2 += findMonth("Oct")
+        elif date.find("Nov") > 0:
+            date2 += "11/"
+            date2 += findMonth("Nov")
+        elif date.find("Dec") > 0:
+            date2 += "12/"
+            date2 += findMonth("Dec")
+        date = date2
+        return date
 
-    def findMonth(month: str):
-        return date[date.find(month)+4:date.find(",")] + "/" + date[date.find("202")+2:date.find("202")+4]
-
-    if date.find("Jan") > 0:
-        date2 += "1/"
-        date2 += findMonth("Jan")
-    elif date.find("Feb") > 0:
-        date2 += "2/"
-        date2 += findMonth("Feb")
-    elif date.find("Mar") > 0:
-        date2 += "3/"
-        date2 += findMonth("Mar")
-    elif date.find("Apr") > 0:
-        date2 += "4/"
-        date2 += findMonth("Apr")
-    elif date.find("May") > 0:
-        date2 += "5/"
-        date2 += findMonth("May")
-    elif date.find("Jun") > 0:
-        date2 += "6/"
-        date2 += findMonth("Jun")
-    elif date.find("Jul") > 0:
-        date2 += "7/"
-        date2 += findMonth("Jul")
-    elif date.find("Aug") > 0:
-        date2 += "8/"
-        date2 += findMonth("Aug")
-    elif date.find("Sep") > 0:
-        date2 += "9/"
-        date2 += findMonth("Sep")
-    elif date.find("Oct") > 0:
-        date2 += "10/"
-        date2 += findMonth("Oct")
-    elif date.find("Nov") > 0:
-        date2 += "11/"
-        date2 += findMonth("Nov")
-    elif date.find("Dec") > 0:
-        date2 += "12/"
-        date2 += findMonth("Dec")
-    date = date2
-    return date
+    # If the source is indeed do this
+    elif source == "Indeed":
+        date_obj = datetime.strptime(date, '%b %d, %Y')
+        return date_obj.strftime('%m/%d/%Y')
 
 
 def getLicenseInfo(name, depth) -> list:
@@ -857,6 +862,7 @@ def find_duplicates(creds, spreadsheet_id, sheet_name):
 
 # snippet-start:[python.example_code.ses.SesDestination]
 
+
 class SesDestination:
     """Contains data about an email destination."""
 
@@ -923,13 +929,13 @@ class SesMailSender:
                 "Sent mail %s from %s to %s.", message_id, source, destination.tos)
 
             write_json({"name": name, "job": category,
-                "email": email, "response_code": response, 'body': text})
+                        "email": email, "response_code": response, 'body': text})
 
             print("Successfully sent email to: {} -> ".format(name, email))
         except ClientError as err:
             print("Invalid email destination for: {} -> {}".format(name, destination.tos))
             write_json({"name": name, "job": category,
-                "email": email, "response_code": str(err.response)})
+                        "email": email, "response_code": str(err.response)})
         else:
             return message_id
 
@@ -1053,7 +1059,8 @@ def sendmailtexts(data: Data):
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
                 else:
-                    print("\nChose not to message {}".format(values[data.nameCol]))
+                    print("\nChose not to message {}".format(
+                        values[data.nameCol]))
             except IndexError as err:
                 print("Finished Texting and Emailing Candidaes")
                 break
@@ -1093,8 +1100,7 @@ def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
 
     # Send mail and log response
     mailsender.send_email(
-            destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="gabe@solutionbasedtherapeutics.com", html="",name=name,category=category,email=email)
-
+        destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="gabe@solutionbasedtherapeutics.com", html="", name=name, category=category, email=email)
 
 
 def checkSheetNameValidity(category: str, values: Data):
