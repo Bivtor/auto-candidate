@@ -3,3 +3,4 @@
 *.txt
 tst.py
 __pycache__/*
+__pycache__/auto_candidate.cpython-310.pyc
