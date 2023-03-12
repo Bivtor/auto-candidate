@@ -6,10 +6,12 @@ from pydantic import BaseModel
 from datetime import date, datetime
 
 import time
+import PyPDF2
 import os
 import os.path
 import json
 import glob
+import re
 from bs4 import BeautifulSoup
 
 import requests
@@ -770,8 +772,10 @@ def parse_resume(data: candidateData):
             text += page_text
 
         # Use regular expressions to find phone numbers and emails in the text
-        data.phone = phone_regex.findall(text)[0]
-        data.email = email_regex.findall(text)[0]
+        newPhone = phone_regex.findall(text)
+        newEmail = email_regex.findall(text)
+        if len(newPhone) > 0: data.phone = newPhone[0]
+        if len(newEmail) > 0: data.email = newEmail[0]
 
         # Print the results for the current PDF file
     print("Altered Phone/Email for Indeed Candidate with Resume")
