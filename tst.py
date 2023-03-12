@@ -4,6 +4,8 @@ import re
 import os
 import glob
 
+from auto_candidate import *
+
 
 class candidateData(BaseModel):
     hasResume: bool | None
@@ -16,7 +18,7 @@ class candidateData(BaseModel):
     source: str
 
 
-def parse_resume(data: candidateData):
+def parse_resume2(data: candidateData):
     # Only do this for Indeed when a resume is present
     if data.source != "Indeed" or (not data.hasResume):
         return
@@ -25,7 +27,10 @@ def parse_resume(data: candidateData):
     list_of_files = glob.glob("N:\Downloads2\*.pdf")  # PC Dir
 
     # PC Dir
-    directory = max(list_of_files, key=os.path.getctime)
+    # directory = max(list_of_files, key=os.path.getctime)
+
+    # Mac Dir
+    directory = '/Users/victorrinaldi/Desktop/auto_candidate/resumes/ResumeRobert-AlnieGarlit.pdf'
 
     # Define regex Patterns
     phone_regex = re.compile(r"\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}")
@@ -59,11 +64,16 @@ def parse_resume(data: candidateData):
 
 
 def main():
-    d = candidateData(hasResume=True, location="Florida", name="Victor", phone="8057227847",
+    d = candidateData(hasResume=True, location="Florida", name="Robert", phone="8057227847",
                       email="kk20@gmail.com", date="10/10/2020", pagelink="nack", source="Indeed")
-    print(d)
+
+    d2 = candidateData(hasResume=True, location="Cali", name="Jonathan", phone="8057227847",
+                       email="johnwick@gmail.com", date="10/10/2020", pagelink="nack", source="Indeed")
+    parse_resume(d2)
     parse_resume(d)
-    print(d)
+
+    print(d2, "\n")
+    print(d, "\n")
 
 
 if __name__ == "__main__":

@@ -748,6 +748,9 @@ def parse_resume(data: candidateData):
     # PC Dir
     directory = max(list_of_files, key=os.path.getctime)
 
+    # Mac Dir
+    # directory = '/resumes/*.pdf'
+
     # Define regex Patterns
     phone_regex = re.compile(r"\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}")
     email_regex = re.compile(
@@ -774,11 +777,13 @@ def parse_resume(data: candidateData):
         # Use regular expressions to find phone numbers and emails in the text
         newPhone = phone_regex.findall(text)
         newEmail = email_regex.findall(text)
-        if len(newPhone) > 0: data.phone = newPhone[0]
-        if len(newEmail) > 0: data.email = newEmail[0]
+        if len(newPhone) > 0:
+            data.phone = newPhone[0]
+        if len(newEmail) > 0:
+            data.email = newEmail[0]
 
         # Print the results for the current PDF file
-    print("Altered Phone/Email for Indeed Candidate with Resume")
+    print("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
 
 
 def getLicenseInfo(name, depth) -> list:
