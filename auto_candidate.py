@@ -29,10 +29,8 @@ import logging
 from botocore.exceptions import ClientError
 from botocore.config import Config
 
-
 logger = logging.getLogger(__name__)
 load_dotenv()
-
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive',
@@ -596,6 +594,9 @@ def create_candidate(candidateData: candidateData, data):
     # Clean up Date
     candidateData.date = cleanupdate(candidateData.date, candidateData.source)
 
+    # Fix Phone Number and Email (Indeed Only)
+    parse_resume(candidateData)
+
     SHEET_ID = data['sheetId']
     parents = [data['folderId']]  # misc default
     print("Parents are: {} for role: {}".format(parents, category))
@@ -734,6 +735,48 @@ def cleanupdate(date: str, source: str):
         return date_obj.strftime('%m/%d/%Y')
 
 
+def parse_resume(data: candidateData):
+    # Only do this for Indeed when a resume is present
+    if data.source != "Indeed" or (not data.hasResume):
+        return
+
+    # Get the directory of target file (Latest in folder )
+    list_of_files = glob.glob("N:\Downloads2\*.pdf")  # PC Dir
+
+    # PC Dir
+    directory = max(list_of_files, key=os.path.getctime)
+
+    # Define regex Patterns
+    phone_regex = re.compile(r"\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}")
+    email_regex = re.compile(
+        r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b")
+
+    # Open the PDF file in read-binary mode
+    with open(directory, 'rb') as f:
+        # Create a PDF reader object
+        pdf_reader = PyPDF2.PdfReader(f)
+
+        # Get the number of pages in the PDF file
+        num_pages = len(pdf_reader.pages)
+
+        # Loop through all the pages and extract the text
+        text = ''
+        for page in range(num_pages):
+            # Get the page object
+            pdf_page = pdf_reader.pages[page]
+            # Extract the text from the page
+            page_text = pdf_page.extract_text()
+            # Add the page text to the overall text variable
+            text += page_text
+
+        # Use regular expressions to find phone numbers and emails in the text
+        data.phone = phone_regex.findall(text)[0]
+        data.email = email_regex.findall(text)[0]
+
+        # Print the results for the current PDF file
+    print("Altered Phone/Email for Indeed Candidate with Resume")
+
+
 def getLicenseInfo(name, depth) -> list:
     first = name[:name.rfind(" ")].strip()
     last = name[name.rfind(" "):].strip()
@@ -860,8 +903,6 @@ def find_duplicates(creds, spreadsheet_id, sheet_name):
         print(err)
     print("got all names")
 
-# snippet-start:[python.example_code.ses.SesDestination]
-
 
 class SesDestination:
     """Contains data about an email destination."""
@@ -886,7 +927,6 @@ class SesDestination:
         if self.bccs is not None:
             svc_format['BccAddresses'] = self.bccs
         return svc_format
-# snippet-end:[python.example_code.ses.SesDestination]
 
 
 class SesMailSender:
@@ -1148,6 +1188,10 @@ def checkSheetNameValidity(category: str, values: Data):
 
 
 def setColumnVariables(inputdata: Data):
+    """
+    Write data out to json
+    """
+
     try:
         # Build Service
         service = build('sheets', 'v4', credentials=creds)
@@ -1175,8 +1219,6 @@ def setColumnVariables(inputdata: Data):
             inputdata.err = "Error: the category you are trying to send a text in must include a: {} Column to interact with the program".format(
                 err)
             return inputdata
-
-# add to JSON
 
 
 def write_json(new_data, filename='records.json'):
