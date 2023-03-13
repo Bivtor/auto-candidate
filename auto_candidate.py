@@ -82,7 +82,7 @@ class Data(BaseModel):
     folderId: str | None = None
 
     # Sheet position info
-    positions: list[str]
+    positions: list[str] = []
     err: str | None = None
 
 
@@ -168,20 +168,20 @@ def update_spreadsheet(candidateData: candidateData, data, SPREADSHEET_ID, SHEET
                     new_dict = {"userEnteredValue": {
                         "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(folder_link, candidateData.name)}}
                 case "Source":
-                    {"userEnteredValue": {
-                        "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(candidateData.source, candidateData.pagelink)}}
+                    new_dict = {"userEnteredValue": {
+                        "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(candidateData.pagelink, candidateData.source)}}
                 case "Location":
-                    {"userEnteredValue": {"stringValue": candidateData.location}}
+                    new_dict = {"userEnteredValue": {"stringValue": candidateData.location}}
                 case "Phone":
-                    {"userEnteredValue": {"stringValue": candidateData.phone}}
+                    new_dict = {"userEnteredValue": {"stringValue": candidateData.phone}}
                 case "Email":
-                    {"userEnteredValue": {"stringValue": candidateData.email}}
+                    new_dict = {"userEnteredValue": {"stringValue": candidateData.email}}
                 case "Date Applied":
-                    {"userEnteredValue": {"stringValue": candidateData.date}}
+                    new_dict = {"userEnteredValue": {"stringValue": candidateData.date}}
                 case "License/Cert":
-                    {"userEnteredValue": {"stringValue": candidateData.license_cert}}
+                    new_dict = {"userEnteredValue": {"stringValue": candidateData.license_cert}}
                 case "L Expiration":
-                    {"userEnteredValue": {
+                    new_dict = {"userEnteredValue": {
                         "stringValue": candidateData.license_expiration}}
 
                 # If the item is not one of these things, do not append anything
@@ -1167,10 +1167,9 @@ def setColumnVariables(inputdata: Data):
 
         # Store results of sheet line 1
 
-        vals = dict()
         for col in result['values'][0]:
             # Set the location of relevant columns for this sheet
-            inputdata.positions.append(vals[col])
+            inputdata.positions.append(col)
 
         # Return Dictionary
         return inputdata
