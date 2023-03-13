@@ -597,6 +597,7 @@ def create_candidate(candidateData: candidateData, data):
     candidateData.date = cleanupdate(candidateData.date, candidateData.source)
 
     # Fix Phone Number and Email (Indeed Only)
+    time.sleep(2)
     parse_resume(candidateData)
 
     SHEET_ID = data['sheetId']
