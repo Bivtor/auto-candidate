@@ -6,6 +6,8 @@ from pydantic import BaseModel
 from datetime import date, datetime
 from fuzzywuzzy import fuzz
 
+import pathlib
+import docx
 import time
 import PyPDF2
 import os
@@ -107,12 +109,11 @@ class License(BaseModel):
     location: str
 
 
-def upload_basic(title, parents, path):
+def upload_basic(title, parents, path, filetype):
     """Insert new file.
     Returns : Id's of the file uploaded
 
     Load pre-authorized user credentials from the environment.
-    TODO(developer) - See https://developers.google.com/identity
     for guides on implementing OAuth2 for the application.
     """
 
@@ -120,7 +121,16 @@ def upload_basic(title, parents, path):
         # create drive api client
         service = build('drive', 'v3', credentials=creds)
         file_metadata = {'name': title, 'parents': parents}
-        media = MediaFileUpload(path, mimetype='application/pdf')
+
+        # Determine if file is pdf or docx and set media accoordingly
+        file_extension = pathlib.Path('my_file.txt').suffix.strip()
+
+        if file_extension == ".docx":
+            media = MediaFileUpload(
+                path, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+        else:
+            media = MediaFileUpload(
+                path, mimetype='application/pdf')
 
         # pylint: disable=maybe-no-member
         file = service.files().create(body=file_metadata, media_body=media,
@@ -131,7 +141,7 @@ def upload_basic(title, parents, path):
         print(F'An error occurred: {error}')
         file = None
 
-    print("Uploaded Resume with id: ", file.get('id'))
+    print("Uploaded Resume")
     return file.get('id')
 
 
@@ -171,15 +181,20 @@ def update_spreadsheet(candidateData: candidateData, data, SPREADSHEET_ID, SHEET
                     new_dict = {"userEnteredValue": {
                         "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(candidateData.pagelink, candidateData.source)}}
                 case "Location":
-                    new_dict = {"userEnteredValue": {"stringValue": candidateData.location}}
+                    new_dict = {"userEnteredValue": {
+                        "stringValue": candidateData.location}}
                 case "Phone":
-                    new_dict = {"userEnteredValue": {"stringValue": candidateData.phone}}
+                    new_dict = {"userEnteredValue": {
+                        "stringValue": candidateData.phone}}
                 case "Email":
-                    new_dict = {"userEnteredValue": {"stringValue": candidateData.email}}
+                    new_dict = {"userEnteredValue": {
+                        "stringValue": candidateData.email}}
                 case "Date Applied":
-                    new_dict = {"userEnteredValue": {"stringValue": candidateData.date}}
+                    new_dict = {"userEnteredValue": {
+                        "stringValue": candidateData.date}}
                 case "License/Cert":
-                    new_dict = {"userEnteredValue": {"stringValue": candidateData.license_cert}}
+                    new_dict = {"userEnteredValue": {
+                        "stringValue": candidateData.license_cert}}
                 case "L Expiration":
                     new_dict = {"userEnteredValue": {
                         "stringValue": candidateData.license_expiration}}
@@ -729,31 +744,39 @@ def parse_resume(data: candidateData):
     email_regex = re.compile(
         r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b")
 
-    # Open the PDF file in read-binary mode
-    with open(directory, 'rb') as f:
-        # Create a PDF reader object
-        pdf_reader = PyPDF2.PdfReader(f)
+    # Extract text for pdf or docx
+    text = ""
+    file_extension = pathlib.Path(directory).suffix.strip()
 
-        # Get the number of pages in the PDF file
-        num_pages = len(pdf_reader.pages)
+    # If file type is Docx
+    if file_extension == '.docx':
+        doc = docx.Document(directory)
+        text = '\s'.join([para.text for para in doc.paragraphs])
 
-        # Loop through all the pages and extract the text
-        text = ''
-        for page in range(num_pages):
-            # Get the page object
-            pdf_page = pdf_reader.pages[page]
-            # Extract the text from the page
-            page_text = pdf_page.extract_text()
-            # Add the page text to the overall text variable
-            text += page_text
+    else:  # Open the PDF if file type is NON docx
+        with open(directory, 'rb') as f:
+            # Create a PDF reader object
+            pdf_reader = PyPDF2.PdfReader(f)
 
-        # Use regular expressions to find phone numbers and emails in the text
-        newPhone = phone_regex.findall(text)
-        newEmail = email_regex.findall(text)
-        if len(newPhone) > 0:
-            data.phone = newPhone[0]
-        if len(newEmail) > 0:
-            data.email = newEmail[0]
+            # Get the number of pages in the PDF file
+            num_pages = len(pdf_reader.pages)
+
+            # Loop through all the pages and extract the text
+            for page in range(num_pages):
+                # Get the page object
+                pdf_page = pdf_reader.pages[page]
+                # Extract the text from the page
+                page_text = pdf_page.extract_text()
+                # Add the page text to the overall text variable
+                text += page_text
+
+    # Use regular expressions to find phone numbers and emails in the text
+    newPhone = phone_regex.findall(text)
+    newEmail = email_regex.findall(text)
+    if len(newPhone) > 0:
+        data.phone = newPhone[0]
+    if len(newEmail) > 0:
+        data.email = newEmail[0]
 
         # Print the results for the current PDF file
     print("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
