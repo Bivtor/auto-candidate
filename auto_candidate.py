@@ -4,6 +4,7 @@ from twilio.rest import Client
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from datetime import date, datetime
+from fuzzywuzzy import fuzz
 
 import time
 import PyPDF2
@@ -74,21 +75,36 @@ class Data(BaseModel):
     message: str = ""
     messageType: str = ""
 
-    # Sheet position info
+    # Sheet/Folder containment info
     isSheet: bool = False
     isFolder: bool = False
     sheetId: str | None = None
     folderId: str | None = None
-    nameCol: str | None = None
-    phoneCol: str | None = None
-    emailCol: str | None = None
-    contactedCol: str | None = None
-    timesContactedCol: str | None = None
-    spokenToCol: str | None = None
-    sourceCol: str | None = None
-    locationCol: str | None = None
-    dateAppliedCol: str | None = None
+
+    # Sheet position info
+    positions: list[str]
     err: str | None = None
+
+
+class candidateData(BaseModel):
+    hasResume: bool | None
+    location: str
+    name: str
+    phone: str
+    email: str
+    date: str
+    pagelink: str
+    source: str
+    license_cert: str | None
+    license_expiration: str | None
+
+
+class License(BaseModel):
+    name: str
+    type: str
+    number: str
+    expiration: str
+    location: str
 
 
 def upload_basic(title, parents, path):
@@ -119,17 +135,12 @@ def upload_basic(title, parents, path):
     return file.get('id')
 
 
-def update_spreadsheet(info, SPREADSHEET_ID, SHEET_ID, folder_link):
+def update_spreadsheet(candidateData: candidateData, data, SPREADSHEET_ID, SHEET_ID, folder_link):
     try:
         service = build('sheets', 'v4', credentials=creds)
 
-        # Call the Sheets API to apply requests
-        licenselist = info[6]
-        licenselist2 = list()
-        for i in licenselist:
-            licenselist2.append(', '.join(i))
-
-        data = {
+        # Base Request data format
+        requestdata = {
             'requests': [
                 {
                     "appendCells":
@@ -137,24 +148,6 @@ def update_spreadsheet(info, SPREADSHEET_ID, SHEET_ID, folder_link):
                         "sheetId": SHEET_ID,
                         "rows": [{
                             "values": [
-                                {"userEnteredValue": {
-                                    "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(folder_link, info[0])}},
-                                {"userEnteredValue": {
-                                    "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(info[7], info[1])}},
-                                {"userEnteredValue": {"stringValue": info[2]}},
-                                {"userEnteredValue": {"stringValue": info[3]}},
-                                {"userEnteredValue": {"stringValue": info[4]}},
-                                {"userEnteredValue": {"stringValue": info[5]}},
-                                {"userEnteredValue": {
-                                    "stringValue": licenselist2[0]}},
-                                {"userEnteredValue": {
-                                    "stringValue": licenselist2[1]}},
-                                {"userEnteredValue": {
-                                    "stringValue": licenselist2[2]}},
-                                {"userEnteredValue": {
-                                    "stringValue": licenselist2[3]}},
-                                {"userEnteredValue": {
-                                    "stringValue": licenselist2[4]}}
                             ]}],
                         "fields": "userEnteredValue"
                     }
@@ -162,54 +155,46 @@ def update_spreadsheet(info, SPREADSHEET_ID, SHEET_ID, folder_link):
             ]
         }
 
-        #             [name_found, licensetype, licensenumber, licenseexpiration, licenselocation])
-        # name = info[0]
-        # reverse_name_format = name[name.rfind(" "):].strip(
-        # ) + ", " + name[:name.rfind(" ")].strip()
-        # print(licenselist)
-        # print(licenselist2)
-        # if (licenselist[0] != ''):
-        #     name_in_reg = licenselist2[0][:[
-        #         i for i, n in enumerate(licenselist2[0]) if n == ','][1]]
-        #     isSame = SequenceMatcher(
-        #         lambda x: x == " ", name_in_re2g.lower(), reverse_name_format.lower())
-        #     licensenum = licensetype + " " + licenselist2[0][0]
-        #     licenseexp = licenselist2[0][3]
+        # Build request data form dynamically to account for changes in column order
+        # Column names must be exact however
 
-        data2 = {
-            'requests': [
-                {
-                    "appendCells":
-                    {
-                        "sheetId": SHEET_ID,
-                        "rows": [{
-                            "values": [
-                                {"userEnteredValue": {
-                                    "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(folder_link, info[0])}},
-                                {"userEnteredValue": {"stringValue": info[1]}},
-                                {"userEnteredValue": {"stringValue": info[2]}},
-                                {"userEnteredValue": {"stringValue": info[3]}},
-                                {"userEnteredValue": {"stringValue": info[4]}},
-                                {"userEnteredValue": {"stringValue": info[5]}},
-                                # {"userEnteredValue": {
-                                #     # "stringValue": licensenum}},
-                                # {"userEnteredValue": {
-                                #     "stringValue": licenseexp}}
-                            ]}],
-                        "fields": "userEnteredValue"
-                    }
-                }
-            ]
-        }
+        for value in data['positions']:
+            # Define new dict (Cell + data to add)
+            new_dict = dict()
 
-        # if (licenselist[0] != ''):
-        #     print("Similarity Ratio of {}, {}: ".format(
-        #         name_in_reg, reverse_name_format), isSame.ratio())
-        #     if isSame.ratio() >= .9:
-        #         data = data2
+            # Match value to a case
+            match value:
+                case "Name":
+                    new_dict = {"userEnteredValue": {
+                        "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(folder_link, candidateData.name)}}
+                case "Source":
+                    {"userEnteredValue": {
+                        "formulaValue": "=HYPERLINK(\"{}\",\"{}\")".format(candidateData.source, candidateData.pagelink)}}
+                case "Location":
+                    {"userEnteredValue": {"stringValue": candidateData.location}}
+                case "Phone":
+                    {"userEnteredValue": {"stringValue": candidateData.phone}}
+                case "Email":
+                    {"userEnteredValue": {"stringValue": candidateData.email}}
+                case "Date Applied":
+                    {"userEnteredValue": {"stringValue": candidateData.date}}
+                case "License/Cert":
+                    {"userEnteredValue": {"stringValue": candidateData.license_cert}}
+                case "L Expiration":
+                    {"userEnteredValue": {
+                        "stringValue": candidateData.license_expiration}}
 
+                # If the item is not one of these things, do not append anything
+                case _:
+                    continue
+
+            # Add the corresponding dictionary to the request body
+            requestdata['requests'][0]['appendCells']['rows'][0]['values'].append(
+                new_dict)
+
+        # Execute Batch Update Request
         request = service.spreadsheets().batchUpdate(spreadsheetId=SPREADSHEET_ID,
-                                                     body=data)
+                                                     body=requestdata)
         response = request.execute()
         print("Updated Spreadsheet")
 
@@ -572,20 +557,11 @@ def create_folder(name: str, parents):
     return [file.get('id'), file.get('webViewLink')]
 
 
-class candidateData(BaseModel):
-    hasResume: bool | None
-    location: str
-    name: str
-    phone: str
-    email: str
-    date: str
-    pagelink: str
-    source: str
-
-
 def create_candidate(candidateData: candidateData, data):
     """
     Creates a new candidate inside xyz Folder and a new Questions document
+    candidateData = candidate information to be inputted
+    data = information about columns and sheets
     """
 
     # Set Proper Variables
@@ -618,18 +594,14 @@ def create_candidate(candidateData: candidateData, data):
     # Get License number of first (depth) entries:
     licenselist = getLicenseInfo(candidateData.name, 5)
 
-    # make sure license list is at least 5 long
-    for i in range(5 - len(licenselist)):
-        licenselist.append("")
+    # Add License info if match to candidateData
+    curateLicenseList(licenselist, candidateData)
 
-    # update info for sheets insertion
-    info2 = [candidateData.name, candidateData.source, candidateData.location,
-             candidateData.phone, candidateData.email, candidateData.date, licenselist, candidateData.pagelink]
+    # Call update spreadsheet function
+    update_spreadsheet(candidateData, data, SPREADSHEET_ID,
+                       SHEET_ID, newParent[1])
 
-    folder_link = newParent[1]
-    # call update spreadsheet function
-    update_spreadsheet(info2, SPREADSHEET_ID, SHEET_ID, folder_link)
-
+    # Upload the Resume if they had one
     if (candidateData.hasResume):
         # * means all if need specific format then *.csv
         list_of_files = glob.glob("N:\Downloads2\*")
@@ -748,7 +720,7 @@ def parse_resume(data: candidateData):
     # PC Dir
     directory = max(list_of_files, key=os.path.getctime)
 
-    # Mac Dir
+    # Mac Dir (Testing)
     # directory = '/resumes/*.pdf'
 
     # Define regex Patterns
@@ -786,7 +758,8 @@ def parse_resume(data: candidateData):
     print("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
 
 
-def getLicenseInfo(name, depth) -> list:
+def getLicenseInfo(name, depth) -> License:
+    # Assign first and last, assuming everything but last word is first name
     first = name[:name.rfind(" ")].strip()
     last = name[name.rfind(" "):].strip()
     url = "https://search.dca.ca.gov/results"
@@ -815,39 +788,15 @@ def getLicenseInfo(name, depth) -> list:
             'credentials': "include",
     }
 
-    # fetch to CADC / RADT PAGE
-    """
-    fetch("https://ccapp.certemy.com/api/organization/public_registry/865beee9-c683-411c-a87e-cdf3d3fcd18e?&search=toby%20oskam&filters={%22last_name%22:[],%22certificationIds%22:[],%22organizationId%22:null}&page=1&page_size=20&order_id=last_name&order_type=asc", {
-  "headers": {
-    "accept": "application/json, text/plain, */*",
-    "accept-language": "en-US,en;q=0.9",
-    "cache-control": "max-age=0",
-    "content-type": "application/json",
-    "if-modified-since": "Thu, 03 Nov 2022 22:19:20 GMT",
-    "sec-ch-ua": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"macOS\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://ccapp.certemy.com/public-registry/865beee9-c683-411c-a87e-cdf3d3fcd18e",
-  "referrerPolicy": "strict-origin-when-cross-origin",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-});
-
-    """
-
+    # Collect results
     r = requests.post(url, data=body, headers=headers)
     soup = BeautifulSoup(r.text, "html.parser")
 
     count = 0
     licenseinfolist = list()
-    for i in soup.find_all('ul', class_="actions"):
 
+    # For each license we match with, collect the proper data
+    for i in soup.find_all('ul', class_="actions"):
         # define items to be collected
         licensetype = ""
         licensenumber = ""
@@ -878,7 +827,7 @@ def getLicenseInfo(name, depth) -> list:
          # append license info to return list
         licenseexpiration = cleanupdate_license(licenseexpiration)
         licenseinfolist.append(
-            [name_found, licensetype, licensenumber, licenseexpiration, licenselocation])
+            License(name=name_found, type=licensetype, number=licensenumber, expiration=licenseexpiration, location=licenselocation))
 
         count += 1
 
@@ -1165,16 +1114,23 @@ def checkSheetNameValidity(category: str, values: Data):
         request = service.spreadsheets().get(
             spreadsheetId=SPREADSHEET_ID, includeGridData=False)
         response = request.execute()
+
         sheetDict = dict()
+        # Examine all of the pages we have in the Google Sheet (Recruitment-Prescreening)
+        # Map each sheet name to the sheet ID
         for sheet in response.get('sheets'):
             s = sheet.get('properties')
-            # print(sheet)
             sheetDict[s.get('title')] = s.get('sheetId')
-        if category in sheetDict:  # if the Sheet is valid, update list
+
+        # If our sheet is in the dicionary, set isSheet True, assign sheetId
+        if category in sheetDict:
             values.isSheet = True
             values.sheetId = sheetDict.get(category, "")
 
         # Get Folder and Folder name
+        """
+        Ensure destination folder is exists and find it (Same name as Sheet Page)
+        """
         service = build('drive', 'v3', credentials=creds)
 
         response = service.files().list(
@@ -1198,7 +1154,7 @@ def checkSheetNameValidity(category: str, values: Data):
 
 def setColumnVariables(inputdata: Data):
     """
-    Write data out to json
+    Assign position fields in inputdata before it is written to json
     """
 
     try:
@@ -1209,17 +1165,11 @@ def setColumnVariables(inputdata: Data):
             spreadsheetId=SPREADSHEET_ID, range="{}!1:1".format(inputdata.category)).execute()
 
         # Store results of sheet line 1
-        vals = dict()
-        for i, col in enumerate(result['values'][0]):
-            vals[col] = i
 
-        # Set the location of relevant columns for this sheet
-        inputdata.nameCol = vals['Name']
-        inputdata.emailCol = vals['Email']
-        inputdata.phoneCol = vals['Phone']
-        inputdata.contactedCol = vals['Contacted']
-        inputdata.timesContactedCol = vals['Times Contacted']
-        inputdata.spokenToCol = vals['Spoken To']
+        vals = dict()
+        for col in result['values'][0]:
+            # Set the location of relevant columns for this sheet
+            inputdata.positions.append(vals[col])
 
         # Return Dictionary
         return inputdata
@@ -1240,6 +1190,19 @@ def write_json(new_data, filename='records.json'):
         file.seek(0)
         # convert back to json.
         json.dump(file_data, file, indent=4)
+
+
+def curateLicenseList(licenselist: list[License], candidateData: candidateData):
+    # For each match that we get
+    for match in licenselist:
+        # if fuzzywuzzy location similarity score is high enough, return proper info
+        if fuzz.partial_ratio(candidateData.location.lower(), match.location.lower()) >= 75:
+            # Assign License Name - Number
+            candidateData.license_cert = "{} - {}".format(
+                match.type, match.number)
+            # Assign License Expiration
+            candidateData.license_expiration = match.expiration
+            return  # Break
 
 
 def main():
