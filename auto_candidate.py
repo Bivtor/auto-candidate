@@ -987,9 +987,17 @@ def sendmailtexts(data: Data):
                 # Assign data to variable 'Values'
                 values = result.get('values', [])[0]
 
+                # Assign column values after changed methods for input
+                nameCol = data.positions.index("Name")
+                phoneCol = data.positions.index("Phone")
+                emailCol = data.positions.index("Email")
+                contactedCol = data.positions.index("Contacted")
+                timesContactedCol = data.positions.index("Times Contacted")
+                spokenToCol = data.positions.index("Spoken To")
+
                 # Find max length of the row insertion we will need
-                max_length_row = max({data.nameCol, data.phoneCol, data.emailCol,
-                                     data.contactedCol, data.timesContactedCol, data.spokenToCol})+1
+                max_length_row = max(nameCol, phoneCol, emailCol,
+                                     contactedCol, timesContactedCol, spokenToCol)+1
 
                 # If the length of the row is not as long as the furthest away category that we need to be inputting into, extend it
                 if len(values) < max_length_row:
@@ -997,29 +1005,29 @@ def sendmailtexts(data: Data):
                         values.append('')
 
                 # Now we are able to access the proper items in rows before we batch update, because we know they all exist
-                name = values[data.nameCol]
-                number = values[data.phoneCol]
-                email = values[data.emailCol]
+                name = values[nameCol]
+                number = values[phoneCol]
+                email = values[emailCol]
                 body = data.message.replace(
                     "[candidate_name]", name)  # This was broken before
 
                 # Decide whether or not to send a text/email Function
                 def shouldSendMessage(data: Data, values: dict) -> bool:
-                    if (values[data.spokenToCol] == 'N' or values[data.spokenToCol] == ''):
+                    if (values[spokenToCol] == 'N' or values[spokenToCol] == ''):
                         return True
                     else:
                         return False
 
                 # If we decide to send a message
                 if shouldSendMessage(data, values):
-                    values[data.spokenToCol] = 'N'
-                    values[data.contactedCol] = 'T/'
-                    if values[data.timesContactedCol] == '':
+                    values[spokenToCol] = 'N'
+                    values[contactedCol] = 'T/'
+                    if values[timesContactedCol] == '':
 
-                        values[data.timesContactedCol] = '1'
+                        values[timesContactedCol] = '1'
                     else:
-                        values[data.timesContactedCol] = str(
-                            int(values[data.timesContactedCol])+1)
+                        values[timesContactedCol] = str(
+                            int(values[timesContactedCol])+1)
 
                     # TODO FIX THIS PART
                     # Send a text to the name / phone given
@@ -1042,7 +1050,7 @@ def sendmailtexts(data: Data):
                                         {
                                             "values": [
                                                 {
-                                                    "userEnteredValue": {"stringValue": values[data.contactedCol]}
+                                                    "userEnteredValue": {"stringValue": values[contactedCol]}
                                                 }
                                             ]
                                         }
@@ -1062,7 +1070,7 @@ def sendmailtexts(data: Data):
                                         {
                                             "values": [
                                                 {
-                                                    "userEnteredValue": {"stringValue": values[data.timesContactedCol]}
+                                                    "userEnteredValue": {"stringValue": values[timesContactedCol]}
                                                 }
                                             ]
                                         }
@@ -1071,7 +1079,7 @@ def sendmailtexts(data: Data):
                                     "start": {
                                         "sheetId": data.sheetId,
                                         "rowIndex": row-1,
-                                        "columnIndex": data.timesContactedCol
+                                        "columnIndex": timesContactedCol
                                     }
                                 }
                             },
@@ -1082,7 +1090,7 @@ def sendmailtexts(data: Data):
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
                 else:
                     print("\nChose not to message {}".format(
-                        values[data.nameCol]))
+                        values[nameCol]))
             except IndexError as err:
                 print("Finished Texting and Emailing Candidaes")
                 break
