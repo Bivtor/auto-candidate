@@ -11,8 +11,16 @@ import pathlib
 def main():
     # x = getLicenseInfo2("Dane Miller", 4)
     # print(x.headers)
+    cd = candidateData(date="10/10/19", email="321", hasResume=True, license_cert="", license_expiration="",
+                       location="Lompoc", name="Victor RInaldi", pagelink="https://www.vrinadi.com", phone="", source="Indeed")
     file_extension = pathlib.Path('my_file.docx').suffix
     print("File Extension: " + file_extension.strip())
+    parse_resume(cd)
+    print(cd)
+
+    print()
+    upload_basic(title="This si the titel", parents="Fuck you",
+                 path="/Users/victorrinaldi/Desktop/auto_candidate/resumes/ResumeRobert-AlnieGarlit.pdf")
 
 
 # +1(562) 395 -258
@@ -95,6 +103,97 @@ def getLicenseInfo2(name, depth) -> License:
     print("Got {} licenses for {}".format(count, name))
 
     return licenseinfolist
+
+
+def parse_resume(data: candidateData):
+
+    # Only do this for Indeed when a resume is present
+    if data.source != "Indeed" or (not data.hasResume):
+        return
+
+    # Get the directory of target file (Latest in folder )
+
+    # PC Dir
+    # list_of_files = glob.glob("N:\Downloads2\*")
+    # Mac Dir (Testing)
+    list_of_files = glob.glob(
+        "/Users/victorrinaldi/Desktop/auto_candidate/resumes/*")
+
+    # Target the newest file in the folder
+    directory = max(list_of_files, key=os.path.getctime)
+
+    # Define regex Patterns
+    phone_regex = re.compile(r"\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}")
+    email_regex = re.compile(
+        r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b")
+
+    # Extract text for pdf or docx
+    text = ""
+    file_extension = pathlib.Path(directory).suffix.strip()
+
+    # If file type is Docx
+    if file_extension == '.docx':
+        doc = docx.Document(directory)
+        text = '\s'.join([para.text for para in doc.paragraphs])
+
+    else:  # Open the PDF if file type is NON docx
+        with open(directory, 'rb') as f:
+            # Create a PDF reader object
+            pdf_reader = PyPDF2.PdfReader(f)
+
+            # Get the number of pages in the PDF file
+            num_pages = len(pdf_reader.pages)
+
+            # Loop through all the pages and extract the text
+            for page in range(num_pages):
+                # Get the page object
+                pdf_page = pdf_reader.pages[page]
+                # Extract the text from the page
+                page_text = pdf_page.extract_text()
+                # Add the page text to the overall text variable
+                text += page_text
+
+    # Use regular expressions to find phone numbers and emails in the text
+    newPhone = phone_regex.findall(text)
+    newEmail = email_regex.findall(text)
+    if len(newPhone) > 0:
+        data.phone = newPhone[0]
+    if len(newEmail) > 0:
+        data.email = newEmail[0]
+
+        # Print the results for the current PDF file
+    print("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
+
+
+def upload_basic(title, parents, path):
+    """Insert new file.
+    Returns : Id's of the file uploaded
+
+    Load pre-authorized user credentials from the environment.
+    for guides on implementing OAuth2 for the application.
+    """
+
+    try:
+        # create drive api client
+        service = build('drive', 'v3', credentials=creds)
+        file_metadata = {'name': title, 'parents': parents}
+
+        # Determine if file is pdf or docx and set media accoordingly
+        file_extension = pathlib.Path(path).suffix.strip()
+        media = media = MediaFileUpload(
+            path, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document') if file_extension == ".docx" else MediaFileUpload(
+            path, mimetype='application/pdf')
+
+        # Execute upload
+        file = service.files().create(body=file_metadata, media_body=media,
+                                      fields='id').execute()
+        print(F'File ID: {file.get("id")}')
+        print("Uploaded Resume Successfully")
+        return file.get('id')
+
+    except HttpError as error:
+        print(F'An error occurred: {error}')
+        file = None
 
 
 if __name__ == "__main__":

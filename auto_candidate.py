@@ -109,7 +109,7 @@ class License(BaseModel):
     location: str
 
 
-def upload_basic(title, parents, path, filetype):
+def upload_basic(title, parents, path):
     """Insert new file.
     Returns : Id's of the file uploaded
 
@@ -123,26 +123,21 @@ def upload_basic(title, parents, path, filetype):
         file_metadata = {'name': title, 'parents': parents}
 
         # Determine if file is pdf or docx and set media accoordingly
-        file_extension = pathlib.Path('my_file.txt').suffix.strip()
+        file_extension = pathlib.Path(path).suffix.strip()
+        media = media = MediaFileUpload(
+            path, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document') if file_extension == ".docx" else MediaFileUpload(
+            path, mimetype='application/pdf')
 
-        if file_extension == ".docx":
-            media = MediaFileUpload(
-                path, mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
-        else:
-            media = MediaFileUpload(
-                path, mimetype='application/pdf')
-
-        # pylint: disable=maybe-no-member
+        # Execute upload
         file = service.files().create(body=file_metadata, media_body=media,
                                       fields='id').execute()
         print(F'File ID: {file.get("id")}')
+        print("Uploaded Resume Successfully")
+        return file.get('id')
 
     except HttpError as error:
         print(F'An error occurred: {error}')
         file = None
-
-    print("Uploaded Resume")
-    return file.get('id')
 
 
 def update_spreadsheet(candidateData: candidateData, data, SPREADSHEET_ID, SHEET_ID, folder_link):
@@ -726,18 +721,21 @@ def cleanupdate(date: str, source: str):
 
 
 def parse_resume(data: candidateData):
+
     # Only do this for Indeed when a resume is present
     if data.source != "Indeed" or (not data.hasResume):
         return
 
     # Get the directory of target file (Latest in folder )
-    list_of_files = glob.glob("N:\Downloads2\*.pdf")  # PC Dir
 
     # PC Dir
-    directory = max(list_of_files, key=os.path.getctime)
-
+    # list_of_files = glob.glob("N:\Downloads2\*")
     # Mac Dir (Testing)
-    # directory = '/resumes/*.pdf'
+    list_of_files = glob.glob(
+        "/Users/victorrinaldi/Desktop/auto_candidate/resumes/*")
+
+    # Target the newest file in the folder
+    directory = max(list_of_files, key=os.path.getctime)
 
     # Define regex Patterns
     phone_regex = re.compile(r"\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}")
@@ -953,9 +951,11 @@ class SesMailSender:
             write_json({"name": name, "job": category,
                         "email": email, "response_code": response, 'body': text})
 
-            print("Successfully sent email to: {} -> ".format(name, destination.tos[0]))
+            print(
+                "Successfully sent email to: {} -> ".format(name, destination.tos[0]))
         except ClientError as err:
-            print("Invalid email destination for: {} -> {}".format(name, destination.tos[0]))
+            print(
+                "Invalid email destination for: {} -> {}".format(name, destination.tos[0]))
             write_json({"name": name, "job": category,
                         "email": email, "response_code": str(err.response)})
         else:
