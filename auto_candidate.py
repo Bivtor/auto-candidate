@@ -729,10 +729,9 @@ def parse_resume(data: candidateData):
     # Get the directory of target file (Latest in folder )
 
     # PC Dir
-    # list_of_files = glob.glob("N:\Downloads2\*")
+    list_of_files = glob.glob("N:\Downloads2\*")
     # Mac Dir (Testing)
-    list_of_files = glob.glob(
-        "/Users/victorrinaldi/Desktop/auto_candidate/resumes/*")
+    # list_of_files = glob.glob("/Users/victorrinaldi/Desktop/auto_candidate/resumes/*")
 
     # Target the newest file in the folder
     directory = max(list_of_files, key=os.path.getctime)
