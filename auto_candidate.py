@@ -953,9 +953,9 @@ class SesMailSender:
             write_json({"name": name, "job": category,
                         "email": email, "response_code": response, 'body': text})
 
-            print("Successfully sent email to: {} -> ".format(name, email))
+            print("Successfully sent email to: {} -> ".format(name, destination.tos[0]))
         except ClientError as err:
-            print("Invalid email destination for: {} -> {}".format(name, destination.tos))
+            print("Invalid email destination for: {} -> {}".format(name, destination.tos[0]))
             write_json({"name": name, "job": category,
                         "email": email, "response_code": str(err.response)})
         else:
@@ -1059,7 +1059,7 @@ def sendmailtexts(data: Data):
                                     "start": {
                                         "sheetId": data.sheetId,
                                         "rowIndex": row-1,
-                                        "columnIndex": data.contactedCol
+                                        "columnIndex": contactedCol
                                     }
                                 }
                             },
@@ -1092,7 +1092,7 @@ def sendmailtexts(data: Data):
                     print("\nChose not to message {}".format(
                         values[nameCol]))
             except IndexError as err:
-                print("Finished Texting and Emailing Candidaes")
+                print("\nFinished Texting and Emailing Candidaes")
                 break
     except HttpError as err:
         print(err)
