@@ -962,6 +962,26 @@ class SesMailSender:
 
 
 def sendmailtexts(data: Data):
+    """
+    For loop which decides to or not to send a text and email to the candidate
+    the text and email are both call seperate functions which catch errors in formatting
+    """
+
+    """"
+    Methods for deciding if we should send the text
+    """
+        # Decide whether or not to send a text/email Function
+    def shouldSendMessage(data: Data, values: dict) -> bool:
+        if (values[spokenToCol] == 'N' or values[spokenToCol] == ''):
+            return True
+        else:
+            return False
+    def shouldSendMessageXs(data: Data, values: dict) -> bool:
+        if (values[massText].lower() == 'x' or values[massText] != ''):
+            return True
+        else:
+            return False
+        
     try:
         # Create boto3 Client
         client = boto3.client('ses', region_name="us-west-1", aws_access_key_id=os.getenv(
@@ -993,6 +1013,7 @@ def sendmailtexts(data: Data):
                 contactedCol = data.positions.index("Contacted")
                 timesContactedCol = data.positions.index("Times Contacted")
                 spokenToCol = data.positions.index("Spoken To")
+                massText = data.positions.index("Mass Text")
 
                 # Find max length of the row insertion we will need
                 max_length_row = max(nameCol, phoneCol, emailCol,
@@ -1010,17 +1031,12 @@ def sendmailtexts(data: Data):
                 body = data.message.replace(
                     "[candidate_name]", name)  # This was broken before
 
-                # Decide whether or not to send a text/email Function
-                def shouldSendMessage(data: Data, values: dict) -> bool:
-                    if (values[spokenToCol] == 'N' or values[spokenToCol] == ''):
-                        return True
-                    else:
-                        return False
+
 
                 # If we decide to send a message
-                if shouldSendMessage(data, values):
-                    values[spokenToCol] = 'N'
-                    values[contactedCol] = 'T/'
+                if shouldSendMessageXs(data, values):
+
+                    # Update the times we have sent a message to this person
                     if values[timesContactedCol] == '':
 
                         values[timesContactedCol] = '1'
@@ -1028,16 +1044,13 @@ def sendmailtexts(data: Data):
                         values[timesContactedCol] = str(
                             int(values[timesContactedCol])+1)
 
-                    # TODO FIX THIS PART
                     # Send a text to the name / phone given
                     sendTwilioText(name=name, number=number,
                                    body=body)
-                    # print("Sent message to {} with number: {}".format(name, number))
 
                     # Send an email to the given info
                     sendAWSEmail(name=name, email=email, body=body,
                                  category=data.category, mailsender=mailsender)
-                    # print("Sent EMAIL to {} with number: {}".format(name, email))
 
                     # Format for updating the cells for times contacted in Google Sheets
                     updatedata = {
@@ -1084,6 +1097,7 @@ def sendmailtexts(data: Data):
                             },
                         ]
                     }
+                   
                     # Send update
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
