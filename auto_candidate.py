@@ -38,7 +38,8 @@ load_dotenv()
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive',
           'https://www.googleapis.com/auth/documents',
-          'https://www.googleapis.com/auth/spreadsheets']
+          'https://www.googleapis.com/auth/spreadsheets',
+          'https://www.googleapis.com/auth/gmail.readonly']
 
 """
 Creates Credentials to be used globally
@@ -942,18 +943,19 @@ def sendmailtexts(data: Data):
     """"
     Methods for deciding if we should send the text
     """
-        # Decide whether or not to send a text/email Function
+    # Decide whether or not to send a text/email Function
     def shouldSendMessage(data: Data, values: dict) -> bool:
         if (values[spokenToCol] == 'N' or values[spokenToCol] == ''):
             return True
         else:
             return False
+
     def shouldSendMessageXs(data: Data, values: dict) -> bool:
         if (values[massText].lower() == 'x' or values[massText] != ''):
             return True
         else:
             return False
-        
+
     try:
         # Create boto3 Client
         client = boto3.client('ses', region_name="us-west-1", aws_access_key_id=os.getenv(
@@ -1002,8 +1004,6 @@ def sendmailtexts(data: Data):
                 email = values[emailCol]
                 body = data.message.replace(
                     "[candidate_name]", name)  # This was broken before
-
-
 
                 # If we decide to send a message
                 if shouldSendMessageXs(data, values):
@@ -1069,7 +1069,7 @@ def sendmailtexts(data: Data):
                             },
                         ]
                     }
-                   
+
                     # Send update
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
