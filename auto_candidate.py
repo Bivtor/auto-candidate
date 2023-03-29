@@ -1,5 +1,3 @@
-
-
 from twilio.rest import Client
 from dotenv import load_dotenv
 from pydantic import BaseModel
@@ -49,18 +47,18 @@ creds = None
 # The file token.json stores the user's access and refresh tokens, and is
 # created automatically when the authorization flow completes for the first
 # time.
-if os.path.exists('token.json'):
-    creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+if os.path.exists('creds/token.json'):
+    creds = Credentials.from_authorized_user_file('creds/token.json', SCOPES)
 # If there are no (valid) credentials available, let the user log in.
 if not creds or not creds.valid:
     if creds and creds.expired and creds.refresh_token:
         creds.refresh(Request())
     else:
         flow = InstalledAppFlow.from_client_secrets_file(
-            'credentials2.json', SCOPES)
+            'creds/credentials.json', SCOPES)
         creds = flow.run_local_server(port=0)
     # Save the credentials for the next run
-    with open('token.json', 'w') as token:
+    with open('creds/token.json', 'w') as token:
         token.write(creds.to_json())
 
 # Gabe Sheet ID
@@ -857,32 +855,6 @@ def getLicenseInfo(name, depth) -> License:
     return licenseinfolist
 
 
-def find_duplicates(creds, spreadsheet_id, sheet_name):
-    try:
-        service = build('sheets', 'v4', credentials=creds)
-
-        range = sheet_name + "!A:A"
-        # Call the Sheets API
-        result = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id,
-                                                     range=range).execute()
-        values = result.get('values', [])
-        duplicates = set()
-        dupes = list()
-        for i in values:
-            i = str(i)
-            if i in duplicates:
-                dupes.append(i)
-            else:
-                duplicates.add(i)
-
-        print(dupes)
-        return dupes
-
-    except HttpError as err:
-        print(err)
-    print("got all names")
-
-
 class SesDestination:
     """Contains data about an email destination."""
 
@@ -1235,8 +1207,26 @@ def curateLicenseList(licenselist: list[License], candidateData: candidateData):
             return  # Break
 
 
+def get_names(spreadsheet_id, sheet_name):
+    try:
+        service = build('sheets', 'v4', credentials=creds)
+        our_range = sheet_name + "!A:A"
+
+        # Call the Sheets API
+        result = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id,
+                                                     range=our_range).execute()
+        # Get values array
+        values = result.get('values', [])
+
+        return values
+
+    except HttpError as err:
+        print(err)
+    print("got all names")
+
+
 def main():
-    pass
+    get_names(SPREADSHEET_ID, "Therapist")
 
 
 if __name__ == '__main__':
