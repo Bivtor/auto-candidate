@@ -216,38 +216,38 @@ def process_message(user_id, history_id):
                 name_map: dict = json.load(f)
 
                 # If the job_title exists in our map of titles
-                if job_title in name_map:
+      #              if job_title in name_map:
 
                     # Deterine which category the candidate should be added to
-                    sheet_destination = name_map[job_title]
+                sheet_destination = "Therapist"# name_map[job_title] "Therapist"
 
-                    # Get entire column 1 (names column)
-                    names_list = get_names(
-                        spreadsheet_id=SPREADSHEET_ID, sheet_name=sheet_destination)
+                # Get entire column 1 (names column)
+                names_list = get_names(
+                    spreadsheet_id=SPREADSHEET_ID, sheet_name=sheet_destination)
 
-                    # Check if the candidate name is already in the spreadsheet
-                    if candidate_name in names_list:
-                        print("Candidate already in database")
-                        return 200
+                # Check if the candidate name is already in the spreadsheet
+                if candidate_name in names_list:
+                    print("Candidate already in database")
+                    return 200
 
-                    # If Candidate NOT in spreadsheet -> Add the Candidate to the spreadsheet
-                    candidate_url = ""  # TODO Remove this
+                # If Candidate NOT in spreadsheet -> Add the Candidate to the spreadsheet
+                candidate_url = ""  # TODO Remove this
 
-                    # Call clone of submit data (checks password, isRunning, columnVariables, etc)
+                # Call clone of submit data (checks password, isRunning, columnVariables, etc)
 
-                    can_data = Data(action='Add', category=sheet_destination,
-                                    link=candidate_url, password='gabeandcara2023', message="")
+                can_data = Data(action='Add', category=sheet_destination,
+                                link=candidate_url, password='gabeandcara2023', message="")
 
-                    print("Adding Candidate...")
-                    submitdata_clone(data=can_data)
+                print("Adding Candidate...")
+                submitdata_clone(data=can_data)
 
-                    # TODO Get the last line of the spreadsheet
-                    # TODO Call the send text function for only the last line of the spreadsheet
-                else:
-                    print("Could not find job type -> google sheet association")
+                # TODO Get the last line of the spreadsheet
+                # TODO Call the send text function for only the last line of the spreadsheet
+            # else:
+            #     print("Could not find job type -> google sheet association")
 
-        else:
-            print('No matching URL found in the body.')
+        # else:
+        #     print('No matching URL found in the body.')
 
     except HttpError as error:
         print(f'An error occurred: {error}')
