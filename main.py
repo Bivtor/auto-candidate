@@ -211,19 +211,22 @@ def process_message(user_id, history_id):
             job_title = job_title[:job_title.find("'")].lower().strip()
             print("Job title", job_title)
 
+            # TODO Check if candidate already exists
+            # if prevent_duplicates(inputname=candidate_name):
+            #     return 200
+
             # Load the pre-determined associations of job titles -> spreadsheet name
             with open('name_map.json') as f:
                 name_map: dict = json.load(f)
 
-                # If the job_title exists in our map of titles
-      #              if job_title in name_map:
+                # name_map[job_title] "Therapist"
+                if job_title in name_map:
+                    sheet_destination = name_map[job_title]
+                else:
+                    sheet_destination = "Pre-screening"
 
-                    # Deterine which category the candidate should be added to
-                sheet_destination = "Therapist"# name_map[job_title] "Therapist"
-
-                # Get entire column 1 (names column)
                 names_list = get_names(
-                    spreadsheet_id=SPREADSHEET_ID, sheet_name=sheet_destination)
+                    sheet_name=sheet_destination, spreadsheet_id=SPREADSHEET_ID)
 
                 # Check if the candidate name is already in the spreadsheet
                 if candidate_name in names_list:
@@ -231,14 +234,13 @@ def process_message(user_id, history_id):
                     return 200
 
                 # If Candidate NOT in spreadsheet -> Add the Candidate to the spreadsheet
-                candidate_url = ""  # TODO Remove this
-
                 # Call clone of submit data (checks password, isRunning, columnVariables, etc)
-
                 can_data = Data(action='Add', category=sheet_destination,
                                 link=candidate_url, password='gabeandcara2023', message="")
 
                 print("Adding Candidate...")
+                # TODO def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
+                # TODO Alert Victor of additon
                 submitdata_clone(data=can_data)
 
                 # TODO Get the last line of the spreadsheet
@@ -251,6 +253,29 @@ def process_message(user_id, history_id):
 
     except HttpError as error:
         print(f'An error occurred: {error}')
+
+
+def prevent_duplicates(inputname: str):
+    # Path to the JSON file
+    json_file_path = "/names.json"
+
+    # Check if the file exists
+    if os.path.isfile(json_file_path):
+        # File exists, load the JSON data
+        with open(json_file_path, "r") as json_file:
+            data = json.load(json_file)
+            # Check if the 'names' key exists and contains a string
+            if inputname in data['names']:
+                return True
+            else:
+                return False
+    else:
+        # File does not exist, create the JSON file and add the names from the database
+        # TODO: Add code to populate the 'names' list
+
+        # Save the JSON data to the file
+        with open(json_file_path, "w") as json_file:
+            json.dump(data, json_file)
 
 
 @app.post('/sendtexts')
