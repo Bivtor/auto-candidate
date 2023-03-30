@@ -59,6 +59,10 @@ def submitdata(data: Data):
     json_check = json.load(f)
     f.close()
 
+    # Check Password
+    if data.password != os.environ['DEFAULT_PASSWORD']:
+        return ResponseModel(response="Incorrect Password")
+
     # If there is a current process, return checkModel with its"not_working_response"
     if json_check['isWorking']:
         return ResponseModel(response="Operation Ongoing")
@@ -67,10 +71,6 @@ def submitdata(data: Data):
     json_check['isWorking'] = True
     with open("isWorking.json", "w") as outfile:
         json.dump(json_check, outfile)
-
-    # Check Password
-    if data.password != os.environ['DEFAULT_PASSWORD']:
-        return "Incorrect Password"
 
     # Check Validity
     checkSheetNameValidity(data.category, data)
