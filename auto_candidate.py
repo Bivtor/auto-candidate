@@ -945,16 +945,36 @@ def sendmailtexts(data: Data):
     """
     # Decide whether or not to send a text/email Function
     def shouldSendMessage(data: Data, values: dict) -> bool:
-        if (values[spokenToCol] == 'N' or values[spokenToCol] == ''):
+        """
+        Send a message if the candidate has an if the candidate has not been contacted (denoted with N or '') 
+        in the 'spoken to' column
+        """
+        if (values[spokenToCol].lower() == 'n' or values[spokenToCol] == ''):
             return True
         else:
             return False
 
     def shouldSendMessageXs(data: Data, values: dict) -> bool:
+        """
+        Send a message if the candidate has an X next to their name in the
+        'mass text' column
+        """
         if (values[massText].lower() == 'x' or values[massText] != ''):
             return True
         else:
             return False
+
+    def shouldSendMessage_N_License(data: Data, values: dict) -> bool:
+        """
+        Send a message if the candidate has an N or '' in the 'spoken to' column
+        AND if the license of the candidate is NOT 'LMFT' 
+        """
+        # If we have not contacted the person (denoted n or '')
+        if (values[spokenToCol].lower() == 'n' or values[spokenToCol] == ''):
+            # If the person is NOT a licensed therapist
+            if ("lmft" not in values[licenseCol].lower() and "licensed marriage and family therapist" not in values[licenseCol].lower()):
+                return True
+        return False
 
     try:
         # Create boto3 Client
@@ -988,6 +1008,7 @@ def sendmailtexts(data: Data):
                 timesContactedCol = data.positions.index("Times Contacted")
                 spokenToCol = data.positions.index("Spoken To")
                 massText = data.positions.index("Mass Text")
+                licenseCol = data.positions.index("License/Cert")
 
                 # Find max length of the row insertion we will need
                 max_length_row = max(nameCol, phoneCol, emailCol,
@@ -1006,7 +1027,7 @@ def sendmailtexts(data: Data):
                     "[candidate_name]", name)  # This was broken before
 
                 # If we decide to send a message
-                if shouldSendMessageXs(data, values):
+                if shouldSendMessage_N_License(data, values):
 
                     # Update the times we have sent a message to this person
                     if values[timesContactedCol] == '':
