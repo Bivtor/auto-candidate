@@ -42,10 +42,16 @@ def openstring(data: Data):
 def createUsers(candidateData: candidateData):
     f = open('settings.json')
     data = json.load(f)
+    # Add candidate with saved data
     create_candidate(candidateData, data)
     f.close()
-    print(candidateData.name)
-    return {"Success"}
+    print(f'{time.now()} : Created profile for {candidateData.name}')
+
+    # Update Candidate Existence
+    updateCandidateExistence(
+        SPREADSHEET_ID, sheet_name=data['category'], file_path=NAMESFILEPATH)
+    print(f'{time.now()} : Updated local json file for {candidateData.name}')
+    return {"message": "Success"}
 
 
 class ResponseModel(BaseModel):
@@ -171,6 +177,7 @@ def submitdata_clone(data: Data):
 
 
 def process_message(user_id, history_id):
+    print(F"{time.now()} : Processing Message")
     try:
         service = build('gmail', 'v1', credentials=creds)
 
@@ -196,55 +203,43 @@ def process_message(user_id, history_id):
         # Check if email contains text we want
         if match:
             candidate_url = match.group(0)
-            print(f'Found URL: {candidate_url}')
+            print(f'{time.now()} : Found URL : {candidate_url}')
 
             # Get candidate name
             loc = raw_message.find("New Candidate:")
             candidate_name = raw_message[loc+15:loc+100]
             candidate_name = candidate_name[:candidate_name.find(
                 "for")].strip()
-            print("Candidate name", candidate_name)
+            print(f'{time.now()} : Found Name : {candidate_name}')
 
             # Get job title
             loc = raw_message.find("for '")
             job_title = raw_message[loc+5: loc+100]
             job_title = job_title[:job_title.find("'")].lower().strip()
-            print("Job title", job_title)
+            print(f'{time.now()} : Found Job Title : {job_title}')
 
-            # TODO Check if candidate already exists
-            # if prevent_duplicates(inputname=candidate_name):
-            #     return 200
+            # set sheet destination (eg Nurse, Therapist, etc)
+            sheet_destination = getCandidateJob(job_title=job_title)
 
-            # Load the pre-determined associations of job titles -> spreadsheet name
-            with open('name_map.json') as f:
-                name_map: dict = json.load(f)
+            # Check if candidate already exists
+            if checkCandidateExistence(SPREADSHEET_ID, sheet_destination, candidate_name):
+                return 200
 
-                # name_map[job_title] "Therapist"
-                if job_title in name_map:
-                    sheet_destination = name_map[job_title]
-                else:
-                    sheet_destination = "Pre-screening"
+            # We know the candidate is not in the spreadsheet, add the candidate (updates json at end of function)
 
-                names_list = get_names(
-                    sheet_name=sheet_destination, spreadsheet_id=SPREADSHEET_ID)
+            # Call clone of submit data (checks password, isRunning, columnVariables, etc)
+            can_data = Data(action='Add', category=sheet_destination,
+                            link=candidate_url, password='gabeandcara2023', message="")
 
-                # Check if the candidate name is already in the spreadsheet
-                if candidate_name in names_list:
-                    print("Candidate already in database")
-                    return 200
+            submitdata_clone(data=can_data)  # Add Candidate
 
-                # If Candidate NOT in spreadsheet -> Add the Candidate to the spreadsheet
-                # Call clone of submit data (checks password, isRunning, columnVariables, etc)
-                can_data = Data(action='Add', category=sheet_destination,
-                                link=candidate_url, password='gabeandcara2023', message="")
+            print(f'{time.now()} : Adding candidate to : {sheet_destination}')
 
-                print("Adding Candidate...")
-                # TODO def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
-                # TODO Alert Victor of additon
-                submitdata_clone(data=can_data)
+            # TODO def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
+            # TODO Alert Victor of additon
 
-                # TODO Get the last line of the spreadsheet
-                # TODO Call the send text function for only the last line of the spreadsheet
+            # TODO Get the last line of the spreadsheet
+            # TODO Call the send text function for only the last line of the spreadsheet
             # else:
             #     print("Could not find job type -> google sheet association")
 

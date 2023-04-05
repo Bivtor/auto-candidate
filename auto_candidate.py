@@ -64,6 +64,8 @@ if not creds or not creds.valid:
 
 # Gabe Sheet ID
 SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
+NAMESFILEPATH = 'name_list.json'
+JOBMAPFILEPATH = 'job_map.json'
 
 
 class Data(BaseModel):
@@ -1242,26 +1244,115 @@ def curateLicenseList(licenselist: list[License], candidateData: candidateData):
             return  # Break
 
 
-def get_names(spreadsheet_id, sheet_name):
+def getCandidateJob(job_title):
+    file_path = JOBMAPFILEPATH
+
+    # Load the data map
+    with open(file_path, 'r') as f:
+        data = json.load(f)
+        closest_key = find_closest_string(
+            job_title.lower().strip(), data.keys())
+        return data[closest_key]
+
+
+def checkCandidateExistence(spreadsheet_id, sheet_name, name, file_path) -> True:
+    """
+    Check if the candidate already exists in the spreadsheet, in the spreadsheet, we only call this function if the top 
+    email is a notification of a new candidate, and we use this function to prevent unnecessary calls to the API by using a local
+    storage of the names, and only calling the API if we have to (ie when the job sheet does not exist locally)
+
+    We update the local file every time a new request is made, so updates are only called from here if the sheet does not exist
+    """
+
+    # Check if file exists
+    if os.path.isfile(file_path):
+        # If it exists open it
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+
+            # Check if the sheet_name exists in the json
+            if sheet_name in data:
+                if name in data[sheet_name]:  # Return True if we find the name in the file
+                    return True
+                else:
+                    return False
+            # Update the spreadsheet if we can't find the name the sheet_name
+            else:
+                updateCandidateExistence(
+                    spreadsheet_id=spreadsheet_id, sheet_name=sheet_name, file_path=file_path)
+                with open(file_path, 'r') as f:
+                    data = json.load(f)
+                    # Try to find the name again
+                    # Return True if we find the name in the file
+                    if name in data[sheet_name]:
+                        return True
+                    else:
+                        return False
+    # If file does not exist
+    else:
+        # Create file
+        with open(file_path, 'w') as f:
+            json.dump({}, f)
+
+        # Update the file
+        updateCandidateExistence(
+            spreadsheet_id=spreadsheet_id, sheet_name=sheet_name, file_path=file_path)
+
+        # Try to find the name again
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+            if name in data[sheet_name]:  # Return True if we find the name in the file
+                return True
+            else:
+                return False
+
+
+def updateCandidateExistence(spreadsheet_id, sheet_name, file_path):
     try:
+        # Authorize with Google Sheets API
         service = build('sheets', 'v4', credentials=creds)
-        our_range = sheet_name + "!A:A"
 
-        # Call the Sheets API
-        result = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id,
-                                                     range=our_range).execute()
-        # Get values array
-        values = result.get('values', [])
+        # Get the values in the column
+        RANGE = f"{sheet_name}!A:A"
 
-        return values
+        # Execute request
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id, range=RANGE).execute()
 
-    except HttpError as err:
-        print(err)
-    print("got all names")
+        # Get values
+        column_values = result.get("values", [])
+
+        # Remove arbirary list within list
+        column_values = [val for sublist in column_values for val in sublist]
+
+        # Update the value in the json file
+        with open(file_path, "r") as f:
+            data = json.load(f)
+
+        data[sheet_name] = column_values
+
+        with open(file_path, 'w') as f:
+            json.dump(data, f, indent=4)
+
+    except HttpError as error:
+        print(F'An error occurred: {error}')
+
+
+def find_closest_string(query, string_list):
+    max_similarity = 0
+    closest_string = None
+    for string in string_list:
+        similarity = fuzz.ratio(query, string)
+        if similarity > max_similarity:
+            max_similarity = similarity
+            closest_string = string
+    if max_similarity < .3:
+        closest_string = "Pre-screening"
+    return closest_string
 
 
 def main():
-    get_names(SPREADSHEET_ID, "Therapist")
+    pass
 
 
 if __name__ == '__main__':

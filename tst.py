@@ -1,18 +1,15 @@
 
+import sys
 import os
-from auto_candidate import *
-import os.path
-import json
-from pydantic import BaseModel
-from main import *
-
-from pydantic import BaseModel
-from auto_candidate import creds
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+from pydantic import BaseModel
+import json
+import os.path
+from auto_candidate import *
 
 
 def publish():
@@ -100,11 +97,11 @@ def test_regex(file_path):
 
 
 def add_mail_candidate(url: str):
+
     d = Data()
 
 
-def get_spreadsheet_names():
-
+def get_spreadsheet_names(sheet_id, sheet_name):
     pass
 
 
@@ -112,9 +109,39 @@ class MailData(BaseModel):
     message: dict
 
 
+def converttotxt(fp):
+    with open(fp, 'rb') as f:
+        # Create a PDF reader object
+        pdf_reader = PyPDF2.PdfReader(f)
+
+        # Get the number of pages in the PDF file
+        num_pages = len(pdf_reader.pages)
+
+        text = ''
+        # Loop through all the pages and extract the text
+        for page in range(num_pages):
+            # Get the page object
+            pdf_page = pdf_reader.pages[page]
+            # Extract the text from the page
+            page_text = pdf_page.extract_text()
+            # Add the page text to the overall text variable
+            text += page_text
+
+        # Open a new text file in write mode
+        txt_file = open('resume_output.txt', 'w')
+
+        # Write the extracted text to the text file
+        txt_file.write(text)
+
+        # Close the text file
+        txt_file.close()
+
+
 def main():
     # publish()
-    test_regex("/Users/victorrinaldi/Desktop/auto_candidate/test.txt")
+    converttotxt('resume.pdf')
+    # get_spreadsheet_names(SPREADSHEET_ID, "Therapist")
+    # test_regex("/Users/victorrinaldi/Desktop/auto_candidate/test.txt")
 
 
 if __name__ == "__main__":
