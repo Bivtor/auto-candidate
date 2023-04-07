@@ -45,12 +45,12 @@ def createUsers(candidateData: candidateData):
     # Add candidate with saved data
     create_candidate(candidateData, data)
     f.close()
-    print(f'{time.now()} : Created profile for {candidateData.name}')
+    print(f'{time.time()} : Created profile for {candidateData.name}')
 
     # Update Candidate Existence
     updateCandidateExistence(
         SPREADSHEET_ID, sheet_name=data['category'], file_path=NAMESFILEPATH)
-    print(f'{time.now()} : Updated local json file for {candidateData.name}')
+    print(f'{time.time()} : Updated local json file for {candidateData.name}')
     return {"message": "Success"}
 
 
@@ -177,7 +177,7 @@ def submitdata_clone(data: Data):
 
 
 def process_message(user_id, history_id):
-    print(F"{time.now()} : Processing Message")
+    print(F"{time.time()} : Processing Message")
     try:
         service = build('gmail', 'v1', credentials=creds)
 
@@ -195,28 +195,35 @@ def process_message(user_id, history_id):
         # Decode raw_data
         raw_message = base64.urlsafe_b64decode(
             message['raw'].encode('utf-8')).decode('utf-8')
-
+        
+        # Testing
+        def write_to_file(text, filename):
+            with open(filename, 'w') as f:
+                f.write(text)
+        write_to_file(raw_message,'output.txt')
+        
         # Check if the text contains a URL in the format "https://www.ziprecruiter.com/contact/response/*/*"
         pattern = r'https://www\.ziprecruiter\.com/contact/response/[^/]*/[^/]*\?'
         match = re.search(pattern, raw_message)
 
         # Check if email contains text we want
+        print(match)
         if match:
             candidate_url = match.group(0)
-            print(f'{time.now()} : Found URL : {candidate_url}')
+            print(f'{time.time()} : Found URL : {candidate_url}')
 
             # Get candidate name
             loc = raw_message.find("New Candidate:")
             candidate_name = raw_message[loc+15:loc+100]
             candidate_name = candidate_name[:candidate_name.find(
                 "for")].strip()
-            print(f'{time.now()} : Found Name : {candidate_name}')
+            print(f'{time.time()} : Found Name : {candidate_name}')
 
             # Get job title
             loc = raw_message.find("for '")
             job_title = raw_message[loc+5: loc+100]
             job_title = job_title[:job_title.find("'")].lower().strip()
-            print(f'{time.now()} : Found Job Title : {job_title}')
+            print(f'{time.time()} : Found Job Title : {job_title}')
 
             # set sheet destination (eg Nurse, Therapist, etc)
             sheet_destination = getCandidateJob(job_title=job_title)
@@ -233,7 +240,7 @@ def process_message(user_id, history_id):
 
             submitdata_clone(data=can_data)  # Add Candidate
 
-            print(f'{time.now()} : Adding candidate to : {sheet_destination}')
+            print(f'{time.time()} : Adding candidate to : {sheet_destination}')
 
             # TODO def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
             # TODO Alert Victor of additon
@@ -241,10 +248,10 @@ def process_message(user_id, history_id):
             # TODO Get the last line of the spreadsheet
             # TODO Call the send text function for only the last line of the spreadsheet
             # else:
-            #     print("Could not find job type -> google sheet association")
+                # print("Could not find job type -> google sheet association")
 
-        # else:
-        #     print('No matching URL found in the body.')
+        else:
+            print(f'{time.time()} : No matching URL found in the body.')
 
     except HttpError as error:
         print(f'An error occurred: {error}')

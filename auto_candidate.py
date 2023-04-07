@@ -5,6 +5,7 @@ from datetime import date, datetime
 from fuzzywuzzy import fuzz
 
 import pathlib
+import time
 import docx
 import time
 import PyPDF2
