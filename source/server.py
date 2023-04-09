@@ -11,12 +11,15 @@ from dotenv import load_dotenv
 from hashlib import sha256
 from auto_candidate import logger
 
+app = FastAPI()
+
+
 # Log Server start
 logger.info('Started Server')
 
+# Load environmental variables
 load_dotenv()
 
-app = FastAPI()
 
 origins = [
     "http://localhost",

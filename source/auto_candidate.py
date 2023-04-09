@@ -155,12 +155,12 @@ def upload_basic(title, parents, path):
         # Execute upload
         file = service.files().create(body=file_metadata, media_body=media,
                                       fields='id').execute()
-        print(F'File ID: {file.get("id")}')
-        print("Uploaded Resume Successfully")
+        logger.info(f'File ID: {file.get("id")}')
+        logger.info("Uploaded Resume Successfully")
         return file.get('id')
 
     except HttpError as error:
-        print(F'An error occurred: {error}')
+        logger.info(F'An error occurred: {error}')
         file = None
 
 
@@ -230,10 +230,10 @@ def update_spreadsheet(candidateData: candidateData, data, SPREADSHEET_ID, SHEET
         request = service.spreadsheets().batchUpdate(spreadsheetId=SPREADSHEET_ID,
                                                      body=requestdata)
         response = request.execute()
-        print("Updated Spreadsheet")
+        logger.info("Updated Spreadsheet")
 
     except HttpError as err:
-        print(err)
+        logger.error(err)
 
 
 def create_file_general(data, parents, title):
@@ -249,7 +249,7 @@ def create_file_general(data, parents, title):
         }
         file = service.files().create(body=file_metadata, fields='id',
                                       ).execute()
-        print(F'Document was created with ID: "{file.get("id")}".')
+        logger.info(F'Document was created with ID: "{file.get("id")}".')
 
         ###########################################
         inputName = "Name: " + data.name + "\n"
@@ -393,12 +393,12 @@ def create_file_general(data, parents, title):
                 documentId=DOCUMENT_ID, body={'requests': requests}).execute()
 
         except HttpError as error:
-            print(F'An error occurred: {error}')
+            logger.error(F'An error occurred: {error}')
             file = None
         # pylint: disable=maybe-no-member
 
     except HttpError as error:
-        print(F'An error occurred: {error}')
+        logger.error(F'An error occurred: {error}')
         file = None
 
 
@@ -415,7 +415,7 @@ def create_file_Therapist(data, parents, title):
         }
         file = service.files().create(body=file_metadata, fields='id',
                                       ).execute()
-        print(F'Document was created with ID: "{file.get("id")}".')
+        logger.info(F'Document was created with ID: {file.get("id")}')
 
         ###########################################
         inputName = "Name: " + data.name + "\n"
@@ -555,18 +555,18 @@ def create_file_Therapist(data, parents, title):
                 documentId=DOCUMENT_ID, body={'requests': requests}).execute()
 
         except HttpError as error:
-            print(F'An error occurred: {error}')
+            logger.error(F'An error occurred: {error}')
             file = None
 
         # pylint: disable=maybe-no-member
 
     except HttpError as error:
-        print(F'An error occurred: {error}')
+        logger.error(F'An error occurred: {error}')
         file = None
 
 
 def create_folder(name: str, parents):
-    """ Create a folder and prints the folder ID
+    """ Create a folder and logs the folder ID
     Returns : Folder Id, Folder Share Link
     """
 
@@ -581,11 +581,10 @@ def create_folder(name: str, parents):
         # pylint: disable=maybe-no-member
         file = service.files().create(body=file_metadata, fields='*',
                                       ).execute()
-        print(
-            F'Folder was created with web view link: "{file.get("webViewLink")}"')
+        logger.info(F'Folder was created with web view link: {file.get("webViewLink")}')
 
     except HttpError as error:
-        print(F'An error occurred: {error}')
+        logger.error(F'An error occurred: {error}')
         file = None
 
     return [file.get('id'), file.get('webViewLink')]
@@ -612,10 +611,10 @@ def create_candidate(candidateData: candidateData, data):
 
     SHEET_ID = data['sheetId']
     parents = [data['folderId']]  # misc default
-    print("Parents are: {} for role: {}".format(parents, category))
+    logger.info("Parents are: {} for role: {}".format(parents, category))
 
     # Add id of new parent so that we are inside the proper file
-    print("Creating {}'s Folder".format(candidateData.name))
+    logger.info("Creating {}'s Folder".format(candidateData.name))
     newParent = create_folder(title, parents)
     folder_id = [newParent[0]]
     folder_link = newParent[1]
@@ -799,8 +798,8 @@ def parse_resume(data: candidateData):
     if len(newEmail) > 0:
         data.email = newEmail[0]
 
-        # Print the results for the current PDF file
-    print("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
+    # Log the results for the current PDF file
+    logger.info("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
 
 
 def getLicenseInfo(name, depth) -> License:
@@ -876,7 +875,7 @@ def getLicenseInfo(name, depth) -> License:
 
         count += 1
 
-    print("Got {} licenses for {}".format(count, name))
+    logger.info("Got {} licenses for {}".format(count, name))
 
     return licenseinfolist
 
@@ -948,10 +947,10 @@ class SesMailSender:
             write_json({"name": name, "job": category,
                         "email": email, "response_code": response, 'body': text})
 
-            print(
+            logger.info(
                 "Successfully sent email to: {} -> ".format(name, destination.tos[0]))
         except ClientError as err:
-            print(
+            logger.error(
                 "Invalid email destination for: {} -> {}".format(name, destination.tos[0]))
             write_json({"name": name, "job": category,
                         "email": email, "response_code": str(err.response)})
@@ -1011,7 +1010,7 @@ def sendmailtexts(data: Data):
 
         # Create AWS Service
         service = build('sheets', 'v4', credentials=creds)
-        print("Attempting to send texts/emails...")
+        logger.info("Attempting to send texts/emails...")
         for row in range(data.start, data.end+1):
             time.sleep(3)  # Wait a little to not use too many requests.
             try:
@@ -1120,13 +1119,13 @@ def sendmailtexts(data: Data):
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
                 else:
-                    print("\nChose not to message {}".format(
+                    logger.info("\nChose not to message {}".format(
                         values[nameCol]))
             except IndexError as err:
-                print("\nFinished Texting and Emailing Candidaes")
+                logger.errorr("\nFinished Texting and Emailing Candidaes")
                 break
     except HttpError as err:
-        print(err)
+        logger.errorr(err)
 
 
 def sendTwilioText(name: str, number: str, body: str):
@@ -1145,12 +1144,12 @@ def sendTwilioText(name: str, number: str, body: str):
         # Update record that text has been sent / status of return
         write_json({"name": name, "body": message.body, "number": number,
                    "date": str(date.today()), "messageID": message.sid, "failed": False})
-        print("\nSent message to {} with number: {}".format(name, number))
+        logger.info("\nSent message to {} with number: {}".format(name, number))
         return True
     except:
         write_json({"name": name, "body": body,
                    "number": number, "messageID": "null", "failed": True})
-        print("\nCould not send message to: {} -> {}".format(
+        logger.info("\nCould not send message to: {} -> {}".format(
             name, number))
         return False
 
@@ -1211,7 +1210,7 @@ def checkSheetNameValidity(category: str, values: Data):
 
         return values
     except HttpError as err:
-        print(err)
+        logger.error(err)
         return values
 
 
