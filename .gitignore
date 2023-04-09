@@ -1,6 +1,7 @@
 __pycache__/
 source/__pycache__/
-
+json_files/isWorking.json
+json_files/settings.json
 name_list.json
 *.env
 *.txt

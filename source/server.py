@@ -48,7 +48,7 @@ def openstring(data: Data):
 
 @app.post('/runfunction')
 def createUsers(candidateData: candidateData):
-    f = open('settings.json')
+    f = open(SETTINGS_PATH)
     data = json.load(f)
     # Add candidate with saved data
     create_candidate(candidateData, data)
@@ -73,10 +73,14 @@ class ResponseModel(BaseModel):
 
 @app.post('/submitdata')
 def submitdata(data: Data):
+
+
     # Check if operation is currently in progress
-    f = open('isWorking.json')
+    f = open('../json_files/isWorking.json')
     json_check = json.load(f)
+    logger.info("Submission Recieved, working")
     f.close()
+
 
     # Check Password
     if data.password != os.environ['DEFAULT_PASSWORD']:
@@ -84,11 +88,12 @@ def submitdata(data: Data):
 
     # If there is a current process, return checkModel with its"not_working_response"
     if json_check['isWorking']:
+        logger.info("Operation is ongoing, returning")
         return ResponseModel(response="Operation Ongoing")
 
     # Set that there is now an operation ongoing since we passed the check
     json_check['isWorking'] = True
-    with open("isWorking.json", "w") as outfile:
+    with open("../json_files/isWorking.json", "w") as outfile:
         json.dump(json_check, outfile)
 
     # Check Validity
@@ -100,7 +105,7 @@ def submitdata(data: Data):
     setColumnVariables(data)
 
     # Write data to a file for use if adding candidates
-    with open("settings.json", "w") as outfile:
+    with open(SETTINGS_PATH, "w") as outfile:
         outfile.write(data.json())
     print("Successfully Set Column Variables")
 
@@ -147,9 +152,9 @@ def createUsers(data: MailData):
 def prevent_duplicates(inputname: str):
 
     # Check if the file exists
-    if os.path.isfile(NAMESFILEPATH):
+    if os.path.isfile(NAMES_PATH):
         # File exists, load the JSON data
-        with open(NAMESFILEPATH, "r") as json_file:
+        with open(NAMES_PATH, "r") as json_file:
             data = json.load(json_file)
             # Check if the 'names' key exists and contains a string
             if inputname in data['names']:
@@ -161,7 +166,7 @@ def prevent_duplicates(inputname: str):
         # TODO: Add code to populate the 'names' list
 
         # Save the JSON data to the file
-        with open(NAMESFILEPATH, "w") as json_file:
+        with open(NAMES_PATH, "w") as json_file:
             json.dump(data, json_file)
 
 
@@ -170,7 +175,7 @@ def prevent_duplicates(inputname: str):
 
 @app.post('/sendtexts')
 def sendtexts():
-    f = open('settings.json')
+    f = open(SETTINGS_PATH)
     data = json.load(f)
     sendmailtexts(data)
     f.close()

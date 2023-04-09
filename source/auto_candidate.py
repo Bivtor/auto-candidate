@@ -86,9 +86,11 @@ if not creds or not creds.valid:
 
 # Gabe Sheet ID
 SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-NAMESFILEPATH = '../json_files/name_list.json'
-JOBMAPFILEPATH = '../json_files/job_map.json'
+NAMES_PATH = '../json_files/name_list.json'
+JOBMAP_PATH = '../json_files/job_map.json'
 DEFAULT_SHEET_DEST ='Pre-screening'
+SETTINGS_PATH = '../json_files/settings.json'
+RECORDS_PATH = '../json_files/records.json'
 
 
 class Data(BaseModel):
@@ -1241,7 +1243,7 @@ def setColumnVariables(inputdata: Data):
             return inputdata
 
 
-def write_json(new_data, filename='records.json'):
+def write_json(new_data, filename=RECORDS_PATH):
     with open(filename, 'r+') as file:
         # First we load existing data into a dict.
         file_data = json.load(file)

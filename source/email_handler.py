@@ -4,7 +4,7 @@ import os
 import json
 import base64
 
-from auto_candidate import DEFAULT_SHEET_DEST,JOBMAPFILEPATH,SPREADSHEET_ID, NAMESFILEPATH,creds, build, HttpError, Data, logger
+from auto_candidate import DEFAULT_SHEET_DEST,JOBMAP_PATH,SPREADSHEET_ID, NAMES_PATH,creds, build, HttpError, Data, SETTINGS_PATH, logger
 from auto_candidate import checkSheetNameValidity, setColumnVariables
 
 def getRawDataInfo(raw_message: str) -> dict:
@@ -63,16 +63,16 @@ def handleJobTitle(job_posting_title: str) -> str:
             logger.info(f'Could not find appropriate sheet desination: {DEFAULT_SHEET_DEST}')
             return DEFAULT_SHEET_DEST
         
-    if os.path.isfile(JOBMAPFILEPATH):
+    if os.path.isfile(JOBMAP_PATH):
         # If it exists open it
-        with open(JOBMAPFILEPATH, 'r') as f:
+        with open(JOBMAP_PATH, 'r') as f:
             data = json.load(f) # Load data
             return checkLocalExistence(data) # Check if the sheet_name exists in the json
     else:
         # If file does not exist, create it
-        logger.info(f'Could not find \'{JOBMAPFILEPATH}\', creating one (This must be filled in by hand)') 
+        logger.info(f'Could not find \'{JOBMAP_PATH}\', creating one (This must be filled in by hand)') 
         
-        with open(JOBMAPFILEPATH, 'w') as f:
+        with open(JOBMAP_PATH, 'w') as f:
             json.dump({}, f)
         
         # Log creation of file and return default
@@ -166,9 +166,9 @@ def checkCandidateExistence(spreadsheet_id, sheet_name, name) -> True:
     """
 
     # Check if file exists
-    if os.path.isfile(NAMESFILEPATH):
+    if os.path.isfile(NAMES_PATH):
         # If it exists open it
-        with open(NAMESFILEPATH, 'r') as f:
+        with open(NAMES_PATH, 'r') as f:
             data = json.load(f)
 
             # Check if the sheet_name exists in the json
@@ -181,7 +181,7 @@ def checkCandidateExistence(spreadsheet_id, sheet_name, name) -> True:
             else:
                 updateCandidateExistence(
                     spreadsheet_id=spreadsheet_id, sheet_name=sheet_name)
-                with open(NAMESFILEPATH, 'r') as f:
+                with open(NAMES_PATH, 'r') as f:
                     data = json.load(f)
                     # Try to find the name again
                     # Return True if we find the name in the file
@@ -192,7 +192,7 @@ def checkCandidateExistence(spreadsheet_id, sheet_name, name) -> True:
     # If file does not exist
     else:
         # Create file
-        with open(NAMESFILEPATH, 'w') as f:
+        with open(NAMES_PATH, 'w') as f:
             json.dump({}, f)
 
         # Update the file
@@ -200,7 +200,7 @@ def checkCandidateExistence(spreadsheet_id, sheet_name, name) -> True:
             spreadsheet_id=spreadsheet_id, sheet_name=sheet_name)
 
         # Try to find the name again
-        with open(NAMESFILEPATH, 'r') as f:
+        with open(NAMES_PATH, 'r') as f:
             data = json.load(f)
             if name in data[sheet_name]:  # Return True if we find the name in the file
                 return True
@@ -227,12 +227,12 @@ def updateCandidateExistence(spreadsheet_id, sheet_name):
         column_values = [val for sublist in column_values for val in sublist]
 
         # Update the value in the json file
-        with open(NAMESFILEPATH, "r") as f:
+        with open(NAMES_PATH, "r") as f:
             data = json.load(f)
 
         data[sheet_name] = column_values
 
-        with open(NAMESFILEPATH, 'w') as f:
+        with open(NAMES_PATH, 'w') as f:
             json.dump(data, f, indent=4)
 
     except HttpError as error:
@@ -269,7 +269,7 @@ def submitdata_clone(data: Data):
     setColumnVariables(data)
 
     # Write data to a file for use if adding candidates
-    with open("settings.json", "w") as outfile:
+    with open(SETTINGS_PATH, "w") as outfile:
         outfile.write(data.json())
     print("Successfully Set Column Variables")
 
