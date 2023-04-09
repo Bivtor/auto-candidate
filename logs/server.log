@@ -1,0 +1,14 @@
+2023-04-09 15:11:03,261 - logger - INFO - Started Server
+2023-04-09 15:13:27,526 - logger - INFO - Started Server
+2023-04-09 15:13:38,602 - logger - INFO - Recieved New Email notification
+2023-04-09 15:13:39,012 - logger - INFO - Checking most recent email
+2023-04-09 15:13:39,013 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 15:13:39,013 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/a941dfa9/b0d75b09?
+2023-04-09 15:13:39,013 - logger - INFO - Got Name : Chau Nguyen-Davis
+2023-04-09 15:13:39,013 - logger - INFO - Got Job Title : group therapist
+2023-04-09 15:13:39,013 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 15:13:39,013 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 15:13:39,014 - logger - INFO - Candidate already exists, returning
+2023-04-09 15:18:23,012 - logger - INFO - Started Server
+2023-04-09 15:19:02,445 - logger - INFO - Started Server
+2023-04-09 15:19:45,257 - logger - INFO - Started Server

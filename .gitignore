@@ -1,7 +1,8 @@
-*.json
+__pycache__/
+source/__pycache__/
+
+name_list.json
 *.env
 *.txt
 tst.py
-__pycache__/*
-__pycache__/auto_candidate.cpython-310.pyc
-resumes
+creds/
