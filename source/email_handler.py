@@ -1,11 +1,15 @@
 import re
-import sys
 import os
 import json
 import base64
+from dotenv import load_dotenv
 
-from auto_candidate import DEFAULT_SHEET_DEST,JOBMAP_PATH,SPREADSHEET_ID, NAMES_PATH,creds, build, HttpError, Data, SETTINGS_PATH, logger
-from auto_candidate import checkSheetNameValidity, setColumnVariables
+
+from auto_candidate import DEFAULT_SHEET_DEST,JOBMAP_PATH,SPREADSHEET_ID, NAMES_PATH,creds, build, HttpError, Data, SETTINGS_PATH, logger, WORKING_PATH, ENV_PATH
+from auto_candidate import checkSheetNameValidity, setColumnVariables, setWorking, checkWorking
+
+load_dotenv(dotenv_path=ENV_PATH)
+
 
 def getRawDataInfo(raw_message: str) -> dict:
     """
@@ -129,7 +133,7 @@ def process_message():
 
         # Call clone of submit data (checks password, isRunning, columnVariables, etc)
         final_candidate_data = Data(action='Add', category=sheet_destination,
-                        link=candidate_url, password='gabeandcara2023', message="")
+                        link=candidate_url, password='g&c2023', message="")
 
         submitdata_clone(data=final_candidate_data)  # Add Candidate
 
@@ -239,31 +243,28 @@ def updateCandidateExistence(spreadsheet_id, sheet_name):
         print(F'An error occurred: {error}')
 
 
+
 def submitdata_clone(data: Data):
     # Check if operation is currently in progress
-    f = open('isWorking.json')
-    json_check = json.load(f)
-    f.close()
-
-    # If there is a current process, return checkModel with its"not_working_response"
-    if json_check['isWorking']:
-        # TODO Indicate that we were working and could not add a candidate
-        print("Could not add candidate")
+    if checkWorking():
+        logger.info("Request made whilst currently working on something else -> Could not proceed")
         return 200
-
+    
     # Set that there is now an operation ongoing since we passed the check
-    json_check['isWorking'] = True
-    with open("isWorking.json", "w") as outfile:
-        json.dump(json_check, outfile)
+    setWorking(True)
 
     # Check Password
     if data.password != os.environ['DEFAULT_PASSWORD']:
-        return "Incorrect Password"
+        logger.info("Wrong Password, returning")
+        setWorking(False)
+        return {"message":"Incorrect Password"}
 
     # Check Validity
     checkSheetNameValidity(data.category, data)
     if ((not data.isFolder) and (not data.isSheet)):
-        return "Folder or Sheet name does not exactly match category"
+        logger.info("Incorrect params in checkSheetNameValidity function, returning")
+        setWorking(False)
+        return {"message":"Folder or Sheet name does not exactly match category"}
 
     # Set Variables
     setColumnVariables(data)
@@ -271,18 +272,17 @@ def submitdata_clone(data: Data):
     # Write data to a file for use if adding candidates
     with open(SETTINGS_PATH, "w") as outfile:
         outfile.write(data.json())
-    print("Successfully Set Column Variables")
+    logger.info("Successfully set Spreadsheet Column Variables")
 
     ################## Passed Pre-Checks ##################
     if data.action == "Add":
+        logger.info("Calling open string function")
         openstring_clone(data)
 
     # Stop Working
-    json_check['isWorking'] = False
-    with open("isWorking.json", "w") as outfile:
-        json.dump(json_check, outfile)
+    setWorking(False)
 
-    # Always return a value
+    # return a value
     return 200
 
 def openstring_clone(data: Data):

@@ -18,7 +18,7 @@ app = FastAPI()
 logger.info('Started Server')
 
 # Load environmental variables
-load_dotenv()
+load_dotenv(dotenv_path=ENV_PATH)
 
 
 origins = [
@@ -40,7 +40,7 @@ class textData(BaseModel):
 
 
 def openstring(data: Data):
-    print("Opening Link: {}".format(data.link))
+    logger.info(f"Opening Link: {data.link}")
     cmd = 'start chrome {}'.format(data.link)  # OPEN chrome
     if os.system(cmd) != 0:
         return False
@@ -73,32 +73,22 @@ class ResponseModel(BaseModel):
 
 @app.post('/submitdata')
 def submitdata(data: Data):
-
-
     # Check if operation is currently in progress
-    f = open('../json_files/isWorking.json')
-    json_check = json.load(f)
-    logger.info("Submission Recieved, working")
-    f.close()
-
+    if checkWorking():
+        logger.info("Operation currently ongoing, cannot process")
 
     # Check Password
     if data.password != os.environ['DEFAULT_PASSWORD']:
         return ResponseModel(response="Incorrect Password")
 
-    # If there is a current process, return checkModel with its"not_working_response"
-    if json_check['isWorking']:
-        logger.info("Operation is ongoing, returning")
-        return ResponseModel(response="Operation Ongoing")
-
     # Set that there is now an operation ongoing since we passed the check
-    json_check['isWorking'] = True
-    with open("../json_files/isWorking.json", "w") as outfile:
-        json.dump(json_check, outfile)
+    setWorking(True)
 
     # Check Validity
     checkSheetNameValidity(data.category, data)
     if ((not data.isFolder) and (not data.isSheet)):
+        logger.info("Folder or Sheet name does not exactly match category")
+        setWorking(False)
         return "Folder or Sheet name does not exactly match category"
 
     # Set Variables
@@ -107,7 +97,7 @@ def submitdata(data: Data):
     # Write data to a file for use if adding candidates
     with open(SETTINGS_PATH, "w") as outfile:
         outfile.write(data.json())
-    print("Successfully Set Column Variables")
+    logger.info("Successfully Set Column Variables")
 
     ################## Passed Pre-Checks ##################
     if data.action == "Text":
@@ -116,9 +106,7 @@ def submitdata(data: Data):
         openstring(data)
 
     # Stop Working
-    json_check['isWorking'] = False
-    with open("isWorking.json", "w") as outfile:
-        json.dump(json_check, outfile)
+    setWorking(False)
 
     return ResponseModel(response="Success")
 

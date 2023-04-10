@@ -33,6 +33,18 @@ import logging
 from botocore.exceptions import ClientError
 from botocore.config import Config
 
+# Globals
+SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
+NAMES_PATH = '../json_files/name_list.json'
+JOBMAP_PATH = '../json_files/job_map.json'
+DEFAULT_SHEET_DEST ='Pre-screening'
+SETTINGS_PATH = '../json_files/settings.json'
+RECORDS_PATH = '../json_files/records.json'
+WORKING_PATH = '../json_files/working.json'
+ENV_PATH = '../.env'
+
+load_dotenv(dotenv_path=ENV_PATH)
+
 # Logging formation
 logger = logging.getLogger('logger')
 
@@ -54,8 +66,6 @@ handler.setFormatter(formatter)
 # add handler to logger
 logger.addHandler(handler)
 
-
-load_dotenv()
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive',
@@ -84,13 +94,6 @@ if not creds or not creds.valid:
     with open('../creds/token.json', 'w') as token:
         token.write(creds.to_json())
 
-# Gabe Sheet ID
-SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-NAMES_PATH = '../json_files/name_list.json'
-JOBMAP_PATH = '../json_files/job_map.json'
-DEFAULT_SHEET_DEST ='Pre-screening'
-SETTINGS_PATH = '../json_files/settings.json'
-RECORDS_PATH = '../json_files/records.json'
 
 
 class Data(BaseModel):
@@ -134,6 +137,19 @@ class License(BaseModel):
     expiration: str
     location: str
 
+def setWorking(b: bool) -> bool:
+    json_check = {}
+    json_check['isWorking'] = b
+    with open(WORKING_PATH, "w") as outfile:
+        logger.info(f"--- working->{b} ---") # Log working status change
+        json.dump(json_check, outfile)
+
+def checkWorking() -> bool:
+    f = open(WORKING_PATH)
+    json_check = json.load(f)
+    f.close()
+    return json_check['isWorking']
+    
 
 def upload_basic(title, parents, path):
     """Insert new file.
