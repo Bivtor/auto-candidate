@@ -5,6 +5,7 @@ from datetime import date, datetime
 from fuzzywuzzy import fuzz
 
 import pathlib
+import time
 import docx
 import time
 import PyPDF2
@@ -32,8 +33,39 @@ import logging
 from botocore.exceptions import ClientError
 from botocore.config import Config
 
-logger = logging.getLogger(__name__)
-load_dotenv()
+# Globals
+SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
+NAMES_PATH = '../json_files/name_list.json'
+JOBMAP_PATH = '../json_files/job_map.json'
+DEFAULT_SHEET_DEST ='Pre-screening'
+SETTINGS_PATH = '../json_files/settings.json'
+RECORDS_PATH = '../json_files/records.json'
+WORKING_PATH = '../json_files/working.json'
+ENV_PATH = '../.env'
+
+load_dotenv(dotenv_path=ENV_PATH)
+
+# Logging formation
+logger = logging.getLogger('logger')
+
+# Set logger level
+logger.setLevel(logging.DEBUG)
+
+# create handler
+handler = logging.FileHandler('../logs/server.log')
+
+# set handler level
+handler.setLevel(logging.DEBUG)
+
+# create formatter
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# set formatter
+handler.setFormatter(formatter)
+
+# add handler to logger
+logger.addHandler(handler)
+
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive',
@@ -48,24 +80,20 @@ creds = None
 # The file token.json stores the user's access and refresh tokens, and is
 # created automatically when the authorization flow completes for the first
 # time.
-if os.path.exists('creds/token.json'):
-    creds = Credentials.from_authorized_user_file('creds/token.json', SCOPES)
+if os.path.exists('../creds/token.json'):
+    creds = Credentials.from_authorized_user_file('../creds/token.json', SCOPES)
 # If there are no (valid) credentials available, let the user log in.
 if not creds or not creds.valid:
     if creds and creds.expired and creds.refresh_token:
         creds.refresh(Request())
     else:
         flow = InstalledAppFlow.from_client_secrets_file(
-            'creds/credentials.json', SCOPES)
+            '../creds/credentials.json', SCOPES)
         creds = flow.run_local_server(port=0)
     # Save the credentials for the next run
-    with open('creds/token.json', 'w') as token:
+    with open('../creds/token.json', 'w') as token:
         token.write(creds.to_json())
 
-# Gabe Sheet ID
-SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-NAMESFILEPATH = 'name_list.json'
-JOBMAPFILEPATH = 'job_map.json'
 
 
 class Data(BaseModel):
@@ -109,6 +137,19 @@ class License(BaseModel):
     expiration: str
     location: str
 
+def setWorking(b: bool) -> bool:
+    json_check = {}
+    json_check['isWorking'] = b
+    with open(WORKING_PATH, "w") as outfile:
+        logger.info(f"--- working->{b} ---") # Log working status change
+        json.dump(json_check, outfile)
+
+def checkWorking() -> bool:
+    f = open(WORKING_PATH)
+    json_check = json.load(f)
+    f.close()
+    return json_check['isWorking']
+    
 
 def upload_basic(title, parents, path):
     """Insert new file.
@@ -132,12 +173,12 @@ def upload_basic(title, parents, path):
         # Execute upload
         file = service.files().create(body=file_metadata, media_body=media,
                                       fields='id').execute()
-        print(F'File ID: {file.get("id")}')
-        print("Uploaded Resume Successfully")
+        logger.info(f'File ID: {file.get("id")}')
+        logger.info("Uploaded Resume Successfully")
         return file.get('id')
 
     except HttpError as error:
-        print(F'An error occurred: {error}')
+        logger.info(F'An error occurred: {error}')
         file = None
 
 
@@ -207,10 +248,10 @@ def update_spreadsheet(candidateData: candidateData, data, SPREADSHEET_ID, SHEET
         request = service.spreadsheets().batchUpdate(spreadsheetId=SPREADSHEET_ID,
                                                      body=requestdata)
         response = request.execute()
-        print("Updated Spreadsheet")
+        logger.info("Updated Spreadsheet")
 
     except HttpError as err:
-        print(err)
+        logger.error(err)
 
 
 def create_file_general(data, parents, title):
@@ -226,7 +267,7 @@ def create_file_general(data, parents, title):
         }
         file = service.files().create(body=file_metadata, fields='id',
                                       ).execute()
-        print(F'Document was created with ID: "{file.get("id")}".')
+        logger.info(F'Document was created with ID: "{file.get("id")}".')
 
         ###########################################
         inputName = "Name: " + data.name + "\n"
@@ -370,12 +411,12 @@ def create_file_general(data, parents, title):
                 documentId=DOCUMENT_ID, body={'requests': requests}).execute()
 
         except HttpError as error:
-            print(F'An error occurred: {error}')
+            logger.error(F'An error occurred: {error}')
             file = None
         # pylint: disable=maybe-no-member
 
     except HttpError as error:
-        print(F'An error occurred: {error}')
+        logger.error(F'An error occurred: {error}')
         file = None
 
 
@@ -392,7 +433,7 @@ def create_file_Therapist(data, parents, title):
         }
         file = service.files().create(body=file_metadata, fields='id',
                                       ).execute()
-        print(F'Document was created with ID: "{file.get("id")}".')
+        logger.info(F'Document was created with ID: {file.get("id")}')
 
         ###########################################
         inputName = "Name: " + data.name + "\n"
@@ -532,18 +573,18 @@ def create_file_Therapist(data, parents, title):
                 documentId=DOCUMENT_ID, body={'requests': requests}).execute()
 
         except HttpError as error:
-            print(F'An error occurred: {error}')
+            logger.error(F'An error occurred: {error}')
             file = None
 
         # pylint: disable=maybe-no-member
 
     except HttpError as error:
-        print(F'An error occurred: {error}')
+        logger.error(F'An error occurred: {error}')
         file = None
 
 
 def create_folder(name: str, parents):
-    """ Create a folder and prints the folder ID
+    """ Create a folder and logs the folder ID
     Returns : Folder Id, Folder Share Link
     """
 
@@ -558,11 +599,10 @@ def create_folder(name: str, parents):
         # pylint: disable=maybe-no-member
         file = service.files().create(body=file_metadata, fields='*',
                                       ).execute()
-        print(
-            F'Folder was created with web view link: "{file.get("webViewLink")}"')
+        logger.info(F'Folder was created with web view link: {file.get("webViewLink")}')
 
     except HttpError as error:
-        print(F'An error occurred: {error}')
+        logger.error(F'An error occurred: {error}')
         file = None
 
     return [file.get('id'), file.get('webViewLink')]
@@ -589,10 +629,10 @@ def create_candidate(candidateData: candidateData, data):
 
     SHEET_ID = data['sheetId']
     parents = [data['folderId']]  # misc default
-    print("Parents are: {} for role: {}".format(parents, category))
+    logger.info("Parents are: {} for role: {}".format(parents, category))
 
     # Add id of new parent so that we are inside the proper file
-    print("Creating {}'s Folder".format(candidateData.name))
+    logger.info("Creating {}'s Folder".format(candidateData.name))
     newParent = create_folder(title, parents)
     folder_id = [newParent[0]]
     folder_link = newParent[1]
@@ -776,8 +816,8 @@ def parse_resume(data: candidateData):
     if len(newEmail) > 0:
         data.email = newEmail[0]
 
-        # Print the results for the current PDF file
-    print("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
+    # Log the results for the current PDF file
+    logger.info("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
 
 
 def getLicenseInfo(name, depth) -> License:
@@ -853,7 +893,7 @@ def getLicenseInfo(name, depth) -> License:
 
         count += 1
 
-    print("Got {} licenses for {}".format(count, name))
+    logger.info("Got {} licenses for {}".format(count, name))
 
     return licenseinfolist
 
@@ -919,16 +959,16 @@ class SesMailSender:
         try:
             response = self.ses_client.send_email(**send_args)
             message_id = response['MessageId']
-            logger.info(
+            logging.info(
                 "Sent mail %s from %s to %s.", message_id, source, destination.tos)
 
             write_json({"name": name, "job": category,
                         "email": email, "response_code": response, 'body': text})
 
-            print(
+            logger.info(
                 "Successfully sent email to: {} -> ".format(name, destination.tos[0]))
         except ClientError as err:
-            print(
+            logger.error(
                 "Invalid email destination for: {} -> {}".format(name, destination.tos[0]))
             write_json({"name": name, "job": category,
                         "email": email, "response_code": str(err.response)})
@@ -988,7 +1028,7 @@ def sendmailtexts(data: Data):
 
         # Create AWS Service
         service = build('sheets', 'v4', credentials=creds)
-        print("Attempting to send texts/emails...")
+        logger.info("Attempting to send texts/emails...")
         for row in range(data.start, data.end+1):
             time.sleep(3)  # Wait a little to not use too many requests.
             try:
@@ -1097,13 +1137,13 @@ def sendmailtexts(data: Data):
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
                 else:
-                    print("\nChose not to message {}".format(
+                    logger.info("\nChose not to message {}".format(
                         values[nameCol]))
             except IndexError as err:
-                print("\nFinished Texting and Emailing Candidaes")
+                logger.errorr("\nFinished Texting and Emailing Candidaes")
                 break
     except HttpError as err:
-        print(err)
+        logger.errorr(err)
 
 
 def sendTwilioText(name: str, number: str, body: str):
@@ -1122,12 +1162,12 @@ def sendTwilioText(name: str, number: str, body: str):
         # Update record that text has been sent / status of return
         write_json({"name": name, "body": message.body, "number": number,
                    "date": str(date.today()), "messageID": message.sid, "failed": False})
-        print("\nSent message to {} with number: {}".format(name, number))
+        logger.info("\nSent message to {} with number: {}".format(name, number))
         return True
     except:
         write_json({"name": name, "body": body,
                    "number": number, "messageID": "null", "failed": True})
-        print("\nCould not send message to: {} -> {}".format(
+        logger.info("\nCould not send message to: {} -> {}".format(
             name, number))
         return False
 
@@ -1188,7 +1228,7 @@ def checkSheetNameValidity(category: str, values: Data):
 
         return values
     except HttpError as err:
-        print(err)
+        logger.error(err)
         return values
 
 
@@ -1219,7 +1259,7 @@ def setColumnVariables(inputdata: Data):
             return inputdata
 
 
-def write_json(new_data, filename='records.json'):
+def write_json(new_data, filename=RECORDS_PATH):
     with open(filename, 'r+') as file:
         # First we load existing data into a dict.
         file_data = json.load(file)
@@ -1244,98 +1284,6 @@ def curateLicenseList(licenselist: list[License], candidateData: candidateData):
             return  # Break
 
 
-def getCandidateJob(job_title):
-    file_path = JOBMAPFILEPATH
-
-    # Load the data map
-    with open(file_path, 'r') as f:
-        data = json.load(f)
-        closest_key = find_closest_string(
-            job_title.lower().strip(), data.keys())
-        return data[closest_key]
-
-
-def checkCandidateExistence(spreadsheet_id, sheet_name, name, file_path) -> True:
-    """
-    Check if the candidate already exists in the spreadsheet, in the spreadsheet, we only call this function if the top 
-    email is a notification of a new candidate, and we use this function to prevent unnecessary calls to the API by using a local
-    storage of the names, and only calling the API if we have to (ie when the job sheet does not exist locally)
-
-    We update the local file every time a new request is made, so updates are only called from here if the sheet does not exist
-    """
-
-    # Check if file exists
-    if os.path.isfile(file_path):
-        # If it exists open it
-        with open(file_path, 'r') as f:
-            data = json.load(f)
-
-            # Check if the sheet_name exists in the json
-            if sheet_name in data:
-                if name in data[sheet_name]:  # Return True if we find the name in the file
-                    return True
-                else:
-                    return False
-            # Update the spreadsheet if we can't find the name the sheet_name
-            else:
-                updateCandidateExistence(
-                    spreadsheet_id=spreadsheet_id, sheet_name=sheet_name, file_path=file_path)
-                with open(file_path, 'r') as f:
-                    data = json.load(f)
-                    # Try to find the name again
-                    # Return True if we find the name in the file
-                    if name in data[sheet_name]:
-                        return True
-                    else:
-                        return False
-    # If file does not exist
-    else:
-        # Create file
-        with open(file_path, 'w') as f:
-            json.dump({}, f)
-
-        # Update the file
-        updateCandidateExistence(
-            spreadsheet_id=spreadsheet_id, sheet_name=sheet_name, file_path=file_path)
-
-        # Try to find the name again
-        with open(file_path, 'r') as f:
-            data = json.load(f)
-            if name in data[sheet_name]:  # Return True if we find the name in the file
-                return True
-            else:
-                return False
-
-
-def updateCandidateExistence(spreadsheet_id, sheet_name, file_path):
-    try:
-        # Authorize with Google Sheets API
-        service = build('sheets', 'v4', credentials=creds)
-
-        # Get the values in the column
-        RANGE = f"{sheet_name}!A:A"
-
-        # Execute request
-        result = service.spreadsheets().values().get(
-            spreadsheetId=spreadsheet_id, range=RANGE).execute()
-
-        # Get values
-        column_values = result.get("values", [])
-
-        # Remove arbirary list within list
-        column_values = [val for sublist in column_values for val in sublist]
-
-        # Update the value in the json file
-        with open(file_path, "r") as f:
-            data = json.load(f)
-
-        data[sheet_name] = column_values
-
-        with open(file_path, 'w') as f:
-            json.dump(data, f, indent=4)
-
-    except HttpError as error:
-        print(F'An error occurred: {error}')
 
 
 def find_closest_string(query, string_list):
@@ -1352,7 +1300,8 @@ def find_closest_string(query, string_list):
 
 
 def main():
-    pass
+    logger.info("Do you see this?")
+
 
 
 if __name__ == '__main__':

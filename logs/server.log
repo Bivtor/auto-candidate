@@ -1,0 +1,631 @@
+2023-04-09 15:11:03,261 - logger - INFO - Started Server
+2023-04-09 15:13:27,526 - logger - INFO - Started Server
+2023-04-09 15:13:38,602 - logger - INFO - Recieved New Email notification
+2023-04-09 15:13:39,012 - logger - INFO - Checking most recent email
+2023-04-09 15:13:39,013 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 15:13:39,013 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/a941dfa9/b0d75b09?
+2023-04-09 15:13:39,013 - logger - INFO - Got Name : Chau Nguyen-Davis
+2023-04-09 15:13:39,013 - logger - INFO - Got Job Title : group therapist
+2023-04-09 15:13:39,013 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 15:13:39,013 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 15:13:39,014 - logger - INFO - Candidate already exists, returning
+2023-04-09 15:18:23,012 - logger - INFO - Started Server
+2023-04-09 15:19:02,445 - logger - INFO - Started Server
+2023-04-09 15:19:45,257 - logger - INFO - Started Server
+2023-04-09 15:21:32,649 - logger - INFO - Started Server
+2023-04-09 15:21:43,719 - logger - INFO - Recieved New Email notification
+2023-04-09 15:21:44,122 - logger - INFO - Checking most recent email
+2023-04-09 15:21:44,122 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 15:21:44,122 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/a941dfa9/b0d75b09?
+2023-04-09 15:21:44,122 - logger - INFO - Got Name : Chau Nguyen-Davis
+2023-04-09 15:21:44,122 - logger - INFO - Got Job Title : group therapist
+2023-04-09 15:21:44,123 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 15:21:44,123 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 15:21:44,123 - logger - INFO - Candidate already exists, returning
+2023-04-09 15:23:30,434 - logger - INFO - Started Server
+2023-04-09 15:24:18,810 - logger - INFO - Started Server
+2023-04-09 15:25:46,854 - logger - INFO - Started Server
+2023-04-09 15:27:33,871 - logger - INFO - Started Server
+2023-04-09 15:27:42,576 - logger - INFO - Recieved New Email notification
+2023-04-09 15:27:42,997 - logger - INFO - Checking most recent email
+2023-04-09 15:27:42,997 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 15:27:42,997 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/a941dfa9/b0d75b09?
+2023-04-09 15:27:42,997 - logger - INFO - Got Name : Chau Nguyen-Davis
+2023-04-09 15:27:42,997 - logger - INFO - Got Job Title : group therapist
+2023-04-09 15:27:42,997 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 15:27:42,998 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 15:27:42,998 - logger - INFO - Candidate already exists, returning
+2023-04-09 15:27:48,481 - logger - INFO - Recieved New Email notification
+2023-04-09 15:27:48,773 - logger - INFO - Checking most recent email
+2023-04-09 15:27:48,773 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 15:27:48,773 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/a941dfa9/b0d75b09?
+2023-04-09 15:27:48,773 - logger - INFO - Got Name : Chau Nguyen-Davis
+2023-04-09 15:27:48,773 - logger - INFO - Got Job Title : group therapist
+2023-04-09 15:27:48,773 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 15:27:48,773 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 15:27:48,774 - logger - INFO - Candidate already exists, returning
+2023-04-09 15:27:53,134 - logger - INFO - Recieved New Email notification
+2023-04-09 15:27:53,418 - logger - INFO - Checking most recent email
+2023-04-09 15:27:53,418 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 15:27:53,418 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/a941dfa9/b0d75b09?
+2023-04-09 15:27:53,418 - logger - INFO - Got Name : Chau Nguyen-Davis
+2023-04-09 15:27:53,418 - logger - INFO - Got Job Title : group therapist
+2023-04-09 15:27:53,419 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 15:27:53,419 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 15:27:53,419 - logger - INFO - Candidate already exists, returning
+2023-04-09 15:29:14,160 - logger - INFO - Altered Phone/Email for: Daniel Clauser in directory: N:\Downloads2\ResumeDanielClauser.pdf
+2023-04-09 15:29:14,160 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:29:14,161 - logger - INFO - Creating Daniel Clauser's Folder
+2023-04-09 15:29:15,207 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1EH7Ulp8l7MNBLI2f4ZSusIBZEjGk_9Gx
+2023-04-09 15:29:16,745 - logger - INFO - Document was created with ID: "1xCsfR2bGJrwIDrpt9MpnE8HNbejNwWFQFxV0o9eMTqE".
+2023-04-09 15:29:18,770 - logger - INFO - Got 1 licenses for Daniel Clauser
+2023-04-09 15:29:19,508 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:29:20,915 - logger - INFO - File ID: 1cb9qsjB4T6w-7lArmmNzk3j_MC6rriHS
+2023-04-09 15:29:20,915 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:29:20,916 - logger - INFO - Created profile for Daniel Clauser
+2023-04-09 15:29:21,411 - logger - INFO - Updated local json file for Daniel Clauser
+2023-04-09 15:29:53,179 - logger - INFO - Altered Phone/Email for: Oceania Imperio in directory: N:\Downloads2\ResumeOceaniaImperio.pdf
+2023-04-09 15:29:53,179 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:29:53,179 - logger - INFO - Creating Oceania Imperio's Folder
+2023-04-09 15:29:54,004 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1YQcZ70jceADVX3roWqw9WJgQ0tFDDxcS
+2023-04-09 15:29:55,679 - logger - INFO - Document was created with ID: "1WUjZ3OSbjugUowXJB6HWlQGssodOYCBlOSrKyVAd2F4".
+2023-04-09 15:29:57,384 - logger - INFO - Got 0 licenses for Oceania Imperio
+2023-04-09 15:29:57,935 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:29:59,170 - logger - INFO - File ID: 1jLVSok8OnPfgGbRLl2xG47KzPD0oNxga
+2023-04-09 15:29:59,170 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:29:59,170 - logger - INFO - Created profile for Oceania Imperio
+2023-04-09 15:29:59,663 - logger - INFO - Updated local json file for Oceania Imperio
+2023-04-09 15:30:36,153 - logger - INFO - Altered Phone/Email for: Courtney Marsell in directory: N:\Downloads2\ResumeCourtneyMarsell.pdf
+2023-04-09 15:30:36,153 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:30:36,153 - logger - INFO - Creating Courtney Marsell's Folder
+2023-04-09 15:30:37,018 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1RAQ1PAfZCjb8IlvpTyibueAtMqj2-1NN
+2023-04-09 15:30:38,651 - logger - INFO - Document was created with ID: "1L36YiZvJI3fSMM2-oo9mxE3Sm9ke-FHKbSqwxG_o0n4".
+2023-04-09 15:30:40,294 - logger - INFO - Got 5 licenses for Courtney Marsell
+2023-04-09 15:30:41,016 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:30:42,331 - logger - INFO - File ID: 1k2dTY4NgESjOTgUU762ZFNfxY4jXvXpK
+2023-04-09 15:30:42,331 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:30:42,331 - logger - INFO - Created profile for Courtney Marsell
+2023-04-09 15:30:42,827 - logger - INFO - Updated local json file for Courtney Marsell
+2023-04-09 15:31:14,150 - logger - INFO - Altered Phone/Email for: Hannah Miers in directory: N:\Downloads2\ResumeHannahMiers.pdf
+2023-04-09 15:31:14,150 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:31:14,150 - logger - INFO - Creating Hannah Miers's Folder
+2023-04-09 15:31:14,932 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1bSdJ27I4ykNSjn-Alv22NtcHDPDNhT2x
+2023-04-09 15:31:16,466 - logger - INFO - Document was created with ID: "1Aori0tVBh3_oQvXn0HYQUx17pTSt9oqHg3SOw08NhTY".
+2023-04-09 15:31:18,443 - logger - INFO - Got 5 licenses for Hannah Miers
+2023-04-09 15:31:18,977 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:31:20,324 - logger - INFO - File ID: 1A4MvVeS5P-LtOKTCNdBlzn06_XS9Dhyv
+2023-04-09 15:31:20,325 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:31:20,325 - logger - INFO - Created profile for Hannah Miers
+2023-04-09 15:31:20,804 - logger - INFO - Updated local json file for Hannah Miers
+2023-04-09 15:33:13,194 - logger - INFO - Altered Phone/Email for: Lisa Stroud in directory: N:\Downloads2\ResumeLisaStroud.pdf
+2023-04-09 15:33:13,194 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:33:13,195 - logger - INFO - Creating Lisa Stroud's Folder
+2023-04-09 15:33:13,987 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1tt-PpQnoJv7JJkHMVzZ1iSlifuSPtU3v
+2023-04-09 15:33:15,582 - logger - INFO - Document was created with ID: "1666LRhM3UG6L5j-VGhKb5BR0g9pN07wuPApWhq1RQY8".
+2023-04-09 15:33:17,201 - logger - INFO - Got 5 licenses for Lisa Stroud
+2023-04-09 15:33:17,796 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:33:19,030 - logger - INFO - File ID: 1sReAqIR4LJEvaOBZYMpt51JemO_wjClC
+2023-04-09 15:33:19,030 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:33:19,030 - logger - INFO - Created profile for Lisa Stroud
+2023-04-09 15:33:19,512 - logger - INFO - Updated local json file for Lisa Stroud
+2023-04-09 15:34:15,142 - logger - INFO - Altered Phone/Email for: Jessica Lienert in directory: N:\Downloads2\ResumeJessicaLienert.pdf
+2023-04-09 15:34:15,142 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:34:15,142 - logger - INFO - Creating Jessica Lienert's Folder
+2023-04-09 15:34:15,874 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1bDHguj4KGSvSCLoBbtCEUvPM-3G6RoQt
+2023-04-09 15:34:17,479 - logger - INFO - Document was created with ID: "1zzcr89qD0gJEosIz6I9TvkyZ4Q5BCBVd-GkLWxVTquA".
+2023-04-09 15:34:19,097 - logger - INFO - Got 5 licenses for Jessica Lienert
+2023-04-09 15:34:19,623 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:34:20,853 - logger - INFO - File ID: 12a3R4zGZmwHvBxx5tQuYEvM6losDV5vn
+2023-04-09 15:34:20,853 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:34:20,853 - logger - INFO - Created profile for Jessica Lienert
+2023-04-09 15:34:21,319 - logger - INFO - Updated local json file for Jessica Lienert
+2023-04-09 15:35:14,127 - logger - INFO - Altered Phone/Email for: Jacob Kim in directory: N:\Downloads2\ResumeJacobKim.pdf
+2023-04-09 15:35:14,128 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:35:14,128 - logger - INFO - Creating Jacob Kim's Folder
+2023-04-09 15:35:14,924 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1R5Q5FjD2YmscR1JLvLbih6WcMJ4LADcR
+2023-04-09 15:35:16,534 - logger - INFO - Document was created with ID: "1AH-nBWIJqbwcikodswFQbCwXvIbSWmePG3P9bdlHQkg".
+2023-04-09 15:35:22,847 - logger - INFO - Got 5 licenses for Jacob Kim
+2023-04-09 15:35:23,391 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:35:24,763 - logger - INFO - File ID: 1EojLYiQYLcx00oFvyqmXbfxtD-lfaeBS
+2023-04-09 15:35:24,763 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:35:24,763 - logger - INFO - Created profile for Jacob Kim
+2023-04-09 15:35:25,241 - logger - INFO - Updated local json file for Jacob Kim
+2023-04-09 15:36:13,301 - logger - INFO - Altered Phone/Email for: Antoine Green in directory: N:\Downloads2\ResumeAntoineGreen.pdf
+2023-04-09 15:36:13,301 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:36:13,301 - logger - INFO - Creating Antoine Green's Folder
+2023-04-09 15:36:14,201 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/14CHrjsj-J3N1zMnNFkDMXbbOLT_PnP_I
+2023-04-09 15:36:15,760 - logger - INFO - Document was created with ID: "17gf7vnNggIQ8hU6Zw6Z2395fIDnyxppzxtW2CAh_Dts".
+2023-04-09 15:36:21,558 - logger - INFO - Got 5 licenses for Antoine Green
+2023-04-09 15:36:22,197 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:36:23,449 - logger - INFO - File ID: 19FaCeVLBGlAhIK9yXYRO8R0flEEStSkh
+2023-04-09 15:36:23,449 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:36:23,449 - logger - INFO - Created profile for Antoine Green
+2023-04-09 15:36:23,918 - logger - INFO - Updated local json file for Antoine Green
+2023-04-09 15:37:13,150 - logger - INFO - Altered Phone/Email for: Eddy Meza in directory: N:\Downloads2\ResumeEddyMeza.pdf
+2023-04-09 15:37:13,150 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:37:13,150 - logger - INFO - Creating Eddy Meza's Folder
+2023-04-09 15:37:14,003 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1n_54qKDr-6-idKpKVyeO2YMXhiKkE-AI
+2023-04-09 15:37:15,598 - logger - INFO - Document was created with ID: "1D3psBgDhR4kKsSpOBCj84XPH2o8kSwMtoTCnCBvlppg".
+2023-04-09 15:37:17,714 - logger - INFO - Got 5 licenses for Eddy Meza
+2023-04-09 15:37:18,231 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:37:19,548 - logger - INFO - File ID: 1EqS5vmFLgwIYgQ3vzyG9J0LvA1b8Ysju
+2023-04-09 15:37:19,548 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:37:19,548 - logger - INFO - Created profile for Eddy Meza
+2023-04-09 15:37:20,032 - logger - INFO - Updated local json file for Eddy Meza
+2023-04-09 15:38:14,194 - logger - INFO - Altered Phone/Email for: Ashley Rose in directory: N:\Downloads2\ResumeAshleyRose.pdf
+2023-04-09 15:38:14,194 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:38:14,194 - logger - INFO - Creating Ashley Rose's Folder
+2023-04-09 15:38:14,958 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1kZiMf4EV6uZj7o22S9wShZQVbYJ3VSjQ
+2023-04-09 15:38:16,613 - logger - INFO - Document was created with ID: "1Jfe-o0DgbYWt4ejIfIJoVakpQI2Qbwcq7tLnI_YlamI".
+2023-04-09 15:38:19,350 - logger - INFO - Got 5 licenses for Ashley Rose
+2023-04-09 15:38:19,969 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:38:21,220 - logger - INFO - File ID: 1X587i-Y8gHd40SG7ieiICbWoqu8NzS0L
+2023-04-09 15:38:21,220 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:38:21,221 - logger - INFO - Created profile for Ashley Rose
+2023-04-09 15:38:21,683 - logger - INFO - Updated local json file for Ashley Rose
+2023-04-09 15:39:14,110 - logger - INFO - Altered Phone/Email for: Victoria Charles in directory: N:\Downloads2\ResumeVictoriaCharles.pdf
+2023-04-09 15:39:14,110 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:39:14,110 - logger - INFO - Creating Victoria Charles's Folder
+2023-04-09 15:39:14,879 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/12jMGe-PT4IqNE-wsQQh8xj_Y1BVjIo19
+2023-04-09 15:39:16,524 - logger - INFO - Document was created with ID: "1b5lCVh7afPa7rKvi9Ebe4FSVEv972POxZajlzKL0Sz0".
+2023-04-09 15:39:18,319 - logger - INFO - Got 5 licenses for Victoria Charles
+2023-04-09 15:39:18,879 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:39:20,132 - logger - INFO - File ID: 18rmnV7ZBgyd3svoSnALFib7YF6mORRX7
+2023-04-09 15:39:20,132 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:39:20,133 - logger - INFO - Created profile for Victoria Charles
+2023-04-09 15:39:20,599 - logger - INFO - Updated local json file for Victoria Charles
+2023-04-09 15:40:15,204 - logger - INFO - Altered Phone/Email for: Miguel Rios in directory: N:\Downloads2\ResumeMiguelRios.pdf
+2023-04-09 15:40:15,204 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:40:15,204 - logger - INFO - Creating Miguel Rios's Folder
+2023-04-09 15:40:15,982 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1DIZw7220VPStx8p_HYRa9jNdKyYpf92_
+2023-04-09 15:40:17,644 - logger - INFO - Document was created with ID: "1CzK8mjQ2PkHKShGHN7CDuD6HI11cTMoY4-VbVdHdxQ8".
+2023-04-09 15:40:20,792 - logger - INFO - Got 5 licenses for Miguel Rios
+2023-04-09 15:40:21,333 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:40:22,807 - logger - INFO - File ID: 1g2rUEhAv9nYPioJa0_Zq-NlBcC_Lf314
+2023-04-09 15:40:22,808 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:40:22,808 - logger - INFO - Created profile for Miguel Rios
+2023-04-09 15:40:23,284 - logger - INFO - Updated local json file for Miguel Rios
+2023-04-09 15:41:14,248 - logger - INFO - Altered Phone/Email for: Junxiang “Vincent” Wang in directory: N:\Downloads2\ResumeJunxiang“Vincent”Wang.pdf
+2023-04-09 15:41:14,248 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:41:14,248 - logger - INFO - Creating Junxiang “Vincent” Wang's Folder
+2023-04-09 15:41:15,007 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1f6VP5ki50TiYFKLVoWz-7h_C4JwG5rG0
+2023-04-09 15:41:16,538 - logger - INFO - Document was created with ID: "185xOGPZhwq46s87HTeQhNYJ0r7Kkl_QQh0B0Hu3il60".
+2023-04-09 15:42:14,131 - logger - INFO - Altered Phone/Email for: Angelina Petel in directory: N:\Downloads2\ResumeAngelinaPetel.pdf
+2023-04-09 15:42:14,131 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:42:14,131 - logger - INFO - Creating Angelina Petel's Folder
+2023-04-09 15:42:14,879 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/18mpoP6tDfT-iKdqpIhHBIljPplPUuaA8
+2023-04-09 15:42:16,463 - logger - INFO - Document was created with ID: "1DjHEUxX7RybPLat_8c8Qgeww6msBmB8deeHDop0eDns".
+2023-04-09 15:42:20,738 - logger - INFO - Got 5 licenses for Angelina Petel
+2023-04-09 15:42:21,518 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:42:22,767 - logger - INFO - File ID: 1dM_zNo0wErhRozi087mG6_CgWY3mNOO-
+2023-04-09 15:42:22,767 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:42:22,767 - logger - INFO - Created profile for Angelina Petel
+2023-04-09 15:42:23,254 - logger - INFO - Updated local json file for Angelina Petel
+2023-04-09 15:43:14,139 - logger - INFO - Altered Phone/Email for: Precy Betiong in directory: N:\Downloads2\ResumePrecyBetiong.pdf
+2023-04-09 15:43:14,139 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:43:14,139 - logger - INFO - Creating Precy Betiong's Folder
+2023-04-09 15:43:14,938 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1W9fdQqUDIh3t2ZPsyjMxps8qm-Z-hMm1
+2023-04-09 15:43:16,482 - logger - INFO - Document was created with ID: "1iZMqzXnSJG-deKRnFyALgyqzuDFnz9lvkyqhgiSqSZE".
+2023-04-09 15:43:18,010 - logger - INFO - Got 0 licenses for Precy Betiong
+2023-04-09 15:43:18,514 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:43:19,753 - logger - INFO - File ID: 1IRsYwghoLZoeNNBbfjUD7JKgt3v-8W_h
+2023-04-09 15:43:19,753 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:43:19,754 - logger - INFO - Created profile for Precy Betiong
+2023-04-09 15:43:20,276 - logger - INFO - Updated local json file for Precy Betiong
+2023-04-09 15:43:54,207 - logger - INFO - Altered Phone/Email for: Jessica Scerba in directory: N:\Downloads2\ResumeJessicaScerba.pdf
+2023-04-09 15:43:54,207 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:43:54,207 - logger - INFO - Creating Jessica Scerba's Folder
+2023-04-09 15:43:54,965 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1_7UO3mZ3oNvF7HIv_X1BdEfiLPX9vEka
+2023-04-09 15:43:56,612 - logger - INFO - Document was created with ID: "1dwhcy0MZUA5JuQCFBQpqvSwXM962ZmrFrBliHsz83Hk".
+2023-04-09 15:43:58,235 - logger - INFO - Got 0 licenses for Jessica Scerba
+2023-04-09 15:43:58,789 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:44:00,006 - logger - INFO - File ID: 1wU2kRxM2sQKykwv3wZ-Mgm1WZQ6CQW7s
+2023-04-09 15:44:00,006 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:44:00,007 - logger - INFO - Created profile for Jessica Scerba
+2023-04-09 15:44:00,502 - logger - INFO - Updated local json file for Jessica Scerba
+2023-04-09 15:44:36,191 - logger - INFO - Altered Phone/Email for: Danielle Carter in directory: N:\Downloads2\ResumeDanielleCarter.pdf
+2023-04-09 15:44:36,191 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:44:36,191 - logger - INFO - Creating Danielle Carter's Folder
+2023-04-09 15:44:36,974 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1FBGOeprTLgp0T1DU3p30YWCWvCZhS7HU
+2023-04-09 15:44:38,585 - logger - INFO - Document was created with ID: "1xwu-ulERgEpovNJHObt5JUQ8YrAGiZV9Jo3NTbgKo4I".
+2023-04-09 15:44:41,484 - logger - INFO - Got 5 licenses for Danielle Carter
+2023-04-09 15:44:42,033 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:44:43,291 - logger - INFO - File ID: 1y2ukEnS8DuwAy0rtVLXl2MxEDk73tOTP
+2023-04-09 15:44:43,291 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:44:43,291 - logger - INFO - Created profile for Danielle Carter
+2023-04-09 15:44:43,807 - logger - INFO - Updated local json file for Danielle Carter
+2023-04-09 15:46:15,169 - logger - INFO - Altered Phone/Email for: Michael Archuleta in directory: N:\Downloads2\ResumeMichaelArchuleta.pdf
+2023-04-09 15:46:15,169 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:46:15,169 - logger - INFO - Creating Michael Archuleta's Folder
+2023-04-09 15:46:16,025 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1vSNv6JgjmK7VPCZjidNa2_vqsvXlb1wY
+2023-04-09 15:46:17,621 - logger - INFO - Document was created with ID: "1lOMT3aHaxrai-P6Bre-tPyZAY68CXGj8NmO0sP63QHI".
+2023-04-09 15:46:19,308 - logger - INFO - Got 5 licenses for Michael Archuleta
+2023-04-09 15:46:20,062 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:46:21,468 - logger - INFO - File ID: 15jnJS91giyKeEwtjB491bHs7rlOg1W2L
+2023-04-09 15:46:21,468 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:46:21,468 - logger - INFO - Created profile for Michael Archuleta
+2023-04-09 15:46:21,962 - logger - INFO - Updated local json file for Michael Archuleta
+2023-04-09 15:46:38,901 - logger - INFO - Started Server
+2023-04-09 15:47:14,125 - logger - INFO - Altered Phone/Email for: Michelle Sampson in directory: N:\Downloads2\ResumeMichelleSampson.pdf
+2023-04-09 15:47:14,125 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 15:47:14,125 - logger - INFO - Creating Michelle Sampson's Folder
+2023-04-09 15:47:14,902 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Ka9fBeTIDdIC0V5b-KXGWhLfJ3-nCY7o
+2023-04-09 15:47:16,568 - logger - INFO - Document was created with ID: "12QK0QU5Ql6gNs1QDmjGdyHNzERM3DDeHU0EnpumpHS4".
+2023-04-09 15:47:18,689 - logger - INFO - Got 5 licenses for Michelle Sampson
+2023-04-09 15:47:19,217 - logger - INFO - Updated Spreadsheet
+2023-04-09 15:47:20,498 - logger - INFO - File ID: 1mm0aV8sjLAfc4eL5GWa0nI-wqJWkALWN
+2023-04-09 15:47:20,498 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 15:47:20,498 - logger - INFO - Created profile for Michelle Sampson
+2023-04-09 15:47:21,059 - logger - INFO - Updated local json file for Michelle Sampson
+2023-04-09 16:02:31,522 - logger - INFO - Started Server
+2023-04-09 16:03:03,266 - logger - INFO - Altered Phone/Email for: Trystan Wilde in directory: N:\Downloads2\ResumeTrystanWilde.pdf
+2023-04-09 16:03:03,266 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:03:03,266 - logger - INFO - Creating Trystan Wilde's Folder
+2023-04-09 16:03:04,173 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1QSYS-U8BEJ59WH0ovdB_WPfxgF-A2Wms
+2023-04-09 16:03:05,641 - logger - INFO - Document was created with ID: "1KmY5bZO4bqi4rzYcXIy9xegaIolF4NrhkbuQWFmI7UA".
+2023-04-09 16:03:21,193 - logger - INFO - Altered Phone/Email for: Maddison Cochran in directory: N:\Downloads2\ResumeMaddisonCochran.pdf
+2023-04-09 16:03:21,193 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:03:21,193 - logger - INFO - Creating Maddison Cochran's Folder
+2023-04-09 16:03:21,977 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1dd9gx6lgm240Vy1SUStVZ2C25HQiOXgI
+2023-04-09 16:03:23,458 - logger - INFO - Document was created with ID: "1DC8OwFdbKHf8WDXcRnZMwmsIDEOJV7ikaKLBWp1jfyk".
+2023-04-09 16:03:25,665 - logger - INFO - Got 5 licenses for Maddison Cochran
+2023-04-09 16:03:26,527 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:03:27,272 - logger - INFO - Got 5 licenses for Trystan Wilde
+2023-04-09 16:03:27,850 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:03:27,944 - logger - INFO - File ID: 1hGo4cN1sQ2sfxn0_MaRhQ_TQ0cVLAqg-
+2023-04-09 16:03:27,944 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:03:27,945 - logger - INFO - Created profile for Maddison Cochran
+2023-04-09 16:03:28,551 - logger - INFO - Updated local json file for Maddison Cochran
+2023-04-09 16:03:29,146 - logger - INFO - File ID: 1LEC2GjHommhS1V7dFHJQ_v0kRtvj-b4q
+2023-04-09 16:03:29,146 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:03:29,147 - logger - INFO - Created profile for Trystan Wilde
+2023-04-09 16:03:29,741 - logger - INFO - Updated local json file for Trystan Wilde
+2023-04-09 16:03:41,224 - logger - INFO - Altered Phone/Email for: RASHI THAPAR in directory: N:\Downloads2\ResumeRASHITHAPAR.pdf
+2023-04-09 16:03:41,224 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:03:41,224 - logger - INFO - Creating RASHI THAPAR's Folder
+2023-04-09 16:03:42,036 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1n1mddxNAoiicDGx7oxge267yWlUDGxC9
+2023-04-09 16:03:43,678 - logger - INFO - Document was created with ID: "1dbpa3Q_pnwbraWtA8oqitxq_LFjlixDpeqNoCnNwo60".
+2023-04-09 16:03:45,604 - logger - INFO - Got 5 licenses for RASHI THAPAR
+2023-04-09 16:03:46,214 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:03:47,511 - logger - INFO - File ID: 1s2R-YWozte_gFK8S3-rjtVX4SnUQf7pZ
+2023-04-09 16:03:47,511 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:03:47,511 - logger - INFO - Created profile for RASHI THAPAR
+2023-04-09 16:03:48,091 - logger - INFO - Updated local json file for RASHI THAPAR
+2023-04-09 16:04:12,306 - logger - INFO - Altered Phone/Email for: Lori Melkonian in directory: N:\Downloads2\ResumeLoriMelkonian.pdf
+2023-04-09 16:04:12,306 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:04:12,307 - logger - INFO - Creating Lori Melkonian's Folder
+2023-04-09 16:04:13,178 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1xkMohJMVrjPQ9OqhQiHVvRpHCCEVFQ6M
+2023-04-09 16:04:14,845 - logger - INFO - Document was created with ID: "1sB7Q6GNiZIf6HdtSveR0UndILxs8Emr_91hshfh6I3k".
+2023-04-09 16:04:16,431 - logger - INFO - Got 0 licenses for Lori Melkonian
+2023-04-09 16:04:17,043 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:04:18,348 - logger - INFO - File ID: 1L1YzF_p9ImaYcunGBY83-Fs9n1_vvWIt
+2023-04-09 16:04:18,349 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:04:18,349 - logger - INFO - Created profile for Lori Melkonian
+2023-04-09 16:04:18,881 - logger - INFO - Updated local json file for Lori Melkonian
+2023-04-09 16:05:14,187 - logger - INFO - Altered Phone/Email for: Evelyn Jimenez in directory: N:\Downloads2\ResumeEvelynJimenez.pdf
+2023-04-09 16:05:14,187 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:05:14,187 - logger - INFO - Creating Evelyn Jimenez's Folder
+2023-04-09 16:05:15,013 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ZOS-VWdSCjfLYObSax7sV-1ms0TG7xde
+2023-04-09 16:05:16,581 - logger - INFO - Document was created with ID: "1MDOU63Kkgk5pU74_Dl8GpVs4iWxPyIL5YrNVRlVTo70".
+2023-04-09 16:05:18,568 - logger - INFO - Got 5 licenses for Evelyn Jimenez
+2023-04-09 16:05:19,160 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:05:20,390 - logger - INFO - File ID: 1TQeMUCK0-dS7phMkOJyaGscwsJ4ieJqW
+2023-04-09 16:05:20,391 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:05:20,391 - logger - INFO - Created profile for Evelyn Jimenez
+2023-04-09 16:05:20,966 - logger - INFO - Updated local json file for Evelyn Jimenez
+2023-04-09 16:06:14,153 - logger - INFO - Altered Phone/Email for: Solen Selvi in directory: N:\Downloads2\ResumeSolenSelvi.pdf
+2023-04-09 16:06:14,153 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:06:14,154 - logger - INFO - Creating Solen Selvi's Folder
+2023-04-09 16:06:14,894 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1I8o56b5SXE4XHUGPy9y-uVwFjj8wycaf
+2023-04-09 16:06:16,478 - logger - INFO - Document was created with ID: "1hxS8wRQ0iOadmtxTnziZ_OReRgVsvpbMW7SimBmAiSQ".
+2023-04-09 16:06:18,239 - logger - INFO - Got 1 licenses for Solen Selvi
+2023-04-09 16:06:18,853 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:06:20,137 - logger - INFO - File ID: 1A1rwlvZglzWfERRXYuSnY-Lwc4FzTIL5
+2023-04-09 16:06:20,137 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:06:20,137 - logger - INFO - Created profile for Solen Selvi
+2023-04-09 16:06:20,664 - logger - INFO - Updated local json file for Solen Selvi
+2023-04-09 16:07:16,344 - logger - INFO - Altered Phone/Email for: Natalee Moinester in directory: N:\Downloads2\ResumeNataleeMoinester.pdf
+2023-04-09 16:07:16,345 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:07:16,345 - logger - INFO - Creating Natalee Moinester's Folder
+2023-04-09 16:07:17,221 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1UNECNkpDGNdL3Ofz0ZN2qIi5KDB9oY9G
+2023-04-09 16:07:18,795 - logger - INFO - Document was created with ID: "1M6dCFQCMAbQ4qb23o4A3LODZzRHC99CDWd_KeoEGlXM".
+2023-04-09 16:07:20,550 - logger - INFO - Got 0 licenses for Natalee Moinester
+2023-04-09 16:07:21,324 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:07:22,594 - logger - INFO - File ID: 1yV_9Rf_zzeeYzJfSE1A85_4ntQ8T48T9
+2023-04-09 16:07:22,594 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:07:22,594 - logger - INFO - Created profile for Natalee Moinester
+2023-04-09 16:07:23,145 - logger - INFO - Updated local json file for Natalee Moinester
+2023-04-09 16:08:16,165 - logger - INFO - Altered Phone/Email for: Sydnee Alarcon in directory: N:\Downloads2\ResumeSydneeAlarcon.pdf
+2023-04-09 16:08:16,166 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:08:16,166 - logger - INFO - Creating Sydnee Alarcon's Folder
+2023-04-09 16:08:16,994 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1wyFiz76NbkxBTyCDjAdFjBCv4_Q1rp4L
+2023-04-09 16:08:18,624 - logger - INFO - Document was created with ID: "1ZEsbl4QuU79NwuM2vO6Ah9V2TgteOzsM7ZlPKWKtjOo".
+2023-04-09 16:08:20,402 - logger - INFO - Got 5 licenses for Sydnee Alarcon
+2023-04-09 16:08:20,993 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:08:22,252 - logger - INFO - File ID: 1QH6bj8wmULbsDz4_d9BBuQJFGF7MZya9
+2023-04-09 16:08:22,252 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:08:22,253 - logger - INFO - Created profile for Sydnee Alarcon
+2023-04-09 16:08:22,819 - logger - INFO - Updated local json file for Sydnee Alarcon
+2023-04-09 16:09:13,136 - logger - INFO - Altered Phone/Email for: Amelia Arredondo in directory: N:\Downloads2\ResumeAmeliaArredondo.pdf
+2023-04-09 16:09:13,136 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:09:13,136 - logger - INFO - Creating Amelia Arredondo's Folder
+2023-04-09 16:09:13,935 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1QXFAvOhRN8EaoN9yL1U9l_-0DyVA2uEf
+2023-04-09 16:09:15,633 - logger - INFO - Document was created with ID: "1zBblWY3MVQUMw5Y6W5gH2HSqf6I1ytVfsg4Jn4cVlUY".
+2023-04-09 16:09:17,289 - logger - INFO - Got 5 licenses for Amelia Arredondo
+2023-04-09 16:09:17,927 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:09:19,168 - logger - INFO - File ID: 1cvJGxyV5_SVnEKiUzth2DmYqpL8O8Ieu
+2023-04-09 16:09:19,168 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:09:19,168 - logger - INFO - Created profile for Amelia Arredondo
+2023-04-09 16:09:19,736 - logger - INFO - Updated local json file for Amelia Arredondo
+2023-04-09 16:10:14,205 - logger - INFO - Altered Phone/Email for: Morgan Meza in directory: N:\Downloads2\ResumeMorganMeza.pdf
+2023-04-09 16:10:14,205 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:10:14,205 - logger - INFO - Creating Morgan Meza's Folder
+2023-04-09 16:10:14,963 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1J9nYHe8I952CnZhjDouNqu20AFic8rw4
+2023-04-09 16:10:16,671 - logger - INFO - Document was created with ID: "1IAIKWpDCzsFEN0il-iuFdNe160i-ySb9WjozL63yFu0".
+2023-04-09 16:10:18,434 - logger - INFO - Got 5 licenses for Morgan Meza
+2023-04-09 16:10:19,116 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:10:20,424 - logger - INFO - File ID: 1M3u5ybSZghtXqgm-llaN0UHiQ-7oqEz-
+2023-04-09 16:10:20,424 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:10:20,424 - logger - INFO - Created profile for Morgan Meza
+2023-04-09 16:10:20,948 - logger - INFO - Updated local json file for Morgan Meza
+2023-04-09 16:11:17,159 - logger - INFO - Altered Phone/Email for: Zoe Martin in directory: N:\Downloads2\ResumeZoeMartin.pdf
+2023-04-09 16:11:17,159 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:11:17,159 - logger - INFO - Creating Zoe Martin's Folder
+2023-04-09 16:11:18,129 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/13ZMOblFCmlrQASktmytkILszxzvIhWrW
+2023-04-09 16:11:19,855 - logger - INFO - Document was created with ID: "11VvwIgvV1JMZgG0eGb5CnD4xd-GVSsqIjVClUr7_Zeg".
+2023-04-09 16:11:21,978 - logger - INFO - Got 5 licenses for Zoe Martin
+2023-04-09 16:11:22,587 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:11:23,773 - logger - INFO - File ID: 1te4c3T6DswFpbudo9aP8r7DegbG65ypa
+2023-04-09 16:11:23,773 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:11:23,773 - logger - INFO - Created profile for Zoe Martin
+2023-04-09 16:11:24,301 - logger - INFO - Updated local json file for Zoe Martin
+2023-04-09 16:12:15,424 - logger - INFO - Altered Phone/Email for: MARC ROMEO in directory: N:\Downloads2\ResumeMARCROMEO.pdf
+2023-04-09 16:12:15,424 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:12:15,424 - logger - INFO - Creating MARC ROMEO's Folder
+2023-04-09 16:12:16,262 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ClkXuoECT_f02lbSIuIzBinqBcNGqWi-
+2023-04-09 16:12:17,949 - logger - INFO - Document was created with ID: "1QAjHCUPcH3E5LOcR11p_g9IYSWUG9q7GZz_7MJlInfg".
+2023-04-09 16:12:25,230 - logger - INFO - Got 5 licenses for MARC ROMEO
+2023-04-09 16:12:26,001 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:12:27,305 - logger - INFO - File ID: 17m8OUC_V9H63k1sIosRZqDgWzgWF1xs9
+2023-04-09 16:12:27,305 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:12:27,305 - logger - INFO - Created profile for MARC ROMEO
+2023-04-09 16:12:27,849 - logger - INFO - Updated local json file for MARC ROMEO
+2023-04-09 16:13:16,128 - logger - INFO - Altered Phone/Email for: Lauren Siegman in directory: N:\Downloads2\ResumeLaurenSiegman.docx
+2023-04-09 16:13:16,128 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:13:16,128 - logger - INFO - Creating Lauren Siegman's Folder
+2023-04-09 16:13:16,903 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1pVe-sU7y8UEgA7kDWdzYppqQXGOcZTAT
+2023-04-09 16:13:18,576 - logger - INFO - Document was created with ID: "1wCNGl0ax6cAzKs7n6s8oi4mSznKLZrVi30XkHrKDqAc".
+2023-04-09 16:13:20,424 - logger - INFO - Got 4 licenses for Lauren Siegman
+2023-04-09 16:13:21,041 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:13:22,266 - logger - INFO - File ID: 1KqIwZYfwiZh4j7JlQb6JnAe0khTCoRE_
+2023-04-09 16:13:22,266 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:13:22,266 - logger - INFO - Created profile for Lauren Siegman
+2023-04-09 16:13:22,790 - logger - INFO - Updated local json file for Lauren Siegman
+2023-04-09 16:14:13,569 - logger - INFO - Altered Phone/Email for: Andrea Dussan in directory: N:\Downloads2\ResumeAndreaDussan.pdf
+2023-04-09 16:14:13,569 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:14:13,569 - logger - INFO - Creating Andrea Dussan's Folder
+2023-04-09 16:14:14,323 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1p7oH1bhAa1lU5VtTBxOMQbSINJEK6XWu
+2023-04-09 16:14:15,792 - logger - INFO - Document was created with ID: "1Oqd_OhTwUydZygasESFrUJZJMSR6Ow_8IcBUot2iZI8".
+2023-04-09 16:14:17,561 - logger - INFO - Got 5 licenses for Andrea Dussan
+2023-04-09 16:14:18,173 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:14:19,450 - logger - INFO - File ID: 1ar-EEcW_vm1e1wK8Hro1wWNQZM-E-9Px
+2023-04-09 16:14:19,450 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:14:19,450 - logger - INFO - Created profile for Andrea Dussan
+2023-04-09 16:14:20,021 - logger - INFO - Updated local json file for Andrea Dussan
+2023-04-09 16:15:13,901 - logger - INFO - Altered Phone/Email for: Michele Herrera Thorn in directory: N:\Downloads2\ResumeMicheleHerreraThorn.pdf
+2023-04-09 16:15:13,901 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:15:13,901 - logger - INFO - Creating Michele Herrera Thorn's Folder
+2023-04-09 16:15:14,691 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1gtow0lwS7vpSMeA_B06XdYRm61dPYGX3
+2023-04-09 16:15:16,166 - logger - INFO - Document was created with ID: "19Sw_cnXECzZ5-F2WMK0OJl0zJMS3-3aPgKcfRrsJLb0".
+2023-04-09 16:15:18,493 - logger - INFO - Got 5 licenses for Michele Herrera Thorn
+2023-04-09 16:15:19,117 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:15:20,564 - logger - INFO - File ID: 1FYTXAcBYaMU3UoWlet9NnDAh50cet1i9
+2023-04-09 16:15:20,564 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:15:20,564 - logger - INFO - Created profile for Michele Herrera Thorn
+2023-04-09 16:15:21,056 - logger - INFO - Updated local json file for Michele Herrera Thorn
+2023-04-09 16:15:35,176 - logger - INFO - Altered Phone/Email for: Eduardo Almeda in directory: N:\Downloads2\ResumeEduardoAlmeda.pdf
+2023-04-09 16:15:35,176 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:15:35,176 - logger - INFO - Creating Eduardo Almeda's Folder
+2023-04-09 16:15:35,937 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ZBOUCz8lmczo37q70IeeCy831NY6-FCh
+2023-04-09 16:15:37,681 - logger - INFO - Document was created with ID: "1nyCP3vJPKz6y8iW1PecDlqMfn6dElm5YZ36rYyRoAgM".
+2023-04-09 16:15:39,301 - logger - INFO - Got 2 licenses for Eduardo Almeda
+2023-04-09 16:15:39,889 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:15:41,164 - logger - INFO - File ID: 1pHDBnJDgzvNfMT3MGXXgq-HnUeblA3rl
+2023-04-09 16:15:41,164 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:15:41,164 - logger - INFO - Created profile for Eduardo Almeda
+2023-04-09 16:15:41,643 - logger - INFO - Updated local json file for Eduardo Almeda
+2023-04-09 16:15:55,171 - logger - INFO - Altered Phone/Email for: Melissa Foster in directory: N:\Downloads2\ResumeMelissaFoster.pdf
+2023-04-09 16:15:55,171 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:15:55,171 - logger - INFO - Creating Melissa Foster's Folder
+2023-04-09 16:15:55,911 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/14X_NWy22vnTY5J4Yg-lYVjhAmET-aqak
+2023-04-09 16:15:57,516 - logger - INFO - Document was created with ID: "1tX_nZBTWex3RigHpv1teWv1g64pd3zzI2kZgPLyMx6M".
+2023-04-09 16:15:59,294 - logger - INFO - Got 5 licenses for Melissa Foster
+2023-04-09 16:15:59,824 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:16:01,033 - logger - INFO - File ID: 1QY2RF0xm3JXnilqL-hX9r8C07b5TbGqk
+2023-04-09 16:16:01,033 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:16:01,033 - logger - INFO - Created profile for Melissa Foster
+2023-04-09 16:16:01,497 - logger - INFO - Updated local json file for Melissa Foster
+2023-04-09 16:16:16,145 - logger - INFO - Altered Phone/Email for: Rwanda Bernardino in directory: N:\Downloads2\ResumeRwandaBernardino.pdf
+2023-04-09 16:16:16,145 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:16:16,145 - logger - INFO - Creating Rwanda Bernardino's Folder
+2023-04-09 16:16:16,896 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1zsnaZv843ZZ8No6AqsGdAWIvmi8Nrvg-
+2023-04-09 16:16:18,527 - logger - INFO - Document was created with ID: "1S98pnLpGUo9FTYgTdsPL5R9hs3IrJ0Isvog9wHDyT2E".
+2023-04-09 16:16:20,046 - logger - INFO - Got 0 licenses for Rwanda Bernardino
+2023-04-09 16:16:20,633 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:16:21,875 - logger - INFO - File ID: 1XtnX1Bwfy7-WWOWknUdjiN9xfwB0ZVRh
+2023-04-09 16:16:21,875 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:16:21,875 - logger - INFO - Created profile for Rwanda Bernardino
+2023-04-09 16:16:22,372 - logger - INFO - Updated local json file for Rwanda Bernardino
+2023-04-09 16:16:34,220 - logger - INFO - Altered Phone/Email for: Charee Heard in directory: N:\Downloads2\ResumeChareeHeard.pdf
+2023-04-09 16:16:34,221 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:16:34,221 - logger - INFO - Creating Charee Heard's Folder
+2023-04-09 16:16:34,947 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/13p7gaU-bO9aLqdJE34t_aP65ZHOKfWmp
+2023-04-09 16:16:36,740 - logger - INFO - Document was created with ID: "1afv2X8caOQCp4ywcMFKujzq-nIWJ9zd9NMeJ83TPJ1U".
+2023-04-09 16:16:39,459 - logger - INFO - Got 5 licenses for Charee Heard
+2023-04-09 16:16:39,978 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:16:41,217 - logger - INFO - File ID: 1J-zYkFTBN2L5A2umHpq6kN9b7CdMtAyr
+2023-04-09 16:16:41,218 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:16:41,218 - logger - INFO - Created profile for Charee Heard
+2023-04-09 16:16:41,676 - logger - INFO - Updated local json file for Charee Heard
+2023-04-09 16:16:57,219 - logger - INFO - Altered Phone/Email for: Juan Tabanera in directory: N:\Downloads2\ResumeJuanTabanera.pdf
+2023-04-09 16:16:57,219 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
+2023-04-09 16:16:57,219 - logger - INFO - Creating Juan Tabanera's Folder
+2023-04-09 16:16:57,960 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1-8__be4q7LBW6ffuGbSPVCEZg_HiAk0w
+2023-04-09 16:16:59,667 - logger - INFO - Document was created with ID: "1_bNSJ_qxK3ZeIqv10xTw_bVp23lI53Ywv1ok7KXodug".
+2023-04-09 16:17:02,584 - logger - INFO - Got 0 licenses for Juan Tabanera
+2023-04-09 16:17:03,106 - logger - INFO - Updated Spreadsheet
+2023-04-09 16:17:04,326 - logger - INFO - File ID: 1-bkhKitQS2nDYDHuJAbhO9BvoBkbSIMA
+2023-04-09 16:17:04,326 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 16:17:04,326 - logger - INFO - Created profile for Juan Tabanera
+2023-04-09 16:17:04,800 - logger - INFO - Updated local json file for Juan Tabanera
+2023-04-09 18:02:57,086 - logger - INFO - Recieved New Email notification
+2023-04-09 18:02:57,713 - logger - INFO - Checking most recent email
+2023-04-09 18:02:57,713 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-09 18:07:07,555 - logger - INFO - Recieved New Email notification
+2023-04-09 18:07:07,969 - logger - INFO - Checking most recent email
+2023-04-09 18:07:07,970 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-09 19:08:45,151 - logger - INFO - Recieved New Email notification
+2023-04-09 19:08:46,306 - logger - INFO - Checking most recent email
+2023-04-09 19:08:46,306 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-09 21:28:51,623 - logger - INFO - Recieved New Email notification
+2023-04-09 21:28:52,334 - logger - INFO - Checking most recent email
+2023-04-09 21:28:52,334 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-09 21:54:47,024 - logger - INFO - Recieved New Email notification
+2023-04-09 21:54:47,449 - logger - INFO - Checking most recent email
+2023-04-09 21:54:47,449 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 21:54:47,449 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 21:54:47,449 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 21:54:47,449 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 21:54:47,449 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 21:54:47,454 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 21:54:47,458 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 21:54:47,461 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 21:56:28,886 - logger - INFO - Recieved New Email notification
+2023-04-09 21:56:29,295 - logger - INFO - Checking most recent email
+2023-04-09 21:56:29,295 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 21:56:29,295 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 21:56:29,295 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 21:56:29,295 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 21:56:29,295 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 21:56:29,295 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 21:56:29,296 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 21:56:29,300 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 21:59:31,026 - logger - INFO - Recieved New Email notification
+2023-04-09 21:59:31,424 - logger - INFO - Checking most recent email
+2023-04-09 21:59:31,425 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 21:59:31,425 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 21:59:31,425 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 21:59:31,425 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 21:59:31,425 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 21:59:31,425 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 21:59:31,425 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 21:59:31,426 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 22:00:43,740 - logger - INFO - Started Server
+2023-04-09 22:03:50,756 - logger - INFO - Started Server
+2023-04-09 22:04:34,019 - logger - INFO - Started Server
+2023-04-09 22:32:10,645 - logger - INFO - Recieved New Email notification
+2023-04-09 22:32:10,991 - logger - INFO - Recieved New Email notification
+2023-04-09 22:32:11,093 - logger - INFO - Checking most recent email
+2023-04-09 22:32:11,093 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 22:32:11,093 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 22:32:11,093 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 22:32:11,093 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 22:32:11,093 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 22:32:11,093 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 22:32:11,094 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 22:32:11,094 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 22:32:11,286 - logger - INFO - Checking most recent email
+2023-04-09 22:32:11,286 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 22:32:11,286 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 22:32:11,286 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 22:32:11,286 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 22:32:11,286 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 22:32:11,286 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 22:32:11,287 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 22:32:11,287 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-09 22:32:11,287 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 22:32:28,651 - logger - INFO - Recieved New Email notification
+2023-04-09 22:32:28,926 - logger - INFO - Checking most recent email
+2023-04-09 22:32:28,926 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 22:32:28,926 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 22:32:28,926 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 22:32:28,926 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 22:32:28,926 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 22:32:28,927 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 22:32:28,927 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 22:32:28,927 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-09 22:32:28,927 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 22:33:03,414 - logger - INFO - Recieved New Email notification
+2023-04-09 22:33:03,767 - logger - INFO - Checking most recent email
+2023-04-09 22:33:03,767 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 22:33:03,768 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 22:33:03,768 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 22:33:03,768 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 22:33:03,768 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 22:33:03,768 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 22:33:03,768 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 22:33:03,769 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-09 22:33:03,769 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 22:33:19,387 - logger - INFO - Recieved New Email notification
+2023-04-09 22:33:19,684 - logger - INFO - Checking most recent email
+2023-04-09 22:33:19,684 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 22:33:19,684 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 22:33:19,685 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 22:33:19,685 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 22:33:19,685 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 22:33:19,685 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 22:33:19,685 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 22:33:19,686 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 22:36:49,341 - logger - INFO - Started Server
+2023-04-09 22:37:10,479 - logger - INFO - Started Server
+2023-04-09 22:37:13,787 - logger - INFO - Recieved New Email notification
+2023-04-09 22:37:14,187 - logger - INFO - Checking most recent email
+2023-04-09 22:37:14,187 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 22:37:14,187 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 22:37:14,187 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 22:37:14,187 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 22:37:14,187 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 22:37:14,188 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 22:37:14,188 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 22:37:14,188 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-09 22:37:14,188 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 22:47:51,960 - logger - INFO - Started Server
+2023-04-09 22:47:55,014 - logger - INFO - Started Server
+2023-04-09 22:48:30,628 - logger - INFO - Started Server
+2023-04-09 22:48:43,294 - logger - INFO - Started Server
+2023-04-09 22:52:01,623 - logger - INFO - Started Server
+2023-04-09 22:53:17,691 - logger - INFO - Started Server
+2023-04-09 22:53:25,148 - logger - INFO - Recieved New Email notification
+2023-04-09 22:53:25,553 - logger - INFO - Checking most recent email
+2023-04-09 22:53:25,554 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 22:53:25,554 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 22:53:25,554 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 22:53:25,554 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 22:53:25,554 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 22:53:25,554 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 22:53:25,554 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-09 22:53:25,555 - logger - INFO - --- working->True ---
+2023-04-09 22:53:27,398 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-09 22:53:27,398 - logger - INFO - Calling open string function
+2023-04-09 22:53:27,491 - logger - INFO - --- working->False ---
+2023-04-09 22:53:27,492 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-09 22:53:38,218 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-09 22:53:38,218 - logger - INFO - Creating Andrea Elam's Folder
+2023-04-09 22:53:39,311 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1e7xZig1v1PFtKvWnnvkVIvv8E0EtzoTv
+2023-04-09 22:53:41,126 - logger - INFO - Document was created with ID: 1Ig1b5G-gI-Nh7SDp4C-BA5_Ls1qciMmrEMGi6vgdyh4
+2023-04-09 22:53:47,506 - logger - INFO - Got 5 licenses for Andrea Elam
+2023-04-09 22:53:47,980 - logger - INFO - Updated Spreadsheet
+2023-04-09 22:53:49,487 - logger - INFO - File ID: 1w8spOytvGUIiu5nzGCiGUBw7LgMur3cq
+2023-04-09 22:53:49,488 - logger - INFO - Uploaded Resume Successfully
+2023-04-09 22:53:49,488 - logger - INFO - Created profile for Andrea Elam
+2023-04-09 22:53:49,823 - logger - INFO - Updated local json file for Andrea Elam
+2023-04-09 22:55:14,625 - logger - INFO - Started Server
+2023-04-09 22:55:20,705 - logger - INFO - Recieved New Email notification
+2023-04-09 22:55:21,090 - logger - INFO - Checking most recent email
+2023-04-09 22:55:21,091 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 22:55:21,091 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 22:55:21,091 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 22:55:21,091 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 22:55:21,091 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 22:55:21,091 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 22:55:21,096 - logger - INFO - Candidate already exists, returning

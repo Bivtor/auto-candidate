@@ -29,7 +29,7 @@ window.addEventListener('load', function() {
                 GM_openInTab (candidate_href); // open each one in a new window
 
                 //TODO Close all the tabs once i == 0
-                if (i < num_loops) {i++; myLoop(i);}//  decrement i and call myLoop again if i > 0
+                if (i < num_loops-1) {i++; myLoop(i);}//  decrement i and call myLoop again if i > 0
             }, 30000)
         })(0);
     }, 3000)
