@@ -629,3 +629,788 @@
 2023-04-09 22:55:21,091 - logger - INFO - Attempting to retrieve sheet destination
 2023-04-09 22:55:21,091 - logger - INFO - Found appropriate sheet destination: Therapist
 2023-04-09 22:55:21,096 - logger - INFO - Candidate already exists, returning
+2023-04-09 23:38:50,657 - logger - INFO - Recieved New Email notification
+2023-04-09 23:38:51,328 - logger - INFO - Checking most recent email
+2023-04-09 23:38:51,328 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-09 23:38:51,328 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/cc835aa9/47ef03b4?
+2023-04-09 23:38:51,328 - logger - INFO - Got Name : Andrea Elam
+2023-04-09 23:38:51,328 - logger - INFO - Got Job Title : primary therapist
+2023-04-09 23:38:51,328 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-09 23:38:51,329 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-09 23:38:51,329 - logger - INFO - Candidate already exists, returning
+2023-04-10 04:03:05,605 - logger - INFO - Recieved New Email notification
+2023-04-10 04:03:06,243 - logger - INFO - Checking most recent email
+2023-04-10 04:03:06,243 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 06:38:49,180 - logger - INFO - Recieved New Email notification
+2023-04-10 06:38:49,891 - logger - INFO - Checking most recent email
+2023-04-10 06:38:49,892 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 07:12:35,910 - logger - INFO - Recieved New Email notification
+2023-04-10 07:12:36,302 - logger - INFO - Checking most recent email
+2023-04-10 07:12:36,302 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 07:41:17,643 - logger - INFO - Recieved New Email notification
+2023-04-10 07:41:18,369 - logger - INFO - Checking most recent email
+2023-04-10 07:41:18,369 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 09:37:21,115 - logger - INFO - Recieved New Email notification
+2023-04-10 09:37:21,844 - logger - INFO - Checking most recent email
+2023-04-10 09:37:21,844 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 10:09:05,757 - logger - INFO - Recieved New Email notification
+2023-04-10 10:09:06,194 - logger - INFO - Checking most recent email
+2023-04-10 10:09:06,194 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 10:09:09,258 - logger - INFO - Recieved New Email notification
+2023-04-10 10:09:09,544 - logger - INFO - Checking most recent email
+2023-04-10 10:09:09,544 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 10:40:32,056 - logger - INFO - Recieved New Email notification
+2023-04-10 10:40:32,726 - logger - INFO - Checking most recent email
+2023-04-10 10:40:32,727 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 10:45:00,469 - logger - INFO - Recieved New Email notification
+2023-04-10 10:45:00,923 - logger - INFO - Checking most recent email
+2023-04-10 10:45:00,923 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 10:47:45,108 - logger - INFO - Recieved New Email notification
+2023-04-10 10:47:45,561 - logger - INFO - Checking most recent email
+2023-04-10 10:47:45,561 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 11:24:53,693 - logger - INFO - Recieved New Email notification
+2023-04-10 11:24:54,130 - logger - INFO - Checking most recent email
+2023-04-10 11:24:54,130 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 11:30:49,304 - logger - INFO - Recieved New Email notification
+2023-04-10 11:30:49,702 - logger - INFO - Checking most recent email
+2023-04-10 11:30:49,702 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 11:31:04,316 - logger - INFO - Recieved New Email notification
+2023-04-10 11:31:04,668 - logger - INFO - Checking most recent email
+2023-04-10 11:31:04,668 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 11:31:15,549 - logger - INFO - Recieved New Email notification
+2023-04-10 11:31:15,903 - logger - INFO - Checking most recent email
+2023-04-10 11:31:15,904 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 11:31:43,242 - logger - INFO - Recieved New Email notification
+2023-04-10 11:31:43,613 - logger - INFO - Checking most recent email
+2023-04-10 11:31:43,613 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 11:35:04,550 - logger - INFO - Recieved New Email notification
+2023-04-10 11:35:04,987 - logger - INFO - Checking most recent email
+2023-04-10 11:35:04,987 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 11:48:58,709 - logger - INFO - Recieved New Email notification
+2023-04-10 11:49:00,366 - logger - INFO - Checking most recent email
+2023-04-10 11:49:00,366 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 11:54:46,542 - logger - INFO - Recieved New Email notification
+2023-04-10 11:54:47,013 - logger - INFO - Checking most recent email
+2023-04-10 11:54:47,013 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 12:40:01,577 - logger - INFO - Recieved New Email notification
+2023-04-10 12:40:02,204 - logger - INFO - Checking most recent email
+2023-04-10 12:40:02,204 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 14:25:16,222 - logger - INFO - Recieved New Email notification
+2023-04-10 14:25:16,943 - logger - INFO - Checking most recent email
+2023-04-10 14:25:16,943 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 14:25:18,318 - logger - INFO - Recieved New Email notification
+2023-04-10 14:25:18,624 - logger - INFO - Checking most recent email
+2023-04-10 14:25:18,624 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 15:17:52,626 - logger - INFO - Recieved New Email notification
+2023-04-10 15:17:53,016 - logger - INFO - Checking most recent email
+2023-04-10 15:17:53,016 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 15:17:53,370 - logger - INFO - Recieved New Email notification
+2023-04-10 15:17:53,703 - logger - INFO - Checking most recent email
+2023-04-10 15:17:53,703 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 16:00:35,440 - logger - INFO - Recieved New Email notification
+2023-04-10 16:00:36,074 - logger - INFO - Checking most recent email
+2023-04-10 16:00:36,074 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-10 17:05:03,035 - logger - INFO - --- working->True ---
+2023-04-10 17:05:05,917 - logger - INFO - Successfully Set Column Variables
+2023-04-10 17:05:05,917 - logger - INFO - Opening Link: https://www.ziprecruiter.com/candidates?quiz_id=f7f9cf1b
+2023-04-10 17:05:06,092 - logger - INFO - --- working->False ---
+2023-04-10 17:08:27,109 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-10 17:08:27,109 - logger - INFO - Creating Elizabeth Burgoon's Folder
+2023-04-10 17:08:28,272 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1shMUNSqCbMbevZ4xcVeSA53ITxf91HtF
+2023-04-10 17:08:30,073 - logger - INFO - Document was created with ID: 1htlCwLuenb7bhc6pDYhNhhtKXDRfag0GmTOEpdav4tU
+2023-04-10 17:08:39,078 - logger - INFO - Got 3 licenses for Elizabeth Burgoon
+2023-04-10 17:08:39,936 - logger - INFO - Updated Spreadsheet
+2023-04-10 17:08:41,517 - logger - INFO - File ID: 1uEPIToftSHGcl4s3gRt849Ilz5z-ALpd
+2023-04-10 17:08:41,517 - logger - INFO - Uploaded Resume Successfully
+2023-04-10 17:08:41,517 - logger - INFO - Created profile for Elizabeth Burgoon
+2023-04-10 17:08:42,110 - logger - INFO - Updated local json file for Elizabeth Burgoon
+2023-04-10 17:08:47,098 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-10 17:08:47,098 - logger - INFO - Creating Jennifer Olvera's Folder
+2023-04-10 17:08:47,972 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1-yefK0OxgFyzspXrC8VGptKMFVBSfr0j
+2023-04-10 17:08:49,899 - logger - INFO - Document was created with ID: 1R6bpso3TrlQ_WBO4Vs1D0P6SYQbalUbu7u1Uqa8H8J4
+2023-04-10 17:08:51,855 - logger - INFO - Got 5 licenses for Jennifer Olvera
+2023-04-10 17:08:52,478 - logger - INFO - Updated Spreadsheet
+2023-04-10 17:08:53,730 - logger - INFO - File ID: 1NYjo_m8rXhxQd-AJyUpCvgBdmZhwUBdG
+2023-04-10 17:08:53,730 - logger - INFO - Uploaded Resume Successfully
+2023-04-10 17:08:53,730 - logger - INFO - Created profile for Jennifer Olvera
+2023-04-10 17:08:54,261 - logger - INFO - Updated local json file for Jennifer Olvera
+2023-04-10 17:48:00,162 - logger - INFO - --- working->True ---
+2023-04-10 17:48:01,813 - logger - INFO - Successfully Set Column Variables
+2023-04-10 17:48:01,813 - logger - INFO - Opening Link: https://www.ziprecruiter.com/candidates?quiz_id=6335538b
+2023-04-10 17:48:01,909 - logger - INFO - --- working->False ---
+2023-04-10 17:48:38,088 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-10 17:48:38,088 - logger - INFO - Creating Renee Wait's Folder
+2023-04-10 17:48:39,014 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ar9xAY2SqeQOJTxtMFPGZbXYG6I-cftD
+2023-04-10 17:48:40,839 - logger - INFO - Document was created with ID: 1K5dLFLSRh8QVWJh8SJ44Y9swlMSPkgglV1Ox_NiYybc
+2023-04-10 17:48:44,182 - logger - INFO - Got 5 licenses for Renee Wait
+2023-04-10 17:48:44,874 - logger - INFO - Updated Spreadsheet
+2023-04-10 17:48:46,218 - logger - INFO - File ID: 1KfnmSkdVR4_OxvDls-TaOjXo-l9yzxDa
+2023-04-10 17:48:46,218 - logger - INFO - Uploaded Resume Successfully
+2023-04-10 17:48:46,218 - logger - INFO - Created profile for Renee Wait
+2023-04-10 17:48:46,694 - logger - INFO - Updated local json file for Renee Wait
+2023-04-11 06:01:18,005 - logger - INFO - Recieved New Email notification
+2023-04-11 06:01:19,127 - logger - INFO - Checking most recent email
+2023-04-11 06:01:19,128 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 07:24:57,718 - logger - INFO - Recieved New Email notification
+2023-04-11 07:24:58,421 - logger - INFO - Checking most recent email
+2023-04-11 07:24:58,422 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 07:59:22,236 - logger - INFO - Recieved New Email notification
+2023-04-11 07:59:22,638 - logger - INFO - Checking most recent email
+2023-04-11 07:59:22,638 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 08:34:16,031 - logger - INFO - Recieved New Email notification
+2023-04-11 08:34:16,736 - logger - INFO - Checking most recent email
+2023-04-11 08:34:16,736 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 09:19:37,873 - logger - INFO - Recieved New Email notification
+2023-04-11 09:19:38,346 - logger - INFO - Checking most recent email
+2023-04-11 09:19:38,346 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 09:48:38,022 - logger - INFO - Recieved New Email notification
+2023-04-11 09:48:38,648 - logger - INFO - Checking most recent email
+2023-04-11 09:48:38,649 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 10:35:15,981 - logger - INFO - Recieved New Email notification
+2023-04-11 10:35:16,379 - logger - INFO - Checking most recent email
+2023-04-11 10:35:16,379 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 10:55:38,930 - logger - INFO - Recieved New Email notification
+2023-04-11 10:55:39,566 - logger - INFO - Checking most recent email
+2023-04-11 10:55:39,566 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 11:09:24,606 - logger - INFO - Recieved New Email notification
+2023-04-11 11:09:24,988 - logger - INFO - Checking most recent email
+2023-04-11 11:09:24,989 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 13:29:06,665 - logger - INFO - Recieved New Email notification
+2023-04-11 13:29:07,707 - logger - INFO - Checking most recent email
+2023-04-11 13:29:07,707 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 13:32:15,127 - logger - INFO - Recieved New Email notification
+2023-04-11 13:32:15,500 - logger - INFO - Checking most recent email
+2023-04-11 13:32:15,500 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 14:28:43,658 - logger - INFO - Recieved New Email notification
+2023-04-11 14:28:44,095 - logger - INFO - Checking most recent email
+2023-04-11 14:28:44,095 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 14:28:44,483 - logger - INFO - Recieved New Email notification
+2023-04-11 14:28:44,850 - logger - INFO - Checking most recent email
+2023-04-11 14:28:44,850 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 14:47:44,468 - logger - INFO - Started Server
+2023-04-11 14:48:10,223 - logger - INFO - --- working->True ---
+2023-04-11 14:48:13,632 - logger - INFO - Successfully Set Column Variables
+2023-04-11 14:48:13,632 - logger - INFO - Opening Link: google.com
+2023-04-11 14:48:13,815 - logger - INFO - --- working->False ---
+2023-04-11 14:58:07,056 - logger - INFO - Recieved New Email notification
+2023-04-11 14:58:07,471 - logger - INFO - Checking most recent email
+2023-04-11 14:58:07,471 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 14:58:24,414 - logger - INFO - Recieved New Email notification
+2023-04-11 14:58:24,785 - logger - INFO - Checking most recent email
+2023-04-11 14:58:24,786 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 18:20:29,179 - logger - INFO - Recieved New Email notification
+2023-04-11 18:20:29,885 - logger - INFO - Checking most recent email
+2023-04-11 18:20:29,886 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 20:42:15,987 - logger - INFO - Recieved New Email notification
+2023-04-11 20:42:16,752 - logger - INFO - Checking most recent email
+2023-04-11 20:42:16,752 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 20:52:16,314 - logger - INFO - Recieved New Email notification
+2023-04-11 20:52:16,738 - logger - INFO - Checking most recent email
+2023-04-11 20:52:16,738 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-11 20:55:00,613 - logger - INFO - Recieved New Email notification
+2023-04-11 20:55:01,083 - logger - INFO - Checking most recent email
+2023-04-11 20:55:01,083 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 04:06:40,145 - logger - INFO - Recieved New Email notification
+2023-04-12 04:06:41,135 - logger - INFO - Checking most recent email
+2023-04-12 04:06:41,135 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 05:40:15,990 - logger - INFO - Recieved New Email notification
+2023-04-12 05:40:16,709 - logger - INFO - Checking most recent email
+2023-04-12 05:40:16,709 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 08:00:09,682 - logger - INFO - Recieved New Email notification
+2023-04-12 08:00:10,403 - logger - INFO - Checking most recent email
+2023-04-12 08:00:10,403 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 08:24:44,743 - logger - INFO - Recieved New Email notification
+2023-04-12 08:24:45,180 - logger - INFO - Checking most recent email
+2023-04-12 08:24:45,181 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 08:24:46,214 - logger - INFO - Recieved New Email notification
+2023-04-12 08:24:46,569 - logger - INFO - Checking most recent email
+2023-04-12 08:24:46,569 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 09:19:59,393 - logger - INFO - Recieved New Email notification
+2023-04-12 09:20:00,709 - logger - INFO - Checking most recent email
+2023-04-12 09:20:00,709 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:29:45,945 - logger - INFO - Recieved New Email notification
+2023-04-12 10:29:46,656 - logger - INFO - Checking most recent email
+2023-04-12 10:29:46,656 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:30:09,745 - logger - INFO - Recieved New Email notification
+2023-04-12 10:30:10,111 - logger - INFO - Checking most recent email
+2023-04-12 10:30:10,111 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:30:47,643 - logger - INFO - Recieved New Email notification
+2023-04-12 10:30:47,992 - logger - INFO - Checking most recent email
+2023-04-12 10:30:47,992 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:31:07,742 - logger - INFO - Recieved New Email notification
+2023-04-12 10:31:08,110 - logger - INFO - Checking most recent email
+2023-04-12 10:31:08,110 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:32:07,258 - logger - INFO - Recieved New Email notification
+2023-04-12 10:32:07,649 - logger - INFO - Checking most recent email
+2023-04-12 10:32:07,650 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:33:25,612 - logger - INFO - Recieved New Email notification
+2023-04-12 10:33:26,013 - logger - INFO - Checking most recent email
+2023-04-12 10:33:26,013 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:38:08,805 - logger - INFO - Recieved New Email notification
+2023-04-12 10:38:09,269 - logger - INFO - Checking most recent email
+2023-04-12 10:38:09,270 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:55:32,719 - logger - INFO - Recieved New Email notification
+2023-04-12 10:55:33,254 - logger - INFO - Checking most recent email
+2023-04-12 10:55:33,254 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:55:33,448 - logger - INFO - Recieved New Email notification
+2023-04-12 10:55:33,743 - logger - INFO - Checking most recent email
+2023-04-12 10:55:33,743 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 10:57:59,462 - logger - INFO - Recieved New Email notification
+2023-04-12 10:57:59,893 - logger - INFO - Checking most recent email
+2023-04-12 10:57:59,893 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 12:00:39,742 - logger - INFO - Recieved New Email notification
+2023-04-12 12:00:40,196 - logger - INFO - Recieved New Email notification
+2023-04-12 12:00:40,383 - logger - INFO - Checking most recent email
+2023-04-12 12:00:40,383 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 12:00:40,571 - logger - INFO - Checking most recent email
+2023-04-12 12:00:40,572 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 12:15:53,777 - logger - INFO - Recieved New Email notification
+2023-04-12 12:15:54,228 - logger - INFO - Checking most recent email
+2023-04-12 12:15:54,228 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 12:40:16,703 - logger - INFO - Recieved New Email notification
+2023-04-12 12:40:17,260 - logger - INFO - Checking most recent email
+2023-04-12 12:40:17,260 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 12:40:17,260 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/f7f9cf1b/45d56626?
+2023-04-12 12:40:17,260 - logger - INFO - Got Name : Samantha Agricola
+2023-04-12 12:40:17,260 - logger - INFO - Got Job Title : clinical director
+2023-04-12 12:40:17,260 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 12:40:17,265 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 12:40:17,271 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 12:40:17,276 - logger - INFO - --- working->True ---
+2023-04-12 12:40:19,169 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 12:40:19,169 - logger - INFO - Calling open string function
+2023-04-12 12:40:19,270 - logger - INFO - --- working->False ---
+2023-04-12 12:40:19,271 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 12:40:30,551 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 12:40:30,551 - logger - INFO - Creating Samantha Agricola's Folder
+2023-04-12 12:40:31,341 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1HKDv4i3iBm2eK_QBG1Y8iC2V8KuneBYN
+2023-04-12 12:40:32,910 - logger - INFO - Document was created with ID: "1g86tU2q-yvX_VZZR9F9pHmUW7e3wNUi14BLTY8Vfncw".
+2023-04-12 12:40:37,924 - logger - INFO - Got 1 licenses for Samantha Agricola
+2023-04-12 12:40:38,381 - logger - INFO - Updated Spreadsheet
+2023-04-12 12:40:39,757 - logger - INFO - File ID: 1-qaHjUJ8zZr5QxugLi6de5he6pG5fNfX
+2023-04-12 12:40:39,757 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 12:40:39,757 - logger - INFO - Created profile for Samantha Agricola
+2023-04-12 12:40:40,153 - logger - INFO - Updated local json file for Samantha Agricola
+2023-04-12 12:40:42,552 - logger - INFO - Recieved New Email notification
+2023-04-12 12:40:42,920 - logger - INFO - Checking most recent email
+2023-04-12 12:40:42,920 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 12:40:42,920 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/f7f9cf1b/45d56626?
+2023-04-12 12:40:42,920 - logger - INFO - Got Name : Samantha Agricola
+2023-04-12 12:40:42,920 - logger - INFO - Got Job Title : clinical director
+2023-04-12 12:40:42,920 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 12:40:42,921 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 12:40:42,926 - logger - INFO - Candidate already exists, returning
+2023-04-12 12:46:38,314 - logger - INFO - --- working->True ---
+2023-04-12 12:46:39,664 - logger - INFO - Successfully Set Column Variables
+2023-04-12 12:46:39,664 - logger - INFO - Opening Link: https://www.ziprecruiter.com/contact/response/f7f9cf1b/45d56626
+2023-04-12 12:46:39,737 - logger - INFO - --- working->False ---
+2023-04-12 12:46:50,352 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-12 12:46:50,352 - logger - INFO - Creating Samantha Agricola's Folder
+2023-04-12 12:46:51,406 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1JCXSO235May5Kc-nRQfcWlNEQO6mh2HG
+2023-04-12 12:46:53,182 - logger - INFO - Document was created with ID: 1oBtXvpFK9h6nBJALcg_UrtYY8118EllmCUEK9BtpI04
+2023-04-12 12:46:55,549 - logger - INFO - Got 1 licenses for Samantha Agricola
+2023-04-12 12:46:56,034 - logger - INFO - Updated Spreadsheet
+2023-04-12 12:46:57,558 - logger - INFO - File ID: 1JoVMMIx6FOVI_ufeURrli1ODBpg0ijar
+2023-04-12 12:46:57,558 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 12:46:57,558 - logger - INFO - Created profile for Samantha Agricola
+2023-04-12 12:46:57,929 - logger - INFO - Updated local json file for Samantha Agricola
+2023-04-12 12:48:05,219 - logger - INFO - --- working->True ---
+2023-04-12 12:48:06,534 - logger - INFO - Successfully Set Column Variables
+2023-04-12 12:48:06,534 - logger - INFO - Opening Link: https://www.ziprecruiter.com/contact/response/f7f9cf1b/fddc441b
+2023-04-12 12:48:06,604 - logger - INFO - --- working->False ---
+2023-04-12 12:48:16,774 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-12 12:48:16,775 - logger - INFO - Creating Jennifer Olvera's Folder
+2023-04-12 12:48:17,546 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ijS0CvkG8n_YQiDW8MgatJQ_epV-U358
+2023-04-12 12:48:19,366 - logger - INFO - Document was created with ID: 1U9SBqJScOg_QTcbEGZgkF3aC5zNrHxaUulUeZcdTKhQ
+2023-04-12 12:48:21,130 - logger - INFO - Got 5 licenses for Jennifer Olvera
+2023-04-12 12:48:21,602 - logger - INFO - Updated Spreadsheet
+2023-04-12 12:48:22,940 - logger - INFO - File ID: 1jtG0T_fONai2jGBifJghVPorsA3PD_4P
+2023-04-12 12:48:22,940 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 12:48:22,940 - logger - INFO - Created profile for Jennifer Olvera
+2023-04-12 12:48:23,310 - logger - INFO - Updated local json file for Jennifer Olvera
+2023-04-12 12:49:30,417 - logger - INFO - --- working->True ---
+2023-04-12 12:49:31,472 - logger - INFO - Successfully Set Column Variables
+2023-04-12 12:49:31,472 - logger - INFO - Opening Link: https://www.ziprecruiter.com/contact/response/f7f9cf1b/ba2545a0
+2023-04-12 12:49:31,546 - logger - INFO - --- working->False ---
+2023-04-12 12:49:41,672 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-12 12:49:41,672 - logger - INFO - Creating Elizabeth Burgoon's Folder
+2023-04-12 12:49:42,529 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1N1zWTkIT6vEpaYoSKiCh5sxNzUc6cII4
+2023-04-12 12:49:44,051 - logger - INFO - Document was created with ID: 1vkGkxahhEL_W065r8sTQybyazZ_aj0OZQy5BCRYrMmc
+2023-04-12 12:49:45,677 - logger - INFO - Got 3 licenses for Elizabeth Burgoon
+2023-04-12 12:49:46,142 - logger - INFO - Updated Spreadsheet
+2023-04-12 12:49:47,416 - logger - INFO - File ID: 1pG4x8EvyVzT61xtTjB79SRhWwewcWHGw
+2023-04-12 12:49:47,417 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 12:49:47,417 - logger - INFO - Created profile for Elizabeth Burgoon
+2023-04-12 12:49:47,806 - logger - INFO - Updated local json file for Elizabeth Burgoon
+2023-04-12 12:51:12,134 - logger - INFO - --- working->True ---
+2023-04-12 12:51:13,425 - logger - INFO - Successfully Set Column Variables
+2023-04-12 12:51:13,425 - logger - INFO - Opening Link: https://www.ziprecruiter.com/contact/response/22c2d9b9/b0d8b0a9?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=22c2d9b9&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=4&search_id=a7298f37-25ee-4e69-81aa-b9a925f0227a&pos=0
+2023-04-12 12:51:13,547 - logger - INFO - --- working->False ---
+2023-04-12 12:51:23,824 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-12 12:51:23,824 - logger - INFO - Creating Effie Gwarawada's Folder
+2023-04-12 12:51:24,583 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1t4BZgdn7ez7bkIUPJJTxV2QCrhdcY7J0
+2023-04-12 12:51:26,111 - logger - INFO - Document was created with ID: 153xf9RU5fPOzY1G7BMhNM0HR_-JXUNti3yfnJtxu_Fg
+2023-04-12 12:51:27,950 - logger - INFO - Got 0 licenses for Effie Gwarawada
+2023-04-12 12:51:28,441 - logger - INFO - Updated Spreadsheet
+2023-04-12 12:51:29,742 - logger - INFO - File ID: 1eqw7hhsAM8OIybtsEQSTAzcc1U64EJzz
+2023-04-12 12:51:29,742 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 12:51:29,742 - logger - INFO - Created profile for Effie Gwarawada
+2023-04-12 12:51:30,263 - logger - INFO - Updated local json file for Effie Gwarawada
+2023-04-12 12:52:09,271 - logger - INFO - --- working->True ---
+2023-04-12 12:52:10,408 - logger - INFO - Successfully Set Column Variables
+2023-04-12 12:52:10,408 - logger - INFO - Opening Link: https://www.ziprecruiter.com/contact/response/a941dfa9/86437bf9?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=a941dfa9&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=4&search_id=b4b33960-6afe-4041-8f80-c3181eae15f9&pos=1
+2023-04-12 12:52:10,529 - logger - INFO - --- working->False ---
+2023-04-12 12:52:20,859 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-12 12:52:20,859 - logger - INFO - Creating Kevin Keeran's Folder
+2023-04-12 12:52:21,680 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/12NvEULDkdKhb4ettTSao5G9WNy115_Uz
+2023-04-12 12:52:23,346 - logger - INFO - Document was created with ID: 1DRwM-eNktWVFkkVGBdMa-CVYIfw6mSYjDmpP9Zff13s
+2023-04-12 12:52:25,870 - logger - INFO - Got 5 licenses for Kevin Keeran
+2023-04-12 12:52:26,359 - logger - INFO - Updated Spreadsheet
+2023-04-12 12:52:27,534 - logger - INFO - File ID: 1BLf7GIcPviqifWWbaca30A4OsHkyyvNn
+2023-04-12 12:52:27,534 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 12:52:27,534 - logger - INFO - Created profile for Kevin Keeran
+2023-04-12 12:52:27,982 - logger - INFO - Updated local json file for Kevin Keeran
+2023-04-12 12:53:21,491 - logger - INFO - --- working->True ---
+2023-04-12 12:53:22,813 - logger - INFO - Successfully Set Column Variables
+2023-04-12 12:53:22,813 - logger - INFO - Opening Link: https://www.ziprecruiter.com/contact/response/a941dfa9/f6025676?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=a941dfa9&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=4&search_id=b4b33960-6afe-4041-8f80-c3181eae15f9&pos=2
+2023-04-12 12:53:22,939 - logger - INFO - --- working->False ---
+2023-04-12 12:53:33,125 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-12 12:53:33,125 - logger - INFO - Creating Deborah Kindle's Folder
+2023-04-12 12:53:33,869 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1hTGBaXA8L0et3V_BDqSmg2pu1ENJ_Tj0
+2023-04-12 12:53:35,595 - logger - INFO - Document was created with ID: 156GkppbZ1nIDJdEf-DYfAklYLAVz9J41EiGE9SvN1mA
+2023-04-12 12:53:37,514 - logger - INFO - Got 5 licenses for Deborah Kindle
+2023-04-12 12:53:38,003 - logger - INFO - Updated Spreadsheet
+2023-04-12 12:53:39,128 - logger - INFO - File ID: 1uD22gJ_kPMJ9lWmKPpj-X58b-dUm5rv4
+2023-04-12 12:53:39,128 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 12:53:39,128 - logger - INFO - Created profile for Deborah Kindle
+2023-04-12 12:53:39,517 - logger - INFO - Updated local json file for Deborah Kindle
+2023-04-12 12:53:50,885 - logger - INFO - --- working->True ---
+2023-04-12 12:53:51,910 - logger - INFO - Successfully Set Column Variables
+2023-04-12 12:53:51,910 - logger - INFO - Opening Link: https://www.ziprecruiter.com/contact/response/a941dfa9/c3961bd3?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=a941dfa9&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=4&search_id=b4b33960-6afe-4041-8f80-c3181eae15f9&pos=3
+2023-04-12 12:53:52,026 - logger - INFO - --- working->False ---
+2023-04-12 12:54:02,090 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-12 12:54:02,090 - logger - INFO - Creating Kyla Obillos's Folder
+2023-04-12 12:54:02,922 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/19FVDAlu5iJEuGZvQ4WoxQAtI4XPJOPj6
+2023-04-12 12:54:04,565 - logger - INFO - Document was created with ID: 1SIBSr8hwmqEj-S4-N0M2RtSvC6fQjAFz6uus9WXFxuw
+2023-04-12 12:54:05,973 - logger - INFO - Got 0 licenses for Kyla Obillos
+2023-04-12 12:54:06,412 - logger - INFO - Updated Spreadsheet
+2023-04-12 12:54:07,569 - logger - INFO - File ID: 1keTFL7UCfhzI29FE7k36N0mhtLR_sK6D
+2023-04-12 12:54:07,569 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 12:54:07,569 - logger - INFO - Created profile for Kyla Obillos
+2023-04-12 12:54:07,953 - logger - INFO - Updated local json file for Kyla Obillos
+2023-04-12 13:16:08,461 - logger - INFO - Recieved New Email notification
+2023-04-12 13:16:09,142 - logger - INFO - Checking most recent email
+2023-04-12 13:16:09,142 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 13:16:09,142 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/f7f9cf1b/45d56626?
+2023-04-12 13:16:09,142 - logger - INFO - Got Name : Samantha Agricola
+2023-04-12 13:16:09,142 - logger - INFO - Got Job Title : clinical director
+2023-04-12 13:16:09,142 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 13:16:09,142 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 13:16:09,148 - logger - INFO - Candidate already exists, returning
+2023-04-12 13:16:33,636 - logger - INFO - Recieved New Email notification
+2023-04-12 13:16:33,997 - logger - INFO - Checking most recent email
+2023-04-12 13:16:33,997 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 13:16:34,165 - logger - INFO - Recieved New Email notification
+2023-04-12 13:16:34,510 - logger - INFO - Checking most recent email
+2023-04-12 13:16:34,510 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 13:16:35,854 - logger - INFO - Recieved New Email notification
+2023-04-12 13:16:36,214 - logger - INFO - Checking most recent email
+2023-04-12 13:16:36,215 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-12 13:46:23,773 - logger - INFO - Recieved New Email notification
+2023-04-12 13:46:24,156 - logger - INFO - Checking most recent email
+2023-04-12 13:46:24,156 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 13:46:24,156 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/78669b34?
+2023-04-12 13:46:24,156 - logger - INFO - Got Name : Odra Miller
+2023-04-12 13:46:24,156 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 13:46:24,156 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 13:46:24,156 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 13:46:24,157 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 13:46:24,158 - logger - INFO - --- working->True ---
+2023-04-12 13:46:25,680 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 13:46:25,680 - logger - INFO - Calling open string function
+2023-04-12 13:46:25,761 - logger - INFO - --- working->False ---
+2023-04-12 13:46:25,761 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 13:46:36,111 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 13:46:36,111 - logger - INFO - Creating Odra Miller's Folder
+2023-04-12 13:46:36,834 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Bbcf9aTRrPzX8Gwpw9vt5ktcsZKCKqh0
+2023-04-12 13:46:38,447 - logger - INFO - Document was created with ID: "1DRK_z7AkOInsazt2Q2qE8jGJvbDZ8LRBo3Y2LrFTiI0".
+2023-04-12 13:46:43,009 - logger - INFO - Got 5 licenses for Odra Miller
+2023-04-12 13:46:43,815 - logger - INFO - Updated Spreadsheet
+2023-04-12 13:46:45,169 - logger - INFO - File ID: 1psyXCSteWEneeKcCd7cHS8M5qs9qUpqQ
+2023-04-12 13:46:45,169 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 13:46:45,169 - logger - INFO - Created profile for Odra Miller
+2023-04-12 13:46:45,617 - logger - INFO - Updated local json file for Odra Miller
+2023-04-12 13:48:44,928 - logger - INFO - Recieved New Email notification
+2023-04-12 13:48:45,331 - logger - INFO - Checking most recent email
+2023-04-12 13:48:45,331 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 13:48:45,331 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/78669b34?
+2023-04-12 13:48:45,331 - logger - INFO - Got Name : Odra Miller
+2023-04-12 13:48:45,331 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 13:48:45,331 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 13:48:45,331 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 13:48:45,337 - logger - INFO - Candidate already exists, returning
+2023-04-12 14:00:21,995 - logger - INFO - Recieved New Email notification
+2023-04-12 14:00:22,544 - logger - INFO - Checking most recent email
+2023-04-12 14:00:22,544 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:00:22,544 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/78669b34?
+2023-04-12 14:00:22,544 - logger - INFO - Got Name : Odra Miller
+2023-04-12 14:00:22,544 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 14:00:22,544 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:00:22,544 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:00:22,545 - logger - INFO - Candidate already exists, returning
+2023-04-12 14:11:06,524 - logger - INFO - Recieved New Email notification
+2023-04-12 14:11:06,909 - logger - INFO - Checking most recent email
+2023-04-12 14:11:06,909 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:11:06,909 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/3704f235?
+2023-04-12 14:11:06,909 - logger - INFO - Got Name : Lela Ryan
+2023-04-12 14:11:06,909 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 14:11:06,909 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:11:06,910 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:11:06,910 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:11:06,911 - logger - INFO - --- working->True ---
+2023-04-12 14:11:07,372 - logger - INFO - Recieved New Email notification
+2023-04-12 14:11:07,801 - logger - INFO - Checking most recent email
+2023-04-12 14:11:07,801 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:11:07,801 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/3704f235?
+2023-04-12 14:11:07,801 - logger - INFO - Got Name : Lela Ryan
+2023-04-12 14:11:07,801 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 14:11:07,801 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:11:07,801 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:11:07,802 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:11:07,806 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-12 14:11:07,806 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:11:08,492 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 14:11:08,492 - logger - INFO - Calling open string function
+2023-04-12 14:11:08,567 - logger - INFO - --- working->False ---
+2023-04-12 14:11:08,567 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:11:19,281 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 14:11:19,281 - logger - INFO - Creating Lela Ryan's Folder
+2023-04-12 14:11:19,947 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1D8aDtcTEzuUVo0wk4tGSjUS3g2R7AGxo
+2023-04-12 14:11:22,718 - logger - INFO - Document was created with ID: "1Zc7TnPq7vcypaOUfGHfTeCEukG3D4cuMqtG6oK8WfmE".
+2023-04-12 14:11:24,525 - logger - INFO - Got 5 licenses for Lela Ryan
+2023-04-12 14:11:25,171 - logger - INFO - Updated Spreadsheet
+2023-04-12 14:11:26,630 - logger - INFO - File ID: 1YlHSJP2IQH34qyINxs4ruIakY3Vdb9wP
+2023-04-12 14:11:26,630 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 14:11:26,630 - logger - INFO - Created profile for Lela Ryan
+2023-04-12 14:11:27,073 - logger - INFO - Updated local json file for Lela Ryan
+2023-04-12 14:28:06,697 - logger - INFO - Recieved New Email notification
+2023-04-12 14:28:07,330 - logger - INFO - Checking most recent email
+2023-04-12 14:28:07,330 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:28:07,330 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/c5aeff55?
+2023-04-12 14:28:07,330 - logger - INFO - Got Name : Ashelei Higuera
+2023-04-12 14:28:07,330 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 14:28:07,330 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:28:07,332 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:28:07,338 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:28:07,339 - logger - INFO - --- working->True ---
+2023-04-12 14:28:08,876 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 14:28:08,876 - logger - INFO - Calling open string function
+2023-04-12 14:28:08,949 - logger - INFO - --- working->False ---
+2023-04-12 14:28:08,949 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:28:19,147 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 14:28:19,147 - logger - INFO - Creating Ashelei Higuera's Folder
+2023-04-12 14:28:19,881 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/15lKQ6tw3OURXF617klK3ML9VyvBVaQr8
+2023-04-12 14:28:21,640 - logger - INFO - Document was created with ID: "12ff5XHMyYMx_TfJmhWPbScf2i-ljqWchhVh9M9oqg58".
+2023-04-12 14:28:29,633 - logger - INFO - Got 0 licenses for Ashelei Higuera
+2023-04-12 14:28:30,289 - logger - INFO - Updated Spreadsheet
+2023-04-12 14:28:31,711 - logger - INFO - File ID: 1Y9z_2tdgZIRasUjpkIDd9c6vL-bOzQbS
+2023-04-12 14:28:31,711 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 14:28:31,711 - logger - INFO - Created profile for Ashelei Higuera
+2023-04-12 14:28:32,166 - logger - INFO - Updated local json file for Ashelei Higuera
+2023-04-12 14:32:33,467 - logger - INFO - Recieved New Email notification
+2023-04-12 14:32:33,853 - logger - INFO - Checking most recent email
+2023-04-12 14:32:33,853 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:32:33,853 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/c5aeff55?
+2023-04-12 14:32:33,853 - logger - INFO - Got Name : Ashelei Higuera
+2023-04-12 14:32:33,853 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 14:32:33,853 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:32:33,853 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:32:33,860 - logger - INFO - Candidate already exists, returning
+2023-04-12 14:33:42,454 - logger - INFO - Recieved New Email notification
+2023-04-12 14:33:42,874 - logger - INFO - Checking most recent email
+2023-04-12 14:33:42,874 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:33:42,874 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/78669b34?
+2023-04-12 14:33:42,874 - logger - INFO - Got Name : Odra Miller
+2023-04-12 14:33:42,874 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 14:33:42,874 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:33:42,875 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:33:42,875 - logger - INFO - Candidate already exists, returning
+2023-04-12 14:40:35,130 - logger - INFO - Recieved New Email notification
+2023-04-12 14:40:35,558 - logger - INFO - Checking most recent email
+2023-04-12 14:40:35,558 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:40:35,558 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/fe1abb76?
+2023-04-12 14:40:35,558 - logger - INFO - Got Name : Jessica
+2023-04-12 14:40:35,558 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 14:40:35,558 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:40:35,558 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:40:35,559 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:40:35,560 - logger - INFO - --- working->True ---
+2023-04-12 14:40:36,256 - logger - INFO - Recieved New Email notification
+2023-04-12 14:40:36,554 - logger - INFO - Checking most recent email
+2023-04-12 14:40:36,554 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:40:36,554 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/fe1abb76?
+2023-04-12 14:40:36,554 - logger - INFO - Got Name : Jessica
+2023-04-12 14:40:36,554 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 14:40:36,554 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:40:36,554 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:40:36,555 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:40:36,555 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-12 14:40:36,555 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:40:37,144 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 14:40:37,144 - logger - INFO - Calling open string function
+2023-04-12 14:40:37,218 - logger - INFO - --- working->False ---
+2023-04-12 14:40:37,218 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:40:47,441 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 14:40:47,441 - logger - INFO - Creating Jessica's Folder
+2023-04-12 14:40:48,274 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1bEtwTq_J9bkDq-LbbnoVedxN3vJ4vIZl
+2023-04-12 14:40:50,080 - logger - INFO - Document was created with ID: "1NzpXuKHafaBPnx8ymd9KjCj0NAaCt4Wwr4Tn1cbsJr0".
+2023-04-12 14:41:04,736 - logger - INFO - Got 5 licenses for Jessica
+2023-04-12 14:41:05,363 - logger - INFO - Updated Spreadsheet
+2023-04-12 14:41:06,657 - logger - INFO - File ID: 1XuOjPkT5j4_9waw6o7J-jAm5HK52dUWi
+2023-04-12 14:41:06,658 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 14:41:06,658 - logger - INFO - Created profile for Jessica
+2023-04-12 14:41:07,152 - logger - INFO - Updated local json file for Jessica
+2023-04-12 14:42:14,313 - logger - INFO - Recieved New Email notification
+2023-04-12 14:42:14,444 - logger - INFO - Recieved New Email notification
+2023-04-12 14:42:14,691 - logger - INFO - Checking most recent email
+2023-04-12 14:42:14,691 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:42:14,691 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/f7f9cf1b/db31b247?
+2023-04-12 14:42:14,691 - logger - INFO - Got Name : Paradise saghafi
+2023-04-12 14:42:14,691 - logger - INFO - Got Job Title : clinical director
+2023-04-12 14:42:14,691 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:42:14,691 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:42:14,697 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:42:14,698 - logger - INFO - --- working->True ---
+2023-04-12 14:42:14,786 - logger - INFO - Checking most recent email
+2023-04-12 14:42:14,786 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:42:14,786 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/f7f9cf1b/db31b247?
+2023-04-12 14:42:14,786 - logger - INFO - Got Name : Paradise saghafi
+2023-04-12 14:42:14,786 - logger - INFO - Got Job Title : clinical director
+2023-04-12 14:42:14,786 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:42:14,786 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:42:14,787 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:42:14,788 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-12 14:42:14,788 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:42:16,061 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 14:42:16,061 - logger - INFO - Calling open string function
+2023-04-12 14:42:16,132 - logger - INFO - --- working->False ---
+2023-04-12 14:42:16,132 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:42:26,422 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 14:42:26,422 - logger - INFO - Creating Paradise saghafi's Folder
+2023-04-12 14:42:27,039 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1TAV9yZBmUToKb9iQCGCA-wf59kHOlfNf
+2023-04-12 14:42:28,854 - logger - INFO - Document was created with ID: "1PfE8rC33LILTXoFsMyqP5SBNPsbK_FuO8nBvI2K3C_E".
+2023-04-12 14:42:29,043 - logger - INFO - Recieved New Email notification
+2023-04-12 14:42:29,337 - logger - INFO - Checking most recent email
+2023-04-12 14:42:29,337 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:42:29,337 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/db31b247?
+2023-04-12 14:42:29,337 - logger - INFO - Got Name : Paradise saghafi
+2023-04-12 14:42:29,337 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 14:42:29,337 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:42:29,338 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:42:29,338 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:42:29,339 - logger - INFO - --- working->True ---
+2023-04-12 14:42:29,816 - logger - INFO - Recieved New Email notification
+2023-04-12 14:42:30,099 - logger - INFO - Checking most recent email
+2023-04-12 14:42:30,099 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 14:42:30,099 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/db31b247?
+2023-04-12 14:42:30,099 - logger - INFO - Got Name : Paradise saghafi
+2023-04-12 14:42:30,099 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 14:42:30,099 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 14:42:30,099 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 14:42:30,100 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 14:42:30,100 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-12 14:42:30,101 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:42:30,373 - logger - INFO - Got 1 licenses for Paradise saghafi
+2023-04-12 14:42:30,748 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 14:42:30,748 - logger - INFO - Calling open string function
+2023-04-12 14:42:30,835 - logger - INFO - --- working->False ---
+2023-04-12 14:42:30,835 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 14:42:30,978 - logger - INFO - Updated Spreadsheet
+2023-04-12 14:42:32,197 - logger - INFO - File ID: 1IcXkrCIpcFld-Bd0OjlqSItWl5YequBV
+2023-04-12 14:42:32,197 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 14:42:32,197 - logger - INFO - Created profile for Paradise saghafi
+2023-04-12 14:42:32,642 - logger - INFO - Updated local json file for Paradise saghafi
+2023-04-12 14:42:40,925 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 14:42:40,925 - logger - INFO - Creating Paradise saghafi's Folder
+2023-04-12 14:42:41,525 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/12Puqvi2h0uKOzL1HiOVYZ7lhLVSwKthP
+2023-04-12 14:42:43,223 - logger - INFO - Document was created with ID: "1ocEoi0BduH8FCEjL6-0HSQ8Q6MZVvhg7zWEkOzvdNEc".
+2023-04-12 14:42:44,652 - logger - INFO - Got 1 licenses for Paradise saghafi
+2023-04-12 14:42:45,188 - logger - INFO - Updated Spreadsheet
+2023-04-12 14:42:46,465 - logger - INFO - File ID: 1B1Ho0WrszDQnpCY2xEDY48y4RN442REq
+2023-04-12 14:42:46,465 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 14:42:46,465 - logger - INFO - Created profile for Paradise saghafi
+2023-04-12 14:42:46,912 - logger - INFO - Updated local json file for Paradise saghafi
+2023-04-12 15:30:05,168 - logger - INFO - Recieved New Email notification
+2023-04-12 15:30:05,825 - logger - INFO - Checking most recent email
+2023-04-12 15:30:05,825 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 15:30:05,826 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/c7a6f130?
+2023-04-12 15:30:05,826 - logger - INFO - Got Name : Brittney Avantes
+2023-04-12 15:30:05,826 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 15:30:05,826 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 15:30:05,826 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 15:30:05,831 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 15:30:05,833 - logger - INFO - --- working->True ---
+2023-04-12 15:30:07,459 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 15:30:07,459 - logger - INFO - Calling open string function
+2023-04-12 15:30:07,540 - logger - INFO - --- working->False ---
+2023-04-12 15:30:07,540 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 15:30:18,237 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 15:30:18,237 - logger - INFO - Creating Brittney Avantes's Folder
+2023-04-12 15:30:18,964 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ZcD-6FH_DolLb6-0pr-rz1JMS1jxA6r1
+2023-04-12 15:30:20,670 - logger - INFO - Document was created with ID: "1-Njz8iP4oijPdhjndTIogdHmjaCqHhTJGOQLKCf1CXQ".
+2023-04-12 15:30:26,795 - logger - INFO - Got 0 licenses for Brittney Avantes
+2023-04-12 15:30:27,421 - logger - INFO - Updated Spreadsheet
+2023-04-12 15:30:28,802 - logger - INFO - File ID: 1GDSBAkmco7YANmhdtBTuIZucxKpZ7sfx
+2023-04-12 15:30:28,802 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 15:30:28,802 - logger - INFO - Created profile for Brittney Avantes
+2023-04-12 15:30:29,258 - logger - INFO - Updated local json file for Brittney Avantes
+2023-04-12 15:30:58,712 - logger - INFO - Recieved New Email notification
+2023-04-12 15:30:59,127 - logger - INFO - Checking most recent email
+2023-04-12 15:30:59,127 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 15:30:59,127 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/c7a6f130?
+2023-04-12 15:30:59,127 - logger - INFO - Got Name : Brittney Avantes
+2023-04-12 15:30:59,127 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 15:30:59,127 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 15:30:59,127 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 15:30:59,133 - logger - INFO - Candidate already exists, returning
+2023-04-12 15:59:29,607 - logger - INFO - Recieved New Email notification
+2023-04-12 15:59:30,000 - logger - INFO - Checking most recent email
+2023-04-12 15:59:30,000 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 15:59:30,000 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/743330e6?
+2023-04-12 15:59:30,000 - logger - INFO - Got Name : Lizette Pompa
+2023-04-12 15:59:30,000 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 15:59:30,000 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 15:59:30,000 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 15:59:30,001 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 15:59:30,002 - logger - INFO - --- working->True ---
+2023-04-12 15:59:30,730 - logger - INFO - Recieved New Email notification
+2023-04-12 15:59:31,104 - logger - INFO - Checking most recent email
+2023-04-12 15:59:31,104 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 15:59:31,104 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/743330e6?
+2023-04-12 15:59:31,104 - logger - INFO - Got Name : Lizette Pompa
+2023-04-12 15:59:31,104 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 15:59:31,104 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 15:59:31,104 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 15:59:31,104 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 15:59:31,105 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-12 15:59:31,105 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 15:59:32,662 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 15:59:32,662 - logger - INFO - Calling open string function
+2023-04-12 15:59:32,734 - logger - INFO - --- working->False ---
+2023-04-12 15:59:32,734 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 15:59:43,151 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 15:59:43,151 - logger - INFO - Creating Lizette Pompa's Folder
+2023-04-12 15:59:44,161 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1W5Owxab5StJKlv5DstzVsbNrjih7FfC3
+2023-04-12 15:59:46,321 - logger - INFO - Document was created with ID: "1ocTa8WxOcm3KQ6LXvwQslDbNZCByrTQagEY1VaBbvLg".
+2023-04-12 15:59:51,004 - logger - INFO - Got 5 licenses for Lizette Pompa
+2023-04-12 15:59:51,806 - logger - INFO - Updated Spreadsheet
+2023-04-12 15:59:53,465 - logger - INFO - File ID: 1boK21-9AeKctHCg3OmTQSZmZNCih8X_o
+2023-04-12 15:59:53,465 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 15:59:53,465 - logger - INFO - Created profile for Lizette Pompa
+2023-04-12 15:59:54,011 - logger - INFO - Updated local json file for Lizette Pompa
+2023-04-12 16:18:56,741 - logger - INFO - Recieved New Email notification
+2023-04-12 16:18:57,129 - logger - INFO - Checking most recent email
+2023-04-12 16:18:57,129 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 16:18:57,129 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/68487d9b?
+2023-04-12 16:18:57,129 - logger - INFO - Got Name : Pauletta Pierce
+2023-04-12 16:18:57,129 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 16:18:57,129 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 16:18:57,129 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 16:18:57,134 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 16:18:57,135 - logger - INFO - --- working->True ---
+2023-04-12 16:18:59,686 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 16:18:59,687 - logger - INFO - Calling open string function
+2023-04-12 16:18:59,765 - logger - INFO - --- working->False ---
+2023-04-12 16:18:59,765 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 16:19:10,009 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 16:19:10,009 - logger - INFO - Creating Pauletta Pierce's Folder
+2023-04-12 16:19:10,755 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1MDpDhyZsQ8jjqxKDBhQdnpr9fGE3WirC
+2023-04-12 16:19:12,281 - logger - INFO - Document was created with ID: "1Ei7yfWDzoZlDTICXhYrqGgh6wZCK110W04EUny32yWE".
+2023-04-12 16:19:19,437 - logger - INFO - Got 5 licenses for Pauletta Pierce
+2023-04-12 16:19:20,104 - logger - INFO - Updated Spreadsheet
+2023-04-12 16:19:21,481 - logger - INFO - File ID: 1h6dJ1fLD7I3Qr7fPF4auRzoj55uJETfo
+2023-04-12 16:19:21,481 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 16:19:21,481 - logger - INFO - Created profile for Pauletta Pierce
+2023-04-12 16:19:21,938 - logger - INFO - Updated local json file for Pauletta Pierce
+2023-04-12 16:31:04,333 - logger - INFO - Recieved New Email notification
+2023-04-12 16:31:05,088 - logger - INFO - Checking most recent email
+2023-04-12 16:31:05,088 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 16:31:05,088 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/d9d995ac?
+2023-04-12 16:31:05,088 - logger - INFO - Got Name : Setareh Kavousi
+2023-04-12 16:31:05,088 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 16:31:05,088 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 16:31:05,088 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 16:31:05,094 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 16:31:05,094 - logger - INFO - --- working->True ---
+2023-04-12 16:31:07,637 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 16:31:07,637 - logger - INFO - Calling open string function
+2023-04-12 16:31:07,710 - logger - INFO - --- working->False ---
+2023-04-12 16:31:07,710 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 16:31:21,085 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 16:31:21,085 - logger - INFO - Creating Setareh Kavousi's Folder
+2023-04-12 16:31:21,908 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1gzsnRiOMPs_oSgstqg7iZ7qUwU5a1IEI
+2023-04-12 16:31:24,512 - logger - INFO - Document was created with ID: "1d6rdCneLWReI8CA6U9iil-3vieFQcviFZ-4Ba3Py7o4".
+2023-04-12 16:31:29,624 - logger - INFO - Got 5 licenses for Setareh Kavousi
+2023-04-12 16:31:30,254 - logger - INFO - Updated Spreadsheet
+2023-04-12 16:31:31,646 - logger - INFO - File ID: 1msw9AwnFJ5PlEXGIcUd5NbpfTdX1vqH0
+2023-04-12 16:31:31,646 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 16:31:31,646 - logger - INFO - Created profile for Setareh Kavousi
+2023-04-12 16:31:32,092 - logger - INFO - Updated local json file for Setareh Kavousi
+2023-04-12 16:32:36,840 - logger - INFO - Recieved New Email notification
+2023-04-12 16:32:37,222 - logger - INFO - Checking most recent email
+2023-04-12 16:32:37,223 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 16:32:37,223 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/d9d995ac?
+2023-04-12 16:32:37,223 - logger - INFO - Got Name : Setareh Kavousi
+2023-04-12 16:32:37,223 - logger - INFO - Got Job Title : mental health therapist
+2023-04-12 16:32:37,223 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 16:32:37,223 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 16:32:37,229 - logger - INFO - Candidate already exists, returning
+2023-04-12 16:49:24,564 - logger - INFO - Recieved New Email notification
+2023-04-12 16:49:24,961 - logger - INFO - Checking most recent email
+2023-04-12 16:49:24,962 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 16:49:24,962 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/502fd680?
+2023-04-12 16:49:24,962 - logger - INFO - Got Name : Angel Norriss-Smyer
+2023-04-12 16:49:24,962 - logger - INFO - Got Job Title : detox lvn
+2023-04-12 16:49:24,962 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 16:49:24,962 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 16:49:24,962 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 16:49:24,963 - logger - INFO - --- working->True ---
+2023-04-12 16:49:27,520 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 16:49:27,520 - logger - INFO - Calling open string function
+2023-04-12 16:49:27,594 - logger - INFO - --- working->False ---
+2023-04-12 16:49:27,595 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 16:49:38,282 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 16:49:38,282 - logger - INFO - Creating Angel Norriss-Smyer's Folder
+2023-04-12 16:49:39,269 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1aSo__8Cy5TzyqWVQuJaAn-MhR46J8tmi
+2023-04-12 16:49:40,986 - logger - INFO - Document was created with ID: "1GKU9sb6Q16op5spIdtS6aDOOrGs2ZRlyAqLN64aeaw4".
+2023-04-12 16:49:42,892 - logger - INFO - Got 5 licenses for Angel Norriss-Smyer
+2023-04-12 16:49:43,592 - logger - INFO - Updated Spreadsheet
+2023-04-12 16:49:45,528 - logger - INFO - File ID: 11-7albI96gH71akL9jGvy3X9gMedfwBH
+2023-04-12 16:49:45,528 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 16:49:45,529 - logger - INFO - Created profile for Angel Norriss-Smyer
+2023-04-12 16:49:46,004 - logger - INFO - Updated local json file for Angel Norriss-Smyer
+2023-04-12 16:52:08,220 - logger - INFO - Recieved New Email notification
+2023-04-12 16:52:08,706 - logger - INFO - Checking most recent email
+2023-04-12 16:52:08,706 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-12 16:52:08,706 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/235a07c3?
+2023-04-12 16:52:08,706 - logger - INFO - Got Name : Donna Powell
+2023-04-12 16:52:08,706 - logger - INFO - Got Job Title : mental
+ health therapist
+2023-04-12 16:52:08,706 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-12 16:52:08,706 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-12 16:52:08,711 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-12 16:52:08,712 - logger - INFO - --- working->True ---
+2023-04-12 16:52:10,093 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-12 16:52:10,093 - logger - INFO - Calling open string function
+2023-04-12 16:52:10,169 - logger - INFO - --- working->False ---
+2023-04-12 16:52:10,169 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-12 16:52:20,596 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-12 16:52:20,596 - logger - INFO - Creating Donna Powell's Folder
+2023-04-12 16:52:21,245 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1cD4jSCwdh-isV0qEMESueYDhCzMkikO7
+2023-04-12 16:52:22,794 - logger - INFO - Document was created with ID: "1mCWzgs9Iygc-1KCveLA67E88wynnK7yK1cfMAoSeSps".
+2023-04-12 16:52:25,319 - logger - INFO - Got 5 licenses for Donna Powell
+2023-04-12 16:52:25,923 - logger - INFO - Updated Spreadsheet
+2023-04-12 16:52:27,290 - logger - INFO - File ID: 1604DWdQofoXWHpYILS3xoUiuHO4-CG__
+2023-04-12 16:52:27,290 - logger - INFO - Uploaded Resume Successfully
+2023-04-12 16:52:27,290 - logger - INFO - Created profile for Donna Powell
+2023-04-12 16:52:27,756 - logger - INFO - Updated local json file for Donna Powell
