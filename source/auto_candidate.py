@@ -37,11 +37,14 @@ from botocore.config import Config
 SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
 NAMES_PATH = '../json_files/name_list.json'
 JOBMAP_PATH = '../json_files/job_map.json'
-DEFAULT_SHEET_DEST ='Pre-screening'
+DEFAULT_SHEET_DEST = 'Pre-screening'
 SETTINGS_PATH = '../json_files/settings.json'
 RECORDS_PATH = '../json_files/records.json'
 WORKING_PATH = '../json_files/working.json'
+CREDENTIAL_PATH = 'creds/credentials.json'
+TOKEN_PATH = 'creds/token.json'
 ENV_PATH = '../.env'
+LOGGER_PATH = 'logs/server.log'
 
 load_dotenv(dotenv_path=ENV_PATH)
 
@@ -52,13 +55,14 @@ logger = logging.getLogger('logger')
 logger.setLevel(logging.DEBUG)
 
 # create handler
-handler = logging.FileHandler('../logs/server.log')
+handler = logging.FileHandler(LOGGER_PATH)
 
 # set handler level
 handler.setLevel(logging.DEBUG)
 
 # create formatter
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter(
+    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # set formatter
 handler.setFormatter(formatter)
@@ -80,20 +84,20 @@ creds = None
 # The file token.json stores the user's access and refresh tokens, and is
 # created automatically when the authorization flow completes for the first
 # time.
-if os.path.exists('../creds/token.json'):
-    creds = Credentials.from_authorized_user_file('../creds/token.json', SCOPES)
+if os.path.exists(TOKEN_PATH):
+    creds = Credentials.from_authorized_user_file(
+        TOKEN_PATH, SCOPES)
 # If there are no (valid) credentials available, let the user log in.
 if not creds or not creds.valid:
     if creds and creds.expired and creds.refresh_token:
         creds.refresh(Request())
     else:
         flow = InstalledAppFlow.from_client_secrets_file(
-            '../creds/credentials.json', SCOPES)
+            CREDENTIAL_PATH, SCOPES)
         creds = flow.run_local_server(port=0)
     # Save the credentials for the next run
-    with open('../creds/token.json', 'w') as token:
+    with open(TOKEN_PATH, 'w') as token:
         token.write(creds.to_json())
-
 
 
 class Data(BaseModel):
@@ -137,19 +141,21 @@ class License(BaseModel):
     expiration: str
     location: str
 
+
 def setWorking(b: bool) -> bool:
     json_check = {}
     json_check['isWorking'] = b
     with open(WORKING_PATH, "w") as outfile:
-        logger.info(f"--- working->{b} ---") # Log working status change
+        logger.info(f"--- working->{b} ---")  # Log working status change
         json.dump(json_check, outfile)
+
 
 def checkWorking() -> bool:
     f = open(WORKING_PATH)
     json_check = json.load(f)
     f.close()
     return json_check['isWorking']
-    
+
 
 def upload_basic(title, parents, path):
     """Insert new file.
@@ -599,7 +605,8 @@ def create_folder(name: str, parents):
         # pylint: disable=maybe-no-member
         file = service.files().create(body=file_metadata, fields='*',
                                       ).execute()
-        logger.info(F'Folder was created with web view link: {file.get("webViewLink")}')
+        logger.info(
+            F'Folder was created with web view link: {file.get("webViewLink")}')
 
     except HttpError as error:
         logger.error(F'An error occurred: {error}')
@@ -817,7 +824,8 @@ def parse_resume(data: candidateData):
         data.email = newEmail[0]
 
     # Log the results for the current PDF file
-    logger.info("Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
+    logger.info(
+        "Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
 
 
 def getLicenseInfo(name, depth) -> License:
@@ -1284,8 +1292,6 @@ def curateLicenseList(licenselist: list[License], candidateData: candidateData):
             return  # Break
 
 
-
-
 def find_closest_string(query, string_list):
     max_similarity = 0
     closest_string = None
@@ -1300,8 +1306,7 @@ def find_closest_string(query, string_list):
 
 
 def main():
-    logger.info("Do you see this?")
-
+    pass
 
 
 if __name__ == '__main__':
