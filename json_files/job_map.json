@@ -1,13 +1,14 @@
 {
-    "primary therapist amft/acsw": "Therapist",
-    "treatment center therapist": "Therapist",
-    "group facilitator radt": "RADT",
-    "detox nurse lvn": "Nurse",
-    "group therapist": "Therapist",
-    "primary therapist": "Therapist",
-    "primary therapist - treatment center": "Therapist",
-    "drug and alcohol therapist": "RADT",
-    "drug and alcohol counselor": "RADT",
-    "clinical director of addiction treatment - lmft/lcsw": "RADT"
-  }
-  
+  "primary therapist amft/acsw": "Therapist",
+  "treatment center therapist": "Therapist",
+  "clinical director": "Therapist",
+  "clinical director lmft": "Therapist",
+  "group therapist": "Therapist",
+  "primary therapist": "Therapist",
+  "primary therapist - treatment center": "Therapist",
+  "detox nurse lvn": "Nurse",
+  "drug and alcohol therapist": "RADT",
+  "drug and alcohol counselor": "RADT",
+  "clinical director of addiction treatment - lmft/lcsw": "RADT",
+  "group facilitator radt": "RADT"
+}
