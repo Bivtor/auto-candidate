@@ -24,6 +24,9 @@ load_dotenv(dotenv_path=ENV_PATH)
 origins = [
     "http://localhost",
     "http://localhost:3000",
+    "https://www.vrinaldi.com",
+    "https://vrinaldi.com"
+
 ]
 
 app.add_middleware(
