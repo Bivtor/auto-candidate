@@ -23,6 +23,7 @@ load_dotenv(dotenv_path=ENV_PATH)
 
 origins = [
     "http://localhost",
+    "http://localhost:3001",
     "http://localhost:3000",
     "https://www.vrinaldi.com",
     "https://vrinaldi.com"
@@ -56,14 +57,14 @@ def createUsers(candidateData: candidateData):
     # Add candidate with saved data
     create_candidate(candidateData, data)
     f.close()
-    
+
     # Log
     logger.info(f'Created profile for {candidateData.name}')
 
     # Update Candidate Existence
     updateCandidateExistence(
         SPREADSHEET_ID, sheet_name=data['category'])
-    
+
     # Log
     logger.info(f'Updated local json file for {candidateData.name}')
 
@@ -131,16 +132,12 @@ def createUsers(data: MailData):
     logger.info('Recieved New Email notification')
 
     # Refresh the publish token
-    decideTokenRefresh(WORKING_PATH) 
+    decideTokenRefresh(WORKING_PATH)
 
     # Get message
     process_message()
 
     return 200
-
-
-
-
 
 
 def prevent_duplicates(inputname: str):
@@ -162,9 +159,6 @@ def prevent_duplicates(inputname: str):
         # Save the JSON data to the file
         with open(NAMES_PATH, "w") as json_file:
             json.dump(data, json_file)
-
-
-
 
 
 @app.post('/sendtexts')

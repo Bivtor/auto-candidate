@@ -52,7 +52,7 @@ load_dotenv(dotenv_path=ENV_PATH)
 logger = logging.getLogger('logger')
 
 # Set logger level
-logger.setLevel(logging.DEBUG) 
+logger.setLevel(logging.DEBUG)
 
 # create handler
 handler = logging.FileHandler(LOGGER_PATH)
@@ -143,11 +143,12 @@ class License(BaseModel):
 
 
 def setWorking(b: bool) -> bool:
-    json_check = {}
-    json_check['isWorking'] = b
+    with open(WORKING_PATH, "r") as f:
+        data = json.load(f)
+    data['isWorking'] = b
     with open(WORKING_PATH, "w") as outfile:
         logger.info(f"--- working->{b} ---")  # Log working status change
-        json.dump(json_check, outfile)
+        json.dump(data, outfile)
 
 
 def checkWorking() -> bool:

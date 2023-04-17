@@ -2,10 +2,6 @@ from auto_candidate import build, HttpError, creds
 import json
 
 
-
-    
-
-
 def testJobMap(job: str):
     with open('json_files/job_map.json', 'r') as f:
         # Load the JSON data from the file
@@ -14,6 +10,8 @@ def testJobMap(job: str):
             print(job_map[job])
         else:
             print("no")
+
+
 def main():
     pass
     # testJobMap('clinical director')
