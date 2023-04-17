@@ -1077,7 +1077,7 @@ def sendmailtexts(data: Data):
                     "[candidate_name]", name)  # This was broken before
 
                 # If we decide to send a message
-                if shouldSendMessage_N_License(data, values):
+                if shouldSendMessageXs(data, values):
 
                     # Update the times we have sent a message to this person
                     if values[timesContactedCol] == '':
@@ -1148,7 +1148,7 @@ def sendmailtexts(data: Data):
                     logger.info("\nChose not to message {}".format(
                         values[nameCol]))
             except IndexError as err:
-                logger.errorr("\nFinished Texting and Emailing Candidaes")
+                logger.error("\nFinished Texting and Emailing Candidaes")
                 break
     except HttpError as err:
         logger.errorr(err)
