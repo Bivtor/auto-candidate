@@ -1,5 +1,5 @@
 from auto_candidate import *
-from email_handler import process_message, updateCandidateExistence
+from email_handler import process_message, updateCandidateExistence, decideTokenRefresh
 
 from pydantic import BaseModel
 import os
@@ -129,6 +129,9 @@ def createUsers(data: MailData):
     # Convert JSON string to Python object using `json.loads()` function
     response_json = json.loads(response_str)
     logger.info('Recieved New Email notification')
+
+    # Refresh the publish token
+    decideTokenRefresh(WORKING_PATH) 
 
     # Get message
     process_message()

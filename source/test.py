@@ -1,23 +1,22 @@
 from auto_candidate import build, HttpError, creds
+import json
 
 
-def publish():
-    try:
-        gmail = build('gmail', 'v1', credentials=creds)
-        request = {
-            'labelIds': ['INBOX', 'SPAM'],
-            'topicName': 'projects/auto-candidate-365121/topics/my_topic'
-        }
-        response = gmail.users().watch(userId='me', body=request).execute()
-        print(response)
 
-    except HttpError as error:
-        # TODO(developer) - Handle errors from gmail API.
-        print(f'An error occurred: {error}')
+    
 
 
+def testJobMap(job: str):
+    with open('json_files/job_map.json', 'r') as f:
+        # Load the JSON data from the file
+        job_map = json.load(f)
+        if job in job_map:
+            print(job_map[job])
+        else:
+            print("no")
 def main():
-    publish()
+    pass
+    # testJobMap('clinical director')
 
 
 if __name__ == "__main__":
