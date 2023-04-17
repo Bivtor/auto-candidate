@@ -1414,3 +1414,955 @@
 2023-04-12 16:52:27,290 - logger - INFO - Uploaded Resume Successfully
 2023-04-12 16:52:27,290 - logger - INFO - Created profile for Donna Powell
 2023-04-12 16:52:27,756 - logger - INFO - Updated local json file for Donna Powell
+2023-04-16 15:32:58,488 - logger - INFO - Started Server
+2023-04-16 15:33:05,379 - logger - INFO - Started Server
+2023-04-16 15:34:11,020 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:11,474 - logger - INFO - Checking most recent email
+2023-04-16 15:34:11,475 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:11,475 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:11,475 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:11,475 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:11,475 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:11,476 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:11,476 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:11,477 - logger - INFO - --- working->True ---
+2023-04-16 15:34:14,253 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-16 15:34:14,253 - logger - INFO - Calling open string function
+2023-04-16 15:34:14,350 - logger - INFO - --- working->False ---
+2023-04-16 15:34:14,350 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:14,645 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:14,662 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:14,978 - logger - INFO - Checking most recent email
+2023-04-16 15:34:14,978 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:14,978 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:14,978 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:14,978 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:14,978 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:14,978 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:14,979 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:14,986 - logger - INFO - --- working->True ---
+2023-04-16 15:34:15,126 - logger - INFO - Checking most recent email
+2023-04-16 15:34:15,126 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:15,126 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:15,126 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:15,126 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:15,126 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:15,127 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:15,127 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:15,132 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:15,132 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:15,386 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:15,451 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:15,451 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:15,679 - logger - INFO - Checking most recent email
+2023-04-16 15:34:15,679 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:15,679 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:15,679 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:15,680 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:15,680 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:15,680 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:15,680 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:15,680 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:15,680 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:15,770 - logger - INFO - Checking most recent email
+2023-04-16 15:34:15,771 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:15,771 - logger - INFO - Checking most recent email
+2023-04-16 15:34:15,771 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:15,771 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:15,771 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:15,772 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:15,772 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:15,772 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:15,772 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:15,772 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:15,772 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:15,772 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:15,773 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:15,773 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:15,773 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:15,774 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:15,774 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:15,774 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:15,774 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,021 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,038 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,038 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,082 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,085 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,085 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,085 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,404 - logger - INFO - Checking most recent email
+2023-04-16 15:34:16,404 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:16,404 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:16,404 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:16,404 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:16,404 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:16,404 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:16,405 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:16,405 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:16,405 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,488 - logger - INFO - Checking most recent email
+2023-04-16 15:34:16,488 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:16,488 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:16,489 - logger - INFO - Checking most recent email
+2023-04-16 15:34:16,489 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:16,489 - logger - INFO - Checking most recent email
+2023-04-16 15:34:16,489 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:16,489 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:16,489 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:16,490 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:16,490 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:16,490 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:16,490 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:16,490 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:16,490 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:16,491 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:16,491 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:16,491 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:16,491 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:16,492 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:16,493 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:16,493 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:16,493 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:16,493 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,493 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:16,494 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:16,495 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:16,495 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,495 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:16,495 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,539 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-16 15:34:16,539 - logger - INFO - Calling open string function
+2023-04-16 15:34:16,571 - logger - INFO - Checking most recent email
+2023-04-16 15:34:16,572 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:16,572 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:16,572 - logger - INFO - Checking most recent email
+2023-04-16 15:34:16,572 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:16,572 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:16,572 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:16,573 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:16,573 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:16,573 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:16,573 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:16,573 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:16,573 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:16,573 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:16,574 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:16,574 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:16,575 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:16,575 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,575 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:16,576 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,576 - logger - INFO - Checking most recent email
+2023-04-16 15:34:16,577 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:16,578 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:16,578 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:16,578 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:16,578 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:16,578 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:16,579 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:16,579 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:16,579 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,642 - logger - INFO - --- working->False ---
+2023-04-16 15:34:16,643 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:16,650 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,650 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,650 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,711 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,711 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:16,940 - logger - INFO - Checking most recent email
+2023-04-16 15:34:16,941 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:16,941 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:16,941 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:16,941 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:16,941 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:16,941 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:16,942 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:16,943 - logger - INFO - --- working->True ---
+2023-04-16 15:34:17,079 - logger - INFO - Checking most recent email
+2023-04-16 15:34:17,079 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:17,080 - logger - INFO - Checking most recent email
+2023-04-16 15:34:17,081 - logger - INFO - Checking most recent email
+2023-04-16 15:34:17,081 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:17,081 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:17,081 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:17,082 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:17,082 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:17,082 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:17,082 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:17,082 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:17,081 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:17,082 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:17,083 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:17,083 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:17,083 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:17,083 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:17,083 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:17,084 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:17,084 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:17,084 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:17,085 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:17,085 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:17,085 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:17,085 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:17,086 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:17,086 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:17,086 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:17,086 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:17,194 - logger - INFO - Checking most recent email
+2023-04-16 15:34:17,194 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:17,194 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:17,194 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:17,194 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:17,194 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:17,195 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:17,195 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:17,195 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:17,195 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:17,301 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,308 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,308 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,367 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,570 - logger - INFO - Checking most recent email
+2023-04-16 15:34:17,570 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:17,570 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:17,570 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:17,570 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:17,570 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:17,570 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:17,571 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:17,571 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:17,571 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:17,605 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,605 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,605 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,613 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,614 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,654 - logger - INFO - Checking most recent email
+2023-04-16 15:34:17,654 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:17,654 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:17,654 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:17,654 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:17,654 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:17,655 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:17,655 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:17,655 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:17,655 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:17,663 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,682 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,683 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,685 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,685 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,688 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,688 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,689 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,691 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,691 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,692 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,697 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,697 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,698 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,700 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,700 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,701 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,702 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,702 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,749 - logger - INFO - Checking most recent email
+2023-04-16 15:34:17,750 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:17,750 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:17,750 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:17,750 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:17,753 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:17,763 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,803 - logger - INFO - Checking most recent email
+2023-04-16 15:34:17,803 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:17,803 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:17,803 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:17,811 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:17,812 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:17,813 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:17,817 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:17,818 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:17,818 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:17,818 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:17,819 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:17,821 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,821 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,822 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,822 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,823 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:17,823 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,824 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:17,825 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:17,826 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:18,168 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,170 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,173 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,176 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,177 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,177 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,179 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,180 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,180 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,181 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,181 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,182 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,183 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,183 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,184 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,184 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,184 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,185 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,186 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,191 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,187 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,188 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,188 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,189 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,189 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,191 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,187 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,191 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,192 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,193 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:18,193 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,194 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,194 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,251 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,254 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,255 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,258 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,259 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,260 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,262 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,263 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,263 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,263 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,264 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,265 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,265 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,266 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,266 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,267 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,267 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,268 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,268 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,268 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,269 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,269 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,270 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,270 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,270 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,271 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,271 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,272 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,273 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,273 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,273 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,273 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,273 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,273 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,273 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,273 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,274 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,274 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,274 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,274 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,275 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,279 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,279 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,279 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,279 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,279 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,279 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,280 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,282 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,283 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,283 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,280 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,280 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,281 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,281 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,281 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,281 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,281 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,282 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,284 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,284 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,280 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,280 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,280 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,283 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,284 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,284 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,284 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,284 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,284 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,282 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,282 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,284 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,285 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,285 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,286 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,286 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,286 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,286 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,286 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,287 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,287 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,287 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,287 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,287 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,288 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,289 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,289 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,291 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,292 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,292 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,292 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,292 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,292 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,292 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,293 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,293 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,293 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,293 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,294 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,294 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,294 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,294 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,295 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,295 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,295 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,295 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,295 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,306 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,309 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,309 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,310 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,310 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,311 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,312 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,312 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,312 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,313 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,313 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,314 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,315 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,315 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,315 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,316 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,316 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,316 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,318 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,320 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,320 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,321 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,322 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,322 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,322 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,323 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,323 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,323 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,324 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,324 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,354 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,354 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,354 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,354 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,354 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,355 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,355 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,356 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,356 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,356 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,356 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,356 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,357 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,357 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,357 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,359 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,358 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,359 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,359 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,360 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,361 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,362 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,362 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,363 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,365 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,365 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,366 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,367 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,367 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,368 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,368 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,369 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,369 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,369 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,369 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,370 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,370 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,371 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,371 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,371 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,371 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,371 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,372 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,373 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,374 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,374 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,374 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,375 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,375 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,375 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,376 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,376 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,376 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,377 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,377 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,377 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,377 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,378 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,379 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,379 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,450 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,450 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,450 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,450 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,450 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,450 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,451 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,451 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,451 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,451 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,451 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,451 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,451 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,452 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,452 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,452 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,452 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,452 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,453 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,453 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,453 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,454 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,454 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,454 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,454 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,454 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,455 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,457 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,458 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,458 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,483 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,484 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,484 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,484 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,484 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,484 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,484 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,485 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,486 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,486 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,532 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,533 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,533 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,533 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,533 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,533 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,533 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,533 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,534 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,534 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,556 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,556 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,556 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,556 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,556 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,557 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,557 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,558 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,558 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,559 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,559 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,559 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,559 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,559 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,560 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,560 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,560 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,561 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,561 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,561 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,561 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,561 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,562 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,562 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,562 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,562 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,563 - logger - INFO - Checking most recent email
+2023-04-16 15:34:18,563 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,564 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:18,564 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,564 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:18,564 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,565 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:18,565 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,566 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:18,566 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,566 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:18,566 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,567 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,568 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:18,568 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,568 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,569 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,569 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,569 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:18,569 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,569 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,570 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,571 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:18,571 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:18,640 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:18,648 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:18,675 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:18,700 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-16 15:34:18,700 - logger - INFO - Calling open string function
+2023-04-16 15:34:18,763 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:18,795 - logger - INFO - --- working->False ---
+2023-04-16 15:34:18,795 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,138 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,149 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,169 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,170 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,171 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,174 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,182 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,183 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,211 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,212 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,212 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,212 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,212 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,213 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,213 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,214 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,215 - logger - INFO - --- working->True ---
+2023-04-16 15:34:19,361 - logger - INFO - Recieved New Email notification
+2023-04-16 15:34:19,363 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,364 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,364 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,364 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,364 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,364 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,365 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,365 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,365 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,365 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,366 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,366 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,366 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,366 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,366 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,367 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,367 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,367 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,368 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,368 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,368 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,369 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,369 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,370 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,370 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,370 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,374 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,375 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,375 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,376 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,461 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,461 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,461 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,461 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,461 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,461 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,462 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,462 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,463 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,463 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,548 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,548 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,548 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,548 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,548 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,548 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,549 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,549 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,549 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,549 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,624 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,624 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,624 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,624 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,625 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,625 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,625 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,626 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,626 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,627 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,702 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,703 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,703 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,703 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,703 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,703 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,704 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,704 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,704 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,704 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,705 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,705 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,705 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,705 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,705 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,705 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,706 - logger - INFO - Checking most recent email
+2023-04-16 15:34:19,706 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,706 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,706 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,706 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,706 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-16 15:34:19,707 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,707 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,707 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,707 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,707 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,707 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/0a5999f0?
+2023-04-16 15:34:19,707 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,708 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,708 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,708 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,708 - logger - INFO - Got Name : Jessica Cazares
+2023-04-16 15:34:19,708 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,709 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,709 - logger - INFO - Got Job Title : detox lvn
+2023-04-16 15:34:19,709 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,709 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,710 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-16 15:34:19,710 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,710 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,710 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,710 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,711 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-16 15:34:19,711 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,711 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,712 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,713 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,713 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,714 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,714 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,714 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,714 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-16 15:34:19,714 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,715 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,715 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,715 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,716 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:19,716 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-16 15:34:19,717 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:20,851 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-16 15:34:20,852 - logger - INFO - Calling open string function
+2023-04-16 15:34:20,944 - logger - INFO - --- working->False ---
+2023-04-16 15:34:20,944 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-16 15:34:29,329 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-16 15:34:29,329 - logger - INFO - Creating Jessica Cazares's Folder
+2023-04-16 15:34:30,243 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/15SNbVUhcJO87p2S8sUw1VXZjVPBJWdP7
+2023-04-16 15:34:32,025 - logger - INFO - Document was created with ID: "1XH1ldsJo5unZBCyfIS0VsvqKTKALpn-ArTM3gkXJ3DM".
+2023-04-16 15:34:34,405 - logger - INFO - Got 5 licenses for Jessica Cazares
+2023-04-16 15:34:35,293 - logger - INFO - Updated Spreadsheet
+2023-04-16 15:34:36,675 - logger - INFO - File ID: 1ZaelQiE3hRQL479yZPjl3dXNjdaNwu27
+2023-04-16 15:34:36,676 - logger - INFO - Uploaded Resume Successfully
+2023-04-16 15:34:36,676 - logger - INFO - Created profile for Jessica Cazares
+2023-04-16 15:34:37,221 - logger - INFO - Updated local json file for Jessica Cazares
+2023-04-16 15:39:20,760 - logger - INFO - Started Server
+2023-04-16 15:40:06,348 - logger - INFO - Started Server
+2023-04-16 15:40:23,393 - logger - INFO - Started Server
+2023-04-16 16:09:35,027 - logger - INFO - Recieved New Email notification
+2023-04-16 16:09:35,511 - logger - INFO - Checking most recent email
+2023-04-16 16:09:35,512 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-16 17:49:10,664 - logger - INFO - Recieved New Email notification
+2023-04-16 17:49:11,345 - logger - INFO - Checking most recent email
+2023-04-16 17:49:11,346 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-16 18:06:46,881 - logger - INFO - Recieved New Email notification
+2023-04-16 18:06:47,388 - logger - INFO - Checking most recent email
+2023-04-16 18:06:47,388 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-16 22:56:21,587 - logger - INFO - Recieved New Email notification
+2023-04-16 22:56:22,443 - logger - INFO - Checking most recent email
+2023-04-16 22:56:22,444 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 01:38:13,185 - logger - INFO - Recieved New Email notification
+2023-04-17 01:38:13,934 - logger - INFO - Checking most recent email
+2023-04-17 01:38:13,934 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 02:28:22,517 - logger - INFO - Recieved New Email notification
+2023-04-17 02:28:22,970 - logger - INFO - Checking most recent email
+2023-04-17 02:28:22,970 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 04:02:50,403 - logger - INFO - Recieved New Email notification
+2023-04-17 04:02:50,942 - logger - INFO - Recieved New Email notification
+2023-04-17 04:02:51,198 - logger - INFO - Checking most recent email
+2023-04-17 04:02:51,198 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 04:02:52,350 - logger - INFO - Checking most recent email
+2023-04-17 04:02:52,350 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 05:40:56,926 - logger - INFO - Recieved New Email notification
+2023-04-17 05:40:57,563 - logger - INFO - Checking most recent email
+2023-04-17 05:40:57,563 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 06:38:23,137 - logger - INFO - Recieved New Email notification
+2023-04-17 06:38:23,921 - logger - INFO - Checking most recent email
+2023-04-17 06:38:23,921 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 06:49:40,524 - logger - INFO - Recieved New Email notification
+2023-04-17 06:49:41,167 - logger - INFO - Checking most recent email
+2023-04-17 06:49:41,167 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 07:00:40,161 - logger - INFO - Recieved New Email notification
+2023-04-17 07:00:40,575 - logger - INFO - Checking most recent email
+2023-04-17 07:00:40,575 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 07:06:01,129 - logger - INFO - Recieved New Email notification
+2023-04-17 07:06:02,751 - logger - INFO - Checking most recent email
+2023-04-17 07:06:02,751 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 08:01:44,293 - logger - INFO - Recieved New Email notification
+2023-04-17 08:01:45,024 - logger - INFO - Checking most recent email
+2023-04-17 08:01:45,024 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 09:35:26,648 - logger - INFO - Recieved New Email notification
+2023-04-17 09:35:27,583 - logger - INFO - Checking most recent email
+2023-04-17 09:35:27,583 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 09:35:50,574 - logger - INFO - Recieved New Email notification
+2023-04-17 09:35:51,048 - logger - INFO - Checking most recent email
+2023-04-17 09:35:51,048 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 09:38:13,170 - logger - INFO - Recieved New Email notification
+2023-04-17 09:38:13,629 - logger - INFO - Checking most recent email
+2023-04-17 09:38:13,629 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 09:46:50,015 - logger - INFO - Recieved New Email notification
+2023-04-17 09:46:50,485 - logger - INFO - Checking most recent email
+2023-04-17 09:46:50,485 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 10:05:15,744 - logger - INFO - Recieved New Email notification
+2023-04-17 10:05:16,179 - logger - INFO - Checking most recent email
+2023-04-17 10:05:16,179 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 10:05:28,009 - logger - INFO - Recieved New Email notification
+2023-04-17 10:05:28,391 - logger - INFO - Checking most recent email
+2023-04-17 10:05:28,391 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 10:05:35,633 - logger - INFO - Recieved New Email notification
+2023-04-17 10:05:36,534 - logger - INFO - Checking most recent email
+2023-04-17 10:05:36,534 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 10:07:08,631 - logger - INFO - Recieved New Email notification
+2023-04-17 10:07:09,061 - logger - INFO - Checking most recent email
+2023-04-17 10:07:09,061 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 10:11:16,615 - logger - INFO - Recieved New Email notification
+2023-04-17 10:11:17,031 - logger - INFO - Checking most recent email
+2023-04-17 10:11:17,031 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 10:54:29,958 - logger - INFO - Recieved New Email notification
+2023-04-17 10:54:30,614 - logger - INFO - Checking most recent email
+2023-04-17 10:54:30,614 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:01:59,282 - logger - INFO - Recieved New Email notification
+2023-04-17 12:02:00,327 - logger - INFO - Checking most recent email
+2023-04-17 12:02:00,328 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:02:06,411 - logger - INFO - Recieved New Email notification
+2023-04-17 12:02:06,823 - logger - INFO - Checking most recent email
+2023-04-17 12:02:06,823 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:08:13,712 - logger - INFO - Recieved New Email notification
+2023-04-17 12:08:14,110 - logger - INFO - Checking most recent email
+2023-04-17 12:08:14,110 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:19:45,412 - logger - INFO - Recieved New Email notification
+2023-04-17 12:19:45,878 - logger - INFO - Checking most recent email
+2023-04-17 12:19:45,878 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:31:40,760 - logger - INFO - Started Server
+2023-04-17 12:32:10,151 - logger - INFO - Started Server
+2023-04-17 12:32:50,566 - logger - INFO - Started Server
+2023-04-17 12:34:30,835 - logger - INFO - Started Server
+2023-04-17 12:34:58,475 - logger - INFO - Started Server
+2023-04-17 12:35:09,438 - logger - INFO - Recieved New Email notification
+2023-04-17 12:35:09,863 - logger - INFO - Checking most recent email
+2023-04-17 12:35:09,863 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:35:23,762 - logger - INFO - Recieved New Email notification
+2023-04-17 12:35:24,194 - logger - INFO - Checking most recent email
+2023-04-17 12:35:24,194 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:35:45,635 - logger - INFO - Started Server
+2023-04-17 12:35:48,990 - logger - INFO - Recieved New Email notification
+2023-04-17 12:35:49,383 - logger - INFO - Checking most recent email
+2023-04-17 12:35:49,384 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:35:59,053 - logger - INFO - Recieved New Email notification
+2023-04-17 12:35:59,471 - logger - INFO - Checking most recent email
+2023-04-17 12:35:59,471 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:36:02,740 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:03,061 - logger - INFO - Checking most recent email
+2023-04-17 12:36:03,061 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:36:06,573 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:06,913 - logger - INFO - Checking most recent email
+2023-04-17 12:36:06,913 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:36:23,345 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:23,953 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:24,460 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:25,063 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:25,570 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:26,074 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:26,638 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:27,085 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:27,590 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:28,098 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:28,600 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:29,109 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:29,613 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:30,117 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:30,620 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:31,134 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:31,632 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:32,428 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:32,948 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:33,553 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:34,061 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:34,564 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:35,130 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:35,572 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:36,080 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:36,583 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:37,087 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:37,594 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:38,099 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:38,603 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:39,110 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:39,615 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:40,219 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:40,726 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:41,248 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:42,038 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:43,052 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:43,859 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:44,363 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:46,090 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:46,586 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:47,798 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:49,619 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:50,123 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:50,829 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:54,124 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:54,575 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:56,596 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:59,326 - logger - INFO - Recieved New Email notification
+2023-04-17 12:36:59,828 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:03,782 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:06,909 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:07,880 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:10,542 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:18,021 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:18,726 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:21,958 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:25,345 - logger - INFO - Started Server
+2023-04-17 12:37:30,782 - logger - INFO - Recieved New Email notification
+2023-04-17 12:37:30,783 - logger - INFO - Decided to refresh Gmail token
+2023-04-17 12:37:31,174 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4633186', 'expiration': '1682365052153'}
+2023-04-17 12:37:31,566 - logger - INFO - Checking most recent email
+2023-04-17 12:37:31,566 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:38:10,691 - logger - INFO - Recieved New Email notification
+2023-04-17 12:38:11,082 - logger - INFO - Checking most recent email
+2023-04-17 12:38:11,082 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 12:41:53,989 - logger - INFO - Recieved New Email notification
+2023-04-17 12:41:54,433 - logger - INFO - Checking most recent email
+2023-04-17 12:41:54,433 - logger - INFO - Notification was not for candidate submission, returning

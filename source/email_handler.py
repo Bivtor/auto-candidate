@@ -243,7 +243,6 @@ def updateCandidateExistence(spreadsheet_id, sheet_name):
         print(F'An error occurred: {error}')
 
 
-
 def submitdata_clone(data: Data):
     # Check if operation is currently in progress
     if checkWorking():
@@ -290,6 +289,40 @@ def openstring_clone(data: Data):
     cmd = 'start chrome {}'.format(data.link)  # OPEN chrome
     if os.system(cmd) != 0:
         return False
+
+
+def decideTokenRefresh(path: str):
+    # Load JSON data from file path
+    with open(path, 'r') as f:
+        data = json.load(f)
+        
+    # Check if shouldUpdate mod 5 == 0
+    if data['shouldUpdate'] % 5 == 0:
+        # Call publish function if condition is true
+        logger.info("Decided to refresh Gmail token")
+        pushMailToUs()
+        
+    # Increment shouldUpdate by 1
+    data['shouldUpdate'] += 1
+    
+    # Update the JSON file with the new value of shouldUpdate
+    with open(path, 'w') as f:
+        json.dump(data, f)
+    
+def pushMailToUs():
+    try:
+        gmail = build('gmail', 'v1', credentials=creds)
+        request = {
+            'labelIds': ['INBOX', 'SPAM'],
+            'topicName': 'projects/auto-candidate-365121/topics/my_topic'
+        }
+        response = gmail.users().watch(userId='me', body=request).execute()
+        logger.info(f"Successfully refreshed gmail token: {response}")
+
+    except HttpError as error:
+        # TODO(developer) - Handle errors from gmail API.
+        logger.info(f'An error occurred when trying to refresh gmail token: {error}')
+
 
 def main():
     print("test")

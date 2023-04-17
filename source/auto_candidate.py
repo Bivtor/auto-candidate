@@ -41,10 +41,10 @@ DEFAULT_SHEET_DEST = 'Pre-screening'
 SETTINGS_PATH = '../json_files/settings.json'
 RECORDS_PATH = '../json_files/records.json'
 WORKING_PATH = '../json_files/working.json'
-CREDENTIAL_PATH = 'creds/credentials.json'
-TOKEN_PATH = 'creds/token.json'
+CREDENTIAL_PATH = '../creds/credentials.json'
+TOKEN_PATH = '../creds/token.json'
 ENV_PATH = '../.env'
-LOGGER_PATH = 'logs/server.log'
+LOGGER_PATH = '../logs/server.log'
 
 load_dotenv(dotenv_path=ENV_PATH)
 
@@ -52,7 +52,7 @@ load_dotenv(dotenv_path=ENV_PATH)
 logger = logging.getLogger('logger')
 
 # Set logger level
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.DEBUG) 
 
 # create handler
 handler = logging.FileHandler(LOGGER_PATH)
