@@ -2366,3 +2366,1639 @@
 2023-04-17 12:41:53,989 - logger - INFO - Recieved New Email notification
 2023-04-17 12:41:54,433 - logger - INFO - Checking most recent email
 2023-04-17 12:41:54,433 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 15:30:04,015 - logger - INFO - Started Server
+2023-04-17 15:30:26,775 - logger - INFO - --- working->True ---
+2023-04-17 15:30:28,266 - logger - INFO - Successfully Set Column Variables
+2023-04-17 15:30:28,425 - logger - INFO - Attempting to send texts/emails...
+2023-04-17 15:30:32,586 - logger - INFO - 
+Sent message to victor trst with number: 8057227847
+2023-04-17 15:30:33,056 - logger - INFO - Successfully sent email to: victor trst -> 
+2023-04-17 15:30:36,772 - logger - INFO - 
+Chose not to message Charles
+2023-04-17 15:30:40,736 - logger - INFO - 
+Sent message to Platanos with number: 8057227847
+2023-04-17 15:30:41,052 - logger - INFO - Successfully sent email to: Platanos -> 
+2023-04-17 15:30:44,549 - logger - INFO - 
+Chose not to message Cate 
+2023-04-17 15:30:47,844 - logger - ERROR - 
+Finished Texting and Emailing Candidaes
+2023-04-17 15:30:47,846 - logger - INFO - --- working->False ---
+2023-04-17 15:31:04,965 - logger - INFO - --- working->True ---
+2023-04-17 15:31:06,147 - logger - INFO - Successfully Set Column Variables
+2023-04-17 15:31:06,154 - logger - INFO - Attempting to send texts/emails...
+2023-04-17 15:31:09,587 - logger - ERROR - 
+Finished Texting and Emailing Candidaes
+2023-04-17 15:31:09,588 - logger - INFO - --- working->False ---
+2023-04-17 15:31:34,549 - logger - INFO - --- working->True ---
+2023-04-17 15:31:35,814 - logger - INFO - Successfully Set Column Variables
+2023-04-17 15:31:35,821 - logger - INFO - Attempting to send texts/emails...
+2023-04-17 15:31:39,235 - logger - INFO - 
+Chose not to message Jennifer Olvera
+2023-04-17 15:31:42,523 - logger - INFO - 
+Chose not to message David M. Scorse
+2023-04-17 15:31:45,815 - logger - INFO - 
+Chose not to message Bellamy Loefman
+2023-04-17 15:31:49,019 - logger - INFO - 
+Chose not to message Brittney Avantes
+2023-04-17 15:31:52,311 - logger - INFO - 
+Chose not to message Julie Sorg
+2023-04-17 15:31:56,231 - logger - INFO - 
+Sent message to James Ross with number: (951) 570-9827
+2023-04-17 15:31:56,707 - logger - INFO - Successfully sent email to: James Ross -> 
+2023-04-17 15:32:00,878 - logger - INFO - 
+Sent message to Morgan Moinian with number: (909) 367-9721
+2023-04-17 15:32:01,163 - logger - INFO - Successfully sent email to: Morgan Moinian -> 
+2023-04-17 15:32:04,734 - logger - INFO - 
+Chose not to message Hallie Snow
+2023-04-17 15:32:08,641 - logger - INFO - 
+Sent message to Brandon Mears with number: (562) 321-7465
+2023-04-17 15:32:08,928 - logger - INFO - Successfully sent email to: Brandon Mears -> 
+2023-04-17 15:32:12,463 - logger - INFO - 
+Chose not to message Alysan Marie Aachen Martinez
+2023-04-17 15:32:15,673 - logger - INFO - 
+Chose not to message Flora Oliveira
+2023-04-17 15:32:18,871 - logger - INFO - 
+Chose not to message David Park 
+2023-04-17 15:32:22,065 - logger - INFO - 
+Chose not to message Athai Ramirez
+2023-04-17 15:32:26,087 - logger - INFO - 
+Sent message to Aaron Jones with number: (816) 716-7102
+2023-04-17 15:32:26,343 - logger - INFO - Successfully sent email to: Aaron Jones -> 
+2023-04-17 15:32:29,883 - logger - INFO - 
+Chose not to message Sara E. Huish
+2023-04-17 15:32:33,181 - logger - INFO - 
+Chose not to message Cassi Thompson
+2023-04-17 15:32:36,404 - logger - INFO - 
+Chose not to message Natalie Barbrie
+2023-04-17 15:32:39,619 - logger - INFO - 
+Chose not to message Corrie Blissit
+2023-04-17 15:32:43,658 - logger - INFO - 
+Sent message to Britta Leffler with number: (949) 500-9384
+2023-04-17 15:32:44,021 - logger - INFO - Successfully sent email to: Britta Leffler -> 
+2023-04-17 15:32:48,114 - logger - INFO - 
+Sent message to Mister Searcy with number: (213) 359-0833
+2023-04-17 15:32:48,413 - logger - INFO - Successfully sent email to: Mister Searcy -> 
+2023-04-17 15:32:51,883 - logger - INFO - 
+Chose not to message Stacey Devening
+2023-04-17 15:32:55,097 - logger - INFO - 
+Chose not to message Michael R. Maynard
+2023-04-17 15:32:58,397 - logger - INFO - 
+Chose not to message Danielle Spain
+2023-04-17 15:33:01,611 - logger - INFO - 
+Chose not to message Kristen Anderson
+2023-04-17 15:33:04,824 - logger - INFO - 
+Chose not to message Samantha Hertz
+2023-04-17 15:33:08,505 - logger - INFO - 
+Chose not to message Karen Shifflett-Collins
+2023-04-17 15:33:11,703 - logger - INFO - 
+Chose not to message Christine McIlwain
+2023-04-17 15:33:14,906 - logger - INFO - 
+Chose not to message Adena Hassan
+2023-04-17 15:33:18,207 - logger - INFO - 
+Chose not to message Uche Nwamu 
+2023-04-17 15:33:22,089 - logger - INFO - 
+Sent message to John Satter with number: (626) 430-4885
+2023-04-17 15:33:22,536 - logger - INFO - Successfully sent email to: John Satter -> 
+2023-04-17 15:33:26,392 - logger - INFO - 
+Chose not to message Janine Betts
+2023-04-17 15:33:30,225 - logger - INFO - 
+Sent message to Anelita Novelo with number: (323) 253-3502
+2023-04-17 15:33:30,510 - logger - INFO - Successfully sent email to: Anelita Novelo -> 
+2023-04-17 15:33:34,040 - logger - INFO - 
+Chose not to message Emily Chane
+2023-04-17 15:33:37,428 - logger - INFO - 
+Chose not to message Joshua Acosta
+2023-04-17 15:33:40,674 - logger - INFO - 
+Chose not to message Veronica Parker
+2023-04-17 15:33:43,893 - logger - INFO - 
+Chose not to message Marissza Gonzalez
+2023-04-17 15:33:47,094 - logger - INFO - 
+Chose not to message Dawn Hamilton
+2023-04-17 15:33:50,298 - logger - INFO - 
+Chose not to message Pamela Herrick
+2023-04-17 15:33:53,501 - logger - INFO - 
+Chose not to message Shannon Klosak 
+2023-04-17 15:33:56,711 - logger - INFO - 
+Chose not to message Dalia Fullingim
+2023-04-17 15:34:00,000 - logger - INFO - 
+Chose not to message Laura L. Sims
+2023-04-17 15:34:03,206 - logger - INFO - 
+Chose not to message Ford T. Monell
+2023-04-17 15:34:06,419 - logger - INFO - 
+Chose not to message Brenda Bulnes
+2023-04-17 15:34:09,659 - logger - INFO - 
+Chose not to message Sarah Prade
+2023-04-17 15:34:12,877 - logger - INFO - 
+Chose not to message Joanne Marie Gayton
+2023-04-17 15:34:16,083 - logger - INFO - 
+Chose not to message Yvonne Marí Muñoz
+2023-04-17 15:34:19,303 - logger - INFO - 
+Chose not to message NADIA LUTFI
+2023-04-17 15:34:22,519 - logger - INFO - 
+Chose not to message Michelle Absi
+2023-04-17 15:34:25,733 - logger - INFO - 
+Chose not to message CHRISTINE PIRRUCCELLO
+2023-04-17 15:34:28,975 - logger - INFO - 
+Chose not to message Courtney Harden
+2023-04-17 15:34:32,188 - logger - INFO - 
+Chose not to message Malinda Bilbrey
+2023-04-17 15:34:36,022 - logger - INFO - 
+Sent message to LaRitha Vaughn-Shanklin with number: (323) 419-7384
+2023-04-17 15:34:36,464 - logger - INFO - Successfully sent email to: LaRitha Vaughn-Shanklin -> 
+2023-04-17 15:34:40,033 - logger - INFO - 
+Chose not to message Kassandra J Palmas
+2023-04-17 15:34:44,061 - logger - INFO - 
+Sent message to Victor Young with number: 818-221-8034
+2023-04-17 15:34:44,349 - logger - INFO - Successfully sent email to: Victor Young -> 
+2023-04-17 15:34:47,828 - logger - INFO - 
+Chose not to message Shari L. Mosley
+2023-04-17 15:34:51,033 - logger - INFO - 
+Chose not to message Amy Bailey
+2023-04-17 15:34:54,238 - logger - INFO - 
+Chose not to message Suzette A. Toscano
+2023-04-17 15:34:57,447 - logger - INFO - 
+Chose not to message Arash Shahangian
+2023-04-17 15:35:00,661 - logger - INFO - 
+Chose not to message Paula Green
+2023-04-17 15:35:03,865 - logger - INFO - 
+Chose not to message Fouzieh Nikzad
+2023-04-17 15:35:07,078 - logger - INFO - 
+Chose not to message Linda Bianchi
+2023-04-17 15:35:10,283 - logger - INFO - 
+Chose not to message DAVID M. MAESTAS
+2023-04-17 15:35:13,493 - logger - INFO - 
+Chose not to message Kristin Kelly
+2023-04-17 15:35:16,730 - logger - INFO - 
+Chose not to message STANLEY BENOIT
+2023-04-17 15:35:20,571 - logger - INFO - 
+Sent message to Lisa Pirtle with number: (909)730-8649
+2023-04-17 15:35:20,974 - logger - INFO - Successfully sent email to: Lisa Pirtle -> 
+2023-04-17 15:35:24,419 - logger - INFO - 
+Chose not to message Maria Velasquez
+2023-04-17 15:35:28,780 - logger - INFO - 
+Sent message to Anindita (Dee) Dattaray with number: 562-841-1784
+2023-04-17 15:35:29,087 - logger - INFO - Successfully sent email to: Anindita (Dee) Dattaray -> 
+2023-04-17 15:35:32,603 - logger - INFO - 
+Chose not to message Chung M. Nguyen
+2023-04-17 15:35:35,810 - logger - INFO - 
+Chose not to message ERICA A. MCINTOSH
+2023-04-17 15:35:39,055 - logger - INFO - 
+Chose not to message Narges Maududi
+2023-04-17 15:35:42,342 - logger - INFO - 
+Chose not to message Patrick Cleveland
+2023-04-17 15:35:45,549 - logger - INFO - 
+Chose not to message PATRICIA CHAVEZ
+2023-04-17 15:35:48,847 - logger - INFO - 
+Chose not to message Heydieh Soroush
+2023-04-17 15:35:52,066 - logger - INFO - 
+Chose not to message NICKY CHENG
+2023-04-17 15:35:55,268 - logger - INFO - 
+Chose not to message Dana A. Musallet
+2023-04-17 15:35:58,484 - logger - INFO - 
+Chose not to message Alicia N. Daddio
+2023-04-17 15:36:01,687 - logger - INFO - 
+Chose not to message Kerri Serrano
+2023-04-17 15:36:04,899 - logger - INFO - 
+Chose not to message Susan Gameros
+2023-04-17 15:36:08,125 - logger - INFO - 
+Chose not to message Brandon Wetzler
+2023-04-17 15:36:11,336 - logger - INFO - 
+Chose not to message Daniela Ojeda
+2023-04-17 15:36:14,544 - logger - INFO - 
+Chose not to message Stephanie Turner-Johnson
+2023-04-17 15:36:17,774 - logger - INFO - 
+Chose not to message Stephen K. Valenciano
+2023-04-17 15:36:20,970 - logger - INFO - 
+Chose not to message Heidi Christianson
+2023-04-17 15:36:24,218 - logger - INFO - 
+Chose not to message CYNTHIA M. HOLMES
+2023-04-17 15:36:27,447 - logger - INFO - 
+Chose not to message Ann-Marie Caudillo
+2023-04-17 15:36:30,647 - logger - INFO - 
+Chose not to message DENA NELSON
+2023-04-17 15:36:33,841 - logger - INFO - 
+Chose not to message Deborah Beaver
+2023-04-17 15:36:35,220 - logger - INFO - Operation currently ongoing, cannot process
+2023-04-17 15:36:35,220 - logger - INFO - --- working->True ---
+2023-04-17 15:36:36,504 - logger - INFO - Successfully Set Column Variables
+2023-04-17 15:36:36,511 - logger - INFO - Attempting to send texts/emails...
+2023-04-17 15:36:37,046 - logger - INFO - 
+Chose not to message JENNIFER JOY SURJUE-BOWENS
+2023-04-17 15:36:39,952 - logger - INFO - 
+Chose not to message Jennifer Olvera
+2023-04-17 15:36:40,253 - logger - INFO - 
+Chose not to message Erica Ureno
+2023-04-17 15:36:43,240 - logger - INFO - 
+Chose not to message David M. Scorse
+2023-04-17 15:36:43,459 - logger - INFO - 
+Chose not to message Glenn Ferdinand
+2023-04-17 15:36:46,482 - logger - INFO - 
+Chose not to message Bellamy Loefman
+2023-04-17 15:36:46,655 - logger - INFO - 
+Chose not to message Daniel H.Aguilera
+2023-04-17 15:36:49,785 - logger - INFO - 
+Chose not to message Brittney Avantes
+2023-04-17 15:36:49,859 - logger - INFO - 
+Chose not to message Lizzette Garcia
+2023-04-17 15:36:52,979 - logger - INFO - 
+Chose not to message Julie Sorg
+2023-04-17 15:36:53,065 - logger - INFO - 
+Chose not to message Michelle Carrillo
+2023-04-17 15:36:56,277 - logger - INFO - 
+Chose not to message Dowrin Zuarez
+2023-04-17 15:36:56,922 - logger - INFO - 
+Sent message to James Ross with number: (951) 570-9827
+2023-04-17 15:36:57,360 - logger - INFO - Successfully sent email to: James Ross -> 
+2023-04-17 15:36:59,482 - logger - INFO - 
+Chose not to message Kim Stout
+2023-04-17 15:37:01,600 - logger - INFO - 
+Sent message to Morgan Moinian with number: (909) 367-9721
+2023-04-17 15:37:01,898 - logger - INFO - Successfully sent email to: Morgan Moinian -> 
+2023-04-17 15:37:02,680 - logger - INFO - 
+Chose not to message  DOMINIC ENG HUNG ONG,
+2023-04-17 15:37:05,518 - logger - INFO - 
+Chose not to message Hallie Snow
+2023-04-17 15:37:05,886 - logger - INFO - 
+Chose not to message Joanna Danuta Orlowska
+2023-04-17 15:37:09,434 - logger - INFO - 
+Sent message to Brandon Mears with number: (562) 321-7465
+2023-04-17 15:37:09,923 - logger - INFO - 
+Sent message to Michielle Lynn Garcia with number: 714-366-8606
+2023-04-17 15:37:09,944 - logger - INFO - Successfully sent email to: Brandon Mears -> 
+2023-04-17 15:37:10,395 - logger - INFO - Successfully sent email to: Michielle Lynn Garcia -> 
+2023-04-17 15:37:13,552 - logger - INFO - 
+Chose not to message Alysan Marie Aachen Martinez
+2023-04-17 15:37:13,957 - logger - INFO - 
+Chose not to message Cay Crosby
+2023-04-17 15:37:16,837 - logger - INFO - 
+Chose not to message Flora Oliveira
+2023-04-17 15:37:17,772 - logger - INFO - 
+Sent message to MELODY B. FATHI with number: 9493511176
+2023-04-17 15:37:18,050 - logger - INFO - Successfully sent email to: MELODY B. FATHI -> 
+2023-04-17 15:37:20,110 - logger - INFO - 
+Chose not to message David Park 
+2023-04-17 15:37:21,519 - logger - INFO - 
+Chose not to message Juan Gavidia
+2023-04-17 15:37:23,310 - logger - INFO - 
+Chose not to message Athai Ramirez
+2023-04-17 15:37:24,784 - logger - INFO - 
+Chose not to message Katie Armstrong
+2023-04-17 15:37:27,200 - logger - INFO - 
+Sent message to Aaron Jones with number: (816) 716-7102
+2023-04-17 15:37:27,489 - logger - INFO - Successfully sent email to: Aaron Jones -> 
+2023-04-17 15:37:27,992 - logger - INFO - 
+Chose not to message Estella Lerlo
+2023-04-17 15:37:31,102 - logger - INFO - 
+Chose not to message Sara E. Huish
+2023-04-17 15:37:31,220 - logger - INFO - 
+Chose not to message Annie Chan
+2023-04-17 15:37:34,401 - logger - INFO - 
+Chose not to message Cassi Thompson
+2023-04-17 15:37:34,447 - logger - INFO - 
+Chose not to message Ivano Franceschini
+2023-04-17 15:37:37,617 - logger - INFO - 
+Chose not to message Natalie Barbrie
+2023-04-17 15:37:38,285 - logger - INFO - 
+Could not send message to: Jacqueline Davis -> 949-822-1700  or 340-626-3974
+2023-04-17 15:37:38,554 - logger - INFO - Successfully sent email to: Jacqueline Davis -> 
+2023-04-17 15:37:40,833 - logger - INFO - 
+Chose not to message Corrie Blissit
+2023-04-17 15:37:42,006 - logger - INFO - 
+Chose not to message Diane Carota
+2023-04-17 15:37:45,242 - logger - INFO - 
+Chose not to message Jennifer Villar
+2023-04-17 15:37:45,386 - logger - INFO - 
+Sent message to Britta Leffler with number: (949) 500-9384
+2023-04-17 15:37:45,713 - logger - INFO - Successfully sent email to: Britta Leffler -> 
+2023-04-17 15:37:48,456 - logger - INFO - 
+Chose not to message Janny M. Rivera
+2023-04-17 15:37:50,163 - logger - INFO - 
+Sent message to Mister Searcy with number: (213) 359-0833
+2023-04-17 15:37:50,422 - logger - INFO - Successfully sent email to: Mister Searcy -> 
+2023-04-17 15:37:51,675 - logger - INFO - 
+Chose not to message Zainab Oystol,
+2023-04-17 15:37:53,900 - logger - INFO - 
+Chose not to message Stacey Devening
+2023-04-17 15:37:55,674 - logger - INFO - 
+Sent message to Melissa Barraza with number: (562) 656-9531
+2023-04-17 15:37:55,960 - logger - INFO - Successfully sent email to: Melissa Barraza -> 
+2023-04-17 15:37:57,184 - logger - INFO - 
+Chose not to message Michael R. Maynard
+2023-04-17 15:38:00,244 - logger - INFO - 
+Sent message to Cierra Parker with number: (951) 234-2066
+2023-04-17 15:38:00,467 - logger - INFO - 
+Chose not to message Danielle Spain
+2023-04-17 15:38:00,548 - logger - INFO - Successfully sent email to: Cierra Parker -> 
+2023-04-17 15:38:03,755 - logger - INFO - 
+Chose not to message Kristen Anderson
+2023-04-17 15:38:04,011 - logger - INFO - 
+Chose not to message Kathleen Donaldson
+2023-04-17 15:38:07,060 - logger - INFO - 
+Chose not to message Samantha Hertz
+2023-04-17 15:38:07,814 - logger - INFO - 
+Sent message to Marlene Schoenhofen with number: 9097317639
+2023-04-17 15:38:08,074 - logger - INFO - Successfully sent email to: Marlene Schoenhofen -> 
+2023-04-17 15:38:10,271 - logger - INFO - 
+Chose not to message Karen Shifflett-Collins
+2023-04-17 15:38:11,521 - logger - INFO - 
+Chose not to message ReNina DeeMinter
+2023-04-17 15:38:13,467 - logger - INFO - 
+Chose not to message Christine McIlwain
+2023-04-17 15:38:14,717 - logger - INFO - 
+Chose not to message Tina Tangtheinkul
+2023-04-17 15:38:16,783 - logger - INFO - 
+Chose not to message Adena Hassan
+2023-04-17 15:38:17,924 - logger - INFO - 
+Chose not to message Cynthia Martinez
+2023-04-17 15:38:19,991 - logger - INFO - 
+Chose not to message Uche Nwamu 
+2023-04-17 15:38:21,789 - logger - INFO - 
+Sent message to Claire M. Stanford with number: (562) 607-4633
+2023-04-17 15:38:22,054 - logger - INFO - Successfully sent email to: Claire M. Stanford -> 
+2023-04-17 15:38:23,775 - logger - INFO - 
+Sent message to John Satter with number: (626) 430-4885
+2023-04-17 15:38:24,202 - logger - INFO - Successfully sent email to: John Satter -> 
+2023-04-17 15:38:26,089 - logger - INFO - 
+Sent message to Torrionda Wallace with number: 310 722 0966
+2023-04-17 15:38:26,387 - logger - INFO - Successfully sent email to: Torrionda Wallace -> 
+2023-04-17 15:38:27,719 - logger - INFO - 
+Chose not to message Janine Betts
+2023-04-17 15:38:29,848 - logger - INFO - 
+Chose not to message CORINA CERVANTES
+2023-04-17 15:38:31,515 - logger - INFO - 
+Sent message to Anelita Novelo with number: (323) 253-3502
+2023-04-17 15:38:31,830 - logger - INFO - Successfully sent email to: Anelita Novelo -> 
+2023-04-17 15:38:33,053 - logger - INFO - 
+Chose not to message ERIKA KOSTERLITZKY
+2023-04-17 15:38:35,381 - logger - INFO - 
+Chose not to message Emily Chane
+2023-04-17 15:38:36,243 - logger - INFO - 
+Chose not to message Tanya Douglas
+2023-04-17 15:38:38,674 - logger - INFO - 
+Chose not to message Joshua Acosta
+2023-04-17 15:38:39,456 - logger - INFO - 
+Chose not to message Cynthia Bell
+2023-04-17 15:38:41,877 - logger - INFO - 
+Chose not to message Veronica Parker
+2023-04-17 15:38:42,667 - logger - INFO - 
+Chose not to message NICOLE ABADI
+2023-04-17 15:38:45,101 - logger - INFO - 
+Chose not to message Marissza Gonzalez
+2023-04-17 15:38:45,879 - logger - INFO - 
+Chose not to message Ruya Urso
+2023-04-17 15:38:48,406 - logger - INFO - 
+Chose not to message Dawn Hamilton
+2023-04-17 15:38:49,085 - logger - INFO - 
+Chose not to message Anthony E. Avelar
+2023-04-17 15:38:51,617 - logger - INFO - 
+Chose not to message Pamela Herrick
+2023-04-17 15:38:52,287 - logger - INFO - 
+Chose not to message Chanel Higgs
+2023-04-17 15:38:54,845 - logger - INFO - 
+Chose not to message Shannon Klosak 
+2023-04-17 15:38:55,507 - logger - INFO - 
+Chose not to message Anadina Alvarez
+2023-04-17 15:38:58,053 - logger - INFO - 
+Chose not to message Dalia Fullingim
+2023-04-17 15:38:58,703 - logger - INFO - 
+Chose not to message Carolyn Maxwell
+2023-04-17 15:39:01,331 - logger - INFO - 
+Chose not to message Laura L. Sims
+2023-04-17 15:39:01,900 - logger - INFO - 
+Chose not to message Eva Castaneda-Hogan
+2023-04-17 15:39:04,627 - logger - INFO - 
+Chose not to message Ford T. Monell
+2023-04-17 15:39:05,107 - logger - INFO - 
+Chose not to message Pamela montazer
+2023-04-17 15:39:07,826 - logger - INFO - 
+Chose not to message Brenda Bulnes
+2023-04-17 15:39:08,317 - logger - INFO - 
+Chose not to message Keisha Blackshear
+2023-04-17 15:39:11,020 - logger - INFO - 
+Chose not to message Sarah Prade
+2023-04-17 15:39:11,519 - logger - INFO - 
+Chose not to message Maria Mir
+2023-04-17 15:39:14,242 - logger - INFO - 
+Chose not to message Joanne Marie Gayton
+2023-04-17 15:39:15,369 - logger - INFO - 
+Sent message to Renandez Grim with number: 213.864.0178
+2023-04-17 15:39:15,944 - logger - INFO - Successfully sent email to: Renandez Grim -> 
+2023-04-17 15:39:17,527 - logger - INFO - 
+Chose not to message Yvonne Marí Muñoz
+2023-04-17 15:39:19,402 - logger - INFO - 
+Chose not to message Michelle Rubio
+2023-04-17 15:39:20,813 - logger - INFO - 
+Chose not to message NADIA LUTFI
+2023-04-17 15:39:22,599 - logger - INFO - 
+Chose not to message Carole Arlt
+2023-04-17 15:39:24,053 - logger - INFO - 
+Chose not to message Michelle Absi
+2023-04-17 15:39:26,629 - logger - INFO - 
+Sent message to Krystle Tham with number: (562) 412-4342
+2023-04-17 15:39:26,929 - logger - INFO - Successfully sent email to: Krystle Tham -> 
+2023-04-17 15:39:27,360 - logger - INFO - 
+Chose not to message CHRISTINE PIRRUCCELLO
+2023-04-17 15:39:30,390 - logger - INFO - 
+Chose not to message Judithann Roberts
+2023-04-17 15:39:30,659 - logger - INFO - 
+Chose not to message Courtney Harden
+2023-04-17 15:39:33,660 - logger - INFO - 
+Chose not to message DEBRA A. FRESQUEZ
+2023-04-17 15:39:33,956 - logger - INFO - 
+Chose not to message Malinda Bilbrey
+2023-04-17 15:39:37,619 - logger - INFO - 
+Sent message to JOHN J DIMARE with number: (949) 842-8865
+2023-04-17 15:39:37,902 - logger - INFO - Successfully sent email to: JOHN J DIMARE -> 
+2023-04-17 15:39:38,085 - logger - INFO - 
+Sent message to LaRitha Vaughn-Shanklin with number: (323) 419-7384
+2023-04-17 15:39:38,524 - logger - INFO - Successfully sent email to: LaRitha Vaughn-Shanklin -> 
+2023-04-17 15:39:41,804 - logger - INFO - 
+Chose not to message HEATHER A. HARRIS
+2023-04-17 15:39:41,991 - logger - INFO - 
+Chose not to message Kassandra J Palmas
+2023-04-17 15:39:45,046 - logger - INFO - 
+Chose not to message LIZBETH ABAUNZA
+2023-04-17 15:39:45,897 - logger - INFO - 
+Sent message to Victor Young with number: 818-221-8034
+2023-04-17 15:39:46,195 - logger - INFO - Successfully sent email to: Victor Young -> 
+2023-04-17 15:39:48,249 - logger - INFO - 
+Chose not to message Samuel L Randolph
+2023-04-17 15:39:49,675 - logger - INFO - 
+Chose not to message Shari L. Mosley
+2023-04-17 15:39:51,506 - logger - INFO - 
+Chose not to message Margaret Ann Garcia
+2023-04-17 15:39:52,950 - logger - INFO - 
+Chose not to message Amy Bailey
+2023-04-17 15:39:54,703 - logger - INFO - 
+Chose not to message SHEARLY CHAMBLESS
+2023-04-17 15:39:56,152 - logger - INFO - 
+Chose not to message Suzette A. Toscano
+2023-04-17 15:39:58,124 - logger - INFO - 
+Chose not to message Mary Roberts
+2023-04-17 15:39:59,430 - logger - INFO - 
+Chose not to message Arash Shahangian
+2023-04-17 15:40:01,333 - logger - INFO - 
+Chose not to message Josilyn Wick Coronel
+2023-04-17 15:40:02,696 - logger - INFO - 
+Chose not to message Paula Green
+2023-04-17 15:40:04,561 - logger - INFO - 
+Chose not to message Elizabeth Mendez
+2023-04-17 15:40:05,903 - logger - INFO - 
+Chose not to message Fouzieh Nikzad
+2023-04-17 15:40:07,773 - logger - INFO - 
+Chose not to message Douglas Kitchen
+2023-04-17 15:40:09,175 - logger - INFO - 
+Chose not to message Linda Bianchi
+2023-04-17 15:40:10,982 - logger - INFO - 
+Chose not to message Adriana Gutierrez
+2023-04-17 15:40:12,395 - logger - INFO - 
+Chose not to message DAVID M. MAESTAS
+2023-04-17 15:40:14,190 - logger - INFO - 
+Chose not to message Jina Lee
+2023-04-17 15:40:15,695 - logger - INFO - 
+Chose not to message Kristin Kelly
+2023-04-17 15:40:17,408 - logger - INFO - 
+Chose not to message Steven Nelson
+2023-04-17 15:40:18,904 - logger - INFO - 
+Chose not to message STANLEY BENOIT
+2023-04-17 15:40:20,625 - logger - INFO - 
+Chose not to message Elsa Keng
+2023-04-17 15:40:22,768 - logger - INFO - 
+Sent message to Lisa Pirtle with number: (909)730-8649
+2023-04-17 15:40:23,171 - logger - INFO - Successfully sent email to: Lisa Pirtle -> 
+2023-04-17 15:40:24,477 - logger - INFO - 
+Could not send message to: Alexandra Levins-Trail -> 
+2023-04-17 15:40:24,903 - logger - INFO - Successfully sent email to: Alexandra Levins-Trail -> 
+2023-04-17 15:40:26,655 - logger - INFO - 
+Chose not to message Maria Velasquez
+2023-04-17 15:40:28,496 - logger - INFO - 
+Chose not to message Abbe Mcclenahan
+2023-04-17 15:40:30,541 - logger - INFO - 
+Sent message to Anindita (Dee) Dattaray with number: 562-841-1784
+2023-04-17 15:40:30,807 - logger - INFO - Successfully sent email to: Anindita (Dee) Dattaray -> 
+2023-04-17 15:40:31,721 - logger - INFO - 
+Chose not to message Savina Limon
+2023-04-17 15:40:34,352 - logger - INFO - 
+Chose not to message Chung M. Nguyen
+2023-04-17 15:40:35,582 - logger - INFO - 
+Sent message to Ashley N Long-Labaar with number: (562) 644-0759
+2023-04-17 15:40:35,895 - logger - INFO - Successfully sent email to: Ashley N Long-Labaar -> 
+2023-04-17 15:40:37,739 - logger - INFO - 
+Chose not to message ERICA A. MCINTOSH
+2023-04-17 15:40:39,456 - logger - INFO - 
+Chose not to message Susan Hyde
+2023-04-17 15:40:40,948 - logger - INFO - 
+Chose not to message Narges Maududi
+2023-04-17 15:40:42,658 - logger - INFO - 
+Chose not to message Nuria Lopez
+2023-04-17 15:40:44,245 - logger - INFO - 
+Chose not to message Patrick Cleveland
+2023-04-17 15:40:46,610 - logger - INFO - 
+Sent message to OLIVIA ANNE MORALES with number: (562) 321-7440
+2023-04-17 15:40:46,889 - logger - INFO - Successfully sent email to: OLIVIA ANNE MORALES -> 
+2023-04-17 15:40:47,478 - logger - INFO - 
+Chose not to message PATRICIA CHAVEZ
+2023-04-17 15:40:50,350 - logger - INFO - 
+Chose not to message Alton C. Carswell
+2023-04-17 15:40:50,698 - logger - INFO - 
+Chose not to message Heydieh Soroush
+2023-04-17 15:40:53,906 - logger - INFO - 
+Chose not to message NICKY CHENG
+2023-04-17 15:40:54,193 - logger - INFO - 
+Sent message to Sophia Jackson with number: 714-886-7592
+2023-04-17 15:40:54,499 - logger - INFO - Successfully sent email to: Sophia Jackson -> 
+2023-04-17 15:40:57,184 - logger - INFO - 
+Chose not to message Dana A. Musallet
+2023-04-17 15:40:58,029 - logger - INFO - 
+Chose not to message Zerly M. Justiniano
+2023-04-17 15:41:00,391 - logger - INFO - 
+Chose not to message Alicia N. Daddio
+2023-04-17 15:41:01,240 - logger - INFO - 
+Chose not to message FARHANA Z. AHMED
+2023-04-17 15:41:03,699 - logger - INFO - 
+Chose not to message Kerri Serrano
+2023-04-17 15:41:04,442 - logger - INFO - 
+Chose not to message Yuki Yoshida
+2023-04-17 15:41:06,980 - logger - INFO - 
+Chose not to message Susan Gameros
+2023-04-17 15:41:07,640 - logger - INFO - 
+Chose not to message Catherine Vu
+2023-04-17 15:41:10,239 - logger - INFO - 
+Chose not to message Brandon Wetzler
+2023-04-17 15:41:10,848 - logger - INFO - 
+Chose not to message SUZANNE MILLICAN
+2023-04-17 15:41:13,547 - logger - INFO - 
+Chose not to message Daniela Ojeda
+2023-04-17 15:41:14,724 - logger - INFO - 
+Sent message to Helen Riccobono with number: (949) 742-4627
+2023-04-17 15:41:14,992 - logger - INFO - Successfully sent email to: Helen Riccobono -> 
+2023-04-17 15:41:16,833 - logger - INFO - 
+Chose not to message Stephanie Turner-Johnson
+2023-04-17 15:41:18,445 - logger - INFO - 
+Chose not to message Derek G. Larson
+2023-04-17 15:41:20,117 - logger - INFO - 
+Chose not to message Stephen K. Valenciano
+2023-04-17 15:41:21,653 - logger - INFO - 
+Chose not to message Kristin Erickson
+2023-04-17 15:41:23,355 - logger - INFO - 
+Chose not to message Heidi Christianson
+2023-04-17 15:41:24,853 - logger - INFO - 
+Chose not to message KENNIA TORRES
+2023-04-17 15:41:26,567 - logger - INFO - 
+Chose not to message CYNTHIA M. HOLMES
+2023-04-17 15:41:28,063 - logger - INFO - 
+Chose not to message Areli Balvaneda
+2023-04-17 15:41:29,846 - logger - INFO - 
+Chose not to message Ann-Marie Caudillo
+2023-04-17 15:41:31,272 - logger - INFO - 
+Chose not to message Michael Penafiel
+2023-04-17 15:41:33,062 - logger - INFO - 
+Chose not to message DENA NELSON
+2023-04-17 15:41:34,471 - logger - INFO - 
+Chose not to message Debra Burianek
+2023-04-17 15:41:36,272 - logger - INFO - 
+Chose not to message Deborah Beaver
+2023-04-17 15:41:37,707 - logger - INFO - 
+Chose not to message Sarah Nelson
+2023-04-17 15:41:39,468 - logger - INFO - 
+Chose not to message JENNIFER JOY SURJUE-BOWENS
+2023-04-17 15:41:41,647 - logger - INFO - 
+Sent message to Juliet Nazaryan with number: (818) 800-3505
+2023-04-17 15:41:41,929 - logger - INFO - Successfully sent email to: Juliet Nazaryan -> 
+2023-04-17 15:41:42,697 - logger - INFO - 
+Chose not to message Erica Ureno
+2023-04-17 15:41:45,440 - logger - INFO - 
+Chose not to message Christina Chaturanyakoon
+2023-04-17 15:41:45,908 - logger - INFO - 
+Chose not to message Glenn Ferdinand
+2023-04-17 15:41:49,114 - logger - INFO - 
+Chose not to message Daniel H.Aguilera
+2023-04-17 15:41:49,284 - logger - INFO - 
+Sent message to Alyssa M. Lemus with number: 562 – 743 – 4418
+2023-04-17 15:41:49,580 - logger - INFO - Successfully sent email to: Alyssa M. Lemus -> 
+2023-04-17 15:41:52,399 - logger - INFO - 
+Chose not to message Lizzette Garcia
+2023-04-17 15:41:53,020 - logger - INFO - 
+Chose not to message ASHLEY PARRELLA
+2023-04-17 15:41:55,608 - logger - INFO - 
+Chose not to message Michelle Carrillo
+2023-04-17 15:41:56,222 - logger - INFO - 
+Chose not to message Desiree Lopez
+2023-04-17 15:41:58,810 - logger - INFO - 
+Chose not to message Dowrin Zuarez
+2023-04-17 15:41:59,429 - logger - INFO - 
+Chose not to message Mayte Salazar
+2023-04-17 15:42:02,768 - logger - INFO - 
+Chose not to message Kim Stout
+2023-04-17 15:42:04,120 - logger - INFO - 
+Sent message to Anita C. Arevalo with number: (951) 836-6636
+2023-04-17 15:42:04,440 - logger - INFO - Successfully sent email to: Anita C. Arevalo -> 
+2023-04-17 15:42:05,963 - logger - INFO - 
+Chose not to message  DOMINIC ENG HUNG ONG,
+2023-04-17 15:42:08,048 - logger - INFO - 
+Chose not to message Lillian Farzan
+2023-04-17 15:42:09,160 - logger - INFO - 
+Chose not to message Joanna Danuta Orlowska
+2023-04-17 15:42:11,329 - logger - INFO - 
+Chose not to message Michael T. Gapski
+2023-04-17 15:42:13,080 - logger - INFO - 
+Sent message to Michielle Lynn Garcia with number: 714-366-8606
+2023-04-17 15:42:13,620 - logger - INFO - Successfully sent email to: Michielle Lynn Garcia -> 
+2023-04-17 15:42:15,153 - logger - INFO - 
+Sent message to ANIKA MUHAMMAD with number: 323-506-7814
+2023-04-17 15:42:15,438 - logger - INFO - Successfully sent email to: ANIKA MUHAMMAD -> 
+2023-04-17 15:42:17,148 - logger - INFO - 
+Chose not to message Cay Crosby
+2023-04-17 15:42:18,907 - logger - INFO - 
+Chose not to message Roxana Lal
+2023-04-17 15:42:20,966 - logger - INFO - 
+Sent message to MELODY B. FATHI with number: 9493511176
+2023-04-17 15:42:21,263 - logger - INFO - Successfully sent email to: MELODY B. FATHI -> 
+2023-04-17 15:42:22,143 - logger - INFO - 
+Chose not to message Alex Iacovitti
+2023-04-17 15:42:24,718 - logger - INFO - 
+Chose not to message Juan Gavidia
+2023-04-17 15:42:25,389 - logger - INFO - 
+Chose not to message Veronica D. Barcenas
+2023-04-17 15:42:27,986 - logger - INFO - 
+Chose not to message Katie Armstrong
+2023-04-17 15:42:29,200 - logger - INFO - 
+Sent message to Sergio Haro with number: (562) 940-5065
+2023-04-17 15:42:29,464 - logger - INFO - Successfully sent email to: Sergio Haro -> 
+2023-04-17 15:42:31,193 - logger - INFO - 
+Chose not to message Estella Lerlo
+2023-04-17 15:42:32,936 - logger - INFO - 
+Chose not to message Joy Zembruski
+2023-04-17 15:42:34,687 - logger - INFO - 
+Chose not to message Annie Chan
+2023-04-17 15:42:36,815 - logger - INFO - 
+Sent message to Dorise Hebenstreit with number: 714.296.2070
+2023-04-17 15:42:37,131 - logger - INFO - Successfully sent email to: Dorise Hebenstreit -> 
+2023-04-17 15:42:37,928 - logger - INFO - 
+Chose not to message Ivano Franceschini
+2023-04-17 15:42:40,587 - logger - INFO - 
+Chose not to message Shirin Peykar
+2023-04-17 15:42:41,745 - logger - INFO - 
+Could not send message to: Jacqueline Davis -> 949-822-1700  or 340-626-3974
+2023-04-17 15:42:42,149 - logger - INFO - Successfully sent email to: Jacqueline Davis -> 
+2023-04-17 15:42:43,779 - logger - INFO - 
+Chose not to message Nicolasa O. Nava
+2023-04-17 15:42:46,034 - logger - INFO - 
+Chose not to message Diane Carota
+2023-04-17 15:42:47,067 - logger - INFO - 
+Chose not to message Lea Mendoza
+2023-04-17 15:42:49,329 - logger - INFO - 
+Chose not to message Jennifer Villar
+2023-04-17 15:42:50,277 - logger - INFO - 
+Chose not to message Nazneen Hamade
+2023-04-17 15:42:52,778 - logger - INFO - 
+Chose not to message Janny M. Rivera
+2023-04-17 15:42:53,522 - logger - INFO - 
+Chose not to message Sonal Dani
+2023-04-17 15:42:56,059 - logger - INFO - 
+Chose not to message Zainab Oystol,
+2023-04-17 15:42:56,737 - logger - INFO - 
+Chose not to message Lizbeth Nava
+2023-04-17 15:42:59,937 - logger - INFO - 
+Sent message to Melissa Barraza with number: (562) 656-9531
+2023-04-17 15:42:59,947 - logger - INFO - 
+Chose not to message Steven S. Will
+2023-04-17 15:43:00,196 - logger - INFO - Successfully sent email to: Melissa Barraza -> 
+2023-04-17 15:43:03,163 - logger - INFO - 
+Chose not to message Gabriela Aguayo
+2023-04-17 15:43:04,305 - logger - INFO - 
+Sent message to Cierra Parker with number: (951) 234-2066
+2023-04-17 15:43:04,562 - logger - INFO - Successfully sent email to: Cierra Parker -> 
+2023-04-17 15:43:06,372 - logger - INFO - 
+Chose not to message GUILLERMINA CONTRERAS
+2023-04-17 15:43:08,670 - logger - INFO - 
+Chose not to message Kathleen Donaldson
+2023-04-17 15:43:09,818 - logger - INFO - 
+Chose not to message Pamela E. Pudewa
+2023-04-17 15:43:12,526 - logger - INFO - 
+Sent message to Marlene Schoenhofen with number: 9097317639
+2023-04-17 15:43:12,793 - logger - INFO - Successfully sent email to: Marlene Schoenhofen -> 
+2023-04-17 15:43:15,396 - logger - INFO - 
+Sent message to Megan Fenton with number: (408)550-3882
+2023-04-17 15:43:16,037 - logger - INFO - Successfully sent email to: Megan Fenton -> 
+2023-04-17 15:43:16,288 - logger - INFO - 
+Chose not to message ReNina DeeMinter
+2023-04-17 15:43:19,507 - logger - INFO - 
+Chose not to message Tina Tangtheinkul
+2023-04-17 15:43:20,161 - logger - INFO - 
+Sent message to Rachel Joy Loverro with number: (510) 648-4015
+2023-04-17 15:43:20,478 - logger - INFO - Successfully sent email to: Rachel Joy Loverro -> 
+2023-04-17 15:43:22,709 - logger - INFO - 
+Chose not to message Cynthia Martinez
+2023-04-17 15:43:24,268 - logger - INFO - 
+Chose not to message KRYSTLE SANTANA
+2023-04-17 15:43:26,703 - logger - INFO - 
+Sent message to Claire M. Stanford with number: (562) 607-4633
+2023-04-17 15:43:27,019 - logger - INFO - Successfully sent email to: Claire M. Stanford -> 
+2023-04-17 15:43:28,068 - logger - INFO - 
+Sent message to Samantha Moreno with number: (909) 344-0497 
+2023-04-17 15:43:28,352 - logger - INFO - Successfully sent email to: Samantha Moreno -> 
+2023-04-17 15:43:31,285 - logger - INFO - 
+Sent message to Torrionda Wallace with number: 310 722 0966
+2023-04-17 15:43:31,618 - logger - INFO - Successfully sent email to: Torrionda Wallace -> 
+2023-04-17 15:43:32,458 - logger - INFO - 
+Sent message to Jessica Cornea with number: 714-906-0244
+2023-04-17 15:43:32,777 - logger - INFO - Successfully sent email to: Jessica Cornea -> 
+2023-04-17 15:43:35,082 - logger - INFO - 
+Chose not to message CORINA CERVANTES
+2023-04-17 15:43:36,870 - logger - INFO - 
+Sent message to Larry Savedra with number: (562) 972-2989
+2023-04-17 15:43:37,125 - logger - INFO - Successfully sent email to: Larry Savedra -> 
+2023-04-17 15:43:38,287 - logger - INFO - 
+Chose not to message ERIKA KOSTERLITZKY
+2023-04-17 15:43:40,587 - logger - INFO - 
+Chose not to message KIMBERLY LLOYD
+2023-04-17 15:43:41,515 - logger - INFO - 
+Chose not to message Tanya Douglas
+2023-04-17 15:43:43,790 - logger - INFO - 
+Chose not to message Vanessa Valerie Mullen
+2023-04-17 15:43:44,714 - logger - INFO - 
+Chose not to message Cynthia Bell
+2023-04-17 15:43:47,015 - logger - INFO - 
+Chose not to message Darshana Doshi
+2023-04-17 15:43:47,935 - logger - INFO - 
+Chose not to message NICOLE ABADI
+2023-04-17 15:43:50,836 - logger - INFO - 
+Sent message to Kristin Huneau with number: 951-808-2529
+2023-04-17 15:43:51,133 - logger - INFO - Successfully sent email to: Kristin Huneau -> 
+2023-04-17 15:43:51,134 - logger - INFO - 
+Chose not to message Ruya Urso
+2023-04-17 15:43:54,356 - logger - INFO - 
+Chose not to message Anthony E. Avelar
+2023-04-17 15:43:54,603 - logger - INFO - 
+Chose not to message Britney Moore
+2023-04-17 15:43:57,576 - logger - INFO - 
+Chose not to message Chanel Higgs
+2023-04-17 15:43:57,810 - logger - INFO - 
+Chose not to message Tirea Ufodike
+2023-04-17 15:44:00,787 - logger - INFO - 
+Chose not to message Anadina Alvarez
+2023-04-17 15:44:01,010 - logger - INFO - 
+Chose not to message Brett Andersen
+2023-04-17 15:44:03,993 - logger - INFO - 
+Chose not to message Carolyn Maxwell
+2023-04-17 15:44:04,215 - logger - INFO - 
+Chose not to message DAVID BARCLAY
+2023-04-17 15:44:07,202 - logger - INFO - 
+Chose not to message Eva Castaneda-Hogan
+2023-04-17 15:44:08,376 - logger - INFO - 
+Could not send message to: Haley Prizzi-Wilson -> 
+2023-04-17 15:44:08,703 - logger - INFO - Successfully sent email to: Haley Prizzi-Wilson -> 
+2023-04-17 15:44:10,389 - logger - INFO - 
+Chose not to message Pamela montazer
+2023-04-17 15:44:12,159 - logger - INFO - 
+Chose not to message Monica Levin
+2023-04-17 15:44:13,589 - logger - INFO - 
+Chose not to message Keisha Blackshear
+2023-04-17 15:44:15,375 - logger - INFO - 
+Chose not to message Alanna Jeffrey
+2023-04-17 15:44:16,852 - logger - INFO - 
+Chose not to message Maria Mir
+2023-04-17 15:44:18,577 - logger - INFO - 
+Chose not to message Sam Wasfi 
+2023-04-17 15:44:20,729 - logger - INFO - 
+Sent message to Renandez Grim with number: 213.864.0178
+2023-04-17 15:44:21,290 - logger - INFO - Successfully sent email to: Renandez Grim -> 
+2023-04-17 15:44:21,776 - logger - INFO - 
+Chose not to message Chisato Molina
+2023-04-17 15:44:24,752 - logger - INFO - 
+Chose not to message Michelle Rubio
+2023-04-17 15:44:25,671 - logger - INFO - 
+Sent message to Da Nie with number: (626) 379-0461
+2023-04-17 15:44:25,943 - logger - INFO - Successfully sent email to: Da Nie -> 
+2023-04-17 15:44:27,950 - logger - INFO - 
+Chose not to message Carole Arlt
+2023-04-17 15:44:29,409 - logger - INFO - 
+Chose not to message Kristi Starkey
+2023-04-17 15:44:31,746 - logger - INFO - 
+Sent message to Krystle Tham with number: (562) 412-4342
+2023-04-17 15:44:32,033 - logger - INFO - Successfully sent email to: Krystle Tham -> 
+2023-04-17 15:44:32,605 - logger - INFO - 
+Chose not to message Mimi Guesnon
+2023-04-17 15:44:35,499 - logger - INFO - 
+Chose not to message Judithann Roberts
+2023-04-17 15:44:35,821 - logger - INFO - 
+Chose not to message Jennifer Park
+2023-04-17 15:44:38,707 - logger - INFO - 
+Chose not to message DEBRA A. FRESQUEZ
+2023-04-17 15:44:39,025 - logger - INFO - 
+Chose not to message Simone Elliott
+2023-04-17 15:44:42,232 - logger - INFO - 
+Chose not to message Parastoo Erdogan
+2023-04-17 15:44:42,528 - logger - INFO - 
+Sent message to JOHN J DIMARE with number: (949) 842-8865
+2023-04-17 15:44:42,847 - logger - INFO - Successfully sent email to: JOHN J DIMARE -> 
+2023-04-17 15:44:46,070 - logger - INFO - 
+Sent message to Shayann Singh with number: (714) 496-9628
+2023-04-17 15:44:46,308 - logger - INFO - 
+Chose not to message HEATHER A. HARRIS
+2023-04-17 15:44:46,412 - logger - INFO - Successfully sent email to: Shayann Singh -> 
+2023-04-17 15:44:49,516 - logger - INFO - 
+Chose not to message LIZBETH ABAUNZA
+2023-04-17 15:44:50,473 - logger - INFO - 
+Sent message to Christopher E. Ruper with number: (949) 637-1691
+2023-04-17 15:44:50,762 - logger - INFO - Successfully sent email to: Christopher E. Ruper -> 
+2023-04-17 15:44:52,719 - logger - INFO - 
+Chose not to message Samuel L Randolph
+2023-04-17 15:44:54,188 - logger - INFO - 
+Chose not to message BRISTOL BEAR
+2023-04-17 15:44:55,934 - logger - INFO - 
+Chose not to message Margaret Ann Garcia
+2023-04-17 15:44:57,389 - logger - INFO - 
+Chose not to message FRANCYNE NGUYEN
+2023-04-17 15:44:59,127 - logger - INFO - 
+Chose not to message SHEARLY CHAMBLESS
+2023-04-17 15:45:00,587 - logger - INFO - 
+Chose not to message Michelle Parrella
+2023-04-17 15:45:02,320 - logger - INFO - 
+Chose not to message Mary Roberts
+2023-04-17 15:45:04,446 - logger - INFO - 
+Sent message to Jacquelin Vazquez, with number: (626) 675-8344
+2023-04-17 15:45:04,747 - logger - INFO - Successfully sent email to: Jacquelin Vazquez, -> 
+2023-04-17 15:45:05,518 - logger - INFO - 
+Chose not to message Josilyn Wick Coronel
+2023-04-17 15:45:08,222 - logger - INFO - 
+Chose not to message Juli A. Martinez
+2023-04-17 15:45:08,812 - logger - INFO - 
+Chose not to message Elizabeth Mendez
+2023-04-17 15:45:12,007 - logger - INFO - 
+Chose not to message Douglas Kitchen
+2023-04-17 15:45:12,016 - logger - INFO - 
+Sent message to Erin K. Denney with number: (951) 334-3138
+2023-04-17 15:45:12,291 - logger - INFO - Successfully sent email to: Erin K. Denney -> 
+2023-04-17 15:45:15,300 - logger - INFO - 
+Chose not to message Adriana Gutierrez
+2023-04-17 15:45:16,343 - logger - INFO - 
+Sent message to CRYSTINA LEYVA with number: (562)382-5894
+2023-04-17 15:45:16,632 - logger - INFO - Successfully sent email to: CRYSTINA LEYVA -> 
+2023-04-17 15:45:18,489 - logger - INFO - 
+Chose not to message Jina Lee
+2023-04-17 15:45:20,078 - logger - INFO - 
+Chose not to message Karen M. Parmenter
+2023-04-17 15:45:21,691 - logger - INFO - 
+Chose not to message Steven Nelson
+2023-04-17 15:45:23,885 - logger - INFO - 
+Sent message to NATALIE ESPINOZA with number: (714)341-9890
+2023-04-17 15:45:24,197 - logger - INFO - Successfully sent email to: NATALIE ESPINOZA -> 
+2023-04-17 15:45:24,883 - logger - INFO - 
+Chose not to message Elsa Keng
+2023-04-17 15:45:27,668 - logger - INFO - 
+Chose not to message JASON W. FOX
+2023-04-17 15:45:28,619 - logger - INFO - 
+Could not send message to: Alexandra Levins-Trail -> 
+2023-04-17 15:45:29,026 - logger - INFO - Successfully sent email to: Alexandra Levins-Trail -> 
+2023-04-17 15:45:31,517 - logger - INFO - 
+Sent message to Jeannette Rodriguez with number: 323 384 1804
+2023-04-17 15:45:31,805 - logger - INFO - Successfully sent email to: Jeannette Rodriguez -> 
+2023-04-17 15:45:32,692 - logger - INFO - 
+Chose not to message Abbe Mcclenahan
+2023-04-17 15:45:35,902 - logger - INFO - 
+Chose not to message Savina Limon
+2023-04-17 15:45:35,964 - logger - INFO - 
+Sent message to CORINA SALMON with number: 909-569-9971
+2023-04-17 15:45:36,242 - logger - INFO - Successfully sent email to: CORINA SALMON -> 
+2023-04-17 15:45:39,726 - logger - INFO - 
+Sent message to Ashley N Long-Labaar with number: (562) 644-0759
+2023-04-17 15:45:40,031 - logger - INFO - Successfully sent email to: Ashley N Long-Labaar -> 
+2023-04-17 15:45:40,307 - logger - INFO - 
+Sent message to Taty’jana Draughn  with number: (718) 915-3908
+2023-04-17 15:45:40,593 - logger - INFO - Successfully sent email to: Taty’jana Draughn  -> 
+2023-04-17 15:45:43,958 - logger - INFO - 
+Chose not to message Susan Hyde
+2023-04-17 15:45:44,077 - logger - INFO - 
+Chose not to message Yulia o. Ievleva
+2023-04-17 15:45:47,187 - logger - INFO - 
+Chose not to message Nuria Lopez
+2023-04-17 15:45:47,292 - logger - INFO - 
+Chose not to message Megan Jimenez
+2023-04-17 15:45:50,530 - logger - INFO - 
+Chose not to message Shawn M. Caracoza
+2023-04-17 15:45:51,208 - logger - INFO - 
+Sent message to OLIVIA ANNE MORALES with number: (562) 321-7440
+2023-04-17 15:45:51,496 - logger - INFO - Successfully sent email to: OLIVIA ANNE MORALES -> 
+2023-04-17 15:45:53,736 - logger - INFO - 
+Chose not to message Donna R Lozano
+2023-04-17 15:45:54,951 - logger - INFO - 
+Chose not to message Alton C. Carswell
+2023-04-17 15:45:56,969 - logger - INFO - 
+Chose not to message MARIANA A. YAMASHIRO
+2023-04-17 15:45:58,776 - logger - INFO - 
+Sent message to Sophia Jackson with number: 714-886-7592
+2023-04-17 15:45:59,030 - logger - INFO - Successfully sent email to: Sophia Jackson -> 
+2023-04-17 15:46:00,165 - logger - INFO - 
+Chose not to message Kathryn Manetta,
+2023-04-17 15:46:02,498 - logger - INFO - 
+Chose not to message Zerly M. Justiniano
+2023-04-17 15:46:03,364 - logger - INFO - 
+Chose not to message Oscar Oo
+2023-04-17 15:46:05,716 - logger - INFO - 
+Chose not to message FARHANA Z. AHMED
+2023-04-17 15:46:06,594 - logger - INFO - 
+Chose not to message Karon Austin
+2023-04-17 15:46:08,922 - logger - INFO - 
+Chose not to message Yuki Yoshida
+2023-04-17 15:46:10,434 - logger - INFO - 
+Sent message to Darya Bayat with number: (949)-257-3830
+2023-04-17 15:46:10,877 - logger - INFO - Successfully sent email to: Darya Bayat -> 
+2023-04-17 15:46:12,125 - logger - INFO - 
+Chose not to message Catherine Vu
+2023-04-17 15:46:14,938 - logger - INFO - 
+Sent message to Jocelyn A. Mendoza with number: 626-861-1844
+2023-04-17 15:46:15,226 - logger - INFO - Successfully sent email to: Jocelyn A. Mendoza -> 
+2023-04-17 15:46:15,363 - logger - INFO - 
+Chose not to message SUZANNE MILLICAN
+2023-04-17 15:46:18,694 - logger - INFO - 
+Chose not to message Akilah Peters
+2023-04-17 15:46:19,192 - logger - INFO - 
+Sent message to Helen Riccobono with number: (949) 742-4627
+2023-04-17 15:46:19,495 - logger - INFO - Successfully sent email to: Helen Riccobono -> 
+2023-04-17 15:46:22,741 - logger - INFO - 
+Sent message to RICHARD McGee with number: 323.329.2765
+2023-04-17 15:46:22,986 - logger - INFO - 
+Chose not to message Derek G. Larson
+2023-04-17 15:46:23,046 - logger - INFO - Successfully sent email to: RICHARD McGee -> 
+2023-04-17 15:46:26,201 - logger - INFO - 
+Chose not to message Kristin Erickson
+2023-04-17 15:46:26,529 - logger - INFO - 
+Chose not to message Catalina Guzmán
+2023-04-17 15:46:29,403 - logger - INFO - 
+Chose not to message KENNIA TORRES
+2023-04-17 15:46:30,332 - logger - INFO - 
+Sent message to Melissa Rosal with number: (626) 419-5421
+2023-04-17 15:46:30,616 - logger - INFO - Successfully sent email to: Melissa Rosal -> 
+2023-04-17 15:46:32,607 - logger - INFO - 
+Chose not to message Areli Balvaneda
+2023-04-17 15:46:34,070 - logger - INFO - 
+Chose not to message Lenwood V. Patterson
+2023-04-17 15:46:35,828 - logger - INFO - 
+Chose not to message Michael Penafiel
+2023-04-17 15:46:37,271 - logger - INFO - 
+Chose not to message DEBORAH SCHROEDER
+2023-04-17 15:46:39,023 - logger - INFO - 
+Chose not to message Debra Burianek
+2023-04-17 15:46:41,181 - logger - INFO - 
+Sent message to Nicholas Delgado with number: (909) 635-9664
+2023-04-17 15:46:41,469 - logger - INFO - Successfully sent email to: Nicholas Delgado -> 
+2023-04-17 15:46:42,273 - logger - INFO - 
+Chose not to message Sarah Nelson
+2023-04-17 15:46:44,973 - logger - INFO - 
+Chose not to message Rudolpho Perez
+2023-04-17 15:46:46,140 - logger - INFO - 
+Sent message to Juliet Nazaryan with number: (818) 800-3505
+2023-04-17 15:46:46,424 - logger - INFO - Successfully sent email to: Juliet Nazaryan -> 
+2023-04-17 15:46:48,194 - logger - INFO - 
+Chose not to message Michelle Enriquez
+2023-04-17 15:46:49,892 - logger - INFO - 
+Chose not to message Christina Chaturanyakoon
+2023-04-17 15:46:51,413 - logger - INFO - 
+Chose not to message Diana Guerrero
+2023-04-17 15:46:53,724 - logger - INFO - 
+Sent message to Alyssa M. Lemus with number: 562 – 743 – 4418
+2023-04-17 15:46:54,048 - logger - INFO - Successfully sent email to: Alyssa M. Lemus -> 
+2023-04-17 15:46:54,618 - logger - INFO - 
+Chose not to message CHRISTINA WADE
+2023-04-17 15:46:57,524 - logger - INFO - 
+Chose not to message ASHLEY PARRELLA
+2023-04-17 15:46:58,445 - logger - INFO - 
+Sent message to Daneeka Wood with number: (562) 292-9215
+2023-04-17 15:46:58,731 - logger - INFO - Successfully sent email to: Daneeka Wood -> 
+2023-04-17 15:47:00,724 - logger - INFO - 
+Chose not to message Desiree Lopez
+2023-04-17 15:47:02,199 - logger - INFO - 
+Chose not to message Brittaney Dennis
+2023-04-17 15:47:03,954 - logger - INFO - 
+Chose not to message Mayte Salazar
+2023-04-17 15:47:06,022 - logger - INFO - 
+Sent message to Joanna Danuta Orlowska, with number: 714.851.9122
+2023-04-17 15:47:06,327 - logger - INFO - Successfully sent email to: Joanna Danuta Orlowska, -> 
+2023-04-17 15:47:07,818 - logger - INFO - 
+Sent message to Anita C. Arevalo with number: (951) 836-6636
+2023-04-17 15:47:08,070 - logger - INFO - Successfully sent email to: Anita C. Arevalo -> 
+2023-04-17 15:47:09,787 - logger - INFO - 
+Chose not to message Rachel C. DeHaan
+2023-04-17 15:47:11,551 - logger - INFO - 
+Chose not to message Lillian Farzan
+2023-04-17 15:47:13,681 - logger - INFO - 
+Sent message to Elizabeth Moreno with number: 714-400-7099
+2023-04-17 15:47:13,991 - logger - INFO - Successfully sent email to: Elizabeth Moreno -> 
+2023-04-17 15:47:14,796 - logger - INFO - 
+Chose not to message Michael T. Gapski
+2023-04-17 15:47:18,052 - logger - INFO - 
+Sent message to SHANNEN ISABELLE P. MOSQUEDA with number: 714-348-4530
+2023-04-17 15:47:18,358 - logger - INFO - Successfully sent email to: SHANNEN ISABELLE P. MOSQUEDA -> 
+2023-04-17 15:47:18,608 - logger - INFO - 
+Sent message to ANIKA MUHAMMAD with number: 323-506-7814
+2023-04-17 15:47:18,892 - logger - INFO - Successfully sent email to: ANIKA MUHAMMAD -> 
+2023-04-17 15:47:22,013 - logger - INFO - 
+Chose not to message Laura Drusilla Miles
+2023-04-17 15:47:22,359 - logger - INFO - 
+Chose not to message Roxana Lal
+2023-04-17 15:47:25,218 - logger - INFO - 
+Chose not to message Brett A. Rash
+2023-04-17 15:47:25,552 - logger - INFO - 
+Chose not to message Alex Iacovitti
+2023-04-17 15:47:28,420 - logger - INFO - 
+Chose not to message Melissa Glaab
+2023-04-17 15:47:28,751 - logger - INFO - 
+Chose not to message Veronica D. Barcenas
+2023-04-17 15:47:32,294 - logger - INFO - 
+Sent message to Leticia Miramontes Pelayo with number: 6267030919
+2023-04-17 15:47:32,713 - logger - INFO - 
+Sent message to Sergio Haro with number: (562) 940-5065
+2023-04-17 15:47:32,754 - logger - INFO - Successfully sent email to: Leticia Miramontes Pelayo -> 
+2023-04-17 15:47:33,014 - logger - INFO - Successfully sent email to: Sergio Haro -> 
+2023-04-17 15:47:36,468 - logger - INFO - 
+Chose not to message Joy Zembruski
+2023-04-17 15:47:36,817 - logger - INFO - 
+Sent message to AlmaArroyo with number: (626)484-7897
+2023-04-17 15:47:37,083 - logger - INFO - Successfully sent email to: AlmaArroyo -> 
+2023-04-17 15:47:40,299 - logger - INFO - 
+Sent message to Dorise Hebenstreit with number: 714.296.2070
+2023-04-17 15:47:40,601 - logger - INFO - Successfully sent email to: Dorise Hebenstreit -> 
+2023-04-17 15:47:41,176 - logger - INFO - 
+Sent message to Jenelle Vega with number: 310.292.0503
+2023-04-17 15:47:41,473 - logger - INFO - Successfully sent email to: Jenelle Vega -> 
+2023-04-17 15:47:44,100 - logger - INFO - 
+Chose not to message Shirin Peykar
+2023-04-17 15:47:44,935 - logger - INFO - 
+Chose not to message Charissa Manor
+2023-04-17 15:47:47,314 - logger - INFO - 
+Chose not to message Nicolasa O. Nava
+2023-04-17 15:47:49,419 - logger - INFO - 
+Sent message to  Mary Lee Eames with number: (562) 552-4202
+2023-04-17 15:47:49,761 - logger - INFO - Successfully sent email to:  Mary Lee Eames -> 
+2023-04-17 15:47:50,512 - logger - INFO - 
+Chose not to message Lea Mendoza
+2023-04-17 15:47:53,299 - logger - INFO - 
+Chose not to message Ronojoy “Jojo” Sarkar
+2023-04-17 15:47:53,710 - logger - INFO - 
+Chose not to message Nazneen Hamade
+2023-04-17 15:47:56,500 - logger - INFO - 
+Chose not to message Moe Takagi
+2023-04-17 15:47:56,910 - logger - INFO - 
+Chose not to message Sonal Dani
+2023-04-17 15:48:00,114 - logger - INFO - 
+Chose not to message Lizbeth Nava
+2023-04-17 15:48:00,350 - logger - INFO - 
+Sent message to Haidee S ferrer with number: 213-259-5525
+2023-04-17 15:48:00,658 - logger - INFO - Successfully sent email to: Haidee S ferrer -> 
+2023-04-17 15:48:03,307 - logger - INFO - 
+Chose not to message Steven S. Will
+2023-04-17 15:48:04,766 - logger - INFO - 
+Sent message to Jessie Orlando Quintanilla with number: (562) 453-9111
+2023-04-17 15:48:05,056 - logger - INFO - Successfully sent email to: Jessie Orlando Quintanilla -> 
+2023-04-17 15:48:06,509 - logger - INFO - 
+Chose not to message Gabriela Aguayo
+2023-04-17 15:48:09,174 - logger - INFO - 
+Sent message to DANIELLE R. SORRENTINO with number: 714.234.8247
+2023-04-17 15:48:09,443 - logger - INFO - Successfully sent email to: DANIELLE R. SORRENTINO -> 
+2023-04-17 15:48:09,779 - logger - INFO - 
+Chose not to message GUILLERMINA CONTRERAS
+2023-04-17 15:48:12,987 - logger - INFO - 
+Chose not to message Pamela E. Pudewa
+2023-04-17 15:48:13,517 - logger - INFO - 
+Sent message to Adriana vazquez with number: (909) 730-9346
+2023-04-17 15:48:13,794 - logger - INFO - Successfully sent email to: Adriana vazquez -> 
+2023-04-17 15:48:16,790 - logger - INFO - 
+Sent message to Megan Fenton with number: (408)550-3882
+2023-04-17 15:48:17,351 - logger - INFO - Successfully sent email to: Megan Fenton -> 
+2023-04-17 15:48:17,830 - logger - INFO - 
+Sent message to Venus R. Miles with number: 310) 706­1269
+2023-04-17 15:48:18,123 - logger - INFO - Successfully sent email to: Venus R. Miles -> 
+2023-04-17 15:48:21,433 - logger - INFO - 
+Sent message to Rachel Joy Loverro with number: (510) 648-4015
+2023-04-17 15:48:21,677 - logger - INFO - 
+Chose not to message June Puthasombat 
+2023-04-17 15:48:21,718 - logger - INFO - Successfully sent email to: Rachel Joy Loverro -> 
+2023-04-17 15:48:25,176 - logger - INFO - 
+Chose not to message KRYSTLE SANTANA
+2023-04-17 15:48:25,575 - logger - INFO - 
+Sent message to Carrie Cox with number: 714-655-9341
+2023-04-17 15:48:25,911 - logger - INFO - Successfully sent email to: Carrie Cox -> 
+2023-04-17 15:48:29,261 - logger - INFO - 
+Sent message to Samantha Moreno with number: (909) 344-0497 
+2023-04-17 15:48:29,565 - logger - INFO - Successfully sent email to: Samantha Moreno -> 
+2023-04-17 15:48:29,963 - logger - INFO - 
+Sent message to Taylor Rhoton with number: 949 584 3123
+2023-04-17 15:48:30,248 - logger - INFO - Successfully sent email to: Taylor Rhoton -> 
+2023-04-17 15:48:33,713 - logger - INFO - 
+Chose not to message John Casey
+2023-04-17 15:48:33,834 - logger - INFO - 
+Sent message to Jessica Cornea with number: 714-906-0244
+2023-04-17 15:48:34,132 - logger - INFO - Successfully sent email to: Jessica Cornea -> 
+2023-04-17 15:48:36,910 - logger - INFO - 
+Chose not to message Christina Zandi
+2023-04-17 15:48:38,208 - logger - INFO - 
+Sent message to Larry Savedra with number: (562) 972-2989
+2023-04-17 15:48:38,570 - logger - INFO - Successfully sent email to: Larry Savedra -> 
+2023-04-17 15:48:40,724 - logger - INFO - 
+Sent message to Dina Bdaiwi with number: (949) 554-9713
+2023-04-17 15:48:41,311 - logger - INFO - Successfully sent email to: Dina Bdaiwi -> 
+2023-04-17 15:48:42,021 - logger - INFO - 
+Chose not to message KIMBERLY LLOYD
+2023-04-17 15:48:45,215 - logger - INFO - 
+Chose not to message Vanessa Valerie Mullen
+2023-04-17 15:48:45,723 - logger - INFO - 
+Sent message to Ricardo Melendrez with number: (323) 594-5150
+2023-04-17 15:48:45,753 - logger - ERROR - Invalid email destination for: Ricardo Melendrez -> melendrez.ricardo@gmail.com.
+2023-04-17 15:48:48,432 - logger - INFO - 
+Chose not to message Darshana Doshi
+2023-04-17 15:48:50,047 - logger - INFO - 
+Sent message to Brian Harpst with number: (661) 350-2700
+2023-04-17 15:48:50,345 - logger - INFO - Successfully sent email to: Brian Harpst -> 
+2023-04-17 15:48:52,290 - logger - INFO - 
+Sent message to Kristin Huneau with number: 951-808-2529
+2023-04-17 15:48:52,559 - logger - INFO - Successfully sent email to: Kristin Huneau -> 
+2023-04-17 15:48:53,785 - logger - INFO - 
+Chose not to message Kelly Madelyn Pearson
+2023-04-17 15:48:56,025 - logger - INFO - 
+Chose not to message Britney Moore
+2023-04-17 15:48:56,989 - logger - INFO - 
+Chose not to message ANDY N. LUONG
+2023-04-17 15:48:59,231 - logger - INFO - 
+Chose not to message Tirea Ufodike
+2023-04-17 15:49:00,199 - logger - INFO - 
+Chose not to message Mie Lynn Tsuchimoto
+2023-04-17 15:49:02,445 - logger - INFO - 
+Chose not to message Brett Andersen
+2023-04-17 15:49:03,400 - logger - INFO - 
+Chose not to message Grant Clarke
+2023-04-17 15:49:05,658 - logger - INFO - 
+Chose not to message DAVID BARCLAY
+2023-04-17 15:49:06,593 - logger - INFO - 
+Chose not to message Andrea Meyer Burdick
+2023-04-17 15:49:09,810 - logger - INFO - 
+Chose not to message Matthew Enriquez
+2023-04-17 15:49:10,203 - logger - INFO - 
+Could not send message to: Haley Prizzi-Wilson -> 
+2023-04-17 15:49:10,470 - logger - INFO - Successfully sent email to: Haley Prizzi-Wilson -> 
+2023-04-17 15:49:13,005 - logger - INFO - 
+Chose not to message William Boyer
+2023-04-17 15:49:13,941 - logger - INFO - 
+Chose not to message Monica Levin
+2023-04-17 15:49:16,226 - logger - INFO - 
+Chose not to message Amanda Carrie Ajmal
+2023-04-17 15:49:17,128 - logger - INFO - 
+Chose not to message Alanna Jeffrey
+2023-04-17 15:49:19,454 - logger - INFO - 
+Chose not to message DR. SHEILAH L. SULLIGER,
+2023-04-17 15:49:20,361 - logger - INFO - 
+Chose not to message Sam Wasfi 
+2023-04-17 15:49:22,671 - logger - INFO - 
+Chose not to message Deena Duncan,
+2023-04-17 15:49:23,573 - logger - INFO - 
+Chose not to message Chisato Molina
+2023-04-17 15:49:25,902 - logger - INFO - 
+Chose not to message Elizabeth A. Gibbs
+2023-04-17 15:49:27,411 - logger - INFO - 
+Sent message to Da Nie with number: (626) 379-0461
+2023-04-17 15:49:27,698 - logger - INFO - Successfully sent email to: Da Nie -> 
+2023-04-17 15:49:29,102 - logger - INFO - 
+Chose not to message Erika Cardenas
+2023-04-17 15:49:31,170 - logger - INFO - 
+Chose not to message Kristi Starkey
+2023-04-17 15:49:32,314 - logger - INFO - 
+Chose not to message MARIA  MALO 
+2023-04-17 15:49:34,365 - logger - INFO - 
+Chose not to message Mimi Guesnon
+2023-04-17 15:49:35,545 - logger - INFO - 
+Chose not to message Fanny Vazquez
+2023-04-17 15:49:37,564 - logger - INFO - 
+Chose not to message Jennifer Park
+2023-04-17 15:49:38,751 - logger - INFO - 
+Chose not to message Nadine Katibloo 
+2023-04-17 15:49:40,770 - logger - INFO - 
+Chose not to message Simone Elliott
+2023-04-17 15:49:41,963 - logger - INFO - 
+Chose not to message Murray S. Kaufman
+2023-04-17 15:49:43,982 - logger - INFO - 
+Chose not to message Parastoo Erdogan
+2023-04-17 15:49:45,187 - logger - INFO - 
+Chose not to message Melody Foxx
+2023-04-17 15:49:47,842 - logger - INFO - 
+Sent message to Shayann Singh with number: (714) 496-9628
+2023-04-17 15:49:48,134 - logger - INFO - Successfully sent email to: Shayann Singh -> 
+2023-04-17 15:49:49,123 - logger - INFO - 
+Chose not to message Danielle Milinovich
+2023-04-17 15:49:52,256 - logger - INFO - 
+Sent message to Christopher E. Ruper with number: (949) 637-1691
+2023-04-17 15:49:52,334 - logger - INFO - 
+Chose not to message Ny’Shae Perkins
+2023-04-17 15:49:52,548 - logger - INFO - Successfully sent email to: Christopher E. Ruper -> 
+2023-04-17 15:49:55,546 - logger - INFO - 
+Chose not to message Miguel Alvarez
+2023-04-17 15:49:56,020 - logger - INFO - 
+Chose not to message BRISTOL BEAR
+2023-04-17 15:49:58,739 - logger - INFO - 
+Chose not to message Julie Kasal
+2023-04-17 15:49:59,230 - logger - INFO - 
+Chose not to message FRANCYNE NGUYEN
+2023-04-17 15:50:01,939 - logger - INFO - 
+Chose not to message Mojdeh Amani
+2023-04-17 15:50:02,454 - logger - INFO - 
+Chose not to message Michelle Parrella
+2023-04-17 15:50:05,166 - logger - INFO - 
+Chose not to message Jack Brito
+2023-04-17 15:50:06,272 - logger - INFO - 
+Sent message to Jacquelin Vazquez, with number: (626) 675-8344
+2023-04-17 15:50:06,531 - logger - INFO - Successfully sent email to: Jacquelin Vazquez, -> 
+2023-04-17 15:50:08,983 - logger - INFO - 
+Sent message to Kate Cody with number: 309.645.0991
+2023-04-17 15:50:09,568 - logger - INFO - Successfully sent email to: Kate Cody -> 
+2023-04-17 15:50:09,992 - logger - INFO - 
+Chose not to message Juli A. Martinez
+2023-04-17 15:50:13,052 - logger - INFO - 
+Chose not to message Barry Citron
+2023-04-17 15:50:13,851 - logger - INFO - 
+Sent message to Erin K. Denney with number: (951) 334-3138
+2023-04-17 15:50:14,153 - logger - INFO - Successfully sent email to: Erin K. Denney -> 
+2023-04-17 15:50:16,249 - logger - INFO - 
+Chose not to message Adriana C. Soriano
+2023-04-17 15:50:18,328 - logger - INFO - 
+Sent message to CRYSTINA LEYVA with number: (562)382-5894
+2023-04-17 15:50:18,660 - logger - INFO - Successfully sent email to: CRYSTINA LEYVA -> 
+2023-04-17 15:50:19,483 - logger - INFO - 
+Chose not to message LYNDA PAULSONLCSW
+2023-04-17 15:50:22,153 - logger - INFO - 
+Chose not to message Karen M. Parmenter
+2023-04-17 15:50:22,681 - logger - INFO - 
+Chose not to message Kathleen Villagomez
+2023-04-17 15:50:25,899 - logger - INFO - 
+Chose not to message Alison Preece Gracia
+2023-04-17 15:50:26,026 - logger - INFO - 
+Sent message to NATALIE ESPINOZA with number: (714)341-9890
+2023-04-17 15:50:26,320 - logger - INFO - Successfully sent email to: NATALIE ESPINOZA -> 
+2023-04-17 15:50:29,124 - logger - INFO - 
+Chose not to message James Moakley
+2023-04-17 15:50:29,978 - logger - INFO - 
+Chose not to message JASON W. FOX
+2023-04-17 15:50:32,964 - logger - INFO - 
+Sent message to Cynthia J. Bell with number: 562 667 6056
+2023-04-17 15:50:33,251 - logger - INFO - Successfully sent email to: Cynthia J. Bell -> 
+2023-04-17 15:50:33,780 - logger - INFO - 
+Sent message to Jeannette Rodriguez with number: 323 384 1804
+2023-04-17 15:50:34,060 - logger - INFO - Successfully sent email to: Jeannette Rodriguez -> 
+2023-04-17 15:50:36,705 - logger - INFO - 
+Chose not to message JENNIFER FRIEND
+2023-04-17 15:50:38,324 - logger - INFO - 
+Sent message to CORINA SALMON with number: 909-569-9971
+2023-04-17 15:50:38,623 - logger - INFO - Successfully sent email to: CORINA SALMON -> 
+2023-04-17 15:50:39,894 - logger - INFO - 
+Chose not to message Connie Sue Thomas
+2023-04-17 15:50:43,002 - logger - INFO - 
+Sent message to Taty’jana Draughn  with number: (718) 915-3908
+2023-04-17 15:50:43,123 - logger - INFO - 
+Chose not to message Alison L. Johnson
+2023-04-17 15:50:43,323 - logger - INFO - Successfully sent email to: Taty’jana Draughn  -> 
+2023-04-17 15:50:46,333 - logger - INFO - 
+Chose not to message Genevieve Sainz
+2023-04-17 15:50:46,771 - logger - INFO - 
+Chose not to message Yulia o. Ievleva
+2023-04-17 15:50:49,541 - logger - INFO - 
+Chose not to message Caryn Bickel
+2023-04-17 15:50:49,976 - logger - INFO - 
+Chose not to message Megan Jimenez
+2023-04-17 15:50:52,757 - logger - INFO - 
+Chose not to message TAMMY MARIE SHELTON
+2023-04-17 15:50:53,171 - logger - INFO - 
+Chose not to message Shawn M. Caracoza
+2023-04-17 15:50:55,986 - logger - INFO - 
+Chose not to message Michael Brundage, LMFT
+2023-04-17 15:50:56,356 - logger - INFO - 
+Chose not to message Donna R Lozano
+2023-04-17 15:50:59,183 - logger - INFO - 
+Chose not to message Catherine F. Clancy
+2023-04-17 15:50:59,562 - logger - INFO - 
+Chose not to message MARIANA A. YAMASHIRO
+2023-04-17 15:51:02,392 - logger - INFO - 
+Chose not to message STEPHANIE GAE DELANGE
+2023-04-17 15:51:02,770 - logger - INFO - 
+Chose not to message Kathryn Manetta,
+2023-04-17 15:51:05,588 - logger - INFO - 
+Chose not to message RACHEL Elizabeth Birky HAMILTON
+2023-04-17 15:51:05,967 - logger - INFO - 
+Chose not to message Oscar Oo
+2023-04-17 15:51:08,801 - logger - INFO - 
+Chose not to message DAVID KUSHNER
+2023-04-17 15:51:09,177 - logger - INFO - 
+Chose not to message Karon Austin
+2023-04-17 15:51:12,656 - logger - INFO - 
+Sent message to Fred Rodriguez with number: (909)561-1081
+2023-04-17 15:51:13,332 - logger - INFO - 
+Sent message to Darya Bayat with number: (949)-257-3830
+2023-04-17 15:51:13,336 - logger - INFO - Successfully sent email to: Fred Rodriguez -> 
+2023-04-17 15:51:13,763 - logger - INFO - Successfully sent email to: Darya Bayat -> 
+2023-04-17 15:51:17,420 - logger - INFO - 
+Sent message to ANTONIO RUIZ with number: 9512175233
+2023-04-17 15:51:17,835 - logger - INFO - Successfully sent email to: ANTONIO RUIZ -> 
+2023-04-17 15:51:17,929 - logger - INFO - 
+Sent message to Jocelyn A. Mendoza with number: 626-861-1844
+2023-04-17 15:51:21,314 - logger - INFO - 
+Chose not to message Lynetta Hale
+2023-04-17 15:51:24,518 - logger - INFO - 
+Chose not to message Heather Pearman 
+2023-04-17 15:51:27,731 - logger - INFO - 
+Chose not to message Shiveta Gandotra
+2023-04-17 15:51:31,010 - logger - INFO - 
+Chose not to message Titus C. Ogbuafor
+2023-04-17 15:51:34,209 - logger - INFO - 
+Chose not to message Lori Lynn Mann
+2023-04-17 15:51:37,424 - logger - INFO - 
+Chose not to message Alejandra Amador
+2023-04-17 15:51:40,637 - logger - INFO - 
+Chose not to message AnneMarie Leos-Gomez
+2023-04-17 15:51:43,865 - logger - INFO - 
+Chose not to message Sheilah L. Sulliger
+2023-04-17 15:51:47,127 - logger - INFO - 
+Chose not to message Liliana Quigua
+2023-04-17 16:10:32,948 - logger - INFO - Recieved New Email notification
+2023-04-17 16:10:33,799 - logger - INFO - Checking most recent email
+2023-04-17 16:10:33,799 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-17 16:10:33,800 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/6335538b/98e491de?
+2023-04-17 16:10:33,800 - logger - INFO - Got Name : Kristine Adams
+2023-04-17 16:10:33,800 - logger - INFO - Got Job Title : clinical director
+2023-04-17 16:10:33,800 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-17 16:10:33,801 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-17 16:10:33,801 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-17 16:10:33,802 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-17 16:10:33,802 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-17 16:10:55,747 - logger - INFO - Recieved New Email notification
+2023-04-17 16:10:56,119 - logger - INFO - Checking most recent email
+2023-04-17 16:10:56,119 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-17 16:10:56,120 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/6335538b/98e491de?
+2023-04-17 16:10:56,120 - logger - INFO - Got Name : Kristine Adams
+2023-04-17 16:10:56,120 - logger - INFO - Got Job Title : clinical director
+2023-04-17 16:10:56,120 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-17 16:10:56,121 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-17 16:10:56,121 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-17 16:10:56,122 - logger - INFO - Request made whilst currently working on something else -> Could not proceed
+2023-04-17 16:10:56,122 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-17 16:11:56,633 - logger - INFO - Recieved New Email notification
+2023-04-17 16:11:56,634 - logger - INFO - Decided to refresh Gmail token
+2023-04-17 16:11:56,933 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4633805', 'expiration': '1682377918048'}
+2023-04-17 16:11:57,291 - logger - INFO - Checking most recent email
+2023-04-17 16:11:57,291 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-17 16:11:57,291 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/6335538b/98e491de?
+2023-04-17 16:11:57,291 - logger - INFO - Got Name : Kristine Adams
+2023-04-17 16:11:57,292 - logger - INFO - Got Job Title : clinical director
+2023-04-17 16:11:57,292 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-17 16:11:57,292 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-17 16:11:57,293 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-17 16:11:57,293 - logger - INFO - --- working->True ---
+2023-04-17 16:11:58,827 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-17 16:11:58,827 - logger - INFO - Calling open string function
+2023-04-17 16:11:58,915 - logger - INFO - --- working->False ---
+2023-04-17 16:11:58,915 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-17 16:12:09,936 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-17 16:12:09,936 - logger - INFO - Creating Kristine Adams's Folder
+2023-04-17 16:12:11,057 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1dkeV0soel6ZpG0XoShwHR-xlVGiLS9ev
+2023-04-17 16:12:13,186 - logger - INFO - Document was created with ID: 1yc-c2qS_GK19on0H1PQNp9NcoYaQf8FMMwLNQZysD8c
+2023-04-17 16:12:19,864 - logger - INFO - Got 5 licenses for Kristine Adams
+2023-04-17 16:12:20,453 - logger - INFO - Updated Spreadsheet
+2023-04-17 16:12:22,430 - logger - INFO - File ID: 1oK4PdqT9Pvbq1HlzM2mDya_A3g-qQhIX
+2023-04-17 16:12:22,431 - logger - INFO - Uploaded Resume Successfully
+2023-04-17 16:12:22,431 - logger - INFO - Created profile for Kristine Adams
+2023-04-17 16:12:23,021 - logger - INFO - Updated local json file for Kristine Adams
+2023-04-17 16:27:31,465 - logger - INFO - Recieved New Email notification
+2023-04-17 16:27:32,182 - logger - INFO - Checking most recent email
+2023-04-17 16:27:32,182 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-17 16:27:32,183 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/6335538b/98e491de?
+2023-04-17 16:27:32,183 - logger - INFO - Got Name : Kristine Adams
+2023-04-17 16:27:32,183 - logger - INFO - Got Job Title : clinical director
+2023-04-17 16:27:32,183 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-17 16:27:32,184 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-17 16:27:32,190 - logger - INFO - Candidate already exists, returning
+2023-04-17 16:32:32,665 - logger - INFO - Recieved New Email notification
+2023-04-17 16:32:33,155 - logger - INFO - Checking most recent email
+2023-04-17 16:32:33,155 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 16:32:44,400 - logger - INFO - Recieved New Email notification
+2023-04-17 16:32:44,727 - logger - INFO - Checking most recent email
+2023-04-17 16:32:44,728 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 16:32:57,443 - logger - INFO - Recieved New Email notification
+2023-04-17 16:32:58,057 - logger - INFO - Checking most recent email
+2023-04-17 16:32:58,057 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 16:33:06,692 - logger - INFO - Recieved New Email notification
+2023-04-17 16:33:06,692 - logger - INFO - Decided to refresh Gmail token
+2023-04-17 16:33:07,068 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4635210', 'expiration': '1682379188181'}
+2023-04-17 16:33:07,485 - logger - INFO - Checking most recent email
+2023-04-17 16:33:07,486 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 16:33:13,008 - logger - INFO - Recieved New Email notification
+2023-04-17 16:33:13,330 - logger - INFO - Checking most recent email
+2023-04-17 16:33:13,330 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 16:33:22,767 - logger - INFO - Recieved New Email notification
+2023-04-17 16:33:23,115 - logger - INFO - Checking most recent email
+2023-04-17 16:33:23,116 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 16:33:24,901 - logger - INFO - Recieved New Email notification
+2023-04-17 16:33:25,228 - logger - INFO - Checking most recent email
+2023-04-17 16:33:25,228 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 16:33:54,778 - logger - INFO - Recieved New Email notification
+2023-04-17 16:33:55,148 - logger - INFO - Checking most recent email
+2023-04-17 16:33:55,148 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 16:33:55,466 - logger - INFO - Recieved New Email notification
+2023-04-17 16:33:55,467 - logger - INFO - Decided to refresh Gmail token
+2023-04-17 16:33:55,660 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4635674', 'expiration': '1682379236797'}
+2023-04-17 16:33:56,506 - logger - INFO - Checking most recent email
+2023-04-17 16:33:56,507 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 17:10:31,085 - logger - INFO - Recieved New Email notification
+2023-04-17 17:10:31,491 - logger - INFO - Checking most recent email
+2023-04-17 17:10:31,492 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-17 17:10:31,492 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b24ba340/96889c31?
+2023-04-17 17:10:31,492 - logger - INFO - Got Name : BETTY SARKISSIAN
+2023-04-17 17:10:31,492 - logger - INFO - Got Job Title : behavioral health technician
+2023-04-17 17:10:31,493 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-17 17:10:31,493 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-17 17:10:31,494 - logger - INFO - Candidate is new, Now adding to them to the Pre-screening sheet
+2023-04-17 17:10:31,494 - logger - INFO - --- working->True ---
+2023-04-17 17:10:33,736 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-17 17:10:33,736 - logger - INFO - Calling open string function
+2023-04-17 17:10:33,810 - logger - INFO - --- working->False ---
+2023-04-17 17:10:33,811 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-17 17:10:44,188 - logger - INFO - Parents are: [None] for role: Pre-screening
+2023-04-17 17:10:44,189 - logger - INFO - Creating BETTY SARKISSIAN's Folder
+2023-04-17 17:10:44,974 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1N540fD3biEarT2u_ha70beVtybM7fqrV
+2023-04-17 17:10:46,768 - logger - INFO - Document was created with ID: "1Uh9LeqhL6vO5ZnxnczujaqkC14Or4-j9gR6f8BsCF4E".
+2023-04-17 17:11:09,923 - logger - INFO - Got 5 licenses for BETTY SARKISSIAN
+2023-04-17 17:11:10,599 - logger - INFO - Updated Spreadsheet
+2023-04-17 17:11:12,115 - logger - INFO - File ID: 1og8hg-ti2-CSyxdbwvrHqJ8n-v-yWhQl
+2023-04-17 17:11:12,115 - logger - INFO - Uploaded Resume Successfully
+2023-04-17 17:11:12,115 - logger - INFO - Created profile for BETTY SARKISSIAN
+2023-04-17 17:11:12,574 - logger - INFO - Updated local json file for BETTY SARKISSIAN
+2023-04-17 17:14:25,947 - logger - INFO - Recieved New Email notification
+2023-04-17 17:14:26,368 - logger - INFO - Checking most recent email
+2023-04-17 17:14:26,368 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-17 17:14:26,369 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b24ba340/96889c31?
+2023-04-17 17:14:26,369 - logger - INFO - Got Name : BETTY SARKISSIAN
+2023-04-17 17:14:26,369 - logger - INFO - Got Job Title : behavioral health technician
+2023-04-17 17:14:26,370 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-17 17:14:26,370 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
+2023-04-17 17:14:26,376 - logger - INFO - Candidate already exists, returning
+2023-04-17 17:15:10,003 - logger - INFO - Recieved New Email notification
+2023-04-17 17:15:10,460 - logger - INFO - Checking most recent email
+2023-04-17 17:15:10,461 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 22:28:40,919 - logger - INFO - Recieved New Email notification
+2023-04-17 22:28:41,726 - logger - INFO - Checking most recent email
+2023-04-17 22:28:41,726 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-17 23:30:21,680 - logger - INFO - Recieved New Email notification
+2023-04-17 23:30:21,681 - logger - INFO - Decided to refresh Gmail token
+2023-04-17 23:30:22,384 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4636009', 'expiration': '1682404222499'}
+2023-04-17 23:30:22,743 - logger - INFO - Checking most recent email
+2023-04-17 23:30:22,743 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 04:41:03,747 - logger - INFO - Recieved New Email notification
+2023-04-18 04:41:04,473 - logger - INFO - Checking most recent email
+2023-04-18 04:41:04,474 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-18 04:41:04,474 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/f8b5c53a?
+2023-04-18 04:41:04,474 - logger - INFO - Got Name : Ashley Resurreccion
+2023-04-18 04:41:04,475 - logger - INFO - Got Job Title : primary therapist amft/acsw
+2023-04-18 04:41:04,475 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-18 04:41:04,480 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-18 04:41:04,486 - logger - INFO - Candidate is new, Now adding to them to the Therapist sheet
+2023-04-18 04:41:04,488 - logger - INFO - --- working->True ---
+2023-04-18 04:41:06,540 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-18 04:41:06,541 - logger - INFO - Calling open string function
+2023-04-18 04:41:06,665 - logger - INFO - --- working->False ---
+2023-04-18 04:41:06,665 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-18 04:41:17,404 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
+2023-04-18 04:41:17,404 - logger - INFO - Creating Ashley Resurreccion's Folder
+2023-04-18 04:41:18,856 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1C2Py4c3X5z-2F28Har9ENIDVe1o4lpcb
+2023-04-18 04:41:20,899 - logger - INFO - Document was created with ID: 1Lod1kdotb_ZAtU9UFPdNZZYgb4P51IozXl6dIYO44Mw
+2023-04-18 04:41:22,743 - logger - INFO - Got 0 licenses for Ashley Resurreccion
+2023-04-18 04:41:23,265 - logger - INFO - Updated Spreadsheet
+2023-04-18 04:41:24,936 - logger - INFO - File ID: 1MTmS9WTwGm8dlbq4qfgODGD6A5-Yj9Ue
+2023-04-18 04:41:24,937 - logger - INFO - Uploaded Resume Successfully
+2023-04-18 04:41:24,937 - logger - INFO - Created profile for Ashley Resurreccion
+2023-04-18 04:41:25,296 - logger - INFO - Updated local json file for Ashley Resurreccion
+2023-04-18 05:41:59,728 - logger - INFO - Recieved New Email notification
+2023-04-18 05:42:00,438 - logger - INFO - Checking most recent email
+2023-04-18 05:42:00,438 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-18 05:42:00,439 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/f8b5c53a?
+2023-04-18 05:42:00,439 - logger - INFO - Got Name : Ashley Resurreccion
+2023-04-18 05:42:00,439 - logger - INFO - Got Job Title : primary therapist amft/acsw
+2023-04-18 05:42:00,439 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-18 05:42:00,440 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-18 05:42:00,446 - logger - INFO - Candidate already exists, returning
+2023-04-18 08:01:36,082 - logger - INFO - Recieved New Email notification
+2023-04-18 08:01:36,918 - logger - INFO - Checking most recent email
+2023-04-18 08:01:36,918 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 08:02:03,863 - logger - INFO - Recieved New Email notification
+2023-04-18 08:02:04,255 - logger - INFO - Checking most recent email
+2023-04-18 08:02:04,255 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 08:40:30,890 - logger - INFO - Recieved New Email notification
+2023-04-18 08:40:30,895 - logger - INFO - Decided to refresh Gmail token
+2023-04-18 08:40:31,258 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4636469', 'expiration': '1682437231673'}
+2023-04-18 08:40:31,630 - logger - INFO - Checking most recent email
+2023-04-18 08:40:31,630 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 08:41:21,405 - logger - INFO - Recieved New Email notification
+2023-04-18 08:41:21,795 - logger - INFO - Checking most recent email
+2023-04-18 08:41:21,796 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 08:42:06,983 - logger - INFO - Recieved New Email notification
+2023-04-18 08:42:07,513 - logger - INFO - Checking most recent email
+2023-04-18 08:42:07,514 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 08:45:23,303 - logger - INFO - Recieved New Email notification
+2023-04-18 08:45:23,726 - logger - INFO - Checking most recent email
+2023-04-18 08:45:23,727 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 09:18:11,904 - logger - INFO - Recieved New Email notification
+2023-04-18 09:18:12,663 - logger - INFO - Checking most recent email
+2023-04-18 09:18:12,664 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 09:18:35,418 - logger - INFO - Recieved New Email notification
+2023-04-18 09:18:35,419 - logger - INFO - Decided to refresh Gmail token
+2023-04-18 09:18:35,877 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4636795', 'expiration': '1682439516192'}
+2023-04-18 09:18:36,192 - logger - INFO - Checking most recent email
+2023-04-18 09:18:36,192 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 09:32:49,508 - logger - INFO - Recieved New Email notification
+2023-04-18 09:32:49,953 - logger - INFO - Checking most recent email
+2023-04-18 09:32:49,953 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 09:32:50,147 - logger - INFO - Recieved New Email notification
+2023-04-18 09:32:50,481 - logger - INFO - Checking most recent email
+2023-04-18 09:32:50,481 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 09:46:00,268 - logger - INFO - Recieved New Email notification
+2023-04-18 09:46:00,665 - logger - INFO - Checking most recent email
+2023-04-18 09:46:00,666 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-18 09:46:00,666 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/35c86104?
+2023-04-18 09:46:00,666 - logger - INFO - Got Name : Mia Hudd
+2023-04-18 09:46:00,666 - logger - INFO - Got Job Title : primary therapist amft/acsw
+2023-04-18 09:46:00,667 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-18 09:46:00,672 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-18 09:46:00,677 - logger - INFO - Candidate already exists, returning
+2023-04-18 09:46:00,843 - logger - INFO - Recieved New Email notification
+2023-04-18 09:46:01,202 - logger - INFO - Checking most recent email
+2023-04-18 09:46:01,202 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-18 09:46:01,202 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/35c86104?
+2023-04-18 09:46:01,203 - logger - INFO - Got Name : Mia Hudd
+2023-04-18 09:46:01,203 - logger - INFO - Got Job Title : primary therapist amft/acsw
+2023-04-18 09:46:01,203 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-18 09:46:01,203 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-18 09:46:01,204 - logger - INFO - Candidate already exists, returning
+2023-04-18 10:05:31,657 - logger - INFO - Recieved New Email notification
+2023-04-18 10:05:31,657 - logger - INFO - Decided to refresh Gmail token
+2023-04-18 10:05:32,120 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4637088', 'expiration': '1682442332589'}
+2023-04-18 10:05:32,850 - logger - INFO - Checking most recent email
+2023-04-18 10:05:32,851 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-18 10:05:32,851 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/35c86104?
+2023-04-18 10:05:32,851 - logger - INFO - Got Name : Mia Hudd
+2023-04-18 10:05:32,852 - logger - INFO - Got Job Title : primary therapist amft/acsw
+2023-04-18 10:05:32,852 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-18 10:05:32,852 - logger - INFO - Found appropriate sheet destination: Therapist
+2023-04-18 10:05:32,853 - logger - INFO - Candidate already exists, returning
+2023-04-18 11:13:19,506 - logger - INFO - Recieved New Email notification
+2023-04-18 11:13:20,357 - logger - INFO - Checking most recent email
+2023-04-18 11:13:20,357 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-18 11:13:20,358 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/b21c3a03?
+2023-04-18 11:13:20,358 - logger - INFO - Got Name : Irene Eclavea
+2023-04-18 11:13:20,358 - logger - INFO - Got Job Title : detox lvn
+2023-04-18 11:13:20,359 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-18 11:13:20,359 - logger - INFO - Found appropriate sheet destination: Nurse
+2023-04-18 11:13:20,360 - logger - INFO - Candidate is new, Now adding to them to the Nurse sheet
+2023-04-18 11:13:20,360 - logger - INFO - --- working->True ---
+2023-04-18 11:13:22,958 - logger - INFO - Successfully set Spreadsheet Column Variables
+2023-04-18 11:13:22,958 - logger - INFO - Calling open string function
+2023-04-18 11:13:23,084 - logger - INFO - --- working->False ---
+2023-04-18 11:13:23,084 - logger - INFO - Submitted to spreadsheet, check results
+2023-04-18 11:13:34,508 - logger - INFO - Parents are: ['18iotkvD56CLbdrVKJGPewjC1MIeu__hk'] for role: Nurse
+2023-04-18 11:13:34,508 - logger - INFO - Creating Irene Eclavea's Folder
+2023-04-18 11:13:35,651 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ZrhG1eCTE-f1r7ZlDkbZuWKjbR9H7Bpz
+2023-04-18 11:13:38,660 - logger - INFO - Document was created with ID: "10KhsVyphlzmYZKvOZyU7GodwVFwJIejiNVa8-jYVaqc".
+2023-04-18 11:13:44,677 - logger - INFO - Got 0 licenses for Irene Eclavea
+2023-04-18 11:13:45,249 - logger - INFO - Updated Spreadsheet
+2023-04-18 11:13:46,442 - logger - INFO - File ID: 1PmZbpCaatbtW4FD8kuInVaQ0Ljgy89Tc
+2023-04-18 11:13:46,443 - logger - INFO - Uploaded Resume Successfully
+2023-04-18 11:13:46,443 - logger - INFO - Created profile for Irene Eclavea
+2023-04-18 11:13:46,901 - logger - INFO - Updated local json file for Irene Eclavea
+2023-04-18 11:15:19,780 - logger - INFO - Recieved New Email notification
+2023-04-18 11:15:20,311 - logger - INFO - Checking most recent email
+2023-04-18 11:15:20,311 - logger - INFO - Notification was for candidate submission, gathering data
+2023-04-18 11:15:20,312 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b6ba5db2/b21c3a03?
+2023-04-18 11:15:20,312 - logger - INFO - Got Name : Irene Eclavea
+2023-04-18 11:15:20,312 - logger - INFO - Got Job Title : detox lvn
+2023-04-18 11:15:20,312 - logger - INFO - Attempting to retrieve sheet destination
+2023-04-18 11:15:20,313 - logger - INFO - Found appropriate sheet destination: Nurse
+2023-04-18 11:15:20,319 - logger - INFO - Candidate already exists, returning
+2023-04-18 11:28:10,985 - logger - INFO - Recieved New Email notification
+2023-04-18 11:28:11,411 - logger - INFO - Checking most recent email
+2023-04-18 11:28:11,411 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 12:12:35,224 - logger - INFO - Recieved New Email notification
+2023-04-18 12:12:36,548 - logger - INFO - Checking most recent email
+2023-04-18 12:12:36,549 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 12:18:04,740 - logger - INFO - Recieved New Email notification
+2023-04-18 12:18:04,741 - logger - INFO - Decided to refresh Gmail token
+2023-04-18 12:18:04,799 - logger - INFO - Recieved New Email notification
+2023-04-18 12:18:04,799 - logger - INFO - Decided to refresh Gmail token
+2023-04-18 12:18:05,676 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4637446', 'expiration': '1682450286208'}
+2023-04-18 12:18:05,708 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4637448', 'expiration': '1682450286245'}
+2023-04-18 12:18:06,073 - logger - INFO - Checking most recent email
+2023-04-18 12:18:06,074 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 12:18:06,198 - logger - INFO - Checking most recent email
+2023-04-18 12:18:06,199 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 12:18:17,307 - logger - INFO - Recieved New Email notification
+2023-04-18 12:18:17,663 - logger - INFO - Checking most recent email
+2023-04-18 12:18:17,663 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 12:30:02,513 - logger - INFO - Recieved New Email notification
+2023-04-18 12:30:02,992 - logger - INFO - Checking most recent email
+2023-04-18 12:30:02,993 - logger - INFO - Notification was not for candidate submission, returning
+2023-04-18 12:30:12,361 - logger - INFO - Recieved New Email notification
+2023-04-18 12:30:12,709 - logger - INFO - Checking most recent email
+2023-04-18 12:30:12,710 - logger - INFO - Notification was not for candidate submission, returning
