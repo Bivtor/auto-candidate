@@ -968,19 +968,21 @@ class SesMailSender:
         try:
             response = self.ses_client.send_email(**send_args)
             message_id = response['MessageId']
-            logging.info(
-                "Sent mail %s from %s to %s.", message_id, source, destination.tos)
+            logger.info("Sent mail %s from %s to %s.",
+                        message_id, source, destination.tos)
 
-            write_json({"name": name, "job": category,
-                        "email": email, "response_code": response, 'body': text})
-
+            # Not writing json we dont care
+            # write_json({"name": name, "job": category,
+            #             "email": email, "response_code": response, 'body': text})
             logger.info(
                 "Successfully sent email to: {} -> ".format(name, destination.tos[0]))
         except ClientError as err:
             logger.error(
                 "Invalid email destination for: {} -> {}".format(name, destination.tos[0]))
-            write_json({"name": name, "job": category,
-                        "email": email, "response_code": str(err.response)})
+
+            # Not writing json we dont care
+            # write_json({"name": name, "job": category,
+            #             "email": email, "response_code": str(err.response)})
         else:
             return message_id
 
@@ -1169,13 +1171,15 @@ def sendTwilioText(name: str, number: str, body: str):
             to=number,
         )
         # Update record that text has been sent / status of return
-        write_json({"name": name, "body": message.body, "number": number,
-                   "date": str(date.today()), "messageID": message.sid, "failed": False})
+        # Not writing json we dont care
+        # write_json({"name": name, "body": message.body, "number": number,
+        #            "date": str(date.today()), "messageID": message.sid, "failed": False})
         logger.info("\nSent message to {} with number: {}".format(name, number))
         return True
     except:
-        write_json({"name": name, "body": body,
-                   "number": number, "messageID": "null", "failed": True})
+        # Not writing json we dont care
+        # write_json({"name": name, "body": body,
+        #            "number": number, "messageID": "null", "failed": True})
         logger.info("\nCould not send message to: {} -> {}".format(
             name, number))
         return False
