@@ -1017,6 +1017,16 @@ def sendmailtexts(data: Data):
         else:
             return False
 
+    def shouldSendMessageNotXs(data: Data, values: dict) -> bool:
+        """
+        Send a message if the candidate has an X next to their name in the
+        'mass text' column
+        """
+        if (values[massText].lower() == 'x'):
+            return False
+        else:
+            return True
+
     def shouldSendMessage_N_License(data: Data, values: dict) -> bool:
         """
         Send a message if the candidate has an N or '' in the 'spoken to' column
@@ -1080,7 +1090,7 @@ def sendmailtexts(data: Data):
                     "[candidate_name]", name)  # This was broken before
 
                 # If we decide to send a message
-                if shouldSendMessageXs(data, values):
+                if shouldSendMessageNotXs(data, values):
 
                     # Update the times we have sent a message to this person
                     if values[timesContactedCol] == '':
