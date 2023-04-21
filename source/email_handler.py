@@ -109,7 +109,7 @@ def process_message():
         # Check if is the right email (ZR Notification)
         
         if not checkIsCandidateSubmissionNotice(raw_message=raw_message): 
-            logger.info('Notification was not for candidate submission, returning')
+            logger.info('Notification was not for candidate submission, returning\n')
             return 200
 
         # Log
@@ -285,7 +285,7 @@ def submitdata_clone(data: Data):
     return 200
 
 def openstring_clone(data: Data):
-    print("Opening Link: {}".format(data.link))
+    logger.info("Opening Link: {}".format(data.link))
     cmd = 'start chrome {}'.format(data.link)  # OPEN chrome
     if os.system(cmd) != 0:
         return False
