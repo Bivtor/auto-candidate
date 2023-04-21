@@ -1148,7 +1148,7 @@ def sendmailtexts(data: Data):
                     request = service.spreadsheets().batchUpdate(
                         spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
                 else:
-                    logger.info("\nChose not to message {}".format(
+                    logger.info("Chose not to message {}".format(
                         values[nameCol]))
             except IndexError as err:
                 logger.error("\nFinished Texting and Emailing Candidaes")
