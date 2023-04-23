@@ -21,7 +21,12 @@ def getRawDataInfo(raw_message: str) -> dict:
         Only call this function after using checkIsCandidateSubmissionNotice()
     """
     results:dict = {}
-    
+
+    def replace_whitespace(string):
+        # Replace all non-space white space characters with spaces
+        string = ' '.join(string.split())
+        return string
+
     # Get URL
     pattern = r'https://www\.ziprecruiter\.com/contact/response/[^/]*/[^/]*\?'
     match = re.search(pattern, raw_message)
@@ -34,6 +39,7 @@ def getRawDataInfo(raw_message: str) -> dict:
     candidate_name = raw_message[loc+15:loc+100]
     candidate_name = candidate_name[:candidate_name.find(
         "for")].strip()
+    candidate_name = replace_whitespace(candidate_name)
     results['candidate_name'] = candidate_name
     logger.info(f'Got Name : {candidate_name}')
 
@@ -42,6 +48,7 @@ def getRawDataInfo(raw_message: str) -> dict:
     job_title = raw_message[job_title_area_location:job_title_area_location+100]
     job_title = job_title[job_title.find("'")+1:]
     job_title = job_title[:job_title.find("'")].lower().strip()
+    job_title = replace_whitespace(job_title)
     logger.info(f'Got Job Title : {job_title}')
     
     # Get sheet destination based on job title
