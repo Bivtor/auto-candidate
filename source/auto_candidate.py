@@ -492,7 +492,7 @@ def create_file_MedOfficeAdmin(data, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': 22+19+len(inputLocation)
+                            'index': 21+19+len(inputLocation)
                         },
                         'text': bigString
                     }
@@ -526,7 +526,7 @@ def create_file_MedOfficeAdmin(data, parents, title):
                     'updateParagraphStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  len(bigString) + len(inputLocation) + 19 + 22
+                            'endIndex':  len(bigString) + len(inputLocation) + 19 + 21
                         },
                         'paragraphStyle': {
                             'spaceAbove': {
