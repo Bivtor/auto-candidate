@@ -484,7 +484,7 @@ def create_file_MedOfficeAdmin(data, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': 22+19,
+                            'index': 21+19,
                         },
                         'text': inputLocation
                     }
