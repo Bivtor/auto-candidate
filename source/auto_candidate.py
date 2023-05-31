@@ -273,7 +273,8 @@ def create_file_general(data, parents, title):
         }
         file = service.files().create(body=file_metadata, fields='id',
                                       ).execute()
-        logger.info(F'Document was created with ID: "{file.get("id")}".')
+        logger.info(
+            F'General Document was created with ID: "{file.get("id")}".')
 
         ###########################################
         inputName = "Name: " + data.name + "\n"
@@ -500,7 +501,7 @@ def create_file_MedOfficeAdmin(data, parents, title):
                     'updateTextStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  22
+                            'endIndex':  21
                         },
                         'textStyle': {
                             'bold': True,
