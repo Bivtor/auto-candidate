@@ -9,8 +9,9 @@
   "primary therapist - treatment center": "Therapist",
   "detox nurse lvn": "Nurse",
   "detox lvn": "Nurse",
-  "drug and alcohol therapist": "RADT",
-  "drug and alcohol counselor": "RADT",
-  "clinical director of addiction treatment - lmft/lcsw": "RADT",
-  "group facilitator radt": "RADT"
+  "drug and alcohol therapist": "RADT/CADC/Tech",
+  "drug and alcohol counselor": "RADT/CADC/Tech",
+  "clinical director of addiction treatment - lmft/lcsw": "RADT/CADC/Tech",
+  "group facilitator radt": "RADT/CADC/Tech",
+  "behavioral health technician" : "RADT/CADC/Tech"
 }
