@@ -70,7 +70,6 @@ handler.setFormatter(formatter)
 # add handler to logger
 logger.addHandler(handler)
 
-
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive',
           'https://www.googleapis.com/auth/documents',
@@ -427,6 +426,136 @@ def create_file_general(data, parents, title):
         file = None
 
 
+def create_file_MedOfficeAdmin(data, parents, title):
+    # create file
+    try:
+        # create drive api client
+        service = build('drive', 'v3', credentials=creds)
+
+        file_metadata = {
+            'mimeType': 'application/vnd.google-apps.document',
+            'name': title,
+            'parents': parents
+        }
+        file = service.files().create(body=file_metadata, fields='id',
+                                      ).execute()
+        logger.info(
+            F'Med Office Document was created with ID: {file.get("id")}')
+
+        ###########################################
+        inputLocation = "Location: " + data.location + "\n"
+        restOfQuestions = ("Medical Office Experience:\n\n",
+                           "Billing/VOB Experience:\n\n",
+                           "Customer Service Experience:\n\n",
+                           "Pay:\n\n",
+                           "EMR:\n\n",
+                           "Start Date:\n\n"
+                           "Grade:\n\n",
+                           "Specialty:\n\n",
+                           "General Notes:\n")
+        bigString = ""
+        for items in restOfQuestions:
+            bigString += items
+        ###########################################
+
+        # update said file with the items scraped from source
+        try:
+            service2 = build('docs', 'v1', credentials=creds)
+            DOCUMENT_ID = file.get('id')
+
+            requests = [
+                {
+                    'insertText': {
+                        'location': {
+                            'index': 1
+                        },
+                        'text': "Medical Office Admin\n"
+                    }
+                },
+                {
+                    'insertText': {
+                        'location': {
+                            'index': 22,
+                        },
+                        'text': 'Date Interviewed:\n',
+                    }
+                },
+                {
+                    'insertText': {
+                        'location': {
+                            'index': 22+19,
+                        },
+                        'text': inputLocation
+                    }
+                },
+                {
+                    'insertText': {
+                        'location': {
+                            'index': 22+19+len(inputLocation)
+                        },
+                        'text': bigString
+                    }
+                },
+                {
+                    'updateTextStyle': {
+                        'range': {
+                            'startIndex': 1,
+                            'endIndex':  22
+                        },
+                        'textStyle': {
+                            'bold': True,
+                        },
+                        "fields": "bold"  # Added
+                    }
+                },
+                {
+                    'updateParagraphStyle': {
+                        'range': {
+                            'startIndex': 1,
+                            'endIndex':  2
+                        },
+                        'paragraphStyle': {
+                            'namedStyleType': 'NORMAL_TEXT',
+                            'alignment': 'CENTER'
+                        },
+                        'fields': 'namedStyleType, alignment'
+                    }
+                },
+                {
+                    'updateParagraphStyle': {
+                        'range': {
+                            'startIndex': 1,
+                            'endIndex':  len(bigString) + len(inputLocation) + 19 + 22
+                        },
+                        'paragraphStyle': {
+                            'spaceAbove': {
+                                'magnitude': 15.0,
+                                'unit': 'PT'
+                            },
+                            'spaceBelow': {
+                                'magnitude': 15.0,
+                                'unit': 'PT'
+                            }
+                        },
+                        'fields': 'spaceAbove,spaceBelow'
+                    }
+                },
+            ]
+
+            doc = service2.documents().batchUpdate(
+                documentId=DOCUMENT_ID, body={'requests': requests}).execute()
+
+        except HttpError as error:
+            logger.error(F'An error occurred: {error}')
+            file = None
+
+        # pylint: disable=maybe-no-member
+
+    except HttpError as error:
+        logger.error(F'An error occurred: {error}')
+        file = None
+
+
 def create_file_Therapist(data, parents, title):
     # create file
     try:
@@ -648,6 +777,8 @@ def create_candidate(candidateData: candidateData, data):
     # Create Questions Document
     if category == 'Therapist':
         create_file_Therapist(candidateData, folder_id, title)
+    elif category == 'Med Office Admin':
+        create_file_MedOfficeAdmin(candidateData, folder_id, title)
     else:
         create_file_general(candidateData, folder_id, title)
 
