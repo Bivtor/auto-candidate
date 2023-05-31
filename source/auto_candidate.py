@@ -445,14 +445,14 @@ def create_file_MedOfficeAdmin(data, parents, title):
 
         ###########################################
         inputLocation = "Location: " + data.location + "\n"
-        restOfQuestions = ("Medical Office Experience:\n\n",
-                           "Billing/VOB Experience:\n\n",
-                           "Customer Service Experience:\n\n",
-                           "Pay:\n\n",
-                           "EMR:\n\n",
-                           "Start Date:\n\n"
-                           "Grade:\n\n",
-                           "Specialty:\n\n",
+        restOfQuestions = ("Medical Office Experience:\n",
+                           "Billing/VOB Experience:\n",
+                           "Customer Service Experience:\n",
+                           "Pay:\n",
+                           "EMR:\n",
+                           "Start Date:\n"
+                           "Grade:\n",
+                           "Specialty:\n",
                            "General Notes:\n")
         bigString = ""
         for items in restOfQuestions:
