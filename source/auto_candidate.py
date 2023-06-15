@@ -802,18 +802,6 @@ def create_file_FrontDeskReceptionist(data, parents, title):
                     }
                 },
                 {
-                    'updateTextStyle': {
-                        'range': {
-                            'startIndex': 0,
-                            'endIndex':  len(header)
-                        },
-                        'textStyle': {
-                            'bold': True,
-                        },
-                        "fields": "bold"  # Added
-                    }
-                },
-                {
                     'updateParagraphStyle': {
                         'range': {
                             'startIndex': 1,
