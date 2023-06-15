@@ -736,7 +736,7 @@ def create_file_FrontDeskReceptionist(data, parents, title):
         logger.info(F'Document was created with ID: {file.get("id")}')
 
         ###########################################
-        header = "Front Desk Reception - INTERVIEW QUESTIONS\n"
+        header = "Front Desk Reception - INTERVIEW QUESTIONS\n\n"
         inputDate = "Date Applied: " + data.date + "\n"
         inputDateInterviewed = "Date Interviewed: \n"
         inputLocation = "Location: " + data.location + "\n"
@@ -853,7 +853,6 @@ def create_file_FrontDeskReceptionist(data, parents, title):
         except HttpError as error:
             logger.error(F'An error occurred: {error}')
             file = None
-
         # pylint: disable=maybe-no-member
 
     except HttpError as error:
