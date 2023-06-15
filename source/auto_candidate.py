@@ -805,7 +805,7 @@ def create_file_FrontDeskReceptionist(data, parents, title):
                     'updateTextStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  len(header)
+                            'endIndex':  100
                         },
                         'textStyle': {
                             'bold': True,
@@ -817,7 +817,7 @@ def create_file_FrontDeskReceptionist(data, parents, title):
                     'updateParagraphStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  len(header)
+                            'endIndex':  2
                         },
                         'paragraphStyle': {
                             'namedStyleType': 'NORMAL_TEXT',
