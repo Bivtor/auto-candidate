@@ -736,7 +736,7 @@ def create_file_FrontDeskReceptionist(data, parents, title):
         logger.info(F'Document was created with ID: {file.get("id")}')
 
         ###########################################
-        header = "Front Desk Reception - INTERVIEW QUESTIONS\n\n"
+        header = "Front Desk Reception - INTERVIEW QUESTIONS\n\n\n"
         inputDate = "Date Applied: " + data.date + "\n"
         inputDateInterviewed = "Date Interviewed: \n"
         inputLocation = "Location: " + data.location + "\n"
@@ -817,7 +817,7 @@ def create_file_FrontDeskReceptionist(data, parents, title):
                     'updateParagraphStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex':  2
+                            'endIndex':  len(header)
                         },
                         'paragraphStyle': {
                             'namedStyleType': 'NORMAL_TEXT',
