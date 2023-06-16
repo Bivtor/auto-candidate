@@ -427,6 +427,134 @@ def create_file_general(data, parents, title):
         file = None
 
 
+def create_file_SurgicalTech(data, parents, title):
+    # create file
+    try:
+        # create drive api client
+        service = build('drive', 'v3', credentials=creds)
+
+        file_metadata = {
+            'mimeType': 'application/vnd.google-apps.document',
+            'name': title,
+            'parents': parents
+        }
+        file = service.files().create(body=file_metadata, fields='id',
+                                      ).execute()
+        logger.info(
+            F'Surgical Tech Document was created with ID: {file.get("id")}')
+
+        ###########################################
+        header = "Surgical Tech - INTERVIEW QUESTIONS\n\n\n"
+        inputDate = "Date Applied: " + data.date + "\n"
+        inputDateInterviewed = "Date Interviewed: \n"
+        inputLocation = "Location: " + data.location + "\n"
+        restOfQuestions = ["How far are you willing to commute?:\n",
+                           "Medical Office Experience?:\n",
+                           "\t- If so, where?:\n",
+                           "\t- Specialty?:\n",
+                           "EMR Experience?:\n",
+                           "FT/PT?:\n",
+                           "Desired Wage?:\n",
+                           "When can you start?:\n",
+                           "Additional Certifications:\n",
+                           "General Notes:\n"]
+        bigString = ""
+        for items in restOfQuestions:
+            bigString += items
+        ###########################################
+
+        # update said file with the items scraped from source
+        try:
+            service2 = build('docs', 'v1', credentials=creds)
+            DOCUMENT_ID = file.get('id')
+
+            requests = [
+                {
+                    'insertText': {
+                        'location': {
+                            'index': 1
+                        },
+                        'text': header
+                    }
+                },
+                {
+                    'insertText': {
+                        'location': {
+                            'index': len(header),
+                        },
+                        'text': inputDate,
+                    }
+                },
+                {
+                    'insertText': {
+                        'location': {
+                            'index': len(inputDate)+len(header),
+                        },
+                        'text': inputDateInterviewed
+                    }
+                },
+                {
+                    'insertText': {
+                        'location': {
+                            'index': len(inputDateInterviewed) + len(inputDate) + len(header),
+                        },
+                        'text': inputLocation
+                    }
+                },
+                {
+                    'insertText': {
+                        'location': {
+                            'index': len(inputDateInterviewed) + len(inputDate) + len(header) + len(inputLocation)
+                        },
+                        'text': bigString
+                    }
+                },
+                {
+                    'updateParagraphStyle': {
+                        'range': {
+                            'startIndex': 1,
+                            'endIndex':  2
+                        },
+                        'paragraphStyle': {
+                            'namedStyleType': 'NORMAL_TEXT',
+                            'alignment': 'CENTER'
+                        },
+                        'fields': 'namedStyleType, alignment'
+                    }
+                },
+                {
+                    'updateParagraphStyle': {
+                        'range': {
+                            'startIndex': 1,
+                            'endIndex': len(inputDateInterviewed) + len(inputDate) + len(inputLocation) + len(bigString)
+                        },
+                        'paragraphStyle': {
+                            'spaceAbove': {
+                                'magnitude': 15.0,
+                                'unit': 'PT'
+                            },
+                            'spaceBelow': {
+                                'magnitude': 15.0,
+                                'unit': 'PT'
+                            }
+                        },
+                        'fields': 'spaceAbove,spaceBelow'
+                    }
+                },
+            ]
+
+            doc = service2.documents().batchUpdate(
+                documentId=DOCUMENT_ID, body={'requests': requests}).execute()
+
+        except HttpError as error:
+            logger.error(F'An error occurred in document creation: {error}')
+            file = None
+
+    except HttpError as error:
+        logger.error(F'An error occurred in document creation: {error}')
+        file = None
+
+
 def create_file_MedOfficeAdmin(data, parents, title):
     # create file
     try:
@@ -733,7 +861,8 @@ def create_file_FrontDeskReceptionist(data, parents, title):
         }
         file = service.files().create(body=file_metadata, fields='id',
                                       ).execute()
-        logger.info(F'Document was created with ID: {file.get("id")}')
+        logger.info(
+            F'Front Desk Receptionist Document was created with ID: {file.get("id")}')
 
         ###########################################
         header = "Front Desk Reception - INTERVIEW QUESTIONS\n\n\n"
@@ -908,6 +1037,8 @@ def create_candidate(candidateData: candidateData, data):
         create_file_Therapist(candidateData, folder_id, title)
     elif category == 'Med Office Admin':
         create_file_MedOfficeAdmin(candidateData, folder_id, title)
+    elif category == 'Surgical Tech':
+        create_file_SurgicalTech(candidateData, folder_id, title)
     elif category == 'Front Desk Receptionist':
         create_file_FrontDeskReceptionist(candidateData, folder_id, title)
     else:
