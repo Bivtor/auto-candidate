@@ -449,7 +449,7 @@ def create_file_SurgicalTech(data, parents, title):
         inputDateInterviewed = "Date Interviewed: \n"
         inputLocation = "Location: " + data.location + "\n"
         restOfQuestions = ["How far are you willing to commute?:\n",
-                           "Medical Office Experience?:\n",
+                           "Surgical/Medical Experience?:\n",
                            "\t- If so, where?:\n",
                            "\t- Specialty?:\n",
                            "EMR Experience?:\n",
