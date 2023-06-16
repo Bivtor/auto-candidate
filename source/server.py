@@ -79,7 +79,8 @@ class ResponseModel(BaseModel):
 def submitdata(data: Data):
     # Check if operation is currently in progress
     if checkWorking():
-        logger.info("Operation currently ongoing, cannot process")
+        logger.info("Operation currently ongoing, cannot process, stopping")
+        return ResponseModel(response="Currently Busy")
 
     # Check Password
     if data.password != os.environ['DEFAULT_PASSWORD']:
