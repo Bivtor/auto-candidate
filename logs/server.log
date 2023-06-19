@@ -37462,3 +37462,477 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-06-19 09:18:51,306 - logger - INFO - Created profile for TARI OMORO
 2023-06-19 09:18:51,746 - logger - INFO - Updated local json file for TARI OMORO
 2023-06-19 09:34:24,023 - logger - INFO - Started Server
+2023-06-19 09:34:26,493 - logger - INFO - Started Server
+2023-06-19 09:36:25,082 - logger - INFO - --- working->True ---
+2023-06-19 09:36:26,683 - logger - INFO - Successfully Set Column Variables
+2023-06-19 09:36:26,683 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=b52d77448bbb&pos=2&l=sVOD&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDM=
+2023-06-19 09:36:26,829 - logger - INFO - --- working->False ---
+2023-06-19 09:36:34,280 - logger - INFO - Altered Phone/Email for: Tre Moore in directory: N:\Downloads2\ResumeTreMoore.pdf
+2023-06-19 09:36:34,280 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 09:36:34,281 - logger - INFO - Creating Tre Moore's Folder
+2023-06-19 09:36:35,278 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1smFpEWcQlgySBFsE4g64pObMZW3pBoHP
+2023-06-19 09:36:36,888 - logger - INFO - Surgical Tech Document was created with ID: 1a6qlkM_4XW-Kf0BGgVrV96v6-djWMyNkzSIcPInQOrQ
+2023-06-19 09:36:40,037 - logger - INFO - Got 5 licenses for Tre Moore
+2023-06-19 09:36:40,701 - logger - INFO - Updated Spreadsheet
+2023-06-19 09:36:42,336 - logger - INFO - File ID: 1ueJKkcyhSzMNee20Q4pYRAZYZK1DX32g
+2023-06-19 09:36:42,336 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 09:36:42,336 - logger - INFO - Created profile for Tre Moore
+2023-06-19 09:36:42,804 - logger - INFO - Updated local json file for Tre Moore
+2023-06-19 09:41:31,388 - logger - INFO - Recieved New Email notification
+2023-06-19 09:41:31,389 - logger - INFO - Decided to refresh Gmail token
+2023-06-19 09:41:31,699 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4866425', 'expiration': '1687797692214'}
+2023-06-19 09:41:32,009 - logger - INFO - Checking most recent email
+2023-06-19 09:41:32,010 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:42:02,120 - logger - INFO - Recieved New Email notification
+2023-06-19 09:42:02,437 - logger - INFO - Checking most recent email
+2023-06-19 09:42:02,437 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:42:19,904 - logger - INFO - Recieved New Email notification
+2023-06-19 09:42:20,351 - logger - INFO - Checking most recent email
+2023-06-19 09:42:20,351 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:42:23,079 - logger - INFO - Recieved New Email notification
+2023-06-19 09:42:23,373 - logger - INFO - Checking most recent email
+2023-06-19 09:42:23,373 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:42:26,250 - logger - INFO - Recieved New Email notification
+2023-06-19 09:42:26,534 - logger - INFO - Checking most recent email
+2023-06-19 09:42:26,534 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:42:51,166 - logger - INFO - Recieved New Email notification
+2023-06-19 09:42:51,170 - logger - INFO - Decided to refresh Gmail token
+2023-06-19 09:42:51,394 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4866922', 'expiration': '1687797771908'}
+2023-06-19 09:42:51,687 - logger - INFO - Checking most recent email
+2023-06-19 09:42:51,687 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:43:02,927 - logger - INFO - Recieved New Email notification
+2023-06-19 09:43:03,205 - logger - INFO - Checking most recent email
+2023-06-19 09:43:03,205 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:43:22,286 - logger - INFO - Recieved New Email notification
+2023-06-19 09:43:22,563 - logger - INFO - Checking most recent email
+2023-06-19 09:43:22,563 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:43:34,088 - logger - INFO - Recieved New Email notification
+2023-06-19 09:43:34,416 - logger - INFO - Checking most recent email
+2023-06-19 09:43:34,416 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 09:59:32,512 - logger - INFO - --- working->True ---
+2023-06-19 09:59:34,033 - logger - INFO - Successfully Set Column Variables
+2023-06-19 09:59:34,033 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=fb742d5f83bc&pos=0&l=sVOD&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDM=
+2023-06-19 09:59:34,115 - logger - INFO - --- working->False ---
+2023-06-19 09:59:41,452 - logger - INFO - Altered Phone/Email for: Rolanda Washington in directory: N:\Downloads2\ResumeRolandaWashington.pdf
+2023-06-19 09:59:41,452 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 09:59:41,452 - logger - INFO - Creating Rolanda Washington's Folder
+2023-06-19 09:59:42,338 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1LDnNrsGP8NUCkYoYdQCZVRi-FNb4FxtT
+2023-06-19 09:59:44,081 - logger - INFO - Surgical Tech Document was created with ID: 1iEO0xGhYbcw3u2rtPZ8Biz6f6tDc-aQKS4K0UV0otCA
+2023-06-19 09:59:47,106 - logger - INFO - Got 5 licenses for Rolanda Washington
+2023-06-19 09:59:47,615 - logger - INFO - Updated Spreadsheet
+2023-06-19 09:59:49,118 - logger - INFO - File ID: 1DCjRxDQaYIC8Gp1xD_1FhOpRzvESY-U6
+2023-06-19 09:59:49,118 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 09:59:49,118 - logger - INFO - Created profile for Rolanda Washington
+2023-06-19 09:59:49,555 - logger - INFO - Updated local json file for Rolanda Washington
+2023-06-19 10:08:33,037 - logger - INFO - Recieved New Email notification
+2023-06-19 10:08:33,569 - logger - INFO - Checking most recent email
+2023-06-19 10:08:33,570 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:08:36,821 - logger - INFO - Recieved New Email notification
+2023-06-19 10:08:36,825 - logger - INFO - Decided to refresh Gmail token
+2023-06-19 10:08:37,169 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4868463', 'expiration': '1687799317699'}
+2023-06-19 10:08:37,465 - logger - INFO - Checking most recent email
+2023-06-19 10:08:37,465 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:10:42,856 - logger - INFO - Recieved New Email notification
+2023-06-19 10:10:43,271 - logger - INFO - Checking most recent email
+2023-06-19 10:10:43,271 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:14:12,223 - logger - INFO - Recieved New Email notification
+2023-06-19 10:14:12,298 - logger - INFO - Recieved New Email notification
+2023-06-19 10:14:12,758 - logger - INFO - Checking most recent email
+2023-06-19 10:14:12,758 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:14:12,911 - logger - INFO - Checking most recent email
+2023-06-19 10:14:12,911 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:16:24,340 - logger - INFO - Recieved New Email notification
+2023-06-19 10:16:24,723 - logger - INFO - Checking most recent email
+2023-06-19 10:16:24,723 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:28:47,503 - logger - INFO - --- working->True ---
+2023-06-19 10:28:49,272 - logger - INFO - Successfully Set Column Variables
+2023-06-19 10:28:49,272 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=cc7a099e8bca&pos=16&l=sVOD&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDI=
+2023-06-19 10:28:49,356 - logger - INFO - --- working->False ---
+2023-06-19 10:28:57,012 - logger - INFO - Altered Phone/Email for: Samantha Porpora in directory: N:\Downloads2\ResumeSamanthaPorpora.pdf
+2023-06-19 10:28:57,012 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 10:28:57,012 - logger - INFO - Creating Samantha Porpora's Folder
+2023-06-19 10:28:57,970 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1CtVPUCv5obn9j-fjuEO9OMwLhyk1H7_Q
+2023-06-19 10:28:59,891 - logger - INFO - Surgical Tech Document was created with ID: 1nVc5pVGFoH_s0iCAoCp53kfwZwDjtd7W7iwWqD6E42k
+2023-06-19 10:29:01,836 - logger - INFO - Got 1 licenses for Samantha Porpora
+2023-06-19 10:29:02,484 - logger - INFO - Updated Spreadsheet
+2023-06-19 10:29:03,866 - logger - INFO - File ID: 17i76Y79q66o3skp6_EK9jUzhWL6qNTCA
+2023-06-19 10:29:03,866 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 10:29:03,866 - logger - INFO - Created profile for Samantha Porpora
+2023-06-19 10:29:04,326 - logger - INFO - Updated local json file for Samantha Porpora
+2023-06-19 10:41:05,666 - logger - INFO - Recieved New Email notification
+2023-06-19 10:41:05,668 - logger - INFO - Decided to refresh Gmail token
+2023-06-19 10:41:06,045 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4868750', 'expiration': '1687801266596'}
+2023-06-19 10:41:06,363 - logger - INFO - Checking most recent email
+2023-06-19 10:41:06,363 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:43:03,655 - logger - INFO - Recieved New Email notification
+2023-06-19 10:43:04,070 - logger - INFO - Checking most recent email
+2023-06-19 10:43:04,070 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:43:21,469 - logger - INFO - Recieved New Email notification
+2023-06-19 10:43:21,760 - logger - INFO - Checking most recent email
+2023-06-19 10:43:21,760 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:43:37,566 - logger - INFO - Recieved New Email notification
+2023-06-19 10:43:38,228 - logger - INFO - Checking most recent email
+2023-06-19 10:43:38,228 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:43:43,113 - logger - INFO - Recieved New Email notification
+2023-06-19 10:43:43,409 - logger - INFO - Checking most recent email
+2023-06-19 10:43:43,409 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:51:36,626 - logger - INFO - Recieved New Email notification
+2023-06-19 10:51:36,631 - logger - INFO - Decided to refresh Gmail token
+2023-06-19 10:51:36,954 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4869009', 'expiration': '1687801897505'}
+2023-06-19 10:51:37,273 - logger - INFO - Checking most recent email
+2023-06-19 10:51:37,273 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:51:42,572 - logger - INFO - Recieved New Email notification
+2023-06-19 10:51:42,883 - logger - INFO - Checking most recent email
+2023-06-19 10:51:42,883 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:51:54,524 - logger - INFO - Recieved New Email notification
+2023-06-19 10:51:54,830 - logger - INFO - Checking most recent email
+2023-06-19 10:51:54,830 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:57:52,019 - logger - INFO - Recieved New Email notification
+2023-06-19 10:57:52,391 - logger - INFO - Recieved New Email notification
+2023-06-19 10:57:52,439 - logger - INFO - Checking most recent email
+2023-06-19 10:57:52,440 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:57:52,741 - logger - INFO - Checking most recent email
+2023-06-19 10:57:52,741 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 10:59:44,480 - logger - INFO - --- working->True ---
+2023-06-19 10:59:46,047 - logger - INFO - Successfully Set Column Variables
+2023-06-19 10:59:46,047 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=1b191584b594&pos=2&l=y3Oi&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDM=
+2023-06-19 10:59:46,133 - logger - INFO - --- working->False ---
+2023-06-19 10:59:53,575 - logger - INFO - Altered Phone/Email for: Tamara Prunty in directory: N:\Downloads2\ResumeTamaraPrunty.pdf
+2023-06-19 10:59:53,576 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 10:59:53,576 - logger - INFO - Creating Tamara Prunty's Folder
+2023-06-19 10:59:54,495 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1x-4tUxMLWYsK4sOo6vtL3xoNoAhHXyQ-
+2023-06-19 10:59:56,259 - logger - INFO - Surgical Tech Document was created with ID: 1l57DkrHA-vJvBi_49yxiXn3YXsGpqY_Kuogddr0BSVA
+2023-06-19 10:59:58,375 - logger - INFO - Got 5 licenses for Tamara Prunty
+2023-06-19 10:59:59,013 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:00:00,584 - logger - INFO - File ID: 1SHkL2upe4-euDzlpRwh6GxtV6lT02TEf
+2023-06-19 11:00:00,584 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:00:00,584 - logger - INFO - Created profile for Tamara Prunty
+2023-06-19 11:00:01,050 - logger - INFO - Updated local json file for Tamara Prunty
+2023-06-19 11:00:52,807 - logger - INFO - --- working->True ---
+2023-06-19 11:00:54,253 - logger - INFO - Successfully Set Column Variables
+2023-06-19 11:00:54,253 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=d34166008db8&pos=15&l=ugNs&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDI=
+2023-06-19 11:00:54,329 - logger - INFO - --- working->False ---
+2023-06-19 11:01:01,066 - logger - INFO - Altered Phone/Email for: Quantavius Varner in directory: N:\Downloads2\ResumeQuantaviusVarner.pdf
+2023-06-19 11:01:01,066 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:01:01,067 - logger - INFO - Creating Quantavius Varner's Folder
+2023-06-19 11:01:01,961 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Skq65uBDYJusXnmWR3GSBfkhZO_Qaedo
+2023-06-19 11:01:03,857 - logger - INFO - Surgical Tech Document was created with ID: 1kawb3TQ2cgeyLC_h5ErzqUaXQVFH7fLqEMej6nYxIew
+2023-06-19 11:01:06,006 - logger - INFO - Got 0 licenses for Quantavius Varner
+2023-06-19 11:01:06,578 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:01:07,970 - logger - INFO - File ID: 1yA0QtvvZThxUE6PRHxXC7ut8cQjqkUHQ
+2023-06-19 11:01:07,970 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:01:07,970 - logger - INFO - Created profile for Quantavius Varner
+2023-06-19 11:01:08,431 - logger - INFO - Updated local json file for Quantavius Varner
+2023-06-19 11:05:01,916 - logger - INFO - --- working->True ---
+2023-06-19 11:05:03,408 - logger - INFO - Successfully Set Column Variables
+2023-06-19 11:05:03,408 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=2500fce9c9dc&pos=7&l=qAUY&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDM=
+2023-06-19 11:05:03,485 - logger - INFO - --- working->False ---
+2023-06-19 11:05:10,852 - logger - INFO - Altered Phone/Email for: Courtney Ayers in directory: N:\Downloads2\ResumeCourtneyAyers.pdf
+2023-06-19 11:05:10,852 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:05:10,852 - logger - INFO - Creating Courtney Ayers's Folder
+2023-06-19 11:05:11,651 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/11e5NHD2DSoR_ZVIWBK36R0hQS5fLTj01
+2023-06-19 11:05:13,256 - logger - INFO - Surgical Tech Document was created with ID: 1AoSgD5iFVGAVxJnoJOfi7yRSLHbktDSBikghzlGESWo
+2023-06-19 11:05:15,412 - logger - INFO - Got 5 licenses for Courtney Ayers
+2023-06-19 11:05:15,993 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:05:17,356 - logger - INFO - File ID: 13Roh6upRIHDsen_lLavXBwGyOpZgBj-t
+2023-06-19 11:05:17,356 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:05:17,356 - logger - INFO - Created profile for Courtney Ayers
+2023-06-19 11:05:17,816 - logger - INFO - Updated local json file for Courtney Ayers
+2023-06-19 11:05:55,256 - logger - INFO - --- working->True ---
+2023-06-19 11:05:56,575 - logger - INFO - Successfully Set Column Variables
+2023-06-19 11:05:56,575 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=a1fc4c861d81&pos=19&l=gDWI&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDI=
+2023-06-19 11:05:56,652 - logger - INFO - --- working->False ---
+2023-06-19 11:06:03,782 - logger - INFO - Altered Phone/Email for: Laroia Stephanie McDowell in directory: N:\Downloads2\ResumeCourtneyAyers.pdf
+2023-06-19 11:06:03,782 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:06:03,782 - logger - INFO - Creating Laroia Stephanie McDowell's Folder
+2023-06-19 11:06:04,633 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1RSupOubTJM1FD9pKX90DVp1lCkR9Wpt_
+2023-06-19 11:06:06,383 - logger - INFO - Surgical Tech Document was created with ID: 1HShSnE0oHpYeqEd--mO8BjDNgV5o1NP7hB9KIw0zcfM
+2023-06-19 11:06:09,386 - logger - INFO - Got 5 licenses for Laroia Stephanie McDowell
+2023-06-19 11:06:09,927 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:06:11,362 - logger - INFO - File ID: 1KEwt-QAdgnulOv45zVmsaT82DZGUqnGF
+2023-06-19 11:06:11,363 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:06:11,363 - logger - INFO - Created profile for Laroia Stephanie McDowell
+2023-06-19 11:06:11,814 - logger - INFO - Updated local json file for Laroia Stephanie McDowell
+2023-06-19 11:06:53,688 - logger - INFO - --- working->True ---
+2023-06-19 11:06:55,003 - logger - INFO - Successfully Set Column Variables
+2023-06-19 11:06:55,003 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=ca963e03b339&pos=15&l=RgJn&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDI=
+2023-06-19 11:06:55,081 - logger - INFO - --- working->False ---
+2023-06-19 11:07:02,330 - logger - INFO - Altered Phone/Email for: Minerva Rocha in directory: N:\Downloads2\ResumeMinervaRocha.pdf
+2023-06-19 11:07:02,330 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:07:02,330 - logger - INFO - Creating Minerva Rocha's Folder
+2023-06-19 11:07:03,212 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1kqs4rxA77NLV1mFxkb9UcE6B7HqFCJl4
+2023-06-19 11:07:04,855 - logger - INFO - Surgical Tech Document was created with ID: 17EV1ty5IESNPQAOaELs69ewW3Kg2soFjzS3ws2di-ho
+2023-06-19 11:07:07,471 - logger - INFO - Got 5 licenses for Minerva Rocha
+2023-06-19 11:07:07,980 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:07:09,356 - logger - INFO - File ID: 1birb772NywZHjBQwTnc-Jje0c9LOKdSG
+2023-06-19 11:07:09,357 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:07:09,357 - logger - INFO - Created profile for Minerva Rocha
+2023-06-19 11:07:09,831 - logger - INFO - Updated local json file for Minerva Rocha
+2023-06-19 11:07:27,528 - logger - INFO - --- working->True ---
+2023-06-19 11:07:28,862 - logger - INFO - Successfully Set Column Variables
+2023-06-19 11:07:28,862 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=2f5e0cd2aaf2&pos=18&l=RgJn&listQuery=aWQlM0Q5NTI4MTk3MzQ3NzklMjZzdGF0dXNOYW1lJTNEQWN0aXZlJTI2cGFnZSUzRDI=
+2023-06-19 11:07:28,939 - logger - INFO - --- working->False ---
+2023-06-19 11:07:36,041 - logger - INFO - Altered Phone/Email for: Natassia Gress in directory: N:\Downloads2\ResumeNatassiaGress.pdf
+2023-06-19 11:07:36,041 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:07:36,041 - logger - INFO - Creating Natassia Gress's Folder
+2023-06-19 11:07:36,825 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1zA3nYxSBAhSOF47ucF0qKo0576B2CWLk
+2023-06-19 11:07:38,526 - logger - INFO - Surgical Tech Document was created with ID: 18FSfLLIiFoq0aKCrwxn4V5qM-csZGMoqPNpfll_1ow0
+2023-06-19 11:07:40,288 - logger - INFO - Got 5 licenses for Natassia Gress
+2023-06-19 11:07:40,835 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:07:42,180 - logger - INFO - File ID: 1czc6A36HKa8WKJ0RaA4dnefXSQH87PbJ
+2023-06-19 11:07:42,180 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:07:42,180 - logger - INFO - Created profile for Natassia Gress
+2023-06-19 11:07:42,632 - logger - INFO - Updated local json file for Natassia Gress
+2023-06-19 11:10:42,737 - logger - INFO - Recieved New Email notification
+2023-06-19 11:10:42,739 - logger - INFO - Decided to refresh Gmail token
+2023-06-19 11:10:43,141 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4869249', 'expiration': '1687803043707'}
+2023-06-19 11:10:43,627 - logger - INFO - Checking most recent email
+2023-06-19 11:10:43,627 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:11:10,050 - logger - INFO - Recieved New Email notification
+2023-06-19 11:11:10,495 - logger - INFO - Checking most recent email
+2023-06-19 11:11:10,495 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:11:11,584 - logger - INFO - Recieved New Email notification
+2023-06-19 11:11:11,897 - logger - INFO - Checking most recent email
+2023-06-19 11:11:11,897 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:11:34,438 - logger - INFO - Recieved New Email notification
+2023-06-19 11:11:34,767 - logger - INFO - Checking most recent email
+2023-06-19 11:11:34,767 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:12:09,419 - logger - INFO - Recieved New Email notification
+2023-06-19 11:12:09,999 - logger - INFO - Checking most recent email
+2023-06-19 11:12:09,999 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:12:12,303 - logger - INFO - Recieved New Email notification
+2023-06-19 11:12:12,304 - logger - INFO - Decided to refresh Gmail token
+2023-06-19 11:12:12,501 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4869366', 'expiration': '1687803133070'}
+2023-06-19 11:12:12,794 - logger - INFO - Checking most recent email
+2023-06-19 11:12:12,794 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:12:17,655 - logger - INFO - Recieved New Email notification
+2023-06-19 11:12:17,952 - logger - INFO - Checking most recent email
+2023-06-19 11:12:17,952 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:12:23,654 - logger - INFO - Recieved New Email notification
+2023-06-19 11:12:23,987 - logger - INFO - Checking most recent email
+2023-06-19 11:12:23,987 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:12:25,928 - logger - INFO - Recieved New Email notification
+2023-06-19 11:12:26,265 - logger - INFO - Checking most recent email
+2023-06-19 11:12:26,266 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:21:04,395 - logger - INFO - Recieved New Email notification
+2023-06-19 11:21:04,799 - logger - INFO - Checking most recent email
+2023-06-19 11:21:04,799 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:23:36,404 - logger - INFO - Recieved New Email notification
+2023-06-19 11:23:36,409 - logger - INFO - Decided to refresh Gmail token
+2023-06-19 11:23:36,782 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4869592', 'expiration': '1687803817358'}
+2023-06-19 11:23:37,202 - logger - INFO - Checking most recent email
+2023-06-19 11:23:37,202 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:23:39,605 - logger - INFO - Recieved New Email notification
+2023-06-19 11:23:39,895 - logger - INFO - Checking most recent email
+2023-06-19 11:23:39,895 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 11:51:09,692 - logger - INFO - --- working->True ---
+2023-06-19 11:51:11,840 - logger - INFO - Successfully Set Column Variables
+2023-06-19 11:51:11,840 - logger - INFO - Opening Link: https://employers.indeed.com/candidates?id=952819734779&statusName=0
+2023-06-19 11:51:11,929 - logger - INFO - --- working->False ---
+2023-06-19 11:51:25,554 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:25,554 - logger - INFO - Creating Erika Alvarez's Folder
+2023-06-19 11:51:26,291 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:26,291 - logger - INFO - Creating Sabrina Cerrillo's Folder
+2023-06-19 11:51:26,580 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1aYoU04XxdJMW16eJjTMeWrGb5D073XIM
+2023-06-19 11:51:27,159 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1T6EgulNY6kEAxhgGHBMnO-ep4StVMPHB
+2023-06-19 11:51:28,345 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:28,345 - logger - INFO - Creating Valerie Marruquin's Folder
+2023-06-19 11:51:28,752 - logger - INFO - Surgical Tech Document was created with ID: 11kZu3fxQ0YFs8aCM56Xrx1AB8gZE79WfceAemHE39mQ
+2023-06-19 11:51:29,159 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1VP-nlBKSo6MYLbnK7J9_n6ckRItZrU4K
+2023-06-19 11:51:29,256 - logger - INFO - Surgical Tech Document was created with ID: 1aowAIQV4OY6I_jWEgMGnOJJDfefQL4c7fRRfhNe155s
+2023-06-19 11:51:29,381 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:29,381 - logger - INFO - Creating Tammy Kelly's Folder
+2023-06-19 11:51:30,244 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1SmQoeyj4cxQECHYztgS_jDStqH_e0oAI
+2023-06-19 11:51:30,248 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:30,256 - logger - INFO - Creating McKenzie Adams's Folder
+2023-06-19 11:51:30,689 - logger - INFO - Altered Phone/Email for: April Becton in directory: N:\Downloads2\ResumeChukMmegwa.pdf
+2023-06-19 11:51:30,689 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:30,689 - logger - INFO - Creating April Becton's Folder
+2023-06-19 11:51:31,000 - logger - INFO - Surgical Tech Document was created with ID: 1c9leRb6_bh_sjkGyOMyBHYBiqaYnxL9OU4ZL51XRLRA
+2023-06-19 11:51:31,235 - logger - INFO - Got 5 licenses for Sabrina Cerrillo
+2023-06-19 11:51:31,237 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1MrtNiZIOsjgi0dF6vYnLQTzzvfrFNsLN
+2023-06-19 11:51:32,065 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1yLVVNEpwBq0OusNtakuEYWRIpVpWDMZ5
+2023-06-19 11:51:32,066 - logger - INFO - Surgical Tech Document was created with ID: 1I2T_UumOyvq3gOwZfabdYVdw4n835jyi5qAP-PcObKQ
+2023-06-19 11:51:32,097 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:32,223 - logger - INFO - Created profile for Sabrina Cerrillo
+2023-06-19 11:51:32,287 - logger - INFO - Got 5 licenses for Erika Alvarez
+2023-06-19 11:51:33,220 - logger - INFO - Surgical Tech Document was created with ID: 1aQxSwZG16Kj-r6O7z_Ndk4DKr7I3Y0Ef4Td6fhNhh98
+2023-06-19 11:51:33,419 - logger - INFO - Got 1 licenses for Valerie Marruquin
+2023-06-19 11:51:33,633 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:33,633 - logger - INFO - Created profile for Erika Alvarez
+2023-06-19 11:51:34,422 - logger - INFO - Updated local json file for Sabrina Cerrillo
+2023-06-19 11:51:34,553 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:34,553 - logger - INFO - Created profile for Valerie Marruquin
+2023-06-19 11:51:34,679 - logger - INFO - Surgical Tech Document was created with ID: 1GKT5pqTiqtNwmbo5J8PWpH21zDg6oPByYiNRwWajJpk
+2023-06-19 11:51:34,758 - logger - INFO - Updated local json file for Erika Alvarez
+2023-06-19 11:51:34,869 - logger - INFO - Got 5 licenses for Tammy Kelly
+2023-06-19 11:51:35,714 - logger - INFO - Updated local json file for Valerie Marruquin
+2023-06-19 11:51:35,760 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:35,760 - logger - INFO - Created profile for Tammy Kelly
+2023-06-19 11:51:36,252 - logger - INFO - Got 2 licenses for McKenzie Adams
+2023-06-19 11:51:36,431 - logger - INFO - Updated local json file for Tammy Kelly
+2023-06-19 11:51:36,431 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:36,431 - logger - INFO - Creating Shaquana Outing's Folder
+2023-06-19 11:51:36,820 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:36,820 - logger - INFO - Created profile for McKenzie Adams
+2023-06-19 11:51:36,970 - logger - INFO - Got 0 licenses for April Becton
+2023-06-19 11:51:37,247 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1woQgkN376tJTS4uwApO_mbizCsek-Vy3
+2023-06-19 11:51:37,698 - logger - INFO - Altered Phone/Email for: Chuk Mmegwa in directory: N:\Downloads2\ResumeKrissannaBrown.pdf
+2023-06-19 11:51:37,699 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:37,699 - logger - INFO - Creating Chuk Mmegwa's Folder
+2023-06-19 11:51:37,702 - logger - INFO - Updated local json file for McKenzie Adams
+2023-06-19 11:51:37,739 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:37,739 - logger - INFO - Creating Karen Lazo's Folder
+2023-06-19 11:51:37,769 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:38,443 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:38,443 - logger - INFO - Creating Larry Brown's Folder
+2023-06-19 11:51:38,497 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1x90KP-fML81w4jBWKCL9Jz7IIYpk3HMU
+2023-06-19 11:51:39,017 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1JIXyjyAvuc0YWmTrf50cUC8WiDY2hjkN
+2023-06-19 11:51:39,379 - logger - INFO - File ID: 1oENANXiKsZbB9yylHxqTUeRV2O4O_JEj
+2023-06-19 11:51:39,379 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:51:39,379 - logger - INFO - Surgical Tech Document was created with ID: 1elT1dtpGM1ZIg7qbGCuPiATsSAq4ZcD-2gbyTxdAL84
+2023-06-19 11:51:39,380 - logger - INFO - Created profile for April Becton
+2023-06-19 11:51:39,703 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1mTeqRfp5pTXlKZygllQ8DUEKyXayJmUZ
+2023-06-19 11:51:39,728 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:39,728 - logger - INFO - Creating Joanne Swaby's Folder
+2023-06-19 11:51:40,041 - logger - INFO - Updated local json file for April Becton
+2023-06-19 11:51:40,521 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1L7VurDNtEawGip0uEUmNo8XcCxyQya1z
+2023-06-19 11:51:40,946 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:40,946 - logger - INFO - Creating Stefany Coria's Folder
+2023-06-19 11:51:41,621 - logger - INFO - Surgical Tech Document was created with ID: 1Jh0M04OZlqarNO0vZM3NyorZ8L9GKy7fReLuf7Qsc0s
+2023-06-19 11:51:41,846 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1uOyqN4CpTnF4QQyIa-bUgT2mQDDLIPTQ
+2023-06-19 11:51:42,178 - logger - INFO - Altered Phone/Email for: NATALIE CASTRO in directory: N:\Downloads2\ResumeMICHAELMAYORAL.pdf
+2023-06-19 11:51:42,178 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:42,178 - logger - INFO - Creating NATALIE CASTRO's Folder
+2023-06-19 11:51:42,573 - logger - INFO - Surgical Tech Document was created with ID: 1TqfBllodCi1AuYU9uuoKuGWefQFuTffA_7qoVPelLh4
+2023-06-19 11:51:43,073 - logger - INFO - Surgical Tech Document was created with ID: 1bDp4hAFiMwBx8YovDe9m4JDUCGiNBZZBLUsREUaH3wo
+2023-06-19 11:51:43,381 - logger - INFO - Got 0 licenses for Shaquana Outing
+2023-06-19 11:51:43,502 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/15TU7lzrxb3WmJw377Ix9HVoebqMT7KCu
+2023-06-19 11:51:43,906 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:43,906 - logger - INFO - Creating Jasmine Green's Folder
+2023-06-19 11:51:43,920 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:43,920 - logger - INFO - Created profile for Shaquana Outing
+2023-06-19 11:51:43,922 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:43,922 - logger - INFO - Creating Eunice Llanos's Folder
+2023-06-19 11:51:44,360 - logger - INFO - Surgical Tech Document was created with ID: 1P7RH2DdLAwuB3gkl3oKuUDWl7Xo3DCtnFAH_xfuB4Pw
+2023-06-19 11:51:44,423 - logger - INFO - Updated local json file for Shaquana Outing
+2023-06-19 11:51:44,832 - logger - INFO - Altered Phone/Email for: Krissanna Brown in directory: N:\Downloads2\ResumeMICHAELMAYORAL.pdf
+2023-06-19 11:51:44,832 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:44,832 - logger - INFO - Creating Krissanna Brown's Folder
+2023-06-19 11:51:44,974 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1UyqNBTdQHAV9s0ienGII6URcMh72eLUh
+2023-06-19 11:51:44,982 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1IdRh1B9_u1CUqDF6hXC-ahRi1xR8_ons
+2023-06-19 11:51:45,161 - logger - INFO - Altered Phone/Email for: MICHAEL MAYORAL in directory: N:\Downloads2\ResumeMICHAELMAYORAL.pdf
+2023-06-19 11:51:45,161 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:45,161 - logger - INFO - Creating MICHAEL MAYORAL's Folder
+2023-06-19 11:51:45,206 - logger - INFO - Surgical Tech Document was created with ID: 1r6VxRywkXSeYVN7bGlH2YKSsLYL5jQoAy42ktd3Rl0E
+2023-06-19 11:51:45,329 - logger - INFO - Altered Phone/Email for: Alessandra Salguero in directory: N:\Downloads2\ResumeMICHAELMAYORAL.pdf
+2023-06-19 11:51:45,329 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-19 11:51:45,329 - logger - INFO - Creating Alessandra Salguero's Folder
+2023-06-19 11:51:45,621 - logger - INFO - Got 4 licenses for Chuk Mmegwa
+2023-06-19 11:51:45,727 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1QbQmTTM2f7yzo-L4B0leuqhlRx8V-DPg
+2023-06-19 11:51:46,122 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:46,158 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1RDPadzbQRkJ3bN_DjxxM1Z7ibtuTik5-
+2023-06-19 11:51:46,725 - logger - INFO - Got 1 licenses for Joanne Swaby
+2023-06-19 11:51:46,850 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1oFxxs9a_vFwzy_WMWgiwi5knbesO2U-w
+2023-06-19 11:51:46,881 - logger - INFO - Surgical Tech Document was created with ID: 12dj3ahir6gIzOzfTHk19b7K6A249maa2e6I29wCUZK4
+2023-06-19 11:51:47,636 - logger - INFO - File ID: 1GfelE2eflXrBND1VJOm8vdDIx-gd05qV
+2023-06-19 11:51:47,652 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:51:47,763 - logger - INFO - Created profile for Chuk Mmegwa
+2023-06-19 11:51:47,826 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:47,963 - logger - INFO - Created profile for Joanne Swaby
+2023-06-19 11:51:48,048 - logger - INFO - Surgical Tech Document was created with ID: 1Qt2u-_HtRM8-IOh06qvgGLpKF1AQYf9kxYAdGD_aeHE
+2023-06-19 11:51:48,504 - logger - INFO - Got 5 licenses for Stefany Coria
+2023-06-19 11:51:48,505 - logger - INFO - Surgical Tech Document was created with ID: 1oJNeRPXolaXdqnSOpORz_cXH_6j7tIiuVtFilpPmFA4
+2023-06-19 11:51:48,840 - logger - INFO - Surgical Tech Document was created with ID: 1CyGsaRsGpLpPm8m9_QklzSEhyaOnRZdUe8XjIiC9Ld4
+2023-06-19 11:51:49,348 - logger - INFO - Surgical Tech Document was created with ID: 19sXLXRLCKw4KQtCtGJPCwGgaypa9T0e04z4x67NU7v8
+2023-06-19 11:51:49,819 - logger - INFO - Got 5 licenses for Karen Lazo
+2023-06-19 11:51:50,144 - logger - INFO - Got 5 licenses for Larry Brown
+2023-06-19 11:51:50,553 - logger - INFO - Updated local json file for Chuk Mmegwa
+2023-06-19 11:51:50,553 - logger - INFO - Updated local json file for Joanne Swaby
+2023-06-19 11:51:50,931 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:50,931 - logger - INFO - Created profile for Larry Brown
+2023-06-19 11:51:51,030 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:51,031 - logger - INFO - Created profile for Karen Lazo
+2023-06-19 11:51:51,505 - logger - INFO - Surgical Tech Document was created with ID: 1mguam1PkVt7t2fT_HMuRjJsJuvzJJpUCtwOvmNNsVuM
+2023-06-19 11:51:51,817 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:51,817 - logger - INFO - Created profile for Stefany Coria
+2023-06-19 11:51:52,332 - logger - INFO - Got 5 licenses for Eunice Llanos
+2023-06-19 11:51:52,475 - logger - INFO - Got 5 licenses for NATALIE CASTRO
+2023-06-19 11:51:52,482 - logger - INFO - Updated local json file for Karen Lazo
+2023-06-19 11:51:52,482 - logger - INFO - Updated local json file for Larry Brown
+2023-06-19 11:51:52,682 - logger - INFO - Got 4 licenses for MICHAEL MAYORAL
+2023-06-19 11:51:52,847 - logger - INFO - Updated local json file for Stefany Coria
+2023-06-19 11:51:53,201 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:53,201 - logger - INFO - Created profile for Eunice Llanos
+2023-06-19 11:51:53,506 - logger - INFO - Got 5 licenses for Alessandra Salguero
+2023-06-19 11:51:54,196 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:54,258 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:54,811 - logger - INFO - Updated local json file for Eunice Llanos
+2023-06-19 11:51:55,065 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:55,220 - logger - INFO - Got 5 licenses for Krissanna Brown
+2023-06-19 11:51:55,836 - logger - INFO - Got 5 licenses for Jasmine Green
+2023-06-19 11:51:56,437 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:56,437 - logger - INFO - Created profile for Jasmine Green
+2023-06-19 11:51:56,536 - logger - INFO - Updated Spreadsheet
+2023-06-19 11:51:57,350 - logger - INFO - Updated local json file for Jasmine Green
+2023-06-19 11:51:57,442 - logger - INFO - File ID: 13FAkbwr6w4RoxZ2y2kDVSjV626FV6X9n
+2023-06-19 11:51:57,442 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:51:57,442 - logger - INFO - Created profile for NATALIE CASTRO
+2023-06-19 11:51:57,537 - logger - INFO - File ID: 1eQ8mt3R_L6z17mFDZLCfvstBEdjTLZ-4
+2023-06-19 11:51:57,537 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:51:57,537 - logger - INFO - Created profile for MICHAEL MAYORAL
+2023-06-19 11:51:57,564 - logger - INFO - File ID: 1e0hnhOALA-F364Kfnq555GFIKgAegfJt
+2023-06-19 11:51:57,580 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:51:57,634 - logger - INFO - Created profile for Alessandra Salguero
+2023-06-19 11:51:57,889 - logger - INFO - File ID: 1RYiLg7qy_d2ucD7TsHVH6NHU9QIwHOdc
+2023-06-19 11:51:57,889 - logger - INFO - Uploaded Resume Successfully
+2023-06-19 11:51:57,890 - logger - INFO - Created profile for Krissanna Brown
+2023-06-19 11:51:57,990 - logger - INFO - Updated local json file for NATALIE CASTRO
+2023-06-19 11:51:58,047 - logger - INFO - Updated local json file for MICHAEL MAYORAL
+2023-06-19 11:51:58,092 - logger - INFO - Updated local json file for Alessandra Salguero
+2023-06-19 11:51:58,303 - logger - INFO - Updated local json file for Krissanna Brown
+2023-06-19 12:26:19,870 - logger - INFO - Recieved New Email notification
+2023-06-19 12:26:20,659 - logger - INFO - Checking most recent email
+2023-06-19 12:26:20,659 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-19 12:32:00,943 - logger - INFO - Recieved New Email notification
+2023-06-19 12:32:01,345 - logger - INFO - Checking most recent email
+2023-06-19 12:32:01,345 - logger - INFO - Notification was not for candidate submission, returning
+
