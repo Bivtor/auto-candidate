@@ -56,6 +56,9 @@ def createUsers(candidateData: candidateData):
     data = json.load(f)
     # Add candidate with saved data
     create_candidate(candidateData, data)
+
+    # Testing 
+    # print(f"recieved new request with: \n {candidateData}")
     f.close()
 
     # Log
