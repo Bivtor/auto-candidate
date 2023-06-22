@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel
 from datetime import date, datetime
 from fuzzywuzzy import fuzz
+from paths import *
 
 import pathlib
 import time
@@ -33,18 +34,6 @@ import logging
 from botocore.exceptions import ClientError
 from botocore.config import Config
 
-# Globals
-SPREADSHEET_ID = '1c21ffEP_x-zzUKrxHhiprke724n9mEdY805Z2MphfXU'
-NAMES_PATH = '../json_files/name_list.json'
-JOBMAP_PATH = '../json_files/job_map.json'
-DEFAULT_SHEET_DEST = 'Pre-screening'
-SETTINGS_PATH = '../json_files/settings.json'
-RECORDS_PATH = '../json_files/records.json'
-WORKING_PATH = '../json_files/working.json'
-CREDENTIAL_PATH = '../creds/credentials.json'
-TOKEN_PATH = '../creds/token.json'
-ENV_PATH = '../.env'
-LOGGER_PATH = '../logs/server.log'
 
 load_dotenv(dotenv_path=ENV_PATH)
 
@@ -427,8 +416,9 @@ def create_file_general(data, parents, title):
         logger.error(F'An error occurred: {error}')
         file = None
 
+
 def create_file_Recruiter(data, parents, title):
-# create file
+    # create file
     try:
         # create drive api client
         service = build('drive', 'v3', credentials=creds)
@@ -553,6 +543,7 @@ def create_file_Recruiter(data, parents, title):
     except HttpError as error:
         logger.error(F'An error occurred in document creation: {error}')
         file = None
+
 
 def create_file_SurgicalTech(data, parents, title):
     # create file

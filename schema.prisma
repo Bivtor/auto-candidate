@@ -21,18 +21,18 @@ model idmap {
 }
 
 model working_table {
-  id      Int       @id @default(autoincrement())
-  name   String    @db.VarChar(255)
-  parent_id   String    @db.VarChar(255)
-  status  Int
-  history history[]
+  id          Int    @id @default(autoincrement())
+  name        String @db.VarChar(255)
+  parent_id   String @db.VarChar(255)
+  resume_link String @db.VarChar(255)
+  date        String @db.VarChar(255)
+  status      Int
 }
 
 model history {
-  id              Int       @id @default(autoincrement())
-  add_request_id  Int
-  job_destination String    @db.VarChar(255)
-  date            DateTime?
-
-  working_table working_table @relation(fields: [add_request_id], references: [id])
+  id              Int    @id @default(autoincrement())
+  name            String @db.VarChar(255)
+  job_destination String @db.VarChar(255)
+  date            String @db.VarChar(255)
+  status          Int
 }

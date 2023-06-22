@@ -8,5 +8,5 @@ name_list.json
 *.txt
 tst.py
 creds/
-
+source/paths.py
 
