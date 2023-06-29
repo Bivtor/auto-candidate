@@ -45488,3 +45488,4 @@ Sent message to Kristin McMahon with number: 267-916-7976
 2023-06-29 13:46:41,141 - logger - INFO - Notification was not for candidate submission, returning
 
 >>>>>>> Stashed changes
+2023-06-29 14:00:03,491 - logger - INFO - Started Server
