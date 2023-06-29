@@ -10,3 +10,9 @@ tst.py
 creds/
 source/paths.py
 
+
+json_files/settings.json
+json_files/working.json
+json_files/records.json
+logs/*
+logs/server.log
