@@ -835,7 +835,7 @@ def create_file_Therapist(data, parents, title):
         logger.error(F'An error occurred: {error}')
         file = None
 
-def create_file_PodcastProducers(data, parents, title):
+def create_file_PodcastProducers(data :candidateData, parents, title):
     # create file
     try:
         # create drive api client
@@ -854,7 +854,7 @@ def create_file_PodcastProducers(data, parents, title):
 
         ###########################################
         header = "Podcast Producer Qs\n\n\n"
-        name = "Name: " + candidateData.name + "\n"
+        inputName = "Name: " + data.name + "\n"
         inputDate = "Date Applied: " + data.date + "\n"
         inputDateInterviewed = "Date Interviewed: \n"
         restOfQuestions = ["How far are you willing to commute?:\n",
