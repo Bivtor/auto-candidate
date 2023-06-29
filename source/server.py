@@ -1,6 +1,4 @@
-from partial_add_seq import *
 from auto_candidate import *
-from paths import *
 from email_handler import process_message, updateCandidateExistence, decideTokenRefresh
 
 from pydantic import BaseModel
@@ -56,12 +54,8 @@ def openstring(data: Data):
 def createUsers(candidateData: candidateData):
     f = open(SETTINGS_PATH)
     data = json.load(f)
-
     # Add candidate with saved data
     create_candidate(candidateData, data)
-
-    # Testing
-    # print(f"recieved new request with: \n {candidateData}")
     f.close()
 
     # Log
@@ -175,27 +169,3 @@ def sendtexts():
     sendmailtexts(data)
     f.close()
     return {"Success"}
-
-
-@app.post('/submit_candidate')
-async def submit_candidate(candidateData: candidateData):
-
-    # Gather destination info
-    f = open(SETTINGS_PATH)
-    data = json.load(f)
-
-    # Perform first half candidate add
-    await beginHalfAdd(candidateData, data)
-    f.close()
-
-    # Log
-    logger.info(f'Completed 1/2 profile for {candidateData.name}')
-
-    # Update Candidate Existence
-    updateCandidateExistence(
-        SPREADSHEET_ID, sheet_name=data['category'])
-
-    # Log
-    logger.info(f'Updated local json file for {candidateData.name}')
-
-    return {"message": "Success"}
