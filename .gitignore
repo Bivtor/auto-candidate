@@ -16,3 +16,4 @@ json_files/working.json
 json_files/records.json
 logs/*
 logs/server.log
+.\json_files\settings.json
