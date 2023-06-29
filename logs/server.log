@@ -45490,3 +45490,111 @@ Sent message to Kristin McMahon with number: 267-916-7976
 >>>>>>> Stashed changes
 2023-06-29 14:00:03,491 - logger - INFO - Started Server
 2023-06-29 14:03:37,533 - logger - INFO - Started Server
+2023-06-29 14:08:30,283 - logger - INFO - Started Server
+2023-06-29 14:09:12,516 - logger - INFO - Recieved New Email notification
+2023-06-29 14:09:24,803 - logger - INFO - Recieved New Email notification
+2023-06-29 14:09:27,321 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:03,130 - logger - INFO - Started Server
+2023-06-29 14:10:03,466 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:04,107 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:05,022 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:05,909 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:07,504 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:09,112 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:11,057 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:12,762 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:13,411 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:15,762 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:19,705 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:24,310 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:30,672 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:36,248 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:44,738 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:53,103 - logger - INFO - Recieved New Email notification
+2023-06-29 14:10:57,818 - logger - INFO - Recieved New Email notification
+2023-06-29 14:11:03,815 - logger - INFO - Recieved New Email notification
+2023-06-29 14:11:11,189 - logger - INFO - Recieved New Email notification
+2023-06-29 14:11:34,032 - logger - INFO - Recieved New Email notification
+2023-06-29 14:11:35,991 - logger - INFO - Recieved New Email notification
+2023-06-29 14:11:53,855 - logger - INFO - Recieved New Email notification
+2023-06-29 14:11:58,557 - logger - INFO - Recieved New Email notification
+2023-06-29 14:12:11,183 - logger - INFO - Recieved New Email notification
+2023-06-29 14:12:38,527 - logger - INFO - Recieved New Email notification
+2023-06-29 14:12:44,361 - logger - INFO - Recieved New Email notification
+2023-06-29 14:12:51,874 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:23,399 - logger - INFO - Started Server
+2023-06-29 14:13:26,656 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:27,078 - logger - INFO - Checking most recent email
+2023-06-29 14:13:27,079 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:27,327 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:27,327 - logger - INFO - Decided to refresh Gmail token
+2023-06-29 14:13:27,400 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:27,400 - logger - INFO - Decided to refresh Gmail token
+2023-06-29 14:13:27,573 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4927551', 'expiration': '1688678008802'}
+2023-06-29 14:13:27,685 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4927553', 'expiration': '1688678008916'}
+2023-06-29 14:13:27,914 - logger - INFO - Checking most recent email
+2023-06-29 14:13:27,914 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:28,130 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:28,130 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:28,207 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:28,247 - logger - INFO - Checking most recent email
+2023-06-29 14:13:28,247 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:28,477 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:28,532 - logger - INFO - Checking most recent email
+2023-06-29 14:13:28,532 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:28,542 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:28,542 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:28,543 - logger - INFO - Recieved New Email notification
+2023-06-29 14:13:28,627 - logger - INFO - Checking most recent email
+2023-06-29 14:13:28,627 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:28,725 - logger - INFO - Checking most recent email
+2023-06-29 14:13:28,725 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:28,811 - logger - INFO - Checking most recent email
+2023-06-29 14:13:28,811 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:28,857 - logger - INFO - Checking most recent email
+2023-06-29 14:13:28,858 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:28,956 - logger - INFO - Checking most recent email
+2023-06-29 14:13:28,956 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:28,982 - logger - INFO - Checking most recent email
+2023-06-29 14:13:28,982 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:13:39,795 - logger - INFO - --- working->True ---
+2023-06-29 14:13:41,312 - logger - INFO - Successfully Set Column Variables
+2023-06-29 14:13:41,312 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=3a132cbe4acb&pos=3&l=9cSc&listQuery=aWQlM0RiZTc1NjhjOTY0YjQlMjZzdGF0dXNOYW1lJTNEQWN0aXZl
+2023-06-29 14:13:41,407 - logger - INFO - --- working->False ---
+2023-06-29 14:13:48,873 - logger - INFO - Altered Phone/Email for: ANNE GAIL APOSTOL in directory: N:\Downloads2\ResumeANNEGAILAPOSTOL (1).pdf
+2023-06-29 14:13:48,873 - logger - INFO - Parents are: ['1cMvx14I_z3hHqLlGZTkHW7cK7IKR-9Ab'] for role: Podcast Producers
+2023-06-29 14:13:48,873 - logger - INFO - Creating ANNE GAIL APOSTOL's Folder
+2023-06-29 14:13:49,780 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Q5TpxukL5vtXbDNSUZhv-0CM3ykTsqv1
+2023-06-29 14:13:51,645 - logger - INFO - Podcast Producers Document was created with ID: 1qWKcDTl2qtp1NTI5AlsGc-osTnm-X5RCxJItZ_V81Ys
+2023-06-29 14:16:00,834 - logger - INFO - Started Server
+2023-06-29 14:16:01,014 - logger - INFO - Recieved New Email notification
+2023-06-29 14:16:01,014 - logger - INFO - Decided to refresh Gmail token
+2023-06-29 14:16:01,336 - logger - INFO - Recieved New Email notification
+2023-06-29 14:16:01,336 - logger - INFO - Decided to refresh Gmail token
+2023-06-29 14:16:01,491 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4927632', 'expiration': '1688678162722'}
+2023-06-29 14:16:01,647 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4927635', 'expiration': '1688678162878'}
+2023-06-29 14:16:02,026 - logger - INFO - Checking most recent email
+2023-06-29 14:16:02,026 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:16:02,168 - logger - INFO - Checking most recent email
+2023-06-29 14:16:02,168 - logger - INFO - Notification was not for candidate submission, returning
+
+2023-06-29 14:16:13,538 - logger - INFO - --- working->True ---
+2023-06-29 14:16:14,918 - logger - INFO - Successfully Set Column Variables
+2023-06-29 14:16:14,918 - logger - INFO - Opening Link: https://employers.indeed.com/candidates/view?id=3a132cbe4acb&pos=3&l=9cSc&listQuery=aWQlM0RiZTc1NjhjOTY0YjQlMjZzdGF0dXNOYW1lJTNEQWN0aXZl
+2023-06-29 14:16:15,004 - logger - INFO - --- working->False ---
+2023-06-29 14:16:22,480 - logger - INFO - Altered Phone/Email for: ANNE GAIL APOSTOL in directory: N:\Downloads2\ResumeANNEGAILAPOSTOL (2).pdf
+2023-06-29 14:16:22,481 - logger - INFO - Parents are: ['1cMvx14I_z3hHqLlGZTkHW7cK7IKR-9Ab'] for role: Podcast Producers
+2023-06-29 14:16:22,481 - logger - INFO - Creating ANNE GAIL APOSTOL's Folder
+2023-06-29 14:16:23,282 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1k7d5iTLfT8Ifg43gMKubSmgje-QL8j9z
+2023-06-29 14:16:25,219 - logger - INFO - Podcast Producers Document was created with ID: 1fEYiUoF5Yr4VdxX6YAFyGm3-_KDf8lgoNH7FjeMFVBA
