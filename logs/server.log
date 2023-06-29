@@ -185,9 +185,9 @@
 2023-04-09 15:40:22,808 - logger - INFO - Uploaded Resume Successfully
 2023-04-09 15:40:22,808 - logger - INFO - Created profile for Miguel Rios
 2023-04-09 15:40:23,284 - logger - INFO - Updated local json file for Miguel Rios
-2023-04-09 15:41:14,248 - logger - INFO - Altered Phone/Email for: Junxiang “Vincent” Wang in directory: N:\Downloads2\ResumeJunxiang“Vincent”Wang.pdf
+2023-04-09 15:41:14,248 - logger - INFO - Altered Phone/Email for: Junxiang ï¿½Vincentï¿½ Wang in directory: N:\Downloads2\ResumeJunxiangï¿½Vincentï¿½Wang.pdf
 2023-04-09 15:41:14,248 - logger - INFO - Parents are: ['1vUvTycI9qATou3fJ7rvq5eyJk7hFXl11'] for role: Event Planner
-2023-04-09 15:41:14,248 - logger - INFO - Creating Junxiang “Vincent” Wang's Folder
+2023-04-09 15:41:14,248 - logger - INFO - Creating Junxiang ï¿½Vincentï¿½ Wang's Folder
 2023-04-09 15:41:15,007 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1f6VP5ki50TiYFKLVoWz-7h_C4JwG5rG0
 2023-04-09 15:41:16,538 - logger - INFO - Document was created with ID: "185xOGPZhwq46s87HTeQhNYJ0r7Kkl_QQh0B0Hu3il60".
 2023-04-09 15:42:14,131 - logger - INFO - Altered Phone/Email for: Angelina Petel in directory: N:\Downloads2\ResumeAngelinaPetel.pdf
@@ -1394,7 +1394,8 @@
 2023-04-12 16:52:08,706 - logger - INFO - Notification was for candidate submission, gathering data
 2023-04-12 16:52:08,706 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/5c0d5bb1/235a07c3?
 2023-04-12 16:52:08,706 - logger - INFO - Got Name : Donna Powell
-2023-04-12 16:52:08,706 - logger - INFO - Got Job Title : mental
+2023-04-12 16:52:08,706 - logger - INFO - Got Job Title : mental
+
  health therapist
 2023-04-12 16:52:08,706 - logger - INFO - Attempting to retrieve sheet destination
 2023-04-12 16:52:08,706 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
@@ -2491,7 +2492,7 @@ Chose not to message Sarah Prade
 2023-04-17 15:34:12,877 - logger - INFO - 
 Chose not to message Joanne Marie Gayton
 2023-04-17 15:34:16,083 - logger - INFO - 
-Chose not to message Yvonne Marí Muñoz
+Chose not to message Yvonne Marï¿½ Muï¿½oz
 2023-04-17 15:34:19,303 - logger - INFO - 
 Chose not to message NADIA LUTFI
 2023-04-17 15:34:22,519 - logger - INFO - 
@@ -2784,7 +2785,7 @@ Chose not to message Joanne Marie Gayton
 Sent message to Renandez Grim with number: 213.864.0178
 2023-04-17 15:39:15,944 - logger - INFO - Successfully sent email to: Renandez Grim -> 
 2023-04-17 15:39:17,527 - logger - INFO - 
-Chose not to message Yvonne Marí Muñoz
+Chose not to message Yvonne Marï¿½ Muï¿½oz
 2023-04-17 15:39:19,402 - logger - INFO - 
 Chose not to message Michelle Rubio
 2023-04-17 15:39:20,813 - logger - INFO - 
@@ -2974,7 +2975,7 @@ Chose not to message Glenn Ferdinand
 2023-04-17 15:41:49,114 - logger - INFO - 
 Chose not to message Daniel H.Aguilera
 2023-04-17 15:41:49,284 - logger - INFO - 
-Sent message to Alyssa M. Lemus with number: 562 – 743 – 4418
+Sent message to Alyssa M. Lemus with number: 562 ï¿½ 743 ï¿½ 4418
 2023-04-17 15:41:49,580 - logger - INFO - Successfully sent email to: Alyssa M. Lemus -> 
 2023-04-17 15:41:52,399 - logger - INFO - 
 Chose not to message Lizzette Garcia
@@ -3266,8 +3267,8 @@ Sent message to CORINA SALMON with number: 909-569-9971
 Sent message to Ashley N Long-Labaar with number: (562) 644-0759
 2023-04-17 15:45:40,031 - logger - INFO - Successfully sent email to: Ashley N Long-Labaar -> 
 2023-04-17 15:45:40,307 - logger - INFO - 
-Sent message to Taty’jana Draughn  with number: (718) 915-3908
-2023-04-17 15:45:40,593 - logger - INFO - Successfully sent email to: Taty’jana Draughn  -> 
+Sent message to Tatyï¿½jana Draughn  with number: (718) 915-3908
+2023-04-17 15:45:40,593 - logger - INFO - Successfully sent email to: Tatyï¿½jana Draughn  -> 
 2023-04-17 15:45:43,958 - logger - INFO - 
 Chose not to message Susan Hyde
 2023-04-17 15:45:44,077 - logger - INFO - 
@@ -3325,7 +3326,7 @@ Chose not to message Derek G. Larson
 2023-04-17 15:46:26,201 - logger - INFO - 
 Chose not to message Kristin Erickson
 2023-04-17 15:46:26,529 - logger - INFO - 
-Chose not to message Catalina Guzmán
+Chose not to message Catalina Guzmï¿½n
 2023-04-17 15:46:29,403 - logger - INFO - 
 Chose not to message KENNIA TORRES
 2023-04-17 15:46:30,332 - logger - INFO - 
@@ -3358,7 +3359,7 @@ Chose not to message Christina Chaturanyakoon
 2023-04-17 15:46:51,413 - logger - INFO - 
 Chose not to message Diana Guerrero
 2023-04-17 15:46:53,724 - logger - INFO - 
-Sent message to Alyssa M. Lemus with number: 562 – 743 – 4418
+Sent message to Alyssa M. Lemus with number: 562 ï¿½ 743 ï¿½ 4418
 2023-04-17 15:46:54,048 - logger - INFO - Successfully sent email to: Alyssa M. Lemus -> 
 2023-04-17 15:46:54,618 - logger - INFO - 
 Chose not to message CHRISTINA WADE
@@ -3435,7 +3436,7 @@ Sent message to  Mary Lee Eames with number: (562) 552-4202
 2023-04-17 15:47:50,512 - logger - INFO - 
 Chose not to message Lea Mendoza
 2023-04-17 15:47:53,299 - logger - INFO - 
-Chose not to message Ronojoy “Jojo” Sarkar
+Chose not to message Ronojoy ï¿½Jojoï¿½ Sarkar
 2023-04-17 15:47:53,710 - logger - INFO - 
 Chose not to message Nazneen Hamade
 2023-04-17 15:47:56,500 - logger - INFO - 
@@ -3468,7 +3469,7 @@ Sent message to Adriana vazquez with number: (909) 730-9346
 Sent message to Megan Fenton with number: (408)550-3882
 2023-04-17 15:48:17,351 - logger - INFO - Successfully sent email to: Megan Fenton -> 
 2023-04-17 15:48:17,830 - logger - INFO - 
-Sent message to Venus R. Miles with number: 310) 706­1269
+Sent message to Venus R. Miles with number: 310) 706ï¿½1269
 2023-04-17 15:48:18,123 - logger - INFO - Successfully sent email to: Venus R. Miles -> 
 2023-04-17 15:48:21,433 - logger - INFO - 
 Sent message to Rachel Joy Loverro with number: (510) 648-4015
@@ -3588,7 +3589,7 @@ Chose not to message Danielle Milinovich
 2023-04-17 15:49:52,256 - logger - INFO - 
 Sent message to Christopher E. Ruper with number: (949) 637-1691
 2023-04-17 15:49:52,334 - logger - INFO - 
-Chose not to message Ny’Shae Perkins
+Chose not to message Nyï¿½Shae Perkins
 2023-04-17 15:49:52,548 - logger - INFO - Successfully sent email to: Christopher E. Ruper -> 
 2023-04-17 15:49:55,546 - logger - INFO - 
 Chose not to message Miguel Alvarez
@@ -3651,10 +3652,10 @@ Sent message to CORINA SALMON with number: 909-569-9971
 2023-04-17 15:50:39,894 - logger - INFO - 
 Chose not to message Connie Sue Thomas
 2023-04-17 15:50:43,002 - logger - INFO - 
-Sent message to Taty’jana Draughn  with number: (718) 915-3908
+Sent message to Tatyï¿½jana Draughn  with number: (718) 915-3908
 2023-04-17 15:50:43,123 - logger - INFO - 
 Chose not to message Alison L. Johnson
-2023-04-17 15:50:43,323 - logger - INFO - Successfully sent email to: Taty’jana Draughn  -> 
+2023-04-17 15:50:43,323 - logger - INFO - Successfully sent email to: Tatyï¿½jana Draughn  -> 
 2023-04-17 15:50:46,333 - logger - INFO - 
 Chose not to message Genevieve Sainz
 2023-04-17 15:50:46,771 - logger - INFO - 
@@ -4441,9 +4442,9 @@ Sent message to Kimberly Berglund with number: (831) 242-0785
 2023-04-18 13:28:33,745 - logger - INFO - Sent mail 01110187960e0673-6d14dd41-8954-4efa-ab0c-fb3326a7626c-000000 from gabe@solutionbasedtherapeutics.com to ['Kimberly.BerglundAPCC@gmail.com'].
 2023-04-18 13:28:33,745 - logger - INFO - Successfully sent email to: Kimberly Berglund -> 
 2023-04-18 13:28:37,659 - logger - INFO - 
-Sent message to Taty’jana Draugh with number: (718) 915-3908
+Sent message to Tatyï¿½jana Draugh with number: (718) 915-3908
 2023-04-18 13:28:37,797 - logger - INFO - Sent mail 01110187960e1645-4adae861-94e0-4918-b351-06e02a2dea23-000000 from gabe@solutionbasedtherapeutics.com to ['tdraughn23@gmail.com'].
-2023-04-18 13:28:37,797 - logger - INFO - Successfully sent email to: Taty’jana Draugh -> 
+2023-04-18 13:28:37,797 - logger - INFO - Successfully sent email to: Tatyï¿½jana Draugh -> 
 2023-04-18 13:28:41,890 - logger - INFO - 
 Sent message to LAURAL L. BONHA with number: (805) 345-0497
 2023-04-18 13:28:42,024 - logger - INFO - Sent mail 01110187960e26b8-b09ca08c-3c96-42d3-a6bc-6906ba9ab9b6-000000 from gabe@solutionbasedtherapeutics.com to ['LBONHAM@usc.edu'].
@@ -4745,9 +4746,9 @@ Sent message to James  C McHie  III with number: (818) 370-6595
 2023-04-18 13:33:36,043 - logger - INFO - Sent mail 011101879612a324-d80d1966-48a9-41b9-8933-9796f175e766-000000 from gabe@solutionbasedtherapeutics.com to ['jmchie@po.pacificoaks.edu'].
 2023-04-18 13:33:36,043 - logger - INFO - Successfully sent email to: James  C McHie  III -> 
 2023-04-18 13:33:37,654 - logger - INFO - 
-Sent message to Taty’jana Draugh with number: (718) 915-3908
+Sent message to Tatyï¿½jana Draugh with number: (718) 915-3908
 2023-04-18 13:33:37,767 - logger - INFO - Sent mail 011101879612aa0c-a0fcd508-162c-4c0c-b4d7-49528bc3ed1d-000000 from gabe@solutionbasedtherapeutics.com to ['tdraughn23@gmail.com'].
-2023-04-18 13:33:37,767 - logger - INFO - Successfully sent email to: Taty’jana Draugh -> 
+2023-04-18 13:33:37,767 - logger - INFO - Successfully sent email to: Tatyï¿½jana Draugh -> 
 2023-04-18 13:33:39,452 - logger - INFO - 
 Chose not to message Paulina Izzo
 2023-04-18 13:33:41,808 - logger - INFO - 
@@ -5521,11 +5522,11 @@ Chose not to message Sophia Rising
 2023-04-18 13:40:51,531 - logger - INFO - 
 Chose not to message Monique Tramposh
 2023-04-18 13:40:54,693 - logger - INFO - 
-Sent message to Rebecca Nuñez with number: (626) 236-6566
+Sent message to Rebecca Nuï¿½ez with number: (626) 236-6566
 2023-04-18 13:40:54,707 - logger - INFO - 
 Chose not to message Michael Saks
 2023-04-18 13:40:54,793 - logger - INFO - Sent mail 0111018796195542-5389c27e-27da-42e4-8aac-1185716888bb-000000 from gabe@solutionbasedtherapeutics.com to ['rmlnunez23@gmail.com'].
-2023-04-18 13:40:54,794 - logger - INFO - Successfully sent email to: Rebecca Nuñez -> 
+2023-04-18 13:40:54,794 - logger - INFO - Successfully sent email to: Rebecca Nuï¿½ez -> 
 2023-04-18 13:40:58,317 - logger - INFO - 
 Sent message to Rosemary Navrkal with number: (951) 796-3118
 2023-04-18 13:40:58,426 - logger - INFO - Sent mail 0111018796196365-7d1abf8f-a555-47ef-b04e-bc91acbe5238-000000 from gabe@solutionbasedtherapeutics.com to ['r.navrkal@gmail.com'].
@@ -6067,9 +6068,9 @@ Chose not to message Sophia Rising
 2023-04-18 13:45:51,571 - logger - INFO - 
 Chose not to message Kevin Keeran
 2023-04-18 13:45:52,007 - logger - INFO - 
-Sent message to Rebecca Nuñez with number: (626) 236-6566
+Sent message to Rebecca Nuï¿½ez with number: (626) 236-6566
 2023-04-18 13:45:52,116 - logger - INFO - Sent mail 01110187961ddea2-7ba60f1c-dac5-4e53-8a9a-48337c9064b1-000000 from gabe@solutionbasedtherapeutics.com to ['rmlnunez23@gmail.com'].
-2023-04-18 13:45:52,116 - logger - INFO - Successfully sent email to: Rebecca Nuñez -> 
+2023-04-18 13:45:52,116 - logger - INFO - Successfully sent email to: Rebecca Nuï¿½ez -> 
 2023-04-18 13:45:55,239 - logger - INFO - 
 Sent message to Deborah Kindle with number: (323) 386-1606
 2023-04-18 13:45:55,331 - logger - INFO - Sent mail 01110187961deb3a-6ede4e62-5fee-42b8-b558-2b280380f607-000000 from gabe@solutionbasedtherapeutics.com to ['deborahkindle007@gmail.com'].
@@ -7439,17 +7440,17 @@ Finished Texting and Emailing Candidaes
 2023-04-19 13:37:47,799 - logger - INFO - Uploaded Resume Successfully
 2023-04-19 13:37:47,799 - logger - INFO - Created profile for Susan Rhea
 2023-04-19 13:37:48,266 - logger - INFO - Updated local json file for Susan Rhea
-2023-04-19 13:38:02,778 - logger - INFO - Altered Phone/Email for: Gamze Çaltekin in directory: N:\Downloads2\ResumeGamzeÇaltekin.pdf
+2023-04-19 13:38:02,778 - logger - INFO - Altered Phone/Email for: Gamze ï¿½altekin in directory: N:\Downloads2\ResumeGamzeï¿½altekin.pdf
 2023-04-19 13:38:02,778 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
-2023-04-19 13:38:02,778 - logger - INFO - Creating Gamze Çaltekin's Folder
+2023-04-19 13:38:02,778 - logger - INFO - Creating Gamze ï¿½altekin's Folder
 2023-04-19 13:38:03,690 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1MzoDNjAaWVQyQti70hsytGU9anvfbCG2
 2023-04-19 13:38:05,597 - logger - INFO - Document was created with ID: 1osVG8sqwrrb2ETEgeXskWpXB4nf2iRUxD1fHmIGrCls
-2023-04-19 13:38:06,662 - logger - INFO - Got 0 licenses for Gamze Çaltekin
+2023-04-19 13:38:06,662 - logger - INFO - Got 0 licenses for Gamze ï¿½altekin
 2023-04-19 13:38:07,183 - logger - INFO - Updated Spreadsheet
 2023-04-19 13:38:08,487 - logger - INFO - File ID: 1cUiEwR0dHwtmFKxPW0F46Y8GrpwqrfMI
 2023-04-19 13:38:08,487 - logger - INFO - Uploaded Resume Successfully
-2023-04-19 13:38:08,487 - logger - INFO - Created profile for Gamze Çaltekin
-2023-04-19 13:38:08,932 - logger - INFO - Updated local json file for Gamze Çaltekin
+2023-04-19 13:38:08,487 - logger - INFO - Created profile for Gamze ï¿½altekin
+2023-04-19 13:38:08,932 - logger - INFO - Updated local json file for Gamze ï¿½altekin
 2023-04-19 13:38:19,789 - logger - INFO - Altered Phone/Email for: Carissa Pellerin in directory: N:\Downloads2\ResumeCarissaPellerin.pdf
 2023-04-19 13:38:19,790 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
 2023-04-19 13:38:19,790 - logger - INFO - Creating Carissa Pellerin's Folder
@@ -7615,17 +7616,17 @@ Finished Texting and Emailing Candidaes
 2023-04-19 13:55:12,941 - logger - INFO - Uploaded Resume Successfully
 2023-04-19 13:55:12,941 - logger - INFO - Created profile for Clinae Watson
 2023-04-19 13:55:13,391 - logger - INFO - Updated local json file for Clinae Watson
-2023-04-19 13:55:26,750 - logger - INFO - Altered Phone/Email for: Omar Rodríguez in directory: N:\Downloads2\ResumeOmarRodríguez.docx
+2023-04-19 13:55:26,750 - logger - INFO - Altered Phone/Email for: Omar Rodrï¿½guez in directory: N:\Downloads2\ResumeOmarRodrï¿½guez.docx
 2023-04-19 13:55:26,750 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
-2023-04-19 13:55:26,750 - logger - INFO - Creating Omar Rodríguez's Folder
+2023-04-19 13:55:26,750 - logger - INFO - Creating Omar Rodrï¿½guez's Folder
 2023-04-19 13:55:27,652 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1emQ_QTyeTDHd13-MrWgPY333G_fyBmH2
 2023-04-19 13:55:29,529 - logger - INFO - Document was created with ID: 1TN47sHCPcJubA73in16uCMGzHecw6FVi4nY2H13FsQ8
-2023-04-19 13:55:30,805 - logger - INFO - Got 0 licenses for Omar Rodríguez
+2023-04-19 13:55:30,805 - logger - INFO - Got 0 licenses for Omar Rodrï¿½guez
 2023-04-19 13:55:31,452 - logger - INFO - Updated Spreadsheet
 2023-04-19 13:55:32,709 - logger - INFO - File ID: 1zD6GcVCdW1LdPoWwGGV3jWLtSq39BPn7
 2023-04-19 13:55:32,709 - logger - INFO - Uploaded Resume Successfully
-2023-04-19 13:55:32,709 - logger - INFO - Created profile for Omar Rodríguez
-2023-04-19 13:55:33,128 - logger - INFO - Updated local json file for Omar Rodríguez
+2023-04-19 13:55:32,709 - logger - INFO - Created profile for Omar Rodrï¿½guez
+2023-04-19 13:55:33,128 - logger - INFO - Updated local json file for Omar Rodrï¿½guez
 2023-04-19 13:55:47,886 - logger - INFO - Altered Phone/Email for: Michelle Sandler in directory: N:\Downloads2\ResumeMichelleSandler.pdf
 2023-04-19 13:55:47,886 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
 2023-04-19 13:55:47,886 - logger - INFO - Creating Michelle Sandler's Folder
@@ -8817,7 +8818,8 @@ Finished Texting and Emailing Candidaes
 2023-04-19 20:01:05,481 - logger - INFO - Notification was for candidate submission, gathering data
 2023-04-19 20:01:05,481 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/c2920b07?
 2023-04-19 20:01:05,481 - logger - INFO - Got Name : Juliette Avigdor Portnoy
-2023-04-19 20:01:05,481 - logger - INFO - Got Job Title : primary therapist
+2023-04-19 20:01:05,481 - logger - INFO - Got Job Title : primary therapist
+
  amft/acsw
 2023-04-19 20:01:05,481 - logger - INFO - Attempting to retrieve sheet destination
 2023-04-19 20:01:05,482 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
@@ -8896,7 +8898,8 @@ Finished Texting and Emailing Candidaes
 2023-04-19 20:03:00,641 - logger - INFO - Notification was for candidate submission, gathering data
 2023-04-19 20:03:00,641 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/c2920b07?
 2023-04-19 20:03:00,641 - logger - INFO - Got Name : Juliette Avigdor Portnoy
-2023-04-19 20:03:00,641 - logger - INFO - Got Job Title : primary therapist
+2023-04-19 20:03:00,641 - logger - INFO - Got Job Title : primary therapist
+
  amft/acsw
 2023-04-19 20:03:00,641 - logger - INFO - Attempting to retrieve sheet destination
 2023-04-19 20:03:00,642 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
@@ -9340,17 +9343,17 @@ Finished Texting and Emailing Candidaes
 2023-04-19 20:39:21,595 - logger - INFO - Uploaded Resume Successfully
 2023-04-19 20:39:21,596 - logger - INFO - Created profile for Jenny Mazurovsky
 2023-04-19 20:39:22,082 - logger - INFO - Updated local json file for Jenny Mazurovsky
-2023-04-19 20:39:36,477 - logger - INFO - Altered Phone/Email for: Sussi Pèrez in directory: N:\Downloads2\ResumeSussiPèrez.pdf
+2023-04-19 20:39:36,477 - logger - INFO - Altered Phone/Email for: Sussi Pï¿½rez in directory: N:\Downloads2\ResumeSussiPï¿½rez.pdf
 2023-04-19 20:39:36,477 - logger - INFO - Parents are: ['18LB8-FyN8Y5ultp7uzCjmsUZbZEVFKUb'] for role: Pre-screening
-2023-04-19 20:39:36,477 - logger - INFO - Creating Sussi Pèrez's Folder
+2023-04-19 20:39:36,477 - logger - INFO - Creating Sussi Pï¿½rez's Folder
 2023-04-19 20:39:37,351 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1_vQilFxqdmNLxA1lA_PnHPg9MEQx0DV6
 2023-04-19 20:39:39,215 - logger - INFO - Document was created with ID: "1mvNScBj7BNxtWMu9qN8hwKTOcImjvOYZ0wT2U09-NJc".
-2023-04-19 20:39:40,238 - logger - INFO - Got 0 licenses for Sussi Pèrez
+2023-04-19 20:39:40,238 - logger - INFO - Got 0 licenses for Sussi Pï¿½rez
 2023-04-19 20:39:40,751 - logger - INFO - Updated Spreadsheet
 2023-04-19 20:39:42,074 - logger - INFO - File ID: 1-yUKM8PpjVvtG-SgpkS4dL043Yif-wcZ
 2023-04-19 20:39:42,074 - logger - INFO - Uploaded Resume Successfully
-2023-04-19 20:39:42,074 - logger - INFO - Created profile for Sussi Pèrez
-2023-04-19 20:39:42,547 - logger - INFO - Updated local json file for Sussi Pèrez
+2023-04-19 20:39:42,074 - logger - INFO - Created profile for Sussi Pï¿½rez
+2023-04-19 20:39:42,547 - logger - INFO - Updated local json file for Sussi Pï¿½rez
 2023-04-19 20:39:55,474 - logger - INFO - Altered Phone/Email for: Clint Knoblauch in directory: N:\Downloads2\ResumeClintKnoblauch.pdf
 2023-04-19 20:39:55,474 - logger - INFO - Parents are: ['18LB8-FyN8Y5ultp7uzCjmsUZbZEVFKUb'] for role: Pre-screening
 2023-04-19 20:39:55,474 - logger - INFO - Creating Clint Knoblauch's Folder
@@ -11143,9 +11146,9 @@ Sent message to Susan Rhea with number: 818 219 9745
 2023-04-20 18:46:16,724 - logger - INFO - Sent mail 01110187a17da01c-44eff297-7c0c-4501-8f1e-25c226209eae-000000 from gabe@solutionbasedtherapeutics.com to ['susanrhea5_dp3@indeedemail.com'].
 2023-04-20 18:46:16,724 - logger - INFO - Successfully sent email to: Susan Rhea -> 
 2023-04-20 18:46:20,603 - logger - INFO - 
-Sent message to Gamze Çaltekin with number: 805 270 9553
+Sent message to Gamze ï¿½altekin with number: 805 270 9553
 2023-04-20 18:46:20,690 - logger - INFO - Sent mail 01110187a17dafab-f71f380b-c513-406a-b04f-2ab1281fc1ca-000000 from gabe@solutionbasedtherapeutics.com to ['gamzecaltekin2_54e@indeedemail.com'].
-2023-04-20 18:46:20,690 - logger - INFO - Successfully sent email to: Gamze Çaltekin -> 
+2023-04-20 18:46:20,690 - logger - INFO - Successfully sent email to: Gamze ï¿½altekin -> 
 2023-04-20 18:46:24,614 - logger - INFO - 
 Sent message to Carissa Pellerin with number: 409 790 1893
 2023-04-20 18:46:24,714 - logger - INFO - Sent mail 01110187a17dbf5d-707bb132-4790-4e05-b270-eb2a69aa69bf-000000 from gabe@solutionbasedtherapeutics.com to ['carissapellerin4_4hb@indeedemail.com'].
@@ -11199,9 +11202,9 @@ Sent message to Clinae Watson with number: 323 774 3544
 2023-04-20 18:47:14,288 - logger - INFO - Sent mail 01110187a17e80ca-c96fd88d-9fed-4643-a57d-d9588e82866a-000000 from gabe@solutionbasedtherapeutics.com to ['clinaewatson3_3yb@indeedemail.com'].
 2023-04-20 18:47:14,288 - logger - INFO - Successfully sent email to: Clinae Watson -> 
 2023-04-20 18:47:18,151 - logger - INFO - 
-Sent message to Omar Rodríguez with number: 805-775-7014
+Sent message to Omar Rodrï¿½guez with number: 805-775-7014
 2023-04-20 18:47:18,292 - logger - INFO - Sent mail 01110187a17e9077-d9b2bb21-53d4-4fc2-b4b8-7bd45f5cbf59-000000 from gabe@solutionbasedtherapeutics.com to ['omar.rodriguez@my.pacifica.edu'].
-2023-04-20 18:47:18,292 - logger - INFO - Successfully sent email to: Omar Rodríguez -> 
+2023-04-20 18:47:18,292 - logger - INFO - Successfully sent email to: Omar Rodrï¿½guez -> 
 2023-04-20 18:47:22,153 - logger - INFO - 
 Sent message to Michelle Sandler with number: (818) 370-0289
 2023-04-20 18:47:22,284 - logger - INFO - Sent mail 01110187a17ea019-894d754e-ed0a-45d5-8967-865fe242e876-000000 from gabe@solutionbasedtherapeutics.com to ['michsan0320@gmail.com'].
@@ -11489,7 +11492,8 @@ Finished Texting and Emailing Candidaes
 2023-04-22 09:48:52,655 - logger - INFO - Checking most recent email
 2023-04-22 09:48:52,655 - logger - INFO - Notification was for candidate submission, gathering data
 2023-04-22 09:48:52,655 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/8ac00159?
-2023-04-22 09:48:52,655 - logger - INFO - Got Name : CHERRY MARIE N. DELA
+2023-04-22 09:48:52,655 - logger - INFO - Got Name : CHERRY MARIE N. DELA
+
  PENA
 2023-04-22 09:48:52,655 - logger - INFO - Got Job Title : primary therapist amft/acsw
 2023-04-22 09:48:52,655 - logger - INFO - Attempting to retrieve sheet destination
@@ -11535,7 +11539,8 @@ Finished Texting and Emailing Candidaes
 2023-04-22 13:02:06,329 - logger - INFO - Notification was for candidate submission, gathering data
 2023-04-22 13:02:06,330 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/7c52f899?
 2023-04-22 13:02:06,330 - logger - INFO - Got Name : Ellie Doherty, M.A., AMFT
-2023-04-22 13:02:06,330 - logger - INFO - Got Job Title : primary therapist
+2023-04-22 13:02:06,330 - logger - INFO - Got Job Title : primary therapist
+
  amft/acsw
 2023-04-22 13:02:06,330 - logger - INFO - Attempting to retrieve sheet destination
 2023-04-22 13:02:06,330 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
@@ -11568,7 +11573,8 @@ Finished Texting and Emailing Candidaes
 2023-04-22 19:39:53,195 - logger - INFO - Notification was for candidate submission, gathering data
 2023-04-22 19:39:53,195 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/7c52f899?
 2023-04-22 19:39:53,195 - logger - INFO - Got Name : Ellie Doherty, M.A., AMFT
-2023-04-22 19:39:53,195 - logger - INFO - Got Job Title : primary therapist
+2023-04-22 19:39:53,195 - logger - INFO - Got Job Title : primary therapist
+
  amft/acsw
 2023-04-22 19:39:53,195 - logger - INFO - Attempting to retrieve sheet destination
 2023-04-22 19:39:53,200 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
@@ -11577,7 +11583,8 @@ Finished Texting and Emailing Candidaes
 2023-04-22 19:39:53,348 - logger - INFO - Notification was for candidate submission, gathering data
 2023-04-22 19:39:53,348 - logger - INFO - Got URL : https://www.ziprecruiter.com/contact/response/b424d60c/7c52f899?
 2023-04-22 19:39:53,348 - logger - INFO - Got Name : Ellie Doherty, M.A., AMFT
-2023-04-22 19:39:53,348 - logger - INFO - Got Job Title : primary therapist
+2023-04-22 19:39:53,348 - logger - INFO - Got Job Title : primary therapist
+
  amft/acsw
 2023-04-22 19:39:53,348 - logger - INFO - Attempting to retrieve sheet destination
 2023-04-22 19:39:53,348 - logger - INFO - Could not find appropriate sheet desination: Pre-screening
@@ -18447,15 +18454,15 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-05-17 07:08:15,580 - logger - INFO - --- working->False ---
 2023-05-17 07:08:15,580 - logger - INFO - Submitted to spreadsheet, check results
 2023-05-17 07:08:26,385 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
-2023-05-17 07:08:26,385 - logger - INFO - Creating Göksu Demir's Folder
+2023-05-17 07:08:26,385 - logger - INFO - Creating Gï¿½ksu Demir's Folder
 2023-05-17 07:08:27,435 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1DKkETwE3oS5st9LyBxT2Rp_4Jm7mLh4Z
 2023-05-17 07:08:29,133 - logger - INFO - Document was created with ID: 1gpt7q85VnykR-uZweBppsLpTBXfGMNWT16E0neoiXHU
-2023-05-17 07:08:33,117 - logger - INFO - Got 0 licenses for Göksu Demir
+2023-05-17 07:08:33,117 - logger - INFO - Got 0 licenses for Gï¿½ksu Demir
 2023-05-17 07:08:33,863 - logger - INFO - Updated Spreadsheet
 2023-05-17 07:08:35,173 - logger - INFO - File ID: 10HTgZBGcUgDLU1Wl1Ui-_ZBgCo8_wOMA
 2023-05-17 07:08:35,173 - logger - INFO - Uploaded Resume Successfully
-2023-05-17 07:08:35,173 - logger - INFO - Created profile for Göksu Demir
-2023-05-17 07:08:35,649 - logger - INFO - Updated local json file for Göksu Demir
+2023-05-17 07:08:35,173 - logger - INFO - Created profile for Gï¿½ksu Demir
+2023-05-17 07:08:35,649 - logger - INFO - Updated local json file for Gï¿½ksu Demir
 2023-05-17 07:13:36,972 - logger - INFO - Recieved New Email notification
 2023-05-17 07:13:37,037 - logger - INFO - Recieved New Email notification
 2023-05-17 07:13:37,421 - logger - INFO - Checking most recent email
@@ -18483,15 +18490,15 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-05-17 07:13:39,220 - logger - INFO - --- working->False ---
 2023-05-17 07:13:39,220 - logger - INFO - Submitted to spreadsheet, check results
 2023-05-17 07:13:49,888 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
-2023-05-17 07:13:49,888 - logger - INFO - Creating Göksu Demir's Folder
+2023-05-17 07:13:49,888 - logger - INFO - Creating Gï¿½ksu Demir's Folder
 2023-05-17 07:13:50,698 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1dxifBxzYGu9qIlPEsRAsfDeu0yeQZADt
 2023-05-17 07:13:52,408 - logger - INFO - Document was created with ID: 1YQ3rDqPH5aIR0nr_hTPK-ryuJuZGSEqWVu6zw8WO8fs
-2023-05-17 07:13:53,415 - logger - INFO - Got 0 licenses for Göksu Demir
+2023-05-17 07:13:53,415 - logger - INFO - Got 0 licenses for Gï¿½ksu Demir
 2023-05-17 07:13:54,010 - logger - INFO - Updated Spreadsheet
 2023-05-17 07:13:55,650 - logger - INFO - File ID: 1ybSGNr-QaOVA9zLjGMkC8zs_EodOQkz-
 2023-05-17 07:13:55,650 - logger - INFO - Uploaded Resume Successfully
-2023-05-17 07:13:55,651 - logger - INFO - Created profile for Göksu Demir
-2023-05-17 07:13:56,133 - logger - INFO - Updated local json file for Göksu Demir
+2023-05-17 07:13:55,651 - logger - INFO - Created profile for Gï¿½ksu Demir
+2023-05-17 07:13:56,133 - logger - INFO - Updated local json file for Gï¿½ksu Demir
 2023-05-17 07:19:22,685 - logger - INFO - Recieved New Email notification
 2023-05-17 07:19:22,686 - logger - INFO - Decided to refresh Gmail token
 2023-05-17 07:19:23,076 - logger - INFO - Successfully refreshed gmail token: {'historyId': '4698619', 'expiration': '1684937963172'}
@@ -22467,9 +22474,9 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-05-27 12:53:49,421 - logger - INFO - Uploaded Resume Successfully
 2023-05-27 12:53:49,421 - logger - INFO - Created profile for Amanda Kurth
 2023-05-27 12:53:49,779 - logger - INFO - Updated local json file for Amanda Kurth
-2023-05-27 12:54:01,414 - logger - INFO - Altered Phone/Email for: Aides “Heidi” Rodriguez in directory: N:\Downloads2\ResumeAides“Heidi”Rodriguez.pdf
+2023-05-27 12:54:01,414 - logger - INFO - Altered Phone/Email for: Aides ï¿½Heidiï¿½ Rodriguez in directory: N:\Downloads2\ResumeAidesï¿½Heidiï¿½Rodriguez.pdf
 2023-05-27 12:54:01,414 - logger - INFO - Parents are: ['18iotkvD56CLbdrVKJGPewjC1MIeu__hk'] for role: Nurse
-2023-05-27 12:54:01,414 - logger - INFO - Creating Aides “Heidi” Rodriguez's Folder
+2023-05-27 12:54:01,414 - logger - INFO - Creating Aides ï¿½Heidiï¿½ Rodriguez's Folder
 2023-05-27 12:54:02,188 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1rDxdODWZz6Vc05S0We7aEALJtgrijkZm
 2023-05-27 12:54:04,194 - logger - INFO - Document was created with ID: "1RrhgXkxUFnM-wUbTaODXSGwH2SUPkQaQ9irj7KuzleY".
 2023-05-27 12:54:19,478 - logger - INFO - Altered Phone/Email for: Meghan Gonzalez in directory: N:\Downloads2\ResumeMeghanGonzalez.pdf
@@ -25666,9 +25673,9 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-06-02 10:44:12,474 - logger - INFO - Uploaded Resume Successfully
 2023-06-02 10:44:12,474 - logger - INFO - Created profile for Anneliese Aguilar
 2023-06-02 10:44:12,881 - logger - INFO - Updated local json file for Anneliese Aguilar
-2023-06-02 10:44:24,372 - logger - INFO - Altered Phone/Email for: Ma’aka Sat in directory: N:\Downloads2\ResumeMa’akaSat.pdf
+2023-06-02 10:44:24,372 - logger - INFO - Altered Phone/Email for: Maï¿½aka Sat in directory: N:\Downloads2\ResumeMaï¿½akaSat.pdf
 2023-06-02 10:44:24,372 - logger - INFO - Parents are: ['18iotkvD56CLbdrVKJGPewjC1MIeu__hk'] for role: Nurse
-2023-06-02 10:44:24,372 - logger - INFO - Creating Ma’aka Sat's Folder
+2023-06-02 10:44:24,372 - logger - INFO - Creating Maï¿½aka Sat's Folder
 2023-06-02 10:44:25,218 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1q_4a4VyYwEZ7ss-k_oZDMGz_4i8Xt_Ha
 2023-06-02 10:44:27,086 - logger - INFO - General Document was created with ID: "1rlBIO4bwxe7GcL9JssDwlRr7QvI2hIae01PeIqjM9hk".
 2023-06-02 10:44:44,994 - logger - INFO - Altered Phone/Email for: Cindy Ford in directory: N:\Downloads2\ResumeCindyFord.pdf
@@ -26286,9 +26293,9 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-06-02 21:19:47,670 - logger - INFO - Uploaded Resume Successfully
 2023-06-02 21:19:47,671 - logger - INFO - Created profile for Darrell Little
 2023-06-02 21:19:48,189 - logger - INFO - Updated local json file for Darrell Little
-2023-06-02 21:20:01,274 - logger - INFO - Altered Phone/Email for: Murdis “LaToya” Boston in directory: N:\Downloads2\ResumeMurdis“LaToya”Boston.pdf
+2023-06-02 21:20:01,274 - logger - INFO - Altered Phone/Email for: Murdis ï¿½LaToyaï¿½ Boston in directory: N:\Downloads2\ResumeMurdisï¿½LaToyaï¿½Boston.pdf
 2023-06-02 21:20:01,274 - logger - INFO - Parents are: ['15WDRlTToaRXbYRc-6tDlhlEa2x1Flwx2'] for role: Therapist
-2023-06-02 21:20:01,274 - logger - INFO - Creating Murdis “LaToya” Boston's Folder
+2023-06-02 21:20:01,274 - logger - INFO - Creating Murdis ï¿½LaToyaï¿½ Boston's Folder
 2023-06-02 21:20:02,329 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1CvwjBa4os-OmOkt-H-C9mP7nlfcSZ30D
 2023-06-02 21:20:04,129 - logger - INFO - Document was created with ID: 1dQxmf0LMU313RfQ1lZ3dsMRD64NlppLCV0PPEzVnr8M
 2023-06-02 21:20:21,022 - logger - INFO - Altered Phone/Email for: Mikaela Beck in directory: N:\Downloads2\ResumeMikaelaBeck.pdf
@@ -36702,17 +36709,17 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-06-18 17:20:02,161 - logger - INFO - Uploaded Resume Successfully
 2023-06-18 17:20:02,161 - logger - INFO - Created profile for Matthew Conti
 2023-06-18 17:20:02,579 - logger - INFO - Updated local json file for Matthew Conti
-2023-06-18 17:20:53,482 - logger - INFO - Altered Phone/Email for: Jonathan González in directory: N:\Downloads2\ResumeJonathanGonzález.pdf
+2023-06-18 17:20:53,482 - logger - INFO - Altered Phone/Email for: Jonathan Gonzï¿½lez in directory: N:\Downloads2\ResumeJonathanGonzï¿½lez.pdf
 2023-06-18 17:20:53,482 - logger - INFO - Parents are: ['1ypY_bVlOf4Zz00w1TCJDU6GyqDxdbxPr'] for role: Front Desk Receptionist
-2023-06-18 17:20:53,482 - logger - INFO - Creating Jonathan González's Folder
+2023-06-18 17:20:53,482 - logger - INFO - Creating Jonathan Gonzï¿½lez's Folder
 2023-06-18 17:20:54,256 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1T5T_WwGVp5SYZhCpMED70o-ZDkNdhciw
 2023-06-18 17:20:56,015 - logger - INFO - Front Desk Receptionist Document was created with ID: 1SRvYkyZgIKF7pN2RT8jWOOwr8u791F13OrH9m9nRqco
-2023-06-18 17:20:56,950 - logger - INFO - Got 0 licenses for Jonathan González
+2023-06-18 17:20:56,950 - logger - INFO - Got 0 licenses for Jonathan Gonzï¿½lez
 2023-06-18 17:20:57,507 - logger - INFO - Updated Spreadsheet
 2023-06-18 17:20:58,801 - logger - INFO - File ID: 1ikFiqScx9-DjyFZCXJkssOlJMDb0Dycx
 2023-06-18 17:20:58,801 - logger - INFO - Uploaded Resume Successfully
-2023-06-18 17:20:58,801 - logger - INFO - Created profile for Jonathan González
-2023-06-18 17:20:59,185 - logger - INFO - Updated local json file for Jonathan González
+2023-06-18 17:20:58,801 - logger - INFO - Created profile for Jonathan Gonzï¿½lez
+2023-06-18 17:20:59,185 - logger - INFO - Updated local json file for Jonathan Gonzï¿½lez
 2023-06-18 17:21:52,546 - logger - INFO - Altered Phone/Email for: Angelica Perez in directory: N:\Downloads2\ResumeAngelicaPerez.pdf
 2023-06-18 17:21:52,546 - logger - INFO - Parents are: ['1ypY_bVlOf4Zz00w1TCJDU6GyqDxdbxPr'] for role: Front Desk Receptionist
 2023-06-18 17:21:52,546 - logger - INFO - Creating Angelica Perez's Folder
@@ -38067,3 +38074,792 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-06-22 01:17:31,887 - logger - INFO - Started Server
 2023-06-22 01:17:36,721 - logger - INFO - Started Server
 2023-06-22 01:22:25,575 - logger - INFO - Started Server
+2023-06-22 20:06:19,560 - logger - INFO - Started Server
+2023-06-22 20:07:29,015 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:30,405 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1k-UPpHxS5B5miSptuIf0xamZUIO-p2v-
+2023-06-22 20:07:30,405 - logger - INFO - Creating Jia Maglalang's Folder
+2023-06-22 20:07:30,521 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:31,475 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1NhnpDnt05mnowEAODctl_cDXhmMbM-kn
+2023-06-22 20:07:31,475 - logger - INFO - Creating Jessica Alvarado's Folder
+2023-06-22 20:07:31,509 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:32,434 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1nFIkYKlhIvBc7NKjsTH2d_ttdlhM1xbi
+2023-06-22 20:07:32,435 - logger - INFO - Creating Raymona Marshall's Folder
+2023-06-22 20:07:32,482 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:33,496 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1OVMXXh_R4CRIfot3lSxGZDXyUzcCo88k
+2023-06-22 20:07:33,497 - logger - INFO - Creating Raymona Marshall's Folder
+2023-06-22 20:07:33,529 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:34,551 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/18ihhxF4_4X1KnEj_p0DQGoG5WolkLhZQ
+2023-06-22 20:07:34,552 - logger - INFO - Creating Savana McGregor's Folder
+2023-06-22 20:07:34,576 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:35,845 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1o5LVqOtbOz6RnZc0y-HZRdkEWeawqUbA
+2023-06-22 20:07:35,845 - logger - INFO - Creating Albert Nava's Folder
+2023-06-22 20:07:37,769 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:37,772 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:37,779 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:37,780 - logger - INFO - Completed 1/2 profile for Jessica Alvarado
+2023-06-22 20:07:38,641 - logger - INFO - Updated local json file for Jessica Alvarado
+2023-06-22 20:07:38,649 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:40,158 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/17tJXxz2XqBPL7Yyqm-yOLGxV9cmZStMr
+2023-06-22 20:07:40,159 - logger - INFO - Creating John Driver's Folder
+2023-06-22 20:07:40,931 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:40,932 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:40,932 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:40,932 - logger - INFO - Completed 1/2 profile for Raymona Marshall
+2023-06-22 20:07:41,545 - logger - INFO - Updated local json file for Raymona Marshall
+2023-06-22 20:07:42,476 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:42,477 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:42,478 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:42,478 - logger - INFO - Completed 1/2 profile for Jia Maglalang
+2023-06-22 20:07:43,397 - logger - INFO - Updated local json file for Jia Maglalang
+2023-06-22 20:07:44,472 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:44,472 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:44,473 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:44,473 - logger - INFO - Completed 1/2 profile for Raymona Marshall
+2023-06-22 20:07:45,067 - logger - INFO - Updated local json file for Raymona Marshall
+2023-06-22 20:07:46,069 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:46,070 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:46,071 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:46,071 - logger - INFO - Completed 1/2 profile for Savana McGregor
+2023-06-22 20:07:46,748 - logger - INFO - Updated local json file for Savana McGregor
+2023-06-22 20:07:46,752 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:47,663 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1eh8bLxQsgoK6U9oDtmzQaLQU8MqFsC-1
+2023-06-22 20:07:47,663 - logger - INFO - Creating Heather Rupp's Folder
+2023-06-22 20:07:47,693 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:48,929 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1WIjVQhmnleactU8crzde9oOHkgCutckC
+2023-06-22 20:07:48,929 - logger - INFO - Creating Linda Vo's Folder
+2023-06-22 20:07:48,963 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:07:50,126 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1OXAUC2OGm_GX5VkAy2BiwOlZZzuF8GZW
+2023-06-22 20:07:50,127 - logger - INFO - Creating Laura Gonzales's Folder
+2023-06-22 20:07:52,184 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:52,185 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:52,186 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:52,186 - logger - INFO - Completed 1/2 profile for Heather Rupp
+2023-06-22 20:07:52,970 - logger - INFO - Updated local json file for Heather Rupp
+2023-06-22 20:07:53,845 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:53,846 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:53,847 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:53,847 - logger - INFO - Completed 1/2 profile for Albert Nava
+2023-06-22 20:07:54,441 - logger - INFO - Updated local json file for Albert Nava
+2023-06-22 20:07:55,377 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:55,378 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:55,378 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:55,378 - logger - INFO - Completed 1/2 profile for John Driver
+2023-06-22 20:07:56,183 - logger - INFO - Updated local json file for John Driver
+2023-06-22 20:07:56,898 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:56,899 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:56,899 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:56,899 - logger - INFO - Completed 1/2 profile for Linda Vo
+2023-06-22 20:07:57,544 - logger - INFO - Updated local json file for Linda Vo
+2023-06-22 20:07:58,185 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:07:58,186 - logger - INFO - --- updating->True ---
+2023-06-22 20:07:58,187 - logger - INFO - --- updating->False ---
+2023-06-22 20:07:58,188 - logger - INFO - Completed 1/2 profile for Laura Gonzales
+2023-06-22 20:07:58,890 - logger - INFO - Updated local json file for Laura Gonzales
+2023-06-22 20:12:54,805 - logger - INFO - Started Server
+2023-06-22 20:12:58,380 - logger - INFO - Started Server
+2023-06-22 20:14:07,757 - logger - INFO - Started Server
+2023-06-22 20:14:12,871 - logger - INFO - Started Server
+2023-06-22 20:14:19,279 - logger - INFO - Started Server
+2023-06-22 20:15:59,552 - logger - INFO - Started Server
+2023-06-22 20:16:11,095 - logger - INFO - Started Server
+2023-06-22 20:17:17,013 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:17:18,160 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1jbBgdmGV-C_uLifOOxXmYsXDWUybgTQC
+2023-06-22 20:17:18,160 - logger - INFO - Creating Xixi Xu's Folder
+2023-06-22 20:17:24,341 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:17:24,343 - logger - INFO - --- updating->True ---
+2023-06-22 20:17:26,480 - logger - INFO - --- updating->False ---
+2023-06-22 20:17:26,480 - logger - INFO - Completed 1/2 profile for Xixi Xu
+2023-06-22 20:17:27,128 - logger - INFO - Updated local json file for Xixi Xu
+2023-06-22 20:23:15,674 - logger - INFO - Started Server
+2023-06-22 20:23:24,994 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 20:23:26,069 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1SvzxxRu-0ApLCUNRQ1fLmUT_MOTS8Kww
+2023-06-22 20:23:26,069 - logger - INFO - Creating Xixi Xu's Folder
+2023-06-22 20:23:34,609 - logger - INFO - Updated Spreadsheet
+2023-06-22 20:23:34,613 - logger - INFO - --- updating->True ---
+2023-06-22 20:23:36,425 - logger - INFO - --- updating->False ---
+2023-06-22 20:23:36,426 - logger - INFO - Completed 1/2 profile for Xixi Xu
+2023-06-22 20:23:37,117 - logger - INFO - Updated local json file for Xixi Xu
+2023-06-22 20:24:41,274 - logger - INFO - Started Server
+2023-06-22 20:27:23,500 - logger - INFO - Started Server
+2023-06-22 20:30:22,446 - logger - INFO - Started Server
+2023-06-22 20:37:45,735 - logger - INFO - Started Server
+2023-06-22 20:37:56,980 - logger - INFO - Started Server
+2023-06-22 20:39:18,664 - logger - INFO - Started Server
+2023-06-22 20:50:22,108 - logger - INFO - Started Server
+2023-06-22 21:01:30,703 - logger - INFO - Started Server
+2023-06-22 21:03:31,876 - logger - INFO - Started Server
+2023-06-22 21:03:41,860 - logger - INFO - Started Server
+2023-06-22 21:03:48,476 - logger - INFO - Started Server
+2023-06-22 21:04:51,951 - logger - INFO - Started Server
+2023-06-22 21:05:56,942 - logger - INFO - Started Server
+2023-06-22 21:06:57,694 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 21:07:02,529 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1JcgC9xX_YWhbvz1Wm2JkxKx2AtPCmb_2
+2023-06-22 21:07:02,529 - logger - INFO - Creating Xixi Xu's Folder
+2023-06-22 21:07:11,151 - logger - INFO - Updated Spreadsheet
+2023-06-22 21:07:11,154 - logger - INFO - --- updating->True ---
+2023-06-22 21:07:12,905 - logger - INFO - --- updating->False ---
+2023-06-22 21:07:12,906 - logger - INFO - Completed 1/2 profile for Xixi Xu
+2023-06-22 21:07:14,254 - logger - INFO - Updated local json file for Xixi Xu
+2023-06-22 21:07:35,684 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-22 21:07:37,264 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Ji5KoI6zOcrDuSNe1PnsrHUe1HIl24g0
+2023-06-22 21:07:37,264 - logger - INFO - Creating Terrance Johnson's Folder
+2023-06-22 21:07:45,556 - logger - INFO - Updated Spreadsheet
+2023-06-22 21:07:45,559 - logger - INFO - --- updating->True ---
+2023-06-22 21:07:47,805 - logger - INFO - --- updating->False ---
+2023-06-22 21:07:47,806 - logger - INFO - Completed 1/2 profile for Terrance Johnson
+2023-06-22 21:07:48,484 - logger - INFO - Updated local json file for Terrance Johnson
+2023-06-23 08:34:34,813 - logger - INFO - Started Server
+2023-06-23 08:36:36,394 - logger - INFO - Started Server
+2023-06-23 08:38:28,835 - logger - INFO - Started Server
+2023-06-23 08:38:39,519 - logger - INFO - Started Server
+2023-06-23 08:39:05,831 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:39:07,534 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1xplNmh-wQ-oxr_aKVwWDEGWGorzgheY-
+2023-06-23 08:39:07,535 - logger - INFO - Creating Rachael McLean's Folder
+2023-06-23 08:39:07,620 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:39:08,539 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/12RsV6DzwKiNh6SNegTUdYmqZUpWCN_F2
+2023-06-23 08:39:08,539 - logger - INFO - Creating Angela Alvarez's Folder
+2023-06-23 08:39:08,557 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:39:09,378 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1k2OesAvVVKxD1SCfHcxvSm75_6LSJDpe
+2023-06-23 08:39:09,379 - logger - INFO - Creating Anahit Sargsyan's Folder
+2023-06-23 08:39:09,425 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:39:10,397 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ox9KqIDvxkNuWOBUt7H_X2WAyGVGY20e
+2023-06-23 08:39:10,397 - logger - INFO - Creating Shradha Patel's Folder
+2023-06-23 08:39:11,795 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:39:11,796 - logger - INFO - --- updating->True ---
+2023-06-23 08:39:11,858 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:39:12,754 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1cAqgw45XcW4oiqKMM0H1LR0JevRKIzFx
+2023-06-23 08:39:12,755 - logger - INFO - Creating Valeesa Woodard's Folder
+2023-06-23 08:39:13,774 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:39:13,775 - logger - INFO - Completed 1/2 profile for Angela Alvarez
+2023-06-23 08:39:14,268 - logger - INFO - Updated local json file for Angela Alvarez
+2023-06-23 08:39:14,640 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:39:14,640 - logger - INFO - Completed 1/2 profile for Shradha Patel
+2023-06-23 08:39:15,059 - logger - INFO - Updated local json file for Shradha Patel
+2023-06-23 08:39:15,437 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:39:15,437 - logger - INFO - Completed 1/2 profile for Anahit Sargsyan
+2023-06-23 08:39:15,865 - logger - INFO - Updated local json file for Anahit Sargsyan
+2023-06-23 08:39:16,044 - logger - INFO - --- updating->False ---
+2023-06-23 08:39:16,045 - logger - INFO - Completed 1/2 profile for Rachael McLean
+2023-06-23 08:39:16,499 - logger - INFO - Updated local json file for Rachael McLean
+2023-06-23 08:39:17,022 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:39:17,022 - logger - INFO - --- updating->True ---
+2023-06-23 08:39:17,612 - logger - INFO - --- updating->False ---
+2023-06-23 08:39:17,612 - logger - INFO - Completed 1/2 profile for Valeesa Woodard
+2023-06-23 08:39:17,907 - logger - INFO - Updated local json file for Valeesa Woodard
+2023-06-23 08:40:50,674 - logger - INFO - Started Server
+2023-06-23 08:41:27,825 - logger - INFO - Started Server
+2023-06-23 08:41:47,735 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:41:48,833 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1IYP3R2dk_essC2Qj1ehBfD6ZAOPQd1kZ
+2023-06-23 08:41:48,834 - logger - INFO - Creating Xixi Xu's Folder
+2023-06-23 08:41:50,374 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:41:50,376 - logger - INFO - --- updating->True ---
+2023-06-23 08:41:50,797 - logger - INFO - --- updating->False ---
+2023-06-23 08:41:50,797 - logger - INFO - Completed 1/2 profile for Xixi Xu
+2023-06-23 08:41:51,273 - logger - INFO - Updated local json file for Xixi Xu
+2023-06-23 08:42:41,160 - logger - INFO - Started Server
+2023-06-23 08:42:54,762 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:42:55,781 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1sX-3s2sU2PfP6U5Qb5O2HRWpDVx3hij9
+2023-06-23 08:42:55,782 - logger - INFO - Creating Xixi Xu's Folder
+2023-06-23 08:42:57,097 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:42:57,099 - logger - INFO - --- updating->True ---
+2023-06-23 08:42:57,588 - logger - INFO - --- updating->False ---
+2023-06-23 08:42:57,590 - logger - INFO - Completed 1/2 profile for Xixi Xu
+2023-06-23 08:42:58,042 - logger - INFO - Updated local json file for Xixi Xu
+2023-06-23 08:45:00,591 - logger - INFO - Started Server
+2023-06-23 08:46:02,962 - logger - INFO - Started Server
+2023-06-23 08:46:16,790 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:46:17,970 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1cb_Co8Gu6SNjIbFLo1zcZn5SGcrzMikJ
+2023-06-23 08:46:17,970 - logger - INFO - Creating Xixi Xu's Folder
+2023-06-23 08:46:19,565 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:46:19,568 - logger - INFO - --- updating->True ---
+2023-06-23 08:46:20,071 - logger - INFO - --- updating->False ---
+2023-06-23 08:46:20,072 - logger - INFO - Completed 1/2 profile for Xixi Xu
+2023-06-23 08:46:20,575 - logger - INFO - Updated local json file for Xixi Xu
+2023-06-23 08:46:54,875 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:46:55,729 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1LSFMoGyeWmlNU9uzxw6UBhYABJWFkQBF
+2023-06-23 08:46:55,729 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 08:46:55,761 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:46:56,628 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1HYqLnQ4GjA8XbZ-Quvo61lQiYvTUfNNI
+2023-06-23 08:46:56,628 - logger - INFO - Creating Joshua Illingworth's Folder
+2023-06-23 08:46:56,783 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:46:57,704 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1HSCYc8hpYRRRlsxOaq43t_zwER4iPudk
+2023-06-23 08:46:57,704 - logger - INFO - Creating Susan Wallis Lavon's Folder
+2023-06-23 08:46:58,525 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:46:58,527 - logger - INFO - --- updating->True ---
+2023-06-23 08:46:58,571 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:46:59,446 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1NjN0SddDdspYi8wrfsrsHIVjEExZS3Lm
+2023-06-23 08:46:59,446 - logger - INFO - Creating Katie Tevere's Folder
+2023-06-23 08:46:59,626 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 08:46:59,744 - logger - INFO - --- updating->False ---
+2023-06-23 08:46:59,745 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 08:47:00,238 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 08:47:01,598 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:47:01,600 - logger - INFO - --- updating->True ---
+2023-06-23 08:47:02,234 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:47:02,235 - logger - INFO - Completed 1/2 profile for Susan Wallis Lavon
+2023-06-23 08:47:02,784 - logger - INFO - Updated local json file for Susan Wallis Lavon
+2023-06-23 08:47:02,786 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:47:03,852 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1GpX4OpfkPHEXOMWtu2ZbggDFO1rAMcv5
+2023-06-23 08:47:03,852 - logger - INFO - Creating Emishianna Holmes's Folder
+2023-06-23 08:47:04,027 - logger - INFO - Downloading Resume for: Susan Wallis Lavon
+2023-06-23 08:47:04,036 - logger - INFO - --- updating->False ---
+2023-06-23 08:47:04,036 - logger - INFO - Completed 1/2 profile for Joshua Illingworth
+2023-06-23 08:47:04,371 - logger - INFO - Updated local json file for Joshua Illingworth
+2023-06-23 08:47:04,981 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:47:04,982 - logger - INFO - --- updating->True ---
+2023-06-23 08:47:05,762 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:47:05,762 - logger - INFO - Completed 1/2 profile for Emishianna Holmes
+2023-06-23 08:47:06,304 - logger - INFO - Updated local json file for Emishianna Holmes
+2023-06-23 08:47:06,471 - logger - INFO - Downloading Resume for: Emishianna Holmes
+2023-06-23 08:47:06,488 - logger - INFO - --- updating->False ---
+2023-06-23 08:47:06,488 - logger - INFO - Completed 1/2 profile for Katie Tevere
+2023-06-23 08:47:06,979 - logger - INFO - Updated local json file for Katie Tevere
+2023-06-23 08:47:47,704 - logger - INFO - Started Server
+2023-06-23 08:48:07,798 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:48:08,672 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1m5iUtNCWzubT6edXnVvlQDF_k3q-cIxR
+2023-06-23 08:48:08,674 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 08:48:09,895 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:48:09,896 - logger - INFO - --- updating->True ---
+2023-06-23 08:48:10,372 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 08:48:51,168 - logger - INFO - Started Server
+2023-06-23 08:49:23,436 - logger - INFO - Started Server
+2023-06-23 08:49:31,350 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:49:32,340 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1XEraLiCiF9OccJ8ZiMbNOI-qz7Hluono
+2023-06-23 08:49:32,340 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 08:49:33,573 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:49:33,574 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 08:49:34,091 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 08:50:06,344 - logger - INFO - Started Server
+2023-06-23 08:50:10,422 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:50:11,469 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ypyzDnP1UZGbB5O1jbt1exO_qn4C4AwP
+2023-06-23 08:50:11,470 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 08:50:12,800 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:50:12,801 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 08:50:13,773 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 08:50:49,781 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:50:50,728 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/11O2IfPKwezyCHol-Yd2CzkYNhvkU12mR
+2023-06-23 08:50:50,728 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 08:50:52,000 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:50:52,000 - logger - INFO - --- updating->True ---
+2023-06-23 08:50:52,470 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 08:50:52,481 - logger - INFO - --- updating->False ---
+2023-06-23 08:50:52,481 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 08:50:52,991 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 08:52:12,809 - logger - INFO - Started Server
+2023-06-23 08:52:21,082 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:52:22,275 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1CR7AoU5p3ZADuZbF76njiSwnS5xUg2tX
+2023-06-23 08:52:22,275 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 08:52:23,851 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:52:23,854 - logger - INFO - --- updating->True ---
+2023-06-23 08:52:24,333 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 08:52:25,363 - logger - INFO - --- updating->False ---
+2023-06-23 08:52:25,364 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 08:52:25,902 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 08:52:40,357 - logger - INFO - Started Server
+2023-06-23 08:52:45,049 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 08:52:46,081 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1JVF-fxCQVjDecJyFvylstHXh4d0R12g9
+2023-06-23 08:52:46,083 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 08:52:47,306 - logger - INFO - Updated Spreadsheet
+2023-06-23 08:52:47,308 - logger - INFO - --- updating->True ---
+2023-06-23 08:53:02,864 - logger - INFO - --- updating->False ---
+2023-06-23 08:53:02,865 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 08:53:03,418 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 08:57:40,929 - logger - INFO - Started Server
+2023-06-23 08:58:40,803 - logger - INFO - Started Server
+2023-06-23 09:06:11,088 - logger - INFO - Started Server
+2023-06-23 09:08:09,754 - logger - INFO - Started Server
+2023-06-23 09:08:24,406 - logger - INFO - Started Server
+2023-06-23 09:08:29,211 - logger - INFO - Started Server
+2023-06-23 09:08:49,942 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:08:51,311 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1W7i5nazp17fqVeOeVa1s2-SQxadAAj56
+2023-06-23 09:08:51,311 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 09:08:55,818 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:08:55,821 - logger - INFO - --- updating->True ---
+2023-06-23 09:08:56,322 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 09:08:58,482 - logger - INFO - File ID: 1Sse3OoIfhIybUhMNH-L88vABoOvLyLtK
+2023-06-23 09:08:58,483 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:13:44,394 - logger - INFO - Started Server
+2023-06-23 09:14:04,077 - logger - INFO - Started Server
+2023-06-23 09:14:22,566 - logger - INFO - Started Server
+2023-06-23 09:14:31,444 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:14:32,524 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1LFmBHm6v51BV1CU2l0OnqeQ7_t7sIgcj
+2023-06-23 09:14:32,525 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 09:14:38,253 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:14:38,254 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 09:14:38,614 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 09:14:41,685 - logger - INFO - Started Server
+2023-06-23 09:15:00,905 - logger - INFO - Started Server
+2023-06-23 09:17:55,473 - logger - INFO - Started Server
+2023-06-23 09:18:01,564 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:18:02,840 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1o7t9sX5uOyb9ax3X_RfQ97o_co_mb6DB
+2023-06-23 09:18:02,840 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 09:18:04,850 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:18:04,851 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 09:18:05,446 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 09:18:25,418 - logger - INFO - Started Server
+2023-06-23 09:18:29,522 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:18:30,412 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1tNcT-NoXIN6iawht9IuFhbN4kr2_yM3x
+2023-06-23 09:18:30,412 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 09:18:31,848 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:18:31,849 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 09:18:32,319 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 09:18:53,788 - logger - INFO - Started Server
+2023-06-23 09:18:58,851 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:18:59,532 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1EdIZRQqkXPyNfTSWWSW2BiVuePE9Rqcm
+2023-06-23 09:18:59,533 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 09:19:01,484 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:19:01,486 - logger - INFO - --- updating->True ---
+2023-06-23 09:19:01,486 - logger - INFO - --- updating->False ---
+2023-06-23 09:19:01,489 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 09:19:02,024 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 09:19:19,319 - logger - INFO - Started Server
+2023-06-23 09:19:27,758 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:19:28,542 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1zjOeAgE6clHnYXfsA2lXAvpkOpE6Vo3j
+2023-06-23 09:19:28,542 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 09:19:30,187 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:19:30,188 - logger - INFO - --- updating->True ---
+2023-06-23 09:19:31,004 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 09:19:33,004 - logger - INFO - File ID: 1OmmY-l3_wBZ5sfsrhr_O21lF0Fpx0lY9
+2023-06-23 09:19:33,005 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:19:36,498 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 09:19:38,699 - logger - INFO - File ID: 1LhFxjypT93HmUXdo3aDlREjoIugaxFN8
+2023-06-23 09:19:38,700 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:19:40,720 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 09:19:43,016 - logger - INFO - File ID: 1d6Ysc-r9DfT8TgiyU6grNTqaKcgzKmA3
+2023-06-23 09:19:43,016 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:19:47,282 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 09:19:49,711 - logger - INFO - File ID: 1YIoC0jB3yYcnNlahSu7GhOgBL5W_dS8X
+2023-06-23 09:19:49,711 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:19:53,488 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 09:19:55,619 - logger - INFO - File ID: 16MgqI0bxZ7jkp4wwyCqiDmnJssmpAJJ9
+2023-06-23 09:19:55,620 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:20:33,921 - logger - INFO - Started Server
+2023-06-23 09:21:36,285 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:21:37,049 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/17mqph3HNG10Milt-td8SInjnvjkf9Wuk
+2023-06-23 09:21:37,049 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 09:21:38,300 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:21:38,301 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 09:21:38,601 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 09:21:51,244 - logger - INFO - Started Server
+2023-06-23 09:22:20,903 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:22:21,681 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1z9yPbguJOIGdPNiUdI9GJpDQmyYpfFfu
+2023-06-23 09:22:21,682 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 09:22:23,323 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:22:23,326 - logger - INFO - --- updating->True ---
+2023-06-23 09:22:23,809 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 09:22:25,920 - logger - INFO - File ID: 1h06l1GTdg_xlNv3MEHicradg3HGmuVqE
+2023-06-23 09:22:25,921 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:22:27,448 - logger - INFO - --- updating->False ---
+2023-06-23 09:22:27,449 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 09:22:27,918 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 09:42:19,359 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:42:20,798 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1InAdra2Q5mosIsd2EDhOqm5ZSaJPAnTf
+2023-06-23 09:42:20,799 - logger - INFO - Creating Susan Wallis Lavon's Folder
+2023-06-23 09:42:22,284 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:42:22,286 - logger - INFO - --- updating->True ---
+2023-06-23 09:42:22,842 - logger - INFO - Downloading Resume for: Susan Wallis Lavon
+2023-06-23 09:42:25,108 - logger - INFO - File ID: 19kFpBw3Zbo97CeZCMemctd8G-FhQbhIk
+2023-06-23 09:42:25,109 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:42:26,648 - logger - INFO - --- updating->False ---
+2023-06-23 09:42:26,648 - logger - INFO - Completed 1/2 profile for Susan Wallis Lavon
+2023-06-23 09:42:27,266 - logger - INFO - Updated local json file for Susan Wallis Lavon
+2023-06-23 09:43:09,723 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 09:43:10,665 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1oHXZm7YXWFyME_h1fQFrE1hBOxVPCMK1
+2023-06-23 09:43:10,665 - logger - INFO - Creating Katie Tevere's Folder
+2023-06-23 09:43:11,999 - logger - INFO - Updated Spreadsheet
+2023-06-23 09:43:12,001 - logger - INFO - --- updating->True ---
+2023-06-23 09:43:12,678 - logger - INFO - Downloading Resume for: Katie Tevere
+2023-06-23 09:43:14,660 - logger - INFO - File ID: 1gBrLNjxnRPDkSotChQZa0bYvSI9HC5Nk
+2023-06-23 09:43:14,661 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 09:43:16,107 - logger - INFO - --- updating->False ---
+2023-06-23 09:43:16,109 - logger - INFO - Completed 1/2 profile for Katie Tevere
+2023-06-23 09:43:16,585 - logger - INFO - Updated local json file for Katie Tevere
+2023-06-23 10:16:14,752 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:16:16,102 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1azGMD_YZLPnDS74NW277-jDnQqaBbNgV
+2023-06-23 10:16:16,102 - logger - INFO - Creating Susan Wallis Lavon's Folder
+2023-06-23 10:16:16,164 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:16:17,164 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1qt3o8jEXsFutQlTBJh4mkRP6CC-q13xK
+2023-06-23 10:16:17,165 - logger - INFO - Creating Joshua Illingworth's Folder
+2023-06-23 10:16:17,207 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:16:18,087 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1GGnhZHcre9DzSWPhAzZ56aBPTGgCc63R
+2023-06-23 10:16:18,088 - logger - INFO - Creating Katie Tevere's Folder
+2023-06-23 10:16:19,056 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:16:19,058 - logger - INFO - --- updating->True ---
+2023-06-23 10:16:20,593 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:16:20,594 - logger - INFO - Completed 1/2 profile for Joshua Illingworth
+2023-06-23 10:16:21,184 - logger - INFO - Updated local json file for Joshua Illingworth
+2023-06-23 10:16:21,340 - logger - INFO - Downloading Resume for: Joshua Illingworth
+2023-06-23 10:16:24,074 - logger - INFO - File ID: 1AwvCqbwyjVmxTgeIzyukpFHgdlAnqe0l
+2023-06-23 10:16:24,074 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 10:16:24,622 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:16:24,623 - logger - INFO - Completed 1/2 profile for Katie Tevere
+2023-06-23 10:16:25,055 - logger - INFO - Updated local json file for Katie Tevere
+2023-06-23 10:16:26,686 - logger - INFO - Downloading Resume for: Joshua Illingworth
+2023-06-23 10:16:28,646 - logger - INFO - File ID: 1AboePoLjZufwoBgD1gUXCOKau9qU44pn
+2023-06-23 10:16:28,647 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 10:16:30,567 - logger - INFO - Downloading Resume for: Susan Wallis Lavon
+2023-06-23 10:16:32,754 - logger - INFO - File ID: 1SOPN7wDgbAJ3STvcas9tbXN-xdSRXS5X
+2023-06-23 10:16:32,754 - logger - INFO - Uploaded Resume Successfully
+2023-06-23 10:16:34,496 - logger - INFO - --- updating->False ---
+2023-06-23 10:16:34,499 - logger - INFO - Completed 1/2 profile for Susan Wallis Lavon
+2023-06-23 10:16:35,026 - logger - INFO - Updated local json file for Susan Wallis Lavon
+2023-06-23 10:23:51,766 - logger - INFO - Started Server
+2023-06-23 10:24:13,640 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:24:14,564 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1q6Jwu04Cy_2rkilSJpcT6vwslh8kN8wH
+2023-06-23 10:24:14,564 - logger - INFO - Creating Emishianna Holmes's Folder
+2023-06-23 10:24:14,654 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:24:15,556 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/12AgY0c8QZeHK3_0jWrGZ05LBAYZtiZN8
+2023-06-23 10:24:15,556 - logger - INFO - Creating Susan Wallis Lavon's Folder
+2023-06-23 10:24:15,641 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:24:16,320 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1NpCHPPezbEh32DPZNKB8BwrfjDvKBmMp
+2023-06-23 10:24:16,321 - logger - INFO - Creating Katie Tevere's Folder
+2023-06-23 10:24:17,212 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:24:17,213 - logger - INFO - --- updating->True ---
+2023-06-23 10:24:17,253 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:24:18,127 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1tv_-88X92uEqd0le9C8Og3GmWD7mgyrH
+2023-06-23 10:24:18,127 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 10:24:18,329 - logger - INFO - Downloading Resume for: Emishianna Holmes
+2023-06-23 10:24:20,590 - logger - INFO - File ID: 1afLI8PvR8Qu0ZaNNzevNGj4hzdkjALXf
+2023-06-23 10:24:20,593 - logger - INFO - Uploaded Resume Successfully to ['1q6Jwu04Cy_2rkilSJpcT6vwslh8kN8wH']
+2023-06-23 10:24:20,693 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:24:21,643 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1-kWw-Gsy-x9cxSbd4pzIO2eJVsxssPZo
+2023-06-23 10:24:21,645 - logger - INFO - Creating Joshua Illingworth's Folder
+2023-06-23 10:24:22,224 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:24:22,224 - logger - INFO - Completed 1/2 profile for Katie Tevere
+2023-06-23 10:24:22,807 - logger - INFO - Updated local json file for Katie Tevere
+2023-06-23 10:24:23,216 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:24:23,217 - logger - INFO - Completed 1/2 profile for Susan Wallis Lavon
+2023-06-23 10:24:23,562 - logger - INFO - Updated local json file for Susan Wallis Lavon
+2023-06-23 10:24:24,331 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:24:24,331 - logger - INFO - Completed 1/2 profile for Joshua Illingworth
+2023-06-23 10:24:24,860 - logger - INFO - Updated local json file for Joshua Illingworth
+2023-06-23 10:24:25,461 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:24:25,462 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 10:24:25,785 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 10:24:26,992 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 10:24:29,451 - logger - INFO - File ID: 16pqIn9yepg4Ykr2GAIRQU53WxYPv5f76
+2023-06-23 10:24:29,451 - logger - INFO - Uploaded Resume Successfully to ['1tv_-88X92uEqd0le9C8Og3GmWD7mgyrH']
+2023-06-23 10:24:31,759 - logger - INFO - Downloading Resume for: Joshua Illingworth
+2023-06-23 10:24:34,264 - logger - INFO - File ID: 1tDoDWDtGcVXweFoOCtYkTA_doyadRJlC
+2023-06-23 10:24:34,265 - logger - INFO - Uploaded Resume Successfully to ['1-kWw-Gsy-x9cxSbd4pzIO2eJVsxssPZo']
+2023-06-23 10:24:36,331 - logger - INFO - Downloading Resume for: Katie Tevere
+2023-06-23 10:24:38,701 - logger - INFO - File ID: 1CBoJEp5aradaEzRql73_2vYB3dJEQtKY
+2023-06-23 10:24:38,701 - logger - INFO - Uploaded Resume Successfully to ['1NpCHPPezbEh32DPZNKB8BwrfjDvKBmMp']
+2023-06-23 10:24:42,794 - logger - INFO - Downloading Resume for: Emishianna Holmes
+2023-06-23 10:24:45,008 - logger - INFO - File ID: 1L1LFJDAAOv6U-DxApYTtRSJMhK8JrhFk
+2023-06-23 10:24:45,008 - logger - INFO - Uploaded Resume Successfully to ['1q6Jwu04Cy_2rkilSJpcT6vwslh8kN8wH']
+2023-06-23 10:24:47,485 - logger - INFO - --- updating->False ---
+2023-06-23 10:24:47,486 - logger - INFO - Completed 1/2 profile for Emishianna Holmes
+2023-06-23 10:24:47,996 - logger - INFO - Updated local json file for Emishianna Holmes
+2023-06-23 10:26:44,612 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:26:45,668 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1YB-1Y4RByQY93ZhJ4pb3fGfrb5uywf6k
+2023-06-23 10:26:45,668 - logger - INFO - Creating Susan Wallis Lavon's Folder
+2023-06-23 10:26:45,708 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:26:46,427 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1WrpZAzq6TcO-0DUYg858WBAU2M37MOS8
+2023-06-23 10:26:46,427 - logger - INFO - Creating Kristine Terpanosyan's Folder
+2023-06-23 10:26:47,381 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:26:47,384 - logger - INFO - --- updating->True ---
+2023-06-23 10:26:47,442 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:26:48,107 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1EPdaHjg3n0Jt4s0b-6lVvGIDnBYRWd3c
+2023-06-23 10:26:48,107 - logger - INFO - Creating Katie Tevere's Folder
+2023-06-23 10:26:48,166 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:26:49,074 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1pZ1QXICHIh2blNHKVlWkW8bZrC1Mqa7S
+2023-06-23 10:26:49,075 - logger - INFO - Creating Emishianna Holmes's Folder
+2023-06-23 10:26:49,114 - logger - INFO - Parents are: ['1nYuCx1tksAgfMii0ALYow4wnaOyk6ewI'] for role: Recruiter
+2023-06-23 10:26:49,843 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1m56n4mh6hOi5VzwdlOzyAPIHio4HG0ut
+2023-06-23 10:26:49,843 - logger - INFO - Creating Joshua Illingworth's Folder
+2023-06-23 10:26:50,052 - logger - INFO - Downloading Resume for: Susan Wallis Lavon
+2023-06-23 10:26:52,603 - logger - INFO - File ID: 12pxtDYeTjOWER89PKj4FGQ63hy574DFW
+2023-06-23 10:26:52,603 - logger - INFO - Uploaded Resume Successfully to ['1YB-1Y4RByQY93ZhJ4pb3fGfrb5uywf6k']
+2023-06-23 10:26:53,126 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:26:53,127 - logger - INFO - Completed 1/2 profile for Kristine Terpanosyan
+2023-06-23 10:26:53,590 - logger - INFO - Updated local json file for Kristine Terpanosyan
+2023-06-23 10:26:54,138 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:26:54,156 - logger - INFO - Completed 1/2 profile for Emishianna Holmes
+2023-06-23 10:26:54,480 - logger - INFO - Updated local json file for Emishianna Holmes
+2023-06-23 10:26:54,883 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:26:54,884 - logger - INFO - Completed 1/2 profile for Katie Tevere
+2023-06-23 10:26:55,306 - logger - INFO - Updated local json file for Katie Tevere
+2023-06-23 10:26:56,085 - logger - INFO - Updated Spreadsheet
+2023-06-23 10:26:56,086 - logger - INFO - Completed 1/2 profile for Joshua Illingworth
+2023-06-23 10:26:56,544 - logger - INFO - Updated local json file for Joshua Illingworth
+2023-06-23 10:26:57,705 - logger - INFO - Downloading Resume for: Joshua Illingworth
+2023-06-23 10:27:00,077 - logger - INFO - File ID: 1O6j3MS3IgJO1npC76taB5aP36I6iDJ0-
+2023-06-23 10:27:00,079 - logger - INFO - Uploaded Resume Successfully to ['1m56n4mh6hOi5VzwdlOzyAPIHio4HG0ut']
+2023-06-23 10:27:01,950 - logger - INFO - Downloading Resume for: Emishianna Holmes
+2023-06-23 10:27:04,316 - logger - INFO - File ID: 1dGlooFqOtb87_0sMDJOG8f_5pHT7Vt27
+2023-06-23 10:27:04,317 - logger - INFO - Uploaded Resume Successfully to ['1pZ1QXICHIh2blNHKVlWkW8bZrC1Mqa7S']
+2023-06-23 10:27:06,208 - logger - INFO - Downloading Resume for: Kristine Terpanosyan
+2023-06-23 10:27:08,643 - logger - INFO - File ID: 1t3cohKX599VAdDgfEtgKY4Ij3oxF_ufq
+2023-06-23 10:27:08,643 - logger - INFO - Uploaded Resume Successfully to ['1WrpZAzq6TcO-0DUYg858WBAU2M37MOS8']
+2023-06-23 10:27:10,790 - logger - INFO - Downloading Resume for: Susan Wallis Lavon
+2023-06-23 10:27:13,038 - logger - INFO - File ID: 1yu7KmV5Ho5s5Oopl5CrYfyyApUr0uFaY
+2023-06-23 10:27:13,039 - logger - INFO - Uploaded Resume Successfully to ['1YB-1Y4RByQY93ZhJ4pb3fGfrb5uywf6k']
+2023-06-23 10:27:14,807 - logger - INFO - --- updating->False ---
+2023-06-23 10:27:14,807 - logger - INFO - Completed 1/2 profile for Susan Wallis Lavon
+2023-06-23 10:27:15,365 - logger - INFO - Updated local json file for Susan Wallis Lavon
+2023-06-23 10:31:37,445 - logger - INFO - Started Server
+2023-06-28 13:23:07,883 - logger - INFO - Started Server
+2023-06-28 13:23:49,829 - logger - INFO - Started Server
+2023-06-28 13:24:36,085 - logger - INFO - Started Server
+2023-06-28 13:25:44,995 - logger - INFO - Started Server
+2023-06-28 13:25:51,226 - logger - INFO - --- working->True ---
+2023-06-28 13:25:52,858 - logger - INFO - Successfully Set Column Variables
+2023-06-28 13:25:52,859 - logger - INFO - Opening Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 13:25:52,867 - logger - INFO - --- working->False ---
+2023-06-28 13:26:40,503 - logger - INFO - Started Server
+2023-06-28 13:26:42,216 - logger - INFO - --- working->True ---
+2023-06-28 13:26:43,568 - logger - INFO - Successfully Set Column Variables
+2023-06-28 13:26:43,568 - logger - INFO - Opening Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 13:26:43,580 - logger - INFO - --- working->False ---
+2023-06-28 13:26:46,985 - logger - INFO - Started Server
+2023-06-28 13:29:20,008 - logger - INFO - Started Server
+2023-06-28 13:29:23,444 - logger - INFO - --- working->True ---
+2023-06-28 13:29:24,942 - logger - INFO - Successfully Set Column Variables
+2023-06-28 13:29:24,942 - logger - INFO - Opening Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 13:29:25,135 - logger - INFO - --- working->False ---
+2023-06-28 13:30:53,331 - logger - INFO - Started Server
+2023-06-28 13:31:02,485 - logger - INFO - --- working->True ---
+2023-06-28 13:31:03,908 - logger - INFO - Successfully Set Column Variables
+2023-06-28 13:31:04,067 - logger - INFO - Failed to open link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 13:31:04,067 - logger - INFO - --- working->False ---
+2023-06-28 13:31:32,396 - logger - INFO - Started Server
+2023-06-28 13:31:36,704 - logger - INFO - --- working->True ---
+2023-06-28 13:31:37,988 - logger - INFO - Successfully Set Column Variables
+2023-06-28 13:31:38,269 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 13:31:38,270 - logger - INFO - --- working->False ---
+2023-06-28 13:33:38,729 - logger - INFO - Started Server
+2023-06-28 13:33:55,653 - logger - INFO - --- Server is Now busy ---
+2023-06-28 13:33:57,270 - logger - INFO - Successfully Set Column Variables
+2023-06-28 13:33:57,512 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 13:33:57,513 - logger - INFO - --- Server is Now not busy ---
+2023-06-28 13:34:57,384 - logger - INFO - Started Server
+2023-06-28 13:35:07,811 - logger - INFO - Started Server
+2023-06-28 13:35:29,478 - logger - INFO - --- Server is busy ---
+2023-06-28 13:35:30,795 - logger - INFO - Successfully Set Column Variables
+2023-06-28 13:35:31,058 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 13:35:31,058 - logger - INFO - --- Server is not busy ---
+2023-06-28 13:35:41,699 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 13:35:42,818 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1cDtCVQ5upH-wx5RFX0uzVossoo3kAapX
+2023-06-28 13:35:42,818 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-28 13:35:42,946 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 13:35:43,766 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1v_Wte4tJFWWSA-n1KZvZj_IRsYLJtjba
+2023-06-28 13:35:43,766 - logger - INFO - Creating Kayla Corcuera's Folder
+2023-06-28 13:35:45,684 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 13:35:46,736 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1OKx8wCCLYHVnyu_ggIfTzpm8O3N9GN7w
+2023-06-28 13:35:46,736 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-28 13:35:47,617 - logger - INFO - Updated Spreadsheet
+2023-06-28 13:35:47,619 - logger - INFO - --- updating->True ---
+2023-06-28 13:35:48,151 - logger - INFO - Updated Spreadsheet
+2023-06-28 13:35:48,152 - logger - INFO - Completed 1/2 profile for Simona Melandovich
+2023-06-28 13:35:48,777 - logger - INFO - Updated local json file for Simona Melandovich
+2023-06-28 13:35:48,961 - logger - INFO - Downloading Resume for: Simona Melandovich
+2023-06-28 13:35:51,240 - logger - INFO - File ID: 1Hz3SP7DMgd5n5s3ZLocNyt5NKJoN8Oc2
+2023-06-28 13:35:51,241 - logger - INFO - Uploaded Resume Successfully to ['1cDtCVQ5upH-wx5RFX0uzVossoo3kAapX']
+2023-06-28 13:35:51,764 - logger - INFO - Updated Spreadsheet
+2023-06-28 13:35:51,768 - logger - INFO - Completed 1/2 profile for Kristina McMillan
+2023-06-28 13:35:52,180 - logger - INFO - Updated local json file for Kristina McMillan
+2023-06-28 13:35:53,742 - logger - INFO - Downloading Resume for: Simona Melandovich
+2023-06-28 13:35:56,157 - logger - INFO - File ID: 12UJ-SK3g55JQkz_qc8jbqvmxnKMsvAUd
+2023-06-28 13:35:56,157 - logger - INFO - Uploaded Resume Successfully to ['1cDtCVQ5upH-wx5RFX0uzVossoo3kAapX']
+2023-06-28 13:35:58,177 - logger - INFO - Downloading Resume for: Kayla Corcuera
+2023-06-28 13:36:00,456 - logger - INFO - File ID: 1jUlGq7BcrIzg3fbu_Qz4omvodL0MUoZq
+2023-06-28 13:36:00,457 - logger - INFO - Uploaded Resume Successfully to ['1v_Wte4tJFWWSA-n1KZvZj_IRsYLJtjba']
+2023-06-28 13:36:01,825 - logger - INFO - --- updating->False ---
+2023-06-28 13:36:01,825 - logger - INFO - Completed 1/2 profile for Kayla Corcuera
+2023-06-28 13:36:02,305 - logger - INFO - Updated local json file for Kayla Corcuera
+2023-06-28 17:34:54,851 - logger - INFO - Started Server
+2023-06-28 17:40:58,258 - logger - INFO - Started Server
+2023-06-28 17:43:05,873 - logger - INFO - Started Server
+2023-06-28 17:44:00,602 - logger - INFO - Started Server
+2023-06-28 17:45:18,829 - logger - INFO - Started Server
+2023-06-28 17:46:30,230 - logger - INFO - --- Server is busy ---
+2023-06-28 17:46:32,761 - logger - INFO - Successfully Set Column Variables
+2023-06-28 17:46:33,026 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 17:46:33,026 - logger - INFO - --- Server is not busy ---
+2023-06-28 17:49:25,340 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 17:49:26,392 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/16Iagq-ogyTbFgnr62c_W3YjwL7IsqEwK
+2023-06-28 17:49:26,392 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-28 17:49:27,805 - logger - INFO - Updated Spreadsheet
+2023-06-28 17:49:27,805 - logger - INFO - Completed 1/2 profile for Simona Melandovich
+2023-06-28 17:49:29,325 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 17:49:31,223 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1eOLygH_MgMbRMsFyunBzB0LI1DliO0cp
+2023-06-28 17:49:31,224 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-28 17:49:32,488 - logger - INFO - Updated Spreadsheet
+2023-06-28 17:49:32,488 - logger - INFO - Completed 1/2 profile for Kristina McMillan
+2023-06-28 17:49:32,958 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 17:49:33,950 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1DCwh_Y3FhwZbGNXtO-cA9kGp745c9LyI
+2023-06-28 17:49:33,951 - logger - INFO - Creating Kayla Corcuera's Folder
+2023-06-28 17:49:35,253 - logger - INFO - Updated Spreadsheet
+2023-06-28 17:49:35,255 - logger - INFO - Completed 1/2 profile for Kayla Corcuera
+2023-06-28 17:51:09,166 - logger - INFO - Started Server
+2023-06-28 17:51:27,673 - logger - INFO - Started Server
+2023-06-28 17:52:49,981 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 17:52:50,918 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/18oDSVYJLR1Bpikhj60xTQU8jQrsosSwM
+2023-06-28 17:52:50,918 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-28 17:52:52,403 - logger - INFO - Updated Spreadsheet
+2023-06-28 17:52:52,404 - logger - INFO - Completed 1/2 profile for Simona Melandovich
+2023-06-28 17:53:16,096 - logger - INFO - Started Server
+2023-06-28 18:04:18,736 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 18:04:20,036 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1jE2PwOS_w7Mhf-aDHNki5pgWJrY5i0k5
+2023-06-28 18:04:20,036 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-28 18:04:24,648 - logger - INFO - Updated Spreadsheet
+2023-06-28 18:04:24,649 - logger - INFO - Completed 1/2 profile for Simona Melandovich
+2023-06-28 18:04:25,568 - logger - INFO - Updated local json file for Simona Melandovich
+2023-06-28 18:04:25,570 - logger - INFO - --- updating->True ---
+2023-06-28 18:04:42,918 - logger - INFO - Started Server
+2023-06-28 18:09:56,300 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 18:09:57,266 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ZmvkyWGQFThs_1j-Z4hEP10wOPLswnHF
+2023-06-28 18:09:57,267 - logger - INFO - Creating Kayla Corcuera's Folder
+2023-06-28 18:10:01,804 - logger - INFO - Updated Spreadsheet
+2023-06-28 18:10:01,804 - logger - INFO - Completed 1/2 profile for Kayla Corcuera
+2023-06-28 18:10:02,574 - logger - INFO - Updated local json file for Kayla Corcuera
+2023-06-28 18:16:48,471 - logger - INFO - Started Server
+2023-06-28 18:18:39,669 - logger - INFO - --- Server is busy ---
+2023-06-28 18:18:41,541 - logger - INFO - Successfully Set Column Variables
+2023-06-28 18:18:41,837 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-28 18:18:41,837 - logger - INFO - --- Server is not busy ---
+2023-06-28 18:19:03,846 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 18:19:05,101 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/10HclLQlTc789IIS_eo4uNoHGJC0lQpa0
+2023-06-28 18:19:05,102 - logger - INFO - Creating Kayla Corcuera's Folder
+2023-06-28 18:19:05,188 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 18:19:06,020 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1umkb9KcTVb-taEGgF8GqiSby784poDMD
+2023-06-28 18:19:06,020 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-28 18:19:06,306 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-28 18:19:07,249 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1s7nqH2bJuquu5JxyNd8X4NjffmUfokpz
+2023-06-28 18:19:07,249 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-28 18:19:08,171 - logger - INFO - Updated Spreadsheet
+2023-06-28 18:19:08,171 - logger - INFO - Completed 1/2 profile for Kayla Corcuera
+2023-06-28 18:19:08,827 - logger - INFO - Updated local json file for Kayla Corcuera
+2023-06-28 18:31:01,202 - logger - INFO - Started Server
+2023-06-29 11:47:17,770 - logger - INFO - --- Server is busy ---
+2023-06-29 11:47:21,247 - logger - INFO - Successfully Set Column Variables
+2023-06-29 11:47:21,448 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=be7568c964b4&statusName=0
+2023-06-29 11:47:21,448 - logger - INFO - --- Server is not busy ---
+2023-06-29 11:49:47,035 - logger - INFO - Started Server
+2023-06-29 11:50:13,208 - logger - INFO - Started Server
+2023-06-29 11:50:16,197 - logger - INFO - Started Server
+2023-06-29 11:52:41,036 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 11:52:42,518 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/11je4bqYqqv5tfzHyY18id841j9L-BaCq
+2023-06-29 11:52:42,519 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-29 11:52:48,450 - logger - INFO - Updated Spreadsheet
+2023-06-29 11:52:48,452 - logger - INFO - Completed 1/2 profile for Simona Melandovich
+2023-06-29 11:52:49,121 - logger - INFO - Updated local json file for Simona Melandovich
+2023-06-29 11:55:42,662 - logger - INFO - Started Server
+2023-06-29 11:56:26,026 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 11:56:27,124 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Wi7MKfthdv4iO8_BoRc4ZaqESL60zX1e
+2023-06-29 11:56:27,125 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-29 11:56:27,174 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 11:56:27,999 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1AQ_uNm732eksaC1krWkJzRB6h9Zvu9nv
+2023-06-29 11:56:28,000 - logger - INFO - Creating JULIANA ISAYEVA's Folder
+2023-06-29 11:56:28,045 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 11:56:28,686 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/16_dnjmsOH2AkXkoZMOhFP-zg8eqUvyth
+2023-06-29 11:56:28,686 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-29 11:56:28,718 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 11:56:29,486 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1RFVA1j1d4i0III4WKLKCnQJ2QkoRGYI8
+2023-06-29 11:56:29,486 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-29 11:56:30,507 - logger - INFO - Updated Spreadsheet
+2023-06-29 11:56:30,507 - logger - INFO - Completed 1/2 profile for JULIANA ISAYEVA
+2023-06-29 11:56:31,071 - logger - INFO - Updated local json file for JULIANA ISAYEVA
+2023-06-29 11:59:20,758 - logger - INFO - Started Server
+2023-06-29 11:59:23,479 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 11:59:24,368 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Yqn1Rr7GKZE8AS-pxZBEfgE5aIWeWXSE
+2023-06-29 11:59:24,368 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-29 11:59:26,735 - logger - INFO - Updated Spreadsheet
+2023-06-29 11:59:26,737 - logger - INFO - Completed 1/2 profile for Kristina McMillan
+2023-06-29 11:59:27,294 - logger - INFO - Updated local json file for Kristina McMillan
+2023-06-29 12:07:40,400 - logger - INFO - Started Server
+2023-06-29 12:07:43,924 - logger - INFO - Started Server
+2023-06-29 12:07:57,727 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 12:07:58,600 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1CF_RiwibiSIfyVsP7nSx6tCueVSPT8O5
+2023-06-29 12:07:58,600 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-29 12:08:02,462 - logger - INFO - Updated Spreadsheet
+2023-06-29 12:08:02,462 - logger - INFO - Completed 1/2 profile for Kristina McMillan
+2023-06-29 12:08:03,074 - logger - INFO - Updated local json file for Kristina McMillan
+2023-06-29 12:11:14,665 - logger - INFO - Started Server
+2023-06-29 12:11:41,383 - logger - INFO - Started Server
+2023-06-29 12:19:23,205 - logger - INFO - Started Server
+2023-06-29 12:19:33,497 - logger - INFO - Started Server
+2023-06-29 12:19:36,927 - logger - INFO - Started Server
+2023-06-29 12:19:55,388 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 12:19:56,517 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1pLLqrBpVPmG4oa1dk_oKLLCiz04CSEO9
+2023-06-29 12:19:56,517 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-29 12:20:01,732 - logger - INFO - Updated Spreadsheet
+2023-06-29 12:20:01,732 - logger - INFO - Completed 1/2 profile for Kristina McMillan
+2023-06-29 12:20:02,240 - logger - INFO - Updated local json file for Kristina McMillan
+2023-06-29 12:20:46,347 - logger - INFO - Started Server
+2023-06-29 12:21:20,168 - logger - INFO - Started Server
+2023-06-29 12:22:33,874 - logger - INFO - Started Server
+2023-06-29 12:22:48,444 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 12:22:49,098 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1xRZrVch7nWtCGyv5exuKERMLP9ZD2OOr
+2023-06-29 12:22:49,098 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-29 12:22:50,479 - logger - INFO - Updated Spreadsheet
+2023-06-29 12:22:50,479 - logger - INFO - Completed 1/2 profile for Kristina McMillan
+2023-06-29 12:22:50,933 - logger - INFO - Updated local json file for Kristina McMillan
+2023-06-29 12:23:13,706 - logger - INFO - Started Server
+2023-06-29 12:24:46,636 - logger - INFO - Started Server
+2023-06-29 12:26:28,418 - logger - INFO - Started Server
+2023-06-29 12:28:18,605 - logger - INFO - Started Server
+2023-06-29 12:28:42,278 - logger - INFO - Started Server
+2023-06-29 12:28:43,727 - logger - INFO - Started Server
+2023-06-29 12:28:45,499 - logger - INFO - Started Server
+2023-06-29 12:29:02,207 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 12:29:03,285 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1oUlwE5mD3FxzJZ-SbyRC8l_LeN8NPynZ
+2023-06-29 12:29:03,286 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-29 12:29:07,712 - logger - INFO - Updated Spreadsheet
+2023-06-29 12:29:07,712 - logger - INFO - Completed 1/2 profile for Kristina McMillan
+2023-06-29 12:29:08,140 - logger - INFO - Updated local json file for Kristina McMillan
+2023-06-29 12:31:38,473 - logger - INFO - Started Server
+2023-06-29 12:31:40,743 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 12:31:41,807 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1eQMfSxT3bqCU1yH0n64Womkz6OmriHxJ
+2023-06-29 12:31:41,807 - logger - INFO - Creating Kristina McMillan's Folder
+2023-06-29 12:31:43,235 - logger - INFO - Updated Spreadsheet
+2023-06-29 12:31:43,236 - logger - INFO - Completed 1/2 profile for Kristina McMillan
+2023-06-29 12:31:43,663 - logger - INFO - Updated local json file for Kristina McMillan
+2023-06-29 12:31:43,664 - logger - INFO - --- updating->True ---
+2023-06-29 12:31:44,160 - logger - INFO - Downloading Resume for: Kristina McMillan
+2023-06-29 12:31:46,926 - logger - INFO - File ID: 1XYEKYp9uOWX2WDb46T87oOMgM4sFT_UZ
+2023-06-29 12:31:46,926 - logger - INFO - Uploaded Resume Successfully to ['1eQMfSxT3bqCU1yH0n64Womkz6OmriHxJ']
+2023-06-29 12:31:48,872 - logger - INFO - Downloading Resume for: Kristina McMillan
+2023-06-29 12:31:51,120 - logger - INFO - File ID: 1YrKOzpBN-r4fFq8ELCZBq_qT1pyNfZLz
+2023-06-29 12:31:51,120 - logger - INFO - Uploaded Resume Successfully to ['1oUlwE5mD3FxzJZ-SbyRC8l_LeN8NPynZ']
+2023-06-29 12:31:55,104 - logger - INFO - Downloading Resume for: Kristina McMillan
+2023-06-29 12:31:57,304 - logger - INFO - File ID: 1CUWLPeGVI2eZUYFnquHqwapMOomhKQA_
+2023-06-29 12:31:57,305 - logger - INFO - Uploaded Resume Successfully to ['1pLLqrBpVPmG4oa1dk_oKLLCiz04CSEO9']
+2023-06-29 12:31:59,270 - logger - INFO - Downloading Resume for: Kristina McMillan
+2023-06-29 12:32:01,565 - logger - INFO - File ID: 1r_86GOPZKbhcJcGVbiBvIImBq9RAhBxe
+2023-06-29 12:32:01,566 - logger - INFO - Uploaded Resume Successfully to ['1CF_RiwibiSIfyVsP7nSx6tCueVSPT8O5']
+2023-06-29 13:03:19,956 - logger - INFO - Started Server
+2023-06-29 13:03:19,963 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 13:03:20,582 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1XkiWi3BzIa2sAKnhgXdrEBWpJGzLOWrV
+2023-06-29 13:03:20,583 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-29 13:03:22,097 - logger - INFO - Updated Spreadsheet
+2023-06-29 13:03:22,098 - logger - INFO - Completed 1/2 profile for Simona Melandovich
+2023-06-29 13:03:22,558 - logger - INFO - Updated local json file for Simona Melandovich
+2023-06-29 13:03:22,559 - logger - INFO - --- updating->True ---
+2023-06-29 13:03:23,087 - logger - INFO - Downloading Resume for: Simona Melandovich
+2023-06-29 13:03:25,461 - logger - INFO - File ID: 1-BzvXc3HnN3bXmCsc12oAnYbdw0K1CBl
+2023-06-29 13:03:25,462 - logger - INFO - Uploaded Resume Successfully to ['1XkiWi3BzIa2sAKnhgXdrEBWpJGzLOWrV']
+2023-06-29 13:03:27,012 - logger - INFO - --- updating->False ---
+2023-06-29 13:04:11,485 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 13:04:12,145 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Z1htJTYBmBK7H6nu1b6ZMHrZhvV19Pis
+2023-06-29 13:04:12,145 - logger - INFO - Creating None's Folder
+2023-06-29 13:04:13,347 - logger - INFO - Updated Spreadsheet
+2023-06-29 13:04:13,347 - logger - INFO - Completed 1/2 profile for None
+2023-06-29 13:04:13,891 - logger - INFO - Updated local json file for None
+2023-06-29 13:04:13,892 - logger - INFO - --- updating->True ---
+2023-06-29 13:04:14,481 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-06-29 13:04:15,245 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1p6WxkMJ43VNZEFOQq04BXeArhwg5GEHs
+2023-06-29 13:04:15,245 - logger - INFO - Creating Simona Melandovich's Folder
+2023-06-29 13:04:16,495 - logger - INFO - Updated Spreadsheet
+2023-06-29 13:04:16,495 - logger - INFO - Completed 1/2 profile for Simona Melandovich
+2023-06-29 13:04:16,922 - logger - INFO - Updated local json file for Simona Melandovich
+2023-06-29 13:04:45,033 - logger - INFO - --- updating->True ---
+2023-06-29 13:04:45,642 - logger - INFO - Downloading Resume for: Simona Melandovich
+2023-06-29 13:04:47,945 - logger - INFO - File ID: 1-cRaqERMgcZjr68STCDC8nVI3ZSYvWpO
+2023-06-29 13:04:47,946 - logger - INFO - Uploaded Resume Successfully to ['1p6WxkMJ43VNZEFOQq04BXeArhwg5GEHs']
+2023-06-29 13:04:48,070 - logger - INFO - Downloading Resume for: Simona Melandovich
+2023-06-29 13:04:50,403 - logger - INFO - File ID: 1GYgQF3QNDB3K7PrNP7NEh_hBq_hnmazS
+2023-06-29 13:04:50,403 - logger - INFO - Uploaded Resume Successfully to ['1p6WxkMJ43VNZEFOQq04BXeArhwg5GEHs']
+2023-06-29 13:04:51,607 - logger - INFO - --- updating->False ---
+2023-06-29 13:04:51,829 - logger - INFO - --- updating->False ---

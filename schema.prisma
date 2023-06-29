@@ -1,13 +1,13 @@
-datasource db {
-  provider          = "postgresql"
-  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
-  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
-}
-
 generator client {
   provider             = "prisma-client-py"
-  recursive_type_depth = 5
+  recursive_type_depth = "5"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL")
+  directUrl         = env("POSTGRES_URL_NON_POOLING")
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model User {
@@ -21,18 +21,19 @@ model idmap {
 }
 
 model working_table {
-  id          Int    @id @default(autoincrement())
-  name        String @db.VarChar(255)
-  parent_id   String @db.VarChar(255)
-  resume_link String @db.VarChar(255)
-  date        String @db.VarChar(255)
-  status      Int
+  id              Int    @id @default(autoincrement())
+  status          Int
+  name            String @db.VarChar(255)
+  parent_id       String @db.VarChar(255)
+  job_destination String @db.VarChar(255)
+  date            String @db.VarChar(255)
+  resume_link     String @db.VarChar(255)
 }
 
 model history {
   id              Int    @id @default(autoincrement())
-  name            String @db.VarChar(255)
   job_destination String @db.VarChar(255)
   date            String @db.VarChar(255)
+  name            String @db.VarChar(255)
   status          Int
 }

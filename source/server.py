@@ -5,6 +5,7 @@ from email_handler import process_message, updateCandidateExistence, decideToken
 
 from pydantic import BaseModel
 import os
+import sys
 import json
 import base64
 from fastapi import FastAPI
@@ -28,8 +29,10 @@ origins = [
     "http://localhost:3001",
     "http://localhost:3000",
     "https://www.vrinaldi.com",
-    "https://vrinaldi.com"
-
+    "https://vrinaldi.com",
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:8000/submitdata",
+    "https://127.0.0.1:8000"
 ]
 
 app.add_middleware(
@@ -45,11 +48,25 @@ class textData(BaseModel):
     category_texts: str
 
 
+# def receive_signal(signalNumber, frame):
+#     print('Received:', signalNumber)
+#     sys.exit()
+
+
+# @app.on_event("startup")
+# async def startup_event():
+#     import signal
+#     print("startup")
+#     signal.signal(signal.SIGINT, receive_signal)
+#     # startup tasks
+
+
 def openstring(data: Data):
-    logger.info(f"Opening Link: {data.link}")
-    cmd = 'start chrome {}'.format(data.link)  # OPEN chrome
-    if os.system(cmd) != 0:
-        return False
+    cmd = 'open -a "Google Chrome"  \"{}\"'.format(data.link)  # OPEN chrome
+    if os.system(cmd) == 0:
+        logger.info(f"Successfully Opened Link: {data.link}")
+    else:
+        logger.info(f"Failed to open link: {data.link}")
 
 
 @app.post('/runfunction')
@@ -197,5 +214,18 @@ async def submit_candidate(candidateData: candidateData):
 
     # Log
     logger.info(f'Updated local json file for {candidateData.name}')
+
+    # Check whether or not we are already working on finishing resume downloads, always try to call.
+    while (1):
+        if not await checkIsUpdating():
+            await setIsUpdating(True)
+            # await finishHalfAdd(candidateData, data, title)
+            finished = False
+            while (not finished):
+                finished = await finishHalfAdd(candidateData, data, "TEMPORARY TITLE")
+                print(f"finished is: {finished}")
+            await setIsUpdating(False)
+            break
+        time.sleep(1)
 
     return {"message": "Success"}

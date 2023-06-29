@@ -1,38 +1,24 @@
-import asyncio
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 
-class NewFileEventHandler(FileSystemEventHandler):
+class FileCreatedHandler(FileSystemEventHandler):
     def __init__(self, directory):
-        super().__init__()
         self.directory = directory
-        self.event = asyncio.Event()
+        self.file_created = False
 
     def on_created(self, event):
-        if not event.is_directory and event.src_path.startswith(self.directory):
-            self.event.set()
+        if not event.is_directory:
+            self.file_created = True
 
+    def wait_for_file_creation(self):
+        observer = Observer()
+        observer.schedule(self, self.directory, recursive=False)
+        observer.start()
 
-async def await_new_file(directory):
-    event_handler = NewFileEventHandler(directory)
-    observer = Observer()
-    observer.schedule(event_handler, directory, recursive=False)
-    observer.start()
+        while not self.file_created:
+            time.sleep(1)
 
-    try:
-        while True:
-            await event_handler.event.wait()
-            event_handler.event.clear()
-            # Do something with the new file
-            print("New file added!")
-    except KeyboardInterrupt:
         observer.stop()
-
-    observer.join()
-
-
-# Example usage
-# directory_to_watch = '/path/to/directory'
-# asyncio.run(await_new_file(directory_to_watch))
+        observer.join()

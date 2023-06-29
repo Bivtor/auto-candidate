@@ -136,7 +136,9 @@ def setWorking(b: bool) -> bool:
         data = json.load(f)
     data['isWorking'] = b
     with open(WORKING_PATH, "w") as outfile:
-        logger.info(f"--- working->{b} ---")  # Log working status change
+        # Log working status change
+        busy = "busy" if b else "not busy"
+        logger.info(f"--- Server is {busy} ---")
         json.dump(data, outfile)
 
 
@@ -147,7 +149,7 @@ def checkWorking() -> bool:
     return json_check['isWorking']
 
 
-def upload_basic(title, parents, path):
+async def upload_basic(title, parents, path):
     """Insert new file.
     Returns : Id's of the file uploaded
 
@@ -170,7 +172,7 @@ def upload_basic(title, parents, path):
         file = service.files().create(body=file_metadata, media_body=media,
                                       fields='id').execute()
         logger.info(f'File ID: {file.get("id")}')
-        logger.info("Uploaded Resume Successfully")
+        logger.info(f"Uploaded Resume Successfully to {parents}")
         return file.get('id')
 
     except HttpError as error:
@@ -1134,7 +1136,8 @@ def create_candidate(candidateData: candidateData, data):
                                 category, candidateData.location)
 
     # Clean up Date
-    candidateData.date = cleanupdate(candidateData.date, candidateData.source)
+    candidateData.date = cleanupdate(
+        candidateData.date, candidateData.source)
 
     # Fix Phone Number and Email (Indeed Only)
     time.sleep(2)
@@ -1291,7 +1294,7 @@ def parse_resume(data: candidateData):
     # Get the directory of target file (Latest in folder )
 
     # PC Dir
-    list_of_files = glob.glob("N:\Downloads2\*")
+    list_of_files = glob.glob(DOWNLOAD_PATH)
     # Mac Dir (Testing)
     # list_of_files = glob.glob("/Users/victorrinaldi/Desktop/auto_candidate/resumes/*")
 
