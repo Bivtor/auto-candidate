@@ -1417,6 +1417,7 @@ def cleanupdate(date: str, source: str):
 
     # If the source is indeed do this
     elif source == "Indeed":
+        
         date_obj = datetime.strptime(date, '%b %d, %Y')
         return date_obj.strftime('%m/%d/%Y')
 
@@ -1742,7 +1743,7 @@ def sendmailtexts(data: Data):
                     "[candidate_name]", name)  # This was broken before
 
                 # If we decide to send a message
-                if shouldSendMessageNotXs(data, values):
+                if shouldSendMessageXs(data, values):
 
                     # Update the times we have sent a message to this person
                     if values[timesContactedCol] == '':
