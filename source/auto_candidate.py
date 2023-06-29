@@ -891,13 +891,21 @@ def create_file_PodcastProducers(data :candidateData, parents, title):
                         'location': {
                             'index': len(header),
                         },
+                        'text': inputName,
+                    }
+                },
+                {
+                    'insertText': {
+                        'location': {
+                            'index': len(header) + len(inputName),
+                        },
                         'text': inputDate,
                     }
                 },
                 {
                     'insertText': {
                         'location': {
-                            'index': len(inputDate)+len(header),
+                            'index': len(inputDate)+len(header) + len(inputName),
                         },
                         'text': inputDateInterviewed
                     }
@@ -905,15 +913,7 @@ def create_file_PodcastProducers(data :candidateData, parents, title):
                 {
                     'insertText': {
                         'location': {
-                            'index': len(inputDateInterviewed) + len(inputDate) + len(header),
-                        },
-                        'text': inputLocation
-                    }
-                },
-                {
-                    'insertText': {
-                        'location': {
-                            'index': len(inputDateInterviewed) + len(inputDate) + len(header) + len(inputLocation)
+                            'index': len(inputDateInterviewed) + len(inputDate) + len(header) + len(inputName)
                         },
                         'text': bigString
                     }
@@ -935,7 +935,7 @@ def create_file_PodcastProducers(data :candidateData, parents, title):
                     'updateParagraphStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex': len(inputDateInterviewed) + len(inputDate) + len(inputLocation) + len(bigString)
+                            'endIndex': len(inputDateInterviewed) + len(inputDate)  + len(inputName) + len(bigString)
                         },
                         'paragraphStyle': {
                             'spaceAbove': {
