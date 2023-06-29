@@ -3,10 +3,10 @@ import os
 import json
 import base64
 from dotenv import load_dotenv
+from paths import *
 
 
-from auto_candidate import DEFAULT_SHEET_DEST,JOBMAP_PATH,SPREADSHEET_ID, NAMES_PATH,creds, build, HttpError, Data, SETTINGS_PATH, logger, WORKING_PATH, ENV_PATH
-from auto_candidate import checkSheetNameValidity, setColumnVariables, setWorking, checkWorking
+from auto_candidate import *
 
 load_dotenv(dotenv_path=ENV_PATH)
 
