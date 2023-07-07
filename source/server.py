@@ -51,7 +51,7 @@ def openstring(data: Data):
 
 
 @app.post('/runfunction')
-def createUsers(candidateData: candidateData):
+def runfunction(candidateData: candidateData):
     f = open(SETTINGS_PATH)
     data = json.load(f)
     # Add candidate with saved data
@@ -94,7 +94,8 @@ def submitdata(data: Data):
     if ((not data.isFolder) and (not data.isSheet)):
         logger.info("Folder or Sheet name does not exactly match category")
         setWorking(False)
-        return "Folder or Sheet name does not exactly match category"
+        return ResponseModel(response="Folder or Sheet name does not exactly match the category you are trying to target")
+
 
     # Set Variables
     setColumnVariables(data)
@@ -113,7 +114,7 @@ def submitdata(data: Data):
     # Stop Working
     setWorking(False)
 
-    return ResponseModel(response="Success")
+    return ResponseModel(response="Successfully opened link, attempting to add candidates...")
 
 
 class MailData(BaseModel):
@@ -121,7 +122,7 @@ class MailData(BaseModel):
 
 
 @app.post('/retrieve_email')
-def createUsers(data: MailData):
+def retrieve_email(data: MailData):
     # Decode message
     response = base64.b64decode(data.message['data'])
 

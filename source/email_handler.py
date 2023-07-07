@@ -304,7 +304,7 @@ def decideTokenRefresh(path: str):
         data = json.load(f)
         
     # Check if shouldUpdate mod 5 == 0
-    if data['shouldUpdate'] % 5 == 0:
+    if data['shouldUpdate'] % 30 == 0:
         # Call publish function if condition is true
         logger.info("Decided to refresh Gmail token")
         pushMailToUs()

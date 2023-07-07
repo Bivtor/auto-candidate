@@ -835,7 +835,8 @@ def create_file_Therapist(data, parents, title):
         logger.error(F'An error occurred: {error}')
         file = None
 
-def create_file_PodcastProducers(data :candidateData, parents, title):
+
+def create_file_PodcastProducers(data: candidateData, parents, title):
     # create file
     try:
         # create drive api client
@@ -935,7 +936,7 @@ def create_file_PodcastProducers(data :candidateData, parents, title):
                     'updateParagraphStyle': {
                         'range': {
                             'startIndex': 1,
-                            'endIndex': len(inputDateInterviewed) + len(inputDate)  + len(inputName) + len(bigString)
+                            'endIndex': len(inputDateInterviewed) + len(inputDate) + len(inputName) + len(bigString)
                         },
                         'paragraphStyle': {
                             'spaceAbove': {
@@ -963,6 +964,7 @@ def create_file_PodcastProducers(data :candidateData, parents, title):
     except HttpError as error:
         logger.error(F'An error occurred: {error}')
         file = None
+
 
 def create_file_FrontDeskReceptionist(data, parents, title):
     # create file
@@ -1578,15 +1580,15 @@ def sendmailtexts(data: Data):
                 nameCol = data.positions.index("Name")
                 phoneCol = data.positions.index("Phone")
                 emailCol = data.positions.index("Email")
-                contactedCol = data.positions.index("Contacted")
-                timesContactedCol = data.positions.index("Times Contacted")
+                # contactedCol = data.positions.index("Contacted")
+                # timesContactedCol = data.positions.index("Times Contacted")
                 spokenToCol = data.positions.index("Spoken To")
                 massText = data.positions.index("Mass Text")
                 licenseCol = data.positions.index("License/Cert")
 
                 # Find max length of the row insertion we will need
                 max_length_row = max(nameCol, phoneCol, emailCol,
-                                     contactedCol, timesContactedCol, spokenToCol)+1
+                                      spokenToCol)+1
 
                 # If the length of the row is not as long as the furthest away category that we need to be inputting into, extend it
                 if len(values) < max_length_row:
@@ -1601,15 +1603,7 @@ def sendmailtexts(data: Data):
                     "[candidate_name]", name)  # This was broken before
 
                 # If we decide to send a message
-                if shouldSendMessageNotXs(data, values):
-
-                    # Update the times we have sent a message to this person
-                    if values[timesContactedCol] == '':
-
-                        values[timesContactedCol] = '1'
-                    else:
-                        values[timesContactedCol] = str(
-                            int(values[timesContactedCol])+1)
+                if shouldSendMessageXs(data, values):
 
                     # Send a text to the name / phone given
                     sendTwilioText(name=name, number=number,
@@ -1620,59 +1614,17 @@ def sendmailtexts(data: Data):
                                  category=data.category, mailsender=mailsender)
 
                     # Format for updating the cells for times contacted in Google Sheets
-                    updatedata = {
-                        'requests': [
-                            {
-                                "updateCells":
-                                {
-                                    "rows": [
-                                        {
-                                            "values": [
-                                                {
-                                                    "userEnteredValue": {"stringValue": values[contactedCol]}
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    "fields": 'userEnteredValue',
-                                    "start": {
-                                        "sheetId": data.sheetId,
-                                        "rowIndex": row-1,
-                                        "columnIndex": contactedCol
-                                    }
-                                }
-                            },
-                            {
-                                "updateCells":
-                                {
-                                    "rows": [
-                                        {
-                                            "values": [
-                                                {
-                                                    "userEnteredValue": {"stringValue": values[timesContactedCol]}
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    "fields": 'userEnteredValue',
-                                    "start": {
-                                        "sheetId": data.sheetId,
-                                        "rowIndex": row-1,
-                                        "columnIndex": timesContactedCol
-                                    }
-                                }
-                            },
-                        ]
-                    }
+            
 
                     # Send update
-                    request = service.spreadsheets().batchUpdate(
-                        spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
+                    # TODO REmoved when we got rid of the Contacted Col Count thing
+                    # request = service.spreadsheets().batchUpdate(
+                    #     spreadsheetId=SPREADSHEET_ID,  body=updatedata).execute()
                 else:
                     logger.info("Chose not to message {}".format(
                         values[nameCol]))
             except IndexError as err:
-                logger.error("\nFinished Texting and Emailing Candidaes")
+                logger.error("Finished Texting and Emailing Candidaes")
                 break
     except HttpError as err:
         logger.errorr(err)
@@ -1695,13 +1647,13 @@ def sendTwilioText(name: str, number: str, body: str):
         # Not writing json we dont care
         # write_json({"name": name, "body": message.body, "number": number,
         #            "date": str(date.today()), "messageID": message.sid, "failed": False})
-        logger.info("\nSent message to {} with number: {}".format(name, number))
+        logger.info("Sent message to {} with number: {}".format(name, number))
         return True
     except:
         # Not writing json we dont care
         # write_json({"name": name, "body": body,
         #            "number": number, "messageID": "null", "failed": True})
-        logger.info("\nCould not send message to: {} -> {}".format(
+        logger.info("Could not send message to: {} -> {}".format(
             name, number))
         return False
 
