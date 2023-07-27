@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from datetime import date, datetime
 from fuzzywuzzy import fuzz
 from paths import *
+from bs4 import BeautifulSoup
 
 import pathlib
 import time
@@ -15,7 +16,7 @@ import os.path
 import json
 import glob
 import re
-from bs4 import BeautifulSoup
+
 
 import requests
 
@@ -111,16 +112,20 @@ class Data(BaseModel):
 
 class candidateData(BaseModel):
     hasResume: bool | None
-    location: str
-    name: str
-    phone: str
-    email: str
-    date: str
-    pagelink: str
-    source: str
+    location: str | None
+    name: str | None
+    phone: str | None
+    email: str | None
+    date: str | None
+    pagelink: str | None
+    source: str | None
     license_cert: str | None
     license_expiration: str | None
     resume_download_link: str | None
+    candidate_folder_id: str | None
+    candidate_resume_id: str | None
+    candidate_document_id: str | None
+    title: str | None
 
 
 class License(BaseModel):
@@ -1140,8 +1145,8 @@ def create_candidate(candidateData: candidateData, data):
         candidateData.date, candidateData.source)
 
     # Fix Phone Number and Email (Indeed Only)
-    time.sleep(2)
-    parse_resume(candidateData)
+    # time.sleep(2)
+    # parse_resume(candidateData)
 
     SHEET_ID = data['sheetId']
     parents = [data['folderId']]  # misc default
@@ -1285,64 +1290,32 @@ def cleanupdate(date: str, source: str):
         return date_obj.strftime('%m/%d/%Y')
 
 
-def parse_resume(data: candidateData):
+def parse_resume(candidateData: candidateData, text):
 
     # Only do this for Indeed when a resume is present
-    if data.source != "Indeed" or (not data.hasResume):
+    if candidateData.source != "Indeed" or (not candidateData.hasResume):
+        logger.info(f"Choose not to parse resume for {candidateData.name}")
         return
 
-    # Get the directory of target file (Latest in folder )
-
-    # PC Dir
-    list_of_files = glob.glob(DOWNLOAD_PATH)
-    # Mac Dir (Testing)
-    # list_of_files = glob.glob("/Users/victorrinaldi/Desktop/auto_candidate/resumes/*")
-
-    # Target the newest file in the folder
-    directory = max(list_of_files, key=os.path.getctime)
-
     # Define regex Patterns
-    phone_regex = re.compile(r"\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}")
+    phone_regex = re.compile(r"\(?\d{3}\)?[-.\s]*?\d{3}[-.\s]*?\d{4}")
+
     email_regex = re.compile(
         r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b")
-
-    # Extract text for pdf or docx
-    text = ""
-    file_extension = pathlib.Path(directory).suffix.strip()
-
-    # If file type is Docx
-    if file_extension == '.docx':
-        doc = docx.Document(directory)
-        text = '\s'.join([para.text for para in doc.paragraphs])
-
-    else:  # Open the PDF if file type is NON docx
-        with open(directory, 'rb') as f:
-            # Create a PDF reader object
-            pdf_reader = PyPDF2.PdfReader(f)
-
-            # Get the number of pages in the PDF file
-            num_pages = len(pdf_reader.pages)
-
-            # Loop through all the pages and extract the text
-            for page in range(num_pages):
-                # Get the page object
-                pdf_page = pdf_reader.pages[page]
-                # Extract the text from the page
-                page_text = pdf_page.extract_text()
-                # Add the page text to the overall text variable
-                text += page_text
 
     # Use regular expressions to find phone numbers and emails in the text
     newPhone = phone_regex.findall(text)
     newEmail = email_regex.findall(text)
-    if len(newPhone) > 0:
-        data.phone = newPhone[0]
-    if len(newEmail) > 0:
-        data.email = newEmail[0]
 
-    # Log the results for the current PDF file
-    logger.info(
-        "Altered Phone/Email for: {} in directory: {}".format(data.name, directory))
+    # Update values if found
+    if len(newPhone) > 0:
+        candidateData.phone = newPhone[0]
+        logger.info(f"Updated {candidateData.name}'s Phone number")
+    if len(newEmail) > 0:
+        candidateData.email = newEmail[0]
+        logger.info(f"Updated {candidateData.name}'s Email number")
+
+    return
 
 
 def getLicenseInfo(name, depth) -> License:
@@ -1512,6 +1485,9 @@ def sendmailtexts(data: Data):
     """"
     Methods for deciding if we should send the text
     """
+
+    EMAIL_SOURCE = "Stephanie@solutionbasedtherapeutics.com"
+
     # Decide whether or not to send a text/email Function
     def shouldSendMessage(data: Data, values: dict) -> bool:
         """
@@ -1622,7 +1598,7 @@ def sendmailtexts(data: Data):
 
                     # Send an email to the given info
                     sendAWSEmail(name=name, email=email, body=body,
-                                 category=data.category, mailsender=mailsender)
+                                 category=data.category, mailsender=mailsender, source=EMAIL_SOURCE)
 
                     # Format for updating the cells for times contacted in Google Sheets
                     updatedata = {
@@ -1711,13 +1687,13 @@ def sendTwilioText(name: str, number: str, body: str):
         return False
 
 
-def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
+def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender, source: str):
     # Create destination type
     destination = SesDestination(tos=[email])
 
     # Send mail and log response
     mailsender.send_email(
-        destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="gabe@solutionbasedtherapeutics.com", html="", name=name, category=category, email=email)
+        destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source=source, html="", name=name, category=category, email=email)
 
 
 def checkSheetNameValidity(category: str, values: Data):
@@ -1737,6 +1713,7 @@ def checkSheetNameValidity(category: str, values: Data):
         sheetDict = dict()
         # Examine all of the pages we have in the Google Sheet (Recruitment-Prescreening)
         # Map each sheet name to the sheet ID
+
         for sheet in response.get('sheets'):
             s = sheet.get('properties')
             sheetDict[s.get('title')] = s.get('sheetId')

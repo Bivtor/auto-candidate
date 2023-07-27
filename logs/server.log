@@ -38863,3 +38863,717 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-06-29 13:04:50,403 - logger - INFO - Uploaded Resume Successfully to ['1p6WxkMJ43VNZEFOQq04BXeArhwg5GEHs']
 2023-06-29 13:04:51,607 - logger - INFO - --- updating->False ---
 2023-06-29 13:04:51,829 - logger - INFO - --- updating->False ---
+2023-07-07 16:24:41,072 - logger - INFO - Started Server
+2023-07-07 16:41:05,372 - logger - INFO - --- Server is busy ---
+2023-07-07 16:41:07,687 - logger - INFO - Successfully Set Column Variables
+2023-07-07 16:41:07,858 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=ec4bbc99f426&statusName=0
+2023-07-07 16:41:07,858 - logger - INFO - --- Server is not busy ---
+2023-07-07 16:43:47,275 - logger - INFO - Started Server
+2023-07-07 16:49:52,800 - logger - INFO - --- Server is busy ---
+2023-07-07 16:49:55,272 - logger - INFO - Successfully Set Column Variables
+2023-07-07 16:49:55,500 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=ec4bbc99f426&statusName=0
+2023-07-07 16:49:55,501 - logger - INFO - --- Server is not busy ---
+2023-07-07 16:52:27,369 - logger - INFO - Started Server
+2023-07-07 16:52:40,124 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-07-07 16:52:41,241 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/11R4c8Z1TKztnaADD2n0f9uMsJ0uBG9j4
+2023-07-07 16:52:41,241 - logger - INFO - Creating Calvin Paul Hebert-Lowery's Folder
+2023-07-07 16:53:04,037 - logger - INFO - Started Server
+2023-07-08 17:37:20,040 - logger - INFO - Started Server
+2023-07-08 17:43:00,811 - logger - INFO - Started Server
+2023-07-09 10:44:42,237 - logger - INFO - Started Server
+2023-07-09 10:45:42,132 - logger - INFO - Started Server
+2023-07-09 10:45:59,690 - logger - INFO - Started Server
+2023-07-09 10:46:32,105 - logger - INFO - Started Server
+2023-07-09 10:47:08,605 - logger - INFO - Started Server
+2023-07-09 10:47:27,916 - logger - INFO - Started Server
+2023-07-09 10:47:35,767 - logger - INFO - Started Server
+2023-07-09 10:49:55,081 - logger - INFO - Started Server
+2023-07-09 10:52:03,282 - logger - INFO - Started Server
+2023-07-09 10:52:23,735 - logger - INFO - Started Server
+2023-07-11 12:49:22,189 - logger - INFO - Started Server
+2023-07-11 12:49:41,940 - logger - INFO - --- Server is busy ---
+2023-07-11 12:49:44,128 - logger - INFO - Successfully Set Column Variables
+2023-07-11 12:50:46,396 - logger - INFO - Operation currently ongoing, cannot process, stopping
+2023-07-11 12:51:33,329 - logger - INFO - Operation currently ongoing, cannot process, stopping
+2023-07-11 12:51:48,339 - logger - INFO - Operation currently ongoing, cannot process, stopping
+2023-07-11 12:52:06,795 - logger - INFO - Started Server
+2023-07-11 12:52:10,730 - logger - INFO - Operation currently ongoing, cannot process, stopping
+2023-07-11 12:52:20,837 - logger - INFO - Started Server
+2023-07-11 12:52:37,261 - logger - INFO - Started Server
+2023-07-11 12:52:40,344 - logger - INFO - --- Server is busy ---
+2023-07-11 12:52:42,863 - logger - INFO - Successfully Set Column Variables
+2023-07-11 12:52:42,918 - logger - INFO - --- Server is not busy ---
+2023-07-11 12:53:04,033 - logger - INFO - --- Server is busy ---
+2023-07-11 12:53:06,517 - logger - INFO - Successfully Set Column Variables
+2023-07-11 12:53:06,520 - logger - INFO - --- Server is not busy ---
+2023-07-11 12:53:35,580 - logger - INFO - Started Server
+2023-07-11 12:53:37,059 - logger - INFO - --- Server is busy ---
+2023-07-11 12:53:39,077 - logger - INFO - Successfully Set Column Variables
+2023-07-11 12:53:39,109 - logger - INFO - --- Server is not busy ---
+2023-07-11 12:54:19,039 - logger - INFO - --- Server is busy ---
+2023-07-11 12:54:21,468 - logger - INFO - Successfully Set Column Variables
+2023-07-11 12:54:21,472 - logger - INFO - --- Server is not busy ---
+2023-07-12 06:29:31,684 - logger - INFO - Started Server
+2023-07-12 06:29:44,914 - logger - INFO - Started Server
+2023-07-12 06:30:00,861 - logger - INFO - --- Server is busy ---
+2023-07-12 06:30:51,777 - logger - INFO - --- Server is busy ---
+2023-07-12 06:30:53,910 - logger - INFO - Successfully Set Column Variables
+2023-07-12 06:31:42,714 - logger - INFO - Started Server
+2023-07-12 06:32:19,775 - logger - INFO - Started Server
+2023-07-12 06:32:23,097 - logger - INFO - --- Server is busy ---
+2023-07-12 06:32:26,070 - logger - INFO - Successfully Set Column Variables
+2023-07-12 06:32:52,070 - logger - INFO - Started Server
+2023-07-12 06:32:54,486 - logger - INFO - --- Server is busy ---
+2023-07-12 06:33:57,243 - logger - INFO - Started Server
+2023-07-12 06:34:09,857 - logger - INFO - --- Server is busy ---
+2023-07-12 06:34:11,859 - logger - INFO - Successfully Set Column Variables
+2023-07-12 06:34:43,764 - logger - INFO - Started Server
+2023-07-12 06:34:45,933 - logger - INFO - --- Server is busy ---
+2023-07-12 06:35:07,622 - logger - INFO - --- Server is busy ---
+2023-07-12 06:35:09,589 - logger - INFO - Successfully Set Column Variables
+2023-07-12 06:36:14,265 - logger - INFO - Started Server
+2023-07-12 06:39:26,617 - logger - INFO - --- Server is busy ---
+2023-07-12 06:39:28,793 - logger - INFO - Successfully Set Column Variables
+2023-07-12 06:40:17,055 - logger - INFO - Started Server
+2023-07-12 06:40:36,174 - logger - INFO - --- Server is busy ---
+2023-07-12 06:41:49,683 - logger - INFO - Started Server
+2023-07-12 06:41:59,056 - logger - INFO - --- Server is busy ---
+2023-07-12 06:43:04,280 - logger - INFO - Started Server
+2023-07-12 06:44:27,801 - logger - INFO - Started Server
+2023-07-12 06:44:35,105 - logger - INFO - --- Server is busy ---
+2023-07-12 06:44:37,835 - logger - INFO - Successfully Set Column Variables
+2023-07-12 06:44:42,219 - logger - INFO - --- Server is busy ---
+2023-07-12 06:44:49,840 - logger - INFO - --- Server is busy ---
+2023-07-12 06:44:51,970 - logger - INFO - Successfully Set Column Variables
+2023-07-12 06:44:55,803 - logger - INFO - --- Server is busy ---
+2023-07-12 06:44:57,056 - logger - INFO - Successfully Set Column Variables
+2023-07-12 06:46:12,187 - logger - INFO - Started Server
+2023-07-12 06:46:16,474 - logger - INFO - Started Server
+2023-07-12 06:46:31,269 - logger - INFO - Started Server
+2023-07-12 06:48:01,113 - logger - INFO - Started Server
+2023-07-12 06:48:16,389 - logger - INFO - Started Server
+2023-07-12 06:48:25,844 - logger - INFO - Started Server
+2023-07-12 06:49:24,213 - logger - INFO - Started Server
+2023-07-12 06:49:33,872 - logger - INFO - Started Server
+2023-07-12 06:49:41,592 - logger - INFO - Started Server
+2023-07-12 06:51:36,672 - logger - INFO - Started Server
+2023-07-12 07:47:48,306 - logger - INFO - Started Server
+2023-07-12 07:48:38,647 - logger - INFO - Started Server
+2023-07-12 07:50:03,830 - logger - INFO - Started Server
+2023-07-12 07:50:18,947 - logger - INFO - --- Server is busy ---
+2023-07-12 07:50:21,707 - logger - INFO - Successfully Set Column Variables
+2023-07-12 07:51:00,776 - logger - INFO - Started Server
+2023-07-12 07:51:02,708 - logger - INFO - --- Server is busy ---
+2023-07-12 07:51:05,333 - logger - INFO - Successfully Set Column Variables
+2023-07-12 07:51:31,137 - logger - INFO - Started Server
+2023-07-12 07:51:47,320 - logger - INFO - --- Server is busy ---
+2023-07-12 07:52:48,539 - logger - INFO - Started Server
+2023-07-12 07:52:48,547 - logger - INFO - --- Server is busy ---
+2023-07-12 07:53:54,283 - logger - INFO - Started Server
+2023-07-12 07:54:11,340 - logger - INFO - Started Server
+2023-07-12 07:54:15,658 - logger - INFO - --- Server is busy ---
+2023-07-12 07:54:59,464 - logger - INFO - Started Server
+2023-07-12 07:55:01,044 - logger - INFO - --- Server is busy ---
+2023-07-12 07:56:21,019 - logger - INFO - Started Server
+2023-07-12 07:56:49,705 - logger - INFO - Started Server
+2023-07-12 07:56:58,202 - logger - INFO - --- Server is busy ---
+2023-07-12 08:02:55,051 - logger - INFO - Started Server
+2023-07-12 08:06:14,568 - logger - INFO - --- Server is busy ---
+2023-07-12 08:06:17,302 - logger - INFO - Successfully Set Column Variables
+2023-07-12 08:11:14,015 - logger - INFO - Started Server
+2023-07-12 08:11:18,697 - logger - INFO - --- Server is busy ---
+2023-07-12 08:11:20,554 - logger - INFO - Successfully Set Column Variables
+2023-07-12 08:11:20,671 - logger - INFO - Failed to open link: google.com
+2023-07-12 08:11:26,596 - logger - INFO - Started Server
+2023-07-12 08:11:43,446 - logger - INFO - --- Server is busy ---
+2023-07-12 08:11:45,025 - logger - INFO - Successfully Set Column Variables
+2023-07-12 08:11:45,193 - logger - INFO - Successfully Opened Link: https://google.com
+2023-07-12 08:12:10,023 - logger - INFO - Started Server
+2023-07-12 08:12:11,709 - logger - INFO - --- Server is busy ---
+2023-07-12 08:12:13,491 - logger - INFO - Successfully Set Column Variables
+2023-07-12 08:12:13,655 - logger - INFO - Successfully Opened Link: https://google.com
+2023-07-12 08:12:27,351 - logger - INFO - Started Server
+2023-07-12 08:12:30,114 - logger - INFO - --- Server is busy ---
+2023-07-12 08:12:31,771 - logger - INFO - Successfully Set Column Variables
+2023-07-12 08:12:31,919 - logger - INFO - Successfully Opened Link: https://google.com
+2023-07-12 08:13:11,794 - logger - INFO - Started Server
+2023-07-12 08:13:13,475 - logger - INFO - --- Server is busy ---
+2023-07-12 08:13:15,241 - logger - INFO - Successfully Set Column Variables
+2023-07-12 08:13:15,407 - logger - INFO - Successfully Opened Link: https://google.com
+2023-07-12 08:27:42,514 - logger - INFO - Started Server
+2023-07-12 08:27:58,602 - logger - INFO - --- Server is busy ---
+2023-07-12 08:28:00,521 - logger - INFO - Successfully Set Column Variables
+2023-07-12 08:28:00,691 - logger - INFO - Successfully Opened Link: https://google.com
+2023-07-12 08:28:52,454 - logger - INFO - Started Server
+2023-07-12 08:31:34,636 - logger - INFO - Started Server
+2023-07-12 08:32:25,284 - logger - INFO - Started Server
+2023-07-12 08:32:43,638 - logger - INFO - Started Server
+2023-07-12 08:33:41,458 - logger - INFO - Started Server
+2023-07-12 08:33:49,602 - logger - INFO - Started Server
+2023-07-12 08:34:22,563 - logger - INFO - Started Server
+2023-07-12 08:35:13,075 - logger - INFO - Started Server
+2023-07-12 08:36:01,304 - logger - INFO - Successfully Set Column Variables
+2023-07-12 08:36:01,491 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=c402f8a1f033&statusName=0
+2023-07-12 08:36:30,832 - logger - INFO - Started Server
+2023-07-12 10:21:03,094 - logger - INFO - Started Server
+2023-07-12 10:21:28,074 - logger - INFO - Started Server
+2023-07-12 10:22:55,260 - logger - INFO - Started Server
+2023-07-12 10:23:28,715 - logger - INFO - Successfully Set Column Variables
+2023-07-12 10:23:28,945 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=c402f8a1f033&statusName=0
+2023-07-12 10:23:46,031 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-07-12 10:23:47,141 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1iuUjnuPM4ZV3gQIe-AQlCUAhGQXjRT82
+2023-07-12 10:23:47,141 - logger - INFO - Creating Grace Albano's Folder
+2023-07-12 10:25:27,993 - logger - INFO - Started Server
+2023-07-12 10:25:35,465 - logger - INFO - Started Server
+2023-07-12 10:26:51,986 - logger - INFO - Started Server
+2023-07-12 10:27:00,462 - logger - INFO - Successfully Set Column Variables
+2023-07-12 10:27:00,632 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=c402f8a1f033&statusName=0
+2023-07-12 10:29:37,678 - logger - INFO - Started Server
+2023-07-12 11:38:37,990 - logger - INFO - Started Server
+2023-07-12 11:39:17,550 - logger - INFO - Started Server
+2023-07-12 12:00:59,308 - logger - INFO - Started Server
+2023-07-12 12:02:23,827 - logger - INFO - Started Server
+2023-07-12 12:02:49,881 - logger - INFO - Started Server
+2023-07-12 12:02:52,870 - logger - INFO - Started Server
+2023-07-12 12:03:23,662 - logger - INFO - Started Server
+2023-07-12 12:03:57,762 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:05:38,708 - logger - INFO - Started Server
+2023-07-12 12:05:44,117 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:05:56,473 - logger - INFO - Started Server
+2023-07-12 12:05:59,618 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:05:59,857 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:06:52,803 - logger - INFO - Started Server
+2023-07-12 12:06:57,576 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:06:57,762 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:07:36,748 - logger - INFO - Started Server
+2023-07-12 12:07:40,099 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:07:40,261 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:07:57,196 - logger - INFO - Submitted Add Part 1 Task for: Zuri Navarro
+2023-07-12 12:07:57,197 - logger - INFO - Submitted Add Part 2 Task for: Zuri Navarro
+2023-07-12 12:07:58,187 - logger - INFO - Submitted Add Part 1 Task for: Titiera Tucker
+2023-07-12 12:07:58,188 - logger - INFO - Submitted Add Part 2 Task for: Titiera Tucker
+2023-07-12 12:07:59,183 - logger - INFO - Submitted Add Part 1 Task for: Misty Kang
+2023-07-12 12:07:59,184 - logger - INFO - Submitted Add Part 2 Task for: Misty Kang
+2023-07-12 12:07:59,187 - logger - INFO - Submitted Add Part 1 Task for: Angelique Jimenez
+2023-07-12 12:07:59,188 - logger - INFO - Submitted Add Part 2 Task for: Angelique Jimenez
+2023-07-12 12:07:59,190 - logger - INFO - Submitted Add Part 1 Task for: Janey Bell
+2023-07-12 12:07:59,191 - logger - INFO - Submitted Add Part 2 Task for: Janey Bell
+2023-07-12 12:08:00,188 - logger - INFO - Submitted Add Part 1 Task for: Millie Novak
+2023-07-12 12:08:00,191 - logger - INFO - Submitted Add Part 2 Task for: Millie Novak
+2023-07-12 12:09:33,112 - logger - INFO - Started Server
+2023-07-12 12:09:47,361 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:09:47,512 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:10:05,197 - logger - INFO - Submitted Add Part 1 Task for: Zuri Navarro
+2023-07-12 12:10:05,199 - logger - INFO - Submitted Add Part 2 Task for: Zuri Navarro
+2023-07-12 12:10:05,201 - logger - INFO - Submitted Add Part 1 Task for: Titiera Tucker
+2023-07-12 12:10:05,202 - logger - INFO - Submitted Add Part 2 Task for: Titiera Tucker
+2023-07-12 12:10:05,204 - logger - INFO - Submitted Add Part 1 Task for: Angelique Jimenez
+2023-07-12 12:10:05,205 - logger - INFO - Submitted Add Part 2 Task for: Angelique Jimenez
+2023-07-12 12:10:06,183 - logger - INFO - Submitted Add Part 1 Task for: Misty Kang
+2023-07-12 12:10:06,185 - logger - INFO - Submitted Add Part 2 Task for: Misty Kang
+2023-07-12 12:10:06,189 - logger - INFO - Submitted Add Part 1 Task for: Millie Novak
+2023-07-12 12:10:06,191 - logger - INFO - Submitted Add Part 2 Task for: Millie Novak
+2023-07-12 12:10:07,175 - logger - INFO - Submitted Add Part 1 Task for: Janey Bell
+2023-07-12 12:10:07,177 - logger - INFO - Submitted Add Part 2 Task for: Janey Bell
+2023-07-12 12:11:17,890 - logger - INFO - Started Server
+2023-07-12 12:11:31,913 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:11:32,074 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:12:15,022 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:12:15,162 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:13:01,640 - logger - INFO - Started Server
+2023-07-12 12:13:17,373 - logger - INFO - Submitted Add Part 1 Task for: Angelique Jimenez
+2023-07-12 12:13:17,374 - logger - INFO - Submitted Add Part 2 Task for: Angelique Jimenez
+2023-07-12 12:14:35,244 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:14:35,408 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:14:52,183 - logger - INFO - Submitted Add Part 1 Task for: Nancy Alvarez
+2023-07-12 12:14:52,185 - logger - INFO - Submitted Add Part 2 Task for: Nancy Alvarez
+2023-07-12 12:14:53,176 - logger - INFO - Submitted Add Part 1 Task for: Zuri Navarro
+2023-07-12 12:14:53,176 - logger - INFO - Submitted Add Part 2 Task for: Zuri Navarro
+2023-07-12 12:14:53,178 - logger - INFO - Submitted Add Part 1 Task for: Titiera Tucker
+2023-07-12 12:14:53,178 - logger - INFO - Submitted Add Part 2 Task for: Titiera Tucker
+2023-07-12 12:14:53,180 - logger - INFO - Submitted Add Part 1 Task for: Misty Kang
+2023-07-12 12:14:53,180 - logger - INFO - Submitted Add Part 2 Task for: Misty Kang
+2023-07-12 12:14:54,210 - logger - INFO - Submitted Add Part 1 Task for: Janey Bell
+2023-07-12 12:14:54,212 - logger - INFO - Submitted Add Part 2 Task for: Janey Bell
+2023-07-12 12:14:55,178 - logger - INFO - Submitted Add Part 1 Task for: Angelique Jimenez
+2023-07-12 12:14:55,179 - logger - INFO - Submitted Add Part 2 Task for: Angelique Jimenez
+2023-07-12 12:14:55,185 - logger - INFO - Submitted Add Part 1 Task for: Millie Novak
+2023-07-12 12:14:55,186 - logger - INFO - Submitted Add Part 2 Task for: Millie Novak
+2023-07-12 12:15:48,247 - logger - INFO - Started Server
+2023-07-12 12:16:30,066 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:16:30,219 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:16:47,188 - logger - INFO - Submitted Add Part 1 Task for: Zuri Navarro
+2023-07-12 12:16:48,197 - logger - INFO - Submitted Add Part 2 Task for: Zuri Navarro
+2023-07-12 12:16:48,201 - logger - INFO - Submitted Add Part 1 Task for: Titiera Tucker
+2023-07-12 12:16:49,208 - logger - INFO - Submitted Add Part 2 Task for: Titiera Tucker
+2023-07-12 12:16:49,209 - logger - INFO - Submitted Add Part 1 Task for: Misty Kang
+2023-07-12 12:16:50,219 - logger - INFO - Submitted Add Part 2 Task for: Misty Kang
+2023-07-12 12:16:50,227 - logger - INFO - Submitted Add Part 1 Task for: Nancy Alvarez
+2023-07-12 12:16:51,234 - logger - INFO - Submitted Add Part 2 Task for: Nancy Alvarez
+2023-07-12 12:16:51,241 - logger - INFO - Submitted Add Part 1 Task for: Millie Novak
+2023-07-12 12:16:52,250 - logger - INFO - Submitted Add Part 2 Task for: Millie Novak
+2023-07-12 12:16:52,253 - logger - INFO - Submitted Add Part 1 Task for: Angelique Jimenez
+2023-07-12 12:16:53,259 - logger - INFO - Submitted Add Part 2 Task for: Angelique Jimenez
+2023-07-12 12:16:53,261 - logger - INFO - Submitted Add Part 1 Task for: Janey Bell
+2023-07-12 12:16:54,267 - logger - INFO - Submitted Add Part 2 Task for: Janey Bell
+2023-07-12 12:19:09,946 - logger - INFO - Started Server
+2023-07-12 12:19:13,282 - logger - INFO - Started Server
+2023-07-12 12:19:35,999 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:19:36,171 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-12 12:23:21,376 - logger - INFO - Started Server
+2023-07-12 12:23:25,869 - logger - INFO - Started Server
+2023-07-12 12:23:37,115 - logger - INFO - Successfully Set Column Variables
+2023-07-12 12:23:37,299 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=5f32dc97ba2a&statusName=0
+2023-07-13 16:41:38,788 - logger - INFO - Started Server
+2023-07-13 16:43:48,043 - logger - INFO - Started Server
+2023-07-13 16:44:38,801 - logger - INFO - Successfully Set Column Variables
+2023-07-13 16:44:39,032 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=c402f8a1f033&statusName=0
+2023-07-13 17:02:16,801 - logger - INFO - Started Server
+2023-07-13 17:03:32,756 - logger - INFO - Started Server
+2023-07-13 17:05:35,875 - logger - INFO - Successfully Set Column Variables
+2023-07-13 17:05:36,073 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=c402f8a1f033&statusName=Active
+2023-07-13 17:06:09,217 - logger - INFO - Started Server
+2023-07-14 18:31:19,895 - logger - INFO - Started Server
+2023-07-14 18:31:25,397 - logger - INFO - Successfully Set Column Variables
+2023-07-14 18:31:25,591 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 18:33:48,338 - logger - INFO - Started Server
+2023-07-14 18:38:18,500 - logger - INFO - Started Server
+2023-07-14 18:38:19,901 - logger - INFO - Started Server
+2023-07-14 18:42:04,405 - logger - INFO - Started Server
+2023-07-14 18:42:13,565 - logger - INFO - Started Server
+2023-07-14 18:42:22,282 - logger - INFO - Successfully Set Column Variables
+2023-07-14 18:49:22,748 - logger - INFO - Started Server
+2023-07-14 18:49:32,792 - logger - INFO - Successfully Set Column Variables
+2023-07-14 18:49:33,009 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 18:50:42,149 - logger - INFO - Started Server
+2023-07-14 18:51:14,960 - logger - INFO - Started Server
+2023-07-14 18:51:22,651 - logger - INFO - Successfully Set Column Variables
+2023-07-14 18:51:22,819 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 18:51:29,382 - logger - INFO - Started Server
+2023-07-14 18:52:49,758 - logger - INFO - Started Server
+2023-07-14 18:53:08,183 - logger - INFO - Submitted Add Part 1 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 18:53:08,187 - logger - INFO - Submitted Add Part 2 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 18:53:24,387 - logger - INFO - Started Server
+2023-07-14 18:53:33,942 - logger - INFO - Successfully Set Column Variables
+2023-07-14 18:53:34,118 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 18:53:52,406 - logger - INFO - Submitted Add Part 1 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 18:53:52,410 - logger - INFO - Submitted Add Part 2 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 18:53:55,358 - logger - INFO - Submitted Add Part 1 Task for: Emma Niure
+2023-07-14 18:53:55,364 - logger - INFO - Submitted Add Part 2 Task for: Emma Niure
+2023-07-14 18:58:08,153 - logger - INFO - Started Server
+2023-07-14 18:58:10,315 - logger - INFO - Started Server
+2023-07-14 18:58:36,818 - logger - INFO - Successfully Set Column Variables
+2023-07-14 18:58:36,990 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 19:00:11,780 - logger - INFO - Started Server
+2023-07-14 19:01:41,035 - logger - INFO - Started Server
+2023-07-14 19:01:42,931 - logger - INFO - Started Server
+2023-07-14 19:02:46,576 - logger - INFO - Started Server
+2023-07-14 19:02:56,897 - logger - INFO - Started Server
+2023-07-14 19:10:03,931 - logger - INFO - Started Server
+2023-07-14 19:10:18,918 - logger - INFO - Successfully Set Column Variables
+2023-07-14 19:10:19,090 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 19:10:38,375 - logger - INFO - Submitted Add Part 1 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 19:10:38,382 - logger - INFO - Submitted Add Part 2 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 19:10:39,332 - logger - INFO - Submitted Add Part 1 Task for: Emma Niure
+2023-07-14 19:10:39,339 - logger - INFO - Submitted Add Part 2 Task for: Emma Niure
+2023-07-14 19:15:52,179 - logger - INFO - Started Server
+2023-07-14 19:22:10,641 - logger - INFO - Started Server
+2023-07-14 19:26:36,820 - logger - INFO - Started Server
+2023-07-14 19:27:51,770 - logger - INFO - Started Server
+2023-07-14 19:54:19,333 - logger - INFO - Started Server
+2023-07-14 19:54:37,083 - logger - INFO - Successfully Set Column Variables
+2023-07-14 19:54:37,409 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 19:54:55,381 - logger - INFO - Submitted Add Part 1 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 19:54:55,387 - logger - INFO - Submitted Add Part 2 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 19:54:56,317 - logger - INFO - Submitted Add Part 1 Task for: Emma Niure
+2023-07-14 19:54:56,323 - logger - INFO - Submitted Add Part 2 Task for: Emma Niure
+2023-07-14 19:55:52,282 - logger - INFO - Started Server
+2023-07-14 19:56:06,075 - logger - INFO - Started Server
+2023-07-14 19:56:43,375 - logger - INFO - Started Server
+2023-07-14 19:56:48,177 - logger - INFO - Started Server
+2023-07-14 19:57:10,110 - logger - INFO - Successfully Set Column Variables
+2023-07-14 19:57:10,342 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 19:59:17,026 - logger - INFO - Started Server
+2023-07-14 19:59:22,159 - logger - INFO - Started Server
+2023-07-14 19:59:24,380 - logger - INFO - Started Server
+2023-07-14 19:59:35,802 - logger - INFO - Started Server
+2023-07-14 19:59:36,666 - logger - INFO - Started Server
+2023-07-14 19:59:41,860 - logger - INFO - Started Server
+2023-07-14 19:59:45,047 - logger - INFO - Started Server
+2023-07-14 19:59:47,008 - logger - INFO - Started Server
+2023-07-14 19:59:53,523 - logger - INFO - Started Server
+2023-07-14 20:00:08,772 - logger - INFO - Successfully Set Column Variables
+2023-07-14 20:00:13,501 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 20:00:42,981 - logger - INFO - Started Server
+2023-07-14 20:01:00,757 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-07-14 20:01:02,039 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1LccZUEa2-to7GEmVq45CU-MRwYdxYZnr
+2023-07-14 20:01:02,041 - logger - INFO - Creating Emma Niure's Folder
+2023-07-14 20:01:02,773 - logger - INFO - Updated Spreadsheet
+2023-07-14 20:01:02,794 - logger - INFO - Submitted Add Part 1 Task for: Emma Niure
+2023-07-14 20:01:02,800 - logger - INFO - Submitted Add Part 2 Task for: Emma Niure
+2023-07-14 20:01:26,710 - logger - INFO - Successfully Set Column Variables
+2023-07-14 20:01:26,858 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 20:01:43,252 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-07-14 20:01:44,191 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1MecW9DjM_E5Pokx_kwZyu68_SI0i2yyM
+2023-07-14 20:01:44,193 - logger - INFO - Creating Lisa Berry, MSAC, LAADC's Folder
+2023-07-14 20:01:44,815 - logger - INFO - Updated Spreadsheet
+2023-07-14 20:01:44,821 - logger - INFO - Submitted Add Part 1 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 20:01:44,831 - logger - INFO - Submitted Add Part 2 Task for: Lisa Berry, MSAC, LAADC
+2023-07-14 20:01:46,233 - logger - INFO - Parents are: ['1gzpJmAcx1G6KbGjeCQp5ajwB_HfwCsLQ'] for role: TestSheet
+2023-07-14 20:01:47,345 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1K9kDjalB3f8p79qOUSKSIgGw-5HgFeZm
+2023-07-14 20:01:47,346 - logger - INFO - Creating Emma Niure's Folder
+2023-07-14 20:01:47,771 - logger - INFO - Updated Spreadsheet
+2023-07-14 20:01:47,779 - logger - INFO - Submitted Add Part 1 Task for: Emma Niure
+2023-07-14 20:01:47,787 - logger - INFO - Submitted Add Part 2 Task for: Emma Niure
+2023-07-14 20:08:40,728 - logger - INFO - Started Server
+2023-07-14 20:09:11,526 - logger - INFO - Started Server
+2023-07-14 20:10:23,099 - logger - INFO - Started Server
+2023-07-14 20:10:56,946 - logger - INFO - Started Server
+2023-07-14 20:12:16,855 - logger - INFO - Started Server
+2023-07-14 20:18:54,180 - logger - INFO - Started Server
+2023-07-14 20:18:56,810 - logger - INFO - Started Server
+2023-07-14 20:19:22,466 - logger - INFO - Successfully Set Column Variables
+2023-07-14 20:19:22,675 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 20:19:41,375 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1XZeFvG2RyklUv_p1Dd1esXljdUptzTDg
+2023-07-14 20:19:42,134 - logger - INFO - Updated Spreadsheet
+2023-07-14 20:19:42,136 - logger - INFO - Lisa Berry, MSAC, LAADC - Add 1/2 Completed
+2023-07-14 20:19:42,139 - logger - INFO - Lisa Berry, MSAC, LAADC - Add 1/2 Submitted
+2023-07-14 20:19:44,607 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1DCQBPpUI--tWZ37GTGY0xh8-XCTmHzKi
+2023-07-14 20:19:45,067 - logger - INFO - Updated Spreadsheet
+2023-07-14 20:19:45,069 - logger - INFO - Emma Niure - Add 1/2 Completed
+2023-07-14 20:19:45,072 - logger - INFO - Emma Niure - Add 1/2 Submitted
+2023-07-14 20:20:00,698 - logger - INFO - Started Server
+2023-07-14 20:20:18,563 - logger - INFO - Successfully Set Column Variables
+2023-07-14 20:20:18,723 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-14 20:20:39,372 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1iDpihxzmk6Pr9ZghcShOUFypOlfP_d_I
+2023-07-14 20:20:39,824 - logger - INFO - Updated Spreadsheet
+2023-07-14 20:20:39,826 - logger - INFO - Emma Niure - Add 1/2 Completed
+2023-07-14 20:20:39,830 - logger - INFO - Emma Niure - Add 1/2 Submitted
+2023-07-14 20:20:39,837 - logger - INFO - Perform Add 2/2 Emma Niure
+2023-07-14 20:20:39,839 - logger - INFO - Emma Niure - Add 2/2 Submitted
+2023-07-14 20:20:41,302 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1HmilKu2YswPccl4ExQkRo0c9SGhkFeq4
+2023-07-14 20:20:42,446 - logger - INFO - Updated Spreadsheet
+2023-07-14 20:20:42,448 - logger - INFO - Lisa Berry, MSAC, LAADC - Add 1/2 Completed
+2023-07-14 20:20:42,452 - logger - INFO - Lisa Berry, MSAC, LAADC - Add 1/2 Submitted
+2023-07-14 20:20:42,458 - logger - INFO - Perform Add 2/2 Lisa Berry, MSAC, LAADC
+2023-07-14 20:20:42,460 - logger - INFO - Lisa Berry, MSAC, LAADC - Add 2/2 Submitted
+2023-07-16 14:28:54,790 - logger - INFO - Successfully Set Column Variables
+2023-07-16 14:28:54,968 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-07-16 14:29:13,200 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1K2kIz2c8dpXqZtwbldCf76Ng8NCX5zBO
+2023-07-16 14:29:13,842 - logger - INFO - Updated Spreadsheet
+2023-07-16 14:29:13,843 - logger - INFO - Sara Lappan - Add 1/2 Completed
+2023-07-16 14:29:13,845 - logger - INFO - Sara Lappan - Add 1/2 Submitted
+2023-07-16 14:29:13,849 - logger - INFO - Perform Add 2/2 Sara Lappan
+2023-07-16 14:29:13,850 - logger - INFO - Sara Lappan - Add 2/2 Submitted
+2023-07-16 14:29:14,778 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/17_2qXUlMDI_laKQ1dE5Ojd0qrwYAVmoW
+2023-07-16 14:29:15,348 - logger - INFO - Updated Spreadsheet
+2023-07-16 14:29:15,349 - logger - INFO - Lisa Berry, MSAC, LAADC - Add 1/2 Completed
+2023-07-16 14:29:15,352 - logger - INFO - Lisa Berry, MSAC, LAADC - Add 1/2 Submitted
+2023-07-16 14:29:15,360 - logger - INFO - Perform Add 2/2 Lisa Berry, MSAC, LAADC
+2023-07-16 14:29:15,361 - logger - INFO - Lisa Berry, MSAC, LAADC - Add 2/2 Submitted
+2023-07-16 14:29:16,360 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/16PTDEMK594S8mesl8GsD7RbXBOd_EQ3q
+2023-07-16 14:29:16,916 - logger - INFO - Updated Spreadsheet
+2023-07-16 14:29:16,918 - logger - INFO - Antonio Tate - Add 1/2 Completed
+2023-07-16 14:29:16,923 - logger - INFO - Antonio Tate - Add 1/2 Submitted
+2023-07-16 14:29:16,931 - logger - INFO - Perform Add 2/2 Antonio Tate
+2023-07-16 14:29:16,934 - logger - INFO - Antonio Tate - Add 2/2 Submitted
+2023-07-16 14:29:18,008 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1OaCPWMb9ULK5ZTIQF2HYEp5hfr5l63j3
+2023-07-16 14:29:18,638 - logger - INFO - Updated Spreadsheet
+2023-07-16 14:29:18,640 - logger - INFO - BERELYAN ANVIEH - Add 1/2 Completed
+2023-07-16 14:29:18,642 - logger - INFO - BERELYAN ANVIEH - Add 1/2 Submitted
+2023-07-16 14:29:18,652 - logger - INFO - Perform Add 2/2 BERELYAN ANVIEH
+2023-07-16 14:29:18,658 - logger - INFO - BERELYAN ANVIEH - Add 2/2 Submitted
+2023-07-16 14:29:19,559 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1INvntTgXJPySgOJzqf8LVgkjXcchTwE6
+2023-07-16 14:29:20,116 - logger - INFO - Updated Spreadsheet
+2023-07-16 14:29:20,117 - logger - INFO - Emma Niure - Add 1/2 Completed
+2023-07-16 14:29:20,120 - logger - INFO - Emma Niure - Add 1/2 Submitted
+2023-07-16 14:29:20,129 - logger - INFO - Perform Add 2/2 Emma Niure
+2023-07-16 14:29:20,132 - logger - INFO - Emma Niure - Add 2/2 Submitted
+2023-07-17 13:31:08,022 - logger - INFO - Started Server
+2023-07-17 13:34:25,137 - logger - INFO - Successfully Set Column Variables
+2023-07-17 13:34:25,354 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=d5384e8fc242&statusName=0
+2023-07-17 13:34:45,721 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1yJo2qRCSF60usiBL6zUWEMvWvxm2FV2K
+2023-07-17 13:34:51,116 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:34:51,122 - logger - INFO - Courtney Marsell - Add 1/2 Completed
+2023-07-17 13:34:51,202 - logger - INFO - Courtney Marsell - Add 1/2 Submitted
+2023-07-17 13:34:51,268 - logger - INFO - Perform Add 2/2 Courtney Marsell
+2023-07-17 13:34:51,349 - logger - INFO - Courtney Marsell - Add 2/2 Submitted
+2023-07-17 13:34:54,192 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/108WvYa8nMaRA5MNczQNaKdk15yTp5iC-
+2023-07-17 13:34:57,361 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:34:57,415 - logger - INFO - Oceania Imperio - Add 1/2 Completed
+2023-07-17 13:34:57,484 - logger - INFO - Oceania Imperio - Add 1/2 Submitted
+2023-07-17 13:34:57,549 - logger - INFO - Perform Add 2/2 Oceania Imperio
+2023-07-17 13:34:57,552 - logger - INFO - Oceania Imperio - Add 2/2 Submitted
+2023-07-17 13:34:58,938 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1CPDfeQwNPaeySOzTPxRnKoBPrbTgB4u6
+2023-07-17 13:34:59,565 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:34:59,567 - logger - INFO - ashley goodman - Add 1/2 Completed
+2023-07-17 13:34:59,571 - logger - INFO - ashley goodman - Add 1/2 Submitted
+2023-07-17 13:34:59,578 - logger - INFO - Perform Add 2/2 ashley goodman
+2023-07-17 13:34:59,585 - logger - INFO - ashley goodman - Add 2/2 Submitted
+2023-07-17 13:35:00,670 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1WZ3jIK8e7Ih7YNP9HhWxW0DMspE6WYgE
+2023-07-17 13:35:01,207 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:01,209 - logger - INFO - Hannah Miers - Add 1/2 Completed
+2023-07-17 13:35:01,213 - logger - INFO - Hannah Miers - Add 1/2 Submitted
+2023-07-17 13:35:01,220 - logger - INFO - Perform Add 2/2 Hannah Miers
+2023-07-17 13:35:01,224 - logger - INFO - Hannah Miers - Add 2/2 Submitted
+2023-07-17 13:35:02,321 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1lax4IuyB5ejAhYK81CpEYkZxvgQ7XcLj
+2023-07-17 13:35:02,864 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:02,866 - logger - INFO - Lisa Stroud - Add 1/2 Completed
+2023-07-17 13:35:02,871 - logger - INFO - Lisa Stroud - Add 1/2 Submitted
+2023-07-17 13:35:02,878 - logger - INFO - Perform Add 2/2 Lisa Stroud
+2023-07-17 13:35:02,884 - logger - INFO - Lisa Stroud - Add 2/2 Submitted
+2023-07-17 13:35:04,181 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/17Y90Hj8QsL5pJ0y4qQAT9KEErSn03pvy
+2023-07-17 13:35:04,864 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:04,865 - logger - INFO - Antoine Green - Add 1/2 Completed
+2023-07-17 13:35:04,868 - logger - INFO - Antoine Green - Add 1/2 Submitted
+2023-07-17 13:35:04,874 - logger - INFO - Perform Add 2/2 Antoine Green
+2023-07-17 13:35:04,878 - logger - INFO - Antoine Green - Add 2/2 Submitted
+2023-07-17 13:35:05,687 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1-pZp7RvOsd2Lo_dMsEopf_IgoS_Qh8sP
+2023-07-17 13:35:06,215 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:06,218 - logger - INFO - Daniel Clauser - Add 1/2 Completed
+2023-07-17 13:35:06,223 - logger - INFO - Daniel Clauser - Add 1/2 Submitted
+2023-07-17 13:35:06,228 - logger - INFO - Perform Add 2/2 Daniel Clauser
+2023-07-17 13:35:06,240 - logger - INFO - Daniel Clauser - Add 2/2 Submitted
+2023-07-17 13:35:07,457 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1ccu6bHB7jmWRKi7ntWCLUQWc_2Tt7Dzm
+2023-07-17 13:35:07,984 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:07,986 - logger - INFO - Eddy Meza - Add 1/2 Completed
+2023-07-17 13:35:07,989 - logger - INFO - Eddy Meza - Add 1/2 Submitted
+2023-07-17 13:35:07,995 - logger - INFO - Perform Add 2/2 Eddy Meza
+2023-07-17 13:35:08,000 - logger - INFO - Eddy Meza - Add 2/2 Submitted
+2023-07-17 13:35:09,200 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1k0n4-wTwalVVZyp6-J62zwJF95a3ilad
+2023-07-17 13:35:09,725 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:09,727 - logger - INFO - Jacob Kim - Add 1/2 Completed
+2023-07-17 13:35:09,731 - logger - INFO - Jacob Kim - Add 1/2 Submitted
+2023-07-17 13:35:09,736 - logger - INFO - Perform Add 2/2 Jacob Kim
+2023-07-17 13:35:09,740 - logger - INFO - Jacob Kim - Add 2/2 Submitted
+2023-07-17 13:35:10,837 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1lDKfaR7Ozg3LWwJXaZPFznVi4bA-CUxS
+2023-07-17 13:35:11,393 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:11,395 - logger - INFO - Ashley Rose - Add 1/2 Completed
+2023-07-17 13:35:11,401 - logger - INFO - Ashley Rose - Add 1/2 Submitted
+2023-07-17 13:35:11,408 - logger - INFO - Perform Add 2/2 Ashley Rose
+2023-07-17 13:35:11,412 - logger - INFO - Ashley Rose - Add 2/2 Submitted
+2023-07-17 13:35:12,450 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1OlB9MM8W8u5tH0h-iG_L9W0v-2j3CwNu
+2023-07-17 13:35:13,191 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:13,192 - logger - INFO - Victoria Charles - Add 1/2 Completed
+2023-07-17 13:35:13,195 - logger - INFO - Victoria Charles - Add 1/2 Submitted
+2023-07-17 13:35:13,201 - logger - INFO - Perform Add 2/2 Victoria Charles
+2023-07-17 13:35:13,204 - logger - INFO - Victoria Charles - Add 2/2 Submitted
+2023-07-17 13:35:14,418 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1b79YNDxtrufpMDlf3wKxuLqrtAHB3QWV
+2023-07-17 13:35:14,930 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:14,932 - logger - INFO - None - Add 1/2 Completed
+2023-07-17 13:35:14,936 - logger - INFO - None - Add 1/2 Submitted
+2023-07-17 13:35:14,942 - logger - INFO - Perform Add 2/2 None
+2023-07-17 13:35:14,947 - logger - INFO - None - Add 2/2 Submitted
+2023-07-17 13:35:16,001 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1NMMkr2xAFZk0Nttjm02fy-40LpU9CeUf
+2023-07-17 13:35:16,672 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:16,674 - logger - INFO - Jessica Lienert - Add 1/2 Completed
+2023-07-17 13:35:16,678 - logger - INFO - Jessica Lienert - Add 1/2 Submitted
+2023-07-17 13:35:16,684 - logger - INFO - Perform Add 2/2 Jessica Lienert
+2023-07-17 13:35:16,687 - logger - INFO - Jessica Lienert - Add 2/2 Submitted
+2023-07-17 13:35:17,799 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1FxkvSLhlRtAcb8T2dCg183xRExRKnW_H
+2023-07-17 13:35:18,413 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:18,415 - logger - INFO - Miguel Rios - Add 1/2 Completed
+2023-07-17 13:35:18,418 - logger - INFO - Miguel Rios - Add 1/2 Submitted
+2023-07-17 13:35:18,424 - logger - INFO - Perform Add 2/2 Miguel Rios
+2023-07-17 13:35:18,427 - logger - INFO - Miguel Rios - Add 2/2 Submitted
+2023-07-17 13:35:19,745 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1dEu0PlTEaOUJ9sRPizoDi_-Yg9Unl7ad
+2023-07-17 13:35:20,462 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:20,465 - logger - INFO - Junxiang “Vincent” Wang - Add 1/2 Completed
+2023-07-17 13:35:20,469 - logger - INFO - Junxiang “Vincent” Wang - Add 1/2 Submitted
+2023-07-17 13:35:20,474 - logger - INFO - Perform Add 2/2 Junxiang “Vincent” Wang
+2023-07-17 13:35:20,477 - logger - INFO - Junxiang “Vincent” Wang - Add 2/2 Submitted
+2023-07-17 13:35:21,436 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1TtvC3vilEdwj-vnguZzoGZQqzjiq_kFh
+2023-07-17 13:35:21,999 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:22,002 - logger - INFO - Angelina Petel - Add 1/2 Completed
+2023-07-17 13:35:22,007 - logger - INFO - Angelina Petel - Add 1/2 Submitted
+2023-07-17 13:35:22,012 - logger - INFO - Perform Add 2/2 Angelina Petel
+2023-07-17 13:35:22,015 - logger - INFO - Angelina Petel - Add 2/2 Submitted
+2023-07-17 13:35:23,032 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1VQgNsvRWkGm-tJrze1midp9apt5W9Zvx
+2023-07-17 13:35:23,637 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:23,638 - logger - INFO - None - Add 1/2 Completed
+2023-07-17 13:35:23,640 - logger - INFO - None - Add 1/2 Submitted
+2023-07-17 13:35:23,643 - logger - INFO - Perform Add 2/2 None
+2023-07-17 13:35:23,645 - logger - INFO - None - Add 2/2 Submitted
+2023-07-17 13:35:24,570 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1BDwJuTCHFbtx8co3tYrtDCyRLcUPFScM
+2023-07-17 13:35:25,173 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:25,174 - logger - INFO - None - Add 1/2 Completed
+2023-07-17 13:35:25,177 - logger - INFO - None - Add 1/2 Submitted
+2023-07-17 13:35:25,183 - logger - INFO - Perform Add 2/2 None
+2023-07-17 13:35:25,187 - logger - INFO - None - Add 2/2 Submitted
+2023-07-17 13:35:26,269 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/132E1BCKdaU_MmDtTc4VKTcdS0FgKa222
+2023-07-17 13:35:26,793 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:26,797 - logger - INFO - None - Add 1/2 Completed
+2023-07-17 13:35:26,803 - logger - INFO - None - Add 1/2 Submitted
+2023-07-17 13:35:26,809 - logger - INFO - Perform Add 2/2 None
+2023-07-17 13:35:26,813 - logger - INFO - None - Add 2/2 Submitted
+2023-07-17 13:35:27,637 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1zvqnwBO3qlQ_MOzdRAUZ2x80nApgEnvx
+2023-07-17 13:35:28,242 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:35:28,244 - logger - INFO - Michelle Sampson - Add 1/2 Completed
+2023-07-17 13:35:28,247 - logger - INFO - Michelle Sampson - Add 1/2 Submitted
+2023-07-17 13:35:28,252 - logger - INFO - Perform Add 2/2 Michelle Sampson
+2023-07-17 13:35:28,258 - logger - INFO - Michelle Sampson - Add 2/2 Submitted
+2023-07-17 13:38:59,808 - logger - INFO - Successfully Set Column Variables
+2023-07-17 13:38:59,919 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=d5384e8fc242&statusName=0
+2023-07-17 13:39:35,019 - logger - INFO - Successfully Set Column Variables
+2023-07-17 13:39:35,145 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 13:39:55,515 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1q4hU6ujZKZBY3mYAN0YNgbxTgyWextCS
+2023-07-17 13:39:56,196 - logger - INFO - Updated Spreadsheet
+2023-07-17 13:39:56,196 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 13:39:56,197 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 13:39:56,200 - logger - INFO - Perform Add 2/2 Jose Rodriguez
+2023-07-17 13:39:56,201 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 14:04:58,016 - logger - INFO - Started Server
+2023-07-17 14:06:24,342 - logger - INFO - Started Server
+2023-07-17 14:08:24,924 - logger - INFO - Started Server
+2023-07-17 14:20:03,365 - logger - INFO - Started Server
+2023-07-17 14:24:02,529 - logger - INFO - Started Server
+2023-07-17 14:25:19,881 - logger - INFO - Started Server
+2023-07-17 14:31:44,355 - logger - INFO - Started Server
+2023-07-17 14:35:24,307 - logger - INFO - Started Server
+2023-07-17 14:36:33,033 - logger - INFO - Started Server
+2023-07-17 14:41:11,065 - logger - INFO - Started Server
+2023-07-17 14:41:18,821 - logger - INFO - Started Server
+2023-07-17 14:41:32,432 - logger - INFO - Started Server
+2023-07-17 14:42:48,462 - logger - INFO - Started Server
+2023-07-17 14:43:02,567 - logger - INFO - Successfully Set Column Variables
+2023-07-17 14:43:03,113 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 14:43:24,013 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1vKA_EwYHJCxdWGJI-QPoTh4ZPpUFkYce
+2023-07-17 14:43:24,618 - logger - INFO - Updated Spreadsheet
+2023-07-17 14:43:24,620 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 14:43:24,624 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 14:43:24,631 - logger - INFO - Perform Add 2/2 Jose Rodriguez
+2023-07-17 14:43:24,635 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 14:44:45,193 - logger - INFO - Started Server
+2023-07-17 14:45:57,987 - logger - INFO - Started Server
+2023-07-17 14:46:10,196 - logger - INFO - Started Server
+2023-07-17 14:46:26,497 - logger - INFO - Successfully Set Column Variables
+2023-07-17 14:46:26,650 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 14:47:48,463 - logger - INFO - Started Server
+2023-07-17 14:47:49,763 - logger - INFO - Started Server
+2023-07-17 14:48:02,294 - logger - INFO - Successfully Set Column Variables
+2023-07-17 14:48:02,431 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 14:48:24,333 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1aIT7mta3fsgxkLkj-qwXy_2_SYhEzk_u
+2023-07-17 14:48:25,030 - logger - INFO - Updated Spreadsheet
+2023-07-17 14:48:25,033 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 14:48:25,037 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 14:48:25,046 - logger - INFO - Perform Add 2/2 Jose Rodriguez
+2023-07-17 15:07:53,406 - logger - INFO - Started Server
+2023-07-17 15:08:01,367 - logger - INFO - Started Server
+2023-07-17 15:08:28,713 - logger - INFO - Successfully Set Column Variables
+2023-07-17 15:08:28,972 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 15:08:50,571 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/126u-Pmr4WrFQkRUImm1DcqfDy7MN4SjS
+2023-07-17 15:08:51,193 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:08:51,196 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:08:51,202 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:08:51,212 - logger - INFO - Jose Rodriguez - Add 2/2 Completed
+2023-07-17 15:08:51,215 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 15:11:17,532 - logger - INFO - Started Server
+2023-07-17 15:11:47,992 - logger - INFO - Started Server
+2023-07-17 15:12:36,244 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1sEhupmOh7RRCCEa2tI8gaepVYzm-i0gR
+2023-07-17 15:12:36,904 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:12:36,905 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:12:36,917 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:12:36,924 - logger - INFO - Jose Rodriguez - Add 2/2 Completed
+2023-07-17 15:12:36,926 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 15:13:28,057 - logger - INFO - Started Server
+2023-07-17 15:13:45,583 - logger - INFO - Started Server
+2023-07-17 15:13:55,536 - logger - INFO - Started Server
+2023-07-17 15:14:15,011 - logger - INFO - Successfully Set Column Variables
+2023-07-17 15:14:15,227 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 15:14:37,539 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1DF5h-JsQ1JoUzS1a6Py1a0M6x7a4GcG_
+2023-07-17 15:14:38,271 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:14:38,276 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:14:38,282 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:15:04,758 - logger - INFO - Started Server
+2023-07-17 15:15:09,792 - logger - INFO - Started Server
+2023-07-17 15:15:22,563 - logger - INFO - Started Server
+2023-07-17 15:15:56,697 - logger - INFO - Successfully Set Column Variables
+2023-07-17 15:15:56,945 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 15:16:17,353 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1hzHwXeSPXp29dpHkoK4vPdLwYnUVz_ZK
+2023-07-17 15:16:17,993 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:16:17,997 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:16:18,001 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:17:10,348 - logger - INFO - Started Server
+2023-07-17 15:17:29,282 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:17:29,283 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 15:17:30,500 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1N6JnY9wQvcvsDSTYMAsPQgS5Z51ZDE5j
+2023-07-17 15:17:31,082 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:17:31,083 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:19:42,964 - logger - INFO - Started Server
+2023-07-17 15:19:52,203 - logger - INFO - Started Server
+2023-07-17 15:20:26,149 - logger - INFO - Started Server
+2023-07-17 15:22:45,306 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:22:45,308 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 15:22:46,279 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1nA9kHt6ZjBFEX5QSSB5t-hC-JmIQOOaN
+2023-07-17 15:22:47,328 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:22:47,330 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:23:19,947 - logger - INFO - Started Server
+2023-07-17 15:23:41,934 - logger - INFO - Started Server
+2023-07-17 15:23:53,383 - logger - INFO - Successfully Set Column Variables
+2023-07-17 15:23:53,548 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 15:24:15,246 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:24:15,248 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 15:25:42,303 - logger - INFO - Started Server
+2023-07-17 15:25:53,076 - logger - INFO - Successfully Set Column Variables
+2023-07-17 15:25:53,243 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 15:26:11,239 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:26:11,242 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 15:26:11,264 - logger - INFO - Opened resu,e link
+2023-07-17 15:26:12,355 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1mK1yFOLkQYrYHSiENQ2ur0uCRzCdHQQD
+2023-07-17 15:26:12,930 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:26:12,930 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:31:56,225 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:31:56,227 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 15:31:56,245 - logger - INFO - Opened resu,e link
+2023-07-17 15:31:57,646 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1OjCmEkoPZQkbCEKF7CIkvH6joqehuZUg
+2023-07-17 15:31:58,357 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:31:58,360 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:32:35,435 - logger - INFO - Started Server
+2023-07-17 15:33:38,416 - logger - INFO - Started Server
+2023-07-17 15:33:48,752 - logger - INFO - Started Server
+2023-07-17 15:34:03,919 - logger - INFO - Started Server
+2023-07-17 15:45:13,215 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:45:13,216 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 15:45:13,228 - logger - INFO - Opened resume link
+2023-07-17 15:45:14,384 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1b-iqfEwfnid0eLE8hnb64vIAGVYgkp_n
+2023-07-17 15:45:15,192 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:45:15,194 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:45:57,385 - logger - INFO - Started Server
+2023-07-17 15:46:50,224 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1-Y-74X-MTmzr07AM2A9ZsdAgBX9IU1hq
+2023-07-17 15:46:50,793 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:46:50,796 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:46:50,800 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:46:50,813 - logger - INFO - Opened resume link
+2023-07-17 15:48:28,299 - logger - INFO - Started Server
+2023-07-17 15:48:41,465 - logger - INFO - Started Server
+2023-07-17 15:48:49,209 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Ch7eqLInVh6NPAtDpJ1TINmIxD4sH77Z
+2023-07-17 15:48:50,029 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:48:50,031 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:48:50,035 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:48:50,050 - logger - INFO - Opened resume link
+2023-07-17 15:49:37,756 - logger - INFO - Started Server
+2023-07-17 15:50:06,425 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1Fuy_TX2GlBVGqhEooIFqAxc189YbKO9n
+2023-07-17 15:50:07,112 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:50:07,115 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:50:07,128 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:50:07,139 - logger - INFO - Opened resume link
+2023-07-17 15:50:09,391 - logger - INFO - File ID: 1EIm7OpNkPl4lOkLeL8MBcFK39mT_VsJ-
+2023-07-17 15:50:09,393 - logger - INFO - Uploaded Resume Successfully to [None]
+2023-07-17 15:51:11,177 - logger - INFO - Started Server
+2023-07-17 15:51:28,659 - logger - INFO - Started Server
+2023-07-17 15:51:38,745 - logger - INFO - Started Server
+2023-07-17 15:51:50,880 - logger - INFO - Successfully Set Column Variables
+2023-07-17 15:51:51,061 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-07-17 15:52:10,099 - logger - INFO - Folder was created with web view link: https://drive.google.com/drive/folders/1seFRqGYphx0OaR7H3LvfWq2TSFIzkZo_
+2023-07-17 15:52:10,738 - logger - INFO - Updated Spreadsheet
+2023-07-17 15:52:10,740 - logger - INFO - Jose Rodriguez - Add 1/2 Completed
+2023-07-17 15:52:10,744 - logger - INFO - Jose Rodriguez - Add 1/2 Submitted
+2023-07-17 15:52:10,758 - logger - INFO - Opened resume link
+2023-07-17 15:52:13,062 - logger - INFO - File ID: 1WLyNqwmO8gsl4Zd4BAMSJOiVps12ixvO
+2023-07-17 15:52:13,063 - logger - INFO - Uploaded Resume Successfully to [None]
+2023-07-17 15:52:13,094 - logger - INFO - Updated Jose Rodriguez's Phone number
+2023-07-17 15:52:13,094 - logger - INFO - Updated Jose Rodriguez's Email number
+2023-07-17 15:52:13,096 - logger - INFO - Jose Rodriguez - Add 2/2 Completed
+2023-07-17 15:52:13,098 - logger - INFO - Jose Rodriguez - Add 2/2 Submitted
+2023-07-17 19:50:09,244 - logger - INFO - Started Server
+2023-07-17 19:59:13,327 - logger - INFO - Started Server

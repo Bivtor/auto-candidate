@@ -21,76 +21,65 @@ async def checkIsUpdating() -> bool:
     return json_check['isUpdating']
 
 
-async def beginHalfAdd(candidateData: candidateData, data):
+async def beginHalfAdd(candidateData: candidateData):
     """
-    Creates a new candidate inside xyz Folder and a new Questions document
-    candidateData = candidate information to be inputted
-    data = information about columns and sheets
+    Creates a new candidate inside Target Folder
+
+    Updates candidateData with folder ID
+
+    Updates spreadsheet with known information
     """
 
-    # Set Proper Variables
-    category = data['category']
-    title = "{} {} ({})".format(candidateData.name,
-                                category, candidateData.location)
+    # Read sheet positional settings data
+    f = open(SETTINGS_PATH)
+    setting_data = json.load(f)
 
-    # Clean up Date
-    # TODO Fix date errors in some cases
-    print(f"DATE IS: {candidateData.date}")
+    # Set Proper Variables, Generate Title
+    category = setting_data['category']
+    candidateData.title = "{} {} ({})".format(candidateData.name,
+                                              category, candidateData.location)
+    SHEET_ID = setting_data['sheetId']
+    FOLDER_PARENT = [setting_data['folderId']]  # misc default
+
+    # Clean up Date TODO fix?
     if not (candidateData.date is None or candidateData.date == 'None'):
         candidateData.date = cleanupdate(
             candidateData.date, candidateData.source)
 
-    # Set Parameters
-    SHEET_ID = data['sheetId']
-    parents = [data['folderId']]  # misc default
-    logger.info("Parents are: {} for role: {}".format(parents, category))
-
-    # Create folder
-    newParent = create_folder(title, parents)
-    logger.info("Creating {}'s Folder".format(candidateData.name))
-    folder_id = [newParent[0]]
-
-    # Add current candidate to the "working on" table
-    await insert_working_table_item(
-        candidateData.name, newParent[0], candidateData.resume_download_link, 1, category)
+    # Create folder & set folder ID in candidate object
+    candidate_folder_id = create_folder(candidateData.title, FOLDER_PARENT)
+    candidateData.candidate_folder_id = candidate_folder_id[0]
 
     # Add this canddiate to the spreadsheet
-    update_spreadsheet(candidateData, data, SPREADSHEET_ID,
-                       SHEET_ID, newParent[1])
+    update_spreadsheet(candidateData, setting_data, SPREADSHEET_ID,
+                       SHEET_ID, candidate_folder_id[1])
+
+    return
 
 
-async def finishHalfAdd(candidateData: candidateData, data: Data, title: str):
-    print("in finish")
+async def finishHalfAdd(candidateData: candidateData):
     """
-    High level overview:
-    1. For each candidate in the database
-        a. Get first candidate from working
-        b. Check status of candidate
-    2. If status 1:
-        a. download resume
-        b. parse resume
-        c. upload resume
-        d. find name in spreadsheet
-        e. update corresponding sheet cell
-        f. update db status to 2
-        g. move candidate to history, 
-        h. check if db is not empty and repeat
-    3. If status 2:
-        a. Move on to next candidate
+
+
     """
-    # Step 1 get first item
-    dbresult = await getFirstWorking()
-    if not dbresult or dbresult is None:
-        return
 
-    # If status is not 1 (This should never be hit but it is a safety)
-    if (dbresult.status != 1):
-        await moveFirstToHistory(2)
-        finishHalfAdd()  # call again
+    print("Running finishHalfAdd\n")
+    # Read sheet positional settings data
+    f = open(SETTINGS_PATH)
+    setting_data = json.load(f)
 
-    # Step 2: Download/parse this person's resume
+    # Call function to finish downloading resume and update Candidate object if there is one
+    if candidateData.hasResume:
+        await safeCandidateUpdate(candidateData, setting_data)
 
-    resume_text: str = await safeResumeDownloadHandle(dbresult, candidateData, data, title)
+    # Now that all of the candidate Data is correct, and resume is up, update everything:
+        # Spreadsheet Entry
+        # Folder Titles
+        # Question Document
+    print(candidateData)
+    return
+
+    # resume_text: str = await safeResumeDownloadHandle(dbresult, candidateData, setting_data, title)
 
     if resume_text != None:
         pass
@@ -133,45 +122,49 @@ async def finishHalfAdd(candidateData: candidateData, data: Data, title: str):
     #     upload_basic(title, folder_id, path)
 
     # Move this finished candidate from 'working' to 'history'
-    await moveFirstToHistory(2)
 
-    return await checkWorkingEmpty()
+    # return checkWorkingEmpty()
 
 
-async def safeResumeDownloadHandle(table, candidateData: candidateData, data: Data, title: str) -> str:
+async def safeCandidateUpdate(candidateData: candidateData, setting_data: Data) -> str:
     """
     Safely download and parse the resume to ensure correctness 
-    0. Check that we have a resume
     1. Establish listener on download folder
     2. Open download link
     3. Upon completion, glob newest file
     4. Return stringified resume 
     """
 
-    # 0: Check that we have a resume
-    if (table.resume_link != "None"):
+    # 1: Open download link (Unix)
+    cmd = 'open {}'.format(candidateData.resume_download_link)  # OPEN chrome
+    if os.system(cmd) != 0:
+        logger.error(f"Failed to open Resume Link for {candidateData.name}")
+        return f"Failed to open Resume Link for {candidateData.name}"
 
-        # 1: Open download link (Unix)
-        logger.info(f"Downloading Resume for: {table.name}")
-        cmd = 'open {}'.format(table.resume_link)  # OPEN chrome
-        if os.system(cmd) != 0:
-            return False
+    logger.info("Opened resume link")
 
-        # 2: Block until new download in folder #TODO This could cause problems
-        handler = FileCreatedHandler(DOWNLOAD_PATH)
-        handler.wait_for_file_creation()
+    # 2: Block until new download in folder #TODO This could cause problems
 
-        # 3: Glob newest file
-        list_of_files = glob.glob(DOWNLOAD_PATH + "/*")
-        path = max(list_of_files, key=os.path.getctime)
+    # On Mac OS this is hindered by Python Multithreading, to fix
 
-        title = "{} {} ({})".format(table.name,
-                                    table.job_destination, candidateData.location)
-        await upload_basic(title, [table.parent_id], path)
+    handler = FileCreatedHandler(DOWNLOAD_PATH)
+    handler.wait_for_file_creation()
 
-        # 4: Return raw text from resume
-        return get_raw_text(path)
-    return None
+    # 3: Get newest file, and upload resume to their folder
+    list_of_files = glob.glob(DOWNLOAD_PATH + "/*")
+    path = max(list_of_files, key=os.path.getctime)
+    category = setting_data['category']
+    candidateData.title = "{} {} ({})".format(candidateData.name,
+                                              category, candidateData.location)
+    candidateData.candidate_resume_id = await upload_basic(candidateData.title, [candidateData.candidate_folder_id], path)
+
+    # 4: Get raw text from resume
+    resume_text = get_raw_text(path)
+
+    # 5: Update candidate Phone # based on regex
+    parse_resume(candidateData, resume_text)
+
+    return "Done"
 
 
 def get_raw_text(directory: str) -> str:
@@ -204,7 +197,7 @@ def get_raw_text(directory: str) -> str:
 
 
 async def main():
-    await finishHalfAdd()
+    finishHalfAdd()
 
 
 if __name__ == '__main__':

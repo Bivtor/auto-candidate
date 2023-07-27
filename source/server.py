@@ -13,8 +13,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from hashlib import sha256
 from auto_candidate import logger
+from celery import Celery
+from worker import *
 
 app = FastAPI()
+
+# celeryapp = Celery(
+#     'server', broker='amqp://guest:guest@127.0.0.1:5672'
+# )
+
+# sudo rabbitmq-server
+# sudo rabbitmqctl status
+# sudo rabbitmqctl stop
 
 
 # Log Server start
@@ -71,27 +81,35 @@ def openstring(data: Data):
 
 @app.post('/runfunction')
 def createUsers(candidateData: candidateData):
+    """
+    Submit a Task to the Broker with the current settings stored 
+    """
+
+    # Load stored settings data
     f = open(SETTINGS_PATH)
-    data = json.load(f)
+    setting_data = json.load(f)
 
-    # Add candidate with saved data
-    create_candidate(candidateData, data)
+    # Concatonate dictionaries to send all of the data to
+    candidate_dict = candidateData.dict()
+    candidate_dict.update(setting_data)
 
-    # Testing
-    # print(f"recieved new request with: \n {candidateData}")
-    f.close()
+    # Submit Task Part 1
+    process_candidate_part1.delay(candidate_dict)
+
+    # TODO Submit Task Part 2
 
     # Log
-    logger.info(f'Created profile for {candidateData.name}')
+    # logger.info(f'Created profile for {candidateData.name}')
 
     # Update Candidate Existence
-    updateCandidateExistence(
-        SPREADSHEET_ID, sheet_name=data['category'])
+    # updateCandidateExistence(
+    #     SPREADSHEET_ID, sheet_name=data['category'])
 
     # Log
-    logger.info(f'Updated local json file for {candidateData.name}')
+    # logger.info(f'Updated local json file for {candidateData.name}')
 
-    return {"message": "Success"}
+    f.close()
+    return {"message": "Successfully opened link on Test Branch build"}
 
 
 class ResponseModel(BaseModel):
@@ -100,43 +118,43 @@ class ResponseModel(BaseModel):
 
 @app.post('/submitdata')
 def submitdata(data: Data):
-    # Check if operation is currently in progress
-    if checkWorking():
-        logger.info("Operation currently ongoing, cannot process, stopping")
-        return ResponseModel(response="Currently Busy")
+    """
+    Check initial conditions for this task, then submit an open_link_task and return the Task_ID
+    """
 
     # Check Password
     if data.password != os.environ['DEFAULT_PASSWORD']:
         return ResponseModel(response="Incorrect Password")
 
-    # Set that there is now an operation ongoing since we passed the check
-    setWorking(True)
-
     # Check Validity
     checkSheetNameValidity(data.category, data)
     if ((not data.isFolder) and (not data.isSheet)):
         logger.info("Folder or Sheet name does not exactly match category")
-        setWorking(False)
-        return "Folder or Sheet name does not exactly match category"
+        response = "Folder or Sheet name does not exactly match category of submission destination. For example, if you are trying to submit something to the 'Therapist' sheet, there must also exist a 'Therapist' folder, with no trailing spaces"
+        ResponseModel(response=response)
 
+    # TODO Alter this to return the proper error if this function throws a flag
     # Set Variables
     setColumnVariables(data)
 
     # Write data to a file for use if adding candidates
     with open(SETTINGS_PATH, "w") as outfile:
-        outfile.write(data.json())
+        outfile.write(data.json())  # ( Not actually deprecated yet )
     logger.info("Successfully Set Column Variables")
 
     ################## Passed Pre-Checks ##################
     if data.action == "Text":
+        # TODO move mail texts to task processor
         sendmailtexts(data)
+        response = f"Successfully submitted Text Task with Task ID: \n{str(task)}\n(Disregard for now)"
+        return ResponseModel(response=response)
     if data.action == "Add":
-        openstring(data)
+        # TODO New task process part
+        task = open_link_task.apply_async(args=(data.dict(),), priority=5)
+        response = f"Successfully submitted Add Candidate Task with Task ID: \n{str(task)}\n(Disregard for now)"
+        return ResponseModel(response=response)
 
-    # Stop Working
-    setWorking(False)
-
-    return ResponseModel(response="Success")
+    return ResponseModel(response="Fell through to default response (Contact Victor)")
 
 
 class MailData(BaseModel):
@@ -197,35 +215,24 @@ def sendtexts():
 @app.post('/submit_candidate')
 async def submit_candidate(candidateData: candidateData):
 
-    # Gather destination info
-    f = open(SETTINGS_PATH)
-    data = json.load(f)
+    # Concatonate dictionaries to send all info in one dict
+    candidate_dict = candidateData.dict()
 
-    # Perform first half candidate add
-    await beginHalfAdd(candidateData, data)
-    f.close()
-
-    # Log
-    logger.info(f'Completed 1/2 profile for {candidateData.name}')
-
-    # Update Candidate Existence
-    updateCandidateExistence(
-        SPREADSHEET_ID, sheet_name=data['category'])
+    # Submit Task Part 1/2
+    result = process_candidate_part1.apply_async(
+        args=(candidate_dict,), priority=1,)
+    # Await Task Submission Confirmation
+    result_output = result.wait(timeout=None, interval=0.5)
 
     # Log
-    logger.info(f'Updated local json file for {candidateData.name}')
+    logger.info(f'{candidateData.name} - Add 1/2 Submitted')
 
-    # Check whether or not we are already working on finishing resume downloads, always try to call.
-    while (1):
-        if not await checkIsUpdating():
-            await setIsUpdating(True)
-            # await finishHalfAdd(candidateData, data, title)
-            finished = False
-            while (not finished):
-                finished = await finishHalfAdd(candidateData, data, "TEMPORARY TITLE")
-                print(f"finished is: {finished}")
-            await setIsUpdating(False)
-            break
-        time.sleep(1)
+    # Submit Finish Add Task
+    result = process_candidate_part2.apply_async(
+        args=(candidate_dict,), priority=2)
+    # Await Task Submission Confirmation
+    result_output = result.wait(timeout=None, interval=0.5)
+
+    logger.info(f'{candidateData.name} - Add 2/2 Submitted')
 
     return {"message": "Success"}
