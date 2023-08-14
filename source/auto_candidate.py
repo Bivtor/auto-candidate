@@ -1164,11 +1164,13 @@ def create_candidate(candidateData: candidateData, data):
     else:
         create_file_general(candidateData, folder_id, title)
 
+    # TODO Fix license function
     # Get License number of first (depth) entries:
-    licenselist = getLicenseInfo(candidateData.name, 5)
+    # licenselist = getLicenseInfo(candidateData.name, 5)
 
+    
     # Add License info if match to candidateData
-    curateLicenseList(licenselist, candidateData)
+    # curateLicenseList(licenselist, candidateData)
 
     # Call update spreadsheet function
     update_spreadsheet(candidateData, data, SPREADSHEET_ID,
@@ -1509,6 +1511,10 @@ def sendmailtexts(data: Data):
     """"
     Methods for deciding if we should send the text
     """
+
+    EMAIL_SOURCE = "Stephanie@solutionbasedtherapeutics.com"
+    # "gabe@solutionbasedtherapeutics.com"
+
     # Decide whether or not to send a text/email Function
     def shouldSendMessage(data: Data, values: dict) -> bool:
         """
@@ -1611,7 +1617,7 @@ def sendmailtexts(data: Data):
 
                     # Send an email to the given info
                     sendAWSEmail(name=name, email=email, body=body,
-                                 category=data.category, mailsender=mailsender)
+                                 category=data.category, mailsender=mailsender, source=EMAIL_SOURCE)
 
                     # Format for updating the cells for times contacted in Google Sheets
             
@@ -1658,13 +1664,13 @@ def sendTwilioText(name: str, number: str, body: str):
         return False
 
 
-def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender):
+def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender, source:str):
     # Create destination type
     destination = SesDestination(tos=[email])
 
     # Send mail and log response
     mailsender.send_email(
-        destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source="gabe@solutionbasedtherapeutics.com", html="", name=name, category=category, email=email)
+        destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source=source, html="", name=name, category=category, email=email)
 
 
 def checkSheetNameValidity(category: str, values: Data):

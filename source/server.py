@@ -134,7 +134,8 @@ def retrieve_email(data: MailData):
     logger.info('Recieved New Email notification')
 
     # Refresh the publish token
-    decideTokenRefresh(WORKING_PATH)
+    # Commenting this out will stop our token from refreshing so this phases out as we are not currently using ZipRecruiter
+    # decideTokenRefresh(WORKING_PATH)
 
     # Get message
     process_message()
