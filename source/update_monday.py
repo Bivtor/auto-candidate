@@ -137,7 +137,7 @@ async def createMondayItem(data: candidateData):
         response_data = response.json()
         new_id = response_data['data']['create_item']['id']
         logger.info(
-            f"{data.name} - Successfully uploaded at: {new_id}")
+            f"{data.name} - Successfully Added Candidate to Monday at: {new_id}")
         return new_id
     else:
         logger.info(f"{data.name} - Failed to upload  to Monday")
@@ -290,3 +290,138 @@ async def createQuestionDocument(data: candidateData):
         logger.info(f"{data.name} - Failed to create Notes document")
 
     return
+
+
+async def updateQuestionDocument(data: candidateData):
+    """
+    Updates the 'Monday Doc' in the candidate's 'Notes' field
+    This function depends on the occupation of the candidate and will default to a general (Therapist) questionairre
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+    url = "https://api.monday.com/v2"
+
+    # JSON
+    column_values = {
+        "alignment": "left",
+        "direction": "ltr",
+        "deltaFormat": [
+        ]
+    }
+
+    # Pick Questionairre format
+    delta_format = GetQuestionSheet(data)  # TODO
+
+    # Format for Monday request
+    column_values["deltaFormat"] = delta_format
+    j = json.dumps(column_values)
+    j = j.replace('"', '\\\"')
+
+    # Generate Mutation
+    q = f"""
+            mutation 
+                {{ 
+                    create_doc_block (
+                        type: normal_text
+                        doc_id: {data.notes_id}
+                        content : "{j}"
+                    )
+                    {{
+                        id
+                    }}
+                }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        response_data = response.json()
+        logger.info(
+            f"{data.name} - Successfully updated Notes document with questionnaire info")
+    else:
+        logger.info(
+            f"{data.name} - Failed to update Notes document with questionnaire info")
+
+    return
+
+
+def GetQuestionSheet(data: candidateData) -> dict:
+    """
+    Helper function to return the correct information to put in the candidate's 'Notes' questionairre
+    """
+    # Read sheet positional settings data
+    f = open(SETTINGS_PATH)
+    setting_data = json.load(f)
+
+    if setting_data['occupation'] is "Nurse":
+        lines = [
+            f"Date: {data.date}",
+            f"Location: {data.location}",
+            "Willingness to commute to?:",
+            "Yrs Exp w/ Treatment?:",
+            "If so, where?:",
+            "Yrs Exp w/ Kipu?:",
+            "If not, tech savvy?:",
+            "Doctor’s Orders?:",
+            "COWS/CIWA?:",
+            "FT/PT/Per Diem?:",
+            "When Start?:",
+            "Desired Hours?:",
+            "Desired Wage?:",
+            "Availability?:",
+            "Open to nights?:",
+            "Med Destruction?:",
+            "Licenses and certs?:",
+            "Verified?:",
+            "Active CPR/FA?:",
+            "Other Notes?:"
+        ]
+    elif setting_data['occupation'] is "Front Desk Receptionist":
+        lines = [
+            f"Date Applied: {data.date}",
+            "Date Interviewed:",
+            f"Location: {data.date}",
+            "How far are you willing to commute?:",
+            "Medical Office Experience?:",
+            "If so, where?:",
+            "Specialty?:",
+            "EMR Experience?:",
+            "FT/PT?:",
+            "Desired Wage?:",
+            "When can you start?:",
+            "Additional Certifications:",
+            "General Notes:"
+        ]
+    else:
+        # Defaults to Therapist Questionairre
+        lines = [
+            f"Certification Type and  #: {data.license_cert}, {data.license_expiration}",
+            f"Date: {data.date}",
+            f"Location: {data.location}",
+            "How far are you willing to commute?:",
+            "Treatment Experience?:",
+            "If so, where?:",
+            "Kipu Experience?:",
+            "If not, tech savvy?:",
+            "BPS/Treatment Plans/ASAM Criteria/Utilization Review?:",
+            "FT/PT/Groups?:",
+            "What kind of groups?:",
+            "Telehealth exp?:",
+            "Desired Wage?:",
+            "When can you start?:",
+            "CPR/FA?:",
+            "Additional Certifications:",
+            "Hours Towards Licensure:",
+            "General Notes:"
+        ]
+
+    delta_format = [{"insert": line + '\\n\\n'} for line in lines]
+
+    return delta_format

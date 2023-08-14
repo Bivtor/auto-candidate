@@ -214,7 +214,8 @@ def parse_resume(candidateData: candidateData, text):
 
     # Only do this for Indeed when a resume is present
     if candidateData.source != "Indeed" or (not candidateData.hasResume):
-        logger.info(f"Choose not to parse resume for {candidateData.name}")
+        logger.info(
+            f"{candidateData.name} - Choose not to parse resume (Non Indeed Candidate) ")
         return
 
     # Define regex Patterns
@@ -230,10 +231,10 @@ def parse_resume(candidateData: candidateData, text):
     # Update values if found
     if len(newPhone) > 0:
         candidateData.phone = newPhone[0]
-        logger.info(f"Updated {candidateData.name}'s Phone number")
+        logger.info(f"{candidateData.name} - Updated Phone number from resume")
     if len(newEmail) > 0:
         candidateData.email = newEmail[0]
-        logger.info(f"Updated {candidateData.name}'s Email number")
+        logger.info(f"{candidateData.name} - Updated Email from resume")
 
     return
 

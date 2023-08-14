@@ -301,7 +301,7 @@ async def createQuestionDocument():
                                 item_id : 4976409772,
                                 column_id: monday_doc6,
                             }}
-                        }}
+                        }},
                     )
                     {{
                         id
@@ -333,20 +333,19 @@ async def updateQuestionDocument():  # data: candidateData
     }
     url = "https://api.monday.com/v2"
 
-    # Pick Questionairre format
-    info = GetQuestionSheet()  # data
-
     # JSON
     column_values = {
         "alignment": "left",
         "direction": "ltr",
         "deltaFormat": [
-            {
-                "insert": f"{info}"
-            }
         ]
     }
 
+    # Pick Questionairre format
+    delta_format = GetQuestionSheet()  # data # TODO
+
+    # Format for Monday request
+    column_values["deltaFormat"] = delta_format
     j = json.dumps(column_values)
     j = j.replace('"', '\\\"')
 
@@ -365,6 +364,8 @@ async def updateQuestionDocument():  # data: candidateData
                 }}
         """
 
+    print(q)
+    print()
     response = requests.post(url=url, headers=headers, json={'query': q})
 
     # Handle response
@@ -375,6 +376,7 @@ async def updateQuestionDocument():  # data: candidateData
 
 
 def GetQuestionSheet() -> dict:  # data
+    # if data.occupation is "Therapist":
     lines = [
         "Certification Type and  #:",
         "Date:",
@@ -396,9 +398,8 @@ def GetQuestionSheet() -> dict:  # data
         "General Notes:"
     ]
 
-    info = "\n".join(lines)
-    info = info.replace('"', '\\\"')
-    return info
+    delta_format = [{"insert": line + '\\n\\n'} for line in lines]
+    return delta_format
 
 
 # # test()

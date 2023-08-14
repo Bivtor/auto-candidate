@@ -54,18 +54,25 @@ async def finishHalfAdd(candidateData: candidateData):
         await safeCandidateUpdate(candidateData, setting_data)
 
     # Push item updates to Database if changes are found
-    if (candidateData.phone != None or candidateData.email != None) and candidateData.monday_id != None:
+    if candidateData.monday_id != None and candidateData.hasResume is True:
         await updateMondayItem(candidateData)
     else:
-        logger.info(f"{candidateData.name} - Monday ID was not found")
+        logger.info(
+            f"{candidateData.name} - Reportedly DID NOT upload a Resume")
 
     # Upload Candidate resume (assuming resume is located at newest glob)
     if candidateData.hasResume:
         await uploadCandidateResume(candidateData)
+    else:
+        logger.info(
+            f"{candidateData.name} - Candidate Reportedly did not have a Resume")
 
     # Create Monday Questionairre document
     if candidateData.monday_id != None:
         await createQuestionDocument(candidateData)
+        await updateQuestionDocument(candidateData)
+        # Insert
+
     return
 
 
@@ -81,10 +88,9 @@ async def safeCandidateUpdate(candidateData: candidateData, setting_data: dict) 
     # 1: Open download link (Unix)
     cmd = 'open "{}"'.format(candidateData.resume_download_link)  # OPEN chrome
     if os.system(cmd) != 0:
-        logger.error(f"Failed to open Resume Link for {candidateData.name}")
-        return f"Failed to open Resume Link for {candidateData.name}"
-
-    logger.info("Opened resume link")
+        logger.error(f"{candidateData.name} - Failed to open Resume Link")
+        return
+    logger.info(f"{candidateData.name} - Successfully Opened resume link")
 
     # 2: Wait until download finishes
     time.sleep(5)
