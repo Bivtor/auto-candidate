@@ -26,7 +26,7 @@ async def run() -> None:
     await prisma.disconnect()
 
 
-async def insert_working_table_item(name: str, parent_id: str, resume_link: str, status: int):
+async def insert_working_table_item(name: str, parent_id: str, resume_link: str, status: int, job_destination: str):
     prisma = Prisma()
 
     await prisma.connect()
@@ -38,7 +38,8 @@ async def insert_working_table_item(name: str, parent_id: str, resume_link: str,
             "parent_id": parent_id,
             "resume_link": resume_link,
             "date": time,
-            "status": status
+            "status": status,
+            "job_destination": job_destination
         }
     )
 
@@ -89,12 +90,22 @@ async def move_working_table_to_history():
         return False
 
 
+async def checkWorkingEmpty() -> bool:
+    prisma = Prisma()
+
+    await prisma.connect()
+
+    data = await prisma.working_table.count()
+
+    return (data == 0)
+
+
 async def getFirstWorking():
     prisma = Prisma()
 
     await prisma.connect()
 
-    data = await prisma.working_table.find_first()
+    data = await prisma.working_table.find_first(order={"id": "desc"})
 
     await prisma.disconnect()
 
@@ -106,14 +117,21 @@ async def moveFirstToHistory(status: int):
 
     await prisma.connect()
 
-    # TODO Get info from find_first ( or pass in the info we parsed)
-    # data = await prisma.working_table.find_first()
+    # Get front working_table val
+    newest_item = await prisma.working_table.find_first(order={"id": "desc"})
 
-    # TODO Add to History
-    # data = await prisma.working_table.find_first()
+    # Add data to history
+    await prisma.history.create(
+        data={
+            "name": newest_item.name,
+            "date": newest_item.date,
+            "job_destination": newest_item.job_destination,
+            "status": status
+        }
+    )
 
-    # TODO Delete First in Working
-    # data = await prisma.working_table.find_first()
+    # Remove front working_table val
+    await prisma.working_table.delete(where={"id": newest_item.id})
 
     await prisma.disconnect()
 
