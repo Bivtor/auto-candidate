@@ -1,3 +1,3 @@
 # Auto Candidate
 
-### Python Program to automatically create Google Drive Folders, Documents, and Spreadsheet Cells referencing information scraped from complete candidate ZR HTML
+Recieves scraped data from job recruiting sites to be input into monday.com hub

@@ -6,7 +6,8 @@ from dotenv import load_dotenv
 from paths import *
 
 
-from auto_candidate import *
+from auto_candidate import DEFAULT_SHEET_DEST, JOBMAP_PATH, SPREADSHEET_ID, NAMES_PATH, build, HttpError, Data, SETTINGS_PATH, logger, WORKING_PATH, ENV_PATH
+from auto_candidate import setColumnVariables, setWorking, checkWorking
 
 load_dotenv(dotenv_path=ENV_PATH)
 
@@ -20,7 +21,7 @@ def getRawDataInfo(raw_message: str) -> dict:
 
         Only call this function after using checkIsCandidateSubmissionNotice()
     """
-    results:dict = {}
+    results: dict = {}
 
     def replace_whitespace(string):
         # Replace all non-space white space characters with spaces
@@ -50,7 +51,7 @@ def getRawDataInfo(raw_message: str) -> dict:
     job_title = job_title[:job_title.find("'")].lower().strip()
     job_title = replace_whitespace(job_title)
     logger.info(f'Got Job Title : {job_title}')
-    
+
     # Get sheet destination based on job title
     sheet_destination = handleJobTitle(job_posting_title=job_title)
     results['sheet_destination'] = sheet_destination
@@ -65,29 +66,34 @@ def handleJobTitle(job_posting_title: str) -> str:
     """
     logger.info('Attempting to retrieve sheet destination')
 
-    # Create checkExistence function to be used 
+    # Create checkExistence function to be used
     def checkLocalExistence(data: dict) -> str:
         if job_posting_title in data:
-            logger.info(f'Found appropriate sheet destination: {data[job_posting_title]}')
+            logger.info(
+                f'Found appropriate sheet destination: {data[job_posting_title]}')
             return data[job_posting_title]
         else:
-            logger.info(f'Could not find appropriate sheet desination: {DEFAULT_SHEET_DEST}')
+            logger.info(
+                f'Could not find appropriate sheet desination: {DEFAULT_SHEET_DEST}')
             return DEFAULT_SHEET_DEST
-        
+
     if os.path.isfile(JOBMAP_PATH):
         # If it exists open it
         with open(JOBMAP_PATH, 'r') as f:
-            data = json.load(f) # Load data
-            return checkLocalExistence(data) # Check if the sheet_name exists in the json
+            data = json.load(f)  # Load data
+            # Check if the sheet_name exists in the json
+            return checkLocalExistence(data)
     else:
         # If file does not exist, create it
-        logger.info(f'Could not find \'{JOBMAP_PATH}\', creating one (This must be filled in by hand)') 
-        
+        logger.info(
+            f'Could not find \'{JOBMAP_PATH}\', creating one (This must be filled in by hand)')
+
         with open(JOBMAP_PATH, 'w') as f:
             json.dump({}, f)
-        
+
         # Log creation of file and return default
-        logger.info(f'Returning default sheet_destination {DEFAULT_SHEET_DEST}') 
+        logger.info(
+            f'Returning default sheet_destination {DEFAULT_SHEET_DEST}')
         return DEFAULT_SHEET_DEST
 
 
@@ -109,22 +115,23 @@ def process_message():
         # Decode raw_data
         raw_message = base64.urlsafe_b64decode(
             message['raw'].encode('utf-8')).decode('utf-8')
-        
+
         # Log
         logger.info('Checking most recent email')
-        
+
         # Check if is the right email (ZR Notification)
-        
-        if not checkIsCandidateSubmissionNotice(raw_message=raw_message): 
-            logger.info('Notification was not for candidate submission, returning\n')
+
+        if not checkIsCandidateSubmissionNotice(raw_message=raw_message):
+            logger.info(
+                'Notification was not for candidate submission, returning\n')
             return 200
 
         # Log
         logger.info('Notification was for candidate submission, gathering data')
 
         # Gather data from email before checking if candidate exists
-        parsed_email_data:dict = getRawDataInfo(raw_message=raw_message)
-        
+        parsed_email_data: dict = getRawDataInfo(raw_message=raw_message)
+
         # Extract data from dict
         candidate_url = parsed_email_data['candidate_url']
         candidate_name = parsed_email_data['candidate_name']
@@ -134,13 +141,14 @@ def process_message():
         if checkCandidateExistence(SPREADSHEET_ID, sheet_name=sheet_destination, name=candidate_name):
             logger.info('Candidate already exists, returning')
             return 200
-        
+
         # We know the candidate is not in the spreadsheet, add the candidate (updates json at end of function)
-        logger.info(f'Candidate is new, Now adding to them to the {sheet_destination} sheet')
+        logger.info(
+            f'Candidate is new, Now adding to them to the {sheet_destination} sheet')
 
         # Call clone of submit data (checks password, isRunning, columnVariables, etc)
         final_candidate_data = Data(action='Add', category=sheet_destination,
-                        link=candidate_url, password='g&c2023', message="")
+                                    link=candidate_url, password='g&c2023', message="")
 
         submitdata_clone(data=final_candidate_data)  # Add Candidate
 
@@ -156,14 +164,14 @@ def process_message():
         print(f'An error occurred: {error}')
 
 
-def checkIsCandidateSubmissionNotice(raw_message: str)-> bool:
+def checkIsCandidateSubmissionNotice(raw_message: str) -> bool:
     # Check if the text contains a URL in the format "https://www.ziprecruiter.com/contact/response/*/*"
     pattern = r'https://www\.ziprecruiter\.com/contact/response/[^/]*/[^/]*\?'
     match = re.search(pattern, raw_message)
-    if match: 
-        
+    if match:
+
         return True
-    else: 
+    else:
         return False
 
 
@@ -253,9 +261,10 @@ def updateCandidateExistence(spreadsheet_id, sheet_name):
 def submitdata_clone(data: Data):
     # Check if operation is currently in progress
     if checkWorking():
-        logger.info("Request made whilst currently working on something else -> Could not proceed")
+        logger.info(
+            "Request made whilst currently working on something else -> Could not proceed")
         return 200
-    
+
     # Set that there is now an operation ongoing since we passed the check
     setWorking(True)
 
@@ -263,14 +272,15 @@ def submitdata_clone(data: Data):
     if data.password != os.environ['DEFAULT_PASSWORD']:
         logger.info("Wrong Password, returning")
         setWorking(False)
-        return {"message":"Incorrect Password"}
+        return {"message": "Incorrect Password"}
 
     # Check Validity
     checkSheetNameValidity(data.category, data)
     if ((not data.isFolder) and (not data.isSheet)):
-        logger.info("Incorrect params in checkSheetNameValidity function, returning")
+        logger.info(
+            "Incorrect params in checkSheetNameValidity function, returning")
         setWorking(False)
-        return {"message":"Folder or Sheet name does not exactly match category"}
+        return {"message": "Folder or Sheet name does not exactly match category"}
 
     # Set Variables
     setColumnVariables(data)
@@ -291,6 +301,7 @@ def submitdata_clone(data: Data):
     # return a value
     return 200
 
+
 def openstring_clone(data: Data):
     logger.info("Opening Link: {}".format(data.link))
     cmd = 'start chrome {}'.format(data.link)  # OPEN chrome
@@ -302,20 +313,21 @@ def decideTokenRefresh(path: str):
     # Load JSON data from file path
     with open(path, 'r') as f:
         data = json.load(f)
-        
+
     # Check if shouldUpdate mod 5 == 0
     if data['shouldUpdate'] % 30 == 0:
         # Call publish function if condition is true
         logger.info("Decided to refresh Gmail token")
         pushMailToUs()
-        
+
     # Increment shouldUpdate by 1
     data['shouldUpdate'] += 1
-    
+
     # Update the JSON file with the new value of shouldUpdate
     with open(path, 'w') as f:
         json.dump(data, f)
-    
+
+
 def pushMailToUs():
     try:
         gmail = build('gmail', 'v1', credentials=creds)
@@ -328,12 +340,13 @@ def pushMailToUs():
 
     except HttpError as error:
         # TODO(developer) - Handle errors from gmail API.
-        logger.info(f'An error occurred when trying to refresh gmail token: {error}')
+        logger.info(
+            f'An error occurred when trying to refresh gmail token: {error}')
 
 
 def main():
     print("test")
 
+
 if __name__ == '__main__':
     main()
-

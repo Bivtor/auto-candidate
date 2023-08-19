@@ -1,17 +1,26 @@
 from auto_candidate import *
-from email_handler import process_message, updateCandidateExistence, decideTokenRefresh
+from paths import *
+from worker import *
 
 from pydantic import BaseModel
 import os
 import json
-import base64
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-from hashlib import sha256
 from auto_candidate import logger
 
+
 app = FastAPI()
+
+# uvicorn server:app --reload
+# celeryapp = Celery(
+#     'server', broker='amqp://guest:guest@127.0.0.1:5672'
+# )
+
+# sudo rabbitmq-server
+# sudo rabbitmqctl status
+# sudo rabbitmqctl stop
 
 
 # Log Server start
@@ -26,8 +35,10 @@ origins = [
     "http://localhost:3001",
     "http://localhost:3000",
     "https://www.vrinaldi.com",
-    "https://vrinaldi.com"
-
+    "https://vrinaldi.com",
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:8000/submitdata",
+    "https://127.0.0.1:8000"
 ]
 
 app.add_middleware(
@@ -44,77 +55,104 @@ class textData(BaseModel):
 
 
 def openstring(data: Data):
-    logger.info(f"Opening Link: {data.link}")
-    cmd = 'start chrome {}'.format(data.link)  # OPEN chrome
-    if os.system(cmd) != 0:
-        return False
+    cmd = 'open -a "Google Chrome"  \"{}\"'.format(data.link)  # OPEN chrome
+    if os.system(cmd) == 0:
+        logger.info(f"Successfully Opened Link: {data.link}")
+    else:
+        logger.info(f"Failed to open link: {data.link}")
 
 
 @app.post('/runfunction')
-def runfunction(candidateData: candidateData):
+def createUsers(candidateData: candidateData):
+    """
+    Submit a Task to the Broker with the current settings stored 
+    """
+
+    # Load stored settings data
     f = open(SETTINGS_PATH)
-    data = json.load(f)
-    # Add candidate with saved data
-    create_candidate(candidateData, data)
-    f.close()
+    setting_data = json.load(f)
+
+    # Concatonate dictionaries to send all of the data to
+    candidate_dict = candidateData.dict()
+    candidate_dict.update(setting_data)
+
+    # Submit Task Part 1
+    process_candidate_part1.delay(candidate_dict)
+
+    # TODO Submit Task Part 2
 
     # Log
-    logger.info(f'Created profile for {candidateData.name}')
+    # logger.info(f'Created profile for {candidateData.name}')
 
     # Update Candidate Existence
-    updateCandidateExistence(
-        SPREADSHEET_ID, sheet_name=data['category'])
+    # updateCandidateExistence(
+    #     SPREADSHEET_ID, sheet_name=data['category'])
 
     # Log
-    logger.info(f'Updated local json file for {candidateData.name}')
+    # logger.info(f'Updated local json file for {candidateData.name}')
 
-    return {"message": "Success"}
+    f.close()
+    return {"message": "Successfully opened link on Test Branch build"}
 
 
 class ResponseModel(BaseModel):
     response: str
 
 
-@app.post('/submitdata')
-def submitdata(data: Data):
-    # Check if operation is currently in progress
-    if checkWorking():
-        logger.info("Operation currently ongoing, cannot process, stopping")
-        return ResponseModel(response="Currently Busy")
+@app.post('/submitformdata')
+def submitformdata(data: Data):
+    """
+    Check initial conditions for this task, then submit an open_link_task and return the Task_ID
+    """
 
     # Check Password
     if data.password != os.environ['DEFAULT_PASSWORD']:
         return ResponseModel(response="Incorrect Password")
+    if data.link is None or len(data.link) <= 0:
+        return ResponseModel(response="No Link Provided")
 
-    # Set that there is now an operation ongoing since we passed the check
-    setWorking(True)
+    # TODO Alter this to return the proper error if this function throws a flag
 
-    # Check Validity
-    checkSheetNameValidity(data.category, data)
-    if ((not data.isFolder) and (not data.isSheet)):
-        logger.info("Folder or Sheet name does not exactly match category")
-        setWorking(False)
-        return ResponseModel(response="Folder or Sheet name does not exactly match the category you are trying to target")
-
-
-    # Set Variables
-    setColumnVariables(data)
+    # TODO Set the occupation/group in settings
 
     # Write data to a file for use if adding candidates
     with open(SETTINGS_PATH, "w") as outfile:
-        outfile.write(data.json())
-    logger.info("Successfully Set Column Variables")
+        outfile.write(data.json())  # deprecated?
+    logger.info("Successfully Set Group and Occupation")
 
     ################## Passed Pre-Checks ##################
     if data.action == "Text":
-        sendmailtexts(data)
+        # TODO move mail texts to task processor
+        # TODO Re write send texts method
+        response = f"Successfully submitted Text Task with Task ID: \n{str(task)}\n(Not currently working)"
+        return ResponseModel(response=response)
+
     if data.action == "Add":
-        openstring(data)
+        # TODO New task process part
+        task = open_link_task.apply_async(args=(data.dict(),), priority=5)
+        response = f"\nSuccessfully Submitted Link\n\n Link: {data.link}\n\nGroup: {data.group}\n\nOccupation: {data.occupation}\n\nTask ID: {str(task)}"
+        return ResponseModel(response=response)
 
-    # Stop Working
-    setWorking(False)
+    return ResponseModel(response="Fell through to default response (Contact Victor)")
 
-    return ResponseModel(response="Successfully opened link, attempting to add candidates...")
+
+@app.post('/submit_candidate')
+async def submit_candidate(candidateData: candidateData):
+
+    # Concatonate dictionaries to send all info in one dict
+    candidate_dict = candidateData.dict()
+
+    # Submit Task Part 1/2 ( part 2 is submitted by the worker )
+    result = process_candidate_part1.apply_async(
+        args=(candidate_dict,), priority=1,)
+
+    # Await Task Submission Confirmation TODO remove this
+    # result_output = result.wait(timeout=None, interval=0.5)
+
+    # Log submission #TODO out of order ?
+    # logger.info(f'{candidateData.name} - Add 1/2 Submitted')
+
+    return
 
 
 class MailData(BaseModel):
@@ -122,52 +160,5 @@ class MailData(BaseModel):
 
 
 @app.post('/retrieve_email')
-def retrieve_email(data: MailData):
-    # Decode message
-    response = base64.b64decode(data.message['data'])
-
-    # Convert bytes to string using `decode()` method
-    response_str = response.decode('utf-8')
-
-    # Convert JSON string to Python object using `json.loads()` function
-    response_json = json.loads(response_str)
-    logger.info('Recieved New Email notification')
-
-    # Refresh the publish token
-    # Commenting this out will stop our token from refreshing so this phases out as we are not currently using ZipRecruiter
-    # decideTokenRefresh(WORKING_PATH)
-
-    # Get message
-    process_message()
-
+def createUsers(data: MailData):
     return 200
-
-
-def prevent_duplicates(inputname: str):
-
-    # Check if the file exists
-    if os.path.isfile(NAMES_PATH):
-        # File exists, load the JSON data
-        with open(NAMES_PATH, "r") as json_file:
-            data = json.load(json_file)
-            # Check if the 'names' key exists and contains a string
-            if inputname in data['names']:
-                return True
-            else:
-                return False
-    else:
-        # File does not exist, create the JSON file and add the names from the database
-        # TODO: Add code to populate the 'names' list
-
-        # Save the JSON data to the file
-        with open(NAMES_PATH, "w") as json_file:
-            json.dump(data, json_file)
-
-
-@app.post('/sendtexts')
-def sendtexts():
-    f = open(SETTINGS_PATH)
-    data = json.load(f)
-    sendmailtexts(data)
-    f.close()
-    return {"Success"}

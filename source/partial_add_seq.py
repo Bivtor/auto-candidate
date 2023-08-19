@@ -1,7 +1,10 @@
 from auto_candidate import *
-from Interact import *
-from filewatch import *
-
+from update_monday import *
+import pathlib
+import asyncio
+import requests
+import docx
+import PyPDF2
 
 async def setIsUpdating(b: bool) -> bool:
     with open(WORKING_PATH, "r") as f:
@@ -19,125 +22,131 @@ async def checkIsUpdating() -> bool:
     return json_check['isUpdating']
 
 
-async def beginHalfAdd(candidateData: candidateData, data):
+async def beginHalfAdd(candidateData: candidateData):
     """
-    Creates a new candidate inside xyz Folder and a new Questions document
-    candidateData = candidate information to be inputted
-    data = information about columns and sheets
-    """
-
-    # Set Proper Variables
-    category = data['category']
-    title = "{} {} ({})".format(candidateData.name,
-                                category, candidateData.location)
-
-    # Clean up Date
-    candidateData.date = cleanupdate(candidateData.date, candidateData.source)
-
-    # Set Parameters
-    SHEET_ID = data['sheetId']
-    parents = [data['folderId']]  # misc default
-    logger.info("Parents are: {} for role: {}".format(parents, category))
-
-    # Create folder
-    newParent = create_folder(title, parents)
-    logger.info("Creating {}'s Folder".format(candidateData.name))
-    folder_id = [newParent[0]]
-
-    await insert_working_table_item(
-        candidateData.name, newParent[0], candidateData.resume_download_link, 1)
-
-    # Call update spreadsheet function
-    update_spreadsheet(candidateData, data, SPREADSHEET_ID,
-                       SHEET_ID, newParent[1])
-
-    # Check whether or not we are already working on finishing resume downloads, always try to call.
-    if not await checkIsUpdating():
-        await setIsUpdating(True)
-        finishHalfAdd(candidateData, data)
-        await setIsUpdating(False)
-
-
-async def finishHalfAdd(candidateData: candidateData = None, data=None):
-    """
-    High level overview:
-    1. For each candidate in the database
-        a. Get first candidate from working
-        b. Check status of candidate
-    2. If status 1:
-        a. download resume
-        b. parse resume
-        c. upload resume
-        d. find name in spreadsheet
-        e. update corresponding sheet cell
-        f. update db status to 2
-        g. move candidate to history, 
-        h. check if db is not empty and repeat
-    3. If status 2:
-        a. Move on to next candidate
+    Creates an entry with the given information, 
+    returns the id of that entry so that resume and Notes can be uploaded to it
     """
 
-    # Step 1 get
-    dbresult = await getFirstWorking()
-    print(dbresult)
+    # Clean up Date TODO fix?
+    if not (candidateData.date is None or candidateData.date == 'None'):
+        candidateData.date = cleanupdate(
+            candidateData.date, candidateData.source)
 
-    # If status is not 1
-    if (dbresult.status != 1):
-        # Move candidate to history and try again
-        # moveFirstToHistory(2)
-        pass
-
-    # If status is 1: We want to work on this candidate
-
-    # Fix Phone Number and Email (Indeed Only)
-    # time.sleep(2)
-    # parse_resume(candidateData)
-    # folder_id = "TODO"  # TODO get passed in folder ID
-
-    # # Create Questions Document
-    # category = data['category']
-    # title = "{} {} ({})".format(candidateData.name,
-    #                             category, candidateData.location)
-    # if category == 'Therapist':
-    #     create_file_Therapist(candidateData, folder_id, title)
-    # elif category == 'Med Office Admin':
-    #     create_file_MedOfficeAdmin(candidateData, folder_id, title)
-    # elif category == 'Surgical Tech':
-    #     create_file_SurgicalTech(candidateData, folder_id, title)
-    # elif category == 'Recruiter':
-    #     create_file_Recruiter(candidateData, folder_id, title)
-    # elif category == 'Front Desk Receptionist':
-    #     create_file_FrontDeskReceptionist(candidateData, folder_id, title)
-    # else:
-    #     create_file_general(candidateData, folder_id, title)
-
-    # # Get License number of first (depth) entries:
-    # licenselist = getLicenseInfo(candidateData.name, 5)
-
-    # # Add License info if match to candidateData
-    # curateLicenseList(licenselist, candidateData)
-
-    # # Upload the Resume if they had one
-    # if (candidateData.hasResume):
-    #     # * means all if need specific format then *.csv
-    #     list_of_files = glob.glob("N:\Downloads2\*")
-    #     path = max(list_of_files, key=os.path.getctime)
-    #     upload_basic(title, folder_id, path)
+    # Send to database / return ID of this candidate?
+    return await createMondayItem(candidateData)
 
 
-async def safeResumeDownloadHandle(url: str) -> str:
+async def finishHalfAdd(candidateData: candidateData):
+    """
+    Download Resume
+    Update item details
+    Upload Resume
+    Upload Notes Sheet
+    """
+
+    # Read sheet positional settings data
+    f = open(SETTINGS_PATH)
+    setting_data = json.load(f)
+
+    # Call function to finish downloading resume and update Candidate object if there is one
+    if candidateData.hasResume:
+        await safeCandidateUpdate(candidateData, setting_data)
+
+    # Push item updates to Database if changes are found
+    if candidateData.monday_id != None and candidateData.hasResume is True:
+        await updateMondayItem(candidateData)
+    else:
+        logger.info(
+            f"{candidateData.name} - Reportedly DID NOT upload a Resume")
+
+    # Upload Candidate resume (assuming resume is located at newest glob)
+    if candidateData.hasResume:
+        await uploadCandidateResume(candidateData)
+    else:
+        logger.info(
+            f"{candidateData.name} - Candidate Reportedly did not have a Resume")
+
+    # Create Monday Questionairre document
+    if candidateData.monday_id != None:
+        await createQuestionDocument(candidateData)
+        await updateQuestionDocument(candidateData)
+        # Insert
+
+    return
+
+
+async def safeCandidateUpdate(candidateData: candidateData, setting_data: dict) -> str:
     """
     Safely download and parse the resume to ensure correctness 
     1. Establish listener on download folder
     2. Open download link
     3. Upon completion, glob newest file
-    4. Properly parse resume into a string
-    5. Return String
+    4. Return stringified resume 
     """
+
+    # 1: Open download link (Unix)
+    cmd = f'start chrome "{candidateData.resume_download_link}"' # OPEN chrome (Windows format)
+    if os.system(cmd) != 0:
+        logger.error(f"{candidateData.name} - Failed to open Resume Link")
+        return
+    logger.info(f"{candidateData.name} - Successfully Opened resume link")
+
+    # 2: Wait until download finishes
+    time.sleep(5)
+    # TODO fix this library thing?
+
+    # 3: Get newest file
+    list_of_files = glob.glob(DOWNLOAD_PATH) # Add back  + "/*" for Mac
+    newest_file_path = max(list_of_files, key=os.path.getctime)
+    print(newest_file_path)
+    logger.info(f"{candidateData.name} - Resume Path: {newest_file_path}")
+
+    # 4: Get raw text from resume
+    resume_text = get_raw_text(newest_file_path)
+
+    # 5: Update candidate Phone # based on regex
+    parse_resume(candidateData, resume_text)
+
+    # 6: Update title field (unneccessary with monday)
+    category = setting_data['occupation']
+    candidateData.title = "{} {} ({})".format(candidateData.name,
+                                              category, candidateData.location)
+
+    return
+
+
+def get_raw_text(directory: str) -> str:
+    # Define text string and get file extension
+    text = ""
+    file_extension = pathlib.Path(directory).suffix.strip()
+
+    # If .docx
+    if file_extension == '.docx':
+        doc = docx.Document(directory)
+        text = '\s'.join([para.text for para in doc.paragraphs])
+   # Else assume .pdf
+    else:
+        with open(directory, 'rb') as f:
+            # Create a PDF reader object
+            pdf_reader = PyPDF2.PdfReader(f)
+
+            # Get the number of pages in the PDF file
+            num_pages = len(pdf_reader.pages)
+
+            # Loop through all the pages and extract the text
+            for page in range(num_pages):
+                # Get the page object
+                pdf_page = pdf_reader.pages[page]
+                # Extract the text from the page
+                page_text = pdf_page.extract_text()
+                # Add the page text to the overall text variable
+                text += page_text
+    return text
 
 
 async def main():
-    await finishHalfAdd()
+    finishHalfAdd()
 
 
 if __name__ == '__main__':
