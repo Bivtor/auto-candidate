@@ -8,17 +8,19 @@ app.conf.result_backend = 'rpc://'
 
 # System Startup:
 
-# celery -A worker worker --loglevel=INFO --concurrency=1
+# celery -A worker worker --loglevel=INFO --concurrency=1 --pool=solo
 # sudo rabbitmq-server
 # sudo rabbitmqctl status
 # sudo rabbitmqctl stop
 # uvicorn server:app --reload
+# python -m uvicorn server:app --reload
+# ngrok http --subdomain=autocandidate localhost:8000
 
 
 @app.task()
 def open_link_task(data: dict):
     # OPEN chrome
-    cmd = 'open -a "Google Chrome"  \"{}\"'.format(data.get("link"))
+    cmd = f'start chrome "{data["link"]}"'
     if os.system(cmd) == 0:
         logger.info(f"Successfully Opened Link: {data.get('link')}")
     else:

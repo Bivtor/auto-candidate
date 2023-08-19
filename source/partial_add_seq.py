@@ -1,10 +1,10 @@
 from auto_candidate import *
-from Interact import *
-from filewatch import *
 from update_monday import *
+import pathlib
 import asyncio
 import requests
-
+import docx
+import PyPDF2
 
 async def setIsUpdating(b: bool) -> bool:
     with open(WORKING_PATH, "r") as f:
@@ -86,7 +86,7 @@ async def safeCandidateUpdate(candidateData: candidateData, setting_data: dict) 
     """
 
     # 1: Open download link (Unix)
-    cmd = 'open "{}"'.format(candidateData.resume_download_link)  # OPEN chrome
+    cmd = f'start chrome "{candidateData.resume_download_link}"' # OPEN chrome (Windows format)
     if os.system(cmd) != 0:
         logger.error(f"{candidateData.name} - Failed to open Resume Link")
         return
@@ -97,11 +97,13 @@ async def safeCandidateUpdate(candidateData: candidateData, setting_data: dict) 
     # TODO fix this library thing?
 
     # 3: Get newest file
-    list_of_files = glob.glob(DOWNLOAD_PATH + "/*")
-    path = max(list_of_files, key=os.path.getctime)
+    list_of_files = glob.glob(DOWNLOAD_PATH) # Add back  + "/*" for Mac
+    newest_file_path = max(list_of_files, key=os.path.getctime)
+    print(newest_file_path)
+    logger.info(f"{candidateData.name} - Resume Path: {newest_file_path}")
 
     # 4: Get raw text from resume
-    resume_text = get_raw_text(path)
+    resume_text = get_raw_text(newest_file_path)
 
     # 5: Update candidate Phone # based on regex
     parse_resume(candidateData, resume_text)

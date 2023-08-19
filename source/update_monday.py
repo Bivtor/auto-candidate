@@ -198,7 +198,7 @@ async def updateMondayItem(data: candidateData):
 
 async def uploadCandidateResume(data: candidateData):
     # Get newest file
-    list_of_files = glob.glob(DOWNLOAD_PATH + "/*")
+    list_of_files = glob.glob(DOWNLOAD_PATH)  #  + "/*" for Mac 
     f = max(list_of_files, key=os.path.getctime)
 
     # Monday Code

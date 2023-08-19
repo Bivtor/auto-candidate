@@ -39705,3 +39705,1052 @@ Sent message to Natasha Aftandilians with number: (818) 414-9371
 2023-08-01 09:11:00,853 - logger - INFO - Started Server
 2023-08-01 09:11:34,488 - logger - INFO - Started Server
 2023-08-01 10:04:33,537 - logger - INFO - Started Server
+2023-08-13 22:36:36,779 - logger - INFO - Started Server
+2023-08-13 22:36:57,727 - logger - INFO - Started Server
+2023-08-13 22:37:05,680 - logger - INFO - Started Server
+2023-08-13 22:40:08,552 - logger - INFO - Started Server
+2023-08-13 22:40:15,245 - logger - INFO - Started Server
+2023-08-13 22:40:34,988 - logger - INFO - Started Server
+2023-08-13 22:45:14,810 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 22:48:57,499 - logger - INFO - Started Server
+2023-08-13 22:49:10,693 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 22:50:55,344 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 22:50:55,420 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=6652ded780fb&statusName=0
+2023-08-13 22:51:17,112 - logger - INFO - Aprilly cocuzza - Successfully Added Candidate to Monday at: 4980974964
+2023-08-13 22:51:17,113 - logger - INFO - Aprilly cocuzza - Submitting Resume add part 2 at: 4980974964
+2023-08-13 22:51:17,116 - logger - INFO - Aprilly cocuzza - Add 1/2 Completed
+2023-08-13 22:51:17,735 - logger - INFO - Sumayya Aasi - Successfully Added Candidate to Monday at: 4980974990
+2023-08-13 22:51:17,736 - logger - INFO - Sumayya Aasi - Submitting Resume add part 2 at: 4980974990
+2023-08-13 22:51:17,737 - logger - INFO - Sumayya Aasi - Add 1/2 Completed
+2023-08-13 22:51:17,752 - logger - ERROR - Aprilly cocuzza - Failed to open Resume Link
+2023-08-13 22:51:18,427 - logger - INFO - Aprilly cocuzza - Updated phone/email information at: 4980974964
+2023-08-13 22:51:19,638 - logger - INFO - Aprilly cocuzza - Successfully uploaded Resume
+2023-08-13 22:51:22,491 - logger - INFO - Aprilly cocuzza - Updated notes_id local field
+2023-08-13 22:51:22,492 - logger - INFO - Aprilly cocuzza - Successfully created Notes document
+2023-08-13 22:51:22,808 - logger - INFO - Aprilly cocuzza - Successfully updated Notes document with questionnaire info
+2023-08-13 22:51:22,809 - logger - INFO - Aprilly cocuzza - Add 2/2 Completed
+2023-08-13 22:51:22,824 - logger - ERROR - Sumayya Aasi - Failed to open Resume Link
+2023-08-13 22:51:23,775 - logger - INFO - Sumayya Aasi - Updated phone/email information at: 4980974990
+2023-08-13 22:51:24,897 - logger - INFO - Sumayya Aasi - Successfully uploaded Resume
+2023-08-13 22:51:27,336 - logger - INFO - Sumayya Aasi - Updated notes_id local field
+2023-08-13 22:51:27,337 - logger - INFO - Sumayya Aasi - Successfully created Notes document
+2023-08-13 22:51:27,672 - logger - INFO - Sumayya Aasi - Successfully updated Notes document with questionnaire info
+2023-08-13 22:51:27,673 - logger - INFO - Sumayya Aasi - Add 2/2 Completed
+2023-08-13 22:52:08,754 - logger - INFO - Started Server
+2023-08-13 22:53:06,660 - logger - INFO - Started Server
+2023-08-13 22:54:02,075 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 22:54:02,207 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=d966a7739ee4&statusName=0
+2023-08-13 22:54:24,013 - logger - INFO - Erin Spittal - Successfully Added Candidate to Monday at: 4980985197
+2023-08-13 22:54:24,015 - logger - INFO - Erin Spittal - Submitting Resume add part 2 at: 4980985197
+2023-08-13 22:54:24,019 - logger - INFO - Erin Spittal - Add 1/2 Completed
+2023-08-13 22:54:24,541 - logger - INFO - Alyssa Grossen - Successfully Added Candidate to Monday at: 4980985291
+2023-08-13 22:54:24,543 - logger - INFO - Alyssa Grossen - Submitting Resume add part 2 at: 4980985291
+2023-08-13 22:54:24,545 - logger - INFO - Alyssa Grossen - Add 1/2 Completed
+2023-08-13 22:54:25,104 - logger - INFO - Angela Stephens - Successfully Added Candidate to Monday at: 4980985402
+2023-08-13 22:54:25,105 - logger - INFO - Angela Stephens - Submitting Resume add part 2 at: 4980985402
+2023-08-13 22:54:25,107 - logger - INFO - Angela Stephens - Add 1/2 Completed
+2023-08-13 22:54:25,229 - logger - INFO - Erin Spittal - Successfully Opened resume link
+2023-08-13 22:54:30,880 - logger - INFO - barbara rankin - Successfully Added Candidate to Monday at: 4980986500
+2023-08-13 22:54:30,881 - logger - INFO - barbara rankin - Submitting Resume add part 2 at: 4980986500
+2023-08-13 22:54:30,883 - logger - INFO - barbara rankin - Add 1/2 Completed
+2023-08-13 22:54:30,960 - logger - INFO - Alyssa Grossen - Successfully Opened resume link
+2023-08-13 22:54:36,038 - logger - INFO - Angela Stephens - Successfully Opened resume link
+2023-08-13 22:54:41,610 - logger - INFO - Shannon Mangigian - Successfully Added Candidate to Monday at: 4980988621
+2023-08-13 22:54:41,611 - logger - INFO - Shannon Mangigian - Submitting Resume add part 2 at: 4980988621
+2023-08-13 22:54:41,613 - logger - INFO - Shannon Mangigian - Add 1/2 Completed
+2023-08-13 22:54:42,087 - logger - INFO - Ronald Ochoa - Successfully Added Candidate to Monday at: 4980988714
+2023-08-13 22:54:42,088 - logger - INFO - Ronald Ochoa - Submitting Resume add part 2 at: 4980988714
+2023-08-13 22:54:42,089 - logger - INFO - Ronald Ochoa - Add 1/2 Completed
+2023-08-13 22:54:42,871 - logger - INFO - Loraine Tanibata - Successfully Added Candidate to Monday at: 4980988841
+2023-08-13 22:54:42,872 - logger - INFO - Loraine Tanibata - Submitting Resume add part 2 at: 4980988841
+2023-08-13 22:54:42,873 - logger - INFO - Loraine Tanibata - Add 1/2 Completed
+2023-08-13 22:54:43,475 - logger - INFO - STEPHANIE MURRAY - Successfully Added Candidate to Monday at: 4980988964
+2023-08-13 22:54:43,476 - logger - INFO - STEPHANIE MURRAY - Submitting Resume add part 2 at: 4980988964
+2023-08-13 22:54:43,477 - logger - INFO - STEPHANIE MURRAY - Add 1/2 Completed
+2023-08-13 22:54:44,003 - logger - INFO - Jacqueline De La Cruz - Successfully Added Candidate to Monday at: 4980989062
+2023-08-13 22:54:44,003 - logger - INFO - Jacqueline De La Cruz - Submitting Resume add part 2 at: 4980989062
+2023-08-13 22:54:44,005 - logger - INFO - Jacqueline De La Cruz - Add 1/2 Completed
+2023-08-13 22:54:44,747 - logger - INFO - Joniqua Dorsey - Successfully Added Candidate to Monday at: 4980989168
+2023-08-13 22:54:44,748 - logger - INFO - Joniqua Dorsey - Submitting Resume add part 2 at: 4980989168
+2023-08-13 22:54:44,750 - logger - INFO - Joniqua Dorsey - Add 1/2 Completed
+2023-08-13 22:54:45,248 - logger - INFO - James Gonzales - Successfully Added Candidate to Monday at: 4980989286
+2023-08-13 22:54:45,248 - logger - INFO - James Gonzales - Submitting Resume add part 2 at: 4980989286
+2023-08-13 22:54:45,250 - logger - INFO - James Gonzales - Add 1/2 Completed
+2023-08-13 22:54:45,324 - logger - INFO - barbara rankin - Successfully Opened resume link
+2023-08-13 22:54:51,047 - logger - INFO - Diane Restrepo - Successfully Added Candidate to Monday at: 4980990188
+2023-08-13 22:54:51,048 - logger - INFO - Diane Restrepo - Submitting Resume add part 2 at: 4980990188
+2023-08-13 22:54:51,051 - logger - INFO - Diane Restrepo - Add 1/2 Completed
+2023-08-13 22:54:51,796 - logger - INFO - Nadia Chavez - Successfully Added Candidate to Monday at: 4980990254
+2023-08-13 22:54:51,797 - logger - INFO - Nadia Chavez - Submitting Resume add part 2 at: 4980990254
+2023-08-13 22:54:51,798 - logger - INFO - Nadia Chavez - Add 1/2 Completed
+2023-08-13 22:54:52,321 - logger - INFO - Jacqueline Hanson M.A. - Successfully Added Candidate to Monday at: 4980990309
+2023-08-13 22:54:52,322 - logger - INFO - Jacqueline Hanson M.A. - Submitting Resume add part 2 at: 4980990309
+2023-08-13 22:54:52,323 - logger - INFO - Jacqueline Hanson M.A. - Add 1/2 Completed
+2023-08-13 22:54:52,882 - logger - INFO - Anika Muhammad - Successfully Added Candidate to Monday at: 4980990353
+2023-08-13 22:54:52,883 - logger - INFO - Anika Muhammad - Submitting Resume add part 2 at: 4980990353
+2023-08-13 22:54:52,884 - logger - INFO - Anika Muhammad - Add 1/2 Completed
+2023-08-13 22:54:52,958 - logger - INFO - Shannon Mangigian - Successfully Opened resume link
+2023-08-13 22:54:58,044 - logger - INFO - Ronald Ochoa - Successfully Opened resume link
+2023-08-13 22:55:03,136 - logger - INFO - Loraine Tanibata - Successfully Opened resume link
+2023-08-13 22:55:08,219 - logger - INFO - STEPHANIE MURRAY - Successfully Opened resume link
+2023-08-13 22:55:13,304 - logger - INFO - Jacqueline De La Cruz - Successfully Opened resume link
+2023-08-13 22:55:18,395 - logger - INFO - Joniqua Dorsey - Successfully Opened resume link
+2023-08-13 22:55:23,484 - logger - INFO - James Gonzales - Successfully Opened resume link
+2023-08-13 22:55:28,564 - logger - INFO - Diane Restrepo - Successfully Opened resume link
+2023-08-13 22:55:33,655 - logger - INFO - Nadia Chavez - Successfully Opened resume link
+2023-08-13 22:55:38,749 - logger - INFO - Jacqueline Hanson M.A. - Successfully Opened resume link
+2023-08-13 22:55:43,845 - logger - INFO - Anika Muhammad - Successfully Opened resume link
+2023-08-13 22:57:09,117 - logger - INFO - Started Server
+2023-08-13 22:57:35,837 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 22:57:35,950 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=d966a7739ee4&statusName=0
+2023-08-13 22:57:55,058 - logger - INFO - Alyssa Grossen - Successfully Added Candidate to Monday at: 4980996502
+2023-08-13 22:57:55,060 - logger - INFO - Alyssa Grossen - Submitting Resume add part 2 at: 4980996502
+2023-08-13 22:57:55,065 - logger - INFO - Alyssa Grossen - Add 1/2 Completed
+2023-08-13 22:57:55,626 - logger - INFO - Erin Spittal - Successfully Added Candidate to Monday at: 4980996530
+2023-08-13 22:57:55,627 - logger - INFO - Erin Spittal - Submitting Resume add part 2 at: 4980996530
+2023-08-13 22:57:55,629 - logger - INFO - Erin Spittal - Add 1/2 Completed
+2023-08-13 22:57:55,746 - logger - INFO - Alyssa Grossen - Successfully Opened resume link
+2023-08-13 22:58:00,846 - logger - INFO - Erin Spittal - Successfully Opened resume link
+2023-08-13 22:58:06,619 - logger - INFO - Angela Stephens - Successfully Added Candidate to Monday at: 4980996863
+2023-08-13 22:58:06,619 - logger - INFO - Angela Stephens - Submitting Resume add part 2 at: 4980996863
+2023-08-13 22:58:06,621 - logger - INFO - Angela Stephens - Add 1/2 Completed
+2023-08-13 22:58:07,145 - logger - INFO - barbara rankin - Successfully Added Candidate to Monday at: 4980996873
+2023-08-13 22:58:07,145 - logger - INFO - barbara rankin - Submitting Resume add part 2 at: 4980996873
+2023-08-13 22:58:07,146 - logger - INFO - barbara rankin - Add 1/2 Completed
+2023-08-13 22:58:07,637 - logger - INFO - Ronald Ochoa - Successfully Added Candidate to Monday at: 4980996886
+2023-08-13 22:58:07,638 - logger - INFO - Ronald Ochoa - Submitting Resume add part 2 at: 4980996886
+2023-08-13 22:58:07,640 - logger - INFO - Ronald Ochoa - Add 1/2 Completed
+2023-08-13 22:58:08,292 - logger - INFO - Loraine Tanibata - Successfully Added Candidate to Monday at: 4980996899
+2023-08-13 22:58:08,293 - logger - INFO - Loraine Tanibata - Submitting Resume add part 2 at: 4980996899
+2023-08-13 22:58:08,295 - logger - INFO - Loraine Tanibata - Add 1/2 Completed
+2023-08-13 22:58:08,994 - logger - INFO - STEPHANIE MURRAY - Successfully Added Candidate to Monday at: 4980996914
+2023-08-13 22:58:08,995 - logger - INFO - STEPHANIE MURRAY - Submitting Resume add part 2 at: 4980996914
+2023-08-13 22:58:08,996 - logger - INFO - STEPHANIE MURRAY - Add 1/2 Completed
+2023-08-13 22:58:09,521 - logger - INFO - James Gonzales - Successfully Added Candidate to Monday at: 4980996927
+2023-08-13 22:58:09,521 - logger - INFO - James Gonzales - Submitting Resume add part 2 at: 4980996927
+2023-08-13 22:58:09,523 - logger - INFO - James Gonzales - Add 1/2 Completed
+2023-08-13 22:58:09,990 - logger - INFO - Shannon Mangigian - Successfully Added Candidate to Monday at: 4980996937
+2023-08-13 22:58:09,991 - logger - INFO - Shannon Mangigian - Submitting Resume add part 2 at: 4980996937
+2023-08-13 22:58:09,992 - logger - INFO - Shannon Mangigian - Add 1/2 Completed
+2023-08-13 22:58:10,066 - logger - INFO - Angela Stephens - Successfully Opened resume link
+2023-08-13 22:58:15,159 - logger - INFO - barbara rankin - Successfully Opened resume link
+2023-08-13 22:58:20,254 - logger - INFO - Ronald Ochoa - Successfully Opened resume link
+2023-08-13 22:58:25,341 - logger - INFO - Loraine Tanibata - Successfully Opened resume link
+2023-08-13 22:58:30,427 - logger - INFO - STEPHANIE MURRAY - Successfully Opened resume link
+2023-08-13 22:58:35,965 - logger - INFO - Jacqueline De La Cruz - Successfully Added Candidate to Monday at: 4980997728
+2023-08-13 22:58:35,966 - logger - INFO - Jacqueline De La Cruz - Submitting Resume add part 2 at: 4980997728
+2023-08-13 22:58:35,967 - logger - INFO - Jacqueline De La Cruz - Add 1/2 Completed
+2023-08-13 22:58:36,044 - logger - INFO - James Gonzales - Successfully Opened resume link
+2023-08-13 22:58:41,126 - logger - INFO - Shannon Mangigian - Successfully Opened resume link
+2023-08-13 22:58:46,717 - logger - INFO - Nadia Chavez - Successfully Added Candidate to Monday at: 4980998103
+2023-08-13 22:58:46,717 - logger - INFO - Nadia Chavez - Submitting Resume add part 2 at: 4980998103
+2023-08-13 22:58:46,719 - logger - INFO - Nadia Chavez - Add 1/2 Completed
+2023-08-13 22:58:47,283 - logger - INFO - Anika Muhammad - Successfully Added Candidate to Monday at: 4980998128
+2023-08-13 22:58:47,284 - logger - INFO - Anika Muhammad - Submitting Resume add part 2 at: 4980998128
+2023-08-13 22:58:47,285 - logger - INFO - Anika Muhammad - Add 1/2 Completed
+2023-08-13 22:58:48,317 - logger - INFO - Joniqua Dorsey - Successfully Added Candidate to Monday at: 4980998154
+2023-08-13 22:58:48,318 - logger - INFO - Joniqua Dorsey - Submitting Resume add part 2 at: 4980998154
+2023-08-13 22:58:48,319 - logger - INFO - Joniqua Dorsey - Add 1/2 Completed
+2023-08-13 22:58:48,853 - logger - INFO - Jacqueline Hanson M.A. - Successfully Added Candidate to Monday at: 4980998182
+2023-08-13 22:58:48,853 - logger - INFO - Jacqueline Hanson M.A. - Submitting Resume add part 2 at: 4980998182
+2023-08-13 22:58:48,855 - logger - INFO - Jacqueline Hanson M.A. - Add 1/2 Completed
+2023-08-13 22:58:49,378 - logger - INFO - Diane Restrepo - Successfully Added Candidate to Monday at: 4980998196
+2023-08-13 22:58:49,379 - logger - INFO - Diane Restrepo - Submitting Resume add part 2 at: 4980998196
+2023-08-13 22:58:49,380 - logger - INFO - Diane Restrepo - Add 1/2 Completed
+2023-08-13 22:58:49,456 - logger - INFO - Jacqueline De La Cruz - Successfully Opened resume link
+2023-08-13 22:58:54,545 - logger - INFO - Nadia Chavez - Successfully Opened resume link
+2023-08-13 22:58:59,637 - logger - INFO - Anika Muhammad - Successfully Opened resume link
+2023-08-13 22:59:04,717 - logger - INFO - Joniqua Dorsey - Successfully Opened resume link
+2023-08-13 22:59:09,804 - logger - INFO - Jacqueline Hanson M.A. - Successfully Opened resume link
+2023-08-13 22:59:14,888 - logger - INFO - Diane Restrepo - Successfully Opened resume link
+2023-08-13 23:06:03,995 - logger - INFO - Started Server
+2023-08-13 23:06:45,541 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 23:06:45,670 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/jobs/view?id=6652ded780fb&employerJobId=aXJpOi8vYXBpcy5pbmRlZWQuY29tL0VtcGxveWVySm9iL2Y0NmI1NmMyLTI0ZjItNDg0MS1iZDY5LWIzMDg5MTRjMzlkNA%3D%3D
+2023-08-13 23:07:15,105 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 23:07:15,180 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-08-13 23:07:36,239 - logger - INFO - Lauren Foreman - Successfully Added Candidate to Monday at: 4981032399
+2023-08-13 23:07:36,240 - logger - INFO - Lauren Foreman - Submitting Resume add part 2 at: 4981032399
+2023-08-13 23:07:36,243 - logger - INFO - Lauren Foreman - Add 1/2 Completed
+2023-08-13 23:07:36,319 - logger - INFO - Lauren Foreman - Successfully Opened resume link
+2023-08-13 23:07:41,576 - logger - INFO - Lauren Foreman - Updated Email from resume
+2023-08-13 23:07:42,561 - logger - INFO - Lauren Foreman - Updated phone/email information at: 4981032399
+2023-08-13 23:07:43,835 - logger - INFO - Lauren Foreman - Successfully uploaded Resume
+2023-08-13 23:07:46,461 - logger - INFO - Lauren Foreman - Updated notes_id local field
+2023-08-13 23:07:46,462 - logger - INFO - Lauren Foreman - Successfully created Notes document
+2023-08-13 23:07:46,866 - logger - INFO - Lauren Foreman - Successfully updated Notes document with questionnaire info
+2023-08-13 23:07:46,867 - logger - INFO - Lauren Foreman - Add 2/2 Completed
+2023-08-13 23:10:37,733 - logger - INFO - Started Server
+2023-08-13 23:11:12,039 - logger - INFO - Lauren Foreman - Successfully Added Candidate to Monday at: 4981046060
+2023-08-13 23:11:12,040 - logger - INFO - Lauren Foreman - Submitting Resume add part 2 at: 4981046060
+2023-08-13 23:11:12,043 - logger - INFO - Lauren Foreman - Add 1/2 Completed
+2023-08-13 23:11:12,119 - logger - INFO - Lauren Foreman - Successfully Opened resume link
+2023-08-13 23:11:17,135 - logger - INFO - Lauren Foreman - Resume Path: N:\Downloads2\ResumeLaurenForeman (1).pdf
+2023-08-13 23:11:17,353 - logger - INFO - Lauren Foreman - Updated Email from resume
+2023-08-13 23:11:18,428 - logger - INFO - Lauren Foreman - Updated phone/email information at: 4981046060
+2023-08-13 23:11:19,915 - logger - INFO - Lauren Foreman - Successfully uploaded Resume
+2023-08-13 23:11:22,358 - logger - INFO - Lauren Foreman - Updated notes_id local field
+2023-08-13 23:11:22,358 - logger - INFO - Lauren Foreman - Successfully created Notes document
+2023-08-13 23:11:22,939 - logger - INFO - Lauren Foreman - Successfully updated Notes document with questionnaire info
+2023-08-13 23:11:22,940 - logger - INFO - Lauren Foreman - Add 2/2 Completed
+2023-08-13 23:12:33,413 - logger - INFO - Started Server
+2023-08-13 23:12:45,610 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 23:12:45,725 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-08-13 23:13:05,134 - logger - INFO - Lauren Foreman - Successfully Added Candidate to Monday at: 4981049626
+2023-08-13 23:13:05,135 - logger - INFO - Lauren Foreman - Submitting Resume add part 2 at: 4981049626
+2023-08-13 23:13:05,138 - logger - INFO - Lauren Foreman - Add 1/2 Completed
+2023-08-13 23:13:05,212 - logger - INFO - Lauren Foreman - Successfully Opened resume link
+2023-08-13 23:13:10,230 - logger - INFO - Lauren Foreman - Resume Path: N:\Downloads2\ResumeLaurenForeman (2).pdf
+2023-08-13 23:13:10,444 - logger - INFO - Lauren Foreman - Updated Email from resume
+2023-08-13 23:13:11,276 - logger - INFO - Lauren Foreman - Updated phone/email information at: 4981049626
+2023-08-13 23:13:12,622 - logger - INFO - Lauren Foreman - Successfully uploaded Resume
+2023-08-13 23:13:15,261 - logger - INFO - Lauren Foreman - Updated notes_id local field
+2023-08-13 23:13:15,262 - logger - INFO - Lauren Foreman - Successfully created Notes document
+2023-08-13 23:13:15,571 - logger - INFO - Lauren Foreman - Successfully updated Notes document with questionnaire info
+2023-08-13 23:13:15,572 - logger - INFO - Lauren Foreman - Add 2/2 Completed
+2023-08-13 23:14:07,363 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 23:14:07,440 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=d5384e8fc242&statusName=0
+2023-08-13 23:14:27,003 - logger - INFO - Oceania Imperio - Successfully Added Candidate to Monday at: 4981051322
+2023-08-13 23:14:27,004 - logger - INFO - Oceania Imperio - Submitting Resume add part 2 at: 4981051322
+2023-08-13 23:14:27,006 - logger - INFO - Oceania Imperio - Add 1/2 Completed
+2023-08-13 23:14:27,605 - logger - INFO - Daniel Clauser - Successfully Added Candidate to Monday at: 4981051347
+2023-08-13 23:14:27,606 - logger - INFO - Daniel Clauser - Submitting Resume add part 2 at: 4981051347
+2023-08-13 23:14:27,608 - logger - INFO - Daniel Clauser - Add 1/2 Completed
+2023-08-13 23:14:27,721 - logger - INFO - Oceania Imperio - Successfully Opened resume link
+2023-08-13 23:14:32,731 - logger - INFO - Oceania Imperio - Resume Path: N:\Downloads2\ResumeOceaniaImperio.pdf
+2023-08-13 23:14:32,902 - logger - INFO - Oceania Imperio - Updated Phone number from resume
+2023-08-13 23:14:32,903 - logger - INFO - Oceania Imperio - Updated Email from resume
+2023-08-13 23:14:34,458 - logger - INFO - Oceania Imperio - Updated phone/email information at: 4981051322
+2023-08-13 23:14:35,707 - logger - INFO - Oceania Imperio - Successfully uploaded Resume
+2023-08-13 23:14:38,078 - logger - INFO - Oceania Imperio - Updated notes_id local field
+2023-08-13 23:14:38,079 - logger - INFO - Oceania Imperio - Successfully created Notes document
+2023-08-13 23:14:38,403 - logger - INFO - Oceania Imperio - Successfully updated Notes document with questionnaire info
+2023-08-13 23:14:38,404 - logger - INFO - Oceania Imperio - Add 2/2 Completed
+2023-08-13 23:14:38,505 - logger - INFO - Daniel Clauser - Successfully Opened resume link
+2023-08-13 23:14:43,525 - logger - INFO - Daniel Clauser - Resume Path: N:\Downloads2\ResumeDanielClauser.pdf
+2023-08-13 23:14:43,621 - logger - INFO - Daniel Clauser - Updated Phone number from resume
+2023-08-13 23:14:43,622 - logger - INFO - Daniel Clauser - Updated Email from resume
+2023-08-13 23:14:44,370 - logger - INFO - Daniel Clauser - Updated phone/email information at: 4981051347
+2023-08-13 23:14:45,576 - logger - INFO - Daniel Clauser - Successfully uploaded Resume
+2023-08-13 23:14:47,924 - logger - INFO - Daniel Clauser - Updated notes_id local field
+2023-08-13 23:14:47,925 - logger - INFO - Daniel Clauser - Successfully created Notes document
+2023-08-13 23:14:48,242 - logger - INFO - Daniel Clauser - Successfully updated Notes document with questionnaire info
+2023-08-13 23:14:48,243 - logger - INFO - Daniel Clauser - Add 2/2 Completed
+2023-08-13 23:14:48,776 - logger - INFO - Hannah Miers - Successfully Added Candidate to Monday at: 4981052098
+2023-08-13 23:14:48,777 - logger - INFO - Hannah Miers - Submitting Resume add part 2 at: 4981052098
+2023-08-13 23:14:48,778 - logger - INFO - Hannah Miers - Add 1/2 Completed
+2023-08-13 23:14:49,283 - logger - INFO - ashley goodman - Successfully Added Candidate to Monday at: 4981052131
+2023-08-13 23:14:49,284 - logger - INFO - ashley goodman - Submitting Resume add part 2 at: 4981052131
+2023-08-13 23:14:49,285 - logger - INFO - ashley goodman - Add 1/2 Completed
+2023-08-13 23:14:49,894 - logger - INFO - Courtney Marsell - Successfully Added Candidate to Monday at: 4981052145
+2023-08-13 23:14:49,895 - logger - INFO - Courtney Marsell - Submitting Resume add part 2 at: 4981052145
+2023-08-13 23:14:49,896 - logger - INFO - Courtney Marsell - Add 1/2 Completed
+2023-08-13 23:14:50,486 - logger - INFO - Lisa Stroud - Successfully Added Candidate to Monday at: 4981052180
+2023-08-13 23:14:50,487 - logger - INFO - Lisa Stroud - Submitting Resume add part 2 at: 4981052180
+2023-08-13 23:14:50,488 - logger - INFO - Lisa Stroud - Add 1/2 Completed
+2023-08-13 23:14:50,998 - logger - INFO - Antoine Green - Successfully Added Candidate to Monday at: 4981052201
+2023-08-13 23:14:50,999 - logger - INFO - Antoine Green - Submitting Resume add part 2 at: 4981052201
+2023-08-13 23:14:51,000 - logger - INFO - Antoine Green - Add 1/2 Completed
+2023-08-13 23:14:51,571 - logger - INFO - Jacob Kim - Successfully Added Candidate to Monday at: 4981052220
+2023-08-13 23:14:51,571 - logger - INFO - Jacob Kim - Submitting Resume add part 2 at: 4981052220
+2023-08-13 23:14:51,573 - logger - INFO - Jacob Kim - Add 1/2 Completed
+2023-08-13 23:14:52,392 - logger - INFO - Jessica Lienert - Successfully Added Candidate to Monday at: 4981052245
+2023-08-13 23:14:52,393 - logger - INFO - Jessica Lienert - Submitting Resume add part 2 at: 4981052245
+2023-08-13 23:14:52,394 - logger - INFO - Jessica Lienert - Add 1/2 Completed
+2023-08-13 23:14:52,939 - logger - INFO - Eddy Meza - Successfully Added Candidate to Monday at: 4981052257
+2023-08-13 23:14:52,940 - logger - INFO - Eddy Meza - Submitting Resume add part 2 at: 4981052257
+2023-08-13 23:14:52,941 - logger - INFO - Eddy Meza - Add 1/2 Completed
+2023-08-13 23:14:53,465 - logger - INFO - Victoria Charles - Successfully Added Candidate to Monday at: 4981052265
+2023-08-13 23:14:53,466 - logger - INFO - Victoria Charles - Submitting Resume add part 2 at: 4981052265
+2023-08-13 23:14:53,467 - logger - INFO - Victoria Charles - Add 1/2 Completed
+2023-08-13 23:14:53,967 - logger - INFO - Ashley Rose - Successfully Added Candidate to Monday at: 4981052276
+2023-08-13 23:14:53,967 - logger - INFO - Ashley Rose - Submitting Resume add part 2 at: 4981052276
+2023-08-13 23:14:53,968 - logger - INFO - Ashley Rose - Add 1/2 Completed
+2023-08-13 23:14:54,553 - logger - INFO - Miguel Rios - Successfully Added Candidate to Monday at: 4981052292
+2023-08-13 23:14:54,554 - logger - INFO - Miguel Rios - Submitting Resume add part 2 at: 4981052292
+2023-08-13 23:14:54,555 - logger - INFO - Miguel Rios - Add 1/2 Completed
+2023-08-13 23:14:55,093 - logger - INFO - Junxiang “Vincent” Wang - Successfully Added Candidate to Monday at: 4981052306
+2023-08-13 23:14:55,094 - logger - INFO - Junxiang “Vincent” Wang - Submitting Resume add part 2 at: 4981052306
+2023-08-13 23:14:55,095 - logger - INFO - Junxiang “Vincent” Wang - Add 1/2 Completed
+2023-08-13 23:14:55,168 - logger - INFO - Hannah Miers - Successfully Opened resume link
+2023-08-13 23:15:00,188 - logger - INFO - Hannah Miers - Resume Path: N:\Downloads2\ResumeHannahMiers.pdf
+2023-08-13 23:15:00,216 - logger - INFO - Hannah Miers - Updated Phone number from resume
+2023-08-13 23:15:00,217 - logger - INFO - Hannah Miers - Updated Email from resume
+2023-08-13 23:15:00,960 - logger - INFO - Hannah Miers - Updated phone/email information at: 4981052098
+2023-08-13 23:15:02,451 - logger - INFO - Hannah Miers - Successfully uploaded Resume
+2023-08-13 23:15:05,446 - logger - INFO - Hannah Miers - Updated notes_id local field
+2023-08-13 23:15:05,446 - logger - INFO - Hannah Miers - Successfully created Notes document
+2023-08-13 23:15:05,747 - logger - INFO - Hannah Miers - Successfully updated Notes document with questionnaire info
+2023-08-13 23:15:05,747 - logger - INFO - Hannah Miers - Add 2/2 Completed
+2023-08-13 23:15:05,822 - logger - INFO - ashley goodman - Successfully Opened resume link
+2023-08-13 23:15:10,832 - logger - INFO - ashley goodman - Resume Path: N:\Downloads2\Resumeashleygoodman.txt
+2023-08-13 23:15:10,922 - logger - INFO - Courtney Marsell - Successfully Opened resume link
+2023-08-13 23:15:15,927 - logger - INFO - Courtney Marsell - Resume Path: N:\Downloads2\ResumeCourtneyMarsell.pdf
+2023-08-13 23:15:15,986 - logger - INFO - Courtney Marsell - Updated Phone number from resume
+2023-08-13 23:15:15,987 - logger - INFO - Courtney Marsell - Updated Email from resume
+2023-08-13 23:15:22,349 - logger - INFO - Courtney Marsell - Updated phone/email information at: 4981052145
+2023-08-13 23:15:23,934 - logger - INFO - Courtney Marsell - Successfully uploaded Resume
+2023-08-13 23:15:26,934 - logger - INFO - Courtney Marsell - Updated notes_id local field
+2023-08-13 23:15:26,935 - logger - INFO - Courtney Marsell - Successfully created Notes document
+2023-08-13 23:15:27,709 - logger - INFO - Courtney Marsell - Successfully updated Notes document with questionnaire info
+2023-08-13 23:15:27,710 - logger - INFO - Courtney Marsell - Add 2/2 Completed
+2023-08-13 23:15:28,224 - logger - INFO - Angelina Petel - Successfully Added Candidate to Monday at: 4981053283
+2023-08-13 23:15:28,224 - logger - INFO - Angelina Petel - Submitting Resume add part 2 at: 4981053283
+2023-08-13 23:15:28,225 - logger - INFO - Angelina Petel - Add 1/2 Completed
+2023-08-13 23:15:28,787 - logger - INFO - Jessica Scerba - Successfully Added Candidate to Monday at: 4981053302
+2023-08-13 23:15:28,788 - logger - INFO - Jessica Scerba - Submitting Resume add part 2 at: 4981053302
+2023-08-13 23:15:28,789 - logger - INFO - Jessica Scerba - Add 1/2 Completed
+2023-08-13 23:15:28,862 - logger - INFO - Lisa Stroud - Successfully Opened resume link
+2023-08-13 23:15:33,872 - logger - INFO - Lisa Stroud - Resume Path: N:\Downloads2\ResumeLisaStroud.pdf
+2023-08-13 23:15:33,977 - logger - INFO - Lisa Stroud - Updated Phone number from resume
+2023-08-13 23:15:33,977 - logger - INFO - Lisa Stroud - Updated Email from resume
+2023-08-13 23:15:36,772 - logger - INFO - Lisa Stroud - Updated phone/email information at: 4981052180
+2023-08-13 23:15:38,145 - logger - INFO - Lisa Stroud - Successfully uploaded Resume
+2023-08-13 23:15:41,002 - logger - INFO - Lisa Stroud - Updated notes_id local field
+2023-08-13 23:15:41,002 - logger - INFO - Lisa Stroud - Successfully created Notes document
+2023-08-13 23:15:41,292 - logger - INFO - Lisa Stroud - Successfully updated Notes document with questionnaire info
+2023-08-13 23:15:41,292 - logger - INFO - Lisa Stroud - Add 2/2 Completed
+2023-08-13 23:15:41,367 - logger - INFO - Antoine Green - Successfully Opened resume link
+2023-08-13 23:15:46,375 - logger - INFO - Antoine Green - Resume Path: N:\Downloads2\ResumeAntoineGreen.pdf
+2023-08-13 23:15:46,455 - logger - INFO - Antoine Green - Updated Phone number from resume
+2023-08-13 23:15:46,455 - logger - INFO - Antoine Green - Updated Email from resume
+2023-08-13 23:15:47,443 - logger - INFO - Antoine Green - Updated phone/email information at: 4981052201
+2023-08-13 23:15:48,668 - logger - INFO - Antoine Green - Successfully uploaded Resume
+2023-08-13 23:15:51,002 - logger - INFO - Antoine Green - Updated notes_id local field
+2023-08-13 23:15:51,003 - logger - INFO - Antoine Green - Successfully created Notes document
+2023-08-13 23:15:51,343 - logger - INFO - Antoine Green - Successfully updated Notes document with questionnaire info
+2023-08-13 23:15:51,344 - logger - INFO - Antoine Green - Add 2/2 Completed
+2023-08-13 23:15:51,417 - logger - INFO - Jacob Kim - Successfully Opened resume link
+2023-08-13 23:15:56,426 - logger - INFO - Jacob Kim - Resume Path: N:\Downloads2\ResumeJacobKim.pdf
+2023-08-13 23:15:56,463 - logger - INFO - Jacob Kim - Updated Phone number from resume
+2023-08-13 23:15:56,464 - logger - INFO - Jacob Kim - Updated Email from resume
+2023-08-13 23:15:57,349 - logger - INFO - Jacob Kim - Updated phone/email information at: 4981052220
+2023-08-13 23:15:58,693 - logger - INFO - Jacob Kim - Successfully uploaded Resume
+2023-08-13 23:16:00,761 - logger - INFO - Jacob Kim - Updated notes_id local field
+2023-08-13 23:16:00,762 - logger - INFO - Jacob Kim - Successfully created Notes document
+2023-08-13 23:16:01,276 - logger - INFO - Jacob Kim - Successfully updated Notes document with questionnaire info
+2023-08-13 23:16:01,277 - logger - INFO - Jacob Kim - Add 2/2 Completed
+2023-08-13 23:16:01,350 - logger - INFO - Jessica Lienert - Successfully Opened resume link
+2023-08-13 23:16:06,363 - logger - INFO - Jessica Lienert - Resume Path: N:\Downloads2\ResumeJessicaLienert.pdf
+2023-08-13 23:16:06,412 - logger - INFO - Jessica Lienert - Updated Phone number from resume
+2023-08-13 23:16:06,413 - logger - INFO - Jessica Lienert - Updated Email from resume
+2023-08-13 23:16:07,225 - logger - INFO - Jessica Lienert - Updated phone/email information at: 4981052245
+2023-08-13 23:16:08,946 - logger - INFO - Jessica Lienert - Successfully uploaded Resume
+2023-08-13 23:16:11,183 - logger - INFO - Jessica Lienert - Updated notes_id local field
+2023-08-13 23:16:11,183 - logger - INFO - Jessica Lienert - Successfully created Notes document
+2023-08-13 23:16:11,501 - logger - INFO - Jessica Lienert - Successfully updated Notes document with questionnaire info
+2023-08-13 23:16:11,501 - logger - INFO - Jessica Lienert - Add 2/2 Completed
+2023-08-13 23:16:11,578 - logger - INFO - Eddy Meza - Successfully Opened resume link
+2023-08-13 23:16:16,584 - logger - INFO - Eddy Meza - Resume Path: N:\Downloads2\ResumeEddyMeza.pdf
+2023-08-13 23:16:16,658 - logger - INFO - Eddy Meza - Updated Phone number from resume
+2023-08-13 23:16:16,658 - logger - INFO - Eddy Meza - Updated Email from resume
+2023-08-13 23:16:18,098 - logger - INFO - Eddy Meza - Updated phone/email information at: 4981052257
+2023-08-13 23:16:19,561 - logger - INFO - Eddy Meza - Successfully uploaded Resume
+2023-08-13 23:16:21,798 - logger - INFO - Eddy Meza - Updated notes_id local field
+2023-08-13 23:16:21,798 - logger - INFO - Eddy Meza - Successfully created Notes document
+2023-08-13 23:16:22,354 - logger - INFO - Eddy Meza - Successfully updated Notes document with questionnaire info
+2023-08-13 23:16:22,355 - logger - INFO - Eddy Meza - Add 2/2 Completed
+2023-08-13 23:16:22,850 - logger - INFO - Danielle Carter - Successfully Added Candidate to Monday at: 4981055070
+2023-08-13 23:16:22,851 - logger - INFO - Danielle Carter - Submitting Resume add part 2 at: 4981055070
+2023-08-13 23:16:22,852 - logger - INFO - Danielle Carter - Add 1/2 Completed
+2023-08-13 23:16:22,925 - logger - INFO - Victoria Charles - Successfully Opened resume link
+2023-08-13 23:16:27,946 - logger - INFO - Victoria Charles - Resume Path: N:\Downloads2\ResumeVictoriaCharles.pdf
+2023-08-13 23:16:27,973 - logger - INFO - Victoria Charles - Updated Phone number from resume
+2023-08-13 23:16:27,973 - logger - INFO - Victoria Charles - Updated Email from resume
+2023-08-13 23:16:28,933 - logger - INFO - Victoria Charles - Updated phone/email information at: 4981052265
+2023-08-13 23:16:30,267 - logger - INFO - Victoria Charles - Successfully uploaded Resume
+2023-08-13 23:16:32,844 - logger - INFO - Victoria Charles - Updated notes_id local field
+2023-08-13 23:16:32,844 - logger - INFO - Victoria Charles - Successfully created Notes document
+2023-08-13 23:16:33,160 - logger - INFO - Victoria Charles - Successfully updated Notes document with questionnaire info
+2023-08-13 23:16:33,161 - logger - INFO - Victoria Charles - Add 2/2 Completed
+2023-08-13 23:16:33,234 - logger - INFO - Ashley Rose - Successfully Opened resume link
+2023-08-13 23:16:38,244 - logger - INFO - Ashley Rose - Resume Path: N:\Downloads2\ResumeAshleyRose.pdf
+2023-08-13 23:16:38,354 - logger - INFO - Ashley Rose - Updated Phone number from resume
+2023-08-13 23:16:38,354 - logger - INFO - Ashley Rose - Updated Email from resume
+2023-08-13 23:16:39,527 - logger - INFO - Ashley Rose - Updated phone/email information at: 4981052276
+2023-08-13 23:16:40,708 - logger - INFO - Ashley Rose - Successfully uploaded Resume
+2023-08-13 23:16:43,099 - logger - INFO - Ashley Rose - Updated notes_id local field
+2023-08-13 23:16:43,099 - logger - INFO - Ashley Rose - Successfully created Notes document
+2023-08-13 23:16:43,437 - logger - INFO - Ashley Rose - Successfully updated Notes document with questionnaire info
+2023-08-13 23:16:43,438 - logger - INFO - Ashley Rose - Add 2/2 Completed
+2023-08-13 23:16:43,513 - logger - INFO - Miguel Rios - Successfully Opened resume link
+2023-08-13 23:16:48,531 - logger - INFO - Miguel Rios - Resume Path: N:\Downloads2\ResumeMiguelRios.pdf
+2023-08-13 23:16:48,582 - logger - INFO - Miguel Rios - Updated Phone number from resume
+2023-08-13 23:16:48,582 - logger - INFO - Miguel Rios - Updated Email from resume
+2023-08-13 23:16:49,592 - logger - INFO - Miguel Rios - Updated phone/email information at: 4981052292
+2023-08-13 23:16:51,148 - logger - INFO - Miguel Rios - Successfully uploaded Resume
+2023-08-13 23:16:53,782 - logger - INFO - Miguel Rios - Updated notes_id local field
+2023-08-13 23:16:53,782 - logger - INFO - Miguel Rios - Successfully created Notes document
+2023-08-13 23:16:54,136 - logger - INFO - Miguel Rios - Successfully updated Notes document with questionnaire info
+2023-08-13 23:16:54,137 - logger - INFO - Miguel Rios - Add 2/2 Completed
+2023-08-13 23:16:54,219 - logger - INFO - Junxiang “Vincent” Wang - Successfully Opened resume link
+2023-08-13 23:16:59,233 - logger - INFO - Junxiang “Vincent” Wang - Resume Path: N:\Downloads2\ResumeJunxiang“Vincent”Wang.pdf
+2023-08-13 23:16:59,353 - logger - INFO - Junxiang “Vincent” Wang - Updated Phone number from resume
+2023-08-13 23:16:59,354 - logger - INFO - Junxiang “Vincent” Wang - Updated Email from resume
+2023-08-13 23:17:00,286 - logger - INFO - Junxiang “Vincent” Wang - Updated phone/email information at: 4981052306
+2023-08-13 23:17:02,237 - logger - INFO - Junxiang “Vincent” Wang - Successfully uploaded Resume
+2023-08-13 23:17:04,988 - logger - INFO - Junxiang “Vincent” Wang - Updated notes_id local field
+2023-08-13 23:17:04,989 - logger - INFO - Junxiang “Vincent” Wang - Successfully created Notes document
+2023-08-13 23:17:05,376 - logger - INFO - Junxiang “Vincent” Wang - Successfully updated Notes document with questionnaire info
+2023-08-13 23:17:05,377 - logger - INFO - Junxiang “Vincent” Wang - Add 2/2 Completed
+2023-08-13 23:17:05,875 - logger - INFO - Michael Archuleta - Successfully Added Candidate to Monday at: 4981056804
+2023-08-13 23:17:05,875 - logger - INFO - Michael Archuleta - Submitting Resume add part 2 at: 4981056804
+2023-08-13 23:17:05,876 - logger - INFO - Michael Archuleta - Add 1/2 Completed
+2023-08-13 23:17:06,354 - logger - INFO - Trystan Wilde - Successfully Added Candidate to Monday at: 4981056819
+2023-08-13 23:17:06,355 - logger - INFO - Trystan Wilde - Submitting Resume add part 2 at: 4981056819
+2023-08-13 23:17:06,356 - logger - INFO - Trystan Wilde - Add 1/2 Completed
+2023-08-13 23:17:06,919 - logger - INFO - Michelle Sampson - Successfully Added Candidate to Monday at: 4981056823
+2023-08-13 23:17:06,919 - logger - INFO - Michelle Sampson - Submitting Resume add part 2 at: 4981056823
+2023-08-13 23:17:06,920 - logger - INFO - Michelle Sampson - Add 1/2 Completed
+2023-08-13 23:17:06,993 - logger - INFO - Angelina Petel - Successfully Opened resume link
+2023-08-13 23:17:12,001 - logger - INFO - Angelina Petel - Resume Path: N:\Downloads2\ResumeAngelinaPetel.pdf
+2023-08-13 23:17:12,043 - logger - INFO - Angelina Petel - Updated Phone number from resume
+2023-08-13 23:17:12,043 - logger - INFO - Angelina Petel - Updated Email from resume
+2023-08-13 23:17:12,716 - logger - INFO - Angelina Petel - Updated phone/email information at: 4981053283
+2023-08-13 23:17:14,295 - logger - INFO - Angelina Petel - Successfully uploaded Resume
+2023-08-13 23:17:16,980 - logger - INFO - Angelina Petel - Updated notes_id local field
+2023-08-13 23:17:16,981 - logger - INFO - Angelina Petel - Successfully created Notes document
+2023-08-13 23:17:17,541 - logger - INFO - Angelina Petel - Successfully updated Notes document with questionnaire info
+2023-08-13 23:17:17,542 - logger - INFO - Angelina Petel - Add 2/2 Completed
+2023-08-13 23:17:17,614 - logger - INFO - Jessica Scerba - Successfully Opened resume link
+2023-08-13 23:17:22,629 - logger - INFO - Jessica Scerba - Resume Path: N:\Downloads2\ResumeJessicaScerba.pdf
+2023-08-13 23:17:22,705 - logger - INFO - Jessica Scerba - Updated Phone number from resume
+2023-08-13 23:17:22,706 - logger - INFO - Jessica Scerba - Updated Email from resume
+2023-08-13 23:17:23,663 - logger - INFO - Jessica Scerba - Updated phone/email information at: 4981053302
+2023-08-13 23:17:25,341 - logger - INFO - Jessica Scerba - Successfully uploaded Resume
+2023-08-13 23:17:27,589 - logger - INFO - Jessica Scerba - Updated notes_id local field
+2023-08-13 23:17:27,590 - logger - INFO - Jessica Scerba - Successfully created Notes document
+2023-08-13 23:17:28,151 - logger - INFO - Jessica Scerba - Successfully updated Notes document with questionnaire info
+2023-08-13 23:17:28,152 - logger - INFO - Jessica Scerba - Add 2/2 Completed
+2023-08-13 23:17:28,225 - logger - INFO - Danielle Carter - Successfully Opened resume link
+2023-08-13 23:17:33,235 - logger - INFO - Danielle Carter - Resume Path: N:\Downloads2\ResumeDanielleCarter.pdf
+2023-08-13 23:17:33,346 - logger - INFO - Danielle Carter - Updated Phone number from resume
+2023-08-13 23:17:33,346 - logger - INFO - Danielle Carter - Updated Email from resume
+2023-08-13 23:17:34,353 - logger - INFO - Danielle Carter - Updated phone/email information at: 4981055070
+2023-08-13 23:17:35,606 - logger - INFO - Danielle Carter - Successfully uploaded Resume
+2023-08-13 23:17:38,207 - logger - INFO - Danielle Carter - Updated notes_id local field
+2023-08-13 23:17:38,207 - logger - INFO - Danielle Carter - Successfully created Notes document
+2023-08-13 23:17:38,575 - logger - INFO - Danielle Carter - Successfully updated Notes document with questionnaire info
+2023-08-13 23:17:38,576 - logger - INFO - Danielle Carter - Add 2/2 Completed
+2023-08-13 23:17:38,648 - logger - INFO - Michael Archuleta - Successfully Opened resume link
+2023-08-13 23:17:43,665 - logger - INFO - Michael Archuleta - Resume Path: N:\Downloads2\ResumeMichaelArchuleta.pdf
+2023-08-13 23:17:43,781 - logger - INFO - Michael Archuleta - Updated Phone number from resume
+2023-08-13 23:17:43,782 - logger - INFO - Michael Archuleta - Updated Email from resume
+2023-08-13 23:17:44,779 - logger - INFO - Michael Archuleta - Updated phone/email information at: 4981056804
+2023-08-13 23:17:45,913 - logger - INFO - Michael Archuleta - Successfully uploaded Resume
+2023-08-13 23:17:48,340 - logger - INFO - Michael Archuleta - Updated notes_id local field
+2023-08-13 23:17:48,341 - logger - INFO - Michael Archuleta - Successfully created Notes document
+2023-08-13 23:17:48,883 - logger - INFO - Michael Archuleta - Successfully updated Notes document with questionnaire info
+2023-08-13 23:17:48,884 - logger - INFO - Michael Archuleta - Add 2/2 Completed
+2023-08-13 23:17:48,958 - logger - INFO - Trystan Wilde - Successfully Opened resume link
+2023-08-13 23:17:53,964 - logger - INFO - Trystan Wilde - Resume Path: N:\Downloads2\ResumeTrystanWilde.pdf
+2023-08-13 23:17:54,081 - logger - INFO - Trystan Wilde - Updated Phone number from resume
+2023-08-13 23:17:54,081 - logger - INFO - Trystan Wilde - Updated Email from resume
+2023-08-13 23:17:55,050 - logger - INFO - Trystan Wilde - Updated phone/email information at: 4981056819
+2023-08-13 23:17:56,294 - logger - INFO - Trystan Wilde - Successfully uploaded Resume
+2023-08-13 23:17:59,297 - logger - INFO - Trystan Wilde - Updated notes_id local field
+2023-08-13 23:17:59,298 - logger - INFO - Trystan Wilde - Successfully created Notes document
+2023-08-13 23:18:00,058 - logger - INFO - Trystan Wilde - Successfully updated Notes document with questionnaire info
+2023-08-13 23:18:00,059 - logger - INFO - Trystan Wilde - Add 2/2 Completed
+2023-08-13 23:18:00,139 - logger - INFO - Michelle Sampson - Successfully Opened resume link
+2023-08-13 23:18:05,160 - logger - INFO - Michelle Sampson - Resume Path: N:\Downloads2\ResumeMichelleSampson.pdf
+2023-08-13 23:18:05,187 - logger - INFO - Michelle Sampson - Updated Phone number from resume
+2023-08-13 23:18:05,188 - logger - INFO - Michelle Sampson - Updated Email from resume
+2023-08-13 23:18:06,011 - logger - INFO - Michelle Sampson - Updated phone/email information at: 4981056823
+2023-08-13 23:18:07,163 - logger - INFO - Michelle Sampson - Successfully uploaded Resume
+2023-08-13 23:18:10,085 - logger - INFO - Michelle Sampson - Updated notes_id local field
+2023-08-13 23:18:10,085 - logger - INFO - Michelle Sampson - Successfully created Notes document
+2023-08-13 23:18:10,802 - logger - INFO - Michelle Sampson - Successfully updated Notes document with questionnaire info
+2023-08-13 23:18:10,802 - logger - INFO - Michelle Sampson - Add 2/2 Completed
+2023-08-13 23:19:22,658 - logger - INFO - Successfully Set Group and Occupation
+2023-08-13 23:19:22,734 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=d5384e8fc242&statusName=Active&page=2
+2023-08-14 21:39:13,659 - logger - INFO - Successfully Set Group and Occupation
+2023-08-14 21:39:13,789 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/a2c80004/583dfda0?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=a2c80004&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=2&search_id=c63797e5-f652-4093-9c66-9c8a22cf5ce3&pos=1#tabOriginalResume
+2023-08-14 21:44:41,048 - logger - INFO - Successfully Set Group and Occupation
+2023-08-14 21:44:41,128 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=519a3a86&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0#/
+2023-08-14 21:49:05,644 - logger - INFO - Successfully Set Group and Occupation
+2023-08-14 21:49:05,721 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/519a3a86/c2920b07?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=519a3a86&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=4&search_id=73ef7422-d028-4010-9196-d045b7c088bc&pos=0#tabOriginalResume
+2023-08-14 21:50:46,643 - logger - INFO - Successfully Set Group and Occupation
+2023-08-14 21:50:46,717 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/519a3a86/c2920b07?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=519a3a86&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=4&search_id=73ef7422-d028-4010-9196-d045b7c088bc&pos=0#tabOriginalResume
+2023-08-14 21:52:04,132 - logger - INFO - Successfully Set Group and Occupation
+2023-08-14 21:52:04,210 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/519a3a86/c2920b07?popup=1#tabOriginalResume
+2023-08-15 08:58:03,540 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 08:58:03,646 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/be17fd0d/37aeae37?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=be17fd0d&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=1&search_id=a88dbb86-b8f0-4de7-8a4f-a754fe0cac5f&pos=0#tabOriginalResume
+2023-08-15 08:59:10,662 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 08:59:10,751 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=be17fd0d&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0#/
+2023-08-15 10:54:56,350 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 10:54:56,450 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=77523645b8fe&statusName=0
+2023-08-15 10:55:16,109 - logger - INFO - Krystina Castillo - Successfully Added Candidate to Monday at: 4993231146
+2023-08-15 10:55:16,110 - logger - INFO - Krystina Castillo - Submitting Resume add part 2 at: 4993231146
+2023-08-15 10:55:16,111 - logger - INFO - Krystina Castillo - Add 1/2 Completed
+2023-08-15 10:55:16,203 - logger - INFO - Krystina Castillo - Successfully Opened resume link
+2023-08-15 10:55:21,218 - logger - INFO - Krystina Castillo - Resume Path: N:\Downloads2\ResumeKrystinaCastillo.pdf
+2023-08-15 10:55:21,299 - logger - INFO - Krystina Castillo - Updated Phone number from resume
+2023-08-15 10:55:21,300 - logger - INFO - Krystina Castillo - Updated Email from resume
+2023-08-15 10:55:22,381 - logger - INFO - Krystina Castillo - Updated phone/email information at: 4993231146
+2023-08-15 10:55:23,513 - logger - INFO - Krystina Castillo - Successfully uploaded Resume
+2023-08-15 10:55:26,430 - logger - INFO - Krystina Castillo - Updated notes_id local field
+2023-08-15 10:55:26,430 - logger - INFO - Krystina Castillo - Successfully created Notes document
+2023-08-15 10:55:26,820 - logger - INFO - Krystina Castillo - Successfully updated Notes document with questionnaire info
+2023-08-15 10:55:26,821 - logger - INFO - Krystina Castillo - Add 2/2 Completed
+2023-08-15 10:55:27,376 - logger - INFO - Lauryn Del Campo - Successfully Added Candidate to Monday at: 4993232167
+2023-08-15 10:55:27,377 - logger - INFO - Lauryn Del Campo - Submitting Resume add part 2 at: 4993232167
+2023-08-15 10:55:27,379 - logger - INFO - Lauryn Del Campo - Add 1/2 Completed
+2023-08-15 10:55:28,008 - logger - INFO - VIOLETA MUNOZ - Successfully Added Candidate to Monday at: 4993232213
+2023-08-15 10:55:28,008 - logger - INFO - VIOLETA MUNOZ - Submitting Resume add part 2 at: 4993232213
+2023-08-15 10:55:28,009 - logger - INFO - VIOLETA MUNOZ - Add 1/2 Completed
+2023-08-15 10:55:28,092 - logger - INFO - Lauryn Del Campo - Successfully Opened resume link
+2023-08-15 10:55:33,100 - logger - INFO - Lauryn Del Campo - Resume Path: N:\Downloads2\ResumeLaurynDelCampo.pdf
+2023-08-15 10:55:33,182 - logger - INFO - Lauryn Del Campo - Updated Phone number from resume
+2023-08-15 10:55:33,183 - logger - INFO - Lauryn Del Campo - Updated Email from resume
+2023-08-15 10:55:34,388 - logger - INFO - Lauryn Del Campo - Updated phone/email information at: 4993232167
+2023-08-15 10:55:36,081 - logger - INFO - Lauryn Del Campo - Successfully uploaded Resume
+2023-08-15 10:55:38,811 - logger - INFO - Lauryn Del Campo - Updated notes_id local field
+2023-08-15 10:55:38,812 - logger - INFO - Lauryn Del Campo - Successfully created Notes document
+2023-08-15 10:55:39,351 - logger - INFO - Lauryn Del Campo - Successfully updated Notes document with questionnaire info
+2023-08-15 10:55:39,352 - logger - INFO - Lauryn Del Campo - Add 2/2 Completed
+2023-08-15 10:55:39,434 - logger - INFO - VIOLETA MUNOZ - Successfully Opened resume link
+2023-08-15 10:55:44,447 - logger - INFO - VIOLETA MUNOZ - Resume Path: N:\Downloads2\ResumeVIOLETAMUNOZ.pdf
+2023-08-15 10:55:45,040 - logger - INFO - VIOLETA MUNOZ - Updated Phone number from resume
+2023-08-15 10:55:45,041 - logger - INFO - VIOLETA MUNOZ - Updated Email from resume
+2023-08-15 10:55:46,740 - logger - INFO - VIOLETA MUNOZ - Updated phone/email information at: 4993232213
+2023-08-15 10:55:48,376 - logger - INFO - VIOLETA MUNOZ - Successfully uploaded Resume
+2023-08-15 10:55:51,459 - logger - INFO - VIOLETA MUNOZ - Updated notes_id local field
+2023-08-15 10:55:51,460 - logger - INFO - VIOLETA MUNOZ - Successfully created Notes document
+2023-08-15 10:55:52,068 - logger - INFO - VIOLETA MUNOZ - Successfully updated Notes document with questionnaire info
+2023-08-15 10:55:52,069 - logger - INFO - VIOLETA MUNOZ - Add 2/2 Completed
+2023-08-15 11:19:53,846 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 11:19:53,964 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates/view?id=411d26eaf065&pos=0&l=PbJt&listQuery=aWQlM0QzNDU0YzRjZmZjMTMlMjZzdGF0dXNOYW1lJTNEQWN0aXZl
+2023-08-15 11:20:05,551 - logger - INFO - SHANEL DAUDY - Successfully Added Candidate to Monday at: 4993412939
+2023-08-15 11:20:05,552 - logger - INFO - SHANEL DAUDY - Submitting Resume add part 2 at: 4993412939
+2023-08-15 11:20:05,553 - logger - INFO - SHANEL DAUDY - Add 1/2 Completed
+2023-08-15 11:20:05,634 - logger - INFO - SHANEL DAUDY - Successfully Opened resume link
+2023-08-15 11:20:10,651 - logger - INFO - SHANEL DAUDY - Resume Path: N:\Downloads2\ResumeSHANELDAUDY (1).pdf
+2023-08-15 11:20:10,719 - logger - INFO - SHANEL DAUDY - Updated Phone number from resume
+2023-08-15 11:20:10,719 - logger - INFO - SHANEL DAUDY - Updated Email from resume
+2023-08-15 11:20:12,013 - logger - INFO - SHANEL DAUDY - Updated phone/email information at: 4993412939
+2023-08-15 11:20:13,585 - logger - INFO - SHANEL DAUDY - Successfully uploaded Resume
+2023-08-15 11:20:16,631 - logger - INFO - SHANEL DAUDY - Updated notes_id local field
+2023-08-15 11:20:16,632 - logger - INFO - SHANEL DAUDY - Successfully created Notes document
+2023-08-15 11:20:16,940 - logger - INFO - SHANEL DAUDY - Successfully updated Notes document with questionnaire info
+2023-08-15 11:20:16,941 - logger - INFO - SHANEL DAUDY - Add 2/2 Completed
+2023-08-15 12:44:11,102 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 12:44:11,203 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=77523645b8fe&statusName=0
+2023-08-15 12:44:32,194 - logger - INFO - Karra Young - Successfully Added Candidate to Monday at: 4994077839
+2023-08-15 12:44:32,195 - logger - INFO - Karra Young - Submitting Resume add part 2 at: 4994077839
+2023-08-15 12:44:32,196 - logger - INFO - Karra Young - Add 1/2 Completed
+2023-08-15 12:44:32,275 - logger - INFO - Karra Young - Successfully Opened resume link
+2023-08-15 12:44:37,292 - logger - INFO - Karra Young - Resume Path: N:\Downloads2\ResumeKarraYoung.pdf
+2023-08-15 12:44:37,324 - logger - INFO - Karra Young - Updated Phone number from resume
+2023-08-15 12:44:37,324 - logger - INFO - Karra Young - Updated Email from resume
+2023-08-15 12:44:38,060 - logger - INFO - Karra Young - Updated phone/email information at: 4994077839
+2023-08-15 12:44:39,522 - logger - INFO - Karra Young - Successfully uploaded Resume
+2023-08-15 12:44:42,340 - logger - INFO - Karra Young - Updated notes_id local field
+2023-08-15 12:44:42,341 - logger - INFO - Karra Young - Successfully created Notes document
+2023-08-15 12:44:42,902 - logger - INFO - Karra Young - Successfully updated Notes document with questionnaire info
+2023-08-15 12:44:42,902 - logger - INFO - Karra Young - Add 2/2 Completed
+2023-08-15 12:52:58,246 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 12:52:58,335 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=7f3c17aa88c4&statusName=0
+2023-08-15 12:53:17,056 - logger - INFO - Lauren Foreman - Successfully Added Candidate to Monday at: 4994140849
+2023-08-15 12:53:17,057 - logger - INFO - Lauren Foreman - Submitting Resume add part 2 at: 4994140849
+2023-08-15 12:53:17,058 - logger - INFO - Lauren Foreman - Add 1/2 Completed
+2023-08-15 12:53:17,136 - logger - INFO - Lauren Foreman - Successfully Opened resume link
+2023-08-15 12:53:22,156 - logger - INFO - Lauren Foreman - Resume Path: N:\Downloads2\ResumeLaurenForeman (3).pdf
+2023-08-15 12:53:22,400 - logger - INFO - Lauren Foreman - Updated Email from resume
+2023-08-15 12:53:23,607 - logger - INFO - Lauren Foreman - Updated phone/email information at: 4994140849
+2023-08-15 12:53:25,199 - logger - INFO - Lauren Foreman - Successfully uploaded Resume
+2023-08-15 12:53:28,551 - logger - INFO - Lauren Foreman - Updated notes_id local field
+2023-08-15 12:53:28,552 - logger - INFO - Lauren Foreman - Successfully created Notes document
+2023-08-15 12:53:28,969 - logger - INFO - Lauren Foreman - Successfully updated Notes document with questionnaire info
+2023-08-15 12:53:28,970 - logger - INFO - Lauren Foreman - Add 2/2 Completed
+2023-08-15 12:54:50,020 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 12:54:50,113 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=c402f8a1f033&statusName=0
+2023-08-15 12:55:11,064 - logger - INFO - Gabriella Quinn - Successfully Added Candidate to Monday at: 4994151801
+2023-08-15 12:55:11,064 - logger - INFO - Gabriella Quinn - Submitting Resume add part 2 at: 4994151801
+2023-08-15 12:55:11,066 - logger - INFO - Gabriella Quinn - Add 1/2 Completed
+2023-08-15 12:55:11,143 - logger - INFO - Gabriella Quinn - Successfully Opened resume link
+2023-08-15 12:55:16,150 - logger - INFO - Gabriella Quinn - Resume Path: N:\Downloads2\ResumeGabriellaQuinn.pdf
+2023-08-15 12:55:16,201 - logger - INFO - Gabriella Quinn - Updated Phone number from resume
+2023-08-15 12:55:16,201 - logger - INFO - Gabriella Quinn - Updated Email from resume
+2023-08-15 12:55:17,139 - logger - INFO - Gabriella Quinn - Updated phone/email information at: 4994151801
+2023-08-15 12:55:18,352 - logger - INFO - Gabriella Quinn - Successfully uploaded Resume
+2023-08-15 12:55:21,165 - logger - INFO - Gabriella Quinn - Updated notes_id local field
+2023-08-15 12:55:21,165 - logger - INFO - Gabriella Quinn - Successfully created Notes document
+2023-08-15 12:55:21,695 - logger - INFO - Gabriella Quinn - Successfully updated Notes document with questionnaire info
+2023-08-15 12:55:21,695 - logger - INFO - Gabriella Quinn - Add 2/2 Completed
+2023-08-15 13:17:52,981 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 13:17:53,077 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?quiz_id=a2c80004
+2023-08-15 13:18:18,139 - logger - INFO - Allison Kaplan - Successfully Added Candidate to Monday at: 4994335799
+2023-08-15 13:18:18,139 - logger - INFO - Allison Kaplan - Submitting Resume add part 2 at: 4994335799
+2023-08-15 13:18:18,140 - logger - INFO - Allison Kaplan - Add 1/2 Completed
+2023-08-15 13:18:18,793 - logger - INFO - SANDY VANG - Successfully Added Candidate to Monday at: 4994335878
+2023-08-15 13:18:18,794 - logger - INFO - SANDY VANG - Submitting Resume add part 2 at: 4994335878
+2023-08-15 13:18:18,796 - logger - INFO - SANDY VANG - Add 1/2 Completed
+2023-08-15 13:18:18,927 - logger - INFO - Allison Kaplan - Successfully Opened resume link
+2023-08-15 13:18:23,933 - logger - INFO - Allison Kaplan - Resume Path: N:\Downloads2\ResumeGabriellaQuinn.pdf
+2023-08-15 13:18:23,978 - logger - INFO - Allison Kaplan - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 13:18:24,733 - logger - INFO - Allison Kaplan - Updated phone/email information at: 4994335799
+2023-08-15 13:18:25,854 - logger - INFO - Allison Kaplan - Successfully uploaded Resume
+2023-08-15 13:18:28,802 - logger - INFO - Allison Kaplan - Updated notes_id local field
+2023-08-15 13:18:28,802 - logger - INFO - Allison Kaplan - Successfully created Notes document
+2023-08-15 13:18:29,606 - logger - INFO - Allison Kaplan - Successfully updated Notes document with questionnaire info
+2023-08-15 13:18:29,606 - logger - INFO - Allison Kaplan - Add 2/2 Completed
+2023-08-15 13:18:29,689 - logger - INFO - SANDY VANG - Successfully Opened resume link
+2023-08-15 13:18:34,698 - logger - INFO - SANDY VANG - Resume Path: N:\Downloads2\ResumeGabriellaQuinn.pdf
+2023-08-15 13:18:34,736 - logger - INFO - SANDY VANG - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 13:18:35,453 - logger - INFO - SANDY VANG - Updated phone/email information at: 4994335878
+2023-08-15 13:18:36,853 - logger - INFO - SANDY VANG - Successfully uploaded Resume
+2023-08-15 13:18:39,409 - logger - INFO - SANDY VANG - Updated notes_id local field
+2023-08-15 13:18:39,409 - logger - INFO - SANDY VANG - Successfully created Notes document
+2023-08-15 13:18:39,772 - logger - INFO - SANDY VANG - Successfully updated Notes document with questionnaire info
+2023-08-15 13:18:39,773 - logger - INFO - SANDY VANG - Add 2/2 Completed
+2023-08-15 13:26:32,659 - logger - INFO - Started Server
+2023-08-15 13:31:25,446 - logger - INFO - Started Server
+2023-08-15 13:33:24,653 - logger - INFO - Started Server
+2023-08-15 13:39:59,317 - logger - INFO - Started Server
+2023-08-15 15:09:49,771 - logger - INFO - Started Server
+2023-08-15 15:12:03,268 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 15:12:03,445 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?quiz_id=601dbf6e
+2023-08-15 15:12:13,643 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 15:12:13,724 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?quiz_id=a2c80004
+2023-08-15 15:35:58,956 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 15:35:59,042 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=77523645b8fe&statusName=Active
+2023-08-15 15:36:17,450 - logger - INFO - Stephanie Ugalde - Successfully Added Candidate to Monday at: 4995102179
+2023-08-15 15:36:17,451 - logger - INFO - Stephanie Ugalde - Submitting Resume add part 2 at: 4995102179
+2023-08-15 15:36:17,454 - logger - INFO - Stephanie Ugalde - Add 1/2 Completed
+2023-08-15 15:36:17,531 - logger - INFO - Stephanie Ugalde - Successfully Opened resume link
+2023-08-15 15:36:22,576 - logger - INFO - Stephanie Ugalde - Resume Path: N:\Downloads2\ResumeStephanieUgalde.pdf
+2023-08-15 15:36:22,679 - logger - INFO - Stephanie Ugalde - Updated Phone number from resume
+2023-08-15 15:36:22,679 - logger - INFO - Stephanie Ugalde - Updated Email from resume
+2023-08-15 15:36:23,964 - logger - INFO - Stephanie Ugalde - Updated phone/email information at: 4995102179
+2023-08-15 15:36:25,584 - logger - INFO - Stephanie Ugalde - Successfully uploaded Resume
+2023-08-15 15:36:27,880 - logger - INFO - Stephanie Ugalde - Updated notes_id local field
+2023-08-15 15:36:27,880 - logger - INFO - Stephanie Ugalde - Successfully created Notes document
+2023-08-15 15:36:28,180 - logger - INFO - Stephanie Ugalde - Successfully updated Notes document with questionnaire info
+2023-08-15 15:36:28,181 - logger - INFO - Stephanie Ugalde - Add 2/2 Completed
+2023-08-15 15:36:28,909 - logger - INFO - Priscilla Nielsen - Successfully Added Candidate to Monday at: 4995102877
+2023-08-15 15:36:28,910 - logger - INFO - Priscilla Nielsen - Submitting Resume add part 2 at: 4995102877
+2023-08-15 15:36:28,911 - logger - INFO - Priscilla Nielsen - Add 1/2 Completed
+2023-08-15 15:36:29,008 - logger - INFO - Priscilla Nielsen - Successfully Opened resume link
+2023-08-15 15:36:34,015 - logger - INFO - Priscilla Nielsen - Resume Path: N:\Downloads2\ResumePriscillaNielsen.pdf
+2023-08-15 15:36:34,040 - logger - INFO - Priscilla Nielsen - Updated Phone number from resume
+2023-08-15 15:36:34,040 - logger - INFO - Priscilla Nielsen - Updated Email from resume
+2023-08-15 15:36:34,978 - logger - INFO - Priscilla Nielsen - Updated phone/email information at: 4995102877
+2023-08-15 15:36:36,384 - logger - INFO - Priscilla Nielsen - Successfully uploaded Resume
+2023-08-15 15:36:39,485 - logger - INFO - Priscilla Nielsen - Updated notes_id local field
+2023-08-15 15:36:39,485 - logger - INFO - Priscilla Nielsen - Successfully created Notes document
+2023-08-15 15:36:40,196 - logger - INFO - Priscilla Nielsen - Successfully updated Notes document with questionnaire info
+2023-08-15 15:36:40,197 - logger - INFO - Priscilla Nielsen - Add 2/2 Completed
+2023-08-15 15:49:48,087 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 15:49:48,167 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?quiz_id=601dbf6e
+2023-08-15 15:50:09,858 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 15:50:09,930 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?quiz_id=601dbf6e
+2023-08-15 15:50:34,087 - logger - INFO - sara rawda - Successfully Added Candidate to Monday at: 4995151876
+2023-08-15 15:50:34,088 - logger - INFO - sara rawda - Submitting Resume add part 2 at: 4995151876
+2023-08-15 15:50:34,089 - logger - INFO - sara rawda - Add 1/2 Completed
+2023-08-15 15:50:34,167 - logger - INFO - sara rawda - Successfully Opened resume link
+2023-08-15 15:50:39,182 - logger - INFO - sara rawda - Resume Path: N:\Downloads2\resume_26a280d9.pdf
+2023-08-15 15:50:40,147 - logger - INFO - suzanne malamud - Successfully Added Candidate to Monday at: 4995152341
+2023-08-15 15:50:40,148 - logger - INFO - suzanne malamud - Submitting Resume add part 2 at: 4995152341
+2023-08-15 15:50:40,149 - logger - INFO - suzanne malamud - Add 1/2 Completed
+2023-08-15 15:50:40,662 - logger - INFO - Anne Helene Linton - Successfully Added Candidate to Monday at: 4995152459
+2023-08-15 15:50:40,663 - logger - INFO - Anne Helene Linton - Submitting Resume add part 2 at: 4995152459
+2023-08-15 15:50:40,664 - logger - INFO - Anne Helene Linton - Add 1/2 Completed
+2023-08-15 15:50:41,204 - logger - INFO - Phillip - Successfully Added Candidate to Monday at: 4995152645
+2023-08-15 15:50:41,205 - logger - INFO - Phillip - Submitting Resume add part 2 at: 4995152645
+2023-08-15 15:50:41,206 - logger - INFO - Phillip - Add 1/2 Completed
+2023-08-15 15:50:41,785 - logger - INFO - yemi Mengesha - Successfully Added Candidate to Monday at: 4995152741
+2023-08-15 15:50:41,786 - logger - INFO - yemi Mengesha - Submitting Resume add part 2 at: 4995152741
+2023-08-15 15:50:41,787 - logger - INFO - yemi Mengesha - Add 1/2 Completed
+2023-08-15 15:50:42,341 - logger - INFO - Chanel Kenner - Successfully Added Candidate to Monday at: 4995152844
+2023-08-15 15:50:42,342 - logger - INFO - Chanel Kenner - Submitting Resume add part 2 at: 4995152844
+2023-08-15 15:50:42,343 - logger - INFO - Chanel Kenner - Add 1/2 Completed
+2023-08-15 15:50:42,420 - logger - INFO - suzanne malamud - Successfully Opened resume link
+2023-08-15 15:50:47,440 - logger - INFO - suzanne malamud - Resume Path: N:\Downloads2\resume_pdf.pdf
+2023-08-15 15:50:47,537 - logger - INFO - suzanne malamud - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:50:48,144 - logger - INFO - suzanne malamud - Updated phone/email information at: 4995152341
+2023-08-15 15:50:49,643 - logger - INFO - suzanne malamud - Successfully uploaded Resume
+2023-08-15 15:50:52,239 - logger - INFO - suzanne malamud - Updated notes_id local field
+2023-08-15 15:50:52,240 - logger - INFO - suzanne malamud - Successfully created Notes document
+2023-08-15 15:50:52,585 - logger - INFO - suzanne malamud - Successfully updated Notes document with questionnaire info
+2023-08-15 15:50:52,587 - logger - INFO - suzanne malamud - Add 2/2 Completed
+2023-08-15 15:50:53,076 - logger - INFO - Dannia Henao - Successfully Added Candidate to Monday at: 4995154374
+2023-08-15 15:50:53,077 - logger - INFO - Dannia Henao - Submitting Resume add part 2 at: 4995154374
+2023-08-15 15:50:53,079 - logger - INFO - Dannia Henao - Add 1/2 Completed
+2023-08-15 15:50:53,152 - logger - INFO - Anne Helene Linton - Successfully Opened resume link
+2023-08-15 15:50:58,160 - logger - INFO - Anne Helene Linton - Resume Path: N:\Downloads2\resume_pdf (1).pdf
+2023-08-15 15:50:58,258 - logger - INFO - Anne Helene Linton - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:50:59,030 - logger - INFO - Anne Helene Linton - Updated phone/email information at: 4995152459
+2023-08-15 15:51:00,559 - logger - INFO - Anne Helene Linton - Successfully uploaded Resume
+2023-08-15 15:51:03,596 - logger - INFO - Anne Helene Linton - Updated notes_id local field
+2023-08-15 15:51:03,596 - logger - INFO - Anne Helene Linton - Successfully created Notes document
+2023-08-15 15:51:03,903 - logger - INFO - Anne Helene Linton - Successfully updated Notes document with questionnaire info
+2023-08-15 15:51:03,904 - logger - INFO - Anne Helene Linton - Add 2/2 Completed
+2023-08-15 15:51:03,976 - logger - INFO - Phillip - Successfully Opened resume link
+2023-08-15 15:51:08,984 - logger - INFO - Phillip - Resume Path: N:\Downloads2\resume_pdf (2).pdf
+2023-08-15 15:51:08,995 - logger - INFO - Phillip - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:51:09,687 - logger - INFO - Phillip - Updated phone/email information at: 4995152645
+2023-08-15 15:51:12,589 - logger - INFO - Phillip - Successfully uploaded Resume
+2023-08-15 15:51:15,568 - logger - INFO - Phillip - Updated notes_id local field
+2023-08-15 15:51:15,568 - logger - INFO - Phillip - Successfully created Notes document
+2023-08-15 15:51:15,888 - logger - INFO - Phillip - Successfully updated Notes document with questionnaire info
+2023-08-15 15:51:15,888 - logger - INFO - Phillip - Add 2/2 Completed
+2023-08-15 15:51:16,398 - logger - INFO - Sara Rawda - Successfully Added Candidate to Monday at: 4995155590
+2023-08-15 15:51:16,400 - logger - INFO - Sara Rawda - Submitting Resume add part 2 at: 4995155590
+2023-08-15 15:51:16,401 - logger - INFO - Sara Rawda - Add 1/2 Completed
+2023-08-15 15:51:16,940 - logger - INFO - Charlotte Ferrell, MA, RDN - Successfully Added Candidate to Monday at: 4995155610
+2023-08-15 15:51:16,941 - logger - INFO - Charlotte Ferrell, MA, RDN - Submitting Resume add part 2 at: 4995155610
+2023-08-15 15:51:16,942 - logger - INFO - Charlotte Ferrell, MA, RDN - Add 1/2 Completed
+2023-08-15 15:51:16,945 - logger - INFO - yemi Mengesha - Reportedly DID NOT upload a Resume
+2023-08-15 15:51:16,945 - logger - INFO - yemi Mengesha - Candidate Reportedly did not have a Resume
+2023-08-15 15:51:19,318 - logger - INFO - yemi Mengesha - Updated notes_id local field
+2023-08-15 15:51:19,318 - logger - INFO - yemi Mengesha - Successfully created Notes document
+2023-08-15 15:51:19,619 - logger - INFO - yemi Mengesha - Successfully updated Notes document with questionnaire info
+2023-08-15 15:51:19,620 - logger - INFO - yemi Mengesha - Add 2/2 Completed
+2023-08-15 15:51:19,693 - logger - INFO - Chanel Kenner - Successfully Opened resume link
+2023-08-15 15:51:24,711 - logger - INFO - Chanel Kenner - Resume Path: N:\Downloads2\resume_pdf (3).pdf
+2023-08-15 15:51:24,811 - logger - INFO - Chanel Kenner - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:51:25,497 - logger - INFO - Chanel Kenner - Updated phone/email information at: 4995152844
+2023-08-15 15:51:26,690 - logger - INFO - Chanel Kenner - Successfully uploaded Resume
+2023-08-15 15:51:28,916 - logger - INFO - Chanel Kenner - Updated notes_id local field
+2023-08-15 15:51:28,917 - logger - INFO - Chanel Kenner - Successfully created Notes document
+2023-08-15 15:51:29,226 - logger - INFO - Chanel Kenner - Successfully updated Notes document with questionnaire info
+2023-08-15 15:51:29,227 - logger - INFO - Chanel Kenner - Add 2/2 Completed
+2023-08-15 15:51:29,762 - logger - INFO - Nancy Maria Turcios Balconi - Successfully Added Candidate to Monday at: 4995156069
+2023-08-15 15:51:29,763 - logger - INFO - Nancy Maria Turcios Balconi - Submitting Resume add part 2 at: 4995156069
+2023-08-15 15:51:29,764 - logger - INFO - Nancy Maria Turcios Balconi - Add 1/2 Completed
+2023-08-15 15:51:30,273 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Successfully Added Candidate to Monday at: 4995156093
+2023-08-15 15:51:30,274 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Submitting Resume add part 2 at: 4995156093
+2023-08-15 15:51:30,275 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Add 1/2 Completed
+2023-08-15 15:51:30,349 - logger - INFO - Dannia Henao - Successfully Opened resume link
+2023-08-15 15:51:35,364 - logger - INFO - Dannia Henao - Resume Path: N:\Downloads2\resume_9e2b4918.pdf
+2023-08-15 15:51:35,454 - logger - INFO - Dannia Henao - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:51:36,085 - logger - INFO - Dannia Henao - Updated phone/email information at: 4995154374
+2023-08-15 15:51:37,061 - logger - INFO - Dannia Henao - Successfully uploaded Resume
+2023-08-15 15:51:39,719 - logger - INFO - Dannia Henao - Updated notes_id local field
+2023-08-15 15:51:39,719 - logger - INFO - Dannia Henao - Successfully created Notes document
+2023-08-15 15:51:40,230 - logger - INFO - Dannia Henao - Successfully updated Notes document with questionnaire info
+2023-08-15 15:51:40,231 - logger - INFO - Dannia Henao - Add 2/2 Completed
+2023-08-15 15:51:40,305 - logger - INFO - Sara Rawda - Successfully Opened resume link
+2023-08-15 15:51:45,324 - logger - INFO - Sara Rawda - Resume Path: N:\Downloads2\resume_366d1f43.pdf
+2023-08-15 15:51:45,508 - logger - INFO - Sara Rawda - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:51:46,414 - logger - INFO - Sara Rawda - Updated phone/email information at: 4995155590
+2023-08-15 15:51:48,016 - logger - INFO - Sara Rawda - Successfully uploaded Resume
+2023-08-15 15:51:50,702 - logger - INFO - Sara Rawda - Updated notes_id local field
+2023-08-15 15:51:50,703 - logger - INFO - Sara Rawda - Successfully created Notes document
+2023-08-15 15:51:51,293 - logger - INFO - Sara Rawda - Successfully updated Notes document with questionnaire info
+2023-08-15 15:51:51,294 - logger - INFO - Sara Rawda - Add 2/2 Completed
+2023-08-15 15:51:51,368 - logger - INFO - Charlotte Ferrell, MA, RDN - Successfully Opened resume link
+2023-08-15 15:51:56,375 - logger - INFO - Charlotte Ferrell, MA, RDN - Resume Path: N:\Downloads2\resume_pdf (4).pdf
+2023-08-15 15:51:56,457 - logger - INFO - Charlotte Ferrell, MA, RDN - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:51:57,125 - logger - INFO - Charlotte Ferrell, MA, RDN - Updated phone/email information at: 4995155610
+2023-08-15 15:51:58,331 - logger - INFO - Charlotte Ferrell, MA, RDN - Successfully uploaded Resume
+2023-08-15 15:52:00,786 - logger - INFO - Charlotte Ferrell, MA, RDN - Updated notes_id local field
+2023-08-15 15:52:00,787 - logger - INFO - Charlotte Ferrell, MA, RDN - Successfully created Notes document
+2023-08-15 15:52:01,104 - logger - INFO - Charlotte Ferrell, MA, RDN - Successfully updated Notes document with questionnaire info
+2023-08-15 15:52:01,105 - logger - INFO - Charlotte Ferrell, MA, RDN - Add 2/2 Completed
+2023-08-15 15:52:01,179 - logger - INFO - Nancy Maria Turcios Balconi - Successfully Opened resume link
+2023-08-15 15:52:06,191 - logger - INFO - Nancy Maria Turcios Balconi - Resume Path: N:\Downloads2\resume_16d982cc.pdf
+2023-08-15 15:52:06,312 - logger - INFO - Nancy Maria Turcios Balconi - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:52:06,956 - logger - INFO - Nancy Maria Turcios Balconi - Updated phone/email information at: 4995156069
+2023-08-15 15:52:08,753 - logger - INFO - Nancy Maria Turcios Balconi - Successfully uploaded Resume
+2023-08-15 15:52:11,385 - logger - INFO - Nancy Maria Turcios Balconi - Updated notes_id local field
+2023-08-15 15:52:11,386 - logger - INFO - Nancy Maria Turcios Balconi - Successfully created Notes document
+2023-08-15 15:52:11,869 - logger - INFO - Nancy Maria Turcios Balconi - Successfully updated Notes document with questionnaire info
+2023-08-15 15:52:11,870 - logger - INFO - Nancy Maria Turcios Balconi - Add 2/2 Completed
+2023-08-15 15:52:11,945 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Successfully Opened resume link
+2023-08-15 15:52:16,952 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Resume Path: N:\Downloads2\resume_876d8d5c.pdf
+2023-08-15 15:52:17,068 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:52:17,765 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Updated phone/email information at: 4995156093
+2023-08-15 15:52:19,219 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Successfully uploaded Resume
+2023-08-15 15:52:21,860 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Updated notes_id local field
+2023-08-15 15:52:21,860 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Successfully created Notes document
+2023-08-15 15:52:22,175 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Successfully updated Notes document with questionnaire info
+2023-08-15 15:52:22,176 - logger - INFO - Jacquelin Abarca R.D., C.D.E - Add 2/2 Completed
+2023-08-15 15:59:01,912 - logger - INFO - Successfully Set Group and Occupation
+2023-08-15 15:59:02,012 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?quiz_id=a2c80004
+2023-08-15 15:59:26,142 - logger - INFO - Allison Kaplan - Successfully Added Candidate to Monday at: 4995193330
+2023-08-15 15:59:26,143 - logger - INFO - Allison Kaplan - Submitting Resume add part 2 at: 4995193330
+2023-08-15 15:59:26,146 - logger - INFO - Allison Kaplan - Add 1/2 Completed
+2023-08-15 15:59:26,220 - logger - INFO - Allison Kaplan - Successfully Opened resume link
+2023-08-15 15:59:31,237 - logger - INFO - Allison Kaplan - Resume Path: N:\Downloads2\resume_168a3afe.pdf
+2023-08-15 15:59:31,500 - logger - INFO - Allison Kaplan - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:59:32,149 - logger - INFO - Allison Kaplan - Updated phone/email information at: 4995193330
+2023-08-15 15:59:33,697 - logger - INFO - Allison Kaplan - Successfully uploaded Resume
+2023-08-15 15:59:35,896 - logger - INFO - Allison Kaplan - Updated notes_id local field
+2023-08-15 15:59:35,896 - logger - INFO - Allison Kaplan - Successfully created Notes document
+2023-08-15 15:59:36,221 - logger - INFO - Allison Kaplan - Successfully updated Notes document with questionnaire info
+2023-08-15 15:59:36,222 - logger - INFO - Allison Kaplan - Add 2/2 Completed
+2023-08-15 15:59:37,122 - logger - INFO - SANDY VANG - Successfully Added Candidate to Monday at: 4995193800
+2023-08-15 15:59:37,122 - logger - INFO - SANDY VANG - Submitting Resume add part 2 at: 4995193800
+2023-08-15 15:59:37,124 - logger - INFO - SANDY VANG - Add 1/2 Completed
+2023-08-15 15:59:37,209 - logger - INFO - SANDY VANG - Successfully Opened resume link
+2023-08-15 15:59:42,221 - logger - INFO - SANDY VANG - Resume Path: N:\Downloads2\resume_pdf (5).pdf
+2023-08-15 15:59:42,422 - logger - INFO - SANDY VANG - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-15 15:59:43,111 - logger - INFO - SANDY VANG - Updated phone/email information at: 4995193800
+2023-08-15 15:59:44,537 - logger - INFO - SANDY VANG - Successfully uploaded Resume
+2023-08-15 15:59:47,266 - logger - INFO - SANDY VANG - Updated notes_id local field
+2023-08-15 15:59:47,266 - logger - INFO - SANDY VANG - Successfully created Notes document
+2023-08-15 15:59:47,620 - logger - INFO - SANDY VANG - Successfully updated Notes document with questionnaire info
+2023-08-15 15:59:47,621 - logger - INFO - SANDY VANG - Add 2/2 Completed
+2023-08-16 00:00:39,840 - logger - INFO - Started Server
+2023-08-16 08:42:52,479 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 08:42:52,659 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=77523645b8fe&statusName=Active
+2023-08-16 08:43:11,046 - logger - INFO - Carla Monroe - Successfully Added Candidate to Monday at: 4999300755
+2023-08-16 08:43:11,047 - logger - INFO - Carla Monroe - Submitting Resume add part 2 at: 4999300755
+2023-08-16 08:43:11,051 - logger - INFO - Carla Monroe - Add 1/2 Completed
+2023-08-16 08:43:11,136 - logger - INFO - Carla Monroe - Successfully Opened resume link
+2023-08-16 08:43:16,163 - logger - INFO - Carla Monroe - Resume Path: N:\Downloads2\ResumeCarlaMonroe.pdf
+2023-08-16 08:43:16,216 - logger - INFO - Carla Monroe - Updated Phone number from resume
+2023-08-16 08:43:16,217 - logger - INFO - Carla Monroe - Updated Email from resume
+2023-08-16 08:43:17,242 - logger - INFO - Carla Monroe - Updated phone/email information at: 4999300755
+2023-08-16 08:43:18,881 - logger - INFO - Carla Monroe - Successfully uploaded Resume
+2023-08-16 08:43:22,016 - logger - INFO - Carla Monroe - Updated notes_id local field
+2023-08-16 08:43:22,016 - logger - INFO - Carla Monroe - Successfully created Notes document
+2023-08-16 08:43:22,327 - logger - INFO - Carla Monroe - Successfully updated Notes document with questionnaire info
+2023-08-16 08:43:22,328 - logger - INFO - Carla Monroe - Add 2/2 Completed
+2023-08-16 08:43:23,209 - logger - INFO - Virgil Laurencio - Successfully Added Candidate to Monday at: 4999303604
+2023-08-16 08:43:23,210 - logger - INFO - Virgil Laurencio - Submitting Resume add part 2 at: 4999303604
+2023-08-16 08:43:23,211 - logger - INFO - Virgil Laurencio - Add 1/2 Completed
+2023-08-16 08:43:24,023 - logger - INFO - Jimin Kim - Successfully Added Candidate to Monday at: 4999303800
+2023-08-16 08:43:24,024 - logger - INFO - Jimin Kim - Submitting Resume add part 2 at: 4999303800
+2023-08-16 08:43:24,025 - logger - INFO - Jimin Kim - Add 1/2 Completed
+2023-08-16 08:43:24,101 - logger - INFO - Virgil Laurencio - Successfully Opened resume link
+2023-08-16 08:43:29,119 - logger - INFO - Virgil Laurencio - Resume Path: N:\Downloads2\ResumeVirgilLaurencio.pdf
+2023-08-16 08:43:29,883 - logger - INFO - Virgil Laurencio - Updated phone/email information at: 4999303604
+2023-08-16 08:43:31,739 - logger - INFO - Virgil Laurencio - Successfully uploaded Resume
+2023-08-16 08:43:34,651 - logger - INFO - Virgil Laurencio - Updated notes_id local field
+2023-08-16 08:43:34,651 - logger - INFO - Virgil Laurencio - Successfully created Notes document
+2023-08-16 08:43:34,975 - logger - INFO - Virgil Laurencio - Successfully updated Notes document with questionnaire info
+2023-08-16 08:43:34,976 - logger - INFO - Virgil Laurencio - Add 2/2 Completed
+2023-08-16 08:43:35,053 - logger - INFO - Jimin Kim - Successfully Opened resume link
+2023-08-16 08:43:40,062 - logger - INFO - Jimin Kim - Resume Path: N:\Downloads2\ResumeJiminKim.pdf
+2023-08-16 08:43:40,100 - logger - INFO - Jimin Kim - Updated Phone number from resume
+2023-08-16 08:43:40,100 - logger - INFO - Jimin Kim - Updated Email from resume
+2023-08-16 08:43:40,920 - logger - INFO - Jimin Kim - Updated phone/email information at: 4999303800
+2023-08-16 08:43:42,126 - logger - INFO - Jimin Kim - Successfully uploaded Resume
+2023-08-16 08:43:45,140 - logger - INFO - Jimin Kim - Updated notes_id local field
+2023-08-16 08:43:45,141 - logger - INFO - Jimin Kim - Successfully created Notes document
+2023-08-16 08:43:45,476 - logger - INFO - Jimin Kim - Successfully updated Notes document with questionnaire info
+2023-08-16 08:43:45,477 - logger - INFO - Jimin Kim - Add 2/2 Completed
+2023-08-16 09:06:47,798 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 09:06:47,877 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates/view?id=8fb52eb45586&pos=1&l=6kf6&listQuery=aWQlM0RjZWFhNThjMzA3YzQlMjZzdGF0dXNOYW1lJTNEQWN0aXZl
+2023-08-16 09:07:00,462 - logger - INFO - Pennie Alvarez - Successfully Added Candidate to Monday at: 4999480929
+2023-08-16 09:07:00,463 - logger - INFO - Pennie Alvarez - Submitting Resume add part 2 at: 4999480929
+2023-08-16 09:07:00,464 - logger - INFO - Pennie Alvarez - Add 1/2 Completed
+2023-08-16 09:07:00,537 - logger - INFO - Pennie Alvarez - Successfully Opened resume link
+2023-08-16 09:07:05,545 - logger - INFO - Pennie Alvarez - Resume Path: N:\Downloads2\ResumePennieAlvarez.pdf
+2023-08-16 09:07:05,595 - logger - INFO - Pennie Alvarez - Updated Phone number from resume
+2023-08-16 09:07:05,596 - logger - INFO - Pennie Alvarez - Updated Email from resume
+2023-08-16 09:07:06,628 - logger - INFO - Pennie Alvarez - Updated phone/email information at: 4999480929
+2023-08-16 09:07:08,115 - logger - INFO - Pennie Alvarez - Successfully uploaded Resume
+2023-08-16 09:07:11,324 - logger - INFO - Pennie Alvarez - Updated notes_id local field
+2023-08-16 09:07:11,325 - logger - INFO - Pennie Alvarez - Successfully created Notes document
+2023-08-16 09:07:11,665 - logger - INFO - Pennie Alvarez - Successfully updated Notes document with questionnaire info
+2023-08-16 09:07:11,666 - logger - INFO - Pennie Alvarez - Add 2/2 Completed
+2023-08-16 09:09:00,420 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 09:09:00,497 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates/view?id=63800b3b89e2&pos=0&l=MtPO&listQuery=aWQlM0RjNDAyZjhhMWYwMzMlMjZzdGF0dXNOYW1lJTNEQWN0aXZl
+2023-08-16 09:09:12,023 - logger - INFO - CLARISSA MANCILLA - Successfully Added Candidate to Monday at: 4999494974
+2023-08-16 09:09:12,025 - logger - INFO - CLARISSA MANCILLA - Submitting Resume add part 2 at: 4999494974
+2023-08-16 09:09:12,027 - logger - INFO - CLARISSA MANCILLA - Add 1/2 Completed
+2023-08-16 09:09:12,104 - logger - INFO - CLARISSA MANCILLA - Successfully Opened resume link
+2023-08-16 09:09:17,112 - logger - INFO - CLARISSA MANCILLA - Resume Path: N:\Downloads2\ResumeCLARISSAMANCILLA.pdf
+2023-08-16 09:09:17,300 - logger - INFO - CLARISSA MANCILLA - Updated Phone number from resume
+2023-08-16 09:09:17,300 - logger - INFO - CLARISSA MANCILLA - Updated Email from resume
+2023-08-16 09:09:18,395 - logger - INFO - CLARISSA MANCILLA - Updated phone/email information at: 4999494974
+2023-08-16 09:09:20,343 - logger - INFO - CLARISSA MANCILLA - Successfully uploaded Resume
+2023-08-16 09:09:43,213 - logger - INFO - CLARISSA MANCILLA - Updated notes_id local field
+2023-08-16 09:09:43,214 - logger - INFO - CLARISSA MANCILLA - Successfully created Notes document
+2023-08-16 09:09:43,751 - logger - INFO - CLARISSA MANCILLA - Successfully updated Notes document with questionnaire info
+2023-08-16 09:09:43,752 - logger - INFO - CLARISSA MANCILLA - Add 2/2 Completed
+2023-08-16 09:11:00,359 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 09:11:00,432 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates/view?id=0f239d2a1168&pos=0&l=0hir&listQuery=aWQlM0Q3ZjNjMTdhYTg4YzQlMjZzdGF0dXNOYW1lJTNEQWN0aXZl
+2023-08-16 09:11:11,755 - logger - INFO - Niambi Cooper - Successfully Added Candidate to Monday at: 4999509401
+2023-08-16 09:11:11,756 - logger - INFO - Niambi Cooper - Submitting Resume add part 2 at: 4999509401
+2023-08-16 09:11:11,757 - logger - INFO - Niambi Cooper - Add 1/2 Completed
+2023-08-16 09:11:11,830 - logger - INFO - Niambi Cooper - Successfully Opened resume link
+2023-08-16 09:11:16,840 - logger - INFO - Niambi Cooper - Resume Path: N:\Downloads2\ResumeNiambiCooper.pdf
+2023-08-16 09:11:16,950 - logger - INFO - Niambi Cooper - Updated Phone number from resume
+2023-08-16 09:11:16,951 - logger - INFO - Niambi Cooper - Updated Email from resume
+2023-08-16 09:11:18,107 - logger - INFO - Niambi Cooper - Updated phone/email information at: 4999509401
+2023-08-16 09:11:19,285 - logger - INFO - Niambi Cooper - Successfully uploaded Resume
+2023-08-16 09:11:21,925 - logger - INFO - Niambi Cooper - Updated notes_id local field
+2023-08-16 09:11:21,925 - logger - INFO - Niambi Cooper - Successfully created Notes document
+2023-08-16 09:11:22,311 - logger - INFO - Niambi Cooper - Successfully updated Notes document with questionnaire info
+2023-08-16 09:11:22,312 - logger - INFO - Niambi Cooper - Add 2/2 Completed
+2023-08-16 09:26:48,335 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 09:26:48,412 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=be17fd0d&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0#/
+2023-08-16 09:27:12,863 - logger - INFO - Darryl Ephriam - Successfully Added Candidate to Monday at: 4999646114
+2023-08-16 09:27:12,863 - logger - INFO - Darryl Ephriam - Submitting Resume add part 2 at: 4999646114
+2023-08-16 09:27:12,865 - logger - INFO - Darryl Ephriam - Add 1/2 Completed
+2023-08-16 09:27:12,936 - logger - INFO - Darryl Ephriam - Successfully Opened resume link
+2023-08-16 09:27:17,957 - logger - INFO - Darryl Ephriam - Resume Path: N:\Downloads2\resume_pdf (6).pdf
+2023-08-16 09:27:18,118 - logger - INFO - Darryl Ephriam - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 09:27:20,051 - logger - INFO - Darryl Ephriam - Updated phone/email information at: 4999646114
+2023-08-16 09:27:22,198 - logger - INFO - Darryl Ephriam - Successfully uploaded Resume
+2023-08-16 09:27:24,435 - logger - INFO - Darryl Ephriam - Updated notes_id local field
+2023-08-16 09:27:24,435 - logger - INFO - Darryl Ephriam - Successfully created Notes document
+2023-08-16 09:27:24,932 - logger - INFO - Darryl Ephriam - Successfully updated Notes document with questionnaire info
+2023-08-16 09:27:24,933 - logger - INFO - Darryl Ephriam - Add 2/2 Completed
+2023-08-16 09:27:25,705 - logger - INFO - Stevie Hall - Successfully Added Candidate to Monday at: 4999647698
+2023-08-16 09:27:25,706 - logger - INFO - Stevie Hall - Submitting Resume add part 2 at: 4999647698
+2023-08-16 09:27:25,707 - logger - INFO - Stevie Hall - Add 1/2 Completed
+2023-08-16 09:27:25,781 - logger - INFO - Stevie Hall - Successfully Opened resume link
+2023-08-16 09:27:30,791 - logger - INFO - Stevie Hall - Resume Path: N:\Downloads2\resume_pdf (7).pdf
+2023-08-16 09:27:30,842 - logger - INFO - Stevie Hall - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 09:27:31,610 - logger - INFO - Stevie Hall - Updated phone/email information at: 4999647698
+2023-08-16 09:27:32,826 - logger - INFO - Stevie Hall - Successfully uploaded Resume
+2023-08-16 09:27:36,027 - logger - INFO - Stevie Hall - Updated notes_id local field
+2023-08-16 09:27:36,028 - logger - INFO - Stevie Hall - Successfully created Notes document
+2023-08-16 09:27:36,364 - logger - INFO - Stevie Hall - Successfully updated Notes document with questionnaire info
+2023-08-16 09:27:36,365 - logger - INFO - Stevie Hall - Add 2/2 Completed
+2023-08-16 11:54:35,525 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 11:54:35,603 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/resume-database/view/77c95de1#tabOriginalResume
+2023-08-16 12:11:55,923 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 12:11:55,996 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/resume-database/view/77c95de1#tabOriginalResume
+2023-08-16 12:12:48,622 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 12:12:48,694 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/resume-database/view/77c95de1#tabProfile
+2023-08-16 14:58:00,309 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 14:58:00,392 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/candidates?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=a2c80004&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0#/
+2023-08-16 14:58:24,827 - logger - INFO - Allison Kaplan - Successfully Added Candidate to Monday at: 5002154986
+2023-08-16 14:58:24,828 - logger - INFO - Allison Kaplan - Submitting Resume add part 2 at: 5002154986
+2023-08-16 14:58:24,829 - logger - INFO - Allison Kaplan - Add 1/2 Completed
+2023-08-16 14:58:25,482 - logger - INFO - Rosario Rivera - Successfully Added Candidate to Monday at: 5002154999
+2023-08-16 14:58:25,483 - logger - INFO - Rosario Rivera - Submitting Resume add part 2 at: 5002154999
+2023-08-16 14:58:25,484 - logger - INFO - Rosario Rivera - Add 1/2 Completed
+2023-08-16 14:58:25,556 - logger - INFO - Allison Kaplan - Successfully Opened resume link
+2023-08-16 14:58:30,576 - logger - INFO - Allison Kaplan - Resume Path: N:\Downloads2\resume_168a3afe (1).pdf
+2023-08-16 14:58:30,803 - logger - INFO - Allison Kaplan - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 14:58:31,577 - logger - INFO - Allison Kaplan - Updated phone/email information at: 5002154986
+2023-08-16 14:58:32,857 - logger - INFO - Allison Kaplan - Successfully uploaded Resume
+2023-08-16 14:58:35,976 - logger - INFO - Allison Kaplan - Updated notes_id local field
+2023-08-16 14:58:35,977 - logger - INFO - Allison Kaplan - Successfully created Notes document
+2023-08-16 14:58:36,333 - logger - INFO - Allison Kaplan - Successfully updated Notes document with questionnaire info
+2023-08-16 14:58:36,334 - logger - INFO - Allison Kaplan - Add 2/2 Completed
+2023-08-16 14:58:37,171 - logger - INFO - SANDY VANG - Successfully Added Candidate to Monday at: 5002155530
+2023-08-16 14:58:37,173 - logger - INFO - SANDY VANG - Submitting Resume add part 2 at: 5002155530
+2023-08-16 14:58:37,174 - logger - INFO - SANDY VANG - Add 1/2 Completed
+2023-08-16 14:58:37,244 - logger - INFO - Rosario Rivera - Successfully Opened resume link
+2023-08-16 14:58:42,261 - logger - INFO - Rosario Rivera - Resume Path: N:\Downloads2\resume_403e8043.pdf
+2023-08-16 14:58:42,548 - logger - INFO - Rosario Rivera - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 14:58:43,308 - logger - INFO - Rosario Rivera - Updated phone/email information at: 5002154999
+2023-08-16 14:58:44,402 - logger - INFO - Rosario Rivera - Successfully uploaded Resume
+2023-08-16 14:58:47,196 - logger - INFO - Rosario Rivera - Updated notes_id local field
+2023-08-16 14:58:47,196 - logger - INFO - Rosario Rivera - Successfully created Notes document
+2023-08-16 14:58:47,537 - logger - INFO - Rosario Rivera - Successfully updated Notes document with questionnaire info
+2023-08-16 14:58:47,538 - logger - INFO - Rosario Rivera - Add 2/2 Completed
+2023-08-16 14:58:47,612 - logger - INFO - SANDY VANG - Successfully Opened resume link
+2023-08-16 14:58:52,626 - logger - INFO - SANDY VANG - Resume Path: N:\Downloads2\resume_ffc5ac5f (1).pdf
+2023-08-16 14:58:52,810 - logger - INFO - SANDY VANG - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 14:58:53,764 - logger - INFO - SANDY VANG - Updated phone/email information at: 5002155530
+2023-08-16 14:58:55,392 - logger - INFO - SANDY VANG - Successfully uploaded Resume
+2023-08-16 14:58:58,052 - logger - INFO - SANDY VANG - Updated notes_id local field
+2023-08-16 14:58:58,053 - logger - INFO - SANDY VANG - Successfully created Notes document
+2023-08-16 14:58:58,695 - logger - INFO - SANDY VANG - Successfully updated Notes document with questionnaire info
+2023-08-16 14:58:58,696 - logger - INFO - SANDY VANG - Add 2/2 Completed
+2023-08-16 15:36:57,313 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 15:36:57,455 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/4dc42139/8bb0f740?q=&label_name=&status=&great=0&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=4dc42139&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=17&search_id=17c743db-e2e9-4543-8b93-368638ba020e&pos=4#tabInterview
+2023-08-16 15:37:10,567 - logger - INFO - Hannah Sorel - Successfully Added Candidate to Monday at: 5002335053
+2023-08-16 15:37:10,567 - logger - INFO - Hannah Sorel - Submitting Resume add part 2 at: 5002335053
+2023-08-16 15:37:10,569 - logger - INFO - Hannah Sorel - Add 1/2 Completed
+2023-08-16 15:37:10,642 - logger - INFO - Hannah Sorel - Successfully Opened resume link
+2023-08-16 15:37:15,659 - logger - INFO - Hannah Sorel - Resume Path: N:\Downloads2\resume_pdf (8).pdf
+2023-08-16 15:37:15,720 - logger - INFO - Hannah Sorel - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 15:37:16,400 - logger - INFO - Hannah Sorel - Updated phone/email information at: 5002335053
+2023-08-16 15:37:18,088 - logger - INFO - Hannah Sorel - Successfully uploaded Resume
+2023-08-16 15:37:20,346 - logger - INFO - Hannah Sorel - Updated notes_id local field
+2023-08-16 15:37:20,346 - logger - INFO - Hannah Sorel - Successfully created Notes document
+2023-08-16 15:37:20,855 - logger - INFO - Hannah Sorel - Successfully updated Notes document with questionnaire info
+2023-08-16 15:37:20,855 - logger - INFO - Hannah Sorel - Add 2/2 Completed
+2023-08-16 15:51:48,207 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 15:51:48,285 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/b7a354f6/ff3081a3?q=&label_name=&status=&great=1&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=85&search_id=50df09cd-23b8-42a0-87ce-0bfe414fe863&pos=7#tabProfile
+2023-08-16 15:52:01,006 - logger - INFO - Lauren Sczudlo - Successfully Added Candidate to Monday at: 5002391438
+2023-08-16 15:52:01,007 - logger - INFO - Lauren Sczudlo - Submitting Resume add part 2 at: 5002391438
+2023-08-16 15:52:01,008 - logger - INFO - Lauren Sczudlo - Add 1/2 Completed
+2023-08-16 15:52:01,091 - logger - INFO - Lauren Sczudlo - Successfully Opened resume link
+2023-08-16 15:52:06,107 - logger - INFO - Lauren Sczudlo - Resume Path: N:\Downloads2\resume_1ebf0101.pdf
+2023-08-16 15:52:06,200 - logger - INFO - Lauren Sczudlo - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 15:52:06,910 - logger - INFO - Lauren Sczudlo - Updated phone/email information at: 5002391438
+2023-08-16 15:52:08,318 - logger - INFO - Lauren Sczudlo - Successfully uploaded Resume
+2023-08-16 15:52:10,569 - logger - INFO - Lauren Sczudlo - Updated notes_id local field
+2023-08-16 15:52:10,570 - logger - INFO - Lauren Sczudlo - Successfully created Notes document
+2023-08-16 15:52:10,899 - logger - INFO - Lauren Sczudlo - Successfully updated Notes document with questionnaire info
+2023-08-16 15:52:10,900 - logger - INFO - Lauren Sczudlo - Add 2/2 Completed
+2023-08-16 16:23:07,186 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 16:23:07,265 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/4dc42139/22e339f3?maybe&pos=50&total=85&search_id=50df09cd-23b8-42a0-87ce-0bfe414fe863#tabOriginalResume
+2023-08-16 16:23:20,367 - logger - INFO - Mark Youssef - Successfully Added Candidate to Monday at: 5002514911
+2023-08-16 16:23:20,368 - logger - INFO - Mark Youssef - Submitting Resume add part 2 at: 5002514911
+2023-08-16 16:23:20,369 - logger - INFO - Mark Youssef - Add 1/2 Completed
+2023-08-16 16:23:20,443 - logger - INFO - Mark Youssef - Successfully Opened resume link
+2023-08-16 16:23:25,464 - logger - INFO - Mark Youssef - Resume Path: N:\Downloads2\resume_7489a674.pdf
+2023-08-16 16:23:25,573 - logger - INFO - Mark Youssef - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 16:23:26,320 - logger - INFO - Mark Youssef - Updated phone/email information at: 5002514911
+2023-08-16 16:23:27,915 - logger - INFO - Mark Youssef - Successfully uploaded Resume
+2023-08-16 16:23:30,314 - logger - INFO - Mark Youssef - Updated notes_id local field
+2023-08-16 16:23:30,314 - logger - INFO - Mark Youssef - Successfully created Notes document
+2023-08-16 16:23:30,717 - logger - INFO - Mark Youssef - Successfully updated Notes document with questionnaire info
+2023-08-16 16:23:30,718 - logger - INFO - Mark Youssef - Add 2/2 Completed
+2023-08-16 16:29:43,044 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 16:29:43,120 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/4dc42139/f63e1611?q=&label_name=&status=&great=1&invite=0&applied_date=&my_candidates=0&max_distance=&quiz_id=&page=1&rows=50&hidden=&new=0&unrated=0&maybe=0&yes=0&no=0&total=84&search_id=c8645254-b340-4934-ba78-33ecaa12afe4&pos=10#tabProfile
+2023-08-16 16:29:55,946 - logger - INFO - Lilian Vasquez - Successfully Added Candidate to Monday at: 5002534420
+2023-08-16 16:29:55,946 - logger - INFO - Lilian Vasquez - Submitting Resume add part 2 at: 5002534420
+2023-08-16 16:29:55,948 - logger - INFO - Lilian Vasquez - Add 1/2 Completed
+2023-08-16 16:29:56,028 - logger - INFO - Lilian Vasquez - Successfully Opened resume link
+2023-08-16 16:30:01,047 - logger - INFO - Lilian Vasquez - Resume Path: N:\Downloads2\resume_b1eee717.pdf
+2023-08-16 16:30:01,150 - logger - INFO - Lilian Vasquez - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 16:30:02,203 - logger - INFO - Lilian Vasquez - Updated phone/email information at: 5002534420
+2023-08-16 16:30:03,500 - logger - INFO - Lilian Vasquez - Successfully uploaded Resume
+2023-08-16 16:30:05,598 - logger - INFO - Lilian Vasquez - Updated notes_id local field
+2023-08-16 16:30:05,599 - logger - INFO - Lilian Vasquez - Successfully created Notes document
+2023-08-16 16:30:05,900 - logger - INFO - Lilian Vasquez - Successfully updated Notes document with questionnaire info
+2023-08-16 16:30:05,901 - logger - INFO - Lilian Vasquez - Add 2/2 Completed
+2023-08-16 16:36:31,478 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 16:36:31,553 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/contact/response/519a3a86/d36f44e6?applied_date=&great=1&hidden=&label_name=&maybe=0&new=0&no=0&page=1&pos=13&q=&quiz_id=&rows=50&search_id=69b69cee-a438-4eda-93b7-be162913e7e3&status=&total=84&unrated=0&yes=0#tabProfile
+2023-08-16 16:36:44,170 - logger - INFO - Anika T. Muhammad - Successfully Added Candidate to Monday at: 5002556142
+2023-08-16 16:36:44,171 - logger - INFO - Anika T. Muhammad - Submitting Resume add part 2 at: 5002556142
+2023-08-16 16:36:44,172 - logger - INFO - Anika T. Muhammad - Add 1/2 Completed
+2023-08-16 16:36:44,245 - logger - INFO - Anika T. Muhammad - Successfully Opened resume link
+2023-08-16 16:36:49,261 - logger - INFO - Anika T. Muhammad - Resume Path: N:\Downloads2\resume_108b1fd1.pdf
+2023-08-16 16:36:49,338 - logger - INFO - Anika T. Muhammad - Choose not to parse resume (Non Indeed Candidate) 
+2023-08-16 16:36:49,957 - logger - INFO - Anika T. Muhammad - Updated phone/email information at: 5002556142
+2023-08-16 16:36:51,464 - logger - INFO - Anika T. Muhammad - Successfully uploaded Resume
+2023-08-16 16:36:53,831 - logger - INFO - Anika T. Muhammad - Updated notes_id local field
+2023-08-16 16:36:53,832 - logger - INFO - Anika T. Muhammad - Successfully created Notes document
+2023-08-16 16:36:54,157 - logger - INFO - Anika T. Muhammad - Successfully updated Notes document with questionnaire info
+2023-08-16 16:36:54,158 - logger - INFO - Anika T. Muhammad - Add 2/2 Completed
+2023-08-16 16:47:18,112 - logger - INFO - Successfully Set Group and Occupation
+2023-08-16 16:47:18,192 - logger - INFO - Successfully Opened Link: https://www.ziprecruiter.com/resume-database/view/e19c4dd6#tabProfile
+2023-08-18 10:59:22,891 - logger - INFO - Started Server
+2023-08-18 11:06:52,616 - logger - INFO - Started Server
+2023-08-18 11:07:29,186 - logger - INFO - Successfully Set Group and Occupation
+2023-08-18 11:07:29,319 - logger - INFO - Successfully Opened Link: http://google.com/
+2023-08-18 11:07:30,776 - logger - INFO - Successfully Set Group and Occupation
+2023-08-18 11:07:30,853 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates?id=77523645b8fe&statusName=0
+2023-08-18 11:07:50,267 - logger - INFO - Shay Herndon - Successfully Added Candidate to Monday at: 5014045452
+2023-08-18 11:07:50,268 - logger - INFO - Shay Herndon - Submitting Resume add part 2 at: 5014045452
+2023-08-18 11:07:50,271 - logger - INFO - Shay Herndon - Add 1/2 Completed
+2023-08-18 11:07:50,348 - logger - INFO - Shay Herndon - Successfully Opened resume link
+2023-08-18 11:07:55,384 - logger - INFO - Shay Herndon - Resume Path: N:\Downloads2\ResumeShayHerndon.pdf
+2023-08-18 11:07:55,492 - logger - INFO - Shay Herndon - Updated Phone number from resume
+2023-08-18 11:07:56,262 - logger - INFO - Shay Herndon - Updated phone/email information at: 5014045452
+2023-08-18 11:07:57,716 - logger - INFO - Shay Herndon - Successfully uploaded Resume
+2023-08-18 11:08:01,032 - logger - INFO - Shay Herndon - Updated notes_id local field
+2023-08-18 11:08:01,032 - logger - INFO - Shay Herndon - Successfully created Notes document
+2023-08-18 11:08:01,395 - logger - INFO - Shay Herndon - Successfully updated Notes document with questionnaire info
+2023-08-18 11:08:01,396 - logger - INFO - Shay Herndon - Add 2/2 Completed
+2023-08-18 11:10:45,576 - logger - INFO - Successfully Set Group and Occupation
+2023-08-18 11:10:45,656 - logger - INFO - Successfully Opened Link: https://employers.indeed.com/candidates/view?id=505f3fa496c1&pos=0&l=dNQG&listQuery=aWQlM0RjNDAyZjhhMWYwMzMlMjZzdGF0dXNOYW1lJTNEQWN0aXZl
+2023-08-18 11:10:58,148 - logger - INFO - Dario Muniz - Successfully Added Candidate to Monday at: 5014067488
+2023-08-18 11:10:58,149 - logger - INFO - Dario Muniz - Submitting Resume add part 2 at: 5014067488
+2023-08-18 11:10:58,150 - logger - INFO - Dario Muniz - Add 1/2 Completed
+2023-08-18 11:10:58,224 - logger - INFO - Dario Muniz - Successfully Opened resume link
+2023-08-18 11:11:03,243 - logger - INFO - Dario Muniz - Resume Path: N:\Downloads2\ResumeDarioMuniz.pdf
+2023-08-18 11:11:03,285 - logger - INFO - Dario Muniz - Updated Phone number from resume
+2023-08-18 11:11:03,285 - logger - INFO - Dario Muniz - Updated Email from resume
+2023-08-18 11:11:04,282 - logger - INFO - Dario Muniz - Updated phone/email information at: 5014067488
+2023-08-18 11:11:05,686 - logger - INFO - Dario Muniz - Successfully uploaded Resume
+2023-08-18 11:11:08,151 - logger - INFO - Dario Muniz - Updated notes_id local field
+2023-08-18 11:11:08,151 - logger - INFO - Dario Muniz - Successfully created Notes document
+2023-08-18 11:11:08,471 - logger - INFO - Dario Muniz - Successfully updated Notes document with questionnaire info
+2023-08-18 11:11:08,472 - logger - INFO - Dario Muniz - Add 2/2 Completed
+2023-08-18 14:42:59,046 - logger - INFO - Successfully Set Group and Occupation
+2023-08-18 14:42:59,180 - logger - INFO - Successfully Opened Link: google.com
