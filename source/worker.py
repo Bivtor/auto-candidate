@@ -8,7 +8,7 @@ app.conf.result_backend = 'rpc://'
 
 # System Startup:
 
-# celery -A worker worker --loglevel=INFO --concurrency=1 --pool=solo
+# python -m celery -A worker worker --loglevel=INFO --concurrency=1 --pool=solo
 # sudo rabbitmq-server
 # sudo rabbitmqctl status
 # sudo rabbitmqctl stop
