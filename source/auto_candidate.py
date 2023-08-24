@@ -1,27 +1,15 @@
-from twilio.rest import Client
 from dotenv import load_dotenv
 from pydantic import BaseModel
-from datetime import date, datetime
+from datetime import datetime
 from fuzzywuzzy import fuzz
 from paths import *
 from bs4 import BeautifulSoup
 
-import time
-import os
 import os.path
 import json
 import re
-
-
 import requests
-
-# Amazon SES Send Email info
-import boto3
 import logging
-
-# import boto3
-from botocore.exceptions import ClientError
-from botocore.config import Config
 
 
 load_dotenv(dotenv_path=ENV_PATH)
@@ -55,8 +43,6 @@ class Data(BaseModel):
     occupation: str
     group: str
     link: str = ""
-    start: int = 2
-    end: int = 1000
     message: str = ""
     messageType: str = ""
 
@@ -69,6 +55,12 @@ class Data(BaseModel):
     # Sheet position info
     positions: list[str] = []
     err: str | None = None
+
+    # Text/Mail info
+    isTest: bool | None
+    test_phone: str | None
+    test_email: str | None
+    source_email: str | None
 
 
 class candidateData(BaseModel):
@@ -305,131 +297,17 @@ def getLicenseInfo(name, depth) -> License:
     return licenseinfolist
 
 
-class SesDestination:
-    """Contains data about an email destination."""
-
-    def __init__(self, tos, ccs=None, bccs=None):
-        """
-        :param tos: The list of recipients on the 'To:' line.
-        :param ccs: The list of recipients on the 'CC:' line.
-        :param bccs: The list of recipients on the 'BCC:' line.
-        """
-        self.tos = tos
-        self.ccs = ccs
-        self.bccs = bccs
-
-    def to_service_format(self):
-        """
-        :return: The destination data in the format expected by Amazon SES.
-        """
-        svc_format = {'ToAddresses': self.tos}
-        if self.ccs is not None:
-            svc_format['CcAddresses'] = self.ccs
-        if self.bccs is not None:
-            svc_format['BccAddresses'] = self.bccs
-        return svc_format
-
-
-class SesMailSender:
-    """Encapsulates functions to send emails with Amazon SES."""
-
-    def __init__(self, ses_client):
-        """
-        :param ses_client: A Boto3 Amazon SES client.
-        """
-        self.ses_client = ses_client
-
-    def send_email(self, source, destination, subject, text, html, name, category, email, reply_tos=None):
-        """
-        Sends an email.
-
-        Note: If your account is in the Amazon SES  sandbox, the source and
-        destination email accounts must both be verified.
-
-        :param source: The source email account.
-        :param destination: The destination email account.
-        :param subject: The subject of the email.
-        :param text: The plain text version of the body of the email.
-        :param html: The HTML version of the body of the email.
-        :param reply_tos: Email accounts that will receive a reply if the recipient
-                          replies to the message.
-        :return: The ID of the message, assigned by Amazon SES.
-        """
-        send_args = {
-            'Source': source,
-            'Destination': destination.to_service_format(),
-            'Message': {
-                'Subject': {'Data': subject},
-                'Body': {'Text': {'Data': text}}}}
-        if reply_tos is not None:
-            send_args['ReplyToAddresses'] = reply_tos
-        try:
-            response = self.ses_client.send_email(**send_args)
-            message_id = response['MessageId']
-            logger.info("Sent mail %s from %s to %s.",
-                        message_id, source, destination.tos)
-
-            # Not writing json we dont care
-            # write_json({"name": name, "job": category,
-            #             "email": email, "response_code": response, 'body': text})
-            logger.info(
-                "Successfully sent email to: {} -> ".format(name, destination.tos[0]))
-        except ClientError as err:
-            logger.error(
-                "Invalid email destination for: {} -> {}".format(name, destination.tos[0]))
-
-            # Not writing json we dont care
-            # write_json({"name": name, "job": category,
-            #             "email": email, "response_code": str(err.response)})
-        else:
-            return message_id
-
-
-def sendTwilioText(name: str, number: str, body: str):
-    # Find your Account SID and Auth Token and Message
-    account_sid = os.environ['TWILIO_ACCOUNT_SID']
-    auth_token = os.environ['TWILIO_AUTH_TOKEN']
-    service_id = os.environ['TWILIO_SERVICE_ID']
-
-    client = Client(account_sid, auth_token)
-    try:
-        message = client.messages.create(
-            messaging_service_sid=service_id,
-            body=body,
-            to=number,
-        )
-        # Update record that text has been sent / status of return
-        # Not writing json we dont care
-        # write_json({"name": name, "body": message.body, "number": number,
-        #            "date": str(date.today()), "messageID": message.sid, "failed": False})
-        logger.info("\nSent message to {} with number: {}".format(name, number))
-        return True
-    except:
-        # Not writing json we dont care
-        # write_json({"name": name, "body": body,
-        #            "number": number, "messageID": "null", "failed": True})
-        logger.info("\nCould not send message to: {} -> {}".format(
-            name, number))
-        return False
-
-
-def sendAWSEmail(name: str, email: str, body: str, category: str, mailsender, source: str):
-    # Create destination type
-    destination = SesDestination(tos=[email])
-
-    # Send mail and log response
-    mailsender.send_email(
-        destination=destination, subject="New Job Opportunity from Solution Based Therapeutics", text=body, source=source, html="", name=name, category=category, email=email)
-
-
 def write_json(new_data, filename=RECORDS_PATH):
     with open(filename, 'r+') as file:
         # First we load existing data into a dict.
         file_data = json.load(file)
+
         # Join new_data with file_data
         file_data["records"].append(new_data)
+
         # Sets file's current position at offset.
         file.seek(0)
+
         # convert back to json.
         json.dump(file_data, file, indent=4)
 

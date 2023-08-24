@@ -6,6 +6,7 @@ import json
 from dotenv import load_dotenv
 from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH
 from pydantic import BaseModel
+from update_monday import get_Monday_group
 
 
 class candidateData(BaseModel):
@@ -402,7 +403,54 @@ def GetQuestionSheet() -> dict:  # data
     return delta_format
 
 
+def getGroupMessageInfo() -> dict:
+    """
+    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+    url = "https://api.monday.com/v2"
+
+    # Generate Query
+    # TODO Add code that defaults to fail if we cannot find the proper group id
+    q = f"""
+    {{
+        boards(ids: {BOARD_ID}) 
+        {{
+            groups(ids: "new_group32939")
+            {{
+                items 
+                {{
+                    id
+                    name
+                    column_values (ids: ["status_1", "phone", "email"]) 
+                    {{
+                        text
+                        id
+                    }}
+                }}
+            }} 
+        }}
+    }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    response_data = response.json()
+    print(response_data)
+    print(q)
+
+
 # # test()
-loop = asyncio.get_event_loop()
-loop.run_until_complete(updateQuestionDocument())
+# loop = asyncio.get_event_loop()
+# loop.run_until_complete(updateQuestionDocument())
 # GetQuestionSheet()
+
+
+getGroupMessageInfo()

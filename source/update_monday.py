@@ -5,12 +5,13 @@ import re
 import glob
 from dotenv import load_dotenv
 from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH
-from auto_candidate import candidateData, logger
+from auto_candidate import candidateData, logger, Data
 
 load_dotenv(dotenv_path=ENV_PATH)
 
 BOARD_ID = 4846750007
-DEFAULT_GROUP = '1690065138_recruiting_pre_scre'  # Miscellaneous
+# Miscellaneous -> Switched to random text -> Fail > mis input / mis text
+DEFAULT_GROUP = 'thisSHOULDFAIL'
 GROUP_ID_MAP = {
     "groups": [
         {
@@ -198,7 +199,7 @@ async def updateMondayItem(data: candidateData):
 
 async def uploadCandidateResume(data: candidateData):
     # Get newest file
-    list_of_files = glob.glob(DOWNLOAD_PATH)  #  + "/*" for Mac 
+    list_of_files = glob.glob(DOWNLOAD_PATH)  # + "/*" for Mac
     f = max(list_of_files, key=os.path.getctime)
 
     # Monday Code
@@ -425,3 +426,98 @@ def GetQuestionSheet(data: candidateData) -> dict:
     delta_format = [{"insert": line + '\\n\\n'} for line in lines]
 
     return delta_format
+
+
+def getGroupMessageInfo(input_data: Data) -> dict:
+    """
+    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+    url = "https://api.monday.com/v2"
+
+    # Generate Query
+    # TODO Add code that defaults to fail if we cannot find the proper group id
+    q = f"""
+    {{
+        boards(ids: {BOARD_ID}) 
+        {{
+            groups(ids: "{get_Monday_group(input_data.group)}")
+            {{
+                items 
+                {{
+                    id
+                    name
+                    column_values (ids: ["status_1", "phone", "email"]) 
+                    {{
+                        text
+                        id
+                    }}
+                }}
+            }} 
+        }}
+    }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        response_data = response.json()
+        logger.info(
+            f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
+        return response_data
+    else:
+        logger.info(
+            f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program")
+        return {}
+
+
+def updateCandidateTextStatus(candidate_id: int, log_name: str, new_status: str, ):
+    """
+    Updates the text status of 'candidate_id' to 'new_status'
+    Text status field has id='status_1'
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+    url = "https://api.monday.com/v2"
+
+    # Generate Query
+    q = f"""
+        mutation
+        {{
+            change_simple_column_value (
+                item_id: {candidate_id},
+                board_id: {BOARD_ID},
+                column_id : "status_1", 
+                value: "{new_status}"
+            ) 
+            {{
+                id
+            }}
+        }}
+
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        logger.info(
+            f"{log_name} - Successfully updated Monday Status to {new_status}")
+    else:
+        logger.info(
+            f"{log_name} - Failed to Update Monday Status to {new_status}")
+    return

@@ -1,5 +1,6 @@
 from partial_add_seq import *
 from paths import *
+from masstext import *
 from celery import Celery
 import asyncio
 
@@ -71,5 +72,35 @@ def process_candidate_part2(data: dict):
 
     # Log
     logger.info(f"{model_CD.name} - Add 2/2 Completed")
+
+    return
+
+
+@app.task()
+def test_mailtext(incoming_data: dict):
+
+    # De-serialize Pydantic Model
+    model_CD = Data(**incoming_data)
+
+    # Send Test Mail/Text
+    send_test_mailtext(model_CD)
+
+    # Log
+    logger.info(f"Finished Test Mail/Text Task")
+
+    return
+
+
+@app.task()
+def send_group_mailtext(incoming_data: dict):
+
+    # De-serialize Pydantic Model
+    model_CD = Data(**incoming_data)
+
+    # Send Test Mail/Text
+    send_group_mail_function(model_CD)
+
+    # Log
+    logger.info(f"Finished Full Mail/Text Task")
 
     return
