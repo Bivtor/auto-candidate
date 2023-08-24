@@ -10,3 +10,6 @@ tst.py
 creds/
 source/paths.py
 
+json_files/settings.json
+logs/server.log
+old/test_server.py
