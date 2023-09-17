@@ -121,8 +121,12 @@ def sendEmail(source: str, destination_email: str,  subject: str, body: str):
     Helper Method that sends an email using Amazon AWS Client
     """
 
+    # Remove Whitespace or \n characters from email string
+    email = destination_email.replace(" ", "").replace("\n", "")
+
+
     # Create destination type
-    destination = SesDestination(tos=[destination_email])
+    destination = SesDestination(tos=[email])
 
     # Create boto3 Client
     client = boto3.client('ses', region_name="us-west-1", aws_access_key_id=os.getenv(
@@ -151,6 +155,7 @@ def send_test_mailtext(data: Data):
 
     # Assign Subject
     subject = "New Job Opportunity from Solution Based Therapeutics"
+
 
     # Call Email Send (Helper Function)
     sendEmail(destination_email=data.test_email,
