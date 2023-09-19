@@ -5,6 +5,8 @@ import asyncio
 import requests
 import docx
 import PyPDF2
+import time
+
 
 async def setIsUpdating(b: bool) -> bool:
     with open(WORKING_PATH, "r") as f:
@@ -67,11 +69,14 @@ async def finishHalfAdd(candidateData: candidateData):
         logger.info(
             f"{candidateData.name} - Candidate Reportedly did not have a Resume")
 
-    # Create Monday Questionairre document
+    # Create Monday Questionairre document and
+    # Update Monday LA Area Location Field
     if candidateData.monday_id != None:
         await createQuestionDocument(candidateData)
         await updateQuestionDocument(candidateData)
-        # Insert
+        updateLA_Area(name=candidateData.name,
+                      monday_id=candidateData.monday_id,
+                      loc=candidateData.location)
 
     return
 
@@ -86,7 +91,9 @@ async def safeCandidateUpdate(candidateData: candidateData, setting_data: dict) 
     """
 
     # 1: Open download link (Unix)
-    cmd = f'start chrome "{candidateData.resume_download_link}"' # OPEN chrome (Windows format)
+
+    # OPEN chrome - formatting done in paths.py
+    cmd = OPEN_CMD_LINK.format(candidateData.resume_download_link)
     if os.system(cmd) != 0:
         logger.error(f"{candidateData.name} - Failed to open Resume Link")
         return
@@ -97,7 +104,7 @@ async def safeCandidateUpdate(candidateData: candidateData, setting_data: dict) 
     # TODO fix this library thing?
 
     # 3: Get newest file
-    list_of_files = glob.glob(DOWNLOAD_PATH) # Add back  + "/*" for Mac
+    list_of_files = glob.glob(DOWNLOAD_PATH)  # Add back  + "/*" for Mac
     newest_file_path = max(list_of_files, key=os.path.getctime)
     print(newest_file_path)
     logger.info(f"{candidateData.name} - Resume Path: {newest_file_path}")

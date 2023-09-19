@@ -21,7 +21,7 @@ app.conf.result_backend = 'rpc://'
 @app.task()
 def open_link_task(data: dict):
     # OPEN chrome
-    cmd = f'start chrome "{data["link"]}"'
+    cmd = OPEN_CMD_LINK.format(data["link"])
     if os.system(cmd) == 0:
         logger.info(f"Successfully Opened Link: {data.get('link')}")
     else:

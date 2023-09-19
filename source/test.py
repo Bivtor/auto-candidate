@@ -6,7 +6,9 @@ import json
 from dotenv import load_dotenv
 from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH
 from pydantic import BaseModel
-from update_monday import get_Monday_group
+from update_monday import get_Monday_group, updateCandidateLaArea
+from location_detection import *
+import time
 
 
 class candidateData(BaseModel):
@@ -453,4 +455,4 @@ def getGroupMessageInfo() -> dict:
 # GetQuestionSheet()
 
 
-getGroupMessageInfo()
+# getGroupMessageInfo()

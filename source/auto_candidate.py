@@ -66,6 +66,7 @@ class Data(BaseModel):
 class candidateData(BaseModel):
     hasResume: bool | None
     location: str | None
+    LA_area: str | None
     name: str | None
     phone: str | None
     email: str | None
