@@ -6,6 +6,7 @@ import glob
 from dotenv import load_dotenv
 from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH
 from auto_candidate import candidateData, logger, Data
+from location_detection import compute_location_area
 
 load_dotenv(dotenv_path=ENV_PATH)
 
@@ -361,7 +362,7 @@ def GetQuestionSheet(data: candidateData) -> dict:
     f = open(SETTINGS_PATH)
     setting_data = json.load(f)
 
-    if setting_data['occupation'] is "Nurse":
+    if setting_data['occupation'] == "Nurse":
         lines = [
             f"Date: {data.date}",
             f"Location: {data.location}",
@@ -384,7 +385,7 @@ def GetQuestionSheet(data: candidateData) -> dict:
             "Active CPR/FA?:",
             "Other Notes?:"
         ]
-    elif setting_data['occupation'] is "Front Desk Receptionist":
+    elif setting_data['occupation'] == "Front Desk Receptionist":
         lines = [
             f"Date Applied: {data.date}",
             "Date Interviewed:",
@@ -521,3 +522,203 @@ def updateCandidateTextStatus(candidate_id: int, log_name: str, new_status: str,
         logger.info(
             f"{log_name} - Failed to Update Monday Status to {new_status}")
     return
+
+
+def getGroupMessageInfo(input_data: Data) -> dict:
+    """
+    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+    url = "https://api.monday.com/v2"
+
+    # Generate Query
+    # TODO Add code that defaults to fail if we cannot find the proper group id
+    q = f"""
+    {{
+        boards(ids: {BOARD_ID}) 
+        {{
+            groups(ids: "{get_Monday_group(input_data.group)}")
+            {{
+                items 
+                {{
+                    id
+                    name
+                    column_values (ids: ["status_1", "phone", "email"]) 
+                    {{
+                        text
+                        id
+                    }}
+                }}
+            }} 
+        }}
+    }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        response_data = response.json()
+        logger.info(
+            f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
+        return response_data
+    else:
+        logger.info(
+            f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program")
+        return {}
+
+
+def updateCandidateLaArea(monday_id: str, LA_area: str, name: str):
+    """
+    Updates the 'LA Area' field of 'monday_id' 
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+
+    url = "https://api.monday.com/v2"
+
+    # Generate Query
+    q = f"""
+        mutation
+        {{
+            change_simple_column_value (
+                item_id: {monday_id},
+                board_id: {BOARD_ID},
+                column_id : "status_14", 
+                value: "{LA_area}",
+                create_labels_if_missing:true
+            ) 
+            {{
+                id
+            }}
+        }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        logger.info(
+            f"{name} - Successfully Updated LA Area Status to {LA_area}")
+    else:
+        logger.info(
+            f"{name} - Failed to Update LA Area Status to {LA_area}")
+
+    return
+
+
+def updateLA_Area(loc: str, monday_id: str, name: str):
+    """
+    Recieved Location text and monday ID
+    Computes LA_Area field and updates monday
+
+    name for logging only
+    """
+
+    # Skip update if location is empty
+    if len(loc) == 0 or loc == "" or len(loc.strip()) == 0:
+        logger.info(f"{name} - Location Empty, Did Not Update LA_Area Field")
+        return
+
+    # Get LA_Area
+    LA_area = compute_location_area(loc)
+
+    # Update Location on Monday
+    # Name is for logging, successful update logged inside of this function
+    updateCandidateLaArea(
+        LA_area=LA_area,
+        monday_id=monday_id,
+        name=name)
+
+
+# Old Functions used for One-Time updating of entire Monday Groups
+def getAllCandidatesInGroup(group: str):
+    """
+    Helper function for one-time update all location based on where they are in LA Function
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+
+    url = "https://api.monday.com/v2"
+
+    # Generate Query
+    q = f"""
+        {{
+            boards(ids: 4846750007) {{
+                groups(ids: "{group}") {{
+                    items {{
+                        id
+                        name
+                        column_values(ids: ["text8"]) {{
+                            text
+                        }}
+                    }}
+                }}
+            }}
+        }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        # logger.info(
+        #     f"{candidate_profile.name} - Successfully Updated LA Area Status to {candidate_profile.LA_area}")
+        pass
+    else:
+        pass
+        # logger.info(
+        #     f"{candidate_profile.name} - Failed to Update LA Area Status to {candidate_profile.LA_area}")
+
+    response_data = response.json()
+    data = response_data['data']['boards'][0]['groups'][0]['items']
+    return data
+
+
+def updateOldMondayCandidates():
+    """
+    One-off function to update old candidates to put them somewhere in LA based on location column 
+    """
+
+    # Get response (list of people in the group)
+    candidate_list = getAllCandidatesInGroup("1690064031_recruiting_pre_scre")
+
+    # Iterate through list and update value of candidate ID to
+    for candidate in candidate_list:
+        # Get their location
+        loc = candidate['column_values'][0]['text']
+
+        # Skip if empty
+        if len(loc) == 0 or loc == "" or len(loc.strip()) == 0:
+            continue
+
+        # Compute their LA Area Location
+        LA_area = compute_location_area(loc)
+
+        # Update Location on Monday
+        updateCandidateLaArea(
+            LA_area=LA_area,
+            monday_id=candidate['id'],
+            name=candidate['name'])
+
+        # Wait to not API too fast
+        time.sleep(.4)

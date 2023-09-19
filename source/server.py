@@ -40,9 +40,9 @@ app.add_middleware(
 )
 
 
-# Helper method to open a string in Chrome(Formatted for windows)
+# Helper method to open a string in Chrome (Formatted for windows)
 def openstring(data: Data):
-    cmd = 'open -a "Google Chrome"  \"{}\"'.format(data.link)  # OPEN chrome
+    cmd = OPEN_CMD_LINK.format(data.link)  # Open link in chrome
     if os.system(cmd) == 0:
         logger.info(f"Successfully Opened Link: {data.link}")
     else:
