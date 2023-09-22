@@ -4,9 +4,10 @@ import json
 import re
 import glob
 from dotenv import load_dotenv
-from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH
+from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH, RECEIPT_PATH
 from auto_candidate import candidateData, logger, Data
 from location_detection import compute_location_area
+from masstext import append_text_to_file
 
 load_dotenv(dotenv_path=ENV_PATH)
 
@@ -200,7 +201,7 @@ async def updateMondayItem(data: candidateData):
 
 async def uploadCandidateResume(data: candidateData):
     # Get newest file
-    list_of_files = glob.glob(DOWNLOAD_PATH)  # + "/*" for Mac
+    list_of_files = glob.glob(DOWNLOAD_PATH)
     f = max(list_of_files, key=os.path.getctime)
 
     # Monday Code
@@ -429,57 +430,6 @@ def GetQuestionSheet(data: candidateData) -> dict:
     return delta_format
 
 
-def getGroupMessageInfo(input_data: Data) -> dict:
-    """
-    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
-    """
-
-    # Monday Code
-    apiKey = os.environ['MONDAY_API_KEY']
-    headers = {
-        "Authorization": apiKey,
-        "API-version": "2023-04"
-    }
-    url = "https://api.monday.com/v2"
-
-    # Generate Query
-    # TODO Add code that defaults to fail if we cannot find the proper group id
-    q = f"""
-    {{
-        boards(ids: {BOARD_ID}) 
-        {{
-            groups(ids: "{get_Monday_group(input_data.group)}")
-            {{
-                items 
-                {{
-                    id
-                    name
-                    column_values (ids: ["status_1", "phone", "email"]) 
-                    {{
-                        text
-                        id
-                    }}
-                }}
-            }} 
-        }}
-    }}
-        """
-
-    # Send request
-    response = requests.post(url=url, headers=headers, json={'query': q})
-
-    # Handle response
-    if response.status_code == 200:
-        response_data = response.json()
-        logger.info(
-            f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
-        return response_data
-    else:
-        logger.info(
-            f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program")
-        return {}
-
-
 def updateCandidateTextStatus(candidate_id: int, log_name: str, new_status: str, ):
     """
     Updates the text status of 'candidate_id' to 'new_status'
@@ -568,6 +518,11 @@ def getGroupMessageInfo(input_data: Data) -> dict:
         response_data = response.json()
         logger.info(
             f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
+        # Append to receipt file
+        append_text_to_file(
+            RECEIPT_PATH, f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program"
+        )
+
         return response_data
     else:
         logger.info(

@@ -23,3 +23,6 @@ logs\server.log
 N:\Desktop\projects\auto-candidate\logs\server.log
 
 json_files/settings.json
+
+logs/*
+logs/server.log
