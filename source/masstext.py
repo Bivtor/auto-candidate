@@ -1,5 +1,6 @@
 from auto_candidate import logger, Data
 from update_monday import getGroupMessageInfo, updateCandidateTextStatus
+from paths import RECEIPT_PATH
 import os
 import time
 
@@ -73,8 +74,17 @@ class SesMailSender:
         try:
             response = self.ses_client.send_email(**send_args)
             message_id = response['MessageId']
+
+            # Log
             logger.info(
-                f"Sent mail {message_id} from {source} to {destination.tos}")
+                f"Sent mail {message_id} from {source} to {destination.tos}"
+            )
+
+            # Update Receipt
+            append_text_to_file(
+                RECEIPT_PATH, f" Successfully sent email from {source} to {destination.tos}\n\n"
+            )
+
         except ClientError as err:
             logger.error(err)
             logger.error(
@@ -105,9 +115,13 @@ def sendText(name: str, number: str, body: str):
         )
 
         # Log
-        logger.info(f"Sent message: {message}")
         logger.info(
             f"{name} - Successfully Sent Message to Twilio for {number}")
+
+        # Update Receipt File
+        append_text_to_file(
+            RECEIPT_PATH, f"{name} - Successfully Sent Message to Twilio at {number}\n"
+        )
 
     except:
         # Log
@@ -171,9 +185,20 @@ def send_group_mail_function(data: Data):
     Send an email/text to everyone who has a status marked "Message Scheduled" in a specified group on Monday
     """
 
+    # Clear receipt file
+    clear_text_in_file(RECEIPT_PATH)
+
+    # Add opener to Receipt file
+    append_text_to_file(RECEIPT_PATH, "Text/Mail Order Receipt:\n")
+
+    # Get Monday Info
     monday_info = getGroupMessageInfo(data)
 
+    # Call driver Function
     process_group_mail_data(web_input_data=data, monday_input_data=monday_info)
+
+    # Send Receipt Email
+    send_receipt_email()
 
     return
 
@@ -229,7 +254,68 @@ def process_group_mail_data(web_input_data: Data, monday_input_data: dict):
 
         Messages_Sent += 1
 
+    # Log Finish
     logger.info(
         f"{web_input_data.group} - Finished Sending {Messages_Sent} Messages")
 
+    # Add Finish to Receipt
+    append_text_to_file(
+        RECEIPT_PATH, f"\nFinished Sending {Messages_Sent} Messages to {web_input_data.group} Group")
+
     return
+
+
+def send_receipt_email():
+    """
+    Sends the contents of the receipt file to Employers
+    """
+
+    # Retrieve text from file
+    receipt = retrieve_file_contents(RECEIPT_PATH)
+
+    # Send email with receipt
+    # TODO Change destination emails
+    sendEmail(source='info@solutionbasedtherapeutics.com',
+              destination_email='victorinaldi@ucla.edu',
+              subject='Receipt of Text/Email Order',
+              body=receipt)
+
+
+def retrieve_file_contents(file_path: str) -> str:
+    """
+    Retrieve receipt email file
+    """
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            text = file.read()
+        return text
+    except FileNotFoundError:
+        print(f"File '{file_path}' not found.")
+        return None
+    except Exception as e:
+        print(
+            f"An error occurred while reading the file '{file_path}': {str(e)}")
+        return None
+
+
+def append_text_to_file(file_path, text):
+    """
+    Appends text to receipt file
+    """
+    try:
+        with open(file_path, 'a', encoding='utf-8') as file:
+            file.write(text)
+    except Exception as e:
+        print(f"An error occurred while appending to '{file_path}': {str(e)}")
+
+
+def clear_text_in_file(file_path):
+    """
+    Clear receipt file
+    """
+    try:
+        with open(file_path, 'w', encoding='utf-8') as file:
+            file.write('')
+        print(f"Text cleared from '{file_path}' successfully.")
+    except Exception as e:
+        print(f"An error occurred while clearing '{file_path}': {str(e)}")
