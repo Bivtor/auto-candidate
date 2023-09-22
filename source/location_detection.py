@@ -61,9 +61,13 @@ def compute_location_area(location: str):
     # Ask googlemaps geocoding API to get lat/long of candidate location
     # Stratify candidate location based on labeled polygons
 
-    # Redundancy check for 'OC' and return 'Orange County General'
+    # Check for 'OC' and return 'Orange County General'
     if is_approximately_oc(location):
         return "General Orange County"
+    
+    # Check for 'None' and return 'Central LA/ SoCal'
+    if location.lower() == 'none':
+        return 'Central LA/SoCal'
 
     # Create Polygon array and fill it
     polygons: list(Polygon) = create_polygons()
