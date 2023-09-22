@@ -214,8 +214,9 @@ def send_group_mail_function(data: Data):
     # Call driver Function
     process_group_mail_data(web_input_data=data, monday_input_data=monday_info)
 
-    # Send Receipt Email
-    send_receipt_email()
+    # Send Receipt Emails
+    send_receipt_email('gabe@solutionbasedtherapeutics.com')
+    send_receipt_email('stephanie@solutionbasedtherapeutics.com')
 
     return
 
@@ -282,7 +283,7 @@ def process_group_mail_data(web_input_data: Data, monday_input_data: dict):
     return
 
 
-def send_receipt_email():
+def send_receipt_email(dest):
     """
     Sends the contents of the receipt file to Employers
     """
@@ -293,7 +294,7 @@ def send_receipt_email():
     # Send email with receipt
     # TODO Change destination emails
     sendEmail(source='info@solutionbasedtherapeutics.com',
-              destination_email='info@solutionbasedtherapeutics.com',
+              destination_email=dest,
               subject='Receipt of Text/Email Order',
               body=receipt)
 
