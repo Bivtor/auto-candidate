@@ -82,13 +82,20 @@ class SesMailSender:
 
             # Update Receipt
             append_text_to_file(
-                RECEIPT_PATH, f" Successfully sent email from {source} to {destination.tos}\n\n"
+                RECEIPT_PATH, f"Successfully sent email from {source} to {destination.tos}\n\n"
             )
 
         except ClientError as err:
             logger.error(err)
+
+            # Log
             logger.error(
                 f"Invalid email destination: {destination.tos}")
+
+            # Update Receipt
+            append_text_to_file(
+                RECEIPT_PATH, f"Invalid email destination: {destination.tos}\n\n"
+            )
 
         else:
             return message_id
@@ -126,6 +133,11 @@ def sendText(name: str, number: str, body: str):
     except:
         # Log
         logger.info(f"{name} - Failed to Send Message to Twilio for {number}")
+
+        # Update Receipt File
+        append_text_to_file(
+            RECEIPT_PATH, f"{name} - Failed to Send Message to Twilio for {number}\n"
+        )
 
     return
 
@@ -194,7 +206,7 @@ def send_group_mail_function(data: Data):
     clear_text_in_file(RECEIPT_PATH)
 
     # Add opener to Receipt file
-    append_text_to_file(RECEIPT_PATH, "Text/Mail Order Receipt:\n")
+    append_text_to_file(RECEIPT_PATH, "Text/Mail Order Receipt:\n\n")
 
     # Get Monday Info
     monday_info = getGroupMessageInfo(data)
@@ -265,7 +277,7 @@ def process_group_mail_data(web_input_data: Data, monday_input_data: dict):
 
     # Add Finish to Receipt
     append_text_to_file(
-        RECEIPT_PATH, f"\nFinished Sending {Messages_Sent} Messages to {web_input_data.group} Group")
+        RECEIPT_PATH, f"\nFinished Sending {Messages_Sent} Messages to {web_input_data.group} Group\n")
 
     return
 
@@ -281,7 +293,7 @@ def send_receipt_email():
     # Send email with receipt
     # TODO Change destination emails
     sendEmail(source='info@solutionbasedtherapeutics.com',
-              destination_email='victorinaldi@ucla.edu',
+              destination_email='info@solutionbasedtherapeutics.com',
               subject='Receipt of Text/Email Order',
               body=receipt)
 

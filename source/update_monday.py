@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH, RECEIPT_PATH
 from auto_candidate import candidateData, logger, Data
 from location_detection import compute_location_area
-from masstext import append_text_to_file
+import time
 
 load_dotenv(dotenv_path=ENV_PATH)
 
@@ -474,60 +474,7 @@ def updateCandidateTextStatus(candidate_id: int, log_name: str, new_status: str,
     return
 
 
-def getGroupMessageInfo(input_data: Data) -> dict:
-    """
-    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
-    """
 
-    # Monday Code
-    apiKey = os.environ['MONDAY_API_KEY']
-    headers = {
-        "Authorization": apiKey,
-        "API-version": "2023-04"
-    }
-    url = "https://api.monday.com/v2"
-
-    # Generate Query
-    # TODO Add code that defaults to fail if we cannot find the proper group id
-    q = f"""
-    {{
-        boards(ids: {BOARD_ID}) 
-        {{
-            groups(ids: "{get_Monday_group(input_data.group)}")
-            {{
-                items 
-                {{
-                    id
-                    name
-                    column_values (ids: ["status_1", "phone", "email"]) 
-                    {{
-                        text
-                        id
-                    }}
-                }}
-            }} 
-        }}
-    }}
-        """
-
-    # Send request
-    response = requests.post(url=url, headers=headers, json={'query': q})
-
-    # Handle response
-    if response.status_code == 200:
-        response_data = response.json()
-        logger.info(
-            f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
-        # Append to receipt file
-        append_text_to_file(
-            RECEIPT_PATH, f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program"
-        )
-
-        return response_data
-    else:
-        logger.info(
-            f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program")
-        return {}
 
 
 def updateCandidateLaArea(monday_id: str, LA_area: str, name: str):
@@ -598,6 +545,70 @@ def updateLA_Area(loc: str, monday_id: str, name: str):
         monday_id=monday_id,
         name=name)
 
+
+def getGroupMessageInfo(input_data: Data) -> dict:
+    """
+    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+    url = "https://api.monday.com/v2"
+
+    # Generate Query
+    # TODO Add code that defaults to fail if we cannot find the proper group id
+    q = f"""
+    {{
+        boards(ids: {BOARD_ID}) 
+        {{
+            groups(ids: "{get_Monday_group(input_data.group)}")
+            {{
+                items 
+                {{
+                    id
+                    name
+                    column_values (ids: ["status_1", "phone", "email"]) 
+                    {{
+                        text
+                        id
+                    }}
+                }}
+            }} 
+        }}
+    }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        response_data = response.json()
+        
+        # Log
+        logger.info(
+            f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
+        
+        # Append to receipt file
+        append_text_to_file(
+            RECEIPT_PATH, f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program\n"
+        )
+
+        return response_data
+    else:
+        # Log
+        logger.info(
+            f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program")
+        
+        # Append to receipt file
+        append_text_to_file(
+            RECEIPT_PATH, f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program\n"
+        )
+        return {}
 
 # Old Functions used for One-Time updating of entire Monday Groups
 def getAllCandidatesInGroup(group: str):
@@ -677,3 +688,14 @@ def updateOldMondayCandidates():
 
         # Wait to not API too fast
         time.sleep(.4)
+
+
+def append_text_to_file(file_path, text):
+    """
+    Appends text to receipt file
+    """
+    try:
+        with open(file_path, 'a', encoding='utf-8') as file:
+            file.write(text)
+    except Exception as e:
+        print(f"An error occurred while appending to '{file_path}': {str(e)}")
