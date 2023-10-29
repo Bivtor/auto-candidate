@@ -67,7 +67,13 @@ def submitformdata(data: Data):
     if data.link is None or len(data.link) <= 0:
         return ResponseModel(response="No Link Provided")
 
-    # TODO Alter this to return the proper error if this function throws a flag
+    # Fix group 
+    proper_group = json.loads(data.group)
+    data.group = Group(id=proper_group['id'], title=proper_group['title'])
+
+    # Fix occupation
+    # proper_occupation = json.loads(data.occupation)
+    # data.occupation = Occupation(id=proper_occupation['id'], title=proper_occupation['title'])
 
     # Write settings data to file for use in adding candidates
     with open(SETTINGS_PATH, "w") as outfile:
@@ -79,7 +85,7 @@ def submitformdata(data: Data):
     if data.action == "Add":
         # Submit task to open the submitted link
         task = open_link_task.apply_async(args=(data.dict(),), priority=5)
-        response = f"\nSuccessfully Submitted Link\n\n Link: {data.link}\n\nGroup: {data.group}\n\nOccupation: {data.occupation}\n\nTask ID: {str(task)}"
+        response = f"\nSuccessfully Submitted Link\n\n Link: {data.link}\n\nGroup: {data.group.title}\n\nOccupation: {data.occupation.title}\n\nTask ID: {str(task)}"
         # Send Response
         return ResponseModel(response=response)
 
@@ -128,6 +134,14 @@ def submit_mailtext(data: Data):
     # Check Password
     if data.password != os.environ['DEFAULT_PASSWORD']:
         return ResponseModel(response="Incorrect Password")
+    
+    # Fix group 
+    proper_group = json.loads(data.group)
+    data.group = Group(id=proper_group['id'], title=proper_group['title'])
+
+    # Fix occupation
+    # proper_occupation = json.loads(data.occupation)
+    # data.occupation = Occupation(id=proper_occupation['id'], title=proper_occupation['title'])
 
     # Make Pydantic Model Serializable
     data_dict = data.dict()

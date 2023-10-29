@@ -13,75 +13,6 @@ load_dotenv(dotenv_path=ENV_PATH)
 
 BOARD_ID = 4846750007
 # Miscellaneous -> Switched to random text -> Fail > mis input / mis text
-DEFAULT_GROUP = 'thisSHOULDFAIL'
-GROUP_ID_MAP = {
-    "groups": [
-        {
-            "id": "1690064031_recruiting_pre_scre",
-            "title": "Therapist"
-        },
-        {
-            "id": "1690063283_recruiting_pre_scre",
-            "title": "Nurse"
-        },
-        {
-            "id": "1690061481_recruiting_pre_scre",
-            "title": "Surgical Tech"
-        },
-        {
-            "id": "1690061214_recruiting_pre_scre",
-            "title": "Front Desk Receptionist"
-        },
-        {
-            "id": "1690060744_recruiting_pre_scre",
-            "title": "Podcast Producers"
-        },
-        {
-            "id": "1690060445_recruiting_pre_scre",
-            "title": "Med Office Admin"
-        },
-        {
-            "id": "1690059997_recruiting_pre_scre",
-            "title": "RADT/CADC/Tech"
-        },
-        {
-            "id": "1690059373_recruiting_pre_scre",
-            "title": "Recruiter"
-        },
-        {
-            "id": "1690057610_recruiting_pre_scre",
-            "title": "BD/Admissions"
-        },
-        {
-            "id": "1690054853_recruiting_pre_scre",
-            "title": "Event Planner"
-        },
-        {
-            "id": "1690054322_recruiting_pre_scre",
-            "title": "EA"
-        },
-        {
-            "id": "1690054026_recruiting_pre_scre",
-            "title": "VOB/MRA"
-        },
-        {
-            "id": "1690065138_recruiting_pre_scre",
-            "title": "Miscellaneous"
-        },
-        {
-            "id": "new_group32939",
-            "title": "Test"
-        }
-    ]
-}
-OCCUPATION_MAP = {'Therapist': 3, 'Nurse': 105, 'Sales Rep': 156, 'VOB': 0, 'MRA': 1, 'MRA, LVN': 2, 'VOB/MRA': 4, 'EA': 6, 'Event Planner': 7, 'BD/Admissions': 8, 'Jr. Recruiter': 9, 'Recruiter': 10, 'RADT/CADC/Tech': 11, 'Med Office Admin': 12, 'Podcast Producer': 13, 'Front Desk Receptionist': 14, 'Surgical Tech': 15, 'Aesthetic Nurse': 16, 'EMT': 17, 'Office Clerk': 18, 'LVN': 19, 'Call Center Rep': 101, 'Tech': 102,
-                  'MRA/Biller': 103, 'Tech/Tech Manager': 104, 'Group Facilitator': 106, 'Medical Records Assistant': 107, 'Specimen Processor': 108, 'Call Center Rep (Magnified Health)': 109, 'Medical Technologist': 110, 'Admin': 151, '(LA) Group Facilitator': 152, 'Recruiter? Unknown': 153, 'Therapist? Unknown': 154, 'Lab Scientist': 155, 'Program and Clinical Director': 157, 'Fulfillment Manager': 158, 'Clinical Director': 159, 'Program Director': 160}
-
-
-def get_Monday_group(group: str) -> str:
-    title_to_id_map = {group["title"]: group["id"]
-                       for group in GROUP_ID_MAP["groups"]}
-    return title_to_id_map.get(group, DEFAULT_GROUP)
 
 
 async def createMondayItem(data: candidateData):
@@ -107,7 +38,7 @@ async def createMondayItem(data: candidateData):
     # Assign Column values if found
     column_values = {
         # Occupation
-        "label": f"{OCCUPATION_MAP.get(setting_data['occupation'], 0)}",
+        "label": f"{setting_data['occupation']['id']}",
         "status4": data.source,  # Source
         # "location": data.location,  # Location #TODO Create a real location coordinate generator
         "text8": data.location,  # Location
@@ -119,7 +50,7 @@ async def createMondayItem(data: candidateData):
     j = json.dumps(column_values)
     j = j.replace('"', '\\\"')
 
-    GROUP_ID = get_Monday_group(setting_data['group'])
+    GROUP_ID = setting_data['group']['id']
 
     # Generate mutation
     createItemMutation = f'''mutation {{
@@ -143,7 +74,8 @@ async def createMondayItem(data: candidateData):
             f"{data.name} - Successfully Added Candidate to Monday at: {new_id}")
         return new_id
     else:
-        logger.info(f"{data.name} - Failed to upload  to Monday")
+        logger.info(f"{data.name} - Failed to upload to Monday")
+        logger.info(response.json())
         return None
 
 
@@ -565,7 +497,7 @@ def getGroupMessageInfo(input_data: Data) -> dict:
     {{
         boards(ids: {BOARD_ID}) 
         {{
-            groups(ids: "{get_Monday_group(input_data.group)}")
+            groups(ids: "{input_data.group.id}")
             {{
                 items 
                 {{
