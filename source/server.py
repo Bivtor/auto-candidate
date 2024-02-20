@@ -68,12 +68,16 @@ def submitformdata(data: Data):
         return ResponseModel(response="No Link Provided")
 
     # Fix group 
-    proper_group = json.loads(data.group)
-    data.group = Group(id=proper_group['id'], title=proper_group['title'])
+    if (type(data.group) == str):
+        proper_group = json.loads(data.group)
+        data.group = Group(id=proper_group['id'], title=proper_group['title'])
+        logger.info("Fixed Group being String")
 
     # Fix occupation
-    # proper_occupation = json.loads(data.occupation)
-    # data.occupation = Occupation(id=proper_occupation['id'], title=proper_occupation['title'])
+    if(type(data.occupation) == str):
+        proper_occupation = json.loads(data.occupation)
+        data.occupation = Occupation(id=proper_occupation['id'], title=proper_occupation['title'])
+        logger.info("Fixed Occupation being String")
 
     # Write settings data to file for use in adding candidates
     with open(SETTINGS_PATH, "w") as outfile:
@@ -118,6 +122,18 @@ def submit_mailtext_test(data: Data):
     # Make Pydantic Model Serializable
     data_dict = data.dict()
 
+    # Fix group 
+    if (type(data.group) == str):
+        proper_group = json.loads(data.group)
+        data.group = Group(id=proper_group['id'], title=proper_group['title'])
+        logger.info("Fixed Group being String")
+
+    # Fix occupation
+    if(type(data.occupation) == str):
+        proper_occupation = json.loads(data.occupation)
+        data.occupation = Occupation(id=proper_occupation['id'], title=proper_occupation['title'])
+        logger.info("Fixed Occupation being String")
+
     # Submit Test Text to Worker
     task = test_mailtext.apply_async(
         args=(data_dict,), priority=1,)
@@ -136,12 +152,16 @@ def submit_mailtext(data: Data):
         return ResponseModel(response="Incorrect Password")
     
     # Fix group 
-    proper_group = json.loads(data.group)
-    data.group = Group(id=proper_group['id'], title=proper_group['title'])
+    if (type(data.group) == str):
+        proper_group = json.loads(data.group)
+        data.group = Group(id=proper_group['id'], title=proper_group['title'])
+        logger.info("Fixed Group being String")
 
     # Fix occupation
-    # proper_occupation = json.loads(data.occupation)
-    # data.occupation = Occupation(id=proper_occupation['id'], title=proper_occupation['title'])
+    if(type(data.occupation) == str):
+        proper_occupation = json.loads(data.occupation)
+        data.occupation = Occupation(id=proper_occupation['id'], title=proper_occupation['title'])
+        logger.info("Fixed Occupation being String")
 
     # Make Pydantic Model Serializable
     data_dict = data.dict()
@@ -151,6 +171,6 @@ def submit_mailtext(data: Data):
         args=(data_dict,), priority=1,)
 
     # Create Response
-    response = f"\nSuccessfully Submitted Mail/Text Task\n\nSending Mail to Marked Candidates in Group: {data.group}\n\nTask ID: {str(task)}"
+    response = f"\nSuccessfully Submitted Mail/Text Task\n\nSending Mail to Marked Candidates in Group: {data.group.title}\n\nTask ID: {str(task)}"
 
     return ResponseModel(response=response)

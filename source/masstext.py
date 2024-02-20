@@ -211,12 +211,11 @@ def send_group_mail_function(data: Data):
     # Get Monday Info
     monday_info = getGroupMessageInfo(data)
 
-    # Call driver Function
+    # Call driver Function (SEND MESSAGES)
     process_group_mail_data(web_input_data=data, monday_input_data=monday_info)
 
-    # Send Receipt Emails
-    send_receipt_email('gabe@solutionbasedtherapeutics.com')
-    send_receipt_email('stephanie@solutionbasedtherapeutics.com')
+    # Send Receipt to Appropriate Email
+    send_receipt_email(data)
 
     return
 
@@ -274,29 +273,44 @@ def process_group_mail_data(web_input_data: Data, monday_input_data: dict):
 
     # Log Finish
     logger.info(
-        f"{web_input_data.group} - Finished Sending {Messages_Sent} Messages")
+        f"{web_input_data.group.title} - Finished Sending {Messages_Sent} Messages")
 
     # Add Finish to Receipt
     append_text_to_file(
-        RECEIPT_PATH, f"\nFinished Sending {Messages_Sent} Messages to {web_input_data.group} Group\n")
+        RECEIPT_PATH, f"\nFinished Sending {Messages_Sent} Messages to {web_input_data.group.title} Group\n")
 
     return
 
 
-def send_receipt_email(dest):
+def send_receipt_email(data: Data):
     """
     Sends the contents of the receipt file to Employers
     """
 
+    # Extract destination of receipt (Source Email)
+    dest = data.source_email
+
+    # Extract Group Target for Email Blast
+    group = data.group.title
+
     # Retrieve text from file
     receipt = retrieve_file_contents(RECEIPT_PATH)
 
+    print(f"Sending Receipt to {dest}")
+
     # Send email with receipt
-    # TODO Change destination emails
     sendEmail(source='info@solutionbasedtherapeutics.com',
               destination_email=dest,
-              subject='Receipt of Text/Email Order',
+              subject=f'Receipt of {group} Text/Email Order',
               body=receipt)
+    
+    # Also Send email receipt to Victor
+    sendEmail(source='info@solutionbasedtherapeutics.com',
+              destination_email='victorinaldi@ucla.edu',
+              subject=f'Receipt of {group} Text/Email Order',
+              body=receipt)
+    
+    logger.info(f"Finished Sending Receipt Emails to {dest} and victorinaldi@ucla.edu")
 
 
 def retrieve_file_contents(file_path: str) -> str:

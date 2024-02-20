@@ -149,7 +149,7 @@ async def uploadCandidateResume(data: candidateData):
             mutation add_file($file: File!) {{
                 add_file_to_column (
                     item_id: {data.monday_id},
-                    column_id: files,
+                    column_id: "files",
                     file: $file
                         ){{
                     id
@@ -167,13 +167,17 @@ async def uploadCandidateResume(data: candidateData):
         'variables[file]': (f, open(f, 'rb'), 'multipart/form-data', {'Expires': '0'})
     }
 
+    logger.info(f"Resume Location: {f}")
+    logger.info(f"query: {files}")
+
     # Send Request
     response = requests.post(url=url, files=files, headers=headers)
 
     # Handle response
     if response.status_code == 200:
-        # response_data = response.json()
+        response_data = response.json()
         logger.info(f"{data.name} - Successfully uploaded Resume")
+        logger.info(f"Response: {response_data}")
     else:
         logger.info(f"{data.name} - Failed to upload Resume")
 
@@ -523,22 +527,22 @@ def getGroupMessageInfo(input_data: Data) -> dict:
         
         # Log
         logger.info(
-            f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
+            f"{input_data.group.title} Text Order - Successfully got Info from Monday for Message Program")
         
         # Append to receipt file
         append_text_to_file(
-            RECEIPT_PATH, f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program\n"
+            RECEIPT_PATH, f"{input_data.group.title} Text Order - Successfully got Info from Monday for Message Program\n\n"
         )
 
         return response_data
     else:
         # Log
         logger.info(
-            f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program")
+            f"{input_data.group.title} Text Order - Failed to get Info from Monday for Message Program")
         
         # Append to receipt file
         append_text_to_file(
-            RECEIPT_PATH, f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program\n"
+            RECEIPT_PATH, f"{input_data.group.title} Text Order - Failed to get Info from Monday for Message Program\n"
         )
         return {}
 
