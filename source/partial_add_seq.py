@@ -73,8 +73,11 @@ async def finishHalfAdd(candidateData: candidateData):
     # Create Monday Questionairre document and
     # Update Monday LA Area Location Field
     if candidateData.monday_id != None:
-        await createQuestionDocument(candidateData)
-        await updateQuestionDocument(candidateData)
+
+        # Do not create question document or candidate document as this field has been removed
+
+        # await createQuestionDocument(candidateData)
+        # await updateQuestionDocument(candidateData)
         updateLA_Area(name=candidateData.name,
                       monday_id=candidateData.monday_id,
                       loc=candidateData.location)
@@ -91,17 +94,16 @@ async def safeCandidateUpdate(candidateData: candidateData, setting_data: dict) 
     4. Return stringified resume 
     """
 
-    # 1: Open download link (Unix)
-
-    # OPEN chrome - formatting done in paths.py
-    cmd = OPEN_CMD_LINK.format(candidateData.resume_download_link)
+    # 1: Open download link
+    # formatting done in paths.py
+    cmd = OPEN_CMD_LINK.format(candidateData.resume_download_link + "&DLR=true")
     if os.system(cmd) != 0:
         logger.error(f"{candidateData.name} - Failed to open Resume Link")
         return
     logger.info(f"{candidateData.name} - Successfully Opened resume link")
 
     # 2: Wait until download finishes
-    time.sleep(5)
+    time.sleep(10)
     # TODO fix this library thing?
 
     # 3: Get newest file

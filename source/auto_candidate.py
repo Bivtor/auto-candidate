@@ -36,12 +36,19 @@ handler.setFormatter(formatter)
 # add handler to logger
 logger.addHandler(handler)
 
+class Group(BaseModel):
+    title: str
+    id: str
+    
+class Occupation(BaseModel):
+    title: str
+    id: int
 
 class Data(BaseModel):
     password: str
     action: str
-    occupation: str
-    group: str
+    occupation: Occupation| str
+    group: Group | str
     link: str = ""
     message: str = ""
     messageType: str = ""

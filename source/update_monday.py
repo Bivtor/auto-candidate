@@ -4,83 +4,15 @@ import json
 import re
 import glob
 from dotenv import load_dotenv
-from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH
+from paths import ENV_PATH, SETTINGS_PATH, DOWNLOAD_PATH, RECEIPT_PATH
 from auto_candidate import candidateData, logger, Data
 from location_detection import compute_location_area
+import time
 
 load_dotenv(dotenv_path=ENV_PATH)
 
 BOARD_ID = 4846750007
 # Miscellaneous -> Switched to random text -> Fail > mis input / mis text
-DEFAULT_GROUP = 'thisSHOULDFAIL'
-GROUP_ID_MAP = {
-    "groups": [
-        {
-            "id": "1690064031_recruiting_pre_scre",
-            "title": "Therapist"
-        },
-        {
-            "id": "1690063283_recruiting_pre_scre",
-            "title": "Nurse"
-        },
-        {
-            "id": "1690061481_recruiting_pre_scre",
-            "title": "Surgical Tech"
-        },
-        {
-            "id": "1690061214_recruiting_pre_scre",
-            "title": "Front Desk Receptionist"
-        },
-        {
-            "id": "1690060744_recruiting_pre_scre",
-            "title": "Podcast Producers"
-        },
-        {
-            "id": "1690060445_recruiting_pre_scre",
-            "title": "Med Office Admin"
-        },
-        {
-            "id": "1690059997_recruiting_pre_scre",
-            "title": "RADT/CADC/Tech"
-        },
-        {
-            "id": "1690059373_recruiting_pre_scre",
-            "title": "Recruiter"
-        },
-        {
-            "id": "1690057610_recruiting_pre_scre",
-            "title": "BD/Admissions"
-        },
-        {
-            "id": "1690054853_recruiting_pre_scre",
-            "title": "Event Planner"
-        },
-        {
-            "id": "1690054322_recruiting_pre_scre",
-            "title": "EA"
-        },
-        {
-            "id": "1690054026_recruiting_pre_scre",
-            "title": "VOB/MRA"
-        },
-        {
-            "id": "1690065138_recruiting_pre_scre",
-            "title": "Miscellaneous"
-        },
-        {
-            "id": "new_group32939",
-            "title": "Test"
-        }
-    ]
-}
-OCCUPATION_MAP = {'Therapist': 3, 'Nurse': 105, 'Sales Rep': 156, 'VOB': 0, 'MRA': 1, 'MRA, LVN': 2, 'VOB/MRA': 4, 'EA': 6, 'Event Planner': 7, 'BD/Admissions': 8, 'Jr. Recruiter': 9, 'Recruiter': 10, 'RADT/CADC/Tech': 11, 'Med Office Admin': 12, 'Podcast Producer': 13, 'Front Desk Receptionist': 14, 'Surgical Tech': 15, 'Aesthetic Nurse': 16, 'EMT': 17, 'Office Clerk': 18, 'LVN': 19, 'Call Center Rep': 101, 'Tech': 102,
-                  'MRA/Biller': 103, 'Tech/Tech Manager': 104, 'Group Facilitator': 106, 'Medical Records Assistant': 107, 'Specimen Processor': 108, 'Call Center Rep (Magnified Health)': 109, 'Medical Technologist': 110, 'Admin': 151, '(LA) Group Facilitator': 152, 'Recruiter? Unknown': 153, 'Therapist? Unknown': 154, 'Lab Scientist': 155, 'Program and Clinical Director': 157, 'Fulfillment Manager': 158, 'Clinical Director': 159, 'Program Director': 160}
-
-
-def get_Monday_group(group: str) -> str:
-    title_to_id_map = {group["title"]: group["id"]
-                       for group in GROUP_ID_MAP["groups"]}
-    return title_to_id_map.get(group, DEFAULT_GROUP)
 
 
 async def createMondayItem(data: candidateData):
@@ -106,7 +38,7 @@ async def createMondayItem(data: candidateData):
     # Assign Column values if found
     column_values = {
         # Occupation
-        "label": f"{OCCUPATION_MAP.get(setting_data['occupation'], 0)}",
+        "label": f"{setting_data['occupation']['id']}",
         "status4": data.source,  # Source
         # "location": data.location,  # Location #TODO Create a real location coordinate generator
         "text8": data.location,  # Location
@@ -118,7 +50,7 @@ async def createMondayItem(data: candidateData):
     j = json.dumps(column_values)
     j = j.replace('"', '\\\"')
 
-    GROUP_ID = get_Monday_group(setting_data['group'])
+    GROUP_ID = setting_data['group']['id']
 
     # Generate mutation
     createItemMutation = f'''mutation {{
@@ -142,7 +74,8 @@ async def createMondayItem(data: candidateData):
             f"{data.name} - Successfully Added Candidate to Monday at: {new_id}")
         return new_id
     else:
-        logger.info(f"{data.name} - Failed to upload  to Monday")
+        logger.info(f"{data.name} - Failed to upload to Monday")
+        logger.info(response.json())
         return None
 
 
@@ -200,7 +133,7 @@ async def updateMondayItem(data: candidateData):
 
 async def uploadCandidateResume(data: candidateData):
     # Get newest file
-    list_of_files = glob.glob(DOWNLOAD_PATH)  # + "/*" for Mac
+    list_of_files = glob.glob(DOWNLOAD_PATH)
     f = max(list_of_files, key=os.path.getctime)
 
     # Monday Code
@@ -216,7 +149,7 @@ async def uploadCandidateResume(data: candidateData):
             mutation add_file($file: File!) {{
                 add_file_to_column (
                     item_id: {data.monday_id},
-                    column_id: files,
+                    column_id: "files",
                     file: $file
                         ){{
                     id
@@ -234,13 +167,17 @@ async def uploadCandidateResume(data: candidateData):
         'variables[file]': (f, open(f, 'rb'), 'multipart/form-data', {'Expires': '0'})
     }
 
+    logger.info(f"Resume Location: {f}")
+    logger.info(f"query: {files}")
+
     # Send Request
     response = requests.post(url=url, files=files, headers=headers)
 
     # Handle response
     if response.status_code == 200:
-        # response_data = response.json()
+        response_data = response.json()
         logger.info(f"{data.name} - Successfully uploaded Resume")
+        logger.info(f"Response: {response_data}")
     else:
         logger.info(f"{data.name} - Failed to upload Resume")
 
@@ -429,57 +366,6 @@ def GetQuestionSheet(data: candidateData) -> dict:
     return delta_format
 
 
-def getGroupMessageInfo(input_data: Data) -> dict:
-    """
-    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
-    """
-
-    # Monday Code
-    apiKey = os.environ['MONDAY_API_KEY']
-    headers = {
-        "Authorization": apiKey,
-        "API-version": "2023-04"
-    }
-    url = "https://api.monday.com/v2"
-
-    # Generate Query
-    # TODO Add code that defaults to fail if we cannot find the proper group id
-    q = f"""
-    {{
-        boards(ids: {BOARD_ID}) 
-        {{
-            groups(ids: "{get_Monday_group(input_data.group)}")
-            {{
-                items 
-                {{
-                    id
-                    name
-                    column_values (ids: ["status_1", "phone", "email"]) 
-                    {{
-                        text
-                        id
-                    }}
-                }}
-            }} 
-        }}
-    }}
-        """
-
-    # Send request
-    response = requests.post(url=url, headers=headers, json={'query': q})
-
-    # Handle response
-    if response.status_code == 200:
-        response_data = response.json()
-        logger.info(
-            f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
-        return response_data
-    else:
-        logger.info(
-            f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program")
-        return {}
-
-
 def updateCandidateTextStatus(candidate_id: int, log_name: str, new_status: str, ):
     """
     Updates the text status of 'candidate_id' to 'new_status'
@@ -524,55 +410,7 @@ def updateCandidateTextStatus(candidate_id: int, log_name: str, new_status: str,
     return
 
 
-def getGroupMessageInfo(input_data: Data) -> dict:
-    """
-    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
-    """
 
-    # Monday Code
-    apiKey = os.environ['MONDAY_API_KEY']
-    headers = {
-        "Authorization": apiKey,
-        "API-version": "2023-04"
-    }
-    url = "https://api.monday.com/v2"
-
-    # Generate Query
-    # TODO Add code that defaults to fail if we cannot find the proper group id
-    q = f"""
-    {{
-        boards(ids: {BOARD_ID}) 
-        {{
-            groups(ids: "{get_Monday_group(input_data.group)}")
-            {{
-                items 
-                {{
-                    id
-                    name
-                    column_values (ids: ["status_1", "phone", "email"]) 
-                    {{
-                        text
-                        id
-                    }}
-                }}
-            }} 
-        }}
-    }}
-        """
-
-    # Send request
-    response = requests.post(url=url, headers=headers, json={'query': q})
-
-    # Handle response
-    if response.status_code == 200:
-        response_data = response.json()
-        logger.info(
-            f"{input_data.group} Text Order - Successfully got Info from Monday for Message Program")
-        return response_data
-    else:
-        logger.info(
-            f"{input_data.group} Text Order - Failed to get Info from Monday for Message Program")
-        return {}
 
 
 def updateCandidateLaArea(monday_id: str, LA_area: str, name: str):
@@ -643,6 +481,70 @@ def updateLA_Area(loc: str, monday_id: str, name: str):
         monday_id=monday_id,
         name=name)
 
+
+def getGroupMessageInfo(input_data: Data) -> dict:
+    """
+    Function for Text/Mail Program that returns a dictionary with Candidate: Name, ID, & ShouldText
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+    url = "https://api.monday.com/v2"
+
+    # Generate Query
+    # TODO Add code that defaults to fail if we cannot find the proper group id
+    q = f"""
+    {{
+        boards(ids: {BOARD_ID}) 
+        {{
+            groups(ids: "{input_data.group.id}")
+            {{
+                items 
+                {{
+                    id
+                    name
+                    column_values (ids: ["status_1", "phone", "email"]) 
+                    {{
+                        text
+                        id
+                    }}
+                }}
+            }} 
+        }}
+    }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        response_data = response.json()
+        
+        # Log
+        logger.info(
+            f"{input_data.group.title} Text Order - Successfully got Info from Monday for Message Program")
+        
+        # Append to receipt file
+        append_text_to_file(
+            RECEIPT_PATH, f"{input_data.group.title} Text Order - Successfully got Info from Monday for Message Program\n\n"
+        )
+
+        return response_data
+    else:
+        # Log
+        logger.info(
+            f"{input_data.group.title} Text Order - Failed to get Info from Monday for Message Program")
+        
+        # Append to receipt file
+        append_text_to_file(
+            RECEIPT_PATH, f"{input_data.group.title} Text Order - Failed to get Info from Monday for Message Program\n"
+        )
+        return {}
 
 # Old Functions used for One-Time updating of entire Monday Groups
 def getAllCandidatesInGroup(group: str):
@@ -722,3 +624,14 @@ def updateOldMondayCandidates():
 
         # Wait to not API too fast
         time.sleep(.4)
+
+
+def append_text_to_file(file_path, text):
+    """
+    Appends text to receipt file
+    """
+    try:
+        with open(file_path, 'a', encoding='utf-8') as file:
+            file.write(text)
+    except Exception as e:
+        print(f"An error occurred while appending to '{file_path}': {str(e)}")
