@@ -4,12 +4,15 @@ json_files/
 settings.json
 name_list.json
 
+.vscode/
+
 *.env
 *.txt
 tst.py
 creds/
 source/paths.py
 
+json_files/*
 
 json_files/settings.json
 json_files/working.json
@@ -21,3 +24,6 @@ logs/server.log
 .\json_files\settings.json
 logs\server.log
 N:\Desktop\projects\auto-candidate\logs\server.log
+
+.DS_store
+
