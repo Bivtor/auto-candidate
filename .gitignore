@@ -32,7 +32,7 @@ json_files/settings.json
 logs/*
 logs/server.log
 
-json_files/settings.json
+json_files/*
 
 logs/*
 logs/server.log
