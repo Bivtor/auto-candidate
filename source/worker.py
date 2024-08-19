@@ -51,7 +51,7 @@ def process_candidate_part1(data: dict):
         result = process_candidate_part2.apply_async(
             args=(model_CD.dict(),), priority=2)
 
-        # Await Task Submission Confirmation TODO remove this
+        # Await Task Submission Confirmation
         # result_output = result.wait(timeout=None, interval=0.5)
 
     # Log

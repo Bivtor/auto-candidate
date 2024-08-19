@@ -33,6 +33,10 @@ logs/*
 logs/server.log
 
 json_files/*
+json_files/
 
 logs/*
 logs/server.log
+
+UserScripts/*
+UserScripts/
