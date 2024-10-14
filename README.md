@@ -137,6 +137,6 @@ This project primarily handles two types of tasks: sending emails and messages, 
 
 ## Acknowledgements
 
-- [Charles Zhang README](https://github.com/czhangy)
 - [Shields.io](https://shields.io/)
 - [PlantUML](https://plantuml.com/)
+- [Charles Zhang README](https://github.com/czhangy)
