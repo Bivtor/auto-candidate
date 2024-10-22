@@ -167,8 +167,7 @@ async def uploadCandidateResume(data: candidateData):
         'variables[file]': (f, open(f, 'rb'), 'multipart/form-data', {'Expires': '0'})
     }
 
-    logger.info(f"Resume Location: {f}")
-    logger.info(f"query: {files}")
+    # logger.info(f"query: {files}")
 
     # Send Request
     response = requests.post(url=url, files=files, headers=headers)
