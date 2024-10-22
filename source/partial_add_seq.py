@@ -104,6 +104,7 @@ async def safeCandidateUpdate(candidateData: candidateData, setting_data: dict) 
     logger.info(f"{candidateData.name} - Successfully Opened resume link")
 
     # 2: Wait until download finishes
+
     time.sleep(10)
     # TODO fix
 
