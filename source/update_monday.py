@@ -410,9 +410,6 @@ def updateCandidateTextStatus(candidate_id: int, log_name: str, new_status: str,
     return
 
 
-
-
-
 def updateCandidateLaArea(monday_id: str, LA_area: str, name: str):
     """
     Updates the 'LA Area' field of 'monday_id' 
@@ -524,11 +521,11 @@ def getGroupMessageInfo(input_data: Data) -> dict:
     # Handle response
     if response.status_code == 200:
         response_data = response.json()
-        
+
         # Log
         logger.info(
             f"{input_data.group.title} Text Order - Successfully got Info from Monday for Message Program")
-        
+
         # Append to receipt file
         append_text_to_file(
             RECEIPT_PATH, f"{input_data.group.title} Text Order - Successfully got Info from Monday for Message Program\n\n"
@@ -539,7 +536,7 @@ def getGroupMessageInfo(input_data: Data) -> dict:
         # Log
         logger.info(
             f"{input_data.group.title} Text Order - Failed to get Info from Monday for Message Program")
-        
+
         # Append to receipt file
         append_text_to_file(
             RECEIPT_PATH, f"{input_data.group.title} Text Order - Failed to get Info from Monday for Message Program\n"
@@ -547,6 +544,8 @@ def getGroupMessageInfo(input_data: Data) -> dict:
         return {}
 
 # Old Functions used for One-Time updating of entire Monday Groups
+
+
 def getAllCandidatesInGroup(group: str):
     """
     Helper function for one-time update all location based on where they are in LA Function

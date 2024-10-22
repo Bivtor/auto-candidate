@@ -40,3 +40,11 @@ logs/server.log
 
 UserScripts/*
 UserScripts/
+scripts/jobdiva_monday/candidate.csv
+scripts/jobdiva_monday/candidatenote.csv
+scripts/jobdiva_monday/candidateuserfield.csv
+scripts/jobdiva_monday/jobapplicants.csv
+scripts/jobdiva_monday/licenses_certifications.csv
+scripts/jobdiva_monday/receipt.log
+scripts/jobdiva_monday/recruiter.csv
+scripts/jobdiva_monday/resume.csv
