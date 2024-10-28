@@ -1,161 +1,19 @@
-import time
-import spacy
-import pathlib
-import os
-import docx
-import PyPDF2
-import csv
-from typing import Optional
-from pydantic import BaseModel
-import logging
-from dotenv import load_dotenv
-import requests
-import glob
-import json
 import aspose.words as aw
+import json
+import glob
+import requests
+from dotenv import load_dotenv
+import csv
+import os
+import time
+from location_detection import compute_location_area
+from occupation_detection import getOccupationWrapper
+from base import *
+from typing import Optional
 
-
-GROUP_ID = 'new_group32939'
-JOB_ID = '105'
-
-CANDIDATE_CSV_PATH = 'candidate.csv'
-CANDIDATE_NOTES_CSV_PATH = 'candidatenote.csv'
-RESUME_CSV_PATH = 'resume.csv'
-RESUME_FOLDER_PATH = '/Volumes/T7/sbt_files/unzip/resumes/'
-RECRUITERS_CSV_PATH = 'recruiter.csv'
-LOGGER_PATH = 'receipt.log'
-ENV_PATH = '../../.env'
 load_dotenv(dotenv_path=ENV_PATH)
 
 BOARD_ID = 4846750007
-
-
-# Logging formation
-logger = logging.getLogger('logger')
-
-# Set logger level
-logger.setLevel(logging.DEBUG)
-
-# create handler
-handler = logging.FileHandler(LOGGER_PATH)
-
-# set handler level
-handler.setLevel(logging.DEBUG)
-
-# create formatter
-formatter = logging.Formatter(
-    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
-# set formatter
-handler.setFormatter(formatter)
-
-# add handler to logger
-logger.addHandler(handler)
-
-
-class CandidateData(BaseModel):
-    hasResume: Optional[bool] = None
-    location: Optional[str] = None
-    LA_area: Optional[str] = None
-    name: Optional[str] = None
-    phone: Optional[str] = None
-    email: Optional[str] = None
-    date: Optional[str] = None
-    pagelink: Optional[str] = None
-    source: Optional[str] = None
-    license_cert: Optional[str] = None
-    license_expiration: Optional[str] = None
-    title: Optional[str] = None
-    monday_id: Optional[str] = None
-    notes_id: Optional[str] = None
-    notes: Optional[str] = None
-    hasNotes: Optional[bool] = None
-    resume_file: Optional[str] = None
-    jobdiva_id: Optional[str] = None
-
-
-def get_raw_text(file_path: str) -> str:
-    """
-    Extracts raw text from a document file. Supports .docx, .pdf, and .rtf formats.
-
-    Args:
-        file_path (str): The path to the document file.
-
-    Returns:
-        str: The extracted text from the document.
-
-    Raises:
-        ValueError: If the file format is unsupported.
-
-    Notes:
-        - For .docx files, extracts text from paragraphs.
-        - For .pdf files, extracts text from all pages.
-        - For .rtf files, converts the RTF format to pdf.
-    """
-    # Define text string and get file extension
-    text = ""
-    file_extension = pathlib.Path(file_path).suffix.lower().strip()
-    print(file_extension)
-    # If .docx file
-    if file_extension == '.docx':
-        # Load the .docx file and join paragraphs
-        doc = docx.Document(file_path)
-        text = ' '.join([para.text for para in doc.paragraphs])
-
-    # If .pdf file
-    elif file_extension == '.pdf':
-        with open(file_path, 'rb') as f:
-            # Create a PDF reader object
-            pdf_reader = PyPDF2.PdfReader(f)
-
-            # Get the number of pages in the PDF file
-            num_pages = len(pdf_reader.pages)
-
-            # Loop through all the pages and extract the text
-            for page in range(num_pages):
-                # Get the page object
-                pdf_page = pdf_reader.pages[page]
-                # Extract the text from the page
-                page_text = pdf_page.extract_text()
-                if page_text:
-                    text += page_text
-
-    # If .rtf file
-    elif file_extension == '.rtf':
-        with open(file_path, 'rb') as f:
-            # Parse the .rtf content
-            text = file_path.read()
-
-    # Unsupported file format
-    else:
-        raise ValueError(f"Unsupported file format: {file_extension}")
-
-    return text
-
-
-def retriever_name_from_text(text: str):
-    """
-    Uses pre-trained NLP to perform NER on given text, returns the first such match of Label: PERSON
-    Args:
-        text (str): The string to be parsed
-
-    Returns:
-        str: The name which Label:PERSON was matched to
-
-    Notes:
-        - Looking into solutions in the case that matching a Label:PERSON fails
-        - Will likely return "" in the case that nobody is matched, meaning that the
-    """
-
-    # Load the spaCy English language model
-    nlp = spacy.load("en_core_web_trf")
-
-    # Process the text with the spaCy model
-    doc = nlp(text)
-
-    # Extract named entities from the processed text
-    for ent in doc.ents:
-        print(f"Entity: {ent.text}, Label: {ent.label_}")
 
 
 def load_candidate_data_from_csv(row: dict) -> CandidateData:
@@ -335,9 +193,6 @@ def search_notes_by_jobdiva_id(jobdiva_id: str) -> Optional[str]:
                     date_created = row['DATECREATED']
                     note = row['NOTE']
 
-                    # Log
-                    logger.info(f"Found candidate notes by {recruiter_name}")
-
                     # Append formatted note details to the list
                     notes_list.append(
                         f"Recruiter: {recruiter_name}\nDate: {date_created}\nNote: {note}\n")
@@ -345,6 +200,8 @@ def search_notes_by_jobdiva_id(jobdiva_id: str) -> Optional[str]:
         # If there are any matching notes, return them as a single formatted string
         if notes_list:
             # logger.info("\n\n".join(notes_list))
+            # Log
+            logger.info(f"Found candidate notes")
             return "\n\n".join(notes_list)
         else:
             # Return None if no matching jobdiva_id is found
@@ -356,7 +213,7 @@ def search_notes_by_jobdiva_id(jobdiva_id: str) -> Optional[str]:
         return None
 
 
-async def createMondayItem(data: CandidateData, group: str, job: str):
+def createMondayItem(data: CandidateData):
     """
     Principal function to upload info to Monday DB,
     -> returns ID of newly created item (if created) 
@@ -368,14 +225,44 @@ async def createMondayItem(data: CandidateData, group: str, job: str):
     headers = {"Authorization": apiKey, "API-version": "2023-04"}
 
     # Assign Column values if found
+
+    # Column Values
     column_values = {
-        "label": JOB_ID,  # Occupation
+        "label": str(data.occupation_id),  # Occupation
         "status4": data.source,  # Source
-        "text8": data.location,  # Location
+        "text8": data.location,  # city, state
         "phone": data.phone,  # Phone
         "email": {"email": data.email, "text": data.email},  # Email
-        "text": data.license_cert  # License/Certification (null OK)
+        "text": data.license_cert,  # License/Certification (null OK)
+        # Location coords
+        "location__1": f"{data.GPS_COORD['lat']} {data.GPS_COORD['long']} {data.location}",
+        "status_14": data.LA_area,  # LA Area field
     }
+
+    # Values when location is not found
+    column_values_no_locations = {
+        "label": str(data.occupation_id),  # Occupation
+        "status4": data.source,  # Source
+        "phone": data.phone,  # Phone
+        "email": {"email": data.email, "text": data.email},  # Email
+        "text": data.license_cert,  # License/Certification (null OK)
+        # Location coords
+        "status_14": data.LA_area,  # LA Area field
+    }
+
+    # Do not upload area blanks if there is no area
+    if (
+        data.LA_area == " "
+        or data.LA_area is None
+        or data.GPS_COORD['lat'] is None
+        or data.GPS_COORD['long'] is None
+        or not isinstance(data.GPS_COORD['lat'], (int, float))
+        or not isinstance(data.GPS_COORD['long'], (int, float))
+    ):
+        # Your code here
+        logger.info(
+            f'{data.name} - Fell into second candidate upload format without location')
+        column_values = column_values_no_locations
 
     j = json.dumps(column_values)
     j = j.replace('"', '\\\"')
@@ -398,14 +285,127 @@ async def createMondayItem(data: CandidateData, group: str, job: str):
     # Handle response
     if response.status_code == 200:
         response_data = response.json()
+        print(response_data)
         new_id = response_data['data']['create_item']['id']
+        data.monday_id = new_id
         logger.info(
             f"{data.name} - Successfully Added Candidate to Monday at: {new_id}")
         return new_id
     else:
-        logger.info(f"{data.name} - Failed to upload to Monday")
+        logger.error(f"{data.name} - Failed to upload to Monday")
         logger.info(response.json())
-        return None
+        return
+
+
+def updateCandidateNotesFromJobDiva(data: CandidateData):
+    """
+    Updates the candidate's notes in Monday.com.
+    This function sends a mutation to add an update to the specified item based on the candidate data.
+    """
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+    url = "https://api.monday.com/v2"
+
+    # Generate Mutation
+    q = f"""
+            mutation {{
+                create_update (
+                    item_id: {data.monday_id},
+                    body: "{data.jobdiva_notes}"
+                ) {{
+                    id
+                }}
+            }}
+        """
+
+    # Send request
+    response = requests.post(url=url, headers=headers, json={'query': q})
+
+    # Handle response
+    if response.status_code == 200:
+        # response_data = response.json()
+        logger.info(
+            f"{data.name} - Successfully updated candidate notes")
+    else:
+        logger.info(
+            f"{data.name} - Failed to update candidate notes")
+
+    return
+
+
+def uploadCandidateResume(data: CandidateData, f: str):
+
+    # Monday Code
+    apiKey = os.environ['MONDAY_API_KEY']
+    headers = {
+        "Authorization": apiKey,
+        "API-version": "2023-04"
+    }
+
+    url = "https://api.monday.com/v2/file"
+
+    # Generate Mutation
+    q = f"""
+            mutation add_file($file: File!) {{
+                add_file_to_column (
+                    item_id: {data.monday_id},
+                    column_id: "files",
+                    file: $file
+                        ){{
+                    id
+                }}
+            }}
+        """
+
+    file_type = "application/pdf"
+
+    files = {
+        'query': (None, q, f'{file_type}'),
+        'variables[file]': (f, open(f, 'rb'), 'multipart/form-data', {'Expires': '0'})
+    }
+
+    # Send Request
+    response = requests.post(url=url, files=files, headers=headers)
+
+    # Handle response
+    if response.status_code == 200:
+        response_data = response.json()
+        logger.info(f"{data.name} - Successfully uploaded Resume")
+        # logger.info(f"Response: {response_data}")
+    else:
+        logger.info(f"{data.name} - Failed to upload Resume")
+
+    return
+
+
+def updateLA_Area(data: CandidateData):
+    """
+    Updates CandidateData object LA_area and 
+    """
+
+    # Skip update if location is empty
+    if len(data.location) == 0 or data.location == "" or len(data.location.strip()) == 0:
+        logger.info(
+            f"{data.name} - Location Empty, Set LA Area to unknown")
+        return
+
+    # Get LA_Area
+    data.LA_area = compute_location_area(data)
+    logger.info(f"{data.name} - -> Set LA Area to {data.LA_area}")
+
+    # Log
+    logger.info(f"{data.name} - -> Detected LA Area")
+
+    return
+
+
+def determineOccupation():
+    pass
 
 
 def run(start_idx: int, end_idx: int):
@@ -414,7 +414,7 @@ def run(start_idx: int, end_idx: int):
 
     Open candidate.csv and step through denoted range of candidates (0 - 100)
     Create a passed down candidateData object
-    For each row, complete steps 1-5:
+    For each row, complete steps 1-10:
 
     - Step 1:
         Pull info from candidate.csv and update candidateData object:
@@ -436,76 +436,113 @@ def run(start_idx: int, end_idx: int):
     - Step 4:
         Search candidatenotes.csv for row matching jobdiva_id
         Search recruiter.csv to find the matching recruiter_id and denote the person who made the note
-        TODO - Write code to format row data for legible note
 
     - Step 5:
+        Decide Occupation based on text from resume and from notes
+
+    - Step 9: 
+        Update LA area field
+        Update location field
+
+    - Step 6:
         Upload candidate data from candidateData object to Monday.com
+        monday_id is returned, rest of functions are updating the candidate associated with this monday_id
+
+    - Step 7:
+        Aggregate and format JobDiva notes and add a monday 'update' with the notes
+
+    - Step 8:
+        Upload resume to monday
 
     Notes:
         - Ignoring dates for now
         - Group labels are impossible to determine through the given data, will have to do by hand later
         - Job labels are mostly listed for candidates we already have, and are mostly missing other than that,
             will also have to complete by hand after uploading to monday
+
+    TODO:
+        - Choose occupation
+            - Options:
+                1 Train a classifier on 
+        - Add license
     """
 
-    try:
+    # try:
+    logger.info(
+        f'------------------ STARTING CANDIDATE ADD: {start_idx} - {end_idx} ------------------')
+    with open(CANDIDATE_CSV_PATH, mode='r') as file:
+        reader = csv.DictReader(file)
+        for idx, row in enumerate(reader):
+            # Process correct rows
+            if idx < start_idx:  # Skip rows before the start index
+                continue
+            if idx >= end_idx:  # Stop processing once end index is reached
+                break
+
+            logger.info(
+                f'---------------------------------------------#{idx}---------------------------------------------')
+
+            # Step 1: Load candidate data
+            candidate_data = load_candidate_data_from_csv(row)
+            logger.info(
+                f'{candidate_data.name} - JobDiva Candidate ID - {candidate_data.jobdiva_id}')
+
+            # Check for malformed data and skip
+            if candidate_data.name.lower() == "style":
+                logger.info(
+                    f'{candidate_data.name} - Detected Malformed entry, skipping')
+                continue
+
+            # Step 2: Check if candidate exists on Monday.com
+            if check_monday_for_candidate(candidate_data.name):
+                continue
+
+            # Step 3: Search resume
+            resume_path = search_resume_by_global_id(
+                candidate_data.jobdiva_id)
+            candidate_data.hasResume = resume_path is not None
+            candidate_data.resume_file = resume_path
+
+            # Step 4: Search for candidate notes
+            notes = search_notes_by_jobdiva_id(candidate_data.jobdiva_id)
+            candidate_data.hasNotes = notes is not None
+            candidate_data.jobdiva_notes = notes
+
+            # Step 5: decide occupation based on resume text
+            occupation_data = getOccupationWrapper(
+                candidate_data.resume_file, candidate_data.jobdiva_notes)
+            candidate_data.occupation_title = occupation_data['occupation_title']
+            candidate_data.occupation_id = occupation_data['occupation_id']
+
+            # Step 6: Update LA area
+            updateLA_Area(candidate_data)
+
+            # Step 7: Upload candidate data to Monday.com
+            createMondayItem(candidate_data)
+
+            # Step 8: Update notes
+            if candidate_data.hasNotes and candidate_data.monday_id:
+                updateCandidateNotesFromJobDiva(candidate_data)
+
+            # Step 9: Upload resume
+            if candidate_data.hasResume and candidate_data.monday_id:
+                uploadCandidateResume(
+                    candidate_data, candidate_data.resume_file)
+
+            # Log
+            logger.info(
+                f"{candidate_data.name} - Finished Processing candidate")
+
+            # Avoid Monday rate limit
+            time.sleep(0.25)
+
         logger.info(
-            f'------------------ STARTING CANDIDATE ADD: {start_idx} - {end_idx} ------------------')
-        with open(CANDIDATE_CSV_PATH, mode='r') as file:
-            reader = csv.DictReader(file)
-            for idx, row in enumerate(reader):
-                # Process correct rows
-                if idx < start_idx:  # Skip rows before the start index
-                    continue
-                if idx >= end_idx:  # Stop processing once end index is reached
-                    break
-
-                logger.info(
-                    f'---------------------------------------------#{idx}---------------------------------------------')
-
-                # Step 1: Load candidate data
-                candidate_data = load_candidate_data_from_csv(row)
-                logger.info(f'{candidate_data.name} - Retrieved CSV data')
-                logger.info(
-                    f'{candidate_data.name} - Candidate ID - {candidate_data.jobdiva_id}')
-
-                # Check for malformed data and skip
-                if candidate_data.name.lower() == "style":
-                    logger.info(
-                        f'{candidate_data.name} - Detected Malformed entry, skipping')
-                    continue
-
-                # Step 2: Check if candidate exists on Monday.com
-                if check_monday_for_candidate(candidate_data.name):
-                    continue
-
-                # Step 3: Search resume
-                resume_path = search_resume_by_global_id(
-                    candidate_data.jobdiva_id)
-                candidate_data.hasResume = resume_path is not None
-                candidate_data.resume_file = resume_path
-
-                # Step 4: Search for candidate notes
-                notes = search_notes_by_jobdiva_id(candidate_data.jobdiva_id)
-                candidate_data.hasNotes = notes is not None
-                candidate_data.notes = notes
-
-                # Step 5: Upload candidate data to Monday.com
-                # TODO: Implement the upload functionality using Monday.com API
-                createMondayItem()
-
-                # Log
-                logger.info(
-                    f"{candidate_data.name} - Finished Processing candidate")
-
-                # Avoid Monday rate limit
-                time.sleep(0.25)
-
-    except FileNotFoundError:
-        print(f"{CANDIDATE_CSV_PATH} not found.")
+            f'------------------ FINISHED {start_idx} - {end_idx} ------------------')
+    # except Exception as e:
+    #     print(e)
 
 
 # Test Group
 # Nurse Job
 
-run(6199, 6300)
+run(9162, 100070)
