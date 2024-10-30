@@ -48,3 +48,11 @@ scripts/jobdiva_monday/licenses_certifications.csv
 scripts/jobdiva_monday/receipt.log
 scripts/jobdiva_monday/recruiter.csv
 scripts/jobdiva_monday/resume.csv
+scripts/receipt.log
+scripts/jobdiva_monday/csvs/candidate.csv
+scripts/jobdiva_monday/csvs/candidatenote.csv
+scripts/jobdiva_monday/csvs/candidateuserfield.csv
+scripts/jobdiva_monday/csvs/jobapplicants.csv
+scripts/jobdiva_monday/csvs/licenses_certifications.csv
+scripts/jobdiva_monday/csvs/recruiter.csv
+scripts/jobdiva_monday/csvs/resume.csv
