@@ -228,7 +228,7 @@ def createMondayItem(data: CandidateData):
 
     # Column Values
     column_values = {
-        "label": str(data.occupation_id),  # Occupation
+        "occupation__1": str(data.occupation_id),  # Occupation
         "status4": data.source,  # Source
         "text8": data.location,  # city, state
         "phone": data.phone,  # Phone
@@ -545,4 +545,4 @@ def run(start_idx: int, end_idx: int):
 # Test Group
 # Nurse Job
 
-run(9162, 100070)
+run(9857, 100070)
