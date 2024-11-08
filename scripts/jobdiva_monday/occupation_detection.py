@@ -82,8 +82,8 @@ def getOccupation(text: str) -> str:
                     "role": "system",
                     "content": [
                         {
-                            "text": "of these 37 jobs:\n    id_to_label_mapping = {{\n        0: 'VOB',\n        1: 'MRA',\n        2: 'RN',\n        3: 'Therapist',\n        4: 'UR',\n        5: 'Nutritionist/Dietician',\n        6: 'EA',\n        7: 'Event Planner',\n        8: 'BD/Admissions',\n        9: 'Jr. Recruiter',\n        10: 'Recruiter',\n        11: 'RADT/CADC/Tech',\n        12: 'Med Office Admin',\n        13: 'Podcast Producer',\n        14: 'Front Desk Receptionist',\n        15: 'Surgical Tech',\n        16: 'Aesthetic Nurse',\n        17: 'EMT',\n        18: 'Occupational Therapist',\n        19: 'LVN',\n        101: 'CNA',\n        102: 'Chef',\n        103: 'MRA/Biller',\n        104: 'Physical Therapist',\n        105: 'Nurse',\n        106: 'Medical Director',\n        107: 'Medical Records Assistant',\n        108: 'Specimen Processor',\n        109: 'Infection Preventionist',\n        110: 'Medical Technologist',\n        151: 'Admin',\n        152: 'HR',\n        153: 'Nurse Practioner',\n        154: 'Director of Nursing',\n        155: 'CRNA',\n        157: 'Program and Clinical Director',\n        158: 'CADC',\n        159: 'Clinical Director',\n        160: 'Program Director'\n    }}\n\n    Of these 37 jobs, which one do you think this person was applying for given the inputted text from their resume, return a json object with job: JOB_SELECTION, The text you return must exactly match the text from one of the options I provided you\n\n" + text,
-                            "type": "text"
+                            "type": "text",
+                            "text": "Given this list of pairs:\n\n\"labels\": [\n    { \"name\": \"VOB\", \"id\": 1 },\n    { \"name\": \"MRA\", \"id\": 2 },\n    { \"name\": \"RN\", \"id\": 3 },\n    { \"name\": \"Therapist\", \"id\": 4 },\n    { \"name\": \"UR\", \"id\": 5 },\n    { \"name\": \"Nutritionist/Dietician\", \"id\": 6 },\n    { \"name\": \"EA\", \"id\": 7 },\n    { \"name\": \"Event Planner\", \"id\": 8 },\n    { \"name\": \"BD/Admissions\", \"id\": 9 },\n    { \"name\": \"Jr. Recruiter\", \"id\": 10 },\n    { \"name\": \"Recruiter\", \"id\": 11 },\n    { \"name\": \"RADT/CADC/Tech\", \"id\": 12 },\n    { \"name\": \"Med Office Admin\", \"id\": 13 },\n    { \"name\": \"Podcast Producer\", \"id\": 14 },\n    { \"name\": \"Front Desk Receptionist\", \"id\": 15 },\n    { \"name\": \"Surgical Tech\", \"id\": 16 },\n    { \"name\": \"Aesthetic Nurse\", \"id\": 17 },\n    { \"name\": \"EMT\", \"id\": 18 },\n    { \"name\": \"Occupational Therapist\", \"id\": 19 },\n    { \"name\": \"LVN\", \"id\": 20 },\n    { \"name\": \"CNA\", \"id\": 102 },\n    { \"name\": \"Chef\", \"id\": 103 },\n    { \"name\": \"MRA/Biller\", \"id\": 104 },\n    { \"name\": \"Physical Therapist\", \"id\": 105 },\n    { \"name\": \"Nurse\", \"id\": 106 },\n    { \"name\": \"Medical Director\", \"id\": 107 },\n    { \"name\": \"Medical Records Assistant\", \"id\": 108 },\n    { \"name\": \"Specimen Processor\", \"id\": 109 },\n    { \"name\": \"Infection Preventionist\", \"id\": 110 },\n    { \"name\": \"Medical Technologist\", \"id\": 111 },\n    { \"name\": \"Admin\", \"id\": 152 },\n    { \"name\": \"HR\", \"id\": 153 },\n    { \"name\": \"Nurse Practitioner\", \"id\": 154 },\n    { \"name\": \"Director of Nursing\", \"id\": 155 },\n    { \"name\": \"CRNA\", \"id\": 156 },\n   { \"name\": \"Program and Clinical Director\", \"id\": 158 },\n    { \"name\": \"CADC\", \"id\": 159 },\n    { \"name\": \"Clinical Director\", \"id\": 160 },\n    { \"name\": \"Program Director\", \"id\": 161 },\n    { \"id\": 162, \"name\": \"Social Worker\" },\n  ],\n\nOf these jobs, which one do you think this person was applying for given the inputted text from their resume, return a json object \n\nThe json object should be of the format {\"id\": [ID], \"name\": [job_name]} and must exactly match one of the options I have provided\n\nThe text from their resume is as follows:\n\n" + text
                         }
                     ]
                 }
@@ -105,7 +105,7 @@ def getOccupation(text: str) -> str:
         # Convert the JSON string into a Python dictionary
         try:
             data = json.loads(json_response)
-            return data['job']  # Return data
+            return data  # Return data
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON: {e}")
             return 'Default'  # Return default
@@ -120,8 +120,8 @@ def getOccupationWrapper(resume_location: str | None, notes: str | None) -> dict
     Get the occupation from gpt-4o-mini
 
     return an dict object containing:
-        occupation_title
-        occupation_id
+        name
+        id
     """
 
     # Check that resume location exists
@@ -131,60 +131,60 @@ def getOccupationWrapper(resume_location: str | None, notes: str | None) -> dict
         text = clean_text(text)
 
         # Query gpt
-        occupation_title = getOccupation(text)
-        # Set to result of gpt, or default if request fails
-        occupation_id = label_mapping.get(occupation_title, 156)
+        occupation_object = getOccupation(text)
+
+        # extract
+        occupation_name = occupation_object.get('name', "name")
+        occupation_id = occupation_object.get('id', "id")
 
         logger.info(
-            f'Detected Occupation: {occupation_title} : {occupation_id}')
+            f'Detected Occupation: {occupation_name} : {occupation_id}')
 
-        return {
-            "occupation_title": occupation_title,
-            "occupation_id": occupation_id
-        }
+        # return
+        return occupation_object
 
     # Try to infer position based on notes if no resume exists
-    elif notes is not None:
-        # Query gpt
-        try:
-            occupation_title = getOccupation(notes)['job']
+    # elif notes is not None:
+    #     # Query gpt
+    #     try:
+    #         occupation_title = getOccupation(notes)['job']
 
-            # Set to result of gpt, or default if request fails
-            occupation_id = label_mapping.get(occupation_title, 156)
+    #         # Set to result of gpt, or default if request fails
+    #         occupation_id = label_mapping.get(occupation_title, 156)
 
-            # Log
-            logger.info(
-                f'Resume not found, but notes exist, inferred: {occupation_title} : {occupation_id} from notes')
+    #         # Log
+    #         logger.info(
+    #             f'Resume not found, but notes exist, inferred: {occupation_title} : {occupation_id} from notes')
 
-            return {
-                "occupation_title": occupation_title,
-                "occupation_id": occupation_id
-            }
-        except Exception as e:
-            # Log
-            logger.error(f'Error while asking gpt-4o-mini for job: {e}')
-            logger.error(f'Setting occupation to 156 (default): {e}')
+    #         return {
+    #             "occupation_title": occupation_title,
+    #             "occupation_id": occupation_id
+    #         }
+    #     except Exception as e:
+    #         # Log
+    #         logger.error(f'Error while asking gpt-4o-mini for job: {e}')
+    #         logger.error(f'Setting occupation to 156 (default): {e}')
 
-            # Set defaults
-            occupation_title = "Default"
-            occupation_id = 156
+    #         # Set defaults
+    #         occupation_title = "Default"
+    #         occupation_id = 156
 
-            # Log
-            return {
-                "occupation_title": occupation_title,
-                "occupation_id": occupation_id
-            }
+    #         # Log
+    #         return {
+    #             "occupation_title": occupation_title,
+    #             "occupation_id": occupation_id
+    #         }
 
     # If no notes and no resume, assign defaults
     else:
         # Set defaults
-        occupation_title = "Default"
-        occupation_id = 156
+        occupation_title = "default"
+        occupation_id = 157
 
         # Log
         logger.info(
             f'Resume not found, Notes not found, assigning default occupation: {occupation_title} : {occupation_id} from notes')
         return {
-            "occupation_title": occupation_title,
-            "occupation_id": occupation_id
+            "name": occupation_title,
+            "id": occupation_id
         }

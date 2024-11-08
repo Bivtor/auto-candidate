@@ -13,8 +13,6 @@ from typing import Optional
 
 load_dotenv(dotenv_path=ENV_PATH)
 
-BOARD_ID = 4846750007
-
 
 def load_candidate_data_from_csv(row: dict) -> CandidateData:
     """

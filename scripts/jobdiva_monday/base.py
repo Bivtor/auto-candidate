@@ -5,8 +5,9 @@ import docx
 import pathlib
 import logging
 
-LOGGER_PATH = 'receipt.log'
+LOGGER_PATH = 'update_receipt.log'
 GROUP_ID = 'new_group36573__1'  # Default to Candidates Group
+BOARD_ID = 4846750007
 
 ENV_PATH = '../../.env'
 CM_PATH = '/Users/victorrinaldi/Desktop/projects/auto_candidate/json_files/cm.csv'
